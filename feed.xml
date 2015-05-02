@@ -6,13 +6,15 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 May 2015 20:55:41 -0700</pubDate>
-    <lastBuildDate>Fri, 01 May 2015 20:55:41 -0700</lastBuildDate>
+    <pubDate>Fri, 01 May 2015 23:54:06 -0700</pubDate>
+    <lastBuildDate>Fri, 01 May 2015 23:54:06 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Using Jekyll for a blog</title>
-        <description>&lt;p&gt;I’ve been unhappy with Wordpress for a while now - it’s slow, it’s cumbersome to add content,
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/JekyllBlogging.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve been unhappy with Wordpress for a while now - it’s slow, it’s cumbersome to add content,
 and it’s riddled with insecurities. Despite not being a “web programmer”, I’ve decided it’s time
 to go closer to the bare metal - and a blog is much more suited to a static site. This means I can
 keep my blog in source control, which makes me much happier than using some CMS system. I decided
@@ -31,8 +33,7 @@ Windows 7 machine.&lt;/p&gt;
 
 &lt;p&gt;For Windows, you’ll want to use a prebuilt installer from &lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;ruby-installer.org&lt;/a&gt;.
 I picked &lt;a href=&quot;http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.6.exe&quot;&gt;rubyinstaller-2.1.6&lt;/a&gt; because I didn’t know what I was doing, and
-there was a strong suggestion to use 2.1.x. The only annoying thing was the suggestion to reboot
-after installing. Why? I’ll look into that someday.&lt;/p&gt;
+there was a strong suggestion to use 2.1.x.&lt;/p&gt;
 
 &lt;p&gt;I installed a 32-bit build because I’ve had issues with 64-bit Python and Perl in the past - not
 all Perl modules or Python packages support 64-bit. So I just assumed the same for Ruby. Also, I’m
@@ -50,7 +51,21 @@ get Ruby to do the same, and I suspect it’s hard-coded to use the MinGW suite.
 &lt;p&gt;The DevKit download can be found on the &lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;ruby-installer.org&lt;/a&gt; page. I grabbed
 the &lt;a href=&quot;http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe&quot;&gt;DevKit-mingw64-32&lt;/a&gt; installer that matched my Ruby install. It’s not
 really an installer, it’s a self-unpacking archive. Unpack it to its permanent home - I have
-a C:/Dev folder that I put development tools into, so it went into C:/Dev/RubyDevKit.&lt;/p&gt;
+a C:/Dev folder that I put development tools into, so it went into C:/Dev/RubyDevKit. Don’t
+let it unpack to its default location, which is into a temp folder.&lt;/p&gt;
+
+&lt;p&gt;Once you’ve unpacked it, you need to install it - I think all this does is write magic entries
+into your Ruby folder. The default action should find your Ruby folder, but you can double-check
+by looking at config.yml after you run dk.rb init.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; ruby dk.rb init
+&amp;gt; ruby dk.rb install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that on one machine, DevKit didn’t install cleanly for some reason - e.g. gem install…
+failed with a “install DevKit, please”. I rebooted and that didn’t fix it, but then I reinstalled
+DevKit again (ruby dk.rb install), and this time it worked. I don’t know if the reboot was
+necessary, but I have a vague memory of being prompted to reboot after installing Ruby on
+a different machine. I’ll try to reproduce that at some point.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-jekyll&quot;&gt;Install Jekyll&lt;/h2&gt;
 
@@ -160,6 +175,8 @@ to tweak or change the overall blog style, but that will happen.&lt;/p&gt;
 &lt;a href=&quot;http://jekyll-windows.juthilo.com/&quot;&gt;Run Jekyll on Windows&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://pygments.org/&quot;&gt;Pygments&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://github.com/oneclick/rubyinstaller/wiki/Development-Kit&quot;&gt;Installing DevKit&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 01 May 2015 11:53:20 -0700</pubDate>

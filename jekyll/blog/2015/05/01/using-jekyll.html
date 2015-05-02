@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Using Jekyll for a blog</title>
-  <meta name="description" content="I’ve been unhappy with Wordpress for a while now - it’s slow, it’s cumbersome to add content,and it’s riddled with insecurities. Despite not being a “web pro...">
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://neurocline.github.io/jekyll/blog/2015/05/01/using-jekyll.html">
@@ -62,7 +62,9 @@
   </header>
 
   <article class="post-content">
-    <p>I’ve been unhappy with Wordpress for a while now - it’s slow, it’s cumbersome to add content,
+    <p><img src="/assets/JekyllBlogging.jpg" alt="My helpful screenshot" /></p>
+
+<p>I’ve been unhappy with Wordpress for a while now - it’s slow, it’s cumbersome to add content,
 and it’s riddled with insecurities. Despite not being a “web programmer”, I’ve decided it’s time
 to go closer to the bare metal - and a blog is much more suited to a static site. This means I can
 keep my blog in source control, which makes me much happier than using some CMS system. I decided
@@ -81,8 +83,7 @@ Windows 7 machine.</p>
 
 <p>For Windows, you’ll want to use a prebuilt installer from <a href="http://rubyinstaller.org/downloads/">ruby-installer.org</a>.
 I picked <a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.6.exe">rubyinstaller-2.1.6</a> because I didn’t know what I was doing, and
-there was a strong suggestion to use 2.1.x. The only annoying thing was the suggestion to reboot
-after installing. Why? I’ll look into that someday.</p>
+there was a strong suggestion to use 2.1.x.</p>
 
 <p>I installed a 32-bit build because I’ve had issues with 64-bit Python and Perl in the past - not
 all Perl modules or Python packages support 64-bit. So I just assumed the same for Ruby. Also, I’m
@@ -100,7 +101,21 @@ get Ruby to do the same, and I suspect it’s hard-coded to use the MinGW suite.
 <p>The DevKit download can be found on the <a href="http://rubyinstaller.org/downloads/">ruby-installer.org</a> page. I grabbed
 the <a href="http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe">DevKit-mingw64-32</a> installer that matched my Ruby install. It’s not
 really an installer, it’s a self-unpacking archive. Unpack it to its permanent home - I have
-a C:/Dev folder that I put development tools into, so it went into C:/Dev/RubyDevKit.</p>
+a C:/Dev folder that I put development tools into, so it went into C:/Dev/RubyDevKit. Don’t
+let it unpack to its default location, which is into a temp folder.</p>
+
+<p>Once you’ve unpacked it, you need to install it - I think all this does is write magic entries
+into your Ruby folder. The default action should find your Ruby folder, but you can double-check
+by looking at config.yml after you run dk.rb init.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt; ruby dk.rb init
+&gt; ruby dk.rb install</code></pre></div>
+
+<p>Note that on one machine, DevKit didn’t install cleanly for some reason - e.g. gem install…
+failed with a “install DevKit, please”. I rebooted and that didn’t fix it, but then I reinstalled
+DevKit again (ruby dk.rb install), and this time it worked. I don’t know if the reboot was
+necessary, but I have a vague memory of being prompted to reboot after installing Ruby on
+a different machine. I’ll try to reproduce that at some point.</p>
 
 <h2 id="install-jekyll">Install Jekyll</h2>
 
@@ -210,6 +225,8 @@ to tweak or change the overall blog style, but that will happen.</p>
 <a href="http://jekyll-windows.juthilo.com/">Run Jekyll on Windows</a>.</p>
 
 <p><a href="http://pygments.org/">Pygments</a></p>
+
+<p><a href="http://github.com/oneclick/rubyinstaller/wiki/Development-Kit">Installing DevKit</a></p>
 
 
   </article>
