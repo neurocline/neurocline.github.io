@@ -1,0 +1,13 @@
+# Site settings
+title: Some Things Are Obvious
+email: neurocline@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Answers to some of the world's questions
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://neurocline.github.io" # the base hostname & protocol for your site
+twitter_username: neurocline
+github_username:  neurocline
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
