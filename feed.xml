@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 May 2015 20:21:35 -0700</pubDate>
-    <lastBuildDate>Fri, 01 May 2015 20:21:35 -0700</lastBuildDate>
+    <pubDate>Fri, 01 May 2015 20:55:41 -0700</pubDate>
+    <lastBuildDate>Fri, 01 May 2015 20:55:41 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -59,7 +59,16 @@ use Jekyll to create my site, and I’ll commit the generated site to Git (and p
 Two, I had a weird problem when I tried to follow the GitHub instructions, and rather than figure
 it out, I went back to my original plan of “have a static site”.&lt;/p&gt;
 
-&lt;p&gt;So, I created a new Git repository, cd’d to it, and installed Jekyll.&lt;/p&gt;
+&lt;p&gt;First, I installed Jekyll.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; gem install jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, I created a new Git repository and initialized it as a Jekyll-generated site.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; mkdir neurocline.github.io
+&amp;gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;neurocline.github.io
+&amp;gt; git init
+&amp;gt; jekyll new .&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;install-pygments-or-rouge&quot;&gt;Install Pygments or Rouge&lt;/h2&gt;
 
@@ -106,7 +115,38 @@ Configuration file: C:/projects/github/neurocline.github.io/_config.yml
 &lt;h2 id=&quot;bake-a-site&quot;&gt;Bake a site&lt;/h2&gt;
 
 &lt;p&gt;Since I’m not using GitHub’s Jekyll, I need to bake the site locally and commit file, then
-push to GitHub.&lt;/p&gt;
+push to GitHub. And that means a little trickery. Here’s one approach.&lt;/p&gt;
+
+&lt;p&gt;First, I baked the site:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; jekyll build&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, I pushed the sources for the site to a sources branch. GitHub wants to see the site itself in
+a master branch, I want my sources in source control, so I “hide” it in a branch GitHub is not
+looking at.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; git remote add origin git@ghosthub:neurocline/neurocline.git.io
+&amp;gt; git checkout -b sources
+&amp;gt; git add -A
+&amp;gt; git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;First commit of source&amp;quot;&lt;/span&gt;
+&amp;gt; git push origin sources&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, I pushed the baked site itself to a master branch.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_site
+&amp;gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &amp;gt; .nojekyll
+&amp;gt; git init
+&amp;gt; git remote add origin git@ghosthub:neurocline/neurocline.git.io
+&amp;gt; git add -A
+&amp;gt; git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;jekyll first build&amp;quot;&lt;/span&gt;
+&amp;gt; git push origin master
+&amp;gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;At this point, my site is live on GitHub.&lt;/p&gt;
+
+&lt;p&gt;If you follow that, it looks a little weird, because I have two different repos both pointing to
+the same remote repo. But that’s Git for you. This way, I don’t need to be copying files from one
+place to another. It’s a little more extra work for setup, but the steady-state is easy.&lt;/p&gt;
 
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
 

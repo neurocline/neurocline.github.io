@@ -109,7 +109,16 @@ use Jekyll to create my site, and I’ll commit the generated site to Git (and p
 Two, I had a weird problem when I tried to follow the GitHub instructions, and rather than figure
 it out, I went back to my original plan of “have a static site”.</p>
 
-<p>So, I created a new Git repository, cd’d to it, and installed Jekyll.</p>
+<p>First, I installed Jekyll.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt; gem install jekyll</code></pre></div>
+
+<p>Then, I created a new Git repository and initialized it as a Jekyll-generated site.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt; mkdir neurocline.github.io
+&gt; <span class="nb">cd </span>neurocline.github.io
+&gt; git init
+&gt; jekyll new .</code></pre></div>
 
 <h2 id="install-pygments-or-rouge">Install Pygments or Rouge</h2>
 
@@ -156,7 +165,38 @@ Configuration file: C:/projects/github/neurocline.github.io/_config.yml
 <h2 id="bake-a-site">Bake a site</h2>
 
 <p>Since I’m not using GitHub’s Jekyll, I need to bake the site locally and commit file, then
-push to GitHub.</p>
+push to GitHub. And that means a little trickery. Here’s one approach.</p>
+
+<p>First, I baked the site:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt; jekyll build</code></pre></div>
+
+<p>Then, I pushed the sources for the site to a sources branch. GitHub wants to see the site itself in
+a master branch, I want my sources in source control, so I “hide” it in a branch GitHub is not
+looking at.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt; git remote add origin git@ghosthub:neurocline/neurocline.git.io
+&gt; git checkout -b sources
+&gt; git add -A
+&gt; git commit -m <span class="s2">&quot;First commit of source&quot;</span>
+&gt; git push origin sources</code></pre></div>
+
+<p>Finally, I pushed the baked site itself to a master branch.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt; <span class="nb">cd </span>_site
+&gt; <span class="nb">echo</span> &gt; .nojekyll
+&gt; git init
+&gt; git remote add origin git@ghosthub:neurocline/neurocline.git.io
+&gt; git add -A
+&gt; git commit -m <span class="s2">&quot;jekyll first build&quot;</span>
+&gt; git push origin master
+&gt; <span class="nb">cd</span> ..</code></pre></div>
+
+<p>At this point, my site is live on GitHub.</p>
+
+<p>If you follow that, it looks a little weird, because I have two different repos both pointing to
+the same remote repo. But that’s Git for you. This way, I don’t need to be copying files from one
+place to another. It’s a little more extra work for setup, but the steady-state is easy.</p>
 
 <h2 id="results">Results</h2>
 
