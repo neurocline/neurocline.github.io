@@ -99,7 +99,7 @@ especially easy since I'm using a Python that has pip as part of the core system
 
 I also had to add a line to my _config.yml file:
 
-{% highlight cfg %}
+{% highlight text %}
 # Build settings
 markdown: kramdown
 highlighter: pygments
@@ -114,7 +114,7 @@ The standard workflow is to run a Jekyll server locally, then start editing cont
 time you save, the file-watcher will pick up the changes and update the site. By default, your
 site is viewed on localhost:4000.
 
-{% highlight bash %}
+{% highlight text %}
 > jekyll serve
 Configuration file: C:/projects/github/neurocline.github.io/_config.yml
             Source: C:/projects/github/neurocline.github.io
