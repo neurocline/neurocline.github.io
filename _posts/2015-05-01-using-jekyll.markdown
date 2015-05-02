@@ -4,6 +4,8 @@ title:  "Using Jekyll for a blog"
 date:   2015-05-01 18:53:20
 categories: jekyll blog
 ---
+![My helpful screenshot](/assets/JekyllBlogging.jpg)
+
 I've been unhappy with Wordpress for a while now - it's slow, it's cumbersome to add content,
 and it's riddled with insecurities. Despite not being a "web programmer", I've decided it's time
 to go closer to the bare metal - and a blog is much more suited to a static site. This means I can
@@ -23,8 +25,7 @@ Windows 7 machine.
 
 For Windows, you'll want to use a prebuilt installer from [ruby-installer.org][ruby-installer].
 I picked [rubyinstaller-2.1.6][rubyinstaller-2.1.6] because I didn't know what I was doing, and
-there was a strong suggestion to use 2.1.x. The only annoying thing was the suggestion to reboot
-after installing. Why? I'll look into that someday.
+there was a strong suggestion to use 2.1.x.
 
 I installed a 32-bit build because I've had issues with 64-bit Python and Perl in the past - not
 all Perl modules or Python packages support 64-bit. So I just assumed the same for Ruby. Also, I'm
@@ -42,7 +43,23 @@ get Ruby to do the same, and I suspect it's hard-coded to use the MinGW suite.
 The DevKit download can be found on the [ruby-installer.org][ruby-installer] page. I grabbed
 the [DevKit-mingw64-32][ruby-devkit-2.1.0] installer that matched my Ruby install. It's not
 really an installer, it's a self-unpacking archive. Unpack it to its permanent home - I have
-a C:/Dev folder that I put development tools into, so it went into C:/Dev/RubyDevKit.
+a C:/Dev folder that I put development tools into, so it went into C:/Dev/RubyDevKit. Don't
+let it unpack to its default location, which is into a temp folder.
+
+Once you've unpacked it, you need to install it - I think all this does is write magic entries
+into your Ruby folder. The default action should find your Ruby folder, but you can double-check
+by looking at config.yml after you run dk.rb init.
+
+{% highlight bash %}
+> ruby dk.rb init
+> ruby dk.rb install
+{% endhighlight %}
+
+Note that on one machine, DevKit didn't install cleanly for some reason - e.g. gem install...
+failed with a "install DevKit, please". I rebooted and that didn't fix it, but then I reinstalled
+DevKit again (ruby dk.rb install), and this time it worked. I don't know if the reboot was
+necessary, but I have a vague memory of being prompted to reboot after installing Ruby on
+a different machine. I'll try to reproduce that at some point.
 
 ## Install Jekyll
 
@@ -168,6 +185,8 @@ to tweak or change the overall blog style, but that will happen.
 [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/).
 
 [Pygments](http://pygments.org/)
+
+[Installing DevKit](http://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 
 [ruby-installer]: http://rubyinstaller.org/downloads/
 [rubyinstaller-2.1.6]: http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.6.exe
