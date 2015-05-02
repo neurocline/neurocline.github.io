@@ -51,7 +51,20 @@ use Jekyll to create my site, and I'll commit the generated site to Git (and pus
 Two, I had a weird problem when I tried to follow the GitHub instructions, and rather than figure
 it out, I went back to my original plan of "have a static site".
 
-So, I created a new Git repository, cd'd to it, and installed Jekyll.
+First, I installed Jekyll.
+
+{% highlight bash %}
+> gem install jekyll
+{% endhighlight %}
+
+Then, I created a new Git repository and initialized it as a Jekyll-generated site.
+
+{% highlight bash %}
+> mkdir neurocline.github.io
+> cd neurocline.github.io
+> git init
+> jekyll new .
+{% endhighlight %}
 
 ## Install Pygments or Rouge
 
@@ -104,7 +117,44 @@ Configuration file: C:/projects/github/neurocline.github.io/_config.yml
 ## Bake a site
 
 Since I'm not using GitHub's Jekyll, I need to bake the site locally and commit file, then
-push to GitHub.
+push to GitHub. And that means a little trickery. Here's one approach.
+
+First, I baked the site:
+
+{% highlight bash %}
+> jekyll build
+{% endhighlight %}
+
+Then, I pushed the sources for the site to a sources branch. GitHub wants to see the site itself in
+a master branch, I want my sources in source control, so I "hide" it in a branch GitHub is not
+looking at.
+
+{% highlight bash %}
+> git remote add origin git@ghosthub:neurocline/neurocline.git.io
+> git checkout -b sources
+> git add -A
+> git commit -m "First commit of source"
+> git push origin sources
+{% endhighlight %}
+
+Finally, I pushed the baked site itself to a master branch.
+
+{% highlight bash %}
+> cd _site
+> echo > .nojekyll
+> git init
+> git remote add origin git@ghosthub:neurocline/neurocline.git.io
+> git add -A
+> git commit -m "jekyll first build"
+> git push origin master
+> cd ..
+{% endhighlight %}
+
+At this point, my site is live on GitHub.
+
+If you follow that, it looks a little weird, because I have two different repos both pointing to
+the same remote repo. But that's Git for you. This way, I don't need to be copying files from one
+place to another. It's a little more extra work for setup, but the steady-state is easy.
 
 ## Results
 
