@@ -149,9 +149,9 @@ especially easy since I’m using a Python that has pip as part of the core syst
 
 <p>I also had to add a line to my _config.yml file:</p>
 
-<div class="highlight"><pre><code class="language-cfg" data-lang="cfg"><span class="c1"># Build settings</span>
-<span class="err">markdown:</span> <span class="err">kramdown</span>
-<span class="err">highlighter:</span> <span class="err">pygments</span></code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># Build settings
+markdown: kramdown
+highlighter: pygments</code></pre></div>
 
 <p>And frustratingly, even though the Pygments page said ‘shell’ was a style, there is no such
 thing and I had to use ‘bash’.</p>
@@ -162,19 +162,19 @@ thing and I had to use ‘bash’.</p>
 time you save, the file-watcher will pick up the changes and update the site. By default, your
 site is viewed on localhost:4000.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt; jekyll serve
+<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; jekyll serve
 Configuration file: C:/projects/github/neurocline.github.io/_config.yml
             Source: C:/projects/github/neurocline.github.io
        Destination: C:/projects/github/neurocline.github.io/_site
       Generating...
-                    <span class="k">done</span>.
-  Please add the following to your Gemfile to avoid polling <span class="k">for</span> changes:
-    gem <span class="s1">&#39;wdm&#39;</span>, <span class="s1">&#39;&gt;= 0.1.0&#39;</span> <span class="k">if</span> Gem.win_platform?
- Auto-regeneration: enabled <span class="k">for</span> <span class="s1">&#39;C:/projects/github/neurocline.github.io&#39;</span>
+                    done.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem &#39;wdm&#39;, &#39;&gt;= 0.1.0&#39; if Gem.win_platform?
+ Auto-regeneration: enabled for &#39;C:/projects/github/neurocline.github.io&#39;
 Configuration file: C:/projects/github/neurocline.github.io/_config.yml
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
-      Regenerating: <span class="m">1</span> file<span class="o">(</span>s<span class="o">)</span> changed at 2015-05-01 19:59:33
+      Regenerating: 1 file(s) changed at 2015-05-01 19:59:33
 ...</code></pre></div>
 
 <h2 id="bake-a-site">Bake a site</h2>
