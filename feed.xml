@@ -6,9 +6,258 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 May 2015 11:32:45 -0700</pubDate>
-    <lastBuildDate>Sat, 02 May 2015 11:32:45 -0700</lastBuildDate>
+    <pubDate>Sat, 02 May 2015 19:27:53 -0700</pubDate>
+    <lastBuildDate>Sat, 02 May 2015 19:27:53 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>A Jekyll Workflow</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/JekyllWorkflow.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is my current Jekyll workflow.&lt;/p&gt;
+
+&lt;p&gt;Since I update my blog from multiple computers, the first step is to sync with latest from GitHub:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; cd neurocline.github.io
+&amp;gt; git fetch --all
+&amp;gt; git rebase origin/sources sources
+&amp;gt; cd _site
+&amp;gt; git rebase origin/master master
+&amp;gt; cd ..&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Yes, I almost always fetch instead of pull, because if I had forgotten I’d made local changes, I
+don’t want a merge commit (even true when working in a group). That’s the reason for the rebase; I
+could do &lt;code&gt;git merge --ff-only ...&lt;/code&gt; instead, which would either do a fast-forward or stop if
+there are changes that need to be merged.&lt;/p&gt;
+
+&lt;p&gt;Now that I’m up to date, I need to run a local jekyll server so I can preview what I’m doing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; jekyll serve --drafts&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I use &lt;code&gt;--drafts&lt;/code&gt; because I invariably have one or more draft articles, and I won’t see them
+otherwise.&lt;/p&gt;
+
+&lt;p&gt;Now I edit posts. Currently I just do it the “hard” way, by typing everything; no help from rake
+or the like. I expect I’ll get fancier as I write more.&lt;/p&gt;
+
+&lt;p&gt;When I’m done for a bit, I stop the jekyll server, bake what I have, and commit:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[ctrl-C to stop server]
+&amp;gt; jekyll build
+&amp;gt; git add -A
+&amp;gt; git commit -m &amp;quot;First cut of workflow post&amp;quot;
+&amp;gt; git push origin sources
+&amp;gt; cd _site
+&amp;gt; git add -A
+&amp;gt; git commit -m &amp;quot;First cut of workflow post&amp;quot;
+&amp;gt; git push origin master
+&amp;gt; cd ..&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And since all of this is repetitive, I’ll soon look into one of the systems that automates this
+a little (I’ve seen hints of this), or I’ll write something myself.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 May 2015 12:15:00 -0700</pubDate>
+        <link>http://neurocline.github.io/jekyll/blog/2015/05/02/jekyll-workflow.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/jekyll/blog/2015/05/02/jekyll-workflow.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Generating Projects with Premake</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/Premake.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a goal - a cross-platform build system. It still doesn’t exist, and someday I’ll be
+forced to make it. Until then, I keep trying things. One of those things is Premake.&lt;/p&gt;
+
+&lt;p&gt;Premake is a cross-platform project generation system. So, while it’s not a build system, it
+handles one of the hard parts, code. It uses a Lua scripting system; your build definition
+files are Lua scripts with lots of predefined behavior handled by the Premake engine. So, like
+SCons, you start off on familiar ground with a powerful language that has widespread usage.&lt;/p&gt;
+
+&lt;p&gt;Unlike SCons, Premake is a C application. There are some positives - C code can run on almost
+any system. But, you need to bootstrap Premake, because (of course) Premake is built with
+Premake. This is only annoying when you start using Premake, then, like any self-hosting system,
+you forget there was a time before self-compiling.&lt;/p&gt;
+
+&lt;p&gt;Premake had a big re-architecture pass happen in 2014, and (as of this writing in May 2015) is
+just now starting to shape up. The original developer, Kitware, had a strong Visual Studio bias,
+which shows not just in the features in Premake, but that Xcode support is only just now
+re-emerging. That said, Premake 5 is what you should be using.&lt;/p&gt;
+
+&lt;p&gt;So, how do you get started with Premake?&lt;/p&gt;
+
+&lt;h2 id=&quot;bootstrapping&quot;&gt;Bootstrapping&lt;/h2&gt;
+
+&lt;p&gt;Prebuilt Premake binaries can be found on the &lt;a href=&quot;http://premake.github.io/download.html&quot;&gt;Premake Download&lt;/a&gt; site.&lt;/p&gt;
+
+&lt;p&gt;Grab binaries as needed; even if you want to be building from source (e.g. adding features to
+Premake), you’ll need at least one existing Premake version. Fortunately, Premake 5 can be
+bootstrapped with Premake 4. When I went to grab a build in late April, the built Windows binary
+was broken, but a nightly build worked.&lt;/p&gt;
+
+&lt;p&gt;I’m going grab a latest &lt;a href=&quot;http://sourceforge.net/projects/premake/files/Premake/nightlies/premake-dev-windows.zip/download&quot;&gt;Windows build&lt;/a&gt;, and put the Premake binary in
+&lt;code&gt;C:\Dev\premake5\premake5.exe&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;building-premake-from-source&quot;&gt;Building Premake from source&lt;/h2&gt;
+
+&lt;p&gt;Premake source, along with the online manual, has moved to GitHub; see &lt;a href=&quot;https://github.com/premake/premake-core&quot;&gt;Premake on GitHub&lt;/a&gt;.
+It’s very easy to build - clone the repo, run an existing premake, and then build from the generated
+project:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; git clone git@github:premake/premake-core.git
+&amp;gt; cd premake-core.git
+&amp;gt; C:\Dev\premake5\premake5.exe vs2013
+Building configurations...
+Running action &amp;#39;vs2013&amp;#39;...
+Generating Premake5.sln...
+Generating Premake5.vcxproj...
+Generating Premake5.vcxproj.filters...
+Done.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;At this point, there is a Visual Studio 2013 solution in the root folder that you can open and
+build, or use msbuild from the command-line to build from it. And once you start using Premake,
+you’ll wonder why project files aren’t tucked away in a folder so that multiple .gitignore
+statements aren’t required to handle all possibilities. We put generated projects in the build
+folder, because that’s where all generated artifacts go.&lt;/p&gt;
+
+&lt;p&gt;If you have never built Premake from the given repo before, or you’ve changed the Lua scripts,
+there’s one final step to take, which is to embed the scripts in the executable. This copies
+all the Lua scripts into a script.c file that’s then part of the binary.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt;c:\dev\premake5\premake5.exe embed
+Running action &amp;#39;embed&amp;#39;...
+Writing scripts.c&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Premake will load the loose scripts from disk if they exist, and since a lot of the Premake
+functionality is actually in the Lua scripts, this makes it easy to iterate quickly when adding
+or updating Premake functionality. But in normal practice, it’s just the single binary that’s
+distributed, hence the need for the embedding step.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-simple-premake-project&quot;&gt;A simple Premake project&lt;/h2&gt;
+
+&lt;p&gt;Let’s make a Hello World program.&lt;/p&gt;
+
+&lt;p&gt;No, that’s too simple. Let’s create a Visual Studio solution and project file for libgit2 (which uses
+CMake).&lt;/p&gt;
+
+&lt;p&gt;Get the libgit2 source from GitHub:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt;git clone git@github.com:libgit2/libgit2.git
+cd libgit2.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now create a file named premake5.lua in the root folder of the libgit2 project, with this as the
+contents:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;solution &amp;quot;Libgit2&amp;quot;
+    configurations { &amp;quot;Debug&amp;quot; }
+    location (&amp;quot;build&amp;quot;)
+
+project &amp;quot;libgit2&amp;quot;
+    targetname &amp;quot;libgit2&amp;quot;
+    language &amp;quot;C&amp;quot;
+    kind &amp;quot;StaticLib&amp;quot;
+    location (&amp;quot;build/projects&amp;quot;)
+
+    files
+    {
+        &amp;quot;**.c&amp;quot;, &amp;quot;**.h&amp;quot;
+    }
+    
+    configuration &amp;quot;Debug&amp;quot;
+        targetdir &amp;quot;build/bin/debug&amp;quot;
+        defines { &amp;quot;_DEBUG&amp;quot;, &amp;quot;WIN32&amp;quot; }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Why &lt;code&gt;premake5.lua&lt;/code&gt;? This is the default name for a premake config script in Premake5. You can
+name it anything, but you’ll then need to pass that name on the command-line, because Premake5
+isn’t going to try to guess.&lt;/p&gt;
+
+&lt;p&gt;This is not a production-quality premake file. For one, it only targets Windows and Visual Studio,
+and one of the main points of using Premake is that it is cross-platform. However, I want to build
+up to that, but also to show that you can very quickly generate projects for any codebase.&lt;/p&gt;
+
+&lt;p&gt;This won’t build, of course. I’m writing it blind without referencing the CMake script. But that’s
+ok for now.&lt;/p&gt;
+
+&lt;p&gt;Run Premake5 to generate a solution:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; C:\Dev\premake5\premake5.exe vs2013
+Building configurations...
+Running action &amp;#39;vs2013&amp;#39;...
+Generating build/Libgit2.sln...
+Generating build/projects/libgit2.vcxproj...
+Generating build/projects/libgit2.vcxproj.filters...
+Done.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When you run this, you’ll see that a build folder has been created, and inside that build folder
+is a Visual Studio solution and related project folder. All the source files are in that single
+project.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt;dir build /s /b
+build\Libgit2.sln
+build\projects
+build\projects\libgit2.vcxproj
+build\projects\libgit2.vcxproj.filters&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you open the Libgit2.sln project, you’ll see it’s full of source and header files, arranged in
+folders that mimic the source tree layout. This is the default behavior.&lt;/p&gt;
+
+&lt;p&gt;If you try building, it will “work” for some degree of work - that is, it will start compiling, but
+generate lots of errors because header files can’t be found.&lt;/p&gt;
+
+&lt;p&gt;Let’s fix just the simplest error. The code expects a path to the include/ folder, because many of
+the includes are of the form &lt;code&gt;#include &quot;git2/common.h&quot;&lt;/code&gt;. Add this section right after the
+&lt;code&gt;files&lt;/code&gt; section in the premake5.lua file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;includedirs
+{
+    &amp;quot;../../include&amp;quot;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Re-run the &lt;code&gt;premake5.exe vs2013&lt;/code&gt; command. It will overwrite files in place, although if you’re
+like me, you’ll just delete the whole build folder (always safe to do, since it’s generated). Now
+open the project again.&lt;/p&gt;
+
+&lt;p&gt;Important note: Premake generates paths relative to the lua file being executed. Even though
+the project file ends up several levels deep in the build folder, your premake5.lua script
+describes files relative to itself. So, since the &lt;code&gt;include/&lt;/code&gt; folder is at the same level
+as our &lt;code&gt;premake5.lua&lt;/code&gt; file, we can just say &lt;code&gt;&quot;include&quot;&lt;/code&gt;. If you look in the project
+file, you’ll see the actual include paths looks something like this&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;..\..\include;%(AdditionalIncludeDirectories)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s for reasons like this that using Premake even on a single platform can be a boost. If you’re
+careful, your premake scripts will stay small and readable, and that can’t be said for large
+programs with dozens of solutions and hundreds of project files. Simply making a small change to
+a large hierarchy of projects (say, to add a define) can be time-consuming and error-prone. Yes,
+you could attempt to use property sheets in modern versions of Visual Studio, or the equivalent
+in other build systems.&lt;/p&gt;
+
+&lt;p&gt;Or you can just write your projects in a far more readable form and generate them.&lt;/p&gt;
+
+&lt;p&gt;I’ll return to Premake in future posts, as I lay out some best practices for using Premake on
+both small and large projects. I’ll also be looking at the other contenders in this space, and
+hypothesizing on what the “perfect” system would look like. For example, Premake5 is very
+Windows-centric, and this makes for slightly confusing operation when trying to generate Xcode
+projects, because Xcode uses different names for things, and even has slightly different behavior.&lt;/p&gt;
+
+&lt;p&gt;More to follow.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 02 May 2015 10:00:00 -0700</pubDate>
+        <link>http://neurocline.github.io/premake/build/2015/05/02/generating-projects-with-premake.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/premake/build/2015/05/02/generating-projects-with-premake.html</guid>
+        
+        
+        <category>premake</category>
+        
+        <category>build</category>
+        
+      </item>
     
       <item>
         <title>Using Jekyll for a blog</title>
