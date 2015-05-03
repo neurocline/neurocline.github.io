@@ -6,14 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Git limits and the Linux repo</title>
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/html/blog/2015/05/02/git-and-linux-repo.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -61,72 +60,49 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Git limits and the Linux repo</h1>
+    <p class="post-meta">May 2, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">May 2, 2015</span>
+  <article class="post-content">
+    <p><img src="/assets/LinuxGit.jpg" alt="My helpful screenshot" /></p>
 
-        <h2>
-          <a class="post-link" href="/html/blog/2015/05/02/git-and-linux-repo.html">Git limits and the Linux repo</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 2, 2015</span>
+<p>According to Linus Torvald’s announcement about the Linux 4.0 release,
+the Linux git repo now has over 4 million git objects.</p>
 
-        <h2>
-          <a class="post-link" href="/html/blog/2015/05/02/playing-with-fonts.html">Playing with fonts</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 2, 2015</span>
+<p><a href="https://lkml.org/lkml/2015/4/12/178">Ima Sheep</a> from lkml.org</p>
 
-        <h2>
-          <a class="post-link" href="/html/blog/2015/05/02/font-awesome.html">Font Awesome</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 2, 2015</span>
+<blockquote>
+  <p>Looking at just the statistics in git, this release is not
+just when we cross half a million commits total, but also cross the 4
+million git object limit.</p>
+</blockquote>
 
-        <h2>
-          <a class="post-link" href="/html/blog/2015/05/02/fun-and-useful-html-entities.html">Fun and useful HTML Entities</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 2, 2015</span>
+<p>The sentence should be parsed as “we crossed the 4 million git objects line” instead of
+reading that there is a maximum of 4 million objects. But even otherwise, since there
+was no panic, we can see that 4 million objects in a repo is not cause for alarm.</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/blog/2015/05/02/jekyll-workflow.html">A Jekyll Workflow</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 2, 2015</span>
+<p>It’s important to note that there’s no real difference between small blobs and big
+blobs in terms of most operations - getting history, creating branches and so on.
+It’s also true that blobs as patches versus blobs as whole files is mostly irrelevant
+too, except at the point where you are checking out a revision.</p>
 
-        <h2>
-          <a class="post-link" href="/premake/build/2015/05/02/generating-projects-with-premake.html">Generating Projects with Premake</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 1, 2015</span>
+<p>So, Git can handle 4 million git objects in a repo. Let’s compare that to a large
+game’s code base. Our big game will have about 250K files in it. Let’s say that each
+file is modified an average of 10 times; that’s 2.5 million files. I also have access
+to some large projects, so I’ll be looking into them to see how big they are, but
+I think the last time I looked at a large repo, it was several million
+file objects.</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/blog/2015/05/01/using-jekyll.html">Using Jekyll for a blog</a>
-        </h2>
-      </li>
-    
-  </ul>
+<h3 id="addendum">Addendum</h3>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>The picture above is of the Linux kernel, from visualizations done by the
+<a href="https://code.google.com/p/gource/wiki/Screenshots">Gource</a> project.</p>
+
+  </article>
 
 </div>
 
