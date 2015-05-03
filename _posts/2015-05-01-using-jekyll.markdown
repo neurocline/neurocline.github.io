@@ -188,6 +188,8 @@ to tweak or change the overall blog style, but that will happen.
 
 [Installing DevKit](http://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 
+[How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole/)
+
 [ruby-installer]: http://rubyinstaller.org/downloads/
 [rubyinstaller-2.1.6]: http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.6.exe
 [ruby-devkit-2.1.0]: http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe
