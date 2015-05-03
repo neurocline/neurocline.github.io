@@ -6,9 +6,140 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 May 2015 19:27:53 -0700</pubDate>
-    <lastBuildDate>Sat, 02 May 2015 19:27:53 -0700</lastBuildDate>
+    <pubDate>Sat, 02 May 2015 22:39:15 -0700</pubDate>
+    <lastBuildDate>Sat, 02 May 2015 22:39:15 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Fun and useful HTML Entities</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/HtmlEntities.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;sgml-rarr-html-rarr-xml-rarr-html5&quot;&gt;SGML → HTML → XML → HTML5&lt;/h1&gt;
+
+&lt;p&gt;HTML Entities are still necessary in some cases, and useful all around.&lt;/p&gt;
+
+&lt;p&gt;Some characters can’t be represented directly in HTML - the ‘&amp;lt;’ character,
+for example, opens an HTML tag, so if you want this in HTML, you need to
+use the HTML entity &lt;code&gt;&amp;amp;amp;lt&lt;/code&gt;. Other characters are impossible to type
+on some keyboards, or only draw in specific fonts: the ‘→’ character,
+which is the HTML entity &lt;code&gt;&amp;amp;amp;arr;&lt;/code&gt;. Diacritical marks are another
+reason to use entities.&lt;/p&gt;
+
+&lt;p&gt;HTML entities have names that you can memorize. However, each HTML entity
+has an Entity Number, and this is, not coincidentally, the Unicode
+codepoint for the character. You can write HTML entities in decimal, or
+you can write them in hexadecimal, which is how Unicode codepoints are
+usually documented.&lt;/p&gt;
+
+&lt;p&gt;Here’s my list of useful HTML Entities. The first 3 are the reserved
+characters where you must use the HTML entity, the rest are just awkward
+or impossible to type. And strictly speaking, ‘&amp;gt;’ is not reserved, it’s
+just best to treat it that way, because there are many cases where it must
+be written as an entity.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Character&lt;/th&gt;
+      &lt;th&gt;Entity Name&lt;/th&gt;
+      &lt;th&gt;Entity Number&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;amp;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;amp;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;#38;&lt;/td&gt;
+      &lt;td&gt;ampersand&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;lt;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;#60;&lt;/td&gt;
+      &lt;td&gt;less-than&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;gt;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;gt;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;#62;&lt;/td&gt;
+      &lt;td&gt;greater-than&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;amp;nbsp;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;160;&lt;/td&gt;
+      &lt;td&gt;non-breaking space&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;←&lt;/td&gt;
+      &lt;td&gt;&amp;amp;larr;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;#8592;&lt;/td&gt;
+      &lt;td&gt;leftwards arrow&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;→&lt;/td&gt;
+      &lt;td&gt;&amp;amp;rarr;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;#8594;&lt;/td&gt;
+      &lt;td&gt;rightwards arrow&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;html-entities-you-should-not-use&quot;&gt;HTML Entities you should not use&lt;/h2&gt;
+
+&lt;p&gt;Because many web developers were American or English, and because early
+HTML support was somewhat primitive, the habit of using unusual characters
+as separators developed.&lt;/p&gt;
+
+&lt;p&gt;Don’t do it. Here’s a list of characters you should avoid using except
+for their actual purpose.&lt;/p&gt;
+
+&lt;h3 id=&quot;guillemets&quot;&gt;Guillemets&lt;/h3&gt;
+
+&lt;p&gt;Characters: ‹ › « »&lt;/p&gt;
+
+&lt;p&gt;These are punctuation marks in languages like French. However, they are often
+misused either as button labels for forward and backward navigation, or as
+separator characters in a breadcrumb navigation list.&lt;/p&gt;
+
+&lt;p&gt;A french reader would use the latter two quotes to indicate speech:&lt;/p&gt;
+
+&lt;p&gt;« Bonjour, Sally. » dit Charles.&lt;/p&gt;
+
+&lt;p&gt;Imagine how confusing it is to see your quote marks used as some mysterious
+and arcane symbol in a list. Don’t do it. Use arrow characters like ← and
+→ instead, or some other appropriate character. Or, use SVG or icons.&lt;/p&gt;
+
+&lt;p&gt;Fun trivia fact: Adobe originally got this wrong and called these guillemot.
+Unfortunately, a guillemot is a species of seabird. Adobe noted their error
+in the Postscript Language Reference, 3rd edition, 1999, but the harm was done,
+and many English-speakers still refer to these by the incorrect name.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dev.w3.org/html5/html-author/charref&quot;&gt;Character Entity Reference Chart&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikibooks.org/wiki/Unicode/Character_reference/0000-0FFF&quot;&gt;Unicode character reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_Unicode_characters&quot;&gt;List of Unicode characters&lt;/a&gt; from Wikipedia.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://unicode.org/charts/&quot;&gt;Unicode 7.0 Character Code Charts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://unicode-table.com/en/&quot;&gt;Unicode table&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.danshort.com/HTMLentities/&quot;&gt;HTML Entities&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 May 2015 14:40:00 -0700</pubDate>
+        <link>http://neurocline.github.io/html/blog/2015/05/02/fun-and-useful-html-entities.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/html/blog/2015/05/02/fun-and-useful-html-entities.html</guid>
+        
+        
+        <category>html</category>
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>A Jekyll Workflow</title>
@@ -426,6 +557,8 @@ to tweak or change the overall blog style, but that will happen.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://pygments.org/&quot;&gt;Pygments&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://github.com/oneclick/rubyinstaller/wiki/Development-Kit&quot;&gt;Installing DevKit&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://joshualande.com/jekyll-github-pages-poole/&quot;&gt;How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 01 May 2015 11:53:20 -0700</pubDate>
