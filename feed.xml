@@ -6,9 +6,52 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 May 2015 22:39:15 -0700</pubDate>
-    <lastBuildDate>Sat, 02 May 2015 22:39:15 -0700</lastBuildDate>
+    <pubDate>Sat, 02 May 2015 23:50:50 -0700</pubDate>
+    <lastBuildDate>Sat, 02 May 2015 23:50:50 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Font Awesome</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/FontAwesome.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is cool&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fortawesome.github.io/Font-Awesome/&quot;&gt;Font Awesome&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is an open-source and free icon font. It’s pretty easy to use, you add
+the font-awesome directory to your project, reference the font-awesome stylesheet
+from your page, and then just start adding characters in the font.&lt;/p&gt;
+
+&lt;p&gt;It works well with Bootstrap 3, and you can either integrate Bootstrap yourself,
+or start with the Jekyll-Bootstrap project. Or, just hand-add CSS and HTML
+yourself.&lt;/p&gt;
+
+&lt;p&gt;I added this to my &lt;code&gt;_includes/head.html&lt;/code&gt; template file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ &amp;quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;font-awesome&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;font-awesome&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;prepend:&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;baseurl&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;}}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s a corny yet effective example:&lt;/p&gt;
+
+&lt;p&gt;&lt;i class=&quot;fa fa-refresh fa-4x fa-spin&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fa fa-refresh fa-4x fa-spin&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I hope to have fun with this, in tasteful effective ways.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fortawesome.github.io/Font-Awesome/icons/&quot;&gt;Font Awesome Icons&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 May 2015 15:56:00 -0700</pubDate>
+        <link>http://neurocline.github.io/html/blog/2015/05/02/font-awesome.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/html/blog/2015/05/02/font-awesome.html</guid>
+        
+        
+        <category>html</category>
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>Fun and useful HTML Entities</title>
@@ -20,9 +63,9 @@
 
 &lt;p&gt;Some characters can’t be represented directly in HTML - the ‘&amp;lt;’ character,
 for example, opens an HTML tag, so if you want this in HTML, you need to
-use the HTML entity &lt;code&gt;&amp;amp;amp;lt&lt;/code&gt;. Other characters are impossible to type
+use the HTML entity &lt;code&gt;&amp;amp;lt;&lt;/code&gt;. Other characters are impossible to type
 on some keyboards, or only draw in specific fonts: the ‘→’ character,
-which is the HTML entity &lt;code&gt;&amp;amp;amp;arr;&lt;/code&gt;. Diacritical marks are another
+which is the HTML entity &lt;code&gt;&amp;amp;arr;&lt;/code&gt;. Diacritical marks are another
 reason to use entities.&lt;/p&gt;
 
 &lt;p&gt;HTML entities have names that you can memorize. However, each HTML entity
@@ -41,8 +84,8 @@ be written as an entity.&lt;/p&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Character&lt;/th&gt;
-      &lt;th&gt;Entity Name&lt;/th&gt;
-      &lt;th&gt;Entity Number&lt;/th&gt;
+      &lt;th&gt;Entity-name&lt;/th&gt;
+      &lt;th&gt;Entity-number&lt;/th&gt;
       &lt;th&gt;Description&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
@@ -68,7 +111,7 @@ be written as an entity.&lt;/p&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;&amp;amp;nbsp;&lt;/td&gt;
-      &lt;td&gt;&amp;amp;160;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;#160;&lt;/td&gt;
       &lt;td&gt;non-breaking space&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -103,7 +146,7 @@ for their actual purpose.&lt;/p&gt;
 misused either as button labels for forward and backward navigation, or as
 separator characters in a breadcrumb navigation list.&lt;/p&gt;
 
-&lt;p&gt;A french reader would use the latter two quotes to indicate speech:&lt;/p&gt;
+&lt;p&gt;A French reader would use the latter two quotes to indicate speech:&lt;/p&gt;
 
 &lt;p&gt;« Bonjour, Sally. » dit Charles.&lt;/p&gt;
 
@@ -118,6 +161,8 @@ and many English-speakers still refer to these by the incorrect name.&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 
+&lt;p&gt;&lt;a href=&quot;http://www.w3schools.com/html/html_entities.asp&quot;&gt;HTML Entities (w3schools)&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;a href=&quot;http://dev.w3.org/html5/html-author/charref&quot;&gt;Character Entity Reference Chart&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://en.wikibooks.org/wiki/Unicode/Character_reference/0000-0FFF&quot;&gt;Unicode character reference&lt;/a&gt;&lt;/p&gt;
@@ -128,7 +173,7 @@ and many English-speakers still refer to these by the incorrect name.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://unicode-table.com/en/&quot;&gt;Unicode table&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.danshort.com/HTMLentities/&quot;&gt;HTML Entities&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.danshort.com/HTMLentities/&quot;&gt;HTML Entities (danshort)&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 02 May 2015 14:40:00 -0700</pubDate>
         <link>http://neurocline.github.io/html/blog/2015/05/02/fun-and-useful-html-entities.html</link>
