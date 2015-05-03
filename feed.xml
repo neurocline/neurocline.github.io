@@ -6,9 +6,50 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 May 2015 01:45:58 -0700</pubDate>
-    <lastBuildDate>Sun, 03 May 2015 01:45:58 -0700</lastBuildDate>
+    <pubDate>Sun, 03 May 2015 11:19:20 -0700</pubDate>
+    <lastBuildDate>Sun, 03 May 2015 11:19:20 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Modernizing Emacs</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/ModernizeEmacs.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Emacs and Vi have several claims to fame - they are both some of the longest-running
+active software tools in history, and one of the longest-running rivalries in software.&lt;/p&gt;
+
+&lt;p&gt;Here is a heart-felt request from an Emacs user on changes that Emacs should adopt
+to be more relevant in today’s world:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ergoemacs.org/emacs/modernization.html&quot;&gt;Modernization of Emacs (Simple Changes Emacs Should Adopt)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s worth reading. I think it was first written in 2006 and then updated in 2013. The first
+part of the article rambles, but the FAQ is where the important bits are.&lt;/p&gt;
+
+&lt;p&gt;My favorite part of the article was the reminder that the Lisp Machine keyboard that Emacs was
+first written for didn’t just have a Meta key - it had:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hyper&lt;/li&gt;
+  &lt;li&gt;Super&lt;/li&gt;
+  &lt;li&gt;Meta&lt;/li&gt;
+  &lt;li&gt;Control&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Emacs used all those keys, and still supports super and hyper to this day. By default, Alt
+on “modern” keyboards is the Meta key, but you can map keys to Hyper and Super if you want:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ergoemacs.org/emacs/emacs_hyper_super_keys.html&quot;&gt;Emacs: How to Define Super &amp;amp; Hyper Keys&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Crazy.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 May 2015 03:51:00 -0700</pubDate>
+        <link>http://neurocline.github.io/editor/2015/05/03/modernizing-emacs.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/editor/2015/05/03/modernizing-emacs.html</guid>
+        
+        
+        <category>editor</category>
+        
+      </item>
     
       <item>
         <title>Git limits and the Linux repo</title>
@@ -47,13 +88,13 @@ file objects.&lt;/p&gt;
 &lt;a href=&quot;https://code.google.com/p/gource/wiki/Screenshots&quot;&gt;Gource&lt;/a&gt; project.&lt;/p&gt;
 </description>
         <pubDate>Sat, 02 May 2015 18:28:00 -0700</pubDate>
-        <link>http://neurocline.github.io/html/blog/2015/05/02/git-and-linux-repo.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/html/blog/2015/05/02/git-and-linux-repo.html</guid>
+        <link>http://neurocline.github.io/git/linux/2015/05/02/git-and-linux-repo.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/git/linux/2015/05/02/git-and-linux-repo.html</guid>
         
         
-        <category>html</category>
+        <category>git</category>
         
-        <category>blog</category>
+        <category>linux</category>
         
       </item>
     
