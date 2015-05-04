@@ -6,9 +6,66 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 May 2015 12:21:12 -0700</pubDate>
-    <lastBuildDate>Sun, 03 May 2015 12:21:12 -0700</lastBuildDate>
+    <pubDate>Sun, 03 May 2015 22:59:54 -0700</pubDate>
+    <lastBuildDate>Sun, 03 May 2015 22:59:54 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Tesla&#39;s Powerwall Is A Game Changer</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/TeslaPowerwall.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I watched the live stream of the announcement last week, and was blown away. Tesla is not
+a natural born salesman; instead, he is smart, he believes in what he’s doing, and so far, everything
+he’s promised bears out, there’s little smoke and mirrors in evidence. It doesn’t mean that he
+will always succeed at what he’s doing, but that’s ok - if you don’t reach for big goals, you can’t
+do great things.&lt;/p&gt;
+
+&lt;p&gt;Ramez Naam thinks that this system is viable today in some countries (see graph above):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rameznaam.com/2015/04/30/tesla-powerwall-battery-economics-almost-there/&quot;&gt;Tesla Battery Economics: On the Path to Disruption&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The article has tons of links to other things you’ll want to read.&lt;/p&gt;
+
+&lt;p&gt;One thing to keep in mind - even though most states in the US have buy-back of self-generated power
+(the Net Metering laws), expect that to go away very soon. It did its job, it got people jump-started
+using solar, and it’s going to kill the energy companies if it keeps up; not because we’re taking
+their profit away, but because of the intermittent nature. Wait, hmm - even if consumers don’t buy
+the Tesla Powerwall, utilities certainly could…&lt;/p&gt;
+
+&lt;p&gt;And, the cost of batteries and solar will continue to drop. It’s hard to predict how rapidly they
+will drop - some of the massive drop in the price of solar energy was inadvertently funded by
+the Chinese government, as they gave massive funding to companies like Suntech. But those prices
+stuck, indicating that there was massive innovation happening around the world.&lt;/p&gt;
+
+&lt;p&gt;Some experts think that the Powerwall is being sold at a loss, at least for now. Since battery
+technology is fairly mature and no startling breakthroughs have happened recently, this is
+probably true unless there are controllable labor costs mixed into those estimates. But no
+one expects prices to go up, and it’s pretty reasonable that prices will continue to drop.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.teslamotors.com/powerwall&quot;&gt;Powewall&lt;/a&gt; - Tesla’s site.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.wired.com/2015/05/get-tesla-home-battery-let-physics-explain/&quot;&gt;Headline: Should You Get a Tesla Home Battery? Let Physics Explain&lt;/a&gt; - from Wired.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.theverge.com/2015/2/13/8033691/why-teslas-battery-for-your-home-should-terrify-utilities&quot;&gt;Why Tesla’s battery for your home should terrify utilities&lt;/a&gt; - from The Verge.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nature.com/news/will-tesla-s-battery-change-the-energy-market-1.17469&quot;&gt;Will Tesla’s battery change the energy market?&lt;/a&gt; - Nature.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.wsj.com/articles/will-teslas-newest-battery-pan-out-1430522030&quot;&gt;Will Tesla’s Newest Battery Pan Out?&lt;/a&gt; - the Wall Street Journal.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.forbes.com/sites/christopherhelman/2015/05/01/why-teslas-powerwall-is-just-another-toy-for-rich-green-people/&quot;&gt;Why Tesla’s Powerwall Is Just Another Toy For Rich Green People&lt;/a&gt; - Forbes.
+This is an article that should have been retracted in its entirety, because as it got corrected,
+its points dwindled away.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 May 2015 14:27:00 -0700</pubDate>
+        <link>http://neurocline.github.io/energy/2015/05/03/tesla-powerwall.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/energy/2015/05/03/tesla-powerwall.html</guid>
+        
+        
+        <category>energy</category>
+        
+      </item>
     
       <item>
         <title>Quadratic voting</title>
