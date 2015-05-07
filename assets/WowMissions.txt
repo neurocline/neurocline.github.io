@@ -1,0 +1,217 @@
+Title	Level	Expires	Dur	Num	Reward	Counters						
+Felraiser	100 (675)		10 hr	2	1500 XP + 600 Apexis Crystal	Powerful Spell	Massive Strike	Timed Battle	Massive Strike			
+Green Fel	100 (675)		10 hr	2	1500 XP + 150 gold	Powerful Spell	Massive Strike	Timed Battle	Magic Debuff			
+Lessons of the Blade	100 (675)		6 hr	2	1500 XP + Follower Retraining Scroll	Wild Aggression	Massive Strike	Group Damage	Danger Zones	Timed Battle		
+Night of the Primals	100 (675)		8 hr	2	1500 XP + Primal Spirit	Wild Aggression	Timed Battle	Minion Swarms	Minion Swarms			
+Spring Preening	100 (675)		8 hr	2	1500 XP + 600 Apexis Crystal	Deadly Minions	Minion Swarms	Deadly Minions	Powerful Spell			
+What's Mine is a Mine	100 (675)		10 hr	2	1500 XP + 30 Primal Spirit	Group Damage	Danger Zones	Massive Strike	Minion Swarms			
+Apexis Nexus	100 (660)		8 hr	2	1500 XP + 400 Apexis Crystal	Powerful Spell	Magic Debuff	Massive Strike	Group Damage			
+Black Forge	100 (660)		8 hr	3	1500 XP + Blackrock Foundry Spoils	Massive Strike	Danger Zones	Wild Aggression	Group Damage	Group Damage	Timed Battle	Powerful Spell
+Blackhand's Crucible	100 (660)		8 hr	3	1500 XP + Blackrock Foundry Spoils	Wild Aggression	Massive Strike	Group Damage	Powerful Spell	Danger Zones	Deadly Minions	Timed Battle
+Bucket Brigade	100 (660)		8 hr	2	1500 XP + 20 Primal Spirit	Minion Swarms	Group Damage	Powerful Spell	Danger Zones			
+Emancipation	100 (660)		8 hr	2	1500 XP + 400 Apexis Crystal	Magic Debuff	Powerful Spell	Danger Zones	Group Damage			
+Highway to Fel	100 (660)		8 hr	2	1500 XP + 400 Apexis Crystal	Deadly Minions	Powerful Spell	Massive Strike	Timed Battle			
+Iron Assembly	100 (660)		8 hr	3	1500 XP + Blackrock Foundry Spoils	Danger Zones	Minion Swarms	Powerful Spell	Magic Debuff	Group Damage	Magic Debuff	Minion Swarms
+Lunch Breakers	100 (660)		8 hr	2	1500 XP + 20 Primal Spirit	Massive Strike	Timed Battle	Wild Aggression	Minion Swarms			
+Mulch Ado About Nothing	100 (660)		8 hr	3	1500 XP + 20 Primal Spirit	Wild Aggression	Deadly Minions	Massive Strike	Minion Swarms			
+Prime Directive	100 (660)		8 hr	2	1500 XP + 20 Primal Spirit	Powerful Spell	Danger Zones	Danger Zones	Magic Debuff			
+Slagworks	100 (660)		8 hr	3	1500 XP + Blackrock Foundry Spoils	Danger Zones	Group Damage	Wild Aggression	Massive Strike	Timed Battle	Minion Swarms	Deadly Minions
+Socrethar Sabotage	100 (660)		8 hr	2	1500 XP + 400 Apexis Crystal	Magic Debuff	Deadly Minions	Deadly Minions	Massive Strike			
+Deathhoof	100 (645)		6 hr	2	100 XP + Savage Blood	Minion Swarms	Massive Strike	Wild Aggression	Danger Zones			
+Highmaul Raid	100 (645)		8 hr	3	1500 XP + 655 Highmaul Cache	Wild Aggression	Group Damage	Group Damage	Danger Zones	Minion Swarms	Magic Debuff	
+A Grave Mistake	100 (630)		8 hr	3	1500 XP + 645 Grandiose Spaulders	Powerful Spell	Timed Battle	Magic Debuff	Powerful Spell			
+Can't Go Home This Way	100 (630)		6 hr	3	1500 XP + 300 resource	Group Damage	Danger Zones	Massive Strike	Timed Battle			
+Eviction	100 (630)		8 hr	3	1500 XP + 645 robes	Timed Battle	Danger Zones	Wild Aggression	Massive Strike			
+Ghost Wranglers	100 (630)		8 hr	3	1500 XP + 100 gold	Wild Aggression	Powerful Spell	Danger Zones	Minion Swarms			
+Got A Light?	100 (630)		6 hr	3	1500 XP + 100 gold	Timed Battle	Danger Zones	Group Damage	Minion Swarms			
+Labor Dispute	100 (630)		10 hr	3	1500 XP + 645 Grandiose Treads	Powerful Spell	Deadly Minions	Wild Aggression	Minion Swarms			
+Logistics are for Professionals	100 (630)		8 hr	3	1500 XP + 645 Choker	Massive Strike	Timed Battle	Timed Battle	Danger Zones			
+Magical Mystery Tour	100 (630)		6 hr	3	1500 XP + 300 resource	Timed Battle	Massive Strike	Magic Debuff	Powerful Spell			
+Murder Most Fowl	100 (630)		8 hr	3	1500 XP + 645 trinket	Powerful Spell	Deadly Minions	Timed Battle	Deadly Minions			
+Operation Skybreach	100 (630)		8 hr	3	1500 XP + 645 Goredrenched Weapon	Timed Battle	Deadly Minions	Timed Battle	Group Damage			
+Rollin' like a Kraken	100 (630)		8 hr	3	1500 XP + 100 gold	Massive Strike	Deadly Minions	Danger Zones	Powerful Spell			
+Rustle in the Bushes	100 (630)		10 hr	3	1600 XP + 645 bracers	Wild Aggression	Timed Battle	Danger Zones	Group Damage			
+Seas the Day	100 (630)		8 hr	3	1500 XP + 645 Grandiose Armament	Wild Aggression	Powerful Spell	Massive Strike	Deadly Minions			
+Shafted Miners	100 (630)		6 hr	3	1500 XP + 100 gold	Powerful Spell	Deadly Minions	Group Damage	Danger Zones			
+Sixteen Tons	100 (630)		6 hr	3	1500 XP + Heavily Reinforced Armor	Group Damage	Danger Zones	Wild Aggression	Minion Swarms			
+Spored to Death	100 (630)		8 hr	3	1500 XP + 100 gold	Minion Swarms	Group Damage	Wild Aggression	Timed Battle			
+The Lost World	100 (630)		6 hr	3	1500 XP + Power Overrun Weapon	Danger Zones	Minion Swarms	Powerful Spell	Timed Battle			
+We Have a Mole	100 (630)		8 hr	3	1500 XP + 645 Goredrenched Weapon	Wild Aggression	Massive Strike	Timed Battle	Deadly Minions			
+A Bird In The Hand	100 (615)		10 hr	3	1500 XP + 630 Trinket	Timed Battle	Timed Battle	Danger Zones				
+All Aboard the Fail Boat	100 (615)		8 hr	3	1500 XP + 12000 XP	Danger Zones	Timed Battle	Massive Strike				
+Auchindoom!	100 (615)		8 hr	3	1500 XP + Blackrock Armor	Powerful Spell	Magic Debuff	Powerful Spell				
+Clawing Skyward	100 (615)		8 hr	3	1500 XP + Blackrock Weaponry	Deadly Minions	Deadly Minions	Group Damage				
+Egg them On!	100 (615)		8 hr	3	1500 XP + 12000 XP	Massive Strike	Timed Battle	Powerful Spell				
+Fire and Fury	100 (615)		4 hr	2	1500 XP + 75 gold	Powerful Spell	Wild Aggression	Danger Zones				
+Griefing with the Enemy	100 (615)		4 hr	3	1500 XP + 225 resource	Danger Zones	Wild Aggression	Timed Battle				
+Griefing with the Enemy	100 (615)		4 hr	3	1500 XP + 130 resources	Timed Battle	Wild Aggression	Danger Zones				
+Iron Horde's Blackrock	100 (615)		8 hr	3	1500 XP + Blackrock Armor Set	Massive Strike	Timed Battle	Danger Zones				
+Is It a Bird? A Zeppelin	100 (615)		8 hr	3	1500 XP + 15000 XP	Powerful Spell	Deadly Minions					
+Listen All Y'all	100 (615)		8 hr	3	1500 XP + Blackrock Weaponry	Danger Zones	Wild Aggression	Massive Strike				
+Miner Difficulties	100 (615)		8 hr	3	1500 XP + 630 Treads	Deadly Minions	Danger Zones	Group Damage				
+No Rest For The Noble	100 (615)		8 hr	3	1500 XP + 630 Spaulders	Powerful Spell	Minion Swarms	Minion Swarms				
+Pier Pressure	100 (615)		8 hr	3	1500 XP + 630 Armament	Massive Strike	Wild Aggression	Wild Aggression				
+Pluck them All	100 (615)		6 hr	3	1500 XP + Runic Pouch	Powerful Spell	Magic Debuff	Timed Battle				
+Running Aground	100 (615)		6 hr	3	1500 XP + 15000 XP	Wild Aggression	Powerful Spell					
+Savage Patch	100 (615)		4 hr	3	1500 XP + 75 gold	Magic Debuff	Minion Swarms	Timed Battle				
+Sparks and Steel	100 (615)		4 hr	3	1500 XP + 75 gold	Group Damage	Timed Battle	Massive Strike				
+Shiny!	100 (615)		8 hr	3	1500 XP + 12000 XP	Group Damage	Powerful Spell	Timed Battle				
+To Rest Again	100 (615)		6 hr	3	1500 XP + 15000 XP	Massive Strike	Minion Swarms					
+Two Feet in the Grave	100 (615)		8 hr	3	1500 XP + 12000 XP	Timed Battle	Powerful Spell	Minion Swarms				
+Under Ner'zhul's Nose	100 (615)		4 hr	2	1500 XP + 75 gold	Wild Aggression	Massive Strike	Danger Zones				
+Warchief's Pride	100 (615)		8 hr	3	1500 XP + Runic Pouch	Timed Battle	Deadly Minions	Magic Debuff				
+Who's the Boss	100 (615)		4 hr	2	1500 XP + 225 resource	Group Damage	Minion Swarms	Massive Strike				
+Ziggy Sawdust X3-9	100 (615)		8 hr	3	1500 XP + 630 Bracers	Group Damage	Magic Debuff	Timed Battle				
+An Eye for Terror	100		8 hr	3	1500 XP + 10000 XP	Wild Aggression	Minion Swarms	Danger Zones				
+A Rune with a View	100		24 hr	3	1500 XP + 18 elemental rune	Group Damage	Massive Strike	Deadly Minions	Powerful Spell	Magic Debuff		
+Beyond the Pale	100		24 hr	3	1500 XP + 18 elemental rune	Group Damage	Massive Strike	Deadly Minions	Massive Strike	Group Damage	Minion Swarms	
+Big Hands, Big Swords	100		6 hr	3	1500 XP + 3 Rush Order Enchanter	Wild Aggression	Massive Strike	Massive Strike				
+Birds of Pray	100		8 hr	3		Magic Debuff	Powerful Spell	Wild Aggression				
+Blackrock Munitions	100		6 hr	2	615 Spaulders	Massive Strike	Danger Zones					
+Bladefist Hold	100		10 hr	3	1500 XP + 15000 XP	Timed Battle	Wild Aggression	Deadly Minions				
+Blingtron's Secret Vault	100		10 hr	3	1500 XP + 500 gold	Deadly Minions	Minion Swarms	Group Damage	Massive Strike			
+Burning Legion Vanguard	100		8 hr	3	1500 XP + 615 Munificent Bracers	Group Damage	Minion Swarms	Group Damage				
+Claws, Pincers, and Tusks	100		10 hr	3	1500 XP + 615 Munificent Robes	Group Damage	Massive Strike	Deadly Minions				
+Clearing the Caches	100		8 hr	3	1500 XP + 8000 XP	Magic Debuff	Minion Swarms					
+Clefthoof Rustling	100		8 hr	3	1500 XP + 8000 XP	Magic Debuff	Danger Zones	Deadly Minions				
+Cult of Sargeras	100		4 hr	3	1500 XP + 60 gold	Wild Aggression	Wild Aggression					
+Drov the Ruiner	100		10 hr	3	15009 XP + Seal of Tempered Fate	Group Damage	Danger Zones	Massive Strike				
+Elemental Territory	100		6 hr	2	1500 XP + 100 resources	Group Damage	Powerful Spell					
+Enchanted Weapons	100		4 hr	2	1500 XP + 2 Rush Order: Enchanter's	Minion Swarms	Magic Debuff					
+Errand for the SPS	100		10 hr	3	1500 XP + Highmaul Relic + 100 gold	Massive Strike	Deadly Minions	Powerful Spell				
+Flux to Give	100		6 hr	3	1500 XP + 3 Rush Order: Forge	Powerful Spell	Danger Zones	Wild Aggression				
+Go For The Heads	100		8 hr	3	1500 XP + War Ravaged Weaponry	Timed Battle	Powerful Spell	Timed Battle				
+Harboring Ill Will	100		8 hr	3	1500 XP + 10000 XP	Massive Strike	Timed Battle	Group Damage				
+Hardened Creatures	100		6 hr	3	1500 XP + 8000 XP	Massive Strike	Timed Battle	Powerful Spell				
+Heart of the Iron Horde	100		4 hr	2	1500 XP + 60 gold	Magic Debuff	Powerful Spell					
+Hefty Metal	100		4 hr	2	1500 XP + Weapon Token	Deadly Minions	Powerful Spell					
+Herb Infused	100		6 hr	3	1500 XP + 3 Rush Order: Alchemy	Minion Swarms	Magic Debuff	Massive Strike				
+Highplains Robbery	100	3 days	6 hr	3	1000 XP + Nagrand Treasure Map	Magic Debuff	Powerful Spell	Timed Battle				
+Hunting the Hunters	100		6 hr	3	1500 XP + 3 Rush Order: Tailoring	Wild Aggression	Massive Strike	Timed Battle				
+Industrial Espionage	100		8 hr	3	1500 XP + 615 Munificent Trinket	Magic Debuff	Powerful Spell	Deadly Minions	Powerful Spell			
+Into the Saberon's Den	100		8 hr	3	1500 XP + 615 choker	Massive Strike	Timed Battle	Deadly Minions				
+Iron Horde Allies	100		8 hr	3	1500 XP + 8000 XP	Timed Battle	Wild Aggression					
+It's Rigged!	100		24 hr	3	1500 XP + 3 Abrogator Stone	Massive Strike	Wild Aggression	Timed Battle	Group Damage			
+Jewels of Denial	100		4 hr	2	1500 XP + Rush Order: Gem Boutique	Group Damage	Deadly Minions					
+Kill and Cut	100		6 hr	3	1500 XP + 3 Rush Order: Tannery	Group Damage	Timed Battle	Timed Battle				
+Lava, Lava, Everywhere	100		8 hr	3	1500 XP + 8000 XP	Powerful Spell	Group Damage					
+Mogor's Dilemma	100		10 hr	3	1500 XP + 20000 XP + 100 gold	Wild Aggression	Massive Strike	Massive Strike				
+Nest Raid	100		4 hr	2	1500 XP + 2 Rush Order: Tailoring	Wild Aggression	Danger Zones	Group Damage				
+No Rest for Auchindoun	100		4 hr	2	1500 XP + Weapon Enhancement	Magic Debuff	Powerful Spell					
+Outcast Relations	100		10 hr	3	1500 XP + Guide to Arakkoa	Magic Debuff	Powerful Spell	Wild Aggression				
+Profitable Machinations	100		6 hr	2	1500 XP + 100 gold	Wild Aggression	Massive Strike					
+Raiding the Raiders	100		4 hr	2	1500 XP + Armor Enhancement	Deadly Minions	Minion Swarms					
+Ravager Infestation	100		4 hr	2	1500 XP + Weapon Enhancement	Wild Aggression	Minion Swarms					
+Rescue on the Bloody Cliffs	100		6 hr	3	1500 XP + 10000 XP	Massive Strike	Danger Zones	Group Damage				
+Ring of Cooperation	100		10 hr	3	1500 XP + Ogre Buddy Handbook	Wild Aggression	Massive Strike	Massive Strike				
+Rise to Power	100		8 hr	3	1500 XP + 10000 XP	Magic Debuff	Deadly Minions	Powerful Spell				
+Rock the Boat	100		24 hr	3	1500 XP + 3 Abrogator Stone	Group Damage	Minion Swarms	Powerful Spell	Danger Zones			
+Ruinous Portents	100		6 hr	3	1500 XP + 10000 XP	Wild Aggression	Massive Strike	Group Damage				
+Rukhmar	100		10 hr	3	1500 XP + Seal of Tempered fate	Wild Aggression	Minion Swarms	Group Damage				
+Saberon Ambush	100		4 hr	2	1500 XP + 60 gold	Magic Debuff	Deadly Minions					
+Savage Kindred	100		10 hr	3	1500 XP + 615 Munificent Armament	Wild Aggression	Timed Battle	Deadly Minions	Danger Zones	Wild Aggression		
+Savage Kindred	100		10 hr	3	1500 XP + 615 Munificent Armament	Wild Aggression	Timed Battle	Danger Zones	Wild Aggression			
+Secrets of Blademoon	100		8 hr	3	1500 XP + War Ravaged Weaponry	Group Damage	Magic Debuff	Minion Swarms				
+Spy Games	100		4 hr	2	1500 XP + 2 Rush Order: Scribe's	Timed Battle	Group Damage					
+Summer is Here	100		10 hr	3	1500 XP + Winning With Wildings	Wild Aggression	Danger Zones	Minion Swarms				
+That's Some Bull	100		4 hr	2	1500 XP + 2 Rush Order: Tannery	Massive Strike	Timed Battle					
+The Basilisk's Stare	100		6 hr	2	1500 XP + 175 resource	Danger Zones	Magic Debuff					
+The Bloodmane Scrolls	100		10 hr	3	1500 XP + 100 gold + Relic of Rukhmar	Massive Strike	Danger Zones	Minion Swarms				
+The Corruption Spreads	100		8 hr	3	1500 XP + 8000 XP 	Timed Battle	Wild Aggression	Timed Battle				
+The Feathers must Fly	100		4 hr	2	1500 XP + 60 gold	Group Damage	Group Damage					
+The Golden Halls of Skyreach	100		6 hr	3	1500 XP + 150 gold	Danger Zones	Massive Strike	Powerful Spell	Deadly Minions			
+The Infernals' Fury	100		4 hr	2	1500 XP + Armor Enhancement	Wild Aggression	Massive Strike	Deadly Minions				
+The Liberation of Shattrath	100	3 days	10 hr	3	1500 XP + 1000 Apexis + 20000 XP	Wild Aggression	Deadly Minions	Magic Debuff				
+The One True Brambleking	100		6 hr	2	1500 XP + 100 gold	Minion Swarms	Powerful Spell					
+The Quill is Mighty	100		6 hr	3	1500 XP + 3 Rush Order: Inscription	Group Damage	Massive Strike	Timed Battle				
+The Ring of Trials	100		16 hr	1	1500 XP + Follower Retraining							
+The Wonder Gears	100		4 hr	2	1500 XP + 2 Rush Order: Engineering	Minion Swarms	Timed Battle					
+To Freedom!	100		4 hr	2	1500 XP + 60 gold	Danger Zones	Minion Swarms					
+Tower of Terror	100		24 hr	3	1500 XP + 3 Abrogator Stone	Powerful Spell	Magic Debuff	Group Damage	Danger Zones			
+Twisting the Nether	100		6 hr	3	1500 XP + 8000 XP	Minion Swarms	Magic Debuff	Deadly Minions				
+Waste Not, Want Not	100		6 hr	3	1500 XP + 3 Rush Order: Gem	Minion Swarms	Wild Aggression	Powerful Spell				
+Waylay the Warlord	100		4 hr	3	1500 XP + Armor Enhancement	Powerful Spell	Group Damage					
+You're Fired	100		6 hr	3	1500 XP + 3 Rush Order: Engineering	Wild Aggression	Wild Aggression	Group Damage				
+You, Robot	100		10 hr	3	1500 XP + Grease Monkey Guide	Group Damage	Massive Strike	Danger Zones				
+A Way Out	99		2 hr	3	1500 XP + 1500 XP + 275 gold	Timed Battle	Group Damage	Timed Battle				
+Burning Desire	99		1 hr 30 min	2	1000 XP + 10000 XP	Wild Aggression	Powerful Spell					
+Gronn with the Wind	99		2 hr	1	1000 XP + 1000 XP	Danger Zones						
+Heart of the Sabermaw	99		10 hr	3	2000 XP + 2000 XP	Powerful Spell						
+Lug'dol's Thugs	99		1 hr	2	1000 XP +1500 XP	Timed Battle	Wild Aggression					
+Ogre-Kill	99		2 hr	1	1000 XP + 1000 XP	Massive Strike						
+Out of His Element	99		1 hr 30 min	1	1000 XP + 48 resource	Group Damage						
+Raider Danger	99		1 hr 30 min	1	1000 XP + 1000 XP	Timed Battle						
+Spell Trouble	99		1 hr 30 min	3	1500 XP + 610 Tormented Spaulders	Powerful Spell	Wild Aggression	Massive Strike				
+The Wolfmother's Pelts	99		2 hr	2	900 XP + 85 gold	Minion Swarms	Wild Aggression					
+Early Mover	98		4 hr	3	1200 XP + Dreanor Clan Orator Cane	Minion Swarms	Massive Strike	Massive Strike				
+Fired Up	98		2 hr	3	1440 XP + 1350 XP + 250 gold	Massive Strike	Wild Aggression	Powerful Spell				
+Flint's Hide	98		2 hr	2	900 XP + 65 gold	Massive Strike	Danger Zones					
+Gorging Ogres	98		1 hr	2	900 XP + 1350 XP	Powerful Spell	Deadly Minions					
+Medical Necessity	98		1 hr 30 min	1	900 XP + 45 gold	Deadly Minions						
+Mercy Killing	98		1 hr 30 min	1	900 XP + 46 resource	Massive Strike						
+Mysteries of Lok-rath	98		1 hr	1	900 XP + 100 Battle + 40 Research	Minion Swarms						
+Scared of the Dark	98		2 hr	3	1350 XP + 600 Tormented Trinket	Danger Zones	Magic Debuff	Minion Swarms				
+Spell Check	98		1 hr 30 min	2	900 XP + 900 XP	Danger Zones	Powerful Spell					
+Surge Protection	98		2 hr	1	900 XP + 900 XP	Magic Debuff						
+The Gorian Warmaster	98		10 hr	3	1800 XP + 1800 XP	Massive Strike						
+Blow by Blow	97		45 min	1	800 XP + 800 XP	Magic Debuff						
+Cat Scratch Fever	97		1 hr 52 min	3	1200 XP + 1200 XP + 225 gold	Massive Strike	Timed Battle	Wild Aggression				
+Curiousity Killed Them	97		1 hr	1	800 XP + 800 XP	Wild Aggression						
+Honey, I Got Your Money	97		1 hr 30 min	2	800 XP + 60 gold	Magic Debuff	Minion Swarms					
+Nevermore	97		1 hr	1	800 XP + 44 resource	Group Damage						
+Ryled Up	97		1 hr 30 min	1	800 XP + 800 XP	Group Damage						
+Shattered Expectations	97		1 hr 52 min	3	1200 XP + 590 Tortured Gauntlets	Wild Aggression	Deadly Minions	Timed Battle				
+Bad Day At Work	96		1 hr 52 min	3	1050 XP + 580 Leggings	Group Damage	Wild Aggression	Group Damage				
+Bug Squashing	96		1 hr 30 min	1	700 XP + 700 XP	Deadly Minions						
+Crush The Pale	96		45 min	2	700 XP + 700 XP	Minion Swarms	Wild Aggression					
+Hurts so Good	96		1 hr 30 min	1	700 SP + 700 XP	Wild Aggression						
+Knotty by Nature	96		1 hr	1	700 XP + 42 resource	Massive Strike						
+Murkbog Terror	96		10 hr	3	1400 XP + 1400 XP	Magic Debuff						
+Peace Unto You	96		1 hr 52 min	3	1050 XP + 1050 XP + 200 gold	Group Damage	Timed Battle	Wild Aggression				
+Pro-labor	96		4 hr	2	800 XP + 25 Arakkoa Arch + 2 Cipher	Group Damage	Massive Strike					
+Raiders of the Lost shard	96		1 hr	2	800 XP + 1050 XP	Massive Strike	Deadly Minions					
+Worth Its Weight	96		1 hr	1	700 XP + 70 gold	Deadly Minions						
+A Call To Action	95		1 hr	1	600 XP + 600 XP	Powerful Spell						
+Bully-Free Zone	95		30 min	1	600 XP + 600 XP	Deadly Minions						
+Demonic Retribution	95		1 hr 30 min	3	900 XP + 570 Tormented Bracers	Magic Debuff	Group Damage	Wild Aggression				
+Flock Together	95		1 hr 30 min	3	900 XP + 900 XP + 175 gold	Timed Battle	Magic Debuff	Powerful Spell				
+Reagents of Mass Destruction	95		1 hr	2	600 XP + 50 gold	Danger Zones	Magic Debuff					
+Shreddercide	95		45 min	1	600 XP + 37.5 gold	Group Damage						
+Steeltusk Lives	95		10 hr	3	1200 XP + 1200 XP	Deadly Minions						
+Uproot the Problem	95		45 min	1	600 XP + 40 resource	Minion Swarms						
+All That Glitters	94		45 min	1	500 XP + 35 gold	Powerful Spell						
+Leading the Flock	94		1 hr	1	500 XP + 500 XP	Magic Debuff						
+Shivan Sightings	94		1 hr	1	500 XP + 500 XP	Powerful Spell						
+Stalactice Appetite	94		30 min	2	500 XP + 500 XP	Minion Swarms	Powerful Spell					
+The Kaliri Nuisance	94		45 min	2	500 XP + 750 XP	Wild Aggression	Danger Zones					
+The Needs of the Many	94		45 min	1	500 XP + 38 resource	Magic Debuff						
+The Tomb of Lights	94		1 hr	1	500 XP + 45 gold	Wild Aggression						
+Great Migration	93		45 min	1	400 XP + 36 resource	Danger Zones						
+It's a Jungle Out There	93		4 hr	1	300 XP + Gorgrond Treasure Map	Wild Aggression						
+Little Biters	93		1 hr	1	400 XP + 400 XP	Minion Swarms						
+Ogron's Out of the Bag	93		45 min	1	400 XP + 32 gold 50 silver	Danger Zones						
+Ancient Affliction	92		1 hr	1	300 XP + 300 XP	Timed Battle						
+Breaking The Blackrock	92		1 hr	1	300 XP + 300 XP	Deadly Minions						
+Break Their Chains	92		45 min	1	300 XP + 30 gold	Massive Strike						
+Dessicus Maximus	92		45 min	2	300 XP + 450 XP	Powerful Spell	Timed Battle					
+Many-Headed Menace	92		45 min	1	300 XP + 34 resource	Magic Debuff						
+Mother Araneae	92		1 hr	1	300 XP + 37 gold 50 silver	Minion Swarms						
+Rolkor	92		10 hr	3	600 XP + 600 XP	Danger Zones						
+Backbreaker	91		4 hr	1	100 XP + 50 Ogre Archaeology	Deadly Minions						
+Blackrock Intelligence	91		1 hr	1	200 XP + 27 gold 50 silver	Wild Aggression						
+Borok's Fools	91		1 hr	1	200 XP + 35 gold	Deadly Minions						
+The Hypnocroak	91		1 hr	1	200 XP + 35 gold	Magic Debuff						
+The Pale Dilemma	91		1 hr	1	200 XP + 32 resource	Group Damage						
+A Bit Nippy	90		30 min	1	100 XP + 100 XP	Magic Debuff						
+Clean the Latrine	90		5 min	1	100 XP							
+Cleave the Clefthoof	90		30 min	1	100 XP + 30 resource	Minion Swarms						
+Finding Farahlon	90		6 hr	1	500 XP + Mysterious Shining Lockbox	Massive Strike						
+Frosty And Delicious	90		30 min	1	100 XP + 100 XP	Wild Aggression						
+Hearthstone Tournament	90		3 hr	1	400 XP + Hearthstone stuff							
+Precious Riches	90		30 min	1	100 XP + 30 gold	Wild Aggression						
+The Dance Studio	90		30 min	1	100 XP + Supreme Manual of Dance							
+The Night Watch	90		30 min	1	100 XP + 150 XP	Massive Strike						
+The Observer Effect	90		30 min	1	100 XP + 25 gold	Deadly Minions						
+Tracking Griftah	90		30 min	1	500 XP + 100 gold + Talisman	Wild Aggression						
+Umbrafen Treasures	90		30 min	1	100 XP + 30 gold	Magic Debuff						
+Where the Rock Flayers Went	90		6 hr	1	500 XP + Shattered Stone	Minion Swarms						
