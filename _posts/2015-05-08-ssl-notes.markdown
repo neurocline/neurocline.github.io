@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "SSL Notes"
+title:  "SSL/TLS Notes"
 date:   2015-05-08 12:33:00
 categories: ssl
 ---
+![My helpful screenshot](/assets/TLS.jpg)
 
 TLS (n&eacute;e SSL) is a big part of the modern computer landscape, but there
 are no up-to-date reference materials. The few books written 10 years
@@ -20,6 +21,9 @@ are:
 
 I think that interviewing all of the actors in the TLS world would be
 an awesome step.
+
+More importantly, should the overall name be SSL, or TLS? Probably
+SSL, since that's very widespread at this point.
 
 ## TLS
 
