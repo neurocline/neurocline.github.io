@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SSL/TLS Notes</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT">
+  <link rel="canonical" href="http://neurocline.github.io/ssl/2015/05/08/ssl-notes.html">
+  <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Some Things Are Obvious</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/reading/">Reading List</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">SSL/TLS Notes</h1>
+    <p class="post-meta">May 8, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <p><img src="/assets/TLS.jpg" alt="My helpful screenshot" /></p>
+
+<p>TLS (née SSL) is a big part of the modern computer landscape, but there
+are no up-to-date reference materials. The few books written 10 years
+ago are woefully out of date.</p>
+
+<p>Someone needs to write a new book or books. Some big areas to focus on
+are:</p>
+
+<ul>
+  <li>updated history</li>
+  <li>certificates</li>
+  <li>cryptographic algorithms</li>
+  <li>best practices for security</li>
+  <li>working at scale</li>
+</ul>
+
+<p>I think that interviewing all of the actors in the TLS world would be
+an awesome step.</p>
+
+<p>More importantly, should the overall name be SSL, or TLS? Probably
+SSL, since that’s very widespread at this point.</p>
+
+<h2 id="tls">TLS</h2>
+
+<p>Wikipedia - <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security</a></p>
+
+<p>RFC5246 - <a href="http://tools.ietf.org/html/rfc5246">The Transport Layer Security (TLS) Protocol Version 1.2</a></p>
+
+<p>RFC6176 - <a href="http://tools.ietf.org/html/rfc6176">Prohibiting Secure Sockets Layer (SSL) Version 2.0</a></p>
+
+<p>OWASP - <a href="https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet">Transport Layer Protection Cheat Sheet</a></p>
+
+<p>RFC5746 - <a href="http://www.ietf.org/rfc/rfc5746.txt">Transport Layer Security (TLS) Renegotiation Indication Extension</a></p>
+
+<p><a href="https://support.globalsign.com/customer/portal/articles/1499561-sha-256-compatibility">SHA-256 Compatibility</a></p>
+
+<p><a href="https://www.ssllabs.com/downloads/SSL_TLS_Deployment_Best_Practices.pdf">SSL/TLS Deployment Best Practices</a></p>
+
+<h2 id="certificates">Certificates</h2>
+
+<p><a href="http://www.zytrax.com/tech/survival/ssl.html">Survival guides - TLS/SSL and SSL (X.509) Certificates</a></p>
+
+<p>Microsoft - <a href="https://technet.microsoft.com/en-us/library/cc962078.aspx">Benefits of Multiple-Level Certification Hierarchies</a></p>
+
+<p>Stack Overflow - <a href="http://stackoverflow.com/questions/20409534/how-does-an-ssl-certificate-chain-bundle-works">How does an SSL certificate chain bundle works?</a></p>
+
+<p>stackoverflow - <a href="http://stackoverflow.com/questions/2256950/openssl-ignore-self-signed-certificate-error">OpenSSL Ignore Self-signed certificate error</a>. Notes on how to verify certifications in OpenSSL</p>
+
+<h2 id="certificate-authorities">Certificate authorities</h2>
+
+<p>Wikipedia - <a href="http://en.wikipedia.org/wiki/Intermediate_certificate_authorities">Intermediate certificate authorities</a></p>
+
+<p><a href="https://support.dnsimple.com/articles/what-is-ssl-certificate-chain/">What is the SSL Certificate Chain?</a></p>
+
+<p><a href="http://stackoverflow.com/questions/21319841/signing-certificate-with-another-certificate-signed-by-ca">Signing certificate with another certificate signed by CA</a></p>
+
+<p><a href="https://community.openvpn.net/openvpn/wiki/Using_Certificate_Chains">Using Certificate Chains</a></p>
+
+<p>github/zakjan - <a href="https://github.com/zakjan/cert-chain-resolver">Cert chain resolver</a></p>
+
+<p>chain.com - <a href="http://blog.chain.com/post/87136249186/how-we-keep-the-chain-api-secure">How We Keep the Chain API Secure</a></p>
+
+<ul>
+  <li>see <a href="https://chain.com/docs">API v2 Documentation</a></li>
+</ul>
+
+<p><a href="http://www.davidpashley.com/articles/becoming-a-x-509-certificate-authority/">Becoming a X.509 Certificate Authority</a></p>
+
+<p>WikiHow - <a href="http://www.wikihow.com/Be-Your-Own-Certificate-Authority">How to Be Your Own Certificate Authority</a></p>
+
+<p><a href="http://www.area536.com/projects/be-your-own-certificate-authority-with-openssl/">Be your own Certificate Authority</a></p>
+
+<p>Superuser - <a href="http://superuser.com/questions/347588/how-do-ssl-chains-work">How do SSL chains work?</a></p>
+
+<h2 id="public-key-pinning">Public Key Pinning</h2>
+
+<ul>
+  <li>HPKP - Public Key Pinning Extension for HTTP</li>
+  <li>HSTS - Force use of HTTPS</li>
+  <li>TACK - Public Key Pinning Extension</li>
+  <li>CRL - Certificate Revocation List</li>
+  <li>OCSP - Online Certificate Status Protocol</li>
+</ul>
+
+<p>Mozilla - <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning">Public Key Pinning</a></p>
+
+<p>RFC7469 - <a href="https://tools.ietf.org/html/rfc7469">Public Key Pinning Extension for HTTP</a></p>
+
+<p>Mozilla - <a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a></p>
+
+<p>RFC6797 - <a href="https://tools.ietf.org/html/rfc6797">HTTP Strict Transport Security (HSTS)</a></p>
+
+<p>Wikipedia - <a href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></p>
+
+<p>ImperialVioet - <a href="https://www.imperialviolet.org/2011/05/04/pinning.html">IPublic key pinning (04 May 2011)</a> - Chrome adding public key pinning. Use public key hashes, not certificate hashes.</p>
+
+<p><a href="https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21">Public Key Pinning Extension for HTTP</a></p>
+
+<p>OWASP - <a href="https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning">Certificate and Public Key Pinning</a></p>
+
+<p>Wikipedia - <a href="http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol">Online Certificate Status Protocol</a></p>
+
+<p><a href="http://tack.io/">TACK, for pinning</a> - Moxie Marlinspike</p>
+
+<p>Attack on Google detected via pinning</p>
+
+<ul>
+  <li><a href="https://productforums.google.com/forum/#!topic/gmail/3J3r2JqFNTw/discussion">Is This MITM Attack to Gmail’s SSL ?</a></li>
+  <li><a href="http://googleonlinesecurity.blogspot.com/2011/08/update-on-attempted-man-in-middle.html">An update on attempted man-in-the-middle attacks</a></li>
+</ul>
+
+<p>security.stackexchange - <a href="http://security.stackexchange.com/questions/29988/what-is-certificate-pinning">What is certificate pinning?</a></p>
+
+<h2 id="websockets-and-ssl">Websockets and SSL</h2>
+
+<p><a href="http://security.stackexchange.com/questions/1034/can-javascript-flash-verify-the-ssl-connection-to-prevent-ssl-inspection">Can Javascript/Flash verify the SSL connection to prevent “SSL Inspection”?</a></p>
+
+<h2 id="tls-srp">TLS-SRP</h2>
+
+<p>Wikipedia - <a href="http://en.wikipedia.org/wiki/TLS-SRP">TLS-SRP</a></p>
+
+<p>Wikipedia - <a href="http://en.wikipedia.org/wiki/Secure_Remote_Password_protocol">Secure Remote Password protocol</a></p>
+
+<p>RFC5054 - <a href="https://tools.ietf.org/html/rfc5054">Using the Secure Remote Password (SRP) Protocol for TLS Authentication</a></p>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Some Things Are Obvious</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Some Things Are Obvious</li>
+          <li><a href="mailto:neurocline@gmail.com">neurocline@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/neurocline">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/neurocline">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Answers to some of the world's questions
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

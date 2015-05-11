@@ -6,9 +6,162 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 May 2015 23:07:18 -0700</pubDate>
-    <lastBuildDate>Wed, 06 May 2015 23:07:18 -0700</lastBuildDate>
+    <pubDate>Mon, 11 May 2015 09:35:46 -0700</pubDate>
+    <lastBuildDate>Mon, 11 May 2015 09:35:46 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>The Most Important Software Innovations</title>
+        <description>&lt;p&gt;This makes for interesting reading&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.dwheeler.com/innovation/innovation.html&quot;&gt;The Most Important Software Innovations&lt;/a&gt;, David Wheeler, last updated 2012-09-05.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 May 2015 02:31:00 -0700</pubDate>
+        <link>http://neurocline.github.io/development/2015/05/11/the-most-important-software-innovations.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/development/2015/05/11/the-most-important-software-innovations.html</guid>
+        
+        
+        <category>development</category>
+        
+      </item>
+    
+      <item>
+        <title>SSL/TLS Notes</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/TLS.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;TLS (née SSL) is a big part of the modern computer landscape, but there
+are no up-to-date reference materials. The few books written 10 years
+ago are woefully out of date.&lt;/p&gt;
+
+&lt;p&gt;Someone needs to write a new book or books. Some big areas to focus on
+are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;updated history&lt;/li&gt;
+  &lt;li&gt;certificates&lt;/li&gt;
+  &lt;li&gt;cryptographic algorithms&lt;/li&gt;
+  &lt;li&gt;best practices for security&lt;/li&gt;
+  &lt;li&gt;working at scale&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I think that interviewing all of the actors in the TLS world would be
+an awesome step.&lt;/p&gt;
+
+&lt;p&gt;More importantly, should the overall name be SSL, or TLS? Probably
+SSL, since that’s very widespread at this point.&lt;/p&gt;
+
+&lt;h2 id=&quot;tls&quot;&gt;TLS&lt;/h2&gt;
+
+&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Transport_Layer_Security&quot;&gt;Transport Layer Security&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RFC5246 - &lt;a href=&quot;http://tools.ietf.org/html/rfc5246&quot;&gt;The Transport Layer Security (TLS) Protocol Version 1.2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RFC6176 - &lt;a href=&quot;http://tools.ietf.org/html/rfc6176&quot;&gt;Prohibiting Secure Sockets Layer (SSL) Version 2.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;OWASP - &lt;a href=&quot;https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet&quot;&gt;Transport Layer Protection Cheat Sheet&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RFC5746 - &lt;a href=&quot;http://www.ietf.org/rfc/rfc5746.txt&quot;&gt;Transport Layer Security (TLS) Renegotiation Indication Extension&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://support.globalsign.com/customer/portal/articles/1499561-sha-256-compatibility&quot;&gt;SHA-256 Compatibility&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ssllabs.com/downloads/SSL_TLS_Deployment_Best_Practices.pdf&quot;&gt;SSL/TLS Deployment Best Practices&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;certificates&quot;&gt;Certificates&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.zytrax.com/tech/survival/ssl.html&quot;&gt;Survival guides - TLS/SSL and SSL (X.509) Certificates&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Microsoft - &lt;a href=&quot;https://technet.microsoft.com/en-us/library/cc962078.aspx&quot;&gt;Benefits of Multiple-Level Certification Hierarchies&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Stack Overflow - &lt;a href=&quot;http://stackoverflow.com/questions/20409534/how-does-an-ssl-certificate-chain-bundle-works&quot;&gt;How does an SSL certificate chain bundle works?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;stackoverflow - &lt;a href=&quot;http://stackoverflow.com/questions/2256950/openssl-ignore-self-signed-certificate-error&quot;&gt;OpenSSL Ignore Self-signed certificate error&lt;/a&gt;. Notes on how to verify certifications in OpenSSL&lt;/p&gt;
+
+&lt;h2 id=&quot;certificate-authorities&quot;&gt;Certificate authorities&lt;/h2&gt;
+
+&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Intermediate_certificate_authorities&quot;&gt;Intermediate certificate authorities&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://support.dnsimple.com/articles/what-is-ssl-certificate-chain/&quot;&gt;What is the SSL Certificate Chain?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/21319841/signing-certificate-with-another-certificate-signed-by-ca&quot;&gt;Signing certificate with another certificate signed by CA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://community.openvpn.net/openvpn/wiki/Using_Certificate_Chains&quot;&gt;Using Certificate Chains&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;github/zakjan - &lt;a href=&quot;https://github.com/zakjan/cert-chain-resolver&quot;&gt;Cert chain resolver&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;chain.com - &lt;a href=&quot;http://blog.chain.com/post/87136249186/how-we-keep-the-chain-api-secure&quot;&gt;How We Keep the Chain API Secure&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;see &lt;a href=&quot;https://chain.com/docs&quot;&gt;API v2 Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.davidpashley.com/articles/becoming-a-x-509-certificate-authority/&quot;&gt;Becoming a X.509 Certificate Authority&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;WikiHow - &lt;a href=&quot;http://www.wikihow.com/Be-Your-Own-Certificate-Authority&quot;&gt;How to Be Your Own Certificate Authority&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.area536.com/projects/be-your-own-certificate-authority-with-openssl/&quot;&gt;Be your own Certificate Authority&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Superuser - &lt;a href=&quot;http://superuser.com/questions/347588/how-do-ssl-chains-work&quot;&gt;How do SSL chains work?&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;public-key-pinning&quot;&gt;Public Key Pinning&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HPKP - Public Key Pinning Extension for HTTP&lt;/li&gt;
+  &lt;li&gt;HSTS - Force use of HTTPS&lt;/li&gt;
+  &lt;li&gt;TACK - Public Key Pinning Extension&lt;/li&gt;
+  &lt;li&gt;CRL - Certificate Revocation List&lt;/li&gt;
+  &lt;li&gt;OCSP - Online Certificate Status Protocol&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mozilla - &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning&quot;&gt;Public Key Pinning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RFC7469 - &lt;a href=&quot;https://tools.ietf.org/html/rfc7469&quot;&gt;Public Key Pinning Extension for HTTP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mozilla - &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security&quot;&gt;HTTP Strict Transport Security&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RFC6797 - &lt;a href=&quot;https://tools.ietf.org/html/rfc6797&quot;&gt;HTTP Strict Transport Security (HSTS)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security&quot;&gt;HTTP Strict Transport Security&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ImperialVioet - &lt;a href=&quot;https://www.imperialviolet.org/2011/05/04/pinning.html&quot;&gt;IPublic key pinning (04 May 2011)&lt;/a&gt; - Chrome adding public key pinning. Use public key hashes, not certificate hashes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21&quot;&gt;Public Key Pinning Extension for HTTP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;OWASP - &lt;a href=&quot;https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning&quot;&gt;Certificate and Public Key Pinning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol&quot;&gt;Online Certificate Status Protocol&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tack.io/&quot;&gt;TACK, for pinning&lt;/a&gt; - Moxie Marlinspike&lt;/p&gt;
+
+&lt;p&gt;Attack on Google detected via pinning&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://productforums.google.com/forum/#!topic/gmail/3J3r2JqFNTw/discussion&quot;&gt;Is This MITM Attack to Gmail’s SSL ?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googleonlinesecurity.blogspot.com/2011/08/update-on-attempted-man-in-middle.html&quot;&gt;An update on attempted man-in-the-middle attacks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;security.stackexchange - &lt;a href=&quot;http://security.stackexchange.com/questions/29988/what-is-certificate-pinning&quot;&gt;What is certificate pinning?&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;websockets-and-ssl&quot;&gt;Websockets and SSL&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://security.stackexchange.com/questions/1034/can-javascript-flash-verify-the-ssl-connection-to-prevent-ssl-inspection&quot;&gt;Can Javascript/Flash verify the SSL connection to prevent “SSL Inspection”?&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tls-srp&quot;&gt;TLS-SRP&lt;/h2&gt;
+
+&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/TLS-SRP&quot;&gt;TLS-SRP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Secure_Remote_Password_protocol&quot;&gt;Secure Remote Password protocol&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RFC5054 - &lt;a href=&quot;https://tools.ietf.org/html/rfc5054&quot;&gt;Using the Secure Remote Password (SRP) Protocol for TLS Authentication&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 08 May 2015 05:33:00 -0700</pubDate>
+        <link>http://neurocline.github.io/ssl/2015/05/08/ssl-notes.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/ssl/2015/05/08/ssl-notes.html</guid>
+        
+        
+        <category>ssl</category>
+        
+      </item>
     
       <item>
         <title>Tesla&#39;s Powerwall Is A Game Changer</title>
@@ -385,6 +538,12 @@ be written as an entity.&lt;/p&gt;
       &lt;td&gt;&amp;amp;#8594;&lt;/td&gt;
       &lt;td&gt;rightwards arrow&lt;/td&gt;
     &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;é&lt;/td&gt;
+      &lt;td&gt;&amp;amp;eacute;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;#233;&lt;/td&gt;
+      &lt;td&gt;latin e with acute&lt;/td&gt;
+    &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -494,380 +653,6 @@ a little (I’ve seen hints of this), or I’ll write something myself.&lt;/p&gt
         <pubDate>Sat, 02 May 2015 12:15:00 -0700</pubDate>
         <link>http://neurocline.github.io/jekyll/blog/2015/05/02/jekyll-workflow.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/jekyll/blog/2015/05/02/jekyll-workflow.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Generating Projects with Premake</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/Premake.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There is a goal - a cross-platform build system. It still doesn’t exist, and someday I’ll be
-forced to make it. Until then, I keep trying things. One of those things is Premake.&lt;/p&gt;
-
-&lt;p&gt;Premake is a cross-platform project generation system. So, while it’s not a build system, it
-handles one of the hard parts, code. It uses a Lua scripting system; your build definition
-files are Lua scripts with lots of predefined behavior handled by the Premake engine. So, like
-SCons, you start off on familiar ground with a powerful language that has widespread usage.&lt;/p&gt;
-
-&lt;p&gt;Unlike SCons, Premake is a C application. There are some positives - C code can run on almost
-any system. But, you need to bootstrap Premake, because (of course) Premake is built with
-Premake. This is only annoying when you start using Premake, then, like any self-hosting system,
-you forget there was a time before self-compiling.&lt;/p&gt;
-
-&lt;p&gt;Premake had a big re-architecture pass happen in 2014, and (as of this writing in May 2015) is
-just now starting to shape up. The original developer, Kitware, had a strong Visual Studio bias,
-which shows not just in the features in Premake, but that Xcode support is only just now
-re-emerging. That said, Premake 5 is what you should be using.&lt;/p&gt;
-
-&lt;p&gt;So, how do you get started with Premake?&lt;/p&gt;
-
-&lt;h2 id=&quot;bootstrapping&quot;&gt;Bootstrapping&lt;/h2&gt;
-
-&lt;p&gt;Prebuilt Premake binaries can be found on the &lt;a href=&quot;http://premake.github.io/download.html&quot;&gt;Premake Download&lt;/a&gt; site.&lt;/p&gt;
-
-&lt;p&gt;Grab binaries as needed; even if you want to be building from source (e.g. adding features to
-Premake), you’ll need at least one existing Premake version. Fortunately, Premake 5 can be
-bootstrapped with Premake 4. When I went to grab a build in late April, the built Windows binary
-was broken, but a nightly build worked.&lt;/p&gt;
-
-&lt;p&gt;I’m going grab a latest &lt;a href=&quot;http://sourceforge.net/projects/premake/files/Premake/nightlies/premake-dev-windows.zip/download&quot;&gt;Windows build&lt;/a&gt;, and put the Premake binary in
-&lt;code&gt;C:\Dev\premake5\premake5.exe&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;building-premake-from-source&quot;&gt;Building Premake from source&lt;/h2&gt;
-
-&lt;p&gt;Premake source, along with the online manual, has moved to GitHub; see &lt;a href=&quot;https://github.com/premake/premake-core&quot;&gt;Premake on GitHub&lt;/a&gt;.
-It’s very easy to build - clone the repo, run an existing premake, and then build from the generated
-project:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; git clone git@github:premake/premake-core.git
-&amp;gt; cd premake-core.git
-&amp;gt; C:\Dev\premake5\premake5.exe vs2013
-Building configurations...
-Running action &amp;#39;vs2013&amp;#39;...
-Generating Premake5.sln...
-Generating Premake5.vcxproj...
-Generating Premake5.vcxproj.filters...
-Done.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;At this point, there is a Visual Studio 2013 solution in the root folder that you can open and
-build, or use msbuild from the command-line to build from it. And once you start using Premake,
-you’ll wonder why project files aren’t tucked away in a folder so that multiple .gitignore
-statements aren’t required to handle all possibilities. We put generated projects in the build
-folder, because that’s where all generated artifacts go.&lt;/p&gt;
-
-&lt;p&gt;If you have never built Premake from the given repo before, or you’ve changed the Lua scripts,
-there’s one final step to take, which is to embed the scripts in the executable. This copies
-all the Lua scripts into a script.c file that’s then part of the binary.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt;c:\dev\premake5\premake5.exe embed
-Running action &amp;#39;embed&amp;#39;...
-Writing scripts.c&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Premake will load the loose scripts from disk if they exist, and since a lot of the Premake
-functionality is actually in the Lua scripts, this makes it easy to iterate quickly when adding
-or updating Premake functionality. But in normal practice, it’s just the single binary that’s
-distributed, hence the need for the embedding step.&lt;/p&gt;
-
-&lt;h2 id=&quot;a-simple-premake-project&quot;&gt;A simple Premake project&lt;/h2&gt;
-
-&lt;p&gt;Let’s make a Hello World program.&lt;/p&gt;
-
-&lt;p&gt;No, that’s too simple. Let’s create a Visual Studio solution and project file for libgit2 (which uses
-CMake).&lt;/p&gt;
-
-&lt;p&gt;Get the libgit2 source from GitHub:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt;git clone git@github.com:libgit2/libgit2.git
-cd libgit2.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now create a file named premake5.lua in the root folder of the libgit2 project, with this as the
-contents:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;solution &amp;quot;Libgit2&amp;quot;
-    configurations { &amp;quot;Debug&amp;quot; }
-    location (&amp;quot;build&amp;quot;)
-
-project &amp;quot;libgit2&amp;quot;
-    targetname &amp;quot;libgit2&amp;quot;
-    language &amp;quot;C&amp;quot;
-    kind &amp;quot;StaticLib&amp;quot;
-    location (&amp;quot;build/projects&amp;quot;)
-
-    files
-    {
-        &amp;quot;**.c&amp;quot;, &amp;quot;**.h&amp;quot;
-    }
-    
-    configuration &amp;quot;Debug&amp;quot;
-        targetdir &amp;quot;build/bin/debug&amp;quot;
-        defines { &amp;quot;_DEBUG&amp;quot;, &amp;quot;WIN32&amp;quot; }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Why &lt;code&gt;premake5.lua&lt;/code&gt;? This is the default name for a premake config script in Premake5. You can
-name it anything, but you’ll then need to pass that name on the command-line, because Premake5
-isn’t going to try to guess.&lt;/p&gt;
-
-&lt;p&gt;This is not a production-quality premake file. For one, it only targets Windows and Visual Studio,
-and one of the main points of using Premake is that it is cross-platform. However, I want to build
-up to that, but also to show that you can very quickly generate projects for any codebase.&lt;/p&gt;
-
-&lt;p&gt;This won’t build, of course. I’m writing it blind without referencing the CMake script. But that’s
-ok for now.&lt;/p&gt;
-
-&lt;p&gt;Run Premake5 to generate a solution:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; C:\Dev\premake5\premake5.exe vs2013
-Building configurations...
-Running action &amp;#39;vs2013&amp;#39;...
-Generating build/Libgit2.sln...
-Generating build/projects/libgit2.vcxproj...
-Generating build/projects/libgit2.vcxproj.filters...
-Done.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;When you run this, you’ll see that a build folder has been created, and inside that build folder
-is a Visual Studio solution and related project folder. All the source files are in that single
-project.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt;dir build /s /b
-build\Libgit2.sln
-build\projects
-build\projects\libgit2.vcxproj
-build\projects\libgit2.vcxproj.filters&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If you open the Libgit2.sln project, you’ll see it’s full of source and header files, arranged in
-folders that mimic the source tree layout. This is the default behavior.&lt;/p&gt;
-
-&lt;p&gt;If you try building, it will “work” for some degree of work - that is, it will start compiling, but
-generate lots of errors because header files can’t be found.&lt;/p&gt;
-
-&lt;p&gt;Let’s fix just the simplest error. The code expects a path to the include/ folder, because many of
-the includes are of the form &lt;code&gt;#include &quot;git2/common.h&quot;&lt;/code&gt;. Add this section right after the
-&lt;code&gt;files&lt;/code&gt; section in the premake5.lua file:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;includedirs
-{
-    &amp;quot;../../include&amp;quot;
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Re-run the &lt;code&gt;premake5.exe vs2013&lt;/code&gt; command. It will overwrite files in place, although if you’re
-like me, you’ll just delete the whole build folder (always safe to do, since it’s generated). Now
-open the project again.&lt;/p&gt;
-
-&lt;p&gt;Important note: Premake generates paths relative to the lua file being executed. Even though
-the project file ends up several levels deep in the build folder, your premake5.lua script
-describes files relative to itself. So, since the &lt;code&gt;include/&lt;/code&gt; folder is at the same level
-as our &lt;code&gt;premake5.lua&lt;/code&gt; file, we can just say &lt;code&gt;&quot;include&quot;&lt;/code&gt;. If you look in the project
-file, you’ll see the actual include paths looks something like this&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;..\..\include;%(AdditionalIncludeDirectories)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;It’s for reasons like this that using Premake even on a single platform can be a boost. If you’re
-careful, your premake scripts will stay small and readable, and that can’t be said for large
-programs with dozens of solutions and hundreds of project files. Simply making a small change to
-a large hierarchy of projects (say, to add a define) can be time-consuming and error-prone. Yes,
-you could attempt to use property sheets in modern versions of Visual Studio, or the equivalent
-in other build systems.&lt;/p&gt;
-
-&lt;p&gt;Or you can just write your projects in a far more readable form and generate them.&lt;/p&gt;
-
-&lt;p&gt;I’ll return to Premake in future posts, as I lay out some best practices for using Premake on
-both small and large projects. I’ll also be looking at the other contenders in this space, and
-hypothesizing on what the “perfect” system would look like. For example, Premake5 is very
-Windows-centric, and this makes for slightly confusing operation when trying to generate Xcode
-projects, because Xcode uses different names for things, and even has slightly different behavior.&lt;/p&gt;
-
-&lt;p&gt;More to follow.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 02 May 2015 10:00:00 -0700</pubDate>
-        <link>http://neurocline.github.io/premake/build/2015/05/02/generating-projects-with-premake.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/premake/build/2015/05/02/generating-projects-with-premake.html</guid>
-        
-        
-        <category>premake</category>
-        
-        <category>build</category>
-        
-      </item>
-    
-      <item>
-        <title>Using Jekyll for a blog</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/JekyllBlogging.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I’ve been unhappy with Wordpress for a while now - it’s slow, it’s cumbersome to add content,
-and it’s riddled with insecurities. Despite not being a “web programmer”, I’ve decided it’s time
-to go closer to the bare metal - and a blog is much more suited to a static site. This means I can
-keep my blog in source control, which makes me much happier than using some CMS system. I decided
-to try Jekyll, instead of writing my own. I may still write my own eventually; that’s what all
-engineers seem to do, over time, to exert the most control.&lt;/p&gt;
-
-&lt;p&gt;This has been interesting, because I’ve also managed to avoid using Ruby all these years; Perl and
-then Python are what I’d used for “scripting” languages. I also decided to put it up as a GitHub
-Pages site, since I of course was using Git for source control.&lt;/p&gt;
-
-&lt;p&gt;So here’s the steps I followed, on a Windows machine, just to be contrary; the Web world prefers
-Mac and Linux, and normally so do I. But at the time I wanted to restart my blog, I was on a
-Windows 7 machine.&lt;/p&gt;
-
-&lt;h2 id=&quot;install-ruby&quot;&gt;Install Ruby&lt;/h2&gt;
-
-&lt;p&gt;For Windows, you’ll want to use a prebuilt installer from &lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;ruby-installer.org&lt;/a&gt;.
-I picked &lt;a href=&quot;http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.6.exe&quot;&gt;rubyinstaller-2.1.6&lt;/a&gt; because I didn’t know what I was doing, and
-there was a strong suggestion to use 2.1.x.&lt;/p&gt;
-
-&lt;p&gt;I installed a 32-bit build because I’ve had issues with 64-bit Python and Perl in the past - not
-all Perl modules or Python packages support 64-bit. So I just assumed the same for Ruby. Also, I’m
-not yet writing large programs, so no need for 64-bit. I installed it into C:/Dev/Ruby21, just
-because I try to do a minimal amount of organization.&lt;/p&gt;
-
-&lt;h2 id=&quot;install-devkit&quot;&gt;Install DevKit&lt;/h2&gt;
-
-&lt;p&gt;I only found this out after starting to install Jekyll, but Ruby gems that come with native
-code need a compiler to build them with. On Linux and Mac, this is automatic because it’s almost
-always “just there”, but for Windows we need compilers. I miss the auto-convenience of Perl and
-Python which just found my Visual Studio installs and used them. I couldn’t figure out how to
-get Ruby to do the same, and I suspect it’s hard-coded to use the MinGW suite.&lt;/p&gt;
-
-&lt;p&gt;The DevKit download can be found on the &lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;ruby-installer.org&lt;/a&gt; page. I grabbed
-the &lt;a href=&quot;http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe&quot;&gt;DevKit-mingw64-32&lt;/a&gt; installer that matched my Ruby install. It’s not
-really an installer, it’s a self-unpacking archive. Unpack it to its permanent home - I have
-a C:/Dev folder that I put development tools into, so it went into C:/Dev/RubyDevKit. Don’t
-let it unpack to its default location, which is into a temp folder.&lt;/p&gt;
-
-&lt;p&gt;Once you’ve unpacked it, you need to install it - I think all this does is write magic entries
-into your Ruby folder. The default action should find your Ruby folder, but you can double-check
-by looking at config.yml after you run dk.rb init.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; ruby dk.rb init
-&amp;gt; ruby dk.rb install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that on one machine, DevKit didn’t install cleanly for some reason - e.g. gem install…
-failed with a “install DevKit, please”. I rebooted and that didn’t fix it, but then I reinstalled
-DevKit again (ruby dk.rb install), and this time it worked. I don’t know if the reboot was
-necessary, but I have a vague memory of being prompted to reboot after installing Ruby on
-a different machine. I’ll try to reproduce that at some point.&lt;/p&gt;
-
-&lt;h2 id=&quot;install-jekyll&quot;&gt;Install Jekyll&lt;/h2&gt;
-
-&lt;p&gt;Here’s where I diverged from what GitHub was suggesting, for two reasons. One, I just want to
-use Jekyll to create my site, and I’ll commit the generated site to Git (and push to GitHub).
-Two, I had a weird problem when I tried to follow the GitHub instructions, and rather than figure
-it out, I went back to my original plan of “have a static site”.&lt;/p&gt;
-
-&lt;p&gt;First, I installed Jekyll.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; gem install jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, I created a new Git repository and initialized it as a Jekyll-generated site.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; mkdir neurocline.github.io
-&amp;gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;neurocline.github.io
-&amp;gt; git init
-&amp;gt; jekyll new .&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;install-pygments-or-rouge&quot;&gt;Install Pygments or Rouge&lt;/h2&gt;
-
-&lt;p&gt;Since I’m running Jekyll locally, I had a problem as soon as I started writing Markdown that
-used the Liquid syntax highlighting; it didn’t work. A few seconds of Googling led me to
-understand that I needed more modules.&lt;/p&gt;
-
-&lt;p&gt;The gorilla is Pygments, which is Python-based, and has a Ruby wrapper already built in to
-Jekyll. Since I am a Python user, this didn’t turn me off, so I just installed Pygments. This was
-especially easy since I’m using a Python that has pip as part of the core system&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; python -m pip install pygments&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I also had to add a line to my _config.yml file:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# Build settings
-markdown: kramdown
-highlighter: pygments&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And frustratingly, even though the Pygments page said ‘shell’ was a style, there is no such
-thing and I had to use ‘bash’.&lt;/p&gt;
-
-&lt;h2 id=&quot;do-local-editing&quot;&gt;Do local editing&lt;/h2&gt;
-
-&lt;p&gt;The standard workflow is to run a Jekyll server locally, then start editing content. Every
-time you save, the file-watcher will pick up the changes and update the site. By default, your
-site is viewed on localhost:4000.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; jekyll serve
-Configuration file: C:/projects/github/neurocline.github.io/_config.yml
-            Source: C:/projects/github/neurocline.github.io
-       Destination: C:/projects/github/neurocline.github.io/_site
-      Generating...
-                    done.
-  Please add the following to your Gemfile to avoid polling for changes:
-    gem &amp;#39;wdm&amp;#39;, &amp;#39;&amp;gt;= 0.1.0&amp;#39; if Gem.win_platform?
- Auto-regeneration: enabled for &amp;#39;C:/projects/github/neurocline.github.io&amp;#39;
-Configuration file: C:/projects/github/neurocline.github.io/_config.yml
-    Server address: http://127.0.0.1:4000/
-  Server running... press ctrl-c to stop.
-      Regenerating: 1 file(s) changed at 2015-05-01 19:59:33
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;bake-a-site&quot;&gt;Bake a site&lt;/h2&gt;
-
-&lt;p&gt;Since I’m not using GitHub’s Jekyll, I need to bake the site locally and commit file, then
-push to GitHub. And that means a little trickery. Here’s one approach.&lt;/p&gt;
-
-&lt;p&gt;First, I baked the site:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; jekyll build&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, I pushed the sources for the site to a sources branch. GitHub wants to see the site itself in
-a master branch, I want my sources in source control, so I “hide” it in a branch GitHub is not
-looking at.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; git remote add origin git@ghosthub:neurocline/neurocline.git.io
-&amp;gt; git checkout -b sources
-&amp;gt; git add -A
-&amp;gt; git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;First commit of source&amp;quot;&lt;/span&gt;
-&amp;gt; git push origin sources&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Finally, I pushed the baked site itself to a master branch.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_site
-&amp;gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &amp;gt; .nojekyll
-&amp;gt; git init
-&amp;gt; git remote add origin git@ghosthub:neurocline/neurocline.git.io
-&amp;gt; git add -A
-&amp;gt; git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;jekyll first build&amp;quot;&lt;/span&gt;
-&amp;gt; git push origin master
-&amp;gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;At this point, my site is live on GitHub.&lt;/p&gt;
-
-&lt;p&gt;If you follow that, it looks a little weird, because I have two different repos both pointing to
-the same remote repo. But that’s Git for you. This way, I don’t need to be copying files from one
-place to another. It’s a little more extra work for setup, but the steady-state is easy.&lt;/p&gt;
-
-&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
-
-&lt;p&gt;I’m pretty happy with the writing part now. I can edit in text and see results as often as I
-want (by saving files and using the default file-watcher behavior). I have yet to add images or
-to tweak or change the overall blog style, but that will happen.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jekyll-windows.juthilo.com/3-syntax-highlighting/&quot;&gt;Install a Syntax Highlighter&lt;/a&gt; from
-&lt;a href=&quot;http://jekyll-windows.juthilo.com/&quot;&gt;Run Jekyll on Windows&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pygments.org/&quot;&gt;Pygments&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://github.com/oneclick/rubyinstaller/wiki/Development-Kit&quot;&gt;Installing DevKit&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://joshualande.com/jekyll-github-pages-poole/&quot;&gt;How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 01 May 2015 11:53:20 -0700</pubDate>
-        <link>http://neurocline.github.io/jekyll/blog/2015/05/01/using-jekyll.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/jekyll/blog/2015/05/01/using-jekyll.html</guid>
         
         
         <category>jekyll</category>
