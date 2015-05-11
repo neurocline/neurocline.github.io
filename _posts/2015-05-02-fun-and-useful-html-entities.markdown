@@ -37,6 +37,7 @@ Character | Entity-name | Entity-number | Description
 &nbsp;    | &amp;nbsp;  | &amp;#160;    | non-breaking space
 &larr;    | &amp;larr;  | &amp;#8592;   | leftwards arrow
 &rarr;    | &amp;rarr;  | &amp;#8594;   | rightwards arrow
+&eacute;  | &amp;eacute;| &amp;#233;    | latin e with acute
 
 ## HTML Entities you should not use
 
