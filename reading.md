@@ -20,6 +20,8 @@ More
 * [Edge](http://edge.org/) - "To arrive at the edge of the world's knowledge..."
 * [things magazine](http://www.thingsmagazine.net/) - objects and their meanings
 * [kottke.org](http://www.kottke.org/)
+* [Schneier on Security](https://www.schneier.com/)
+* [Security Now](https://www.grc.com/securitynow.htm)
 
 Resources
 
