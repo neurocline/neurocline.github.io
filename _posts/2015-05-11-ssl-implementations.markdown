@@ -36,13 +36,23 @@ both iOS and Android builds referenced in the documentation.
 * [OpenSSL As A Filter (Or Non-Blocking OpenSSL)](http://funcptr.net/2012/04/08/openssl-as-a-filter-(or-non-blocking-openssl)/)
 * [OpenSSL Related Links](https://wiki.openssl.org/index.php/Related_Links)
 
+## LibreSSL
+
+LibreSSL is a fork of OpenSSL done by the OpenBSD folks as a security-focused rewrite.
+There is a new library coming called ressl, for reimagined SSL.
+
+[LibreSSL](http://www.libressl.org/)
+
+[goreSSL](http://www.tedunangst.com/flak/post/goreSSL)
+
 ## Schannel
 
-Schannel is the name of Microsoft's SSL implementation, implemented as an SSP in
-their Security Support Provider Interface.
+Secure Channel or Schannel is the name of Microsoft's SSL implementation,
+implemented as an SSP in their Security Support Provider Interface.
 
 ### Reference
 
+* [Schannel](https://msdn.microsoft.com/en-us/library/windows/desktop/ms678421(v=vs.85).aspx)
 * [Secure Channel](https://msdn.microsoft.com/en-us/library/windows/desktop/aa380123(v=vs.85).aspx)
 * [Certificate Stores](https://msdn.microsoft.com/en-us/library/windows/desktop/aa374752(v=vs.85).aspx)
 * [SSL/TLS Alert Protocol & the Alert Codes](http://blogs.msdn.com/b/kaushal/archive/2012/10/06/ssl-tls-alert-protocol-amp-the-alert-codes.aspx)
@@ -54,6 +64,15 @@ their Security Support Provider Interface.
 * [Manually Validating Schannel Credentials](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378740(v=vs.85).aspx)
 * [CryptoAPI Cryptographic Service Providers](https://msdn.microsoft.com/en-us/library/windows/desktop/bb931357(v=vs.85).aspx)
 
+## Secure Transport
+
+Secure Transport is Darwin/Mac OS X's name for SSL. Modern features are only supported
+in Mac OS X 10.8 or later. Also annoyingly, you must put certificates in the Keychain
+instead of bundling them with your program. But it's open source under the APSL 2.0
+license.
+
+[Secure Transport Reference](https://developer.apple.com/library/mac/documentation/Security/Reference/secureTransportRef/)
+
 ## PolarSSL
 
 ### Reference
@@ -61,6 +80,8 @@ their Security Support Provider Interface.
 [PolarSSL is now a part of ARM](https://tls.mbed.org/tech-updates/blog/polarssl-part-of-arm) - and [Hacker News comments](https://news.ycombinator.com/item?id=8652019)
 
 ## General
+
+Wikipedia - [Comparison of TLS implementations](http://en.wikipedia.org/wiki/Comparison_of_TLS_implementations)
 
 Note to self - don't allow SSL renegotiation. [Re: SSL renegotiation](http://www.postgresql.org/message-id/51DE30DF.3080604@chittenden.org)
 

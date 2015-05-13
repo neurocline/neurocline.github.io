@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Git Merge 2015"
+date:   2015-05-12 18:24:00
+categories: git
+---
+![My helpful screenshot](/assets/GitMerge2015.jpg)
+
+Watch these videos
+
+[Git Merge 2015](http://git-merge.com/)
