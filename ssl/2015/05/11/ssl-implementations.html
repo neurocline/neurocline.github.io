@@ -107,14 +107,24 @@ both iOS and Android builds referenced in the documentation.</p>
   <li><a href="https://wiki.openssl.org/index.php/Related_Links">OpenSSL Related Links</a></li>
 </ul>
 
+<h2 id="libressl">LibreSSL</h2>
+
+<p>LibreSSL is a fork of OpenSSL done by the OpenBSD folks as a security-focused rewrite.
+There is a new library coming called ressl, for reimagined SSL.</p>
+
+<p><a href="http://www.libressl.org/">LibreSSL</a></p>
+
+<p><a href="http://www.tedunangst.com/flak/post/goreSSL">goreSSL</a></p>
+
 <h2 id="schannel">Schannel</h2>
 
-<p>Schannel is the name of Microsoft’s SSL implementation, implemented as an SSP in
-their Security Support Provider Interface.</p>
+<p>Secure Channel or Schannel is the name of Microsoft’s SSL implementation,
+implemented as an SSP in their Security Support Provider Interface.</p>
 
 <h3 id="reference-2">Reference</h3>
 
 <ul>
+  <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms678421(v=vs.85).aspx">Schannel</a></li>
   <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa380123(v=vs.85).aspx">Secure Channel</a></li>
   <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa374752(v=vs.85).aspx">Certificate Stores</a></li>
   <li><a href="http://blogs.msdn.com/b/kaushal/archive/2012/10/06/ssl-tls-alert-protocol-amp-the-alert-codes.aspx">SSL/TLS Alert Protocol &amp; the Alert Codes</a></li>
@@ -127,6 +137,15 @@ their Security Support Provider Interface.</p>
   <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb931357(v=vs.85).aspx">CryptoAPI Cryptographic Service Providers</a></li>
 </ul>
 
+<h2 id="secure-transport">Secure Transport</h2>
+
+<p>Secure Transport is Darwin/Mac OS X’s name for SSL. Modern features are only supported
+in Mac OS X 10.8 or later. Also annoyingly, you must put certificates in the Keychain
+instead of bundling them with your program. But it’s open source under the APSL 2.0
+license.</p>
+
+<p><a href="https://developer.apple.com/library/mac/documentation/Security/Reference/secureTransportRef/">Secure Transport Reference</a></p>
+
 <h2 id="polarssl">PolarSSL</h2>
 
 <h3 id="reference-3">Reference</h3>
@@ -134,6 +153,8 @@ their Security Support Provider Interface.</p>
 <p><a href="https://tls.mbed.org/tech-updates/blog/polarssl-part-of-arm">PolarSSL is now a part of ARM</a> - and <a href="https://news.ycombinator.com/item?id=8652019">Hacker News comments</a></p>
 
 <h2 id="general">General</h2>
+
+<p>Wikipedia - <a href="http://en.wikipedia.org/wiki/Comparison_of_TLS_implementations">Comparison of TLS implementations</a></p>
 
 <p>Note to self - don’t allow SSL renegotiation. <a href="http://www.postgresql.org/message-id/51DE30DF.3080604@chittenden.org">Re: SSL renegotiation</a></p>
 

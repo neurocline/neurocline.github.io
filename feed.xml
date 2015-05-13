@@ -6,9 +6,101 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 May 2015 13:10:56 -0700</pubDate>
-    <lastBuildDate>Tue, 12 May 2015 13:10:56 -0700</lastBuildDate>
+    <pubDate>Tue, 12 May 2015 18:27:01 -0700</pubDate>
+    <lastBuildDate>Tue, 12 May 2015 18:27:01 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Git Merge 2015</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/GitMerge2015.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Watch these videos&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://git-merge.com/&quot;&gt;Git Merge 2015&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 May 2015 11:24:00 -0700</pubDate>
+        <link>http://neurocline.github.io/git/2015/05/12/git-merge.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/git/2015/05/12/git-merge.html</guid>
+        
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://community.qualys.com/thread/12315&quot;&gt;Can’t get OCSP stapling to work, despite openssl working fine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.thawte.com/assets/documents/whitepaper/ocsp-stapling.pdf&quot;&gt;Guide to OCSP Stapling&lt;/a&gt; - Thawte.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Revocation_list&quot;&gt;Revocation list&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Kerberos_(protocol)&quot;&gt;Kerberos (protocol)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/OCSP_stapling&quot;&gt;OCSP Stapling&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol&quot;&gt;Online Certificate Status Protocol&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.imperialviolet.org/2011/03/18/revocation.html&quot;&gt;Revocation doesn’t work&lt;/a&gt; - from March 2011.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.imperialviolet.org/2014/04/19/revchecking.html&quot;&gt;No, don’t enable revocation checking&lt;/a&gt; - from April 2014&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/html/draft-hallambaker-muststaple-00&quot;&gt;X.509v3 Extension: OCSP Stapling Required&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21&quot;&gt;Public Key Pinning Extension for HTTP&lt;/a&gt; - this is known as HPKP. Chrome does this and pre-loaded pins.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.certificate-transparency.org/&quot;&gt;Certificate Transparency&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.webupd8.org/2011/02/how-to-boot-iso-with-grub2-easy-way.html&quot;&gt;HOW TO BOOT AN ISO WITH GRUB2 (THE EASY WAY!)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lifehacker.com/5042630/unetbootin-creates-usb-bootable-linux-the-easy-way&quot;&gt;UNetbootin Creates USB-Bootable Linux the Easy Way&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.instructables.com/id/Make-Your-Regular-Mac-a-NetBoot-Server!/&quot;&gt;Make Your Regular Mac a NetBoot Server!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mike.passwall.com/macnc/macosxs.html&quot;&gt;Netbooting Mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/ee619754(WS.10).aspx&quot;&gt;How Certificate Revocation Works&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cise.ufl.edu/~bates/documents/Bates_Ccs14.pdf&quot;&gt;Securing SSL Certificate Verification through Dynamic Linking&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.feistyduck.com/&quot;&gt;Feisty Duck&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.jayway.com/2014/09/03/creating-self-signed-certificates-with-makecert-exe-for-development/&quot;&gt;Creating self signed certificates with makecert.exe for development&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.serverframework.com/ServerFramework/latest/Docs/examples-schannelechoserver.html&quot;&gt;Example Servers - SChannel Echo Server&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.coastrd.com/tls-with-schannel&quot;&gt;TLS with Schannel&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.coastrd.com/c-schannel-smtp&quot;&gt;C++ SSPI Schannel TLS example&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.certificate-transparency.org/log-proofs-work&quot;&gt;How Log Proofs Work&lt;/a&gt; - Merkle hash trees and proving entries are in logs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.emsec.rub.de/media/crypto/attachments/files/2011/04/becker_1.pdf&quot;&gt;Merkle Signature Schemes, Merkle Trees and Their Cryptanalysis&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;books-i-want-to-get&quot;&gt;Books I want to get&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Bulletproof-SSL-TLS-Understanding-Applications/dp/1907117040/&quot;&gt;Bulletproof SSL and TLS&lt;/a&gt; by Ivan Ristic. For some reason this is super-expensive from Amazon, cheaper to get it direct from Feisty Duck.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/SSL-TLS-Designing-Building-Systems/dp/0201615983&quot;&gt;SSL and TLS: Designing and Building Secure Systems&lt;/a&gt; by Eric Rescorla. Old but still good.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Implementing-SSL-TLS-Using-Cryptography/dp/0470920416/&quot;&gt;Implementing SSL / TLS Using Cryptography and PKI&lt;/a&gt; by Joshau Davies.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Network-Security-OpenSSL-John-Viega/dp/059600270X/&quot;&gt;Network Security with OpenSSL&lt;/a&gt; by John Viega.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Secure-Programming-Cookbook-Cryptography-Authentication/dp/0596003943/&quot;&gt;Secure Programming Cookbook for C and C++&lt;/a&gt; by John Viega.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Cryptography-Engineering-Principles-Practical-Applications/dp/0470474246/&quot;&gt;Cryptography Engineering: Design Principles and Practical Applications&lt;/a&gt; by Niels Furguson, Bruce Schneier, Tadayoshi Kohno.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Introduction-Cryptography-Edition-Chapman-Security/dp/1466570261/&quot;&gt;Introduction to Modern Cryptography, Second Edition&lt;/a&gt; by Jonathan Katz, Yehuda Lindell.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 May 2015 07:39:00 -0700</pubDate>
+        <link>http://neurocline.github.io/links/2015/05/12/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/links/2015/05/12/recent-links.html</guid>
+        
+        
+        <category>links</category>
+        
+      </item>
     
       <item>
         <title>Stream ciphers</title>
@@ -143,14 +235,24 @@ both iOS and Android builds referenced in the documentation.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://wiki.openssl.org/index.php/Related_Links&quot;&gt;OpenSSL Related Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;libressl&quot;&gt;LibreSSL&lt;/h2&gt;
+
+&lt;p&gt;LibreSSL is a fork of OpenSSL done by the OpenBSD folks as a security-focused rewrite.
+There is a new library coming called ressl, for reimagined SSL.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.libressl.org/&quot;&gt;LibreSSL&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tedunangst.com/flak/post/goreSSL&quot;&gt;goreSSL&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;schannel&quot;&gt;Schannel&lt;/h2&gt;
 
-&lt;p&gt;Schannel is the name of Microsoft’s SSL implementation, implemented as an SSP in
-their Security Support Provider Interface.&lt;/p&gt;
+&lt;p&gt;Secure Channel or Schannel is the name of Microsoft’s SSL implementation,
+implemented as an SSP in their Security Support Provider Interface.&lt;/p&gt;
 
 &lt;h3 id=&quot;reference-2&quot;&gt;Reference&lt;/h3&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms678421(v=vs.85).aspx&quot;&gt;Schannel&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/aa380123(v=vs.85).aspx&quot;&gt;Secure Channel&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/aa374752(v=vs.85).aspx&quot;&gt;Certificate Stores&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://blogs.msdn.com/b/kaushal/archive/2012/10/06/ssl-tls-alert-protocol-amp-the-alert-codes.aspx&quot;&gt;SSL/TLS Alert Protocol &amp;amp; the Alert Codes&lt;/a&gt;&lt;/li&gt;
@@ -163,6 +265,15 @@ their Security Support Provider Interface.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb931357(v=vs.85).aspx&quot;&gt;CryptoAPI Cryptographic Service Providers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;secure-transport&quot;&gt;Secure Transport&lt;/h2&gt;
+
+&lt;p&gt;Secure Transport is Darwin/Mac OS X’s name for SSL. Modern features are only supported
+in Mac OS X 10.8 or later. Also annoyingly, you must put certificates in the Keychain
+instead of bundling them with your program. But it’s open source under the APSL 2.0
+license.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Security/Reference/secureTransportRef/&quot;&gt;Secure Transport Reference&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;polarssl&quot;&gt;PolarSSL&lt;/h2&gt;
 
 &lt;h3 id=&quot;reference-3&quot;&gt;Reference&lt;/h3&gt;
@@ -170,6 +281,8 @@ their Security Support Provider Interface.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://tls.mbed.org/tech-updates/blog/polarssl-part-of-arm&quot;&gt;PolarSSL is now a part of ARM&lt;/a&gt; - and &lt;a href=&quot;https://news.ycombinator.com/item?id=8652019&quot;&gt;Hacker News comments&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;general&quot;&gt;General&lt;/h2&gt;
+
+&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Comparison_of_TLS_implementations&quot;&gt;Comparison of TLS implementations&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Note to self - don’t allow SSL renegotiation. &lt;a href=&quot;http://www.postgresql.org/message-id/51DE30DF.3080604@chittenden.org&quot;&gt;Re: SSL renegotiation&lt;/a&gt;&lt;/p&gt;
 
@@ -553,85 +666,6 @@ on “modern” keyboards is the Meta key, but you can map keys to Hyper and Sup
         
         
         <category>editor</category>
-        
-      </item>
-    
-      <item>
-        <title>Git limits and the Linux repo</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/LinuxGit.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;According to Linus Torvald’s announcement about the Linux 4.0 release,
-the Linux git repo now has over 4 million git objects.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lkml.org/lkml/2015/4/12/178&quot;&gt;Ima Sheep&lt;/a&gt; from lkml.org&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Looking at just the statistics in git, this release is not
-just when we cross half a million commits total, but also cross the 4
-million git object limit.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The sentence should be parsed as “we crossed the 4 million git objects line” instead of
-reading that there is a maximum of 4 million objects. But even otherwise, since there
-was no panic, we can see that 4 million objects in a repo is not cause for alarm.&lt;/p&gt;
-
-&lt;p&gt;It’s important to note that there’s no real difference between small blobs and big
-blobs in terms of most operations - getting history, creating branches and so on.
-It’s also true that blobs as patches versus blobs as whole files is mostly irrelevant
-too, except at the point where you are checking out a revision.&lt;/p&gt;
-
-&lt;p&gt;So, Git can handle 4 million git objects in a repo. Let’s compare that to a large
-game’s code base. Our big game will have about 250K files in it. Let’s say that each
-file is modified an average of 10 times; that’s 2.5 million files. I also have access
-to some large projects, so I’ll be looking into them to see how big they are, but
-I think the last time I looked at a large repo, it was several million
-file objects.&lt;/p&gt;
-
-&lt;h3 id=&quot;addendum&quot;&gt;Addendum&lt;/h3&gt;
-
-&lt;p&gt;The picture above is of the Linux kernel, from visualizations done by the
-&lt;a href=&quot;https://code.google.com/p/gource/wiki/Screenshots&quot;&gt;Gource&lt;/a&gt; project.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 02 May 2015 18:28:00 -0700</pubDate>
-        <link>http://neurocline.github.io/git/linux/2015/05/02/git-and-linux-repo.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/git/linux/2015/05/02/git-and-linux-repo.html</guid>
-        
-        
-        <category>git</category>
-        
-        <category>linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Playing with fonts</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/HotType.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I’m playing with web fonts finally, starting with Google Fonts. At the moment,
-the blog is set to use Old Standard TT, which has a certain charm for the body
-text, but isn’t that great for titles.&lt;/p&gt;
-
-&lt;p&gt;Other fonts I like from the Google Fonts set include Merriweather and Vollkorn,
-although I’ll probably go boring and use Open Sans. Another choice is to use
-PT Serif and PT Sans, as they were designed to go together. But then I’ll need
-to figure out the CSS so I can have header fonts with a distinct type.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.google.com/fonts&quot;&gt;Google Fonts&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/fonts/docs/getting_started&quot;&gt;Getting Started With Google Fonts&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://hellohappy.org/beautiful-web-type/&quot;&gt;Beautiful Web Type&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 02 May 2015 17:38:00 -0700</pubDate>
-        <link>http://neurocline.github.io/html/blog/2015/05/02/playing-with-fonts.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/html/blog/2015/05/02/playing-with-fonts.html</guid>
-        
-        
-        <category>html</category>
-        
-        <category>blog</category>
         
       </item>
     
