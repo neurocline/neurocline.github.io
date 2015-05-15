@@ -6,9 +6,33 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 May 2015 18:27:01 -0700</pubDate>
-    <lastBuildDate>Tue, 12 May 2015 18:27:01 -0700</lastBuildDate>
+    <pubDate>Fri, 15 May 2015 15:16:33 -0700</pubDate>
+    <lastBuildDate>Fri, 15 May 2015 15:16:33 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;Note - I will reorganize how I’m doing this soon, so it’s in a different
+section and not as “blog entries”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Cryptographic-Security-Architecture-Design-Verification/dp/0387953876&quot;&gt;Cryptographic Security Architecture: Design and Verification&lt;/a&gt; by Peter Gutmann. Expensive. Textbook?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://secure-resumption.com/tlsauth.pdf&quot;&gt;Triple Handshakes and Cookie Cutters:
+Breaking and Fixing Authentication over TLS
+&lt;/a&gt;, paper by Karthikeyan Bhargavan, Antoine Delignat-Lavaud, Cedric Fournet, Alfredo Pironti and Pierre-Yves Strub. New attacks on TLS. This prompted the Extended Master Secret extension to TLS.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tools.ietf.org/html/draft-ietf-tls-session-hash-05&quot;&gt;Transport Layer Security (TLS) Session Hash and Extended Master Secret Extension&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cs.auckland.ac.nz/~pgut001/pubs/vista_cost.html&quot;&gt;A Cost Analysis of Windows Vista Content Protection&lt;/a&gt; - paper by Peter Gutmann on Windows Vista’s content protection measures and problems thereo f(&lt;a href=&quot;http://www.cypherpunks.to/~peter/vista.pdf&quot;&gt;slides here&lt;/a&gt;)&lt;/p&gt;
+</description>
+        <pubDate>Wed, 13 May 2015 05:27:00 -0700</pubDate>
+        <link>http://neurocline.github.io/links/2015/05/13/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/links/2015/05/13/recent-links.html</guid>
+        
+        
+        <category>links</category>
+        
+      </item>
     
       <item>
         <title>Git Merge 2015</title>
@@ -625,47 +649,6 @@ from Lalley and Weyl.&lt;/p&gt;
         
         
         <category>politics</category>
-        
-      </item>
-    
-      <item>
-        <title>Modernizing Emacs</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/ModernizeEmacs.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Emacs and Vi have several claims to fame - they are both some of the longest-running
-active software tools in history, and one of the longest-running rivalries in software.&lt;/p&gt;
-
-&lt;p&gt;Here is a heart-felt request from an Emacs user on changes that Emacs should adopt
-to be more relevant in today’s world:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ergoemacs.org/emacs/modernization.html&quot;&gt;Modernization of Emacs (Simple Changes Emacs Should Adopt)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s worth reading. I think it was first written in 2006 and then updated in 2013. The first
-part of the article rambles, but the FAQ is where the important bits are.&lt;/p&gt;
-
-&lt;p&gt;My favorite part of the article was the reminder that the Lisp Machine keyboard that Emacs was
-first written for didn’t just have a Meta key - it had:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Hyper&lt;/li&gt;
-  &lt;li&gt;Super&lt;/li&gt;
-  &lt;li&gt;Meta&lt;/li&gt;
-  &lt;li&gt;Control&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Emacs used all those keys, and still supports super and hyper to this day. By default, Alt
-on “modern” keyboards is the Meta key, but you can map keys to Hyper and Super if you want:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ergoemacs.org/emacs/emacs_hyper_super_keys.html&quot;&gt;Emacs: How to Define Super &amp;amp; Hyper Keys&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Crazy.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 03 May 2015 03:51:00 -0700</pubDate>
-        <link>http://neurocline.github.io/editor/2015/05/03/modernizing-emacs.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/editor/2015/05/03/modernizing-emacs.html</guid>
-        
-        
-        <category>editor</category>
         
       </item>
     
