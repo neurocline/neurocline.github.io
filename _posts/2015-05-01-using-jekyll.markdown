@@ -4,6 +4,8 @@ title:  "Using Jekyll for a blog"
 date:   2015-05-01 18:53:20
 categories: jekyll blog
 ---
+*Updated 2015-05-22*
+
 ![My helpful screenshot](/assets/JekyllBlogging.jpg)
 
 I've been unhappy with Wordpress for a while now - it's slow, it's cumbersome to add content,
@@ -172,6 +174,25 @@ At this point, my site is live on GitHub.
 If you follow that, it looks a little weird, because I have two different repos both pointing to
 the same remote repo. But that's Git for you. This way, I don't need to be copying files from one
 place to another. It's a little more extra work for setup, but the steady-state is easy.
+
+## Jekyll on a Mac
+
+My MacBook Pro is running Mac OS X 10.9.5, which has Ruby ruby 2.0.0p481 and
+Python 2.7.5 on it by default. This meant a few changes in order to install
+Jekyll.
+
+First off, I need to use sudo to install into system directories, because
+Ruby and Python are in system directories, at least if you use the Apple-placed
+versions. Then, Python 2.7.5 doesn't have pip, so that needs to be installed.
+Other than that, it's exactly as detailed above.
+
+{% highlight bash %}
+sudo gem install jekyll
+sudo easy_install pip
+sudo python -m pip install pygments
+{% endhighlight %}
+
+At this point, it's ```jekyll serve``` and etc.
 
 ## Results
 
