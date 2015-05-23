@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Using Jekyll for a blog</title>
-  <meta name="description" content="">
+  <meta name="description" content="Updated 2015-05-22">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -72,7 +72,9 @@
   </header>
 
   <article class="post-content">
-    <p><img src="/assets/JekyllBlogging.jpg" alt="My helpful screenshot" /></p>
+    <p><em>Updated 2015-05-22</em></p>
+
+<p><img src="/assets/JekyllBlogging.jpg" alt="My helpful screenshot" /></p>
 
 <p>I’ve been unhappy with Wordpress for a while now - it’s slow, it’s cumbersome to add content,
 and it’s riddled with insecurities. Despite not being a “web programmer”, I’ve decided it’s time
@@ -222,6 +224,23 @@ looking at.</p>
 <p>If you follow that, it looks a little weird, because I have two different repos both pointing to
 the same remote repo. But that’s Git for you. This way, I don’t need to be copying files from one
 place to another. It’s a little more extra work for setup, but the steady-state is easy.</p>
+
+<h2 id="jekyll-on-a-mac">Jekyll on a Mac</h2>
+
+<p>My MacBook Pro is running Mac OS X 10.9.5, which has Ruby ruby 2.0.0p481 and
+Python 2.7.5 on it by default. This meant a few changes in order to install
+Jekyll.</p>
+
+<p>First off, I need to use sudo to install into system directories, because
+Ruby and Python are in system directories, at least if you use the Apple-placed
+versions. Then, Python 2.7.5 doesn’t have pip, so that needs to be installed.
+Other than that, it’s exactly as detailed above.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gem install jekyll
+sudo easy_install pip
+sudo python -m pip install pygments</code></pre></div>
+
+<p>At this point, it’s <code>jekyll serve</code> and etc.</p>
 
 <h2 id="results">Results</h2>
 
