@@ -6,9 +6,190 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 May 2015 19:55:48 -0700</pubDate>
-    <lastBuildDate>Sun, 24 May 2015 19:55:48 -0700</lastBuildDate>
+    <pubDate>Mon, 25 May 2015 00:23:23 -0700</pubDate>
+    <lastBuildDate>Mon, 25 May 2015 00:23:23 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Cryptography links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://www.cryptol.net/index.html&quot;&gt;Cryptol: The Language of Cryptography&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/tqbf/be58d2d39690c3b366ad&quot;&gt;(Updated) Cryptographic Right Answers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;the old version from 2009: &lt;a href=&quot;http://www.daemonology.net/blog/2009-06-11-cryptographic-right-answers.html&quot;&gt;Cryptographic Right Answers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;and see &lt;a href=&quot;http://www.reddit.com/r/programming/comments/370l3p/cryptographic_right_answers_from_thomas_ptacek/&quot;&gt;reddit thread&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=9593916&quot;&gt;Hacker News thread&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 May 2015 17:17:00 -0700</pubDate>
+        <link>http://neurocline.github.io/cryptography/2015/05/24/Cryptography-Links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/cryptography/2015/05/24/Cryptography-Links.html</guid>
+        
+        
+        <category>cryptography</category>
+        
+      </item>
+    
+      <item>
+        <title>Tracing System calls</title>
+        <description>&lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
+
+&lt;p&gt;Tracing system calls on Linux is straightforward. The &lt;code&gt;ptrace&lt;/code&gt; API lets
+one process trace all system calls made by another process, and the
+command-line program &lt;code&gt;strace&lt;/code&gt; uses &lt;code&gt;ptrace&lt;/code&gt; to allow a user to do the
+same.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://linux.die.net/man/1/strace&quot;&gt;strace(1)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://linux.die.net/man/2/ptrace&quot;&gt;ptrace(2)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.nelhage.com/2010/08/write-yourself-an-strace-in-70-lines-of-code/&quot;&gt;Write Yourself an Strace in 70 Lines of Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mac-os-x&quot;&gt;Mac OS X&lt;/h2&gt;
+
+&lt;p&gt;Tracing system calls on Mac OS X is a little harder, but more powerful.
+The &lt;code&gt;dtrace&lt;/code&gt; system ships with Macs starting with Mac OS X 10.5. Unlike
+strace, however, support for dtrace has to be built in to programs. Mac
+OS X ships with several thousand probes (the attachment points), and most
+normal monitoring is covered. Brendan Gregg’s blog has a Mac OS X-specific
+dtrace page, as an example, and there are other useful tutorials&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://dtrace.org/blogs/brendan/2011/10/10/top-10-dtrace-scripts-for-mac-os-x/&quot;&gt;Top 10 DTrace scripts for Mac OS X&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.bignerdranch.com/blog/hooked-on-dtrace-part-1/&quot;&gt;Hooked on DTrace, part 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apple added ptrace to Mac OS X, maybe. There’s a man page for it, but no
+strace program for user-level use. I’ll have to try writing some code.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man2/ptrace.2.html&quot;&gt;ptrace(2)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are ways to hook/override program and system functions at runtime.
+These work but aren’t truly supported, so are of most use for debugging
+situations.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rentzsch/mach_override&quot;&gt;mach_override&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rentzsch/mach_override&quot;&gt;mach_inject&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Amit Singh went the kernel extension approach to get access to system calls&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://osxbook.com/book/bonus/ancient/syscall/&quot;&gt;Re-routing System Calls&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While there are definitely nefarious uses for this stuff, it can be used for
+developers too. For example, this paper talks about rootkits, but the techniques
+also make for great developer tools.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.trailofbits.com/resources/advanced_macosx_rootkits_paper.pdf&quot;&gt;Advance Mac OS X Rootkits&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bsd&quot;&gt;BSD&lt;/h2&gt;
+
+&lt;p&gt;The equivalent to ptrace on BSD is ktrace. Unfortunately, ktrace is not
+available on Mac OS X. That’s annoying, because it is complementary to
+DTrace, which is an awesome sysop-level tool, but does not give complete
+access to all system calls. Mac OS X had ktrace in 10.4 and earlier.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=ktrace(1)&amp;amp;sektion=&quot;&gt;ktrace(1)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=ktrace&amp;amp;sektion=2&quot;&gt;ktrace(2)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
+
+&lt;p&gt;There is the amazing Process Monitor, which traces all file and registry
+actions. However, this is strictly a user-level program, you work with it through
+its GUI. It’s very useful, but does not give you system-call level access from
+your own source code.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://kohei.us/2010/06/25/strace-equivalent-for-windows/&quot;&gt;STRACE EQUIVALENT FOR WINDOWS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is a fairly new project called StraceNT. It comes with source code.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://intellectualheaven.com/default.asp?BH=STraceNT&quot;&gt;StraceNT - A System Call Tracer for Windows&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/intellectualheaven/stracent&quot;&gt;github/intellectualheaven/stracent&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dr. Memory comes with “strace for Windows” called drstrace.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/DynamoRIO/drmemory&quot;&gt;github/DynamoRIO/drmemory&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.drmemory.org/strace_for_windows.html&quot;&gt;System Call Tracer (“strace”) for Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Event Tracing for Windows (ETW) is the Microsoft official technique, and has
+several programs layered on top.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/magazine/ee412263.aspx&quot;&gt;Core OS Events in Windows 7, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is Logger and LogView, also Microsoft tools&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/hardware/ff552060(v=vs.85).aspx&quot;&gt;Logger and LogViewer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is NtTrace&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.howzatt.demon.co.uk/NtTrace/&quot;&gt;NtTrace - Native API tracing for Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An article&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jbremer.org/intercepting-system-calls-on-x86_64-windows/&quot;&gt;Intercepting System Calls on x86_64 Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fabricate&quot;&gt;fabricate&lt;/h2&gt;
+
+&lt;p&gt;This is a python build tool that watches for files that have changed as a result
+of running a command. It uses strace on Linux but does filetime watching on
+Windows, so maybe look for how to get Python on Windows to use one of the other
+file monitoring solutions?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://code.google.com/p/fabricate/&quot;&gt;fabricate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://code.google.com/p/fabricate/issues/detail?id=3&quot;&gt;fabricate issue 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tup&quot;&gt;tup&lt;/h2&gt;
+
+&lt;p&gt;The tup build tool uses DLL injection on Windows to detect file I/O.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gittup.org/tup/&quot;&gt;tup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ninja&quot;&gt;ninja&lt;/h2&gt;
+
+&lt;p&gt;The ninja tool also does filesystem watching, I think.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://martine.github.io/ninja/&quot;&gt;Ninja&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;google-building-in-the-cloud&quot;&gt;Google “building in the cloud”&lt;/h2&gt;
+
+&lt;p&gt;This is a FUSE-based approach, so not exactly tracing system calls.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://google-engtools.blogspot.com/2011/06/build-in-cloud-accessing-source-code.html&quot;&gt;Build in the Cloud: Accessing Source Code&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 May 2015 16:24:00 -0700</pubDate>
+        <link>http://neurocline.github.io/blog/2015/05/24/Tracing-System-Calls.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/blog/2015/05/24/Tracing-System-Calls.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>Git Tips</title>
@@ -420,144 +601,6 @@ including inside GNU Coreutils.&lt;/p&gt;
         
         
         <category>encryption</category>
-        
-      </item>
-    
-      <item>
-        <title>SSL/TLS Implementations</title>
-        <description>&lt;h2 id=&quot;botan&quot;&gt;Botan&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://botan.randombit.net/&quot;&gt;Botan home page&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/randombit/botan&quot;&gt;botan mirror on github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Strictly speaking, Botan is a general-purpose crypto library, but has a
-TLS implementation. Source is kept in Monotone, but there is a Github
-mirror. Botan has had continuous development since 2001. Is it safe to
-use in a commercial product? Good question.&lt;/p&gt;
-
-&lt;p&gt;It builds on Unix/POSIX and Microsoft Windows. There are instructions for
-both iOS and Android builds referenced in the documentation.&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Botan_(programming_library)&quot;&gt;Botan&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://tstarling.com/blog/2014/04/ssl-implementations-compared/&quot;&gt;SSL implementations compared&lt;/a&gt; - although this is really about coding style.&lt;/li&gt;
-  &lt;li&gt;Stack Overflow - &lt;a href=&quot;http://stackoverflow.com/questions/4236526/looking-for-a-high-level-c-ssl-library&quot;&gt;Looking for a High Level C++ SSL Library&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://panthema.net/2008/0714-cryptography-speedtest-comparison/&quot;&gt;Speedtest and Comparsion of Open-Source Cryptography Libraries and Compiler Flags&lt;/a&gt; - by the author of CryptoTE.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://archive.is/mstSu&quot;&gt;SSL and TLS&lt;/a&gt; - sample from old Botan manual&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cryptosource.de/docs/mceliece_in_botan.pdf&quot;&gt;Botan’s Implementation of the McEliece PKC&lt;/a&gt; - cryptography resilient against quantum computers?&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.codeitive.com/0miVjWPVVj/building-the-botan-library-for-ios7-arm64.html&quot;&gt;Building the Botan library for ios7 arm64&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;openssl&quot;&gt;OpenSSL&lt;/h2&gt;
-
-&lt;h3 id=&quot;reference-1&quot;&gt;Reference&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://funcptr.net/2012/04/08/openssl-as-a-filter-(or-non-blocking-openssl)/&quot;&gt;OpenSSL As A Filter (Or Non-Blocking OpenSSL)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wiki.openssl.org/index.php/Related_Links&quot;&gt;OpenSSL Related Links&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;libressl&quot;&gt;LibreSSL&lt;/h2&gt;
-
-&lt;p&gt;LibreSSL is a fork of OpenSSL done by the OpenBSD folks as a security-focused rewrite.
-There is a new library coming called ressl, for reimagined SSL.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.libressl.org/&quot;&gt;LibreSSL&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.tedunangst.com/flak/post/goreSSL&quot;&gt;goreSSL&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;schannel&quot;&gt;Schannel&lt;/h2&gt;
-
-&lt;p&gt;Secure Channel or Schannel is the name of Microsoft’s SSL implementation,
-implemented as an SSP in their Security Support Provider Interface.&lt;/p&gt;
-
-&lt;h3 id=&quot;reference-2&quot;&gt;Reference&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms678421(v=vs.85).aspx&quot;&gt;Schannel&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/aa380123(v=vs.85).aspx&quot;&gt;Secure Channel&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/aa374752(v=vs.85).aspx&quot;&gt;Certificate Stores&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.msdn.com/b/kaushal/archive/2012/10/06/ssl-tls-alert-protocol-amp-the-alert-codes.aspx&quot;&gt;SSL/TLS Alert Protocol &amp;amp; the Alert Codes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/aa376210(v=vs.85).aspx&quot;&gt;Cryptography API: Next Generation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/1600/CSslSocket-SSL-TLS-enabled-CSocket&quot;&gt;CSslSocket - SSL/TLS enabled CSocket&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/aa384076.aspx&quot;&gt;SSL in WinHTTP&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://social.msdn.microsoft.com/Forums/en-US/69060634-9209-47d2-a03c-05042906af73/how-to-add-sni-client-hello-extension-using-schannel-api?forum=windowssecurity&quot;&gt;How to add SNI client hello extension using Schannel API?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/7464860/ssl-with-winhttp&quot;&gt;SSL with WinHTTP&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/aa378740(v=vs.85).aspx&quot;&gt;Manually Validating Schannel Credentials&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb931357(v=vs.85).aspx&quot;&gt;CryptoAPI Cryptographic Service Providers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;secure-transport&quot;&gt;Secure Transport&lt;/h2&gt;
-
-&lt;p&gt;Secure Transport is Darwin/Mac OS X’s name for SSL. Modern features are only supported
-in Mac OS X 10.8 or later. Also annoyingly, you must put certificates in the Keychain
-instead of bundling them with your program. But it’s open source under the APSL 2.0
-license.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Security/Reference/secureTransportRef/&quot;&gt;Secure Transport Reference&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;polarssl&quot;&gt;PolarSSL&lt;/h2&gt;
-
-&lt;h3 id=&quot;reference-3&quot;&gt;Reference&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://tls.mbed.org/tech-updates/blog/polarssl-part-of-arm&quot;&gt;PolarSSL is now a part of ARM&lt;/a&gt; - and &lt;a href=&quot;https://news.ycombinator.com/item?id=8652019&quot;&gt;Hacker News comments&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;general&quot;&gt;General&lt;/h2&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Comparison_of_TLS_implementations&quot;&gt;Comparison of TLS implementations&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Note to self - don’t allow SSL renegotiation. &lt;a href=&quot;http://www.postgresql.org/message-id/51DE30DF.3080604@chittenden.org&quot;&gt;Re: SSL renegotiation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.feistyduck.com/books/openssl-cookbook/&quot;&gt;OpenSSL Cookbook&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://shop.oreilly.com/product/9780596002701.do&quot;&gt;Network Security with OpenSSL&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.keylength.com/&quot;&gt;Cryptographic Key Length Recommendation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://curl.haxx.se/docs/ssl-compared.html&quot;&gt;Compare SSL libraries&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://hmurat.bilkent.edu.tr/27122014-cryptography-industry.pdf&quot;&gt;On the Uses of Cryptography in Industry&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.grc.com/sn/sn-449.htm&quot;&gt;Security Now podcast, episode 449&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;stuff-from-daniel-bernstein&quot;&gt;Stuff from Daniel Bernstein&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ianix.com/pub/curve25519-deployment.html&quot;&gt;Things that use Curve25519&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cr.yp.to/ecdh.html&quot;&gt;A state-of-the-art Diffie-Hellman function&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ed25519.cr.yp.to/&quot;&gt;Ed25519: high-speed high-security signatures&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ianix.com/pub/ed25519-deployment.html&quot;&gt;Things that use Ed25519&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 11 May 2015 08:49:00 -0700</pubDate>
-        <link>http://neurocline.github.io/ssl/2015/05/11/ssl-implementations.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/ssl/2015/05/11/ssl-implementations.html</guid>
-        
-        
-        <category>ssl</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://panthema.net/2009/cryptote/&quot;&gt;CryptoTE&lt;/a&gt; - text editor that stores documents in encrypted containers.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://panthema.net/2010/stx-execpipe/&quot;&gt;STX Execution Pipe C++ Library&lt;/a&gt; - C++ abstraction of pipes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://conferences2.sigcomm.org/imc/2014/papers/p489.pdf&quot;&gt;Analysis of SSL Certificate Reissues and Revocations in the Wake of Heartbleed&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.kineticsystem.org/mingw&quot;&gt;Compile Graphics Magick, Boost, Botan and QT with MinGW64 under Windows 7 64&lt;/a&gt; - lengthy notes about building software with &lt;a href=&quot;http://www.mingw.org/&quot;&gt;MinGW&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 11 May 2015 08:49:00 -0700</pubDate>
-        <link>http://neurocline.github.io/links/2015/05/11/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/links/2015/05/11/recent-links.html</guid>
-        
-        
-        <category>links</category>
         
       </item>
     
