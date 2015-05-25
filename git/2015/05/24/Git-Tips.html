@@ -6,14 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Archive</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Git Tips</title>
+  <meta name="description" content="Here are some useful but less-common Git features.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT">
-  <link rel="canonical" href="http://neurocline.github.io/archive/">
+  <link rel="canonical" href="http://neurocline.github.io/git/2015/05/24/Git-Tips.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -68,81 +67,71 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Archive</h1>
+    <h1 class="post-title">Git Tips</h1>
+    <p class="post-meta">May 24, 2015</p>
   </header>
 
   <article class="post-content">
-    <h2 id="blog-posts">Blog Posts</h2>
+    <p>Here are some useful but less-common Git features.</p>
 
-<ul>
-  <li>
-    <p>24 May 2015 → <a href="/git/2015/05/24/Git-Tips.html"> Git Tips </a></p>
-  </li>
-  <li>
-    <p>24 May 2015 → <a href="/blog/2015/05/24/Hyde-For-Blogs.html"> Hyde For Blogs </a></p>
-  </li>
-  <li>
-    <p>24 May 2015 → <a href="/links/2015/05/24/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>22 May 2015 → <a href="/unix/2015/05/22/unix-source-history.html"> Unix source history in a Git repo </a></p>
-  </li>
-  <li>
-    <p>13 May 2015 → <a href="/links/2015/05/13/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>12 May 2015 → <a href="/git/2015/05/12/git-merge.html"> Git Merge 2015 </a></p>
-  </li>
-  <li>
-    <p>12 May 2015 → <a href="/links/2015/05/12/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>12 May 2015 → <a href="/encryption/2015/05/12/stream-ciphers.html"> Stream ciphers </a></p>
-  </li>
-  <li>
-    <p>11 May 2015 → <a href="/ssl/2015/05/11/ssl-implementations.html"> SSL/TLS Implementations </a></p>
-  </li>
-  <li>
-    <p>11 May 2015 → <a href="/links/2015/05/11/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>11 May 2015 → <a href="/development/2015/05/11/the-most-important-software-innovations.html"> The Most Important Software Innovations </a></p>
-  </li>
-  <li>
-    <p>08 May 2015 → <a href="/ssl/2015/05/08/ssl-notes.html"> SSL/TLS Notes </a></p>
-  </li>
-  <li>
-    <p>03 May 2015 → <a href="/energy/2015/05/03/tesla-powerwall.html"> Tesla’s Powerwall Is A Game Changer </a></p>
-  </li>
-  <li>
-    <p>03 May 2015 → <a href="/politics/2015/05/03/quadratic-voting.html"> Quadratic voting </a></p>
-  </li>
-  <li>
-    <p>03 May 2015 → <a href="/editor/2015/05/03/modernizing-emacs.html"> Modernizing Emacs </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/git/linux/2015/05/02/git-and-linux-repo.html"> Git limits and the Linux repo </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/html/blog/2015/05/02/playing-with-fonts.html"> Playing with fonts </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/html/blog/2015/05/02/font-awesome.html"> Font Awesome </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/html/blog/2015/05/02/fun-and-useful-html-entities.html"> Fun and useful HTML Entities </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/jekyll/blog/2015/05/02/jekyll-workflow.html"> A Jekyll Workflow </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/premake/build/2015/05/02/generating-projects-with-premake.html"> Generating Projects with Premake </a></p>
-  </li>
-  <li>
-    <p>01 May 2015 → <a href="/jekyll/blog/2015/05/01/using-jekyll.html"> Using Jekyll for a blog </a></p>
-  </li>
-</ul>
+<h3 id="git-clean">git clean</h3>
 
+<p>This removes untracked files from the working tree. Why would you do this? Let’s say
+you run a build process that litters the working tree with temporary files in
+dozens of folders, instead of being neat and tidy and putting it in a <code>build</code>
+folder.</p>
+
+<p>This will remove all untracked files, including ignored ones, and remove untracked
+directories as well:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clean -d -x</code></pre></div>
+
+<p>There are a handful of options, but this is my preferred “make it really clean”
+approach. You can use this with <code>git reset</code> to get back to a pristine working
+directory.</p>
+
+<p><a href="http://git-scm.com/docs/git-clean">git-clean</a></p>
+
+<h2 id="git-pull---rebase">git pull –rebase</h2>
+
+<p>Prefer to pull with rebasing instead of merging. Generally, your local changes
+were meant to be applied to the tip of the remote repository, so why not get
+in the habit of keeping your files rebased?</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git pull --rebase</code></pre></div>
+
+<p>This is essentially the same as this</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git fetch
+git rebase</code></pre></div>
+
+<p>You can also set a few entries in config so that this happens without needing
+the <code>--rebase</code> flag. To set this so <code>master</code> branch always rebases:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config branch.master.rebase <span class="nb">true</span></code></pre></div>
+
+<p>or to set it up so new branches always rebase automatically:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global branch.autosetuprebase always</code></pre></div>
+
+<p>There will still be cases where you will want to merge, but generally this would
+be an explicit step of merging a (feature) branch onto a (production) branch.</p>
+
+<p><a href="http://git-scm.com/docs/git-pull">git-pull</a></p>
+
+<p><a href="http://git-scm.com/docs/git-rebase">git-rebase</a></p>
+
+<h2 id="see-whats-been-cherry-picked">See what’s been cherry-picked</h2>
+
+<p>If you have a workflow where you are cherry-picking commits from one branch to
+another, it’s useful to see what has been cherry-picked. If you want to see what
+has and hasn’t been cherry-picked from the current branch to <code>master</code>:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git cherry -v master</code></pre></div>
+
+<p>This shows all commits on the current branch, prefixed with <code>+</code> for commits
+that have not yet been cherry-picked and with <code>-</code> for commits that have
+already been cherry-picked.</p>
 
   </article>
 

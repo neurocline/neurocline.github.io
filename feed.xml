@@ -6,9 +6,178 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 May 2015 21:09:32 -0700</pubDate>
-    <lastBuildDate>Fri, 22 May 2015 21:09:32 -0700</lastBuildDate>
+    <pubDate>Sun, 24 May 2015 19:55:48 -0700</pubDate>
+    <lastBuildDate>Sun, 24 May 2015 19:55:48 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Git Tips</title>
+        <description>&lt;p&gt;Here are some useful but less-common Git features.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-clean&quot;&gt;git clean&lt;/h3&gt;
+
+&lt;p&gt;This removes untracked files from the working tree. Why would you do this? Let’s say
+you run a build process that litters the working tree with temporary files in
+dozens of folders, instead of being neat and tidy and putting it in a &lt;code&gt;build&lt;/code&gt;
+folder.&lt;/p&gt;
+
+&lt;p&gt;This will remove all untracked files, including ignored ones, and remove untracked
+directories as well:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clean -d -x&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There are a handful of options, but this is my preferred “make it really clean”
+approach. You can use this with &lt;code&gt;git reset&lt;/code&gt; to get back to a pristine working
+directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://git-scm.com/docs/git-clean&quot;&gt;git-clean&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;git-pull---rebase&quot;&gt;git pull –rebase&lt;/h2&gt;
+
+&lt;p&gt;Prefer to pull with rebasing instead of merging. Generally, your local changes
+were meant to be applied to the tip of the remote repository, so why not get
+in the habit of keeping your files rebased?&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git pull --rebase&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is essentially the same as this&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git fetch
+git rebase&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can also set a few entries in config so that this happens without needing
+the &lt;code&gt;--rebase&lt;/code&gt; flag. To set this so &lt;code&gt;master&lt;/code&gt; branch always rebases:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git config branch.master.rebase &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;or to set it up so new branches always rebase automatically:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git config --global branch.autosetuprebase always&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There will still be cases where you will want to merge, but generally this would
+be an explicit step of merging a (feature) branch onto a (production) branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://git-scm.com/docs/git-pull&quot;&gt;git-pull&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://git-scm.com/docs/git-rebase&quot;&gt;git-rebase&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;see-whats-been-cherry-picked&quot;&gt;See what’s been cherry-picked&lt;/h2&gt;
+
+&lt;p&gt;If you have a workflow where you are cherry-picking commits from one branch to
+another, it’s useful to see what has been cherry-picked. If you want to see what
+has and hasn’t been cherry-picked from the current branch to &lt;code&gt;master&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git cherry -v master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This shows all commits on the current branch, prefixed with &lt;code&gt;+&lt;/code&gt; for commits
+that have not yet been cherry-picked and with &lt;code&gt;-&lt;/code&gt; for commits that have
+already been cherry-picked.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 May 2015 09:50:00 -0700</pubDate>
+        <link>http://neurocline.github.io/git/2015/05/24/Git-Tips.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/git/2015/05/24/Git-Tips.html</guid>
+        
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
+        <title>Hyde For Blogs</title>
+        <description>&lt;p&gt;I’m already running into cases where Jekyll gets in my way. I can either&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;live with it&lt;/li&gt;
+  &lt;li&gt;write my own website template system&lt;/li&gt;
+  &lt;li&gt;find something else&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While choice 2 is the answer for all software engineers in the end, I’m
+trying to put that off for now. I have a few choices.&lt;/p&gt;
+
+&lt;p&gt;First is to use Hyde. It already sounds more appealing to me than Jekyll
+(for one, it’s written in Python). It looks like it handles more complex
+content better. Of course, it’s a little more complex than Jekyll.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://hyde.github.io&quot;&gt;Hyde: A static website generator&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Or I could do the non-blog portions of my blog with something other than
+Jekyll. For example, I want to separate real blog posts from the ones where
+I’m just remembering stuff I read. Or I want to put documentation online.
+I could run this, for example, and just link that from a blog page:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stevelosh.com/projects/d/&quot;&gt;d Documentation generator&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ll defer this for now, but I imagine I’ll redo this blog/site in something
+else. I need search, for one thing.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://philipm.at/2011/jekyll_vs_hyde.html&quot;&gt;Jekyll vs. Hyde - A Comparison Of Two Static Site Generators&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stevelosh.com/blog/2010/01/moving-from-django-to-hyde/&quot;&gt;Moving from Django to Hyde&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/library/wa-hyde/&quot;&gt;Build rapid and lightweight static websites with Hyde&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/hyde/hyde/wiki/Hyde-Powered&quot;&gt;Hyde Powered&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 24 May 2015 09:30:00 -0700</pubDate>
+        <link>http://neurocline.github.io/blog/2015/05/24/Hyde-For-Blogs.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/blog/2015/05/24/Hyde-For-Blogs.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;h2 id=&quot;cmake&quot;&gt;CMake&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/examples/&quot;&gt;Examples&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/runningcmake/&quot;&gt;Running CMake&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Source and binaries&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Kitware/CMake&quot;&gt;CMake repo on Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CMake Wiki&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/Wiki/CMake_FAQ&quot;&gt;CMake FAQ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/Wiki/CMake:How_To_Find_Libraries&quot;&gt;How To Find Libraries&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/Wiki/CMake_Generator_Specific_Information&quot;&gt;CMake Generator-Specific Information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;premake&quot;&gt;Premake&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://premake.github.io/&quot;&gt;Premake&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;openssl&quot;&gt;OpenSSL&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://developer.covenanteyes.com/building-openssl-for-visual-studio/&quot;&gt;Building OpenSSL For Visual Studio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.openssl.org/index.php/Compilation_and_Installation&quot;&gt;Compilation and Installation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://p-nand-q.com/programming/windows/building_openssl_with_visual_studio_2013.html&quot;&gt;Building OpenSSL with Visual Studio 2013&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/openssl/openssl/blob/master/INSTALL.W32&quot;&gt;Install OpenSSL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://rt.openssl.org/Ticket/Display.html?id=3650&amp;amp;user=guest&amp;amp;pass=guest&quot;&gt;OpenSSL asm bug&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dos&quot;&gt;DOS&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ss64.com/nt/goto.html&quot;&gt;CMD help&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 May 2015 08:58:00 -0700</pubDate>
+        <link>http://neurocline.github.io/links/2015/05/24/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/links/2015/05/24/recent-links.html</guid>
+        
+        
+        <category>links</category>
+        
+      </item>
     
       <item>
         <title>Unix source history in a Git repo</title>
@@ -389,216 +558,6 @@ license.&lt;/p&gt;
         
         
         <category>links</category>
-        
-      </item>
-    
-      <item>
-        <title>The Most Important Software Innovations</title>
-        <description>&lt;p&gt;This makes for interesting reading&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.dwheeler.com/innovation/innovation.html&quot;&gt;The Most Important Software Innovations&lt;/a&gt;, David Wheeler, last updated 2012-09-05.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 11 May 2015 02:31:00 -0700</pubDate>
-        <link>http://neurocline.github.io/development/2015/05/11/the-most-important-software-innovations.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/development/2015/05/11/the-most-important-software-innovations.html</guid>
-        
-        
-        <category>development</category>
-        
-      </item>
-    
-      <item>
-        <title>SSL/TLS Notes</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/TLS.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TLS (née SSL) is a big part of the modern computer landscape, but there
-are no up-to-date reference materials. The few books written 10 years
-ago are woefully out of date.&lt;/p&gt;
-
-&lt;p&gt;Someone needs to write a new book or books. Some big areas to focus on
-are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;updated history&lt;/li&gt;
-  &lt;li&gt;certificates&lt;/li&gt;
-  &lt;li&gt;cryptographic algorithms&lt;/li&gt;
-  &lt;li&gt;best practices for security&lt;/li&gt;
-  &lt;li&gt;working at scale&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I think that interviewing all of the actors in the TLS world would be
-an awesome step.&lt;/p&gt;
-
-&lt;p&gt;More importantly, should the overall name be SSL, or TLS? Probably
-SSL, since that’s very widespread at this point.&lt;/p&gt;
-
-&lt;h2 id=&quot;tls&quot;&gt;TLS&lt;/h2&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Transport_Layer_Security&quot;&gt;Transport Layer Security&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;RFC5246 - &lt;a href=&quot;http://tools.ietf.org/html/rfc5246&quot;&gt;The Transport Layer Security (TLS) Protocol Version 1.2&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;RFC6176 - &lt;a href=&quot;http://tools.ietf.org/html/rfc6176&quot;&gt;Prohibiting Secure Sockets Layer (SSL) Version 2.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;OWASP - &lt;a href=&quot;https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet&quot;&gt;Transport Layer Protection Cheat Sheet&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;RFC5746 - &lt;a href=&quot;http://www.ietf.org/rfc/rfc5746.txt&quot;&gt;Transport Layer Security (TLS) Renegotiation Indication Extension&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://support.globalsign.com/customer/portal/articles/1499561-sha-256-compatibility&quot;&gt;SHA-256 Compatibility&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ssllabs.com/downloads/SSL_TLS_Deployment_Best_Practices.pdf&quot;&gt;SSL/TLS Deployment Best Practices&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;certificates&quot;&gt;Certificates&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.zytrax.com/tech/survival/ssl.html&quot;&gt;Survival guides - TLS/SSL and SSL (X.509) Certificates&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Microsoft - &lt;a href=&quot;https://technet.microsoft.com/en-us/library/cc962078.aspx&quot;&gt;Benefits of Multiple-Level Certification Hierarchies&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Stack Overflow - &lt;a href=&quot;http://stackoverflow.com/questions/20409534/how-does-an-ssl-certificate-chain-bundle-works&quot;&gt;How does an SSL certificate chain bundle works?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;stackoverflow - &lt;a href=&quot;http://stackoverflow.com/questions/2256950/openssl-ignore-self-signed-certificate-error&quot;&gt;OpenSSL Ignore Self-signed certificate error&lt;/a&gt;. Notes on how to verify certifications in OpenSSL&lt;/p&gt;
-
-&lt;h2 id=&quot;certificate-authorities&quot;&gt;Certificate authorities&lt;/h2&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Intermediate_certificate_authorities&quot;&gt;Intermediate certificate authorities&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://support.dnsimple.com/articles/what-is-ssl-certificate-chain/&quot;&gt;What is the SSL Certificate Chain?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/21319841/signing-certificate-with-another-certificate-signed-by-ca&quot;&gt;Signing certificate with another certificate signed by CA&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://community.openvpn.net/openvpn/wiki/Using_Certificate_Chains&quot;&gt;Using Certificate Chains&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;github/zakjan - &lt;a href=&quot;https://github.com/zakjan/cert-chain-resolver&quot;&gt;Cert chain resolver&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;chain.com - &lt;a href=&quot;http://blog.chain.com/post/87136249186/how-we-keep-the-chain-api-secure&quot;&gt;How We Keep the Chain API Secure&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;see &lt;a href=&quot;https://chain.com/docs&quot;&gt;API v2 Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.davidpashley.com/articles/becoming-a-x-509-certificate-authority/&quot;&gt;Becoming a X.509 Certificate Authority&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;WikiHow - &lt;a href=&quot;http://www.wikihow.com/Be-Your-Own-Certificate-Authority&quot;&gt;How to Be Your Own Certificate Authority&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.area536.com/projects/be-your-own-certificate-authority-with-openssl/&quot;&gt;Be your own Certificate Authority&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Superuser - &lt;a href=&quot;http://superuser.com/questions/347588/how-do-ssl-chains-work&quot;&gt;How do SSL chains work?&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;public-key-pinning&quot;&gt;Public Key Pinning&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HPKP - Public Key Pinning Extension for HTTP&lt;/li&gt;
-  &lt;li&gt;HSTS - Force use of HTTPS&lt;/li&gt;
-  &lt;li&gt;TACK - Public Key Pinning Extension&lt;/li&gt;
-  &lt;li&gt;CRL - Certificate Revocation List&lt;/li&gt;
-  &lt;li&gt;OCSP - Online Certificate Status Protocol&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mozilla - &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning&quot;&gt;Public Key Pinning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;RFC7469 - &lt;a href=&quot;https://tools.ietf.org/html/rfc7469&quot;&gt;Public Key Pinning Extension for HTTP&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Mozilla - &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security&quot;&gt;HTTP Strict Transport Security&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;RFC6797 - &lt;a href=&quot;https://tools.ietf.org/html/rfc6797&quot;&gt;HTTP Strict Transport Security (HSTS)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security&quot;&gt;HTTP Strict Transport Security&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ImperialVioet - &lt;a href=&quot;https://www.imperialviolet.org/2011/05/04/pinning.html&quot;&gt;IPublic key pinning (04 May 2011)&lt;/a&gt; - Chrome adding public key pinning. Use public key hashes, not certificate hashes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21&quot;&gt;Public Key Pinning Extension for HTTP&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;OWASP - &lt;a href=&quot;https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning&quot;&gt;Certificate and Public Key Pinning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol&quot;&gt;Online Certificate Status Protocol&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tack.io/&quot;&gt;TACK, for pinning&lt;/a&gt; - Moxie Marlinspike&lt;/p&gt;
-
-&lt;p&gt;Attack on Google detected via pinning&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://productforums.google.com/forum/#!topic/gmail/3J3r2JqFNTw/discussion&quot;&gt;Is This MITM Attack to Gmail’s SSL ?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://googleonlinesecurity.blogspot.com/2011/08/update-on-attempted-man-in-middle.html&quot;&gt;An update on attempted man-in-the-middle attacks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;security.stackexchange - &lt;a href=&quot;http://security.stackexchange.com/questions/29988/what-is-certificate-pinning&quot;&gt;What is certificate pinning?&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;websockets-and-ssl&quot;&gt;Websockets and SSL&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://security.stackexchange.com/questions/1034/can-javascript-flash-verify-the-ssl-connection-to-prevent-ssl-inspection&quot;&gt;Can Javascript/Flash verify the SSL connection to prevent “SSL Inspection”?&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;tls-srp&quot;&gt;TLS-SRP&lt;/h2&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/TLS-SRP&quot;&gt;TLS-SRP&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Secure_Remote_Password_protocol&quot;&gt;Secure Remote Password protocol&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;RFC5054 - &lt;a href=&quot;https://tools.ietf.org/html/rfc5054&quot;&gt;Using the Secure Remote Password (SRP) Protocol for TLS Authentication&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 08 May 2015 05:33:00 -0700</pubDate>
-        <link>http://neurocline.github.io/ssl/2015/05/08/ssl-notes.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/ssl/2015/05/08/ssl-notes.html</guid>
-        
-        
-        <category>ssl</category>
-        
-      </item>
-    
-      <item>
-        <title>Tesla&#39;s Powerwall Is A Game Changer</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/TeslaPowerwall.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I watched the live stream of the announcement last week, and was blown away. Tesla is not
-a natural born salesman; instead, he is smart, he believes in what he’s doing, and so far, everything
-he’s promised bears out, there’s little smoke and mirrors in evidence. It doesn’t mean that he
-will always succeed at what he’s doing, but that’s ok - if you don’t reach for big goals, you can’t
-do great things.&lt;/p&gt;
-
-&lt;p&gt;Ramez Naam thinks that this system is viable today in some countries (see graph above):&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://rameznaam.com/2015/04/30/tesla-powerwall-battery-economics-almost-there/&quot;&gt;Tesla Battery Economics: On the Path to Disruption&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The article has tons of links to other things you’ll want to read.&lt;/p&gt;
-
-&lt;p&gt;One thing to keep in mind - even though most states in the US have buy-back of self-generated power
-(the Net Metering laws), expect that to go away very soon. It did its job, it got people jump-started
-using solar, and it’s going to kill the energy companies if it keeps up; not because we’re taking
-their profit away, but because of the intermittent nature. Wait, hmm - even if consumers don’t buy
-the Tesla Powerwall, utilities certainly could…&lt;/p&gt;
-
-&lt;p&gt;And, the cost of batteries and solar will continue to drop. It’s hard to predict how rapidly they
-will drop - some of the massive drop in the price of solar energy was inadvertently funded by
-the Chinese government, as they gave massive funding to companies like Suntech. But those prices
-stuck, indicating that there was massive innovation happening around the world.&lt;/p&gt;
-
-&lt;p&gt;Some experts think that the Powerwall is being sold at a loss, at least for now. Since battery
-technology is fairly mature and no startling breakthroughs have happened recently, this is
-probably true unless there are controllable labor costs mixed into those estimates. But no
-one expects prices to go up, and it’s pretty reasonable that prices will continue to drop.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.teslamotors.com/powerwall&quot;&gt;Powewall&lt;/a&gt; - Tesla’s site.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.wired.com/2015/05/get-tesla-home-battery-let-physics-explain/&quot;&gt;Headline: Should You Get a Tesla Home Battery? Let Physics Explain&lt;/a&gt; - from Wired.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.theverge.com/2015/2/13/8033691/why-teslas-battery-for-your-home-should-terrify-utilities&quot;&gt;Why Tesla’s battery for your home should terrify utilities&lt;/a&gt; - from The Verge.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.nature.com/news/will-tesla-s-battery-change-the-energy-market-1.17469&quot;&gt;Will Tesla’s battery change the energy market?&lt;/a&gt; - Nature.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.wsj.com/articles/will-teslas-newest-battery-pan-out-1430522030&quot;&gt;Will Tesla’s Newest Battery Pan Out?&lt;/a&gt; - the Wall Street Journal.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.forbes.com/sites/christopherhelman/2015/05/01/why-teslas-powerwall-is-just-another-toy-for-rich-green-people/&quot;&gt;Why Tesla’s Powerwall Is Just Another Toy For Rich Green People&lt;/a&gt; - Forbes.
-This is an article that should have been retracted in its entirety, because as it got corrected,
-its points dwindled away.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 03 May 2015 14:27:00 -0700</pubDate>
-        <link>http://neurocline.github.io/energy/2015/05/03/tesla-powerwall.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/energy/2015/05/03/tesla-powerwall.html</guid>
-        
-        
-        <category>energy</category>
         
       </item>
     
