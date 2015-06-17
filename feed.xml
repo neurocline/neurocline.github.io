@@ -6,9 +6,169 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 May 2015 00:23:23 -0700</pubDate>
-    <lastBuildDate>Mon, 25 May 2015 00:23:23 -0700</lastBuildDate>
+    <pubDate>Wed, 17 Jun 2015 00:54:27 -0700</pubDate>
+    <lastBuildDate>Wed, 17 Jun 2015 00:54:27 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/&quot;&gt;What is Code?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/fanout/zurl&quot;&gt;zurl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nixos.org/&quot;&gt;NixOS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=9705690&quot;&gt;‘git inject’&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lifehacker.com/5991848/how-to-boot-from-a-cd-or-usb-drive-on-any-pc#&quot;&gt;How to Boot From a CD or USB Drive on Any PC&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/dd744347(v=ws.10).aspx&quot;&gt;BCDboot Command-Line Options&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://windows.microsoft.com/en-us/windows/preview-download&quot;&gt;Download Windows 10 Insider Preview&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 Jun 2015 16:30:00 -0700</pubDate>
+        <link>http://neurocline.github.io/links/2015/06/16/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/links/2015/06/16/recent-links.html</guid>
+        
+        
+        <category>links</category>
+        
+      </item>
+    
+      <item>
+        <title>Windows boot from VHD</title>
+        <description>&lt;p&gt;I’m going to try a workflow that involves running from a system contained in a VHD
+file rather than directly installed to a hard disk. This isn’t just to try out new
+versions like Windows 10, but as a normal practice. Here are a few of the things
+driving me to try this.&lt;/p&gt;
+
+&lt;p&gt;The main one is the idea of having a clean system at all times. Maintaining a clean system is
+hard, because you install stuff in order to get work done, and then in a few months you have a
+mess. My hope is that with a VHD-based system, I can set aside milestone VHDs that I can revert
+to when I want a clean system again. That’s the main workflow I’ll be exploring: install clean
+OS, install my tools, make snapshot, work for a while, then want to alter the base version, so
+revert to it, install new tools, make a snapshot, etc. Hard disks are now fast enough that making
+a snapshot is a matter of seconds to minutes, based on how big you keep your operating system
+partition.&lt;/p&gt;
+
+&lt;p&gt;Another is being able to switch between versions of the operating system. I may prefer a specific
+version of Windows as a user, but there are a lot of users out there with different preferences,
+and I need to make sure my software works on their Windows version as well. Or I may want to write
+software for a bleeding edge version that I don’t want to live in day-by-day yet.&lt;/p&gt;
+
+&lt;p&gt;And then finally, if I’m semi-frequently wiping my operating system partition, I’ll have to learn
+to keep my user data off the operating system partition. I already work this way - I don’t put my
+own stuff into my User folder, but separate folders like “projects”.&lt;/p&gt;
+
+&lt;p&gt;This is not a set of instructions at the moment, it’s a record of actions.&lt;/p&gt;
+
+&lt;h2 id=&quot;grab-windows-10-technical-preview&quot;&gt;Grab Windows 10 Technical Preview&lt;/h2&gt;
+
+&lt;p&gt;Grab it from here - for now, this is going to be final soon.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://windows.microsoft.com/en-us/windows/preview-download&quot;&gt;Download Windows 10 Insider Preview&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;create-a-vhd&quot;&gt;Create a VHD&lt;/h2&gt;
+
+&lt;h3 id=&quot;using-disk-management-console&quot;&gt;Using Disk Management console&lt;/h3&gt;
+
+&lt;p&gt;run &lt;code&gt;mmc diskmgmt.msc&lt;/code&gt; from the command-line or launch Computer Management from Administrative tools or directly via Manage Computer. Or use DiskPart.&lt;/p&gt;
+
+&lt;p&gt;Action: Create VHD. Dynamically expanding VHDs have a slight performance overhead and aren’t appropriate
+in certain scenarios (like, for example, booting from it).&lt;/p&gt;
+
+&lt;p&gt;This will create an uninitialized disk, so initialize it, either as MBR or GPT. Either is a fine choice
+for modern systems. I do GPT.&lt;/p&gt;
+
+&lt;h2 id=&quot;mbr-versus-gpt&quot;&gt;MBR versus GPT&lt;/h2&gt;
+
+&lt;p&gt;Use MBR if you’re going to boot from this on a non-UEFI system,
+or if it’s a small disk, otherwise use GPT. In reality, use MBR for “small” disks (say under 500 GB) and
+use GPT for larger ones. GPT is slightly more wasteful since it always includes a Protective MBR so that
+older operating systems don’t think the drive is uninitialized, and this consumes between 30 to 100 MB,
+at least on drives formatted on Windows 7 (bigger if it has an MSR).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A 2 GB VHD partitioned as GPT and initialized with one volume gives a capacity of 2,111,827,968 bytes.&lt;/li&gt;
+  &lt;li&gt;A 2 GB VHD partitioned as MBR and initialized with one volume gives a capacity of 2,144,333,824 bytes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You may or may not consider this substantial. GPT drives should be slightly more resilient than MBR
+drives, and as an added bonus, volume labels are 72 bytes (36 UTF-16LE characters) in GPT (MBR
+volumes don’t actually have names, but FAT-formatted volumes have a 11-byte limit and NTFS-fofmatted
+volumes have a 32-character limit). So in reality, it’s irrelevant, because we almost always use
+NTFS, right?&lt;/p&gt;
+
+&lt;h2 id=&quot;mount-a-vhd&quot;&gt;Mount a VHD&lt;/h2&gt;
+
+&lt;p&gt;run &lt;code&gt;mmc diskmgmt.msc&lt;/code&gt; from the command-line or launch Computer Management from Administrative tools or directly via Manage Computer.&lt;/p&gt;
+
+&lt;p&gt;Action: Attach VHD. Select the mosunt point, which is typically going to be a drive letter.&lt;/p&gt;
+
+&lt;h2 id=&quot;unmount-a-vhd&quot;&gt;Unmount a VHD&lt;/h2&gt;
+
+&lt;p&gt;Detach VHD in Disk Management (right-click on a Disk to see this menu item).&lt;/p&gt;
+
+&lt;h2 id=&quot;using-diskpart&quot;&gt;Using DiskPart&lt;/h2&gt;
+
+&lt;p&gt;DiskPart can do many disk-related tasks, and more importantly, can be driven with scripts. For
+example, create this script&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;create vdisk &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;C:&lt;span class=&quot;se&quot;&gt;\V&lt;/span&gt;HD&lt;span class=&quot;se&quot;&gt;\W&lt;/span&gt;in10.vhd &lt;span class=&quot;nv&quot;&gt;maximum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;51200&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fixed
+&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; vdisk &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;C:&lt;span class=&quot;se&quot;&gt;\V&lt;/span&gt;HD&lt;span class=&quot;se&quot;&gt;\W&lt;/span&gt;in10.vhd
+attach vdisk
+create partition primary
+assign &lt;span class=&quot;nv&quot;&gt;letter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;v
+format quick &lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;vhd
+detach vdisk
+&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and run it&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; diskpart /s makevhd.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will create a 50 GB VHD file, and then create a single primary partition on it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/dn614984.aspx&quot;&gt;Diskpart Scripts and Examples&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hyper-v-and-windows-8&quot;&gt;Hyper-V and Windows 8&lt;/h2&gt;
+
+&lt;p&gt;One reason to upgrade to Windows 8.1 is to get Client Hyper-V&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.infoworld.com/article/2616033/virtualization/5-excellent-uses-of-windows-8-hyper-v.html&quot;&gt;5 excellent uses of Windows 8 Hyper-V&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;burn-iso-to-usb-drive&quot;&gt;Burn ISO to USB drive&lt;/h2&gt;
+
+&lt;p&gt;Well, not really burn. Windows doesn’t have native ISO tools, which is really annoying (especially
+since ISO is a pretty simple format). Enter Rufus.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rufus.akeo.ie/&quot;&gt;Rufus&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pcsupport.about.com/od/file-folder/fl/burn-iso-usb.htm&quot;&gt;How To Burn an ISO File to a USB Drive&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.wintellect.com/devcenter/paulballard/dual-boot-windows-10-technical-preview-from-a-vhd&quot;&gt;Dual Boot Windows 10 Technical Preview From A VHD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://newsignature.com/articles/windows-10-technical-preview-using-vhd-native-boot&quot;&gt;Windows 10 Technical Preview Using VHD Native Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.neowin.net/news/guide-how-to-install-windows-10-using-vhds&quot;&gt;Guide: How to install Windows 10 using VHDs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blogs.technet.com/b/haroldwong/archive/2012/08/18/how-to-create-windows-8-vhd-for-boot-to-vhd-using-simple-easy-to-follow-steps.aspx&quot;&gt;How to Create Windows 8 VHD for Boot to VHD using simple, easy to follow steps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/hardware/dn640535(v=vs.85).aspx&quot;&gt;Windows and GPT FAQ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.techotopia.com/index.php/Creating_and_Managing_MBR_Disk_Partitions_on_Windows_Server_2008_Basic_Disks&quot;&gt;Creating and Managing MBR Disk Partitions on Windows Server 2008 Basic Disks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/dd163549.aspx&quot;&gt;Using Basic Disks and Partitions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/GUID_Partition_Table&quot;&gt;GUID Partition Table&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/hardware/dn640535(v=vs.85).aspx&quot;&gt;Windows and GPT FAQ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.techrepublic.com/blog/windows-and-office/dual-boot-windows-7-and-windows-8-using-a-vhd/&quot;&gt;Dual-boot Windows 7 and Windows 8 using a VHD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 13 Jun 2015 03:20:00 -0700</pubDate>
+        <link>http://neurocline.github.io/windows/2015/06/13/windows-boot-from-vhd.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/windows/2015/06/13/windows-boot-from-vhd.html</guid>
+        
+        
+        <category>windows</category>
+        
+      </item>
     
       <item>
         <title>Cryptography links</title>
@@ -430,177 +590,6 @@ Breaking and Fixing Authentication over TLS
         
         
         <category>git</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://community.qualys.com/thread/12315&quot;&gt;Can’t get OCSP stapling to work, despite openssl working fine&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.thawte.com/assets/documents/whitepaper/ocsp-stapling.pdf&quot;&gt;Guide to OCSP Stapling&lt;/a&gt; - Thawte.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Revocation_list&quot;&gt;Revocation list&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Kerberos_(protocol)&quot;&gt;Kerberos (protocol)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/OCSP_stapling&quot;&gt;OCSP Stapling&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol&quot;&gt;Online Certificate Status Protocol&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.imperialviolet.org/2011/03/18/revocation.html&quot;&gt;Revocation doesn’t work&lt;/a&gt; - from March 2011.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.imperialviolet.org/2014/04/19/revchecking.html&quot;&gt;No, don’t enable revocation checking&lt;/a&gt; - from April 2014&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/html/draft-hallambaker-muststaple-00&quot;&gt;X.509v3 Extension: OCSP Stapling Required&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21&quot;&gt;Public Key Pinning Extension for HTTP&lt;/a&gt; - this is known as HPKP. Chrome does this and pre-loaded pins.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.certificate-transparency.org/&quot;&gt;Certificate Transparency&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.webupd8.org/2011/02/how-to-boot-iso-with-grub2-easy-way.html&quot;&gt;HOW TO BOOT AN ISO WITH GRUB2 (THE EASY WAY!)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lifehacker.com/5042630/unetbootin-creates-usb-bootable-linux-the-easy-way&quot;&gt;UNetbootin Creates USB-Bootable Linux the Easy Way&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.instructables.com/id/Make-Your-Regular-Mac-a-NetBoot-Server!/&quot;&gt;Make Your Regular Mac a NetBoot Server!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mike.passwall.com/macnc/macosxs.html&quot;&gt;Netbooting Mac&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/ee619754(WS.10).aspx&quot;&gt;How Certificate Revocation Works&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cise.ufl.edu/~bates/documents/Bates_Ccs14.pdf&quot;&gt;Securing SSL Certificate Verification through Dynamic Linking&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.feistyduck.com/&quot;&gt;Feisty Duck&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.jayway.com/2014/09/03/creating-self-signed-certificates-with-makecert-exe-for-development/&quot;&gt;Creating self signed certificates with makecert.exe for development&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.serverframework.com/ServerFramework/latest/Docs/examples-schannelechoserver.html&quot;&gt;Example Servers - SChannel Echo Server&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.coastrd.com/tls-with-schannel&quot;&gt;TLS with Schannel&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.coastrd.com/c-schannel-smtp&quot;&gt;C++ SSPI Schannel TLS example&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.certificate-transparency.org/log-proofs-work&quot;&gt;How Log Proofs Work&lt;/a&gt; - Merkle hash trees and proving entries are in logs.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.emsec.rub.de/media/crypto/attachments/files/2011/04/becker_1.pdf&quot;&gt;Merkle Signature Schemes, Merkle Trees and Their Cryptanalysis&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;books-i-want-to-get&quot;&gt;Books I want to get&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Bulletproof-SSL-TLS-Understanding-Applications/dp/1907117040/&quot;&gt;Bulletproof SSL and TLS&lt;/a&gt; by Ivan Ristic. For some reason this is super-expensive from Amazon, cheaper to get it direct from Feisty Duck.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/SSL-TLS-Designing-Building-Systems/dp/0201615983&quot;&gt;SSL and TLS: Designing and Building Secure Systems&lt;/a&gt; by Eric Rescorla. Old but still good.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Implementing-SSL-TLS-Using-Cryptography/dp/0470920416/&quot;&gt;Implementing SSL / TLS Using Cryptography and PKI&lt;/a&gt; by Joshau Davies.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Network-Security-OpenSSL-John-Viega/dp/059600270X/&quot;&gt;Network Security with OpenSSL&lt;/a&gt; by John Viega.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Secure-Programming-Cookbook-Cryptography-Authentication/dp/0596003943/&quot;&gt;Secure Programming Cookbook for C and C++&lt;/a&gt; by John Viega.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Cryptography-Engineering-Principles-Practical-Applications/dp/0470474246/&quot;&gt;Cryptography Engineering: Design Principles and Practical Applications&lt;/a&gt; by Niels Furguson, Bruce Schneier, Tadayoshi Kohno.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Introduction-Cryptography-Edition-Chapman-Security/dp/1466570261/&quot;&gt;Introduction to Modern Cryptography, Second Edition&lt;/a&gt; by Jonathan Katz, Yehuda Lindell.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 12 May 2015 07:39:00 -0700</pubDate>
-        <link>http://neurocline.github.io/links/2015/05/12/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/links/2015/05/12/recent-links.html</guid>
-        
-        
-        <category>links</category>
-        
-      </item>
-    
-      <item>
-        <title>Stream ciphers</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/RC4.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Stream ciphers are an approximation of one-time pads. RC4 is the most well-known
-stream cipher, but on the edge of being insecure now.&lt;/p&gt;
-
-&lt;h2 id=&quot;general&quot;&gt;General&lt;/h2&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Stream_cipher&quot;&gt;Stream cipher&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.tech-faq.com/block-and-stream-ciphers.html&quot;&gt;Block and Stream Ciphers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cosic.esat.kuleuven.be/publications/thesis-124.pdf&quot;&gt;CRYPTANALYSIS AND DESIGN OF SYNCHRONOUS
-STREAM CIPHERS&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.burtleburtle.net/bob/hash/index.html&quot;&gt;Hash Functions and Block Ciphers&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;rc4&quot;&gt;RC4&lt;/h2&gt;
-
-&lt;p&gt;RC4 is the official algorithm, designed by Ron Rivest in 1987. It was initially a
-trade secret, but an anonymous poster publishe a description of it to the Cipherpunks
-mailing list. The algorithm derived from that description was known as ARC4, for 
-“Alleged RC4” (because RC4 was registered as a trademark by RSA). RC4 was historically
-widely used in TLS, although now prohibited as of RFC 7465.&lt;/p&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;https://en.wikipedia.org/wiki/RC4&quot;&gt;RC4&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;spritz&quot;&gt;Spritz&lt;/h2&gt;
-
-&lt;p&gt;Spritz is a 2014 upgrade of RC4 by Rivest and Schuldt.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.schneier.com/blog/archives/2014/10/spritz_a_new_rc.html&quot;&gt;Spritz: A New RC4-Like Stream Cipher&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/rivest/pubs/RS14.pdf&quot;&gt;Spritz—a spongy RC4-like stream cipher and hash function&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;salsa20&quot;&gt;Salsa20&lt;/h2&gt;
-
-&lt;p&gt;Salsa20 was designed by Daniel J. Bernstein.&lt;/p&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Salsa20&quot;&gt;Salsa20&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;chacha20&quot;&gt;ChaCha20&lt;/h2&gt;
-
-&lt;p&gt;ChaCha20, closely related to Salsa20, was also designed by Daniel J. Bernstein, and might be slightly more secure than Salsa20. Google is now using this for Android.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.infosecurity-magazine.com/news/google-swaps-out-crypto-ciphers-in-openssl/&quot;&gt;Google Swaps Out Crypto Ciphers in OpenSSL&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tools.ietf.org/html/draft-nir-cfrg-chacha20-poly1305-02&quot;&gt;ChaCha20 and Poly1305 for IETF protocols&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;sosemanuk&quot;&gt;SOSEMANUK&lt;/h2&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/SOSEMANUK&quot;&gt;SOSEMANUK&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ecrypt.eu.org/stream/p3ciphers/sosemanuk/sosemanuk_p3.pdf&quot;&gt;Sosemanuk, a fast software-oriented stream cipher&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;isaac&quot;&gt;ISAAC&lt;/h2&gt;
-
-&lt;p&gt;Designed by Robert Jenkins (“burtlebob”) in 1996, and used in a handful of places,
-including inside GNU Coreutils.&lt;/p&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/ISAAC_(cipher)&quot;&gt;ISAAC&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.burtleburtle.net/bob/rand/isaacafa.html&quot;&gt;ISAAC: a fast cryptographic random number generator&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;phelix&quot;&gt;Phelix&lt;/h2&gt;
-
-&lt;p&gt;Designed by Doug Whiting, Bruce Schneier, Stefan Lucks, and Frédéric Muller.&lt;/p&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Phelix&quot;&gt;Phelix&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.schneier.com/paper-helix.pdf&quot;&gt;Helix: Fast Encryption and Authentication in a Single Cryptographic Primitive&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;solitaire&quot;&gt;Solitaire&lt;/h2&gt;
-
-&lt;p&gt;Designed by Bruce Schneier for Neal Stephenson to use in the book Cryptonomicon.&lt;/p&gt;
-
-&lt;p&gt;Wikipedia - &lt;a href=&quot;http://en.wikipedia.org/wiki/Solitaire_(cipher)&quot;&gt;Solitaire&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;one-time-pads&quot;&gt;One-time pads&lt;/h2&gt;
-
-&lt;p&gt;This is the gold standard, but hard to use in practice, except in specific use cases.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://users.telenet.be/d.rijmenants/en/onetimepad.htm&quot;&gt;One-time Pad&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.schneier.com/blog/archives/2015/04/cell_phone_opse.html&quot;&gt;Cell Phone Opsec&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 12 May 2015 04:34:00 -0700</pubDate>
-        <link>http://neurocline.github.io/encryption/2015/05/12/stream-ciphers.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/encryption/2015/05/12/stream-ciphers.html</guid>
-        
-        
-        <category>encryption</category>
         
       </item>
     
