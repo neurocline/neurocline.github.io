@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Git Tips</title>
-  <meta name="description" content="Here are some useful but less-common Git features.">
+  <title>Recent links</title>
+  <meta name="description" content="Chris Forster (blog)">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <!-- link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT"-->
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/git/2015/05/24/Git-Tips.html">
+  <link rel="canonical" href="http://neurocline.github.io/links/2015/07/05/recent-links.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -69,71 +69,41 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Git Tips</h1>
-    <p class="post-meta">May 24, 2015</p>
+    <h1 class="post-title">Recent links</h1>
+    <p class="post-meta">Jul 5, 2015</p>
   </header>
 
   <article class="post-content">
-    <p>Here are some useful but less-common Git features.</p>
+    <p><a href="http://cforster.com/">Chris Forster (blog)</a></p>
 
-<h3 id="git-clean">git clean</h3>
+<p><a href="http://www.tei-c.org/index.xml">Text Encoding Initiative</a> - insane overkill, but
+good as a low-level standard that higher-level tools encode into?</p>
 
-<p>This removes untracked files from the working tree. Why would you do this? Let’s say
-you run a build process that litters the working tree with temporary files in
-dozens of folders, instead of being neat and tidy and putting it in a <code>build</code>
-folder.</p>
+<p><a href="https://github.com/vapourismo/luwra">Luwra</a> - header-only C++ Lua wrapper</p>
 
-<p>This will remove all untracked files, including ignored ones, and remove untracked
-directories as well:</p>
+<p>Two posts on Deep Learning
+* <a href="https://charlesmartin14.wordpress.com/2015/03/25/why-does-deep-learning-work/">Why does Deep Learning work?</a>
+* <a href="https://charlesmartin14.wordpress.com/2015/04/01/why-deep-learning-works-ii-the-renormalization-group/">Why Deep Learning Works II: the Renormalization Group</a></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clean -d -x</code></pre></div>
+<p><a href="http://www.opensource.apple.com/">Apple Open Source</a></p>
 
-<p>There are a handful of options, but this is my preferred “make it really clean”
-approach. You can use this with <code>git reset</code> to get back to a pristine working
-directory.</p>
+<p><a href="https://turingtester.wordpress.com/2015/07/05/object-theft-etiquette-in-c-methods-with-a-side-of/">Object Theft Etiquette in C++: methods with a side of &amp;&amp;</a></p>
 
-<p><a href="http://git-scm.com/docs/git-clean">git-clean</a></p>
+<p><a href="http://www.ichub.io/p/physics">Point and spring simulation</a></p>
 
-<h2 id="git-pull---rebase">git pull –rebase</h2>
+<p><a href="https://medium.com/@leeb/why-invest-in-tools-3240ce289930">Why Invest in Tools?</a></p>
 
-<p>Prefer to pull with rebasing instead of merging. Generally, your local changes
-were meant to be applied to the tip of the remote repository, so why not get
-in the habit of keeping your files rebased?</p>
+<p><a href="https://www.bell-labs.com/usr/dmr/www/hopl.html">Five Little Languages and How They Grew: Talk at HOPL</a> - Dennis M. Ritchie.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git pull --rebase</code></pre></div>
+<p><a href="https://www.loggly.com/blog/five-invaluable-techniques-to-improve-regex-performance/">Five Invaluable Techniques to Improve Regex Performance</a></p>
 
-<p>This is essentially the same as this</p>
+<p><a href="http://ds.cs.ut.ee/courses/course-files/To303nis%20Pool%20.pdf">Comparison of Erlang Runtime System and Java Virtual Machine</a></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git fetch
-git rebase</code></pre></div>
+<p><a href="http://graydon2.dreamwidth.org/218040.html">Things Rust Shipped Without</a> - meant as a positive list of bad things Rust lacks.</p>
 
-<p>You can also set a few entries in config so that this happens without needing
-the <code>--rebase</code> flag. To set this so <code>master</code> branch always rebases:</p>
+<p><a href="http://www.jsbreakouts.org/">Breakouts</a> - evaluating JavaScript game engines by writing Breakout in each one.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config branch.master.rebase <span class="nb">true</span></code></pre></div>
-
-<p>or to set it up so new branches always rebase automatically:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global branch.autosetuprebase always</code></pre></div>
-
-<p>There will still be cases where you will want to merge, but generally this would
-be an explicit step of merging a (feature) branch onto a (production) branch.</p>
-
-<p><a href="http://git-scm.com/docs/git-pull">git-pull</a></p>
-
-<p><a href="http://git-scm.com/docs/git-rebase">git-rebase</a></p>
-
-<h2 id="see-whats-been-cherry-picked">See what’s been cherry-picked</h2>
-
-<p>If you have a workflow where you are cherry-picking commits from one branch to
-another, it’s useful to see what has been cherry-picked. If you want to see what
-has and hasn’t been cherry-picked from the current branch to <code>master</code>:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git cherry -v master</code></pre></div>
-
-<p>This shows all commits on the current branch, prefixed with <code>+</code> for commits
-that have not yet been cherry-picked and with <code>-</code> for commits that have
-already been cherry-picked.</p>
+<p><a href="https://archive.org/stream/graphicpresentat00brinrich#page/n0/mode/thumb">Graphic Presentation (1939)</a></p>
 
   </article>
 
