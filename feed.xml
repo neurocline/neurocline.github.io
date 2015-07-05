@@ -6,9 +6,84 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 05 Jul 2015 13:09:57 -0700</pubDate>
-    <lastBuildDate>Sun, 05 Jul 2015 13:09:57 -0700</lastBuildDate>
+    <pubDate>Sun, 05 Jul 2015 14:32:04 -0700</pubDate>
+    <lastBuildDate>Sun, 05 Jul 2015 14:32:04 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Software Architecture books</title>
+        <description>&lt;p&gt;I have a lot of them, and most are not great. There are still more books I need
+to read, and then I’ll either write The Great Software Architecture Book or I’ll
+point you to an existing one.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Software-Systems-Architecture-Stakeholders-Perspectives/dp/032171833X&quot;&gt;Software Systems Architecture: Working With Stakeholders Using Viewpoints and Perspectives (2nd Edition)&lt;/a&gt; - Nick Rozanski, Eoin Woods, 2011.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Lean-Architecture-Agile-Software-Development/dp/0470684208&quot;&gt;Lean Architecture: for Agile Software Development&lt;/a&gt; - James Coplien, 2010.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Software-Architecture-Practice-Edition-Engineering/dp/0321815734&quot;&gt;Software Architecture in Practice (3rd Edition) (SEI Series in Software Engineering)&lt;/a&gt; - Len Bass, Paul Clements, Rick Kazman, 2012.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Documenting-Software-Architectures-Beyond-Edition/dp/0321552687&quot;&gt;Documenting Software Architectures: Views and Beyond (2nd Edition)&lt;/a&gt; - Paul Clements, Felix Bachmann, Len Bass, etc, 2010.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Evaluating-Software-Architectures-Methods-Studies/dp/020170482X&quot;&gt;Evaluating Software Architectures: Methods and Case Studies&lt;/a&gt; - Paul Clements, Rick Kazman, Mark Klein, 2001.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Just-Enough-Software-Architecture-Risk-Driven/dp/0984618104&quot;&gt;Just Enough Software Architecture: A Risk-Driven Approach&lt;/a&gt; - George Fairbanks, 2010.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Software-Architecture-Foundations-Theory-Practice/dp/0470167742&quot;&gt;Software Architecture: Foundations, Theory, and Practice&lt;/a&gt; - R. N. Taylor, N. Medvidovic, E. M. Dashofy, 2009.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Service-Design-Patterns-Fundamental-Solutions/dp/032154420X&quot;&gt;Service Design Patterns: Fundamental Design Solutions for SOAP/WSDL and RESTful Web Services&lt;/a&gt; - Robert Daigneau, 2011.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Software-Architecture-Perspectives-Emerging-Discipline/dp/0131829572&quot;&gt;Software Architecture: Perspectives on an Emerging Discipline&lt;/a&gt; - Mary Shaw, David Garlan, 1996.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Architecture-Centric-Software-Project-Management-Practical/dp/0201734095&quot;&gt;Architecture-Centric Software Project Management: A Practical Guide&lt;/a&gt; - Daniel J. Paulish, 2002.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Jul 2015 07:20:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/07/05/software-architecture-books.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/07/05/software-architecture-books.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>The Actor model</title>
+        <description>&lt;p&gt;The actor model has held out a lot of promise over the past 40 years, but has
+never been fully embraced by the software development community (unlike, say,
+structured programming or object-oriented programming). There are a few modern
+languages that facilitate Actor model programming; Erlang and Scala+Akka are the
+two most popular.&lt;/p&gt;
+
+&lt;p&gt;In the Actor model, the only means to share state between concurrent and/or
+parallel actors is message passing. In most other systems, access to state is
+shared and synchronized by primitives like semaphores and mutexes. This does
+not mean bliss and the lack of needing synchronization, because state can be
+coupled even if it is not directly shared.&lt;/p&gt;
+
+&lt;p&gt;Some random links that I will sort through:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Actor_model&quot;&gt;Actor model&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://practicingruby.com/articles/gentle-intro-to-actor-based-concurrency&quot;&gt;A gentle introduction to actor-based concurrency&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://c2.com/cgi/wiki?ActorsModel&quot;&gt;ActorsModel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pchiusano.blogspot.com/2010/01/actors-are-not-good-concurrency-model.html&quot;&gt;Actors are not a good concurrency model&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/drorbr/the-actor-model-towards-better-concurrency&quot;&gt;The Actor Model: Towards Better Concurrency&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://danielwestheide.com/blog/2013/02/27/the-neophytes-guide-to-scala-part-14-the-actor-approach-to-concurrency.html&quot;&gt;The Neophyte’s Guide to Scala Part 14: The Actor Approach to Concurrency&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.infoq.com/news/2014/10/intro-actor-model&quot;&gt;An Introduction to Actor Model, with Examples in Akka&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://james-iry.blogspot.com/2009/04/erlang-style-actors-are-all-about.html&quot;&gt;Erlang Style Actors Are All About Shared State&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Perhaps the reason the Actor model has never taken off is because state doesn’t
+compose well. This is why we have transactions, as evil as those are. Is there
+another answer?&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Jul 2015 07:00:04 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/07/05/actor-model.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/07/05/actor-model.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -556,62 +631,6 @@ else. I need search, for one thing.&lt;/p&gt;
         <pubDate>Sun, 24 May 2015 08:58:00 -0700</pubDate>
         <link>http://neurocline.github.io/links/2015/05/24/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/links/2015/05/24/recent-links.html</guid>
-        
-        
-        <category>links</category>
-        
-      </item>
-    
-      <item>
-        <title>Unix source history in a Git repo</title>
-        <description>
-&lt;p&gt;&lt;img src=&quot;/assets/UnixFoglio.jpg&quot; width=&quot;340&quot; height=&quot;460&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(1976 Unix artwork by Phil Foglio)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Diomidis Spinellis has put together a Git repo with 44 years of Unix
-source code commits, starting with 1972 source from Ken Thompson and Dennis Ritchie.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.dmst.aueb.gr/dds/pubs/conf/2015-MSR-Unix-History/html/Spi15c.html&quot;&gt;A Repository with 44 Years of Unix Evolution&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The repo can be found here&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/dspinellis/unix-history-repo&quot;&gt;dspinellis/unix-history-repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The code that Spinellis used to create the repo can be found here&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/dspinellis/unix-history-make&quot;&gt;dspinellis/unix-history-make&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This is important stuff. More long-running projects should be put together like
-this.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 22 May 2015 13:50:00 -0700</pubDate>
-        <link>http://neurocline.github.io/unix/2015/05/22/unix-source-history.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/unix/2015/05/22/unix-source-history.html</guid>
-        
-        
-        <category>unix</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;Note - I will reorganize how I’m doing this soon, so it’s in a different
-section and not as “blog entries”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Cryptographic-Security-Architecture-Design-Verification/dp/0387953876&quot;&gt;Cryptographic Security Architecture: Design and Verification&lt;/a&gt; by Peter Gutmann. Expensive. Textbook?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://secure-resumption.com/tlsauth.pdf&quot;&gt;Triple Handshakes and Cookie Cutters:
-Breaking and Fixing Authentication over TLS
-&lt;/a&gt;, paper by Karthikeyan Bhargavan, Antoine Delignat-Lavaud, Cedric Fournet, Alfredo Pironti and Pierre-Yves Strub. New attacks on TLS. This prompted the Extended Master Secret extension to TLS.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tools.ietf.org/html/draft-ietf-tls-session-hash-05&quot;&gt;Transport Layer Security (TLS) Session Hash and Extended Master Secret Extension&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.cs.auckland.ac.nz/~pgut001/pubs/vista_cost.html&quot;&gt;A Cost Analysis of Windows Vista Content Protection&lt;/a&gt; - paper by Peter Gutmann on Windows Vista’s content protection measures and problems thereo f(&lt;a href=&quot;http://www.cypherpunks.to/~peter/vista.pdf&quot;&gt;slides here&lt;/a&gt;)&lt;/p&gt;
-</description>
-        <pubDate>Wed, 13 May 2015 05:27:00 -0700</pubDate>
-        <link>http://neurocline.github.io/links/2015/05/13/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/links/2015/05/13/recent-links.html</guid>
         
         
         <category>links</category>

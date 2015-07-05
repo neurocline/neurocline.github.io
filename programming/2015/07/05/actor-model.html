@@ -6,16 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Archive</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>The Actor model</title>
+  <meta name="description" content="The actor model has held out a lot of promise over the past 40 years, but hasnever been fully embraced by the software development community (unlike, say,str...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <!-- link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT"-->
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/archive/">
+  <link rel="canonical" href="http://neurocline.github.io/programming/2015/07/05/actor-model.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,102 +69,39 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Archive</h1>
+    <h1 class="post-title">The Actor model</h1>
+    <p class="post-meta">Jul 5, 2015</p>
   </header>
 
   <article class="post-content">
-    <h2 id="blog-posts">Blog Posts</h2>
+    <p>The actor model has held out a lot of promise over the past 40 years, but has
+never been fully embraced by the software development community (unlike, say,
+structured programming or object-oriented programming). There are a few modern
+languages that facilitate Actor model programming; Erlang and Scala+Akka are the
+two most popular.</p>
+
+<p>In the Actor model, the only means to share state between concurrent and/or
+parallel actors is message passing. In most other systems, access to state is
+shared and synchronized by primitives like semaphores and mutexes. This does
+not mean bliss and the lack of needing synchronization, because state can be
+coupled even if it is not directly shared.</p>
+
+<p>Some random links that I will sort through:</p>
 
 <ul>
-  <li>
-    <p>05 Jul 2015 → <a href="/programming/2015/07/05/software-architecture-books.html"> Software Architecture books </a></p>
-  </li>
-  <li>
-    <p>05 Jul 2015 → <a href="/programming/2015/07/05/actor-model.html"> The Actor model </a></p>
-  </li>
-  <li>
-    <p>05 Jul 2015 → <a href="/links/2015/07/05/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>16 Jun 2015 → <a href="/links/2015/06/16/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>13 Jun 2015 → <a href="/windows/2015/06/13/windows-boot-from-vhd.html"> Windows boot from VHD </a></p>
-  </li>
-  <li>
-    <p>24 May 2015 → <a href="/cryptography/2015/05/24/Cryptography-Links.html"> Cryptography links </a></p>
-  </li>
-  <li>
-    <p>24 May 2015 → <a href="/blog/2015/05/24/Tracing-System-Calls.html"> Tracing System calls </a></p>
-  </li>
-  <li>
-    <p>24 May 2015 → <a href="/git/2015/05/24/Git-Tips.html"> Git Tips </a></p>
-  </li>
-  <li>
-    <p>24 May 2015 → <a href="/blog/2015/05/24/Hyde-For-Blogs.html"> Hyde For Blogs </a></p>
-  </li>
-  <li>
-    <p>24 May 2015 → <a href="/links/2015/05/24/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>22 May 2015 → <a href="/unix/2015/05/22/unix-source-history.html"> Unix source history in a Git repo </a></p>
-  </li>
-  <li>
-    <p>13 May 2015 → <a href="/links/2015/05/13/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>12 May 2015 → <a href="/git/2015/05/12/git-merge.html"> Git Merge 2015 </a></p>
-  </li>
-  <li>
-    <p>12 May 2015 → <a href="/links/2015/05/12/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>12 May 2015 → <a href="/encryption/2015/05/12/stream-ciphers.html"> Stream ciphers </a></p>
-  </li>
-  <li>
-    <p>11 May 2015 → <a href="/ssl/2015/05/11/ssl-implementations.html"> SSL/TLS Implementations </a></p>
-  </li>
-  <li>
-    <p>11 May 2015 → <a href="/links/2015/05/11/recent-links.html"> Recent links </a></p>
-  </li>
-  <li>
-    <p>11 May 2015 → <a href="/development/2015/05/11/the-most-important-software-innovations.html"> The Most Important Software Innovations </a></p>
-  </li>
-  <li>
-    <p>08 May 2015 → <a href="/ssl/2015/05/08/ssl-notes.html"> SSL/TLS Notes </a></p>
-  </li>
-  <li>
-    <p>03 May 2015 → <a href="/energy/2015/05/03/tesla-powerwall.html"> Tesla’s Powerwall Is A Game Changer </a></p>
-  </li>
-  <li>
-    <p>03 May 2015 → <a href="/politics/2015/05/03/quadratic-voting.html"> Quadratic voting </a></p>
-  </li>
-  <li>
-    <p>03 May 2015 → <a href="/editor/2015/05/03/modernizing-emacs.html"> Modernizing Emacs </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/git/linux/2015/05/02/git-and-linux-repo.html"> Git limits and the Linux repo </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/html/blog/2015/05/02/playing-with-fonts.html"> Playing with fonts </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/html/blog/2015/05/02/font-awesome.html"> Font Awesome </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/html/blog/2015/05/02/fun-and-useful-html-entities.html"> Fun and useful HTML Entities </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/jekyll/blog/2015/05/02/jekyll-workflow.html"> A Jekyll Workflow </a></p>
-  </li>
-  <li>
-    <p>02 May 2015 → <a href="/premake/build/2015/05/02/generating-projects-with-premake.html"> Generating Projects with Premake </a></p>
-  </li>
-  <li>
-    <p>01 May 2015 → <a href="/jekyll/blog/2015/05/01/using-jekyll.html"> Using Jekyll for a blog </a></p>
-  </li>
+  <li><a href="https://en.wikipedia.org/wiki/Actor_model">Actor model</a></li>
+  <li><a href="https://practicingruby.com/articles/gentle-intro-to-actor-based-concurrency">A gentle introduction to actor-based concurrency</a></li>
+  <li><a href="http://c2.com/cgi/wiki?ActorsModel">ActorsModel</a></li>
+  <li><a href="http://pchiusano.blogspot.com/2010/01/actors-are-not-good-concurrency-model.html">Actors are not a good concurrency model</a></li>
+  <li><a href="http://www.slideshare.net/drorbr/the-actor-model-towards-better-concurrency">The Actor Model: Towards Better Concurrency</a></li>
+  <li><a href="http://danielwestheide.com/blog/2013/02/27/the-neophytes-guide-to-scala-part-14-the-actor-approach-to-concurrency.html">The Neophyte’s Guide to Scala Part 14: The Actor Approach to Concurrency</a></li>
+  <li><a href="http://www.infoq.com/news/2014/10/intro-actor-model">An Introduction to Actor Model, with Examples in Akka</a></li>
+  <li><a href="http://james-iry.blogspot.com/2009/04/erlang-style-actors-are-all-about.html">Erlang Style Actors Are All About Shared State</a></li>
 </ul>
 
+<p>Perhaps the reason the Actor model has never taken off is because state doesn’t
+compose well. This is why we have transactions, as evil as those are. Is there
+another answer?</p>
 
   </article>
 
