@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 05 Jul 2015 14:32:04 -0700</pubDate>
-    <lastBuildDate>Sun, 05 Jul 2015 14:32:04 -0700</lastBuildDate>
+    <pubDate>Mon, 06 Jul 2015 20:24:35 -0700</pubDate>
+    <lastBuildDate>Mon, 06 Jul 2015 20:24:35 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -35,6 +35,42 @@ point you to an existing one.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Software-Architecture-Perspectives-Emerging-Discipline/dp/0131829572&quot;&gt;Software Architecture: Perspectives on an Emerging Discipline&lt;/a&gt; - Mary Shaw, David Garlan, 1996.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Architecture-Centric-Software-Project-Management-Practical/dp/0201734095&quot;&gt;Architecture-Centric Software Project Management: A Practical Guide&lt;/a&gt; - Daniel J. Paulish, 2002.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.oreilly.com/programming/free/files/software-architecture-patterns.pdf&quot;&gt;Software Architecture Patterns&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/dp/0131412752/&quot;&gt;A Practical Guide to Enterprise Architecture&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Patterns/dp/0471958697&quot;&gt;Pattern-Oriented Software Architecture Volume 1: A System of Patterns&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Concurrent/dp/0471606952&quot;&gt;Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Management/dp/0470845252&quot;&gt;Pattern-Oriented Software Architecture Volume 3: Patterns for Resource Management&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Distributed/dp/0470059028&quot;&gt;Pattern-Oriented Software Architecture Volume 4: A Pattern Language for Distributed Computing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/ee658117.aspx&quot;&gt;Microsoft Application Architecture Guide, 2nd Edition, October 2009, Chapter 3: Architectural Patterns and Styles&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pubs.opengroup.org/architecture/togaf8-doc/arch/chap28.html&quot;&gt;Architecture Patterns&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Architectural_pattern&quot;&gt;Architectural Pattern&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Architecture/Design_Patterns&quot;&gt;Introduction to Software Engineering/Architecture/Design Patterns&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.shejimoshi.com/download/Software%20Architecture%20Design%20Patterns%20in%20Java.pdf&quot;&gt;Software Architecture Design Patterns in Java&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm&quot;&gt;Architectural Styles and the Design of Network-based Software Architectures&lt;/a&gt; - Roy Fielding’s REST thesis.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.redbooks.ibm.com/redbooks/pdfs/sg247105.pdf&quot;&gt;Patterns: Model-Driven Development Using IBM Rational Software Architect&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://sophia.javeriana.edu.co/~cbustaca/DSBP/pagina/articulos/Articulo%20No.04.pdf&quot;&gt;Usability Patterns in Software Architecture&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf&quot;&gt;Design Principles and Design Patterns&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/nakov/architectural-patterns-and-software-architectures-clientserver-multitier-mvc-mvp-mvvm-ioc-di-soa-cloud-computing&quot;&gt;Architectural Patterns: Multi-Tier, MVC, MVP, MVVM, IoC, DI, SOA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.codingoutloud.com/2015/03/18/talk-cloud-architecture-anti-patterns-oreilly-software-architecture-conference/&quot;&gt;Cloud Architecture Anti-Patterns&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://handbookofsoftwarearchitecture.com/&quot;&gt;Handbook of Software Architecture&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 05 Jul 2015 07:20:00 -0700</pubDate>
         <link>http://neurocline.github.io/programming/2015/07/05/software-architecture-books.html</link>
