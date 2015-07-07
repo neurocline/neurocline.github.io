@@ -28,3 +28,39 @@ point you to an existing one.
 [Software Architecture: Perspectives on an Emerging Discipline](http://www.amazon.com/Software-Architecture-Perspectives-Emerging-Discipline/dp/0131829572) - Mary Shaw, David Garlan, 1996.
 
 [Architecture-Centric Software Project Management: A Practical Guide](http://www.amazon.com/Architecture-Centric-Software-Project-Management-Practical/dp/0201734095) - Daniel J. Paulish, 2002.
+
+[Software Architecture Patterns](http://www.oreilly.com/programming/free/files/software-architecture-patterns.pdf)
+
+[A Practical Guide to Enterprise Architecture](http://www.amazon.com/dp/0131412752/)
+
+[Pattern-Oriented Software Architecture Volume 1: A System of Patterns](http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Patterns/dp/0471958697)
+
+[Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects](http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Concurrent/dp/0471606952)
+
+[Pattern-Oriented Software Architecture Volume 3: Patterns for Resource Management](http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Management/dp/0470845252)
+
+[Pattern-Oriented Software Architecture Volume 4: A Pattern Language for Distributed Computing](http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Distributed/dp/0470059028)
+
+[Microsoft Application Architecture Guide, 2nd Edition, October 2009, Chapter 3: Architectural Patterns and Styles](https://msdn.microsoft.com/en-us/library/ee658117.aspx)
+
+[Architecture Patterns](http://pubs.opengroup.org/architecture/togaf8-doc/arch/chap28.html)
+
+[Architectural Pattern](https://en.wikipedia.org/wiki/Architectural_pattern)
+
+[Introduction to Software Engineering/Architecture/Design Patterns](https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Architecture/Design_Patterns)
+
+[Software Architecture Design Patterns in Java](http://www.shejimoshi.com/download/Software%20Architecture%20Design%20Patterns%20in%20Java.pdf)
+
+[Architectural Styles and the Design of Network-based Software Architectures](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) - Roy Fielding's REST thesis.
+
+[Patterns: Model-Driven Development Using IBM Rational Software Architect](http://www.redbooks.ibm.com/redbooks/pdfs/sg247105.pdf)
+
+[Usability Patterns in Software Architecture](https://sophia.javeriana.edu.co/~cbustaca/DSBP/pagina/articulos/Articulo%20No.04.pdf)
+
+[Design Principles and Design Patterns](http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf)
+
+[Architectural Patterns: Multi-Tier, MVC, MVP, MVVM, IoC, DI, SOA](http://www.slideshare.net/nakov/architectural-patterns-and-software-architectures-clientserver-multitier-mvc-mvp-mvvm-ioc-di-soa-cloud-computing)
+
+[Cloud Architecture Anti-Patterns](http://blog.codingoutloud.com/2015/03/18/talk-cloud-architecture-anti-patterns-oreilly-software-architecture-conference/)
+
+[Handbook of Software Architecture](http://handbookofsoftwarearchitecture.com/)
