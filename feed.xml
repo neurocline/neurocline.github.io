@@ -6,9 +6,49 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Jul 2015 20:24:35 -0700</pubDate>
-    <lastBuildDate>Mon, 06 Jul 2015 20:24:35 -0700</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2015 01:43:49 -0700</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2015 01:43:49 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent Links</title>
+        <description>&lt;p&gt;At some point, I’ll get back to actually posting substantive things.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bokken.re/index.html&quot;&gt;bokken&lt;/a&gt;: Open Source Reverse Code Engineering. Looks pretty
+cool.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.mindtheproduct.com/2015/07/video-tom-chi-on-rapid-prototyping-product-management/&quot;&gt;Tony Chi talk at Mind the Product 2015&lt;/a&gt;. This is awesome, watch it. Rapid prototyping, real-world
+feedback over conjecture, keep loop length really short, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doc.rust-lang.org/nightly/adv-book/&quot;&gt;The Advanced Rust Programming Language&lt;/a&gt;. A sequel
+of sorts to &lt;a href=&quot;https://doc.rust-lang.org/book/&quot;&gt;The Rust Programming Language&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.rklesolutions.com/blog/supply-chain-evolution/&quot;&gt;Supply Chain Evolution - Lessons from Ford and Toyota&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.oreilly.com/programming/free/files/software-paradox.pdf&quot;&gt;The Software Paradox: The Rise and Fall of the Commercial Software Market&lt;/a&gt;. Interesting
+and somewhat flawed exploration of software markets.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/cbucher/console&quot;&gt;ConsoleZ&lt;/a&gt;. Updated version of Console2 that is being
+actively developed (better console on Windows).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.koreanfluent.com/cross_cultural/korean_keyboard/korean_keyboard.htm&quot;&gt;How to Type Korean on a Computer (in Windows 8, 7 or Vista)&lt;/a&gt;.
+It’s hard to test that your software handles locales properly unless you can generate
+a few test cases.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Korean_language_and_computers&quot;&gt;Korean language and computers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nickdesaulniers.github.io/blog/2015/07/23/additional-c-slash-c-plus-plus-tooling/&quot;&gt;Additional C/C++ Tooling&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://utf8everywhere.org/&quot;&gt;UTF-8 Everywhere&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 31 Jul 2015 09:18:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/07/31/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/07/31/recent-links.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Software Architecture books</title>
@@ -87,9 +127,9 @@ point you to an existing one.&lt;/p&gt;
 never been fully embraced by the software development community (unlike, say,
 structured programming or object-oriented programming). There are a few modern
 languages that facilitate Actor model programming; Erlang and Scala+Akka are the
-two most popular.&lt;/p&gt;
-
-&lt;p&gt;In the Actor model, the only means to share state between concurrent and/or
+two most popular.
+ee
+In the Actor model, the only means to share state between concurrent and/or
 parallel actors is message passing. In most other systems, access to state is
 shared and synchronized by primitives like semaphores and mutexes. This does
 not mean bliss and the lack of needing synchronization, because state can be
@@ -620,56 +660,6 @@ else. I need search, for one thing.&lt;/p&gt;
         
         
         <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;h2 id=&quot;cmake&quot;&gt;CMake&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/examples/&quot;&gt;Examples&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/runningcmake/&quot;&gt;Running CMake&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Source and binaries&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/Kitware/CMake&quot;&gt;CMake repo on Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CMake Wiki&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/Wiki/CMake_FAQ&quot;&gt;CMake FAQ&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/Wiki/CMake:How_To_Find_Libraries&quot;&gt;How To Find Libraries&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cmake.org/Wiki/CMake_Generator_Specific_Information&quot;&gt;CMake Generator-Specific Information&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;premake&quot;&gt;Premake&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://premake.github.io/&quot;&gt;Premake&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;openssl&quot;&gt;OpenSSL&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://developer.covenanteyes.com/building-openssl-for-visual-studio/&quot;&gt;Building OpenSSL For Visual Studio&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wiki.openssl.org/index.php/Compilation_and_Installation&quot;&gt;Compilation and Installation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://p-nand-q.com/programming/windows/building_openssl_with_visual_studio_2013.html&quot;&gt;Building OpenSSL with Visual Studio 2013&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/openssl/openssl/blob/master/INSTALL.W32&quot;&gt;Install OpenSSL&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://rt.openssl.org/Ticket/Display.html?id=3650&amp;amp;user=guest&amp;amp;pass=guest&quot;&gt;OpenSSL asm bug&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;dos&quot;&gt;DOS&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ss64.com/nt/goto.html&quot;&gt;CMD help&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 24 May 2015 08:58:00 -0700</pubDate>
-        <link>http://neurocline.github.io/links/2015/05/24/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/links/2015/05/24/recent-links.html</guid>
-        
-        
-        <category>links</category>
         
       </item>
     
