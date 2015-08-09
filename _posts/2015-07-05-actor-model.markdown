@@ -10,7 +10,7 @@ never been fully embraced by the software development community (unlike, say,
 structured programming or object-oriented programming). There are a few modern
 languages that facilitate Actor model programming; Erlang and Scala+Akka are the
 two most popular.
-
+ee
 In the Actor model, the only means to share state between concurrent and/or
 parallel actors is message passing. In most other systems, access to state is
 shared and synchronized by primitives like semaphores and mutexes. This does
