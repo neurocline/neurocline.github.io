@@ -6,9 +6,28 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Aug 2015 20:54:10 -0700</pubDate>
-    <lastBuildDate>Tue, 11 Aug 2015 20:54:10 -0700</lastBuildDate>
+    <pubDate>Tue, 11 Aug 2015 23:46:23 -0700</pubDate>
+    <lastBuildDate>Tue, 11 Aug 2015 23:46:23 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent Links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://ramcloud.atlassian.net/wiki/display/RAM/RAMCloud&quot;&gt;RAMCloud&lt;/a&gt; from &lt;a href=&quot;http://web.stanford.edu/~ouster/cgi-bin/home.php&quot;&gt;John Ousterhout&lt;/a&gt;’s group at Stanford. Also see the &lt;a href=&quot;https://ramcloud.atlassian.net/wiki/display/RAM/Design+Review&quot;&gt;Design Review&lt;/a&gt; that happened early in RAMCloud’s development cycle.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://webhome.cs.uvic.ca/~ycoady/&quot;&gt;Yvonne Coady&lt;/a&gt; working on modularity of system infrastructure software.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cs.brown.edu/~mph/Herlihy91/p124-herlihy.pdf&quot;&gt;Wait-Free Synchronization&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ongardie.net/blog/exceptions/&quot;&gt;The Cost of Exceptions of C++&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 11 Aug 2015 23:25:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/08/11/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/11/recent-links.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Recent Links</title>
@@ -114,6 +133,12 @@ point, it will contain original bits, and then all of this will turn into a bibl
   &lt;li&gt;&lt;a href=&quot;http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf&quot;&gt;The Byzantine Generals Problem&lt;/a&gt;. 1982 - making progress in the presence of conflicting information.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;Wikipedia has a decent article&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Consensus_(computer_science)&quot;&gt;Consensus&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;Note that state machine replication and consensus algorithms go together, and we’ll be diving
 into that as well, since that’s the actual fun/hard work.&lt;/p&gt;
 
@@ -121,16 +146,48 @@ into that as well, since that’s the actual fun/hard work.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/State_machine_replication&quot;&gt;State machine replication&lt;/a&gt; on Wikipedia.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;More reading on consensus:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cs.uic.edu/~ajayk/Chapter14.pdf&quot;&gt;Chapter 14: Consensus and Agreement&lt;/a&gt;, from the book Distributed Computing: Principles, Algorithms and Systems.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.duke.edu/courses/fall07/cps212/consensus.pdf&quot;&gt;Distributed Systems, Failures, and Consensus&lt;/a&gt;, from a class by Jeff Chase at Duke University on distributed systems.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cs.cornell.edu/home/rvr/papers/icdcn08.pdf&quot;&gt;The Building Blocks of Consensus&lt;/a&gt;. 2008.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://research.microsoft.com/en-us/people/weic/ipl_bincons.pdf&quot;&gt;Bounded Cost Algorithms for Multivalued Consensus Using Binary Consensus Instances&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cs.utexas.edu/users/psp/consensus.pdf&quot;&gt;A Simple Proof of a Simple Consensus Algorithm&lt;/a&gt;. 1990?&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cs.yale.edu/homes/aspnes/papers/randomized-consensus-survey.pdf&quot;&gt;Randomized Protocols for Asynchronous Consensus&lt;/a&gt;. 2002.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cs.toronto.edu/~samvas/teaching/2221/handouts/benor-paper.pdf&quot;&gt;The correctness proof of Ben-Or’s randomized consensus algorithm&lt;/a&gt;. 2011.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And Papers We Love has a whole section on distributed systems&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/papers-we-love/papers-we-love/tree/master/distributed_systems&quot;&gt;papers-we-love/distributed_systems&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;pc---two-phase-commit&quot;&gt;2PC - two-phase commit&lt;/h2&gt;
 
-&lt;p&gt;Yep.&lt;/p&gt;
+&lt;p&gt;Conceptually, two-phase commit is straightforward; the commit-request phase (or call it the voting
+phase), and the commit phase, where the coordinator decides whether to commit or not, based on the
+information gathered in the voting phase.&lt;/p&gt;
+
+&lt;p&gt;This is a widely-used technique, although it has problems in the presence of failures. E.g. it assumes
+there is storage that can be trusted at each node, that no node crashes, and that nodes can communicate
+with each other. And it’s a blocking protocol. Other than that, it’s great :)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Two-phase_commit_protocol&quot;&gt;Two-phase commit protocol&lt;/a&gt; from Wikipedia.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://the-paper-trail.org/blog/consensus-protocols-two-phase-commit/&quot;&gt;Consensus Protocols: Two-Phase Commit&lt;/a&gt;. 2008.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;pc---three-phase-commit&quot;&gt;3PC - three-phase commit&lt;/h2&gt;
 
-&lt;p&gt;Fixes the fragility of 2PC.&lt;/p&gt;
+&lt;p&gt;Fixes much of fragility of 2PC, although it’s still vulnerable to partitions. E3PC tries to address
+the problem of partitions.&lt;/p&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Three-phase_commit_protocol&quot;&gt;Three-phase commit protocol&lt;/a&gt; from Wikipedia.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.purdue.edu/homes/bb/cs542-11Spr/TSE83_SS.pdf&quot;&gt;A Formal Model of Crash Recovery in a Distributed System&lt;/a&gt;. 1983, Skeen and Stonebraker, introduced the three-phase commit protocol.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://the-paper-trail.org/blog/consensus-protocols-three-phase-commit/&quot;&gt;Consensus Protocols: Three-phase Commit&lt;/a&gt;. 2008.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://research.microsoft.com/en-us/um/people/blampson/21-crashrecovery/acrobat.pdf&quot;&gt;Crash Recovery in a Distributed Data Storage System&lt;/a&gt;. 1979, Butler Lampson and Howard Sturgis.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://webee.technion.ac.il/~idish/Abstracts/jcss.html&quot;&gt;Increasing the Resilience of Distributed and Replicated Data Systems&lt;/a&gt;. 1998, Idit Keidar and Danny Dolev, enhanced three-phase commit.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;paxos&quot;&gt;Paxos&lt;/h2&gt;
@@ -188,12 +245,35 @@ to understand Paxos.&lt;/p&gt;
 &lt;p&gt;Raft was developed as an easier-to-understand consensus algorithm, easier that Paxos, that is.&lt;/p&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://raftconsensus.github.io/&quot;&gt;The Raft Consensus Algorithm&lt;/a&gt;. Home page on Github.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Raft_(computer_science)&quot;&gt;Raft&lt;/a&gt; on Wikipedia.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/assets/raft.pdf&quot;&gt;In Search of an Understandable Consensus Algorithm&lt;/a&gt;. 2014, Osterhout paper introducing Raft.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://thesecretlivesofdata.com/raft/&quot;&gt;The Secret Lives of Data&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.cl.cam.ac.uk/~ms705/pub/papers/2015-osr-raft.pdf&quot;&gt;Raft refloated - do we have consensus&lt;/a&gt;. 2015.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.consul.io/docs/internals/consensus.html&quot;&gt;Consensus Protocol&lt;/a&gt;. Consul uses Raft for
+its consensus protocol.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro&quot;&gt;In Search of an Understandable Consensus Algorithm&lt;/a&gt; video of presentation at Usenix 2014.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-857.pdf&quot;&gt;ARC: Analysis of Raft Consensus&lt;/a&gt;. 2014, Heidi Howard.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/logcabin/logcabin/&quot;&gt;logcabin&lt;/a&gt;. LogCabin is a distributed storage system built on Raft; written in C++.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Facebook is using Raft in HydraBase, to replace HBase.&lt;/p&gt;
+&lt;p&gt;Facebook is using Raft in HydraBase, to replace HBase. CoreOS is using Raft in etcd.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/coreos/etcd&quot;&gt;https://github.com/coreos/etcd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ark&quot;&gt;Ark&lt;/h2&gt;
+
+&lt;p&gt;Introduced for TokuMX and MongoDB.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://arxiv.org/pdf/1407.4765v1.pdf&quot;&gt;Ark: A Real-World Consensus Implementation&lt;/a&gt;. 2014.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.percona.com/blog/2014/07/18/introducing-ark-a-consensus-algorithm-for-tokumx-and-mongodb/&quot;&gt;Introducing Ark: A Consensus Algorithm for TokuMX and MongoDB&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.percona.com/blog/2014/07/25/explaining-ark-part-2-how-elections-and-failover-currently-work/&quot;&gt;Explaining Ark Part 2: How Elections and Failover Currently Work&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.percona.com/blog/2014/07/30/explaining-ark-part-3-why-data-may-be-lost-on-a-failover/&quot;&gt;Explaining Ark Part 3: Why Data May Be Lost on a Failover&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.percona.com/blog/2014/08/07/explaining-ark-part-4-fixing-majority-write-concern/&quot;&gt;Explaining Ark Part 4: Fixing Majority Write Concern&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;names-in-consensus-algorithms&quot;&gt;Names in consensus algorithms&lt;/h2&gt;
 
@@ -591,168 +671,6 @@ since ISO is a pretty simple format). Enter Rufus.&lt;/p&gt;
         
         
         <category>cryptography</category>
-        
-      </item>
-    
-      <item>
-        <title>Tracing System calls</title>
-        <description>&lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
-
-&lt;p&gt;Tracing system calls on Linux is straightforward. The &lt;code&gt;ptrace&lt;/code&gt; API lets
-one process trace all system calls made by another process, and the
-command-line program &lt;code&gt;strace&lt;/code&gt; uses &lt;code&gt;ptrace&lt;/code&gt; to allow a user to do the
-same.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://linux.die.net/man/1/strace&quot;&gt;strace(1)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://linux.die.net/man/2/ptrace&quot;&gt;ptrace(2)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.nelhage.com/2010/08/write-yourself-an-strace-in-70-lines-of-code/&quot;&gt;Write Yourself an Strace in 70 Lines of Code&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;mac-os-x&quot;&gt;Mac OS X&lt;/h2&gt;
-
-&lt;p&gt;Tracing system calls on Mac OS X is a little harder, but more powerful.
-The &lt;code&gt;dtrace&lt;/code&gt; system ships with Macs starting with Mac OS X 10.5. Unlike
-strace, however, support for dtrace has to be built in to programs. Mac
-OS X ships with several thousand probes (the attachment points), and most
-normal monitoring is covered. Brendan Gregg’s blog has a Mac OS X-specific
-dtrace page, as an example, and there are other useful tutorials&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://dtrace.org/blogs/brendan/2011/10/10/top-10-dtrace-scripts-for-mac-os-x/&quot;&gt;Top 10 DTrace scripts for Mac OS X&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.bignerdranch.com/blog/hooked-on-dtrace-part-1/&quot;&gt;Hooked on DTrace, part 1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Apple added ptrace to Mac OS X, maybe. There’s a man page for it, but no
-strace program for user-level use. I’ll have to try writing some code.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man2/ptrace.2.html&quot;&gt;ptrace(2)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are ways to hook/override program and system functions at runtime.
-These work but aren’t truly supported, so are of most use for debugging
-situations.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rentzsch/mach_override&quot;&gt;mach_override&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rentzsch/mach_override&quot;&gt;mach_inject&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Amit Singh went the kernel extension approach to get access to system calls&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://osxbook.com/book/bonus/ancient/syscall/&quot;&gt;Re-routing System Calls&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;While there are definitely nefarious uses for this stuff, it can be used for
-developers too. For example, this paper talks about rootkits, but the techniques
-also make for great developer tools.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.trailofbits.com/resources/advanced_macosx_rootkits_paper.pdf&quot;&gt;Advance Mac OS X Rootkits&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bsd&quot;&gt;BSD&lt;/h2&gt;
-
-&lt;p&gt;The equivalent to ptrace on BSD is ktrace. Unfortunately, ktrace is not
-available on Mac OS X. That’s annoying, because it is complementary to
-DTrace, which is an awesome sysop-level tool, but does not give complete
-access to all system calls. Mac OS X had ktrace in 10.4 and earlier.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=ktrace(1)&amp;amp;sektion=&quot;&gt;ktrace(1)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=ktrace&amp;amp;sektion=2&quot;&gt;ktrace(2)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
-
-&lt;p&gt;There is the amazing Process Monitor, which traces all file and registry
-actions. However, this is strictly a user-level program, you work with it through
-its GUI. It’s very useful, but does not give you system-call level access from
-your own source code.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://kohei.us/2010/06/25/strace-equivalent-for-windows/&quot;&gt;STRACE EQUIVALENT FOR WINDOWS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is a fairly new project called StraceNT. It comes with source code.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://intellectualheaven.com/default.asp?BH=STraceNT&quot;&gt;StraceNT - A System Call Tracer for Windows&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/intellectualheaven/stracent&quot;&gt;github/intellectualheaven/stracent&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Dr. Memory comes with “strace for Windows” called drstrace.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/DynamoRIO/drmemory&quot;&gt;github/DynamoRIO/drmemory&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.drmemory.org/strace_for_windows.html&quot;&gt;System Call Tracer (“strace”) for Windows&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Event Tracing for Windows (ETW) is the Microsoft official technique, and has
-several programs layered on top.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/magazine/ee412263.aspx&quot;&gt;Core OS Events in Windows 7, Part 1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is Logger and LogView, also Microsoft tools&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/hardware/ff552060(v=vs.85).aspx&quot;&gt;Logger and LogViewer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is NtTrace&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.howzatt.demon.co.uk/NtTrace/&quot;&gt;NtTrace - Native API tracing for Windows&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;An article&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jbremer.org/intercepting-system-calls-on-x86_64-windows/&quot;&gt;Intercepting System Calls on x86_64 Windows&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;fabricate&quot;&gt;fabricate&lt;/h2&gt;
-
-&lt;p&gt;This is a python build tool that watches for files that have changed as a result
-of running a command. It uses strace on Linux but does filetime watching on
-Windows, so maybe look for how to get Python on Windows to use one of the other
-file monitoring solutions?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://code.google.com/p/fabricate/&quot;&gt;fabricate&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://code.google.com/p/fabricate/issues/detail?id=3&quot;&gt;fabricate issue 3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tup&quot;&gt;tup&lt;/h2&gt;
-
-&lt;p&gt;The tup build tool uses DLL injection on Windows to detect file I/O.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://gittup.org/tup/&quot;&gt;tup&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;ninja&quot;&gt;ninja&lt;/h2&gt;
-
-&lt;p&gt;The ninja tool also does filesystem watching, I think.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://martine.github.io/ninja/&quot;&gt;Ninja&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;google-building-in-the-cloud&quot;&gt;Google “building in the cloud”&lt;/h2&gt;
-
-&lt;p&gt;This is a FUSE-based approach, so not exactly tracing system calls.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://google-engtools.blogspot.com/2011/06/build-in-cloud-accessing-source-code.html&quot;&gt;Build in the Cloud: Accessing Source Code&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 24 May 2015 16:24:00 -0700</pubDate>
-        <link>http://neurocline.github.io/blog/2015/05/24/Tracing-System-Calls.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/blog/2015/05/24/Tracing-System-Calls.html</guid>
-        
-        
-        <category>blog</category>
         
       </item>
     
