@@ -12,8 +12,11 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <!-- link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT"-->
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic">
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic"-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
   <link rel="canonical" href="http://neurocline.github.io/html/blog/2015/05/02/fun-and-useful-html-entities.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
@@ -76,7 +79,7 @@
   <article class="post-content">
     <p><img src="/assets/HtmlEntities.jpg" alt="My helpful screenshot" /></p>
 
-<h1 id="sgml-rarr-html-rarr-xml-rarr-html5">SGML → HTML → XML → HTML5</h1>
+<h2 id="sgml-rarr-html-rarr-xml-rarr-html5">SGML → HTML → XML → HTML5</h2>
 
 <p>HTML Entities are still necessary in some cases, and useful all around.</p>
 
@@ -154,10 +157,24 @@ be written as an entity.</p>
   </tbody>
 </table>
 
+<h2 id="unicode-code-points-and-html-entities">Unicode code points and HTML Entities</h2>
+
+<p>RFC 2070, an extension of the HTML 2.0 standard, declared the document character set
+to be ISO 10646, or Unicode, in other words. So HTML entities are now essentially
+Unicode characters.</p>
+
+<p>You can write HTML entities in hexadecimal, for convenience in writing Unicode code
+points, since the latter are typically described in hexadecimal.</p>
+
+<ul>
+  <li><code>&amp;amp;#8592</code> is the leftwards arrow, written as a decimal number</li>
+  <li><code>&amp;amp;#x2190</code> is the same character, written as a hexadecimal number</li>
+</ul>
+
 <h2 id="html-entities-you-should-not-use">HTML Entities you should not use</h2>
 
 <p>Because many web developers were American or English, and because early
-HTML support was somewhat primitive, the habit of using unusual characters
+HTML support was somewhat primitiv!e, the habit of using unusual characters
 as separators developed.</p>
 
 <p>Don’t do it. Here’s a list of characters you should avoid using except
@@ -183,6 +200,28 @@ and arcane symbol in a list. Don’t do it. Use arrow characters like ← and
 Unfortunately, a guillemot is a species of seabird. Adobe noted their error
 in the Postscript Language Reference, 3rd edition, 1999, but the harm was done,
 and many English-speakers still refer to these by the incorrect name.</p>
+
+<h2 id="line-drawing-characters-unicode">Line drawing characters (Unicode)</h2>
+
+<p>These come in handy to draw the occasional text graphic, like a directory hierarchy.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">~/projects/build/
+├── bin
+│   ├── client
+│   └── server</code></pre></div>
+
+<p>In the above text graphic, three characters are used:</p>
+
+<ul>
+  <li>├ the character U+251C, “box drawings light vertical and right”</li>
+  <li>─ the character U+2500, “box drawings light horizontal”</li>
+  <li>└ the character U+2514, “box drawings light up and right”</li>
+</ul>
+
+<p>Depending on the font, these will either complete abut each other, or have small gaps
+between the characters. Unfortunately, the default monospace web font has these gaps.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Box-drawing_character">Box-drawing character</a> article on Wikipedia.</p>
 
 <h2 id="reference">Reference</h2>
 
