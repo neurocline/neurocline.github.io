@@ -22,20 +22,52 @@ This sub-field was launched with a paper from Lamport titled The Byzantine Gener
 
 * [The Byzantine Generals Problem](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf). 1982 - making progress in the presence of conflicting information.
 
+Wikipedia has a decent article
+
+* [Consensus](https://en.wikipedia.org/wiki/Consensus_(computer_science))
+
 Note that state machine replication and consensus algorithms go together, and we'll be diving
 into that as well, since that's the actual fun/hard work.
 
 * [State machine replication](https://en.wikipedia.org/wiki/State_machine_replication) on Wikipedia.
 
+More reading on consensus:
+
+* [Chapter 14: Consensus and Agreement](http://www.cs.uic.edu/~ajayk/Chapter14.pdf), from the book Distributed Computing: Principles, Algorithms and Systems.
+* [Distributed Systems, Failures, and Consensus](https://www.cs.duke.edu/courses/fall07/cps212/consensus.pdf), from a class by Jeff Chase at Duke University on distributed systems.
+* [The Building Blocks of Consensus](http://www.cs.cornell.edu/home/rvr/papers/icdcn08.pdf). 2008.
+* [Bounded Cost Algorithms for Multivalued Consensus Using Binary Consensus Instances](http://research.microsoft.com/en-us/people/weic/ipl_bincons.pdf).
+* [A Simple Proof of a Simple Consensus Algorithm](http://www.cs.utexas.edu/users/psp/consensus.pdf). 1990?
+* [Randomized Protocols for Asynchronous Consensus](http://www.cs.yale.edu/homes/aspnes/papers/randomized-consensus-survey.pdf). 2002.
+* [The correctness proof of Ben-Or’s randomized consensus algorithm](http://www.cs.toronto.edu/~samvas/teaching/2221/handouts/benor-paper.pdf). 2011.
+
+And Papers We Love has a whole section on distributed systems
+
+[papers-we-love/distributed_systems](https://github.com/papers-we-love/papers-we-love/tree/master/distributed_systems)
+
 ## 2PC - two-phase commit
 
-Yep.
+Conceptually, two-phase commit is straightforward; the commit-request phase (or call it the voting
+phase), and the commit phase, where the coordinator decides whether to commit or not, based on the
+information gathered in the voting phase.
+
+This is a widely-used technique, although it has problems in the presence of failures. E.g. it assumes
+there is storage that can be trusted at each node, that no node crashes, and that nodes can communicate
+with each other. And it's a blocking protocol. Other than that, it's great :)
+
+* [Two-phase commit protocol](https://en.wikipedia.org/wiki/Two-phase_commit_protocol) from Wikipedia.
+* [Consensus Protocols: Two-Phase Commit](http://the-paper-trail.org/blog/consensus-protocols-two-phase-commit/). 2008.
 
 ## 3PC - three-phase commit
 
-Fixes the fragility of 2PC.
+Fixes much of fragility of 2PC, although it's still vulnerable to partitions. E3PC tries to address
+the problem of partitions.
 
+* [Three-phase commit protocol](https://en.wikipedia.org/wiki/Three-phase_commit_protocol) from Wikipedia.
+* [A Formal Model of Crash Recovery in a Distributed System](https://www.cs.purdue.edu/homes/bb/cs542-11Spr/TSE83_SS.pdf). 1983, Skeen and Stonebraker, introduced the three-phase commit protocol.
 * [Consensus Protocols: Three-phase Commit](http://the-paper-trail.org/blog/consensus-protocols-three-phase-commit/). 2008.
+* [Crash Recovery in a Distributed Data Storage System](http://research.microsoft.com/en-us/um/people/blampson/21-crashrecovery/acrobat.pdf). 1979, Butler Lampson and Howard Sturgis.
+* [Increasing the Resilience of Distributed and Replicated Data Systems](http://webee.technion.ac.il/~idish/Abstracts/jcss.html). 1998, Idit Keidar and Danny Dolev, enhanced three-phase commit.
 
 ## Paxos
 
@@ -83,11 +115,30 @@ Uses of Paxos
 
 Raft was developed as an easier-to-understand consensus algorithm, easier that Paxos, that is.
 
+* [The Raft Consensus Algorithm](https://raftconsensus.github.io/). Home page on Github.
 * [Raft](https://en.wikipedia.org/wiki/Raft_(computer_science)) on Wikipedia.
+* [In Search of an Understandable Consensus Algorithm](/assets/raft.pdf). 2014, Osterhout paper introducing Raft.
 * [The Secret Lives of Data](http://thesecretlivesofdata.com/raft/)
 * [Raft refloated - do we have consensus](http://www.cl.cam.ac.uk/~ms705/pub/papers/2015-osr-raft.pdf). 2015.
+* [Consensus Protocol](https://www.consul.io/docs/internals/consensus.html). Consul uses Raft for
+its consensus protocol.
+* [In Search of an Understandable Consensus Algorithm](https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro) video of presentation at Usenix 2014.
+* [ARC: Analysis of Raft Consensus](http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-857.pdf). 2014, Heidi Howard.
+* [logcabin](https://github.com/logcabin/logcabin/). LogCabin is a distributed storage system built on Raft; written in C++.
 
-Facebook is using Raft in HydraBase, to replace HBase.
+Facebook is using Raft in HydraBase, to replace HBase. CoreOS is using Raft in etcd.
+
+* [https://github.com/coreos/etcd](https://github.com/coreos/etcd)
+
+## Ark
+
+Introduced for TokuMX and MongoDB.
+
+* [Ark: A Real-World Consensus Implementation](http://arxiv.org/pdf/1407.4765v1.pdf). 2014.
+* [Introducing Ark: A Consensus Algorithm for TokuMX and MongoDB](https://www.percona.com/blog/2014/07/18/introducing-ark-a-consensus-algorithm-for-tokumx-and-mongodb/).
+* [Explaining Ark Part 2: How Elections and Failover Currently Work](https://www.percona.com/blog/2014/07/25/explaining-ark-part-2-how-elections-and-failover-currently-work/)
+* [Explaining Ark Part 3: Why Data May Be Lost on a Failover](https://www.percona.com/blog/2014/07/30/explaining-ark-part-3-why-data-may-be-lost-on-a-failover/)
+* [Explaining Ark Part 4: Fixing Majority Write Concern](https://www.percona.com/blog/2014/08/07/explaining-ark-part-4-fixing-majority-write-concern/)
 
 ## Names in consensus algorithms
 
