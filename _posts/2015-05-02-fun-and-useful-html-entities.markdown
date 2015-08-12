@@ -6,7 +6,7 @@ categories: html blog
 ---
 ![My helpful screenshot](/assets/HtmlEntities.jpg)
 
-# SGML &rarr; HTML &rarr; XML &rarr; HTML5
+## SGML &rarr; HTML &rarr; XML &rarr; HTML5
 
 HTML Entities are still necessary in some cases, and useful all around.
 
@@ -39,10 +39,22 @@ Character | Entity-name | Entity-number | Description
 &rarr;    | &amp;rarr;  | &amp;#8594;   | rightwards arrow
 &eacute;  | &amp;eacute;| &amp;#233;    | latin e with acute
 
+## Unicode code points and HTML Entities
+
+RFC 2070, an extension of the HTML 2.0 standard, declared the document character set
+to be ISO 10646, or Unicode, in other words. So HTML entities are now essentially
+Unicode characters.
+
+You can write HTML entities in hexadecimal, for convenience in writing Unicode code
+points, since the latter are typically described in hexadecimal.
+
+- ```&amp;#8592``` is the leftwards arrow, written as a decimal number
+- ```&amp;#x2190``` is the same character, written as a hexadecimal number
+
 ## HTML Entities you should not use
 
 Because many web developers were American or English, and because early
-HTML support was somewhat primitive, the habit of using unusual characters
+HTML support was somewhat primitiv!e, the habit of using unusual characters
 as separators developed.
 
 Don't do it. Here's a list of characters you should avoid using except
@@ -68,6 +80,28 @@ Fun trivia fact: Adobe originally got this wrong and called these guillemot.
 Unfortunately, a guillemot is a species of seabird. Adobe noted their error
 in the Postscript Language Reference, 3rd edition, 1999, but the harm was done,
 and many English-speakers still refer to these by the incorrect name.
+
+## Line drawing characters (Unicode)
+
+These come in handy to draw the occasional text graphic, like a directory hierarchy.
+
+{% highlight bash %}
+~/projects/build/
+├── bin
+│   ├── client
+│   └── server
+{% endhighlight %}
+
+In the above text graphic, three characters are used:
+
+- ├ the character U+251C, "box drawings light vertical and right"
+- ─ the character U+2500, "box drawings light horizontal"
+- └ the character U+2514, "box drawings light up and right"
+
+Depending on the font, these will either complete abut each other, or have small gaps
+between the characters. Unfortunately, the default monospace web font has these gaps.
+
+[Box-drawing character](https://en.wikipedia.org/wiki/Box-drawing_character) article on Wikipedia.
 
 ## Reference
 
