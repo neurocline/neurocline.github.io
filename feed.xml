@@ -6,9 +6,70 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Aug 2015 19:13:21 -0700</pubDate>
-    <lastBuildDate>Wed, 12 Aug 2015 19:13:21 -0700</lastBuildDate>
+    <pubDate>Thu, 13 Aug 2015 13:20:07 -0700</pubDate>
+    <lastBuildDate>Thu, 13 Aug 2015 13:20:07 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Telling time in seconds</title>
+        <description>&lt;p&gt;Our current time system has multiple bases - base 60 for seconds and minutes, base 24 for hours, base 7 for
+weeks, base 12 for months - and that’s an approximation, of course.&lt;/p&gt;
+
+&lt;p&gt;What if we just told time in seconds?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;100 seconds = 1.67 minutes&lt;/li&gt;
+  &lt;li&gt;1000 seconds = 1 kilosecond = 16.7 minutes&lt;/li&gt;
+  &lt;li&gt;10000 seconds = 10 kiloseconds = 2.78 hours&lt;/li&gt;
+  &lt;li&gt;100000 seconds = 100 kiloseconds = 1.16 days&lt;/li&gt;
+  &lt;li&gt;1000000 seconds = 1 megasecond = 1.65 weeks&lt;/li&gt;
+  &lt;li&gt;10000000 seconds = 10 megaseconds = 3.81 months&lt;/li&gt;
+  &lt;li&gt;100000000 seconds = 100 megaseconds = 3.17 years&lt;/li&gt;
+  &lt;li&gt;1000000000 seconds = 1 gigasecond = 31.7 years&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Or, if we want to approximate our current time references, here’s what we’d say&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1 hour is close to 4 kiloseconds&lt;/li&gt;
+  &lt;li&gt;1 day is close to 100 kiloseconds&lt;/li&gt;
+  &lt;li&gt;1 week is close to 1 megasecond&lt;/li&gt;
+  &lt;li&gt;1 month is close to 3 megaseconds&lt;/li&gt;
+  &lt;li&gt;1 year is close to 32 megaseconds&lt;/li&gt;
+  &lt;li&gt;1 century is close to 3 gigaseconds&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And it’s certainly a lot easier to compare kiloseconds to megaseconds than it is to compare
+hours to weeks.&lt;/p&gt;
+
+&lt;p&gt;Once we go into space for real and start living in orbit or on other planets, “day” means
+something very relative, and so does “year”. So we will have to give up parochial time spans
+and go to something useful, and it could be as simple as SI prefixes combined with seconds.&lt;/p&gt;
+
+&lt;p&gt;Credit to Vernor Vinge for being the first person I saw writing about this, in A Deepness In The Sky (1999).&lt;/p&gt;
+
+&lt;p&gt;And now that I search, amusingly Wikipedia has pages for megasecond and gigasecond, where
+someone has listed various time durations in fractions of these values.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Megasecond&quot;&gt;Megasecond&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gigasecond&quot;&gt;Gigasecond&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I hadn’t thought about it, but Gigaseconds covers human history, since the next biggest step up,
+terasecond, is talking about timeframes in units of 31,588 years. And teraseconds covers the range
+up through 32 million years, which is a respectable amount of time.&lt;/p&gt;
+
+&lt;p&gt;And the universe is less than half an exasecond old.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 13 Aug 2015 12:42:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/08/13/telling-time-in-seconds.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/13/telling-time-in-seconds.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Recent Links</title>
@@ -586,31 +647,6 @@ good as a low-level standard that higher-level tools encode into?&lt;/p&gt;
         <pubDate>Sun, 05 Jul 2015 03:00:00 -0700</pubDate>
         <link>http://neurocline.github.io/links/2015/07/05/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/links/2015/07/05/recent-links.html</guid>
-        
-        
-        <category>links</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/&quot;&gt;What is Code?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/fanout/zurl&quot;&gt;zurl&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nixos.org/&quot;&gt;NixOS&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=9705690&quot;&gt;‘git inject’&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lifehacker.com/5991848/how-to-boot-from-a-cd-or-usb-drive-on-any-pc#&quot;&gt;How to Boot From a CD or USB Drive on Any PC&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/dd744347(v=ws.10).aspx&quot;&gt;BCDboot Command-Line Options&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://windows.microsoft.com/en-us/windows/preview-download&quot;&gt;Download Windows 10 Insider Preview&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 16 Jun 2015 16:30:00 -0700</pubDate>
-        <link>http://neurocline.github.io/links/2015/06/16/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/links/2015/06/16/recent-links.html</guid>
         
         
         <category>links</category>
