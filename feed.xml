@@ -6,9 +6,106 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Aug 2015 23:46:23 -0700</pubDate>
-    <lastBuildDate>Tue, 11 Aug 2015 23:46:23 -0700</lastBuildDate>
+    <pubDate>Wed, 12 Aug 2015 19:13:21 -0700</pubDate>
+    <lastBuildDate>Wed, 12 Aug 2015 19:13:21 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent Links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.usenix.org/legacy/events/hotos03/tech/full_papers/candea/candea.pdf&quot;&gt;Crash-only software&lt;/a&gt;.
+2003. Provocative but useful idea that, once you have software that can perfectly recover from crashes,
+never bother to shut down other than by crashing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nms.csail.mit.edu/~stavros/pubs/hstore.pdf&quot;&gt;The End of an Architectural Era (It’s Time for a Complete Rewrite)&lt;/a&gt;.
+2007. Michael Stonebreaker and co-authors argue that relational databases need a reboot.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf&quot;&gt;Above the Clouds: A Berkeley View of Cloud Computing&lt;/a&gt;.
+2009.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.eecs.harvard.edu/~mdw/papers/seda-sosp01.pdf&quot;&gt;SEDA: An Architecture for Well-Conditioned, Scalable Internet Services&lt;/a&gt;.
+2001. Describes a method for controlling load presented to services.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://conferences.sigcomm.org/sigcomm/2015/pdf/papers/p183.pdf&quot;&gt;Jupiter Rising: A Decade of Clos Topologies and Centralized Control in Google’s Datacenter Network&lt;/a&gt;. 2015.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://highscalability.com/blog/2012/9/4/changing-architectures-new-datacenter-networks-will-set-your.html&quot;&gt;Changing Architectures: New Datacenter Networks Will Set Your Code And Data Free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://highscalability.com/blog/2015/8/10/how-google-invented-an-amazing-datacenter-network-only-they.html/&quot;&gt;How Google Invented An Amazing Datacenter Network Only They Could Create&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Netflix/eureka/wiki/Eureka-at-a-glance&quot;&gt;Eureka at a glance&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://research.cs.wisc.edu/adsl/Publications/fbmessages-fast14.pdf&quot;&gt;Analysis of HDFS Under HBase: A Facebook Messages Case Study&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://forum.treode.com/t/the-minitransaction-an-alternative-to-multi-paxos-and-raft/25&quot;&gt;The Minitransaction: An Alternative to Multi-Paxos and Raft&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 12 Aug 2015 18:45:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/08/12/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/12/recent-links.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Session state</title>
+        <description>&lt;p&gt;Some kinds of network interations are best thought of in the context of a session that is
+initiated, used, and then destroyed. The states in the session are represented by data
+we store, usually at the “server” end, but sometimes both.&lt;/p&gt;
+
+&lt;p&gt;Once we have session state, however, we have to make sure that our session gets exclusive
+access to this session state data, and that we can get access to it even if the underlying
+connection changes, or even if the machines we are using as part of the session change
+underneath us. For example, a server might crash or be restarted for maintenance reasons
+in the middle of our session.&lt;/p&gt;
+
+&lt;p&gt;So we’d like to persist session state beyond any single machine, and yet not have this
+be so expensive that sessions are slow. This means we need to store session state data on more
+than just the server endpoint, and ideally this data is stored redundantly so that we are
+fault-tolerant to normal failure cases (hardware fails, at inopportune times).&lt;/p&gt;
+
+&lt;p&gt;And we’d even like to entertain scalability far beyond what is possible now. At the moment, sessions
+are typically tied to servers located in a single datacenter, but for both elasticity and for
+reliability, we’d like to be able to move sessions not just between servers in a data center, but
+between data centers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://research.microsoft.com/pubs/74713/ssm-nsdi.pdf&quot;&gt;Session State: Beyond Soft State&lt;/a&gt;. 2003
+paper by Benjamin C. Ling, Emre Kiciman and Armando Fox, talking about a system they designed
+called SSM, which is highly fault-tolerant, and designed towards the needs of session state.
+This also includes some auto-tuning methods for detecting and handling load.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://delivery.acm.org/10.1145/1970000/1965751/p121-ousterhout.pdf&quot;&gt;The Case For RAMClouds: Scalable High-Performance Storage Entirely in DRAM &lt;/a&gt;. 2011 update of 2009 paper by John Ousterhout and his group at Stanford, making a case for RAM-only data storage that is still fault-tolerant.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://web.stanford.edu/~ouster/cgi-bin/papers/ramcloud-recovery.pdf&quot;&gt;Fast Crash Recovery in RAMCloud&lt;/a&gt;.
+2011. Describes RAMCloud’s recovery technique. RAMCloud doesn’t replicate data in RAM, instead it replicates
+logs across many servers, allowing both redundant and fast recovery.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.usenix.org/system/files/conference/fast14/fast14-paper_rumble.pdf&quot;&gt;Log-structured Memory for DRAM-based Storage&lt;/a&gt;.
+2014. Describes RAMCloud’s main innovation, log-structured memory.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://perso.telecom-paristech.fr/~kuznetso/INF346/papers/pnuts.pdf&quot;&gt;PNUTS: Yahoo!’s Hosted Data Serving Platform&lt;/a&gt;.
+2008 paper by Brian F. Cooper and company describing Yahoo’s distributed database system. They decided
+that eventual consistency was sufficient.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://redis.io/topics/sentinel&quot;&gt;Redis Sentinel&lt;/a&gt;. From Redis documentation, describes how to use Redis in
+a high-availability mode.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://redis.io/topics/cluster-spec&quot;&gt;Redis Cluster&lt;/a&gt;. From Redis documentation, describes the new (as of 3.0)
+clustering system allowing for a distributed implementation of Redis.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/soundcloud/roshi&quot;&gt;roshi&lt;/a&gt;. Github repo. Distributed storage of timestamped events.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Session_(computer_science)&quot;&gt;Session&lt;/a&gt; definition from Wikipedia.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 12 Aug 2015 17:27:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/08/12/session-state.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/12/session-state.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Recent Links</title>
@@ -517,160 +614,6 @@ good as a low-level standard that higher-level tools encode into?&lt;/p&gt;
         
         
         <category>links</category>
-        
-      </item>
-    
-      <item>
-        <title>Windows boot from VHD</title>
-        <description>&lt;p&gt;I’m going to try a workflow that involves running from a system contained in a VHD
-file rather than directly installed to a hard disk. This isn’t just to try out new
-versions like Windows 10, but as a normal practice. Here are a few of the things
-driving me to try this.&lt;/p&gt;
-
-&lt;p&gt;The main one is the idea of having a clean system at all times. Maintaining a clean system is
-hard, because you install stuff in order to get work done, and then in a few months you have a
-mess. My hope is that with a VHD-based system, I can set aside milestone VHDs that I can revert
-to when I want a clean system again. That’s the main workflow I’ll be exploring: install clean
-OS, install my tools, make snapshot, work for a while, then want to alter the base version, so
-revert to it, install new tools, make a snapshot, etc. Hard disks are now fast enough that making
-a snapshot is a matter of seconds to minutes, based on how big you keep your operating system
-partition.&lt;/p&gt;
-
-&lt;p&gt;Another is being able to switch between versions of the operating system. I may prefer a specific
-version of Windows as a user, but there are a lot of users out there with different preferences,
-and I need to make sure my software works on their Windows version as well. Or I may want to write
-software for a bleeding edge version that I don’t want to live in day-by-day yet.&lt;/p&gt;
-
-&lt;p&gt;And then finally, if I’m semi-frequently wiping my operating system partition, I’ll have to learn
-to keep my user data off the operating system partition. I already work this way - I don’t put my
-own stuff into my User folder, but separate folders like “projects”.&lt;/p&gt;
-
-&lt;p&gt;This is not a set of instructions at the moment, it’s a record of actions.&lt;/p&gt;
-
-&lt;h2 id=&quot;grab-windows-10-technical-preview&quot;&gt;Grab Windows 10 Technical Preview&lt;/h2&gt;
-
-&lt;p&gt;Grab it from here - for now, this is going to be final soon.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://windows.microsoft.com/en-us/windows/preview-download&quot;&gt;Download Windows 10 Insider Preview&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;create-a-vhd&quot;&gt;Create a VHD&lt;/h2&gt;
-
-&lt;h3 id=&quot;using-disk-management-console&quot;&gt;Using Disk Management console&lt;/h3&gt;
-
-&lt;p&gt;run &lt;code&gt;mmc diskmgmt.msc&lt;/code&gt; from the command-line or launch Computer Management from Administrative tools or directly via Manage Computer. Or use DiskPart.&lt;/p&gt;
-
-&lt;p&gt;Action: Create VHD. Dynamically expanding VHDs have a slight performance overhead and aren’t appropriate
-in certain scenarios (like, for example, booting from it).&lt;/p&gt;
-
-&lt;p&gt;This will create an uninitialized disk, so initialize it, either as MBR or GPT. Either is a fine choice
-for modern systems. I do GPT.&lt;/p&gt;
-
-&lt;h2 id=&quot;mbr-versus-gpt&quot;&gt;MBR versus GPT&lt;/h2&gt;
-
-&lt;p&gt;Use MBR if you’re going to boot from this on a non-UEFI system,
-or if it’s a small disk, otherwise use GPT. In reality, use MBR for “small” disks (say under 500 GB) and
-use GPT for larger ones. GPT is slightly more wasteful since it always includes a Protective MBR so that
-older operating systems don’t think the drive is uninitialized, and this consumes between 30 to 100 MB,
-at least on drives formatted on Windows 7 (bigger if it has an MSR).&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A 2 GB VHD partitioned as GPT and initialized with one volume gives a capacity of 2,111,827,968 bytes.&lt;/li&gt;
-  &lt;li&gt;A 2 GB VHD partitioned as MBR and initialized with one volume gives a capacity of 2,144,333,824 bytes.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You may or may not consider this substantial. GPT drives should be slightly more resilient than MBR
-drives, and as an added bonus, volume labels are 72 bytes (36 UTF-16LE characters) in GPT (MBR
-volumes don’t actually have names, but FAT-formatted volumes have a 11-byte limit and NTFS-fofmatted
-volumes have a 32-character limit). So in reality, it’s irrelevant, because we almost always use
-NTFS, right?&lt;/p&gt;
-
-&lt;h2 id=&quot;mount-a-vhd&quot;&gt;Mount a VHD&lt;/h2&gt;
-
-&lt;p&gt;run &lt;code&gt;mmc diskmgmt.msc&lt;/code&gt; from the command-line or launch Computer Management from Administrative tools or directly via Manage Computer.&lt;/p&gt;
-
-&lt;p&gt;Action: Attach VHD. Select the mosunt point, which is typically going to be a drive letter.&lt;/p&gt;
-
-&lt;h2 id=&quot;unmount-a-vhd&quot;&gt;Unmount a VHD&lt;/h2&gt;
-
-&lt;p&gt;Detach VHD in Disk Management (right-click on a Disk to see this menu item).&lt;/p&gt;
-
-&lt;h2 id=&quot;using-diskpart&quot;&gt;Using DiskPart&lt;/h2&gt;
-
-&lt;p&gt;DiskPart can do many disk-related tasks, and more importantly, can be driven with scripts. For
-example, create this script&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;create vdisk &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;C:&lt;span class=&quot;se&quot;&gt;\V&lt;/span&gt;HD&lt;span class=&quot;se&quot;&gt;\W&lt;/span&gt;in10.vhd &lt;span class=&quot;nv&quot;&gt;maximum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;51200&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fixed
-&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; vdisk &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;C:&lt;span class=&quot;se&quot;&gt;\V&lt;/span&gt;HD&lt;span class=&quot;se&quot;&gt;\W&lt;/span&gt;in10.vhd
-attach vdisk
-create partition primary
-assign &lt;span class=&quot;nv&quot;&gt;letter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;v
-format quick &lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;vhd
-detach vdisk
-&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;and run it&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; diskpart /s makevhd.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This will create a 50 GB VHD file, and then create a single primary partition on it.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/dn614984.aspx&quot;&gt;Diskpart Scripts and Examples&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;hyper-v-and-windows-8&quot;&gt;Hyper-V and Windows 8&lt;/h2&gt;
-
-&lt;p&gt;One reason to upgrade to Windows 8.1 is to get Client Hyper-V&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.infoworld.com/article/2616033/virtualization/5-excellent-uses-of-windows-8-hyper-v.html&quot;&gt;5 excellent uses of Windows 8 Hyper-V&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;burn-iso-to-usb-drive&quot;&gt;Burn ISO to USB drive&lt;/h2&gt;
-
-&lt;p&gt;Well, not really burn. Windows doesn’t have native ISO tools, which is really annoying (especially
-since ISO is a pretty simple format). Enter Rufus.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://rufus.akeo.ie/&quot;&gt;Rufus&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pcsupport.about.com/od/file-folder/fl/burn-iso-usb.htm&quot;&gt;How To Burn an ISO File to a USB Drive&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.wintellect.com/devcenter/paulballard/dual-boot-windows-10-technical-preview-from-a-vhd&quot;&gt;Dual Boot Windows 10 Technical Preview From A VHD&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://newsignature.com/articles/windows-10-technical-preview-using-vhd-native-boot&quot;&gt;Windows 10 Technical Preview Using VHD Native Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.neowin.net/news/guide-how-to-install-windows-10-using-vhds&quot;&gt;Guide: How to install Windows 10 using VHDs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.technet.com/b/haroldwong/archive/2012/08/18/how-to-create-windows-8-vhd-for-boot-to-vhd-using-simple-easy-to-follow-steps.aspx&quot;&gt;How to Create Windows 8 VHD for Boot to VHD using simple, easy to follow steps&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/hardware/dn640535(v=vs.85).aspx&quot;&gt;Windows and GPT FAQ&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.techotopia.com/index.php/Creating_and_Managing_MBR_Disk_Partitions_on_Windows_Server_2008_Basic_Disks&quot;&gt;Creating and Managing MBR Disk Partitions on Windows Server 2008 Basic Disks&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/dd163549.aspx&quot;&gt;Using Basic Disks and Partitions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/GUID_Partition_Table&quot;&gt;GUID Partition Table&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/hardware/dn640535(v=vs.85).aspx&quot;&gt;Windows and GPT FAQ&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.techrepublic.com/blog/windows-and-office/dual-boot-windows-7-and-windows-8-using-a-vhd/&quot;&gt;Dual-boot Windows 7 and Windows 8 using a VHD&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 13 Jun 2015 03:20:00 -0700</pubDate>
-        <link>http://neurocline.github.io/windows/2015/06/13/windows-boot-from-vhd.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/windows/2015/06/13/windows-boot-from-vhd.html</guid>
-        
-        
-        <category>windows</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptography links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://www.cryptol.net/index.html&quot;&gt;Cryptol: The Language of Cryptography&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://gist.github.com/tqbf/be58d2d39690c3b366ad&quot;&gt;(Updated) Cryptographic Right Answers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;the old version from 2009: &lt;a href=&quot;http://www.daemonology.net/blog/2009-06-11-cryptographic-right-answers.html&quot;&gt;Cryptographic Right Answers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;and see &lt;a href=&quot;http://www.reddit.com/r/programming/comments/370l3p/cryptographic_right_answers_from_thomas_ptacek/&quot;&gt;reddit thread&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=9593916&quot;&gt;Hacker News thread&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 24 May 2015 17:17:00 -0700</pubDate>
-        <link>http://neurocline.github.io/cryptography/2015/05/24/Cryptography-Links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/cryptography/2015/05/24/Cryptography-Links.html</guid>
-        
-        
-        <category>cryptography</category>
         
       </item>
     
