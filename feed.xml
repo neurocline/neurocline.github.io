@@ -6,9 +6,76 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 13 Aug 2015 13:20:07 -0700</pubDate>
-    <lastBuildDate>Thu, 13 Aug 2015 13:20:07 -0700</lastBuildDate>
+    <pubDate>Thu, 13 Aug 2015 18:54:59 -0700</pubDate>
+    <lastBuildDate>Thu, 13 Aug 2015 18:54:59 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent Links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/Netflix/dynomite&quot;&gt;Dynomite&lt;/a&gt;. Dynomite, inspired by Dynamo whitepaper, is a thin, distributed dynamo layer for different storages and protocols. &lt;a href=&quot;http://techblog.netflix.com/2014/11/introducing-dynomite.html&quot;&gt;Netflix blog article on Dynomite&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dynamo_(storage_system)&quot;&gt;Dynamo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Apache_Cassandra&quot;&gt;Apache Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Riak&quot;&gt;Riak&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Voldemort_(distributed_data_store)&quot;&gt;Voldemort&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/adrianco/architectures-for-high-availability-qconsf&quot;&gt;Architectures for High Availability&lt;/a&gt;. From QConf.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.infoq.com/articles/architects-should-code-bryson&quot;&gt;Architects Should Code: The Architect’s Misconception&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://theburningmonk.com/2015/05/craftconf15-takeaways-from-scaling-micro-services-at-gilt/&quot;&gt;CraftConf 15–Takeaways from “Scaling micro-services at Gilt”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.simplicityitself.com/learning/getting-started-microservices/service-discovery-overview/&quot;&gt;Service Discovery Overview&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 13 Aug 2015 18:45:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/08/13/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/13/recent-links.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Microservices</title>
+        <description>&lt;p&gt;They’re good.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://martinfowler.com/articles/microservices.html&quot;&gt;Microservices&lt;/a&gt; definition from Martin Fowler.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.infoq.com/presentations/netflix-ipc&quot;&gt;Scalable Microservices at Netflix. Challenges and Tools of the Trade&lt;/a&gt;.
+Talk by Sudhir Tonse at QCon 2014. &lt;a href=&quot;http://www.slideshare.net/stonse/microservices-at-netflix&quot;&gt;Subset of slides for skimming&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://microservices.io/&quot;&gt;Microservice architecture patterns and best practices&lt;/a&gt;. Chris Richardson&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.nginx.com/blog/microservices-at-netflix-architectural-best-practices/&quot;&gt;Adopting Microservices at Netflix: Lessons for Architectural Design&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.nginx.com/blog/adopting-microservices-at-netflix-lessons-for-team-and-process-design/&quot;&gt;Adopting Microservices at Netflix: Lessons for Team and Process Design&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Netflix/eureka&quot;&gt;Netflix/eureka&lt;/a&gt;. Eureka is a REST (Representational State Transfer) based service that is primarily used in the AWS cloud for locating services for the purpose of load balancing and failover of middle-tier servers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Netflix/ribbon&quot;&gt;Netflix/ribbon&lt;/a&gt;. Ribbon is a client side IPC library that provides load balancing, fault tolerance, multiple protocols in a async and reactive model, and caching and balancing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Netflix/Hystrix&quot;&gt;Netflix/Hystrix&lt;/a&gt;. Hystrix is a latency and fault tolerance library designed to isolate points of access to remote systems, services and 3rd party libraries, stop cascading failure and enable resilience in complex distributed systems where failure is inevitable.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cloud/library/cl-bluemix-microservices-in-action-part-1-trs/&quot;&gt;Microservices in action, Part 1: Introduction to microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://highscalability.com/blog/2014/4/8/microservices-not-a-free-lunch.html&quot;&gt;Microservices: Not a Free Lunch&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.fiercedevops.com/story/best-practices-monitoring-microservices-containers/2015-05-25&quot;&gt;Best practices for monitoring microservices, containers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;InfoQ has a ton of Microservices articles.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 13 Aug 2015 18:01:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/08/13/microservices.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/13/microservices.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Telling time in seconds</title>
@@ -568,88 +635,6 @@ point you to an existing one.&lt;/p&gt;
         
         
         <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>The Actor model</title>
-        <description>&lt;p&gt;The actor model has held out a lot of promise over the past 40 years, but has
-never been fully embraced by the software development community (unlike, say,
-structured programming or object-oriented programming). There are a few modern
-languages that facilitate Actor model programming; Erlang and Scala+Akka are the
-two most popular.
-ee
-In the Actor model, the only means to share state between concurrent and/or
-parallel actors is message passing. In most other systems, access to state is
-shared and synchronized by primitives like semaphores and mutexes. This does
-not mean bliss and the lack of needing synchronization, because state can be
-coupled even if it is not directly shared.&lt;/p&gt;
-
-&lt;p&gt;Some random links that I will sort through:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Actor_model&quot;&gt;Actor model&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://practicingruby.com/articles/gentle-intro-to-actor-based-concurrency&quot;&gt;A gentle introduction to actor-based concurrency&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://c2.com/cgi/wiki?ActorsModel&quot;&gt;ActorsModel&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://pchiusano.blogspot.com/2010/01/actors-are-not-good-concurrency-model.html&quot;&gt;Actors are not a good concurrency model&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/drorbr/the-actor-model-towards-better-concurrency&quot;&gt;The Actor Model: Towards Better Concurrency&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://danielwestheide.com/blog/2013/02/27/the-neophytes-guide-to-scala-part-14-the-actor-approach-to-concurrency.html&quot;&gt;The Neophyte’s Guide to Scala Part 14: The Actor Approach to Concurrency&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.infoq.com/news/2014/10/intro-actor-model&quot;&gt;An Introduction to Actor Model, with Examples in Akka&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://james-iry.blogspot.com/2009/04/erlang-style-actors-are-all-about.html&quot;&gt;Erlang Style Actors Are All About Shared State&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Perhaps the reason the Actor model has never taken off is because state doesn’t
-compose well. This is why we have transactions, as evil as those are. Is there
-another answer?&lt;/p&gt;
-</description>
-        <pubDate>Sun, 05 Jul 2015 07:00:04 -0700</pubDate>
-        <link>http://neurocline.github.io/programming/2015/07/05/actor-model.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/07/05/actor-model.html</guid>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://cforster.com/&quot;&gt;Chris Forster (blog)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.tei-c.org/index.xml&quot;&gt;Text Encoding Initiative&lt;/a&gt; - insane overkill, but
-good as a low-level standard that higher-level tools encode into?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/vapourismo/luwra&quot;&gt;Luwra&lt;/a&gt; - header-only C++ Lua wrapper&lt;/p&gt;
-
-&lt;p&gt;Two posts on Deep Learning
-* &lt;a href=&quot;https://charlesmartin14.wordpress.com/2015/03/25/why-does-deep-learning-work/&quot;&gt;Why does Deep Learning work?&lt;/a&gt;
-* &lt;a href=&quot;https://charlesmartin14.wordpress.com/2015/04/01/why-deep-learning-works-ii-the-renormalization-group/&quot;&gt;Why Deep Learning Works II: the Renormalization Group&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.opensource.apple.com/&quot;&gt;Apple Open Source&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://turingtester.wordpress.com/2015/07/05/object-theft-etiquette-in-c-methods-with-a-side-of/&quot;&gt;Object Theft Etiquette in C++: methods with a side of &amp;amp;&amp;amp;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ichub.io/p/physics&quot;&gt;Point and spring simulation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@leeb/why-invest-in-tools-3240ce289930&quot;&gt;Why Invest in Tools?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.bell-labs.com/usr/dmr/www/hopl.html&quot;&gt;Five Little Languages and How They Grew: Talk at HOPL&lt;/a&gt; - Dennis M. Ritchie.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.loggly.com/blog/five-invaluable-techniques-to-improve-regex-performance/&quot;&gt;Five Invaluable Techniques to Improve Regex Performance&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ds.cs.ut.ee/courses/course-files/To303nis%20Pool%20.pdf&quot;&gt;Comparison of Erlang Runtime System and Java Virtual Machine&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://graydon2.dreamwidth.org/218040.html&quot;&gt;Things Rust Shipped Without&lt;/a&gt; - meant as a positive list of bad things Rust lacks.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.jsbreakouts.org/&quot;&gt;Breakouts&lt;/a&gt; - evaluating JavaScript game engines by writing Breakout in each one.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://archive.org/stream/graphicpresentat00brinrich#page/n0/mode/thumb&quot;&gt;Graphic Presentation (1939)&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 05 Jul 2015 03:00:00 -0700</pubDate>
-        <link>http://neurocline.github.io/links/2015/07/05/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/links/2015/07/05/recent-links.html</guid>
-        
-        
-        <category>links</category>
         
       </item>
     
