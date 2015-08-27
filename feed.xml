@@ -6,9 +6,54 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 13 Aug 2015 18:54:59 -0700</pubDate>
-    <lastBuildDate>Thu, 13 Aug 2015 18:54:59 -0700</lastBuildDate>
+    <pubDate>Wed, 26 Aug 2015 19:44:43 -0700</pubDate>
+    <lastBuildDate>Wed, 26 Aug 2015 19:44:43 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>REST, JSON, etc</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://jansson.readthedocs.org/en/2.7/&quot;&gt;Jansson&lt;/a&gt; - C library for encoding/decoding JSON&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lethargy.org/~jesus/writes/why-json-sucks/#.Vd5r2PlVhBc&quot;&gt;Why JSON sucks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm&quot;&gt;Architectural Styles and the Design of Network-based Software Architectures&lt;/a&gt; - Roy Fielding’s dissertation that introduced REST to the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.infoq.com/articles/webber-rest-workflow&quot;&gt;How to GET a Cup of Coffee&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.looah.com/source/view/2284&quot;&gt;How I Explained REST to My Wife&lt;/a&gt; - a copy, since the original was taken down.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.steveklabnik.com/posts/2011-08-07-some-people-understand-rest-and-http&quot;&gt;Some People Understand REST and HTTP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.steveklabnik.com/posts/2011-07-03-nobody-understands-rest-or-http&quot;&gt;Nobody Understands REST or HTTP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://json-schema.org/&quot;&gt;json-schema.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/JSON&quot;&gt;JSON&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.github.com/v3/&quot;&gt;GitHub API&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tools.ietf.org/html/rfc5988&quot;&gt;RFC 5988&lt;/a&gt; - web linking&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dev.twitter.com/rest/public&quot;&gt;Twitter REST APIs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsonapi.org/&quot;&gt;json:api&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spacetelescope.github.io/understanding-json-schema/index.html&quot;&gt;Understanding JSON Schema&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://martinfowler.com/articles/richardsonMaturityModel.html&quot;&gt;Richardson Maturity Model&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://restcookbook.com/&quot;&gt;The RESTful CookBook&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://restful-api-design.readthedocs.org/en/latest/&quot;&gt;Thoughts on RESTful API Design&lt;/a&gt; - Lessons learnt from designing the Red Hat Enterprise Virtualization API&lt;/p&gt;
+</description>
+        <pubDate>Wed, 26 Aug 2015 18:44:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/08/26/rest-json-etc.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/26/rest-json-etc.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Recent Links</title>
@@ -561,77 +606,6 @@ a few test cases.&lt;/p&gt;
         <pubDate>Fri, 31 Jul 2015 09:18:00 -0700</pubDate>
         <link>http://neurocline.github.io/programming/2015/07/31/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/programming/2015/07/31/recent-links.html</guid>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Software Architecture books</title>
-        <description>&lt;p&gt;I have a lot of them, and most are not great. There are still more books I need
-to read, and then I’ll either write The Great Software Architecture Book or I’ll
-point you to an existing one.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Software-Systems-Architecture-Stakeholders-Perspectives/dp/032171833X&quot;&gt;Software Systems Architecture: Working With Stakeholders Using Viewpoints and Perspectives (2nd Edition)&lt;/a&gt; - Nick Rozanski, Eoin Woods, 2011.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Lean-Architecture-Agile-Software-Development/dp/0470684208&quot;&gt;Lean Architecture: for Agile Software Development&lt;/a&gt; - James Coplien, 2010.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Software-Architecture-Practice-Edition-Engineering/dp/0321815734&quot;&gt;Software Architecture in Practice (3rd Edition) (SEI Series in Software Engineering)&lt;/a&gt; - Len Bass, Paul Clements, Rick Kazman, 2012.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Documenting-Software-Architectures-Beyond-Edition/dp/0321552687&quot;&gt;Documenting Software Architectures: Views and Beyond (2nd Edition)&lt;/a&gt; - Paul Clements, Felix Bachmann, Len Bass, etc, 2010.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Evaluating-Software-Architectures-Methods-Studies/dp/020170482X&quot;&gt;Evaluating Software Architectures: Methods and Case Studies&lt;/a&gt; - Paul Clements, Rick Kazman, Mark Klein, 2001.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Just-Enough-Software-Architecture-Risk-Driven/dp/0984618104&quot;&gt;Just Enough Software Architecture: A Risk-Driven Approach&lt;/a&gt; - George Fairbanks, 2010.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Software-Architecture-Foundations-Theory-Practice/dp/0470167742&quot;&gt;Software Architecture: Foundations, Theory, and Practice&lt;/a&gt; - R. N. Taylor, N. Medvidovic, E. M. Dashofy, 2009.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Service-Design-Patterns-Fundamental-Solutions/dp/032154420X&quot;&gt;Service Design Patterns: Fundamental Design Solutions for SOAP/WSDL and RESTful Web Services&lt;/a&gt; - Robert Daigneau, 2011.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Software-Architecture-Perspectives-Emerging-Discipline/dp/0131829572&quot;&gt;Software Architecture: Perspectives on an Emerging Discipline&lt;/a&gt; - Mary Shaw, David Garlan, 1996.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Architecture-Centric-Software-Project-Management-Practical/dp/0201734095&quot;&gt;Architecture-Centric Software Project Management: A Practical Guide&lt;/a&gt; - Daniel J. Paulish, 2002.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.oreilly.com/programming/free/files/software-architecture-patterns.pdf&quot;&gt;Software Architecture Patterns&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/dp/0131412752/&quot;&gt;A Practical Guide to Enterprise Architecture&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Patterns/dp/0471958697&quot;&gt;Pattern-Oriented Software Architecture Volume 1: A System of Patterns&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Concurrent/dp/0471606952&quot;&gt;Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Management/dp/0470845252&quot;&gt;Pattern-Oriented Software Architecture Volume 3: Patterns for Resource Management&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Pattern-Oriented-Software-Architecture-Volume-Distributed/dp/0470059028&quot;&gt;Pattern-Oriented Software Architecture Volume 4: A Pattern Language for Distributed Computing&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/ee658117.aspx&quot;&gt;Microsoft Application Architecture Guide, 2nd Edition, October 2009, Chapter 3: Architectural Patterns and Styles&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pubs.opengroup.org/architecture/togaf8-doc/arch/chap28.html&quot;&gt;Architecture Patterns&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Architectural_pattern&quot;&gt;Architectural Pattern&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Architecture/Design_Patterns&quot;&gt;Introduction to Software Engineering/Architecture/Design Patterns&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.shejimoshi.com/download/Software%20Architecture%20Design%20Patterns%20in%20Java.pdf&quot;&gt;Software Architecture Design Patterns in Java&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm&quot;&gt;Architectural Styles and the Design of Network-based Software Architectures&lt;/a&gt; - Roy Fielding’s REST thesis.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.redbooks.ibm.com/redbooks/pdfs/sg247105.pdf&quot;&gt;Patterns: Model-Driven Development Using IBM Rational Software Architect&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://sophia.javeriana.edu.co/~cbustaca/DSBP/pagina/articulos/Articulo%20No.04.pdf&quot;&gt;Usability Patterns in Software Architecture&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf&quot;&gt;Design Principles and Design Patterns&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/nakov/architectural-patterns-and-software-architectures-clientserver-multitier-mvc-mvp-mvvm-ioc-di-soa-cloud-computing&quot;&gt;Architectural Patterns: Multi-Tier, MVC, MVP, MVVM, IoC, DI, SOA&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.codingoutloud.com/2015/03/18/talk-cloud-architecture-anti-patterns-oreilly-software-architecture-conference/&quot;&gt;Cloud Architecture Anti-Patterns&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://handbookofsoftwarearchitecture.com/&quot;&gt;Handbook of Software Architecture&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 05 Jul 2015 07:20:00 -0700</pubDate>
-        <link>http://neurocline.github.io/programming/2015/07/05/software-architecture-books.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/07/05/software-architecture-books.html</guid>
         
         
         <category>programming</category>
