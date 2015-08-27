@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 26 Aug 2015 19:44:43 -0700</pubDate>
-    <lastBuildDate>Wed, 26 Aug 2015 19:44:43 -0700</lastBuildDate>
+    <pubDate>Thu, 27 Aug 2015 01:35:04 -0700</pubDate>
+    <lastBuildDate>Thu, 27 Aug 2015 01:35:04 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -49,6 +49,35 @@
         <pubDate>Wed, 26 Aug 2015 18:44:00 -0700</pubDate>
         <link>http://neurocline.github.io/programming/2015/08/26/rest-json-etc.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/26/rest-json-etc.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent Links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://konradzemek.com/2015/08/16/asio-ssl-and-scalability/&quot;&gt;Asio, SSL, and scalability&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/mnot/382aca0b23b6bf082116&quot;&gt;Edward Snowden at IETF 93&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hal.inria.fr/hal-01100647/document&quot;&gt;Branch Prediction and the Performance of Interpreters - Don’t Trust Folklore&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gpfault.net/posts/pointer-ownership-comments.txt.html&quot;&gt;You Can Stop Writing Comments About Pointer Ownership&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://acko.net/blog/how-to-fold-a-julia-fractal/&quot;&gt;How to Fold a Julia Fractal&lt;/a&gt;. Awesome.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cooking.nytimes.com/&quot;&gt;The New York Times Cooking&lt;/a&gt;. The New York Times posted 17,000 recipes in an easily browsable and searchable format.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/22290501/can-i-download-the-visual-c-command-line-compiler-without-visual-studio&quot;&gt;Piecing out Visual Studio&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dev.windows.com/en-US/downloads/windows-10-sdk&quot;&gt;Windows SDK for Windows 10&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dev.windows.com/en-us/downloads&quot;&gt;Downloads and tools for Windows 10&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 20 Aug 2015 20:01:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/08/20/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/20/recent-links.html</guid>
         
         
         <category>programming</category>
@@ -566,46 +595,6 @@ its consensus protocol.&lt;/li&gt;
         <pubDate>Sun, 09 Aug 2015 03:18:00 -0700</pubDate>
         <link>http://neurocline.github.io/programming/2015/08/09/consensus-algorithms.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/09/consensus-algorithms.html</guid>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent Links</title>
-        <description>&lt;p&gt;At some point, I’ll get back to actually posting substantive things.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bokken.re/index.html&quot;&gt;bokken&lt;/a&gt;: Open Source Reverse Code Engineering. Looks pretty
-cool.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.mindtheproduct.com/2015/07/video-tom-chi-on-rapid-prototyping-product-management/&quot;&gt;Tony Chi talk at Mind the Product 2015&lt;/a&gt;. This is awesome, watch it. Rapid prototyping, real-world
-feedback over conjecture, keep loop length really short, etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://doc.rust-lang.org/nightly/adv-book/&quot;&gt;The Advanced Rust Programming Language&lt;/a&gt;. A sequel
-of sorts to &lt;a href=&quot;https://doc.rust-lang.org/book/&quot;&gt;The Rust Programming Language&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.rklesolutions.com/blog/supply-chain-evolution/&quot;&gt;Supply Chain Evolution - Lessons from Ford and Toyota&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.oreilly.com/programming/free/files/software-paradox.pdf&quot;&gt;The Software Paradox: The Rise and Fall of the Commercial Software Market&lt;/a&gt;. Interesting
-and somewhat flawed exploration of software markets.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/cbucher/console&quot;&gt;ConsoleZ&lt;/a&gt;. Updated version of Console2 that is being
-actively developed (better console on Windows).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.koreanfluent.com/cross_cultural/korean_keyboard/korean_keyboard.htm&quot;&gt;How to Type Korean on a Computer (in Windows 8, 7 or Vista)&lt;/a&gt;.
-It’s hard to test that your software handles locales properly unless you can generate
-a few test cases.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Korean_language_and_computers&quot;&gt;Korean language and computers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nickdesaulniers.github.io/blog/2015/07/23/additional-c-slash-c-plus-plus-tooling/&quot;&gt;Additional C/C++ Tooling&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://utf8everywhere.org/&quot;&gt;UTF-8 Everywhere&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 31 Jul 2015 09:18:00 -0700</pubDate>
-        <link>http://neurocline.github.io/programming/2015/07/31/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/07/31/recent-links.html</guid>
         
         
         <category>programming</category>
