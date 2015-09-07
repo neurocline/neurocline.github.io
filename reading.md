@@ -11,6 +11,11 @@ Favorite sites
 * [Hacker News](https://news.ycombinator.com/) - social news website run by Y Combinator (Paul Graham)
 * [reddit](http://www.reddit.com/) - "the front page of the internet"
 
+Online magazines
+
+* [aeon](http://aeon.co/magazine/)
+* [Nautilus](http://nautil.us/)
+
 More
 
 * [Marginal Revolution](http://marginalrevolution.com/) - economics blog, Tyler Cowen
