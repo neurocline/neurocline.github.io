@@ -6,9 +6,32 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Sep 2015 19:50:46 -0700</pubDate>
-    <lastBuildDate>Sun, 06 Sep 2015 19:50:46 -0700</lastBuildDate>
+    <pubDate>Mon, 14 Sep 2015 01:02:57 -0700</pubDate>
+    <lastBuildDate>Mon, 14 Sep 2015 01:02:57 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Bazel, Google build system</title>
+        <description>&lt;p&gt;In a wonderful sense of - irony? - Google has made a cross-platform build system that supports
+Linux and OS X, but not (yet) Windows.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://google-opensource.blogspot.com/2015/09/building-build-system-bazel-reaches-beta.html&quot;&gt;Building a Build System: Bazel reaches Beta&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bazel.io/&quot;&gt;Bazel&lt;/a&gt; home page.&lt;/p&gt;
+
+&lt;p&gt;Bazel &lt;a href=&quot;https://github.com/bazelbuild/bazel&quot;&gt;GitHub repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;According to the released info, Bazel is now used to build most software at Google. Someday we’ll
+see unification on build tools? We still have independent ecosystems.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Sep 2015 19:54:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/09/09/bazel-build-system.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/09/09/bazel-build-system.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>C++ links</title>
@@ -294,71 +317,12 @@ Talk by Sudhir Tonse at QCon 2014. &lt;a href=&quot;http://www.slideshare.net/st
 &lt;p&gt;&lt;a href=&quot;http://www.fiercedevops.com/story/best-practices-monitoring-microservices-containers/2015-05-25&quot;&gt;Best practices for monitoring microservices, containers&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;InfoQ has a ton of Microservices articles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://philcalcado.com/2015/09/08/how_we_ended_up_with_microservices.html?&quot;&gt;How we ended up with microservices&lt;/a&gt;. Microservices at Soundcloud.&lt;/p&gt;
 </description>
         <pubDate>Thu, 13 Aug 2015 18:01:00 -0700</pubDate>
         <link>http://neurocline.github.io/programming/2015/08/13/microservices.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/13/microservices.html</guid>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Telling time in seconds</title>
-        <description>&lt;p&gt;Our current time system has multiple bases - base 60 for seconds and minutes, base 24 for hours, base 7 for
-weeks, base 12 for months - and that’s an approximation, of course.&lt;/p&gt;
-
-&lt;p&gt;What if we just told time in seconds?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;100 seconds = 1.67 minutes&lt;/li&gt;
-  &lt;li&gt;1000 seconds = 1 kilosecond = 16.7 minutes&lt;/li&gt;
-  &lt;li&gt;10000 seconds = 10 kiloseconds = 2.78 hours&lt;/li&gt;
-  &lt;li&gt;100000 seconds = 100 kiloseconds = 1.16 days&lt;/li&gt;
-  &lt;li&gt;1000000 seconds = 1 megasecond = 1.65 weeks&lt;/li&gt;
-  &lt;li&gt;10000000 seconds = 10 megaseconds = 3.81 months&lt;/li&gt;
-  &lt;li&gt;100000000 seconds = 100 megaseconds = 3.17 years&lt;/li&gt;
-  &lt;li&gt;1000000000 seconds = 1 gigasecond = 31.7 years&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Or, if we want to approximate our current time references, here’s what we’d say&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1 hour is close to 4 kiloseconds&lt;/li&gt;
-  &lt;li&gt;1 day is close to 100 kiloseconds&lt;/li&gt;
-  &lt;li&gt;1 week is close to 1 megasecond&lt;/li&gt;
-  &lt;li&gt;1 month is close to 3 megaseconds&lt;/li&gt;
-  &lt;li&gt;1 year is close to 32 megaseconds&lt;/li&gt;
-  &lt;li&gt;1 century is close to 3 gigaseconds&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And it’s certainly a lot easier to compare kiloseconds to megaseconds than it is to compare
-hours to weeks.&lt;/p&gt;
-
-&lt;p&gt;Once we go into space for real and start living in orbit or on other planets, “day” means
-something very relative, and so does “year”. So we will have to give up parochial time spans
-and go to something useful, and it could be as simple as SI prefixes combined with seconds.&lt;/p&gt;
-
-&lt;p&gt;Credit to Vernor Vinge for being the first person I saw writing about this, in A Deepness In The Sky (1999).&lt;/p&gt;
-
-&lt;p&gt;And now that I search, amusingly Wikipedia has pages for megasecond and gigasecond, where
-someone has listed various time durations in fractions of these values.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Megasecond&quot;&gt;Megasecond&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gigasecond&quot;&gt;Gigasecond&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I hadn’t thought about it, but Gigaseconds covers human history, since the next biggest step up,
-terasecond, is talking about timeframes in units of 31,588 years. And teraseconds covers the range
-up through 32 million years, which is a respectable amount of time.&lt;/p&gt;
-
-&lt;p&gt;And the universe is less than half an exasecond old.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 13 Aug 2015 12:42:00 -0700</pubDate>
-        <link>http://neurocline.github.io/programming/2015/08/13/telling-time-in-seconds.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/08/13/telling-time-in-seconds.html</guid>
         
         
         <category>programming</category>
