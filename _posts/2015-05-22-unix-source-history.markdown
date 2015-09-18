@@ -2,7 +2,8 @@
 layout: post
 title:  "Unix source history in a Git repo"
 date:   2015-05-22 20:50:00
-categories: unix
+categories: dev
+tags: unix
 ---
 {% comment %}
 ![My helpful screenshot](/assets/UnixFoglio.jpg)

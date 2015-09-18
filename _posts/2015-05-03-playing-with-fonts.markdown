@@ -2,7 +2,8 @@
 layout: post
 title:  "Playing with fonts"
 date:   2015-05-03 00:38:00
-categories: html blog
+categories: blog
+tag: [html]
 ---
 ![My helpful screenshot](/assets/HotType.jpg)
 

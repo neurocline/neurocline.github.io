@@ -2,7 +2,8 @@
 layout: post
 title:  "C++ links"
 date:   2015-09-06 17:11:00 PM
-categories: programming
+categories: dev
+tags: c++, scheduler
 ---
 
 [Implementing a lightweight task scheduler](http://www.enkisoftware.com/devlogpost-20150822-1-Implementing_a_lightweight_task_scheduler.html)

@@ -2,7 +2,8 @@
 layout: post
 title:  "Git Merge 2015"
 date:   2015-05-12 18:24:00
-categories: git
+categories: dev
+tags: git
 ---
 ![My helpful screenshot](/assets/GitMerge2015.jpg)
 

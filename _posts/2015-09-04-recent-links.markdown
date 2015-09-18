@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent Links"
 date:   2015-09-04 17:04:00 PM
-categories: programming
+categories: dev
+tags: microservice, algorithms
 ---
 
 [Microservice architecture patterns and best practices](http://microservices.io/index.html)

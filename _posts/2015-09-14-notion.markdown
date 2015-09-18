@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Notion, Web-based content editor"
+date:   2015-09-14 19:28:00 PM
+categories: blog
+tags: writing
+---
+
+So, this is interesting
+
+[Notion](https://www.notion.so/)
+
+Unfortunately, it's yet another appealing walled garden. I can create a lot of content
+on their site - well, my private section on their site.
+
+I don't know if I want to dump a lot of data into something that will probably go away.
+But it is very slick.
+
+Also, the name Notion is very heavily used.

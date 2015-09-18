@@ -2,7 +2,8 @@
 layout: post
 title:  "Consensus algorithms"
 date:   2015-08-09 03:18:00 AM
-categories: programming
+categories: dev
+tags: distributed, consensus
 ---
 
 I'm going to start talking about data replication, and the first and probably most

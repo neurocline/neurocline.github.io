@@ -2,7 +2,8 @@
 layout: post
 title:  "Stream ciphers"
 date:   2015-05-12 11:34:00
-categories: encryption
+categories: dev
+tags: crypto
 ---
 ![My helpful screenshot](/assets/RC4.jpg)
 

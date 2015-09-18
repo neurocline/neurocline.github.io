@@ -2,7 +2,8 @@
 layout: post
 title:  "SSL/TLS Implementations"
 date:   2015-05-11 15:49:00
-categories: ssl
+categories: dev
+tags: crypto, tls
 ---
 
 ## Botan

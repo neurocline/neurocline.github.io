@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent links"
 date:   2015-05-13 12:27:00
-categories: links
+categories: dev
+tags: crypto
 ---
 
 Note - I will reorganize how I'm doing this soon, so it's in a different
@@ -10,9 +11,7 @@ section and not as "blog entries".
 
 [Cryptographic Security Architecture: Design and Verification](http://www.amazon.com/Cryptographic-Security-Architecture-Design-Verification/dp/0387953876) by Peter Gutmann. Expensive. Textbook?
 
-[Triple Handshakes and Cookie Cutters:
-Breaking and Fixing Authentication over TLS
-](https://secure-resumption.com/tlsauth.pdf), paper by Karthikeyan Bhargavan, Antoine Delignat-Lavaud, Cedric Fournet, Alfredo Pironti and Pierre-Yves Strub. New attacks on TLS. This prompted the Extended Master Secret extension to TLS.
+[Triple Handshakes and Cookie Cutters: Breaking and Fixing Authentication over TLS](https://secure-resumption.com/tlsauth.pdf), paper by Karthikeyan Bhargavan, Antoine Delignat-Lavaud, Cedric Fournet, Alfredo Pironti and Pierre-Yves Strub. New attacks on TLS. This prompted the Extended Master Secret extension to TLS.
 
 [Transport Layer Security (TLS) Session Hash and Extended Master Secret Extension](http://tools.ietf.org/html/draft-ietf-tls-session-hash-05)
 

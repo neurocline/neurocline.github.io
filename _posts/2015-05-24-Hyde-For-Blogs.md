@@ -3,6 +3,7 @@ layout: post
 title:  "Hyde For Blogs"
 date:   2015-05-24 16:30:00
 categories: blog
+tags: blog
 ---
 
 I'm already running into cases where Jekyll gets in my way. I can either

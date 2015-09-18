@@ -2,7 +2,8 @@
 layout: post
 title:  "Telling time in seconds"
 date:   2015-08-13 12:42:00 PM
-categories: programming
+categories: dev
+tags: time
 ---
 
 Our current time system has multiple bases - base 60 for seconds and minutes, base 24 for hours, base 7 for

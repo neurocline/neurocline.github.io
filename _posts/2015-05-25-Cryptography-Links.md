@@ -2,7 +2,8 @@
 layout: post
 title:  "Cryptography links"
 date:   2015-05-25 00:17:00
-categories: cryptography
+categories: dev
+tags: crypto
 ---
 
 [Cryptol: The Language of Cryptography](http://www.cryptol.net/index.html)

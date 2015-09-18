@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent Links"
 date:   2015-08-13 18:45:00 PM
-categories: programming
+categories: dev
+tags: database
 ---
 
 [Dynomite](https://github.com/Netflix/dynomite). Dynomite, inspired by Dynamo whitepaper, is a thin, distributed dynamo layer for different storages and protocols. [Netflix blog article on Dynomite](http://techblog.netflix.com/2014/11/introducing-dynomite.html).

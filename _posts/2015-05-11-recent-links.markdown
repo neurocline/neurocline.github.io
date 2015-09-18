@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent links"
 date:   2015-05-11 15:49:00
-categories: links
+categories: dev
+tags: crypto, MinGW
 ---
 
 [CryptoTE](http://panthema.net/2009/cryptote/) - text editor that stores documents in encrypted containers.

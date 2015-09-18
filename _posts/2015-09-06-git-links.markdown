@@ -2,7 +2,8 @@
 layout: post
 title:  "Git links"
 date:   2015-09-06 16:53:00 PM
-categories: programming
+categories: dev
+tags: git
 ---
 
 [A Git Horror Story: Repository Integrity With Signed Commits](http://mikegerwitz.com/papers/git-horror-story)

@@ -2,7 +2,8 @@
 layout: post
 title:  "Using Jekyll for a blog"
 date:   2015-05-01 18:53:20
-categories: jekyll blog
+categories: blog
+tags: [jekyll, blog]
 ---
 *Updated 2015-05-22*
 

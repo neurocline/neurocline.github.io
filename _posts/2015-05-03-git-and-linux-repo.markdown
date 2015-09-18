@@ -2,7 +2,8 @@
 layout: post
 title:  "Git limits and the Linux repo"
 date:   2015-05-03 01:28:00
-categories: git linux
+categories: dev
+tags: [git, linux]
 ---
 ![My helpful screenshot](/assets/LinuxGit.jpg)
 

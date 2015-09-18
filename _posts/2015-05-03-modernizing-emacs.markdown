@@ -2,7 +2,8 @@
 layout: post
 title:  "Modernizing Emacs"
 date:   2015-05-03 10:51:00
-categories: editor
+categories: dev
+tags: [editor, emacs]
 ---
 ![My helpful screenshot](/assets/ModernizeEmacs.jpg)
 

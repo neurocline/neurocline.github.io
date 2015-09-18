@@ -2,7 +2,8 @@
 layout: post
 title:  "Quadratic voting"
 date:   2015-05-03 11:34:00
-categories: politics
+categories: blog
+tags: [politics]
 ---
 ![My helpful screenshot](/assets/QuadraticVoting.jpg)
 

@@ -2,7 +2,8 @@
 layout: post
 title:  "Windows boot from VHD"
 date:   2015-06-13 10:20:00
-categories: windows
+categories: dev
+tags: windows
 ---
 
 I'm going to try a workflow that involves running from a system contained in a VHD

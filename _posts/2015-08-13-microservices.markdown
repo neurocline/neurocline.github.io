@@ -2,7 +2,8 @@
 layout: post
 title:  "Microservices"
 date:   2015-08-13 18:01:00 PM
-categories: programming
+categories: dev
+tags: microservice, service
 ---
 
 They're good.

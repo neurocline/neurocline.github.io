@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent links"
 date:   2015-07-05 10:00:00
-categories: links
+categories: dev
+tags: text
 ---
 
 [Chris Forster (blog)](http://cforster.com/)

@@ -2,7 +2,8 @@
 layout: post
 title:  "Font Awesome"
 date:   2015-05-02 22:56:00
-categories: html blog
+categories: blog
+tags: [html]
 ---
 ![My helpful screenshot](/assets/FontAwesome.jpg)
 

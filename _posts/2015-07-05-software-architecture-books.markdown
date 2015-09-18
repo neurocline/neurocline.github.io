@@ -2,7 +2,8 @@
 layout: post
 title:  "Software Architecture books"
 date:   2015-07-05 14:20:00
-categories: programming
+categories: dev
+tags: books
 ---
 
 I have a lot of them, and most are not great. There are still more books I need

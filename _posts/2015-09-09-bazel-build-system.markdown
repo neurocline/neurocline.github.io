@@ -2,7 +2,8 @@
 layout: post
 title:  "Bazel, Google build system"
 date:   2015-09-09 19:54:00 PM
-categories: programming
+categories: dev
+tags: build
 ---
 
 In a wonderful sense of - irony? - Google has made a cross-platform build system that supports

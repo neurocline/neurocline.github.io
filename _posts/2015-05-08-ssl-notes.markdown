@@ -2,7 +2,8 @@
 layout: post
 title:  "SSL/TLS Notes"
 date:   2015-05-08 12:33:00
-categories: ssl
+categories: dev
+tags: ssl
 ---
 ![My helpful screenshot](/assets/TLS.jpg)
 

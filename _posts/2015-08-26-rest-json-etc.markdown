@@ -2,7 +2,8 @@
 layout: post
 title:  "REST, JSON, etc"
 date:   2015-08-26 18:44:00 PM
-categories: programming
+categories: dev
+tags: rest, http
 ---
 
 [Jansson](https://jansson.readthedocs.org/en/2.7/) - C library for encoding/decoding JSON

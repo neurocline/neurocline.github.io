@@ -2,7 +2,8 @@
 layout: post
 title:  "Not really a blogger"
 date:   2015-09-06 14:09:00 PM
-categories: writing
+categories: blog
+tags: blog
 ---
 
 ![My helpful screenshot](/assets/JekyllBlogging.jpg)

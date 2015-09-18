@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent Links"
 date:   2015-08-09 11:49:00 AM
-categories: programming
+categories: dev
+tags: distributed, consensus
 ---
 
 [Deconcentration of Attention: Addressing the Complexity of Software Engineering](http://deconcentration-of-attention.com/) - interesting article on the complexity of software systems and the thinking that is required, and promoting the idea of deconcentration.

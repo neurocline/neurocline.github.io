@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent Links"
 date:   2015-08-20 20:01:00 PM
-categories: programming
+categories: dev
+tags: windows
 ---
 
 [Asio, SSL, and scalability](https://konradzemek.com/2015/08/16/asio-ssl-and-scalability/)

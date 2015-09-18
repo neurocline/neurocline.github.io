@@ -2,7 +2,8 @@
 layout: post
 title:  "Tracing System calls"
 date:   2015-05-24 23:24:00
-categories: blog
+categories: dev
+tags: build, linux, mac, bsd
 ---
 
 ## Linux

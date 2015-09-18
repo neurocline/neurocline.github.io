@@ -2,7 +2,8 @@
 layout: post
 title:  "The Actor model"
 date:   2015-07-05 14:00:04
-categories: programming
+categories: dev
+tags: actor
 ---
 
 The actor model has held out a lot of promise over the past 40 years, but has

@@ -2,7 +2,8 @@
 layout: post
 title:  "Session state"
 date:   2015-08-12 17:27:00 PM
-categories: programming
+categories: dev
+tags: session, distributed, database
 ---
 
 Some kinds of network interations are best thought of in the context of a session that is

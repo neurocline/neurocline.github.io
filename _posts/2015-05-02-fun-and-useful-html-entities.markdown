@@ -2,7 +2,8 @@
 layout: post
 title:  "Fun and useful HTML Entities"
 date:   2015-05-02 21:40:00
-categories: html blog
+categories: blog
+tags: [html]
 ---
 ![My helpful screenshot](/assets/HtmlEntities.jpg)
 

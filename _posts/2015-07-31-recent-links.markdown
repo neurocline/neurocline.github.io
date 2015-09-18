@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent Links"
 date:   2015-07-31 09:18:00 AM
-categories: programming
+categories: dev
+tags: text
 ---
 
 At some point, I'll get back to actually posting substantive things.

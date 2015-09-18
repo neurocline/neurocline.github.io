@@ -2,7 +2,8 @@
 layout: post
 title:  "Generating Projects with Premake"
 date:   2015-05-02 17:00:00
-categories: premake build
+categories: dev
+tags: [premake, build]
 ---
 ![My helpful screenshot](/assets/Premake.jpg)
 

@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent Links"
 date:   2015-09-14 11:32:00 AM
-categories: reading
+categories: dev
+tags: service, microservice
 ---
 
 [Enterprise Web Development: From Desktop to Mobile](http://enterprisewebbook.com/). This is an online version of the [print book](http://www.amazon.com/Enterprise-Web-Development-Building-Applications/dp/1449356818). I think the whole book is online even though the table of contents only points to prolog and epilog material. For example, I ran across [Chapter 8](http://enterprisewebbook.com/ch8_websockets.html) on WebSockets while doing a Google search, and once I looked at the [GitHub source](https://github.com/Farata/EnterpriseWebBook) for the book, I was able to create the other URLs. I don't think the text is hidden on purpose.
@@ -26,3 +27,16 @@ categories: reading
 [Distributed systems for fun and profit](http://book.mixu.net/distsys/single-page.html). A book on distributed systems that's quite good as an introduction to the concepts and challenges.
 
 [Mixu/markdown](https://github.com/mixu/markdown-styles) converts Markdown to HTML. This and [Ghost](https://github.com/mixu/ghost-render) look better than Jekyll.
+
+[Visualizing Algorithms](http://bost.ocks.org/mike/algorithms/). Awesome.
+
+[Linkers](https://lwn.net/Articles/276782/) 20 part series by Ian Lance Taylor for LWN.
+
+[Managing Software Complexity in Models](https://insights.sei.cmu.edu/sei_blog/2015/09/managing-software-complexity-in-models.html)
+
+[How to Elect a Leader Faster than a Tournament](http://arxiv.org/pdf/1411.1001v2.pdf). Significant advance in leader election.
+
+[Dark corners of Unicode](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/)
+
+[Stack, Heap, Pool](http://bulldozer00.com/2015/09/14/stack-heap-pool/). This "shows" that pools are 33x faster than stack allocation. However, it's cheating. Object initialization is being billed to
+"pool" construction, which is all the time.

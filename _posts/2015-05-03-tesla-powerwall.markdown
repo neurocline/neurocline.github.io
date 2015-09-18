@@ -2,7 +2,8 @@
 layout: post
 title:  "Tesla's Powerwall Is A Game Changer"
 date:   2015-05-03 21:27:00
-categories: energy
+categories: blog
+tags: energy
 ---
 ![My helpful screenshot](/assets/TeslaPowerwall.jpg)
 

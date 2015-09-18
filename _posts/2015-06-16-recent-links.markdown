@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent links"
 date:   2015-06-16 23:30:00
-categories: links
+categories: dev
+tags: windows
 ---
 
 [What is Code?](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)

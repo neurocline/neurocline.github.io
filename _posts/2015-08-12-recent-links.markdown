@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent Links"
 date:   2015-08-12 18:45:00 PM
-categories: programming
+categories: dev
+tags: distributed
 ---
 
 [Crash-only software](https://www.usenix.org/legacy/events/hotos03/tech/full_papers/candea/candea.pdf).

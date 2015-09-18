@@ -2,7 +2,8 @@
 layout: post
 title:  "Recent links"
 date:   2015-05-12 14:39:00
-categories: links
+categories: dev
+tags: crypto, ssl
 ---
 
 [Can't get OCSP stapling to work, despite openssl working fine](https://community.qualys.com/thread/12315)
