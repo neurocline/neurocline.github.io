@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Distributed Databases</title>
+  <meta name="description" content="What are our options if we want a distributed, fault-tolerant database?">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2015/09/17/distributed-databases.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,78 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Distributed Databases</h1>
+    <p class="post-meta">Sep 17, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+  <article class="post-content">
+    <p>What are our options if we want a distributed, fault-tolerant database?</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/zig-zag-encoding.html">Zig-zag encoding</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+<h2 id="cassandra">Cassandra</h2>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/distributed-databases.html">Distributed Databases</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<p>Cassandra was written initially at Facebook, strongly influenced by Dynamo,
+Amazon’s key/value store. It was then moved to be an Apache projec in 2010. Cassandra has been
+used at very large scale. The main challenge is that it has an eventual consistency model, which
+can be challenging to work with (Facebook moved from Cassandra to HBase due to this).</p>
 
-        <h2>
-          <a class="post-link" href="/blog/2015/09/14/notion.html">Notion, Web-based content editor</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<ul>
+  <li><a href="http://cassandra.apache.org/">Cassandra</a> home page.</li>
+  <li><a href="http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf">Dynamo: Amazon’s Highly Available Key-value Store</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Apache_Cassandra">Apache Cassandra</a> page on Wikipedia.</li>
+  <li><a href="http://www.datacenterknowledge.com/archives/2014/07/31/hulu-cassandra-vs-hbase-vs-riak/">Hulu Chooses Cassandra Over HBase and Riak</a></li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/14/recent-links.html">Recent Links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 9, 2015</span>
+<h2 id="riak">Riak</h2>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/09/bazel-build-system.html">Bazel, Google build system</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>Riak also follows the thread from Dynamo, and is a key-value store written in Erlang. Riak can do in-memory
+or disk storage, or both. Riak is very fault-tolerant but not as fast as something like Redis, leading to the
+idea that perhaps Riak is the back-end for a Redis cache?</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<ul>
+  <li><a href="http://basho.com/products/">Riak</a> home page and <a href="http://docs.basho.com/riak/latest/">docs</a>.</li>
+  <li><a href="https://en.wikipedia.org/wiki/Riak">Riak</a> page on Wikipedia.</li>
+  <li><a href="http://compositecode.com/2013/02/10/riak-redis/">Not So Versus, Riak Versus Redis</a></li>
+  <li><a href="http://inaka.net/blog/2011/08/25/when-to-use-riak/">My Year of Riak</a> from 2011.</li>
+  <li><a href="http://docs.basho.com/riak/1.3.1/references/appendices/comparisons/Riak-Compared-to-Cassandra/">Riak Compared to Cassandra</a> potential bias since this is from Riak.</li>
+  <li><a href="http://basho.com/posts/technical/riak-vs-cassandra/">Riak versus Cassandra</a></li>
+</ul>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h2 id="hyperdex">HyperDex</h2>
+
+<p>HyperDex is a research project from Cornell turned commercial. I think this project started in 2010, but
+it seemed to be at a usable state by 2012.</p>
+
+<ul>
+  <li><a href="http://hyperdex.org/">HyperDex</a> home page and <a href="http://hyperdex.org/papers/">papers</a>
+    <ul>
+      <li><a href="http://hyperdex.org/papers/hyperdex.pdf">HyperDex: A Distributed, Searchable Key-Value Store</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.cs.cornell.edu/people/egs/">Emin Gün Sirer</a></li>
+  <li><a href="http://rescrv.net/">Robert Escriva</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/HyperDex">HyperDex</a> page on Wikipedia</li>
+</ul>
+
+<h2 id="mongodb">MongoDB</h2>
+
+<p>We should not use MongoDB.</p>
+
+<h2 id="hbase">HBase</h2>
+
+<p>HBase is implementation of Google’s BigTable started by Powerset. It moved to the Apache Foundation in 
+2009, and is part of the Hadoop project; in fact, it runs on top of the Hadoop File System.</p>
+
+<p>Facebook started using HBase in 2010 for their new messaging platform, and have now forked it into
+HydraBase. One key thing was the switch to RAFT for the consensus algorithm.</p>
+
+<ul>
+  <li><a href="https://code.facebook.com/posts/321111638043166/hydrabase-the-evolution-of-hbase-facebook/">HydraBase – The evolution of HBase@Facebook</a></li>
+</ul>
+
+  </article>
 
 </div>
 

@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Telling time in seconds</title>
+  <meta name="description" content="Our current time system has multiple bases - base 60 for seconds and minutes, base 24 for hours, base 7 forweeks, base 12 for months - and that’s an approxim...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2015/08/13/telling-time-in-seconds.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,65 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Telling time in seconds</h1>
+    <p class="post-meta">Aug 13, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+  <article class="post-content">
+    <p>Our current time system has multiple bases - base 60 for seconds and minutes, base 24 for hours, base 7 for
+weeks, base 12 for months - and that’s an approximation, of course.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/zig-zag-encoding.html">Zig-zag encoding</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+<p>What if we just told time in seconds?</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/distributed-databases.html">Distributed Databases</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<ul>
+  <li>100 seconds = 1.67 minutes</li>
+  <li>1000 seconds = 1 kilosecond = 16.7 minutes</li>
+  <li>10000 seconds = 10 kiloseconds = 2.78 hours</li>
+  <li>100000 seconds = 100 kiloseconds = 1.16 days</li>
+  <li>1000000 seconds = 1 megasecond = 1.65 weeks</li>
+  <li>10000000 seconds = 10 megaseconds = 3.81 months</li>
+  <li>100000000 seconds = 100 megaseconds = 3.17 years</li>
+  <li>1000000000 seconds = 1 gigasecond = 31.7 years</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/blog/2015/09/14/notion.html">Notion, Web-based content editor</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<p>Or, if we want to approximate our current time references, here’s what we’d say</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/14/recent-links.html">Recent Links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 9, 2015</span>
+<ul>
+  <li>1 hour is close to 4 kiloseconds</li>
+  <li>1 day is close to 100 kiloseconds</li>
+  <li>1 week is close to 1 megasecond</li>
+  <li>1 month is close to 3 megaseconds</li>
+  <li>1 year is close to 32 megaseconds</li>
+  <li>1 century is close to 3 gigaseconds</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/09/bazel-build-system.html">Bazel, Google build system</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>And it’s certainly a lot easier to compare kiloseconds to megaseconds than it is to compare
+hours to weeks.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p>Once we go into space for real and start living in orbit or on other planets, “day” means
+something very relative, and so does “year”. So we will have to give up parochial time spans
+and go to something useful, and it could be as simple as SI prefixes combined with seconds.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>Credit to Vernor Vinge for being the first person I saw writing about this, in A Deepness In The Sky (1999).</p>
+
+<p>And now that I search, amusingly Wikipedia has pages for megasecond and gigasecond, where
+someone has listed various time durations in fractions of these values.</p>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Megasecond">Megasecond</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Gigasecond">Gigasecond</a></li>
+</ul>
+
+<p>I hadn’t thought about it, but Gigaseconds covers human history, since the next biggest step up,
+terasecond, is talking about timeframes in units of 31,588 years. And teraseconds covers the range
+up through 32 million years, which is a respectable amount of time.</p>
+
+<p>And the universe is less than half an exasecond old.</p>
+
+  </article>
 
 </div>
 

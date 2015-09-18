@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Font Awesome</title>
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/blog/2015/05/02/font-awesome.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,45 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Font Awesome</h1>
+    <p class="post-meta">May 2, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+  <article class="post-content">
+    <p><img src="/assets/FontAwesome.jpg" alt="My helpful screenshot" /></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/zig-zag-encoding.html">Zig-zag encoding</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+<p>This is cool</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/distributed-databases.html">Distributed Databases</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<p><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></p>
 
-        <h2>
-          <a class="post-link" href="/blog/2015/09/14/notion.html">Notion, Web-based content editor</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<p>This is an open-source and free icon font. It’s pretty easy to use, you add
+the font-awesome directory to your project, reference the font-awesome stylesheet
+from your page, and then just start adding characters in the font.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/14/recent-links.html">Recent Links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 9, 2015</span>
+<p>It works well with Bootstrap 3, and you can either integrate Bootstrap yourself,
+or start with the Jekyll-Bootstrap project. Or, just hand-add CSS and HTML
+yourself.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/09/bazel-build-system.html">Bazel, Google build system</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>I added this to my <code>_includes/head.html</code> template file:</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;{{ &quot;</span><span class="err">/</span><span class="na">font-awesome</span><span class="err">/</span><span class="na">css</span><span class="err">/</span><span class="na">font-awesome</span><span class="err">.</span><span class="na">min</span><span class="err">.</span><span class="na">css</span><span class="err">&quot;</span> <span class="err">|</span> <span class="na">prepend:</span> <span class="na">site</span><span class="err">.</span><span class="na">baseurl</span> <span class="err">}}&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>Here’s a corny yet effective example:</p>
+
+<p><i class="fa fa-refresh fa-4x fa-spin"></i></p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-refresh fa-4x fa-spin&quot;</span><span class="nt">&gt;&lt;/i&gt;</span></code></pre></div>
+
+<p>I hope to have fun with this, in tasteful effective ways.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome Icons</a></p>
+
+  </article>
 
 </div>
 

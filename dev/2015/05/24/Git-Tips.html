@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Git Tips</title>
+  <meta name="description" content="Here are some useful but less-common Git features.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2015/05/24/Git-Tips.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,76 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Git Tips</h1>
+    <p class="post-meta">May 24, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+  <article class="post-content">
+    <p>Here are some useful but less-common Git features.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/zig-zag-encoding.html">Zig-zag encoding</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+<h3 id="git-clean">git clean</h3>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/distributed-databases.html">Distributed Databases</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<p>This removes untracked files from the working tree. Why would you do this? Let’s say
+you run a build process that litters the working tree with temporary files in
+dozens of folders, instead of being neat and tidy and putting it in a <code>build</code>
+folder.</p>
 
-        <h2>
-          <a class="post-link" href="/blog/2015/09/14/notion.html">Notion, Web-based content editor</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<p>This will remove all untracked files, including ignored ones, and remove untracked
+directories as well:</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/14/recent-links.html">Recent Links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 9, 2015</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clean -d -x</code></pre></div>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/09/bazel-build-system.html">Bazel, Google build system</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>There are a handful of options, but this is my preferred “make it really clean”
+approach. You can use this with <code>git reset</code> to get back to a pristine working
+directory.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p><a href="http://git-scm.com/docs/git-clean">git-clean</a></p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h2 id="git-pull---rebase">git pull –rebase</h2>
+
+<p>Prefer to pull with rebasing instead of merging. Generally, your local changes
+were meant to be applied to the tip of the remote repository, so why not get
+in the habit of keeping your files rebased?</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git pull --rebase</code></pre></div>
+
+<p>This is essentially the same as this</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git fetch
+git rebase</code></pre></div>
+
+<p>You can also set a few entries in config so that this happens without needing
+the <code>--rebase</code> flag. To set this so <code>master</code> branch always rebases:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config branch.master.rebase <span class="nb">true</span></code></pre></div>
+
+<p>or to set it up so new branches always rebase automatically:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global branch.autosetuprebase always</code></pre></div>
+
+<p>There will still be cases where you will want to merge, but generally this would
+be an explicit step of merging a (feature) branch onto a (production) branch.</p>
+
+<p><a href="http://git-scm.com/docs/git-pull">git-pull</a></p>
+
+<p><a href="http://git-scm.com/docs/git-rebase">git-rebase</a></p>
+
+<h2 id="see-whats-been-cherry-picked">See what’s been cherry-picked</h2>
+
+<p>If you have a workflow where you are cherry-picking commits from one branch to
+another, it’s useful to see what has been cherry-picked. If you want to see what
+has and hasn’t been cherry-picked from the current branch to <code>master</code>:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git cherry -v master</code></pre></div>
+
+<p>This shows all commits on the current branch, prefixed with <code>+</code> for commits
+that have not yet been cherry-picked and with <code>-</code> for commits that have
+already been cherry-picked.</p>
+
+  </article>
 
 </div>
 

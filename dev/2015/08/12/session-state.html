@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Session state</title>
+  <meta name="description" content="Some kinds of network interations are best thought of in the context of a session that isinitiated, used, and then destroyed. The states in the session are r...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2015/08/12/session-state.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,65 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Session state</h1>
+    <p class="post-meta">Aug 12, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+  <article class="post-content">
+    <p>Some kinds of network interations are best thought of in the context of a session that is
+initiated, used, and then destroyed. The states in the session are represented by data
+we store, usually at the “server” end, but sometimes both.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/zig-zag-encoding.html">Zig-zag encoding</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+<p>Once we have session state, however, we have to make sure that our session gets exclusive
+access to this session state data, and that we can get access to it even if the underlying
+connection changes, or even if the machines we are using as part of the session change
+underneath us. For example, a server might crash or be restarted for maintenance reasons
+in the middle of our session.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/distributed-databases.html">Distributed Databases</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<p>So we’d like to persist session state beyond any single machine, and yet not have this
+be so expensive that sessions are slow. This means we need to store session state data on more
+than just the server endpoint, and ideally this data is stored redundantly so that we are
+fault-tolerant to normal failure cases (hardware fails, at inopportune times).</p>
 
-        <h2>
-          <a class="post-link" href="/blog/2015/09/14/notion.html">Notion, Web-based content editor</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<p>And we’d even like to entertain scalability far beyond what is possible now. At the moment, sessions
+are typically tied to servers located in a single datacenter, but for both elasticity and for
+reliability, we’d like to be able to move sessions not just between servers in a data center, but
+between data centers.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/14/recent-links.html">Recent Links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 9, 2015</span>
+<p><a href="http://research.microsoft.com/pubs/74713/ssm-nsdi.pdf">Session State: Beyond Soft State</a>. 2003
+paper by Benjamin C. Ling, Emre Kiciman and Armando Fox, talking about a system they designed
+called SSM, which is highly fault-tolerant, and designed towards the needs of session state.
+This also includes some auto-tuning methods for detecting and handling load.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/09/bazel-build-system.html">Bazel, Google build system</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><a href="http://delivery.acm.org/10.1145/1970000/1965751/p121-ousterhout.pdf">The Case For RAMClouds: Scalable High-Performance Storage Entirely in DRAM </a>. 2011 update of 2009 paper by John Ousterhout and his group at Stanford, making a case for RAM-only data storage that is still fault-tolerant.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p><a href="http://web.stanford.edu/~ouster/cgi-bin/papers/ramcloud-recovery.pdf">Fast Crash Recovery in RAMCloud</a>.
+2011. Describes RAMCloud’s recovery technique. RAMCloud doesn’t replicate data in RAM, instead it replicates
+logs across many servers, allowing both redundant and fast recovery.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p><a href="https://www.usenix.org/system/files/conference/fast14/fast14-paper_rumble.pdf">Log-structured Memory for DRAM-based Storage</a>.
+2014. Describes RAMCloud’s main innovation, log-structured memory.</p>
+
+<p><a href="http://perso.telecom-paristech.fr/~kuznetso/INF346/papers/pnuts.pdf">PNUTS: Yahoo!’s Hosted Data Serving Platform</a>.
+2008 paper by Brian F. Cooper and company describing Yahoo’s distributed database system. They decided
+that eventual consistency was sufficient.</p>
+
+<p><a href="http://redis.io/topics/sentinel">Redis Sentinel</a>. From Redis documentation, describes how to use Redis in
+a high-availability mode.</p>
+
+<p><a href="http://redis.io/topics/cluster-spec">Redis Cluster</a>. From Redis documentation, describes the new (as of 3.0)
+clustering system allowing for a distributed implementation of Redis.</p>
+
+<p><a href="https://github.com/soundcloud/roshi">roshi</a>. Github repo. Distributed storage of timestamped events.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Session_(computer_science)">Session</a> definition from Wikipedia.</p>
+
+  </article>
 
 </div>
 
