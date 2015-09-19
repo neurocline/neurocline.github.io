@@ -8,6 +8,10 @@ tags: database, distributed
 
 What are our options if we want a distributed, fault-tolerant database?
 
+## MySQL Cluster (NDB)
+
+It's very widely used at scale.
+
 ## Cassandra
 
 Cassandra was written initially at Facebook, strongly influenced by Dynamo,
@@ -57,3 +61,28 @@ Facebook started using HBase in 2010 for their new messaging platform, and have 
 HydraBase. One key thing was the switch to RAFT for the consensus algorithm.
 
 * [HydraBase – The evolution of HBase@Facebook](https://code.facebook.com/posts/321111638043166/hydrabase-the-evolution-of-hbase-facebook/)
+
+## Redis Cluster
+
+Not sure.
+
+## Cockroach DB
+
+This will be awesome someday
+
+* [Cockroach Labs](http://www.cockroachlabs.com/)
+* [cockroachdb](https://github.com/cockroachdb) GitHub organization.
+* [Out in the Open: Ex-Googlers Building Cloud Software That’s Almost Impossible to Take Down](http://www.wired.com/2014/07/cockroachdb/) 2014 Wired Article
+* 
+
+## General notes
+
+[Call Me Maybe - Jepsen](https://aphyr.com/tags/Jepsen)
+
+[Challenges to Adopting Stronger Consistency at Scale](https://www.usenix.org/system/files/conference/hotos15/hotos15-paper-ajoux.pdf)
+
+[Visual Guide to NoSQL Systems](http://blog.nahurst.com/visual-guide-to-nosql-systems)
+
+[Cassandra vs MongoDB...](http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
+
+[Distributed systems for fun and profit](http://book.mixu.net/distsys/single-page.html)
