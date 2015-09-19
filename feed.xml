@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Sep 2015 19:05:15 -0700</pubDate>
-    <lastBuildDate>Thu, 17 Sep 2015 19:05:15 -0700</lastBuildDate>
+    <pubDate>Fri, 18 Sep 2015 19:49:27 -0700</pubDate>
+    <lastBuildDate>Fri, 18 Sep 2015 19:49:27 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -119,6 +119,10 @@ to time naive versus sophisticated code to see how much it’s worth doing it in
         <title>Distributed Databases</title>
         <description>&lt;p&gt;What are our options if we want a distributed, fault-tolerant database?&lt;/p&gt;
 
+&lt;h2 id=&quot;mysql-cluster-ndb&quot;&gt;MySQL Cluster (NDB)&lt;/h2&gt;
+
+&lt;p&gt;It’s very widely used at scale.&lt;/p&gt;
+
 &lt;h2 id=&quot;cassandra&quot;&gt;Cassandra&lt;/h2&gt;
 
 &lt;p&gt;Cassandra was written initially at Facebook, strongly influenced by Dynamo,
@@ -179,6 +183,33 @@ HydraBase. One key thing was the switch to RAFT for the consensus algorithm.&lt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://code.facebook.com/posts/321111638043166/hydrabase-the-evolution-of-hbase-facebook/&quot;&gt;HydraBase – The evolution of HBase@Facebook&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;redis-cluster&quot;&gt;Redis Cluster&lt;/h2&gt;
+
+&lt;p&gt;Not sure.&lt;/p&gt;
+
+&lt;h2 id=&quot;cockroach-db&quot;&gt;Cockroach DB&lt;/h2&gt;
+
+&lt;p&gt;This will be awesome someday&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cockroachlabs.com/&quot;&gt;Cockroach Labs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/cockroachdb&quot;&gt;cockroachdb&lt;/a&gt; GitHub organization.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.wired.com/2014/07/cockroachdb/&quot;&gt;Out in the Open: Ex-Googlers Building Cloud Software That’s Almost Impossible to Take Down&lt;/a&gt; 2014 Wired Article&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;general-notes&quot;&gt;General notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aphyr.com/tags/Jepsen&quot;&gt;Call Me Maybe - Jepsen&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.usenix.org/system/files/conference/hotos15/hotos15-paper-ajoux.pdf&quot;&gt;Challenges to Adopting Stronger Consistency at Scale&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.nahurst.com/visual-guide-to-nosql-systems&quot;&gt;Visual Guide to NoSQL Systems&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis&quot;&gt;Cassandra vs MongoDB…&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://book.mixu.net/distsys/single-page.html&quot;&gt;Distributed systems for fun and profit&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 17 Sep 2015 13:06:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2015/09/17/distributed-databases.html</link>
