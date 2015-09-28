@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Peeking into Python</title>
+  <meta name="description" content="There are a number of ways to peek into Python code and data.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2015/09/24/peeking-into-python.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,76 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Peeking into Python</h1>
+    <p class="post-meta">Sep 24, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Sep 27, 2015</span>
+  <article class="post-content">
+    <p>There are a number of ways to peek into Python code and data.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/27/engineering-at-scale.html">Engineering at scale</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 24, 2015</span>
+<h2 id="built-in-functions-for-output">Built-in functions for output</h2>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/24/peeking-into-python.html">Peeking into Python</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 24, 2015</span>
+<p>The <a href="https://docs.python.org/2/library/functions.html">built-in primitives</a> that are relevant are</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/24/ebpf-extended-berkeley-packet-filter.html">eBPF: extended Berkeley Packet Filter</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+<ul>
+  <li><code>dir()</code></li>
+  <li><code>repr()</code></li>
+  <li><code>vars()</code></li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/zig-zag-encoding.html">Zig-zag encoding</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 17, 2015</span>
+<p><code>dir(object)</code> shows all the attributes for the object. Of course, not all objects
+have attributes. It’s really made for use at an interactive prompt, not as
+an in-code method. Basically, it either calls <code>__dir__()</code>, or it looks at
+the <code>__dict__</code> attribute and shows some of the information.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/09/17/distributed-databases.html">Distributed Databases</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><code>repr(object)</code> returns a printable representation of an object. Again, this sounds
+good until you use it, because anything other than built-in types just returns
+a string with the class name and the address of the object. Still, it’s the gateway
+to something useful if you also add <code>__repr__()</code> methods to your classes, because <code>repr()</code>
+will call the <code>__repr__</code> method if it exists. Of course, the downside is that you need
+a systematic and consistent approach, and you have to write that code yourself.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p><code>vars(object)</code> is more useful for printing than <code>dir</code> - it returns
+the <code>__dict__</code> attribute, which means that if you call <code>print(vars(object))</code> you’ll
+see keys and values together, whereas <code>dir()</code> just shows the keys.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h2 id="useful-classes-for-output">Useful classes for output</h2>
+
+<p>The <code>pprint</code> module sounds useful until you use it. Its utility is largely restricted
+to pretty-printing, it doesn’t give you extra disassembly powers on its own. But
+see <a href="https://docs.python.org/2/library/pprint.html">pprint–Data pretty printer</a>.</p>
+
+<p>The <a href="https://docs.python.org/2/library/inspect.html"><code>inspect</code></a> module is a lot more useful, but it doesn’t do output, it just lets
+you get information about objects.</p>
+
+<h2 id="built-in-functions-for-introspection">Built-in functions for introspection</h2>
+
+<p>Some built-ins are useful for testing objects:</p>
+
+<ul>
+  <li><code>type</code></li>
+  <li><code>isinstance</code></li>
+  <li><code>hasattr</code></li>
+</ul>
+
+<p><code>type(object)</code> returns a string indicating the type of the object. As such, it can
+be used for both output and testing.</p>
+
+<p><code>isinstance(object, classinfo)</code> returns <code>True</code> if <code>object</code> is an instance
+of <code>classinfo</code> (including inheritance). In general, it’s more appropriate to use
+<code>isinstance</code> for type testing because it does handle inheritance.</p>
+
+<p>The <code>types</code> module is useful for both <code>type</code> and <code>isintance</code> use. And type
+output needs this kind of introspection so it knows what it should print.</p>
+
+<h2 id="links">Links</h2>
+
+<p><a href="http://www.ibm.com/developerworks/library/l-pyint/">Guide to Python introspection</a></p>
+
+  </article>
 
 </div>
 
