@@ -6,9 +6,52 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Sep 2015 23:02:10 -0700</pubDate>
-    <lastBuildDate>Sun, 27 Sep 2015 23:02:10 -0700</lastBuildDate>
+    <pubDate>Fri, 09 Oct 2015 07:34:37 -0700</pubDate>
+    <lastBuildDate>Fri, 09 Oct 2015 07:34:37 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Python: threading and multiprocessing</title>
+        <description>&lt;p&gt;The basic threading model in Python is extremely simple.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cp&quot;&gt;# simmple thread example&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threading&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myfunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;I am thread %d&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;threading&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myfunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,)).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;I am not a thread&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Python threads have some advantages and disadvantages, and they spring from the same source;
+you can do threads, but only one thread can execute Python code at a time. There are still
+big advantages to using threads, but you can’t take advantage of multiple processors/cores.&lt;/p&gt;
+
+&lt;p&gt;Why use threads? Threads are still useful for simplifying complex flows. Events are better,
+but event processing has a higher minimum of complexity.&lt;/p&gt;
+
+&lt;p&gt;Threads are also very useful for I/O; the I/O is not done in Python code, and I/O calls often
+are waiting on hardware. This means that you can have multiple threads doing I/O and all of them
+can make parallel progress.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Sep 2015 15:12:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2015/09/27/python-threading-and-multiprocessing.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/09/27/python-threading-and-multiprocessing.html</guid>
+        
+        <category>python</category>
+        
+        <category>threads</category>
+        
+        <category>multiprocessing</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Engineering at scale</title>
@@ -496,23 +539,6 @@ see unification on build tools? We still have independent ecosystems.&lt;/p&gt;
         <category>c++,</category>
         
         <category>scheduler</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Git links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://mikegerwitz.com/papers/git-horror-story&quot;&gt;A Git Horror Story: Repository Integrity With Signed Commits&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dllhell.net/2012/03/30/on-signing-git-tags-on-windows/&quot;&gt;On Signing Git Tags on Windows&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 06 Sep 2015 16:53:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2015/09/06/git-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/09/06/git-links.html</guid>
-        
-        <category>git</category>
         
         
         <category>dev</category>
