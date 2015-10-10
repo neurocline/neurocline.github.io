@@ -22,6 +22,20 @@ Python articles
 
 * [An introduction to parallel programming:using Python's multiprocessing module](http://sebastianraschka.com/Articles/2014_multiprocessing_intro.html)
 
+Distributed systems
+
+* [The Nutanix Bible](http://stevenpoitras.com/the-nutanix-bible/)
+* [Amazon EC2 Instances](https://aws.amazon.com/ec2/instance-types/)
+* [Progrium (Jeff Lindsay)](http://progrium.com/blog/)
+* [Distributed systems for fun and profit](http://book.mixu.net/distsys/single-page.html)
+* [Getting Real About Distributed System Reliability](http://blog.empathybox.com/post/19574936361/getting-real-about-distributed-system-reliability)
+* [Data Availability and Durability with the Hadoop Distributed File System](http://static.usenix.org/publications/login/2012-02/pdfs/Chansler.pdf)
+* [PBS: Probabilistically Bounded Staleness](http://pbs.cs.berkeley.edu/#demo)
+* [Sharding Pattern](https://msdn.microsoft.com/en-us/library/dn589797.aspx)
+
 Other
 
 * [Apache Thrift](http://thrift.apache.org/)
+* [Apache Avro](https://avro.apache.org/)
+* [Research in Programming Languages](http://tagide.com/blog/academia/research-in-programming-languages/)
+* [The Rise of Worse is Better](http://www.dreamsongs.com/RiseOfWorseIsBetter.html)
