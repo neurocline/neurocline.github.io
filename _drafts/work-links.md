@@ -17,10 +17,31 @@ Python snippets
 * [Adding methods dynamically in Python](http://igorsobreira.com/2011/02/06/adding-methods-dynamically-in-python.html)
 * [Adding a Method to an Existing Object](http://stackoverflow.com/questions/972/adding-a-method-to-an-existing-object)
 * [How to stop SIGINT being passed to subprocess in python?](http://stackoverflow.com/questions/3232613/how-to-stop-sigint-being-passed-to-subprocess-in-python)
+* [Python: How to tell what class a decorated method is in at runtime](https://andrewbrookins.com/tech/how-to-get-the-name-of-the-class-of-a-decorated-method-in-python/)
+* [Python multiprocessing pickling error](http://stackoverflow.com/questions/8804830/python-multiprocessing-pickling-error)
+* [How to prevent a block of code from being interrupted by KeyboardInterrupt in Python?](http://stackoverflow.com/questions/842557/how-to-prevent-a-block-of-code-from-being-interrupted-by-keyboardinterrupt-in-py)
+* [Python: Using KeyboardInterrupt with a Multiprocessing Pool](http://noswap.com/blog/python-multiprocessing-keyboardinterrupt)
+* [Keyboard Interrupts with python's multiprocessing Pool](http://stackoverflow.com/questions/1408356/keyboard-interrupts-with-pythons-multiprocessing-pool)
 
 Python articles
 
 * [An introduction to parallel programming:using Python's multiprocessing module](http://sebastianraschka.com/Articles/2014_multiprocessing_intro.html)
+* [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
+* [Safe use of unix signals with multiprocessing module in python](https://vimmaniac.com/blog/codejunkie/safe-use-of-unix-signals-with-multiprocessing-module-in-python/)
+* [Python Multiprocessing and Interrupts](http://jtushman.github.io/blog/2014/01/14/python-%7C-multiprocessing-and-interrupts/)
+* [The Python Concurrency Story, Part 1](http://migrateup.com/python-concurrency-story-pt1/#)
+* [The Python Concurrency Story, Part 2](http://migrateup.com/python-concurrency-story-pt2/#)
+* [Concurrency (Python Wiki)](https://wiki.python.org/moin/Concurrency/)
+* [Python Multithreading Tutorial: Concurrency and Parallelism](http://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python)
+* [Multithreading - Event Objects between Threads](http://www.bogotobogo.com/python/Multithread/python_multithreading_Event_Objects_between_Threads.php)
+* [Making an event queue in python: a concurrency and modeling tutorial](https://m7i.org/tutorials/python-event-queue-concurrency-modeling/)
+* [Thread Synchronization Mechanisms in Python](http://effbot.org/zone/thread-synchronization.htm)
+* [Unyielding](https://glyph.twistedmatrix.com/2014/02/unyielding.html)
+
+Python Videos
+
+* [Python's Class Development Toolkit](https://www.youtube.com/watch?v=HTLu2DFOdTg)
+* [David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015](https://www.youtube.com/watch?v=MCs5OvhV9S4)
 
 Distributed systems
 
@@ -39,3 +60,5 @@ Other
 * [Apache Avro](https://avro.apache.org/)
 * [Research in Programming Languages](http://tagide.com/blog/academia/research-in-programming-languages/)
 * [The Rise of Worse is Better](http://www.dreamsongs.com/RiseOfWorseIsBetter.html)
+* [ZeroMQ an introduction](http://nichol.as/zeromq-an-introduction)
+* [Queues](http://queues.io/)
