@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Oct 2015 00:11:39 -0700</pubDate>
-    <lastBuildDate>Wed, 14 Oct 2015 00:11:39 -0700</lastBuildDate>
+    <pubDate>Wed, 14 Oct 2015 01:36:45 -0700</pubDate>
+    <lastBuildDate>Wed, 14 Oct 2015 01:36:45 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -17,6 +17,10 @@
 &lt;p&gt;&lt;a href=&quot;https://github.com/goraft/raftd&quot;&gt;raftd&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/hashicorp/raft&quot;&gt;Hashicorp Raft&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rystsov.info/2015/09/16/how-paxos-works.html&quot;&gt;A memo on how Paxos works&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rystsov.info/2015/10/09/epaxos700.html&quot;&gt;EPaxos, transactions and the next 700 Paxos systems&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 13 Oct 2015 23:50:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2015/10/13/more-quorums.html</link>
