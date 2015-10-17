@@ -6,9 +6,52 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Oct 2015 01:36:45 -0700</pubDate>
-    <lastBuildDate>Wed, 14 Oct 2015 01:36:45 -0700</lastBuildDate>
+    <pubDate>Sat, 17 Oct 2015 00:38:32 -0700</pubDate>
+    <lastBuildDate>Sat, 17 Oct 2015 00:38:32 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://rystsov.info/2015/09/16/how-paxos-works.html&quot;&gt;A memo on how Paxos works&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://darksi.de/d.sea-of-nodes/&quot;&gt;Sea of nodes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/warriorguo/zertcore5&quot;&gt;zertcore5&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://casual-effects.com/markdeep/&quot;&gt;Markdeep&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/showcases/package-managers&quot;&gt;Package Managers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.elbeno.com/blog/?p=1254&quot;&gt;C++11 compile-time string hashing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://readthedocs.org/&quot;&gt;Read The Docs&lt;/a&gt; and repo &lt;a href=&quot;https://github.com/rtfd/readthedocs.org&quot;&gt;rtfd/readthedocs.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; Python Documentation Generator.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docutils.sourceforge.net/rst.html&quot;&gt;reStructuredText&lt;/a&gt; and &lt;a href=&quot;http://sphinx-doc.org/rest.html&quot;&gt;reStructuredText Primer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PyPI&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pip.readthedocs.org/en/stable/reference/pip_install/&quot;&gt;pip install&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jfrog.com/confluence/display/RTF/PyPI+Repositories&quot;&gt;PyPI Repositories&lt;/a&gt;. Artifactory can be a PyPI repository&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/18052217/how-to-create-local-own-pypi-repository-index-without-mirror&quot;&gt;how to create local own pypi repository index without mirror?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pypi.python.org/pypi/pypiserver&quot;&gt;pypiserver&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pythonhosted.org/Basket/&quot;&gt;Basket - a local static PyPI repository builder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bitofcheese.blogspot.com/2013/05/local-pypi-options.html&quot;&gt;Local PyPI Options&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pypi.python.org/pypi/devpi&quot;&gt;devpi 2.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 16 Oct 2015 23:55:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2015/10/16/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/10/16/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>More quorums</title>
@@ -53,6 +96,87 @@
         
         
         <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Current work links</title>
+        <description>&lt;p&gt;Python docs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/functions.html&quot;&gt;2. Built-in functions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/exceptions.html#exceptions.Exception&quot;&gt;6. Built-in exceptions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/signal.html&quot;&gt;17.4. signal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Python snippets&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ianlewis.org/en/dynamically-adding-method-classes-or-class-instanc&quot;&gt;Dynamically Adding a Method to Classes or Class Instances in Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://igorsobreira.com/2011/02/06/adding-methods-dynamically-in-python.html&quot;&gt;Adding methods dynamically in Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/972/adding-a-method-to-an-existing-object&quot;&gt;Adding a Method to an Existing Object&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3232613/how-to-stop-sigint-being-passed-to-subprocess-in-python&quot;&gt;How to stop SIGINT being passed to subprocess in python?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://andrewbrookins.com/tech/how-to-get-the-name-of-the-class-of-a-decorated-method-in-python/&quot;&gt;Python: How to tell what class a decorated method is in at runtime&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/8804830/python-multiprocessing-pickling-error&quot;&gt;Python multiprocessing pickling error&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/842557/how-to-prevent-a-block-of-code-from-being-interrupted-by-keyboardinterrupt-in-py&quot;&gt;How to prevent a block of code from being interrupted by KeyboardInterrupt in Python?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://noswap.com/blog/python-multiprocessing-keyboardinterrupt&quot;&gt;Python: Using KeyboardInterrupt with a Multiprocessing Pool&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1408356/keyboard-interrupts-with-pythons-multiprocessing-pool&quot;&gt;Keyboard Interrupts with python’s multiprocessing Pool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Python articles&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sebastianraschka.com/Articles/2014_multiprocessing_intro.html&quot;&gt;An introduction to parallel programming:using Python’s multiprocessing module&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.rafekettler.com/magicmethods.html&quot;&gt;A Guide to Python’s Magic Methods&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vimmaniac.com/blog/codejunkie/safe-use-of-unix-signals-with-multiprocessing-module-in-python/&quot;&gt;Safe use of unix signals with multiprocessing module in python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jtushman.github.io/blog/2014/01/14/python-%7C-multiprocessing-and-interrupts/&quot;&gt;Python Multiprocessing and Interrupts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://migrateup.com/python-concurrency-story-pt1/#&quot;&gt;The Python Concurrency Story, Part 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://migrateup.com/python-concurrency-story-pt2/#&quot;&gt;The Python Concurrency Story, Part 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.python.org/moin/Concurrency/&quot;&gt;Concurrency (Python Wiki)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python&quot;&gt;Python Multithreading Tutorial: Concurrency and Parallelism&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bogotobogo.com/python/Multithread/python_multithreading_Event_Objects_between_Threads.php&quot;&gt;Multithreading - Event Objects between Threads&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://m7i.org/tutorials/python-event-queue-concurrency-modeling/&quot;&gt;Making an event queue in python: a concurrency and modeling tutorial&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://effbot.org/zone/thread-synchronization.htm&quot;&gt;Thread Synchronization Mechanisms in Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://glyph.twistedmatrix.com/2014/02/unyielding.html&quot;&gt;Unyielding&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Python Videos&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=HTLu2DFOdTg&quot;&gt;Python’s Class Development Toolkit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=MCs5OvhV9S4&quot;&gt;David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Distributed systems&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stevenpoitras.com/the-nutanix-bible/&quot;&gt;The Nutanix Bible&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/ec2/instance-types/&quot;&gt;Amazon EC2 Instances&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://progrium.com/blog/&quot;&gt;Progrium (Jeff Lindsay)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://book.mixu.net/distsys/single-page.html&quot;&gt;Distributed systems for fun and profit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.empathybox.com/post/19574936361/getting-real-about-distributed-system-reliability&quot;&gt;Getting Real About Distributed System Reliability&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://static.usenix.org/publications/login/2012-02/pdfs/Chansler.pdf&quot;&gt;Data Availability and Durability with the Hadoop Distributed File System&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pbs.cs.berkeley.edu/#demo&quot;&gt;PBS: Probabilistically Bounded Staleness&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/dn589797.aspx&quot;&gt;Sharding Pattern&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Other&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://thrift.apache.org/&quot;&gt;Apache Thrift&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://avro.apache.org/&quot;&gt;Apache Avro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tagide.com/blog/academia/research-in-programming-languages/&quot;&gt;Research in Programming Languages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.dreamsongs.com/RiseOfWorseIsBetter.html&quot;&gt;The Rise of Worse is Better&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nichol.as/zeromq-an-introduction&quot;&gt;ZeroMQ an introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://queues.io/&quot;&gt;Queues&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 09 Oct 2015 07:26:00 -0700</pubDate>
+        <link>http://neurocline.github.io/programming/2015/10/09/work-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/10/09/work-links.html</guid>
+        
+        
+        <category>programming</category>
         
       </item>
     
@@ -466,81 +590,6 @@ HydraBase. One key thing was the switch to RAFT for the consensus algorithm.&lt;
         <category>database,</category>
         
         <category>distributed</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Notion, Web-based content editor</title>
-        <description>&lt;p&gt;So, this is interesting&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.notion.so/&quot;&gt;Notion&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, it’s yet another appealing walled garden. I can create a lot of content
-on their site - well, my private section on their site.&lt;/p&gt;
-
-&lt;p&gt;I don’t know if I want to dump a lot of data into something that will probably go away.
-But it is very slick.&lt;/p&gt;
-
-&lt;p&gt;Also, the name Notion is very heavily used.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 14 Sep 2015 19:28:00 -0700</pubDate>
-        <link>http://neurocline.github.io/blog/2015/09/14/notion.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/blog/2015/09/14/notion.html</guid>
-        
-        <category>writing</category>
-        
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent Links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://enterprisewebbook.com/&quot;&gt;Enterprise Web Development: From Desktop to Mobile&lt;/a&gt;. This is an online version of the &lt;a href=&quot;http://www.amazon.com/Enterprise-Web-Development-Building-Applications/dp/1449356818&quot;&gt;print book&lt;/a&gt;. I think the whole book is online even though the table of contents only points to prolog and epilog material. For example, I ran across &lt;a href=&quot;http://enterprisewebbook.com/ch8_websockets.html&quot;&gt;Chapter 8&lt;/a&gt; on WebSockets while doing a Google search, and once I looked at the &lt;a href=&quot;https://github.com/Farata/EnterpriseWebBook&quot;&gt;GitHub source&lt;/a&gt; for the book, I was able to create the other URLs. I don’t think the text is hidden on purpose.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.methods.co.nz/asciidoc/&quot;&gt;AsciiDoc&lt;/a&gt; has been used to write a number of technical books. Maybe I should try this out. It appears to be a more human-writable version of DocBook. Still, this is more useful to writing structured docs than anything else, I bet.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://technologyconversations.com/2015/09/08/service-discovery-zookeeper-vs-etcd-vs-consul/&quot;&gt;Service Discovery: Zookeeper vs etcd vs Consul&lt;/a&gt;. This is in the context of Docker.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codergears.com/Blog/?p=1069&quot;&gt;XRay the LLVM\Clang source code&lt;/a&gt; is interesting, but mostly because I should be looking more closely at tools like &lt;a href=&quot;http://www.cppdepend.com/&quot;&gt;CppDepend&lt;/a&gt; and &lt;a href=&quot;http://cppdepend.com/cqlinq&quot;&gt;CQLinq&lt;/a&gt;, which lets you make LINQ calls on the code database that CppDepend builds up.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://libcox.net/&quot;&gt;Libcox&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/RaetProtocol/raet&quot;&gt;RAET: Reliable Asynchronous Event Transport Protocol&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://kamalmarhubi.com/blog/2015/09/06/kubernetes-from-the-ground-up-the-api-server/&quot;&gt;Kubernetes from the ground up: the API server&lt;/a&gt;. Second in a series about &lt;a href=&quot;http://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt;, an open-source cluster manager (from Google). It uses Etcd.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.allthingsdistributed.com/2015/07/under-the-hood-of-the-amazon-ec2-container-service.html&quot;&gt;Under the Hood of Amazon EC2 Container Service&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://adetante.github.io/articles/service-discovery-with-docker-1/&quot;&gt;Service discovery with Docker&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://book.mixu.net/distsys/single-page.html&quot;&gt;Distributed systems for fun and profit&lt;/a&gt;. A book on distributed systems that’s quite good as an introduction to the concepts and challenges.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/mixu/markdown-styles&quot;&gt;Mixu/markdown&lt;/a&gt; converts Markdown to HTML. This and &lt;a href=&quot;https://github.com/mixu/ghost-render&quot;&gt;Ghost&lt;/a&gt; look better than Jekyll.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bost.ocks.org/mike/algorithms/&quot;&gt;Visualizing Algorithms&lt;/a&gt;. Awesome.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lwn.net/Articles/276782/&quot;&gt;Linkers&lt;/a&gt; 20 part series by Ian Lance Taylor for LWN.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://insights.sei.cmu.edu/sei_blog/2015/09/managing-software-complexity-in-models.html&quot;&gt;Managing Software Complexity in Models&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://arxiv.org/pdf/1411.1001v2.pdf&quot;&gt;How to Elect a Leader Faster than a Tournament&lt;/a&gt;. Significant advance in leader election.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/&quot;&gt;Dark corners of Unicode&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bulldozer00.com/2015/09/14/stack-heap-pool/&quot;&gt;Stack, Heap, Pool&lt;/a&gt;. This “shows” that pools are 33x faster than stack allocation. However, it’s cheating. Object initialization is being billed to
-“pool” construction, which is all the time.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 14 Sep 2015 11:32:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2015/09/14/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/09/14/recent-links.html</guid>
-        
-        <category>service,</category>
-        
-        <category>microservice</category>
         
         
         <category>dev</category>
