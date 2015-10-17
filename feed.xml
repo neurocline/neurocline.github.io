@@ -6,9 +6,85 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Oct 2015 00:38:32 -0700</pubDate>
-    <lastBuildDate>Sat, 17 Oct 2015 00:38:32 -0700</lastBuildDate>
+    <pubDate>Sat, 17 Oct 2015 02:00:13 -0700</pubDate>
+    <lastBuildDate>Sat, 17 Oct 2015 02:00:13 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>SIGINT clean handling in Python</title>
+        <description>&lt;p&gt;This is #1 in the series “It seems to be hard to make Python robust”. A robust program
+won’t crash malfunction when ctrl-c is pressed, it will abort down clealy if possible.
+This is important with multiprocessing programs, because naive code will actually hang
+when you try to interrupt it with ctrl-c.&lt;/p&gt;
+
+&lt;p&gt;SIGINT (the exception raised when you press ctrl-c) will raise an exception when
+I/O operations return. This is pretty annoying. This happens even on time.sleep().&lt;/p&gt;
+
+&lt;p&gt;The way around this to catch ctrl-c is to install a handler, and put try blocks around
+IO operations. Real code won’t ignore IOError like this, this is just a sample.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# sigint-clean.py&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# A SIGINT will cause an I/O operation to raise exceptions on return. This happens&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# even on Windows. This means even with a ctrl-c handler, you must wrap I/O calls&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# in a try/catch IOError block and check for interrupted. Annoying&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;signal&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;catch_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caught_sigint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;note_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;signum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caught_sigint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__enter__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oldsigint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIGINT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;note_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__exit__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIGINT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oldsigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__call__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caught_sigint&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;catch_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;got_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;running&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;running&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;got_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;running&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Caught SIGINT!&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# without this try/except, you&amp;#39;ll get an IOError when ctrl-c pressed&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;ne&quot;&gt;IOError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And the other other answer is to write your serious programs in C++ (or maybe Go)? I still
+like Python, but the effort to get to silky smooth reliability is erasing all the gains from
+using Python in the first place. The answer of course is to make C++ as easy to use as Python.
+That’s not a language issue, it’s an environment/packages issue.&lt;/p&gt;
+
+&lt;p&gt;Perl, Python and R should give incredible credit to CTAN (Comprehensive Tex Archive Network) for
+blazing the trail. That’s the real reason Perl became successful. Python lives more on its own
+merits but would still be somewhat neutered without PyPI.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 17 Oct 2015 13:00:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2015/10/17/sigint-clean-handling-python.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/10/17/sigint-clean-handling-python.html</guid>
+        
+        <category>python</category>
+        
+        <category>exception</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -481,115 +557,6 @@ to time naive versus sophisticated code to see how much it’s worth doing it in
         <guid isPermaLink="true">http://neurocline.github.io/dev/2015/09/17/zig-zag-encoding.html</guid>
         
         <category>algorithms</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Distributed Databases</title>
-        <description>&lt;p&gt;What are our options if we want a distributed, fault-tolerant database?&lt;/p&gt;
-
-&lt;h2 id=&quot;mysql-cluster-ndb&quot;&gt;MySQL Cluster (NDB)&lt;/h2&gt;
-
-&lt;p&gt;It’s very widely used at scale.&lt;/p&gt;
-
-&lt;h2 id=&quot;cassandra&quot;&gt;Cassandra&lt;/h2&gt;
-
-&lt;p&gt;Cassandra was written initially at Facebook, strongly influenced by Dynamo,
-Amazon’s key/value store. It was then moved to be an Apache projec in 2010. Cassandra has been
-used at very large scale. The main challenge is that it has an eventual consistency model, which
-can be challenging to work with (Facebook moved from Cassandra to HBase due to this).&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://cassandra.apache.org/&quot;&gt;Cassandra&lt;/a&gt; home page.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf&quot;&gt;Dynamo: Amazon’s Highly Available Key-value Store&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Apache_Cassandra&quot;&gt;Apache Cassandra&lt;/a&gt; page on Wikipedia.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.datacenterknowledge.com/archives/2014/07/31/hulu-cassandra-vs-hbase-vs-riak/&quot;&gt;Hulu Chooses Cassandra Over HBase and Riak&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;riak&quot;&gt;Riak&lt;/h2&gt;
-
-&lt;p&gt;Riak also follows the thread from Dynamo, and is a key-value store written in Erlang. Riak can do in-memory
-or disk storage, or both. Riak is very fault-tolerant but not as fast as something like Redis, leading to the
-idea that perhaps Riak is the back-end for a Redis cache?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://basho.com/products/&quot;&gt;Riak&lt;/a&gt; home page and &lt;a href=&quot;http://docs.basho.com/riak/latest/&quot;&gt;docs&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Riak&quot;&gt;Riak&lt;/a&gt; page on Wikipedia.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://compositecode.com/2013/02/10/riak-redis/&quot;&gt;Not So Versus, Riak Versus Redis&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://inaka.net/blog/2011/08/25/when-to-use-riak/&quot;&gt;My Year of Riak&lt;/a&gt; from 2011.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://docs.basho.com/riak/1.3.1/references/appendices/comparisons/Riak-Compared-to-Cassandra/&quot;&gt;Riak Compared to Cassandra&lt;/a&gt; potential bias since this is from Riak.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://basho.com/posts/technical/riak-vs-cassandra/&quot;&gt;Riak versus Cassandra&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hyperdex&quot;&gt;HyperDex&lt;/h2&gt;
-
-&lt;p&gt;HyperDex is a research project from Cornell turned commercial. I think this project started in 2010, but
-it seemed to be at a usable state by 2012.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://hyperdex.org/&quot;&gt;HyperDex&lt;/a&gt; home page and &lt;a href=&quot;http://hyperdex.org/papers/&quot;&gt;papers&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://hyperdex.org/papers/hyperdex.pdf&quot;&gt;HyperDex: A Distributed, Searchable Key-Value Store&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cs.cornell.edu/people/egs/&quot;&gt;Emin Gün Sirer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://rescrv.net/&quot;&gt;Robert Escriva&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HyperDex&quot;&gt;HyperDex&lt;/a&gt; page on Wikipedia&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;mongodb&quot;&gt;MongoDB&lt;/h2&gt;
-
-&lt;p&gt;We should not use MongoDB.&lt;/p&gt;
-
-&lt;h2 id=&quot;hbase&quot;&gt;HBase&lt;/h2&gt;
-
-&lt;p&gt;HBase is implementation of Google’s BigTable started by Powerset. It moved to the Apache Foundation in 
-2009, and is part of the Hadoop project; in fact, it runs on top of the Hadoop File System.&lt;/p&gt;
-
-&lt;p&gt;Facebook started using HBase in 2010 for their new messaging platform, and have now forked it into
-HydraBase. One key thing was the switch to RAFT for the consensus algorithm.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://code.facebook.com/posts/321111638043166/hydrabase-the-evolution-of-hbase-facebook/&quot;&gt;HydraBase – The evolution of HBase@Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;redis-cluster&quot;&gt;Redis Cluster&lt;/h2&gt;
-
-&lt;p&gt;Not sure.&lt;/p&gt;
-
-&lt;h2 id=&quot;cockroach-db&quot;&gt;Cockroach DB&lt;/h2&gt;
-
-&lt;p&gt;This will be awesome someday&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cockroachlabs.com/&quot;&gt;Cockroach Labs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/cockroachdb&quot;&gt;cockroachdb&lt;/a&gt; GitHub organization.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.wired.com/2014/07/cockroachdb/&quot;&gt;Out in the Open: Ex-Googlers Building Cloud Software That’s Almost Impossible to Take Down&lt;/a&gt; 2014 Wired Article&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;general-notes&quot;&gt;General notes&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://aphyr.com/tags/Jepsen&quot;&gt;Call Me Maybe - Jepsen&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.usenix.org/system/files/conference/hotos15/hotos15-paper-ajoux.pdf&quot;&gt;Challenges to Adopting Stronger Consistency at Scale&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.nahurst.com/visual-guide-to-nosql-systems&quot;&gt;Visual Guide to NoSQL Systems&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis&quot;&gt;Cassandra vs MongoDB…&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://book.mixu.net/distsys/single-page.html&quot;&gt;Distributed systems for fun and profit&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 17 Sep 2015 13:06:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2015/09/17/distributed-databases.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/09/17/distributed-databases.html</guid>
-        
-        <category>database,</category>
-        
-        <category>distributed</category>
         
         
         <category>dev</category>
