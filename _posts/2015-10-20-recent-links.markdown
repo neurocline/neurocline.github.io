@@ -28,7 +28,7 @@ tags: links
 
 [On the cruelty of really teaching computing science](http://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1036.html)
 
-[Watch a Directory for Changes](http://timgolden.me.uk/python/win32_how_do_i/watch_directory_for_changes.html), and [this](Watching a directory for file changes with Python) and [this](http://stackoverflow.com/questions/182197/how-do-i-watch-a-file-for-changes-using-python)
+[Watch a Directory for Changes](http://timgolden.me.uk/python/win32_how_do_i/watch_directory_for_changes.html), and [this](http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html) and [this](http://stackoverflow.com/questions/182197/how-do-i-watch-a-file-for-changes-using-python)
 
 C++ Blogs
 
