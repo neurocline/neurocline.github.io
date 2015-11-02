@@ -6,9 +6,161 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 30 Oct 2015 12:52:53 -0700</pubDate>
-    <lastBuildDate>Fri, 30 Oct 2015 12:52:53 -0700</lastBuildDate>
+    <pubDate>Mon, 02 Nov 2015 10:15:43 -0800</pubDate>
+    <lastBuildDate>Mon, 02 Nov 2015 10:15:43 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>A history of the Internet</title>
+        <description>&lt;p&gt;Recently, an ill-worded phrase by a near-friend of mine (“TCP/IP, a poorly designed protocol”),
+and his overlying thesis (“95% of the work in developing networking was done by commercial
+companies, DARPA shouldn’t get credit for the Internet”), caused me to do a lot of reading. I
+didn’t start hard-core software development myself until 1981, so while I knew a lot of this
+anecdotally, I quickly realized that I didn’t know as much as I thought.&lt;/p&gt;
+
+&lt;p&gt;I need to write all this up, but here’s a few nuggets.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The French nearly invented the Internet.&lt;/li&gt;
+  &lt;li&gt;Virtually all of the work on networking was funded by governments.&lt;/li&gt;
+  &lt;li&gt;The sole exception was Xerox PARC, but Xerox shot themselves in the foot.&lt;/li&gt;
+  &lt;li&gt;Davies, a Brit, came up with packet switching in 1959 (although perhaps it was simulataneously conceived of by Paul Baran).&lt;/li&gt;
+  &lt;li&gt;Cerf et al worked on creating ARPANET, a packet-switched network, but with a host-to-host, or connection-oriented, system called NCP, first public demonstration in 1972 (showing email, among other things).&lt;/li&gt;
+  &lt;li&gt;The University of Hawaii launched ALOHANet, a radio network using random packet transmission, in 1970.&lt;/li&gt;
+  &lt;li&gt;Then Louis Pouzin, French, came up with datagrams and smart edge/dumb router, the key innovations that turned ARPANET from unworkable to unbeatable.&lt;/li&gt;
+  &lt;li&gt;Meanwhile, Metcalfe, having done his Ph.D. thesis on what became Ethernet, was offered a job and major support by Xerox PARC; Ethernet was born in 1973.&lt;/li&gt;
+  &lt;li&gt;The French government and European industry said “nope, we like circuit switching just fine”, and even Pouzin himself became convinced, eventually abandoning his approach. But the ARPANET group saw it as a great advance.&lt;/li&gt;
+  &lt;li&gt;Then ARPA funded the rest; TCP/IP was invented, coded up, and eventually ARPANET switched over to it.&lt;/li&gt;
+  &lt;li&gt;BSD released a TCP/IP stack around 1983 that became the most influential networking stack in history.&lt;/li&gt;
+  &lt;li&gt;The actual opening of ARPANET to become the Internet we know was directly due to a $600 million US funding effort willed into existence by Al Gore.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In particular, TCP/IP had about 5 years of careful thought and initial development put to it,
+preceeded by 5 years of experimentation and trial, and then another 10 years to roll it out.
+Like many innovations that sprang out of nowhere, it did nothing of the same. From original
+idea to world-beating dominance was a 20-year timespan of thinking and implementing.&lt;/p&gt;
+
+&lt;p&gt;Note that TCP won because government funding shielded its development from the inter-company
+and inter-country politics that caused OSI to eventually become completely irrelevant. And
+the government subsidies meant that Interent protocols could be implemented for free, versus
+having to buy very expensive ISO docs for OSI. I doubt many of you have purchased ISO docs.&lt;/p&gt;
+
+&lt;p&gt;I like many of the write-ups I’ve read, and the few books on this, but I think there’s a good
+business thesis here that goes against the modern interpretation of the startup or corporation
+doing all of the work. Certainly, government funding is pitiful compared to what it was in
+the 20th century, and definitely in the period from 1950-1990. But what I see in real companies
+is that “works in practice” is not just important but “works in theory” is denigrated, and
+companies quickly reach local maxima and get stuck in a web of their own making, and stop
+advancing. As I re-read the history of efforts by IBM, DEC, ITTU and others, I see that
+clearly had happened, and I see it happening today, just less clearly.&lt;/p&gt;
+
+&lt;p&gt;In the past, people published early results, freely talked to each other, and as a result
+progress was rapid. Of course, people built on your results, and if you weren’t fast, your
+work benefitted others far more than yourself. In the modern era, there is relatively little
+sharing, and while progress is still happening, it’s starting to slow down. There are a host
+of factors, but large among them is that companies like Apple are very secretive about what
+they do, and allow no one to publish anything. Combine that with the relative lack of
+government funding, and it’s sad.&lt;/p&gt;
+
+&lt;p&gt;In particular, we should take the lessons of OSI versus TPC to heart. OSI was, in the end,
+an attempt by dominant vendors to hold onto their profits. Since telecommunications companies
+had circuits, naturally virtual circuits were the right answer, because they could still own
+connections. If they had won, we would have a fraction of the world we have today. Vested
+interests will rarely make good decisions. Just like the movie industry saw the VHS tape
+as a disaster, failing to see that it would cause their revenues and profits to skyrocket, the
+telecommunications vendors saw packet-switched networks as threatening their very existence.
+This is true for all the vendor-developed network systems; all were invented to prop up
+current modes of hardware production, or to allow them to muscle into the market as a new
+competitor.&lt;/p&gt;
+
+&lt;p&gt;Things will change. Telecommunications went from fairly open to very regulated and closed off,
+and it took a separate challenger (computing) to change that. Now computing is moving towards
+being closed off, but eventually we’ll see some other newcomer blossom and hijack attention
+and create progress. Maybe the Maker movement, or home bioengineering, will be that vector.&lt;/p&gt;
+
+&lt;h2 id=&quot;reading-list&quot;&gt;Reading list&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Donald_Davies&quot;&gt;Donald Davies&lt;/a&gt; developed the initial idea of packet-switched networks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/CYCLADES&quot;&gt;CYCLADES&lt;/a&gt; project that created datagrams and moved thinking to the edges.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.historyofcomputercommunications.info/index.html&quot;&gt;A HISTORY OF COMPUTER COMMUNICATIONS: 1968 -1988&lt;/a&gt;, book by Jim Pelkey, well worth reading.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://xbbn.weebly.com/bbn-internet-engineering-timeline.html&quot;&gt;BBN Internet Engineering Timeline&lt;/a&gt;. BBN was one of the government-funded companies at the heart of early network development.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/rfc/rfc801.txt&quot;&gt;RFC 801&lt;/a&gt;. Transitioning ARPANET from NCP to TCP.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rina.tssg.org/docs/PSOC-MovingBeyondTCP.pdf&quot;&gt;Moving beyond TCP&lt;/a&gt;, 2010, with some details on Pouzin’s contribution to networking, but largely as a modern “TCP/IP is not good enough, let’s replace it” proposal. Since one of the authors of this paper is John Day, the second half of the paper is a summary of his 2007 book.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Patterns-Network-Architecture-Fundamentals-paperback/dp/0137063385&quot;&gt;Patterns in Network Architecture&lt;/a&gt;, 2007, John Day, is a book both on reimagining networking, but also a good history of the development of TCP/IP and the Internet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.techrepublic.com/blog/classics-rock/does-anyone-actually-still-use-token-ring/&quot;&gt;Does anyone still use TokenRing?&lt;/a&gt;. TokenRing was IBM’s attempt to compete with Ethernet, developed in the early 1980s as a superior approach, but a combination of royalty pricing and Ethernet advancing far past TokenRing speeds killed it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spectrum.ieee.org/computing/networks/osi-the-internet-that-wasnt&quot;&gt;OSI: The Internet that wasn’t&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Inventing-Internet-Inside-Technology-Abbate/dp/0262511150&quot;&gt;Inventing the Internet&lt;/a&gt;, 1999, Jane Abbate.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cambridge.org/us/academic/subjects/history/twentieth-century-american-history/open-standards-and-digital-age-history-ideology-and-networks&quot;&gt;Open Standards and the Digital Age History, Ideology, and Networks&lt;/a&gt;, 2014, Andrew L. Russell.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.circleid.com/posts/84259_microsofts_contribution_tcp_ip/&quot;&gt;Microsoft’s Contribution Was TCP/IP&lt;/a&gt;, 2008, positing Microsoft helped put TCP/IP on the map.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.newmedia.org/history-of-the-internet.html&quot;&gt;History of the Internet&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Nov 2015 08:36:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/11/02/A-history-of-the-internet.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/02/A-history-of-the-internet.html</guid>
+        
+        <category>internet</category>
+        
+        <category>network</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Generalized Deterministic Parsers (GLR, GLL and more)</title>
+        <description>&lt;p&gt;Generalized deterministic parsing is an extension to deterministic parsing that
+temporarily handles ambiguous grammars under the idea that further input will resolve
+apparent conflicts.
+The first such one was called Generalized LR or GLR, under the idea that this technique
+(forking and parsing parallel parse trees each time an ambiguity was found) would only
+work with LR. Then, once a GLL parser was demonstrated, it was hard to call the
+method GLR. I’m going by the naming that Grune and Jacobs gave it in their 2007
+masterpiece Parsing techniques.&lt;/p&gt;
+
+&lt;p&gt;Bison supports GLR, and I don’t know why it’s not the default. GLR only costs more than
+LR when you have ambiguities in the grammar, and even C++ has only temporary ambiguities
+that resolve quickly. Also, you don’t need to try to rewrite the grammar to create a
+LALR parser.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.researchgate.net/publication/269645727_A_Practical_GLR_Parser_Generator_for_Software_Reverse_Engineering&quot;&gt;A Practical GLR Parser Generator for Software Reverse Engineering&lt;/a&gt; is a paper behind a gate in ResearchGate, e.g. &lt;a href=&quot;http://ojs.academypublisher.com/index.php/jnw/article/download/jnw0903769776/8857&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dparser.sourceforge.net/&quot;&gt;DParser&lt;/a&gt;, although doesn’t seem to have had much activity since initial creation in 2006.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.researchgate.net/publication/241755950_Integrating_a_GLR_Parser_Generator_in_Eli&quot;&gt;Integrating a GLR Parser Generator in Eli&lt;/a&gt; 2007 thesis. Direct PDF link &lt;a href=&quot;http://ag-kastens.uni-paderborn.de/paper/Bachelor_Schwekendiek.pdf&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pure.royalholloway.ac.uk/portal/en/publications/island-grammarbased-parsing-using-gll-and-tom(1bccc756-7ebc-4b14-abd2-8910ef5dcbeb).html&quot;&gt;Island Grammar-Based Parsing Using GLL and Tom&lt;/a&gt;. I think Adrian Johnstone is the one who demonstrated the possibility of GLL parsers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pure.royalholloway.ac.uk/portal/en/publications/gll-parsetree-generation(bdbcf5af-d176-4389-bfcc-ecc86a5a5f77).html&quot;&gt;GLL parse-tree generation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pure.royalholloway.ac.uk/portal/en/publications/modular-grammar-specification(f73cedc9-678f-4115-8802-2add7aa0763d).html&quot;&gt;Modular grammar specification&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pure.royalholloway.ac.uk/portal/en/publications/modelling-gll-parser-implementations(2c1e93df-746c-4271-8de6-534141d0c9b5).html&quot;&gt;Modelling GLL parser implementations&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Nov 2015 23:05:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/11/01/generalized-deterministic-parsers.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/01/generalized-deterministic-parsers.html</guid>
+        
+        <category>compiler</category>
+        
+        <category>parser</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -375,142 +527,6 @@ can make parallel progress.&lt;/p&gt;
         <category>threads</category>
         
         <category>multiprocessing</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Engineering at scale</title>
-        <description>&lt;p&gt;Twitter talk at &lt;a href=&quot;http://www.atscaleconference.com/&quot;&gt;@Scale 2015&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://spectrum.ieee.org/view-from-the-valley/computing/software/twitters-tips-for-making-software-engineers-more-efficient&quot;&gt;Twitter’s Tips for Making Software Engineers More Efficient&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Unpacking this a bit:&lt;/p&gt;
-
-&lt;p&gt;Peter Seibel, currently the tech lead of Twitter’s engineering effectiveness group, is the author of two books&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Coders At Work, interviews with a few dozen influential programmers&lt;/li&gt;
-  &lt;li&gt;Practical Common Lisp: two editions, 2005 and 2012&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;He tried to start a new online programmer magazine in 2010 called &lt;a href=&quot;&quot;&gt;Code Quarterly&lt;/a&gt; but &lt;a href=&quot;https://gigamonkeys.wordpress.com/2011/10/17/end-of-the-line-for-code-quarterly/&quot;&gt;pulled the plug on it&lt;/a&gt; a year and change later, which is too bad, because there is still a need for something like this.&lt;/p&gt;
-
-&lt;p&gt;In a nutshell, here’s what he said about concerted efforts to make engineers more efficient&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;if you have 1 to 10 people, don’t devote anyone&lt;/li&gt;
-  &lt;li&gt;at 100 people, you need 2 people devoted to tools and the like, and those 2 will be as effective as 101 engineers&lt;/li&gt;
-  &lt;li&gt;at 1000, you need 255 to support the rest, and they’ll be as effective as 1400&lt;/li&gt;
-  &lt;li&gt;at 10,000, you need 1/3rd of your group devoted to this&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Twitter has 2,000 engineers. For what it does, that seems excessive.&lt;/p&gt;
-
-&lt;p&gt;Facebook has 10,000 engineers now. Holy moley.&lt;/p&gt;
-
-&lt;p&gt;Apple had around 12,000 engineers in 2014 in the US, and an unknown amount outside the US.
-Total number probably around 16,000 (at least so says LinkedIn).&lt;/p&gt;
-
-&lt;p&gt;Google has about 28,000 engineers. Current headcount as of June 30 2015 is 57,148. As of December 31 2014, total headcount was 53,600 with 20,832 in R&amp;amp;D and 7,637 in operations.&lt;/p&gt;
-
-&lt;p&gt;Samsung has about 40,00 engineers (as of 2013). Still less than Microsoft, although Samsung
-has more total employees.&lt;/p&gt;
-
-&lt;p&gt;Microsoft has around 55,000 engineers.
-http://news.microsoft.com/facts-about-microsoft/#EmploymentInfo&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/gadgets/2014/09/samsung-has-more-employees-than-google-apple-and-microsoft-combined/&quot;&gt;Samsung has more employees than Google, Apple, and Microsoft combined&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Amazon has more than 1000, but can’t find numbers. Low thousands of software engineers.&lt;/p&gt;
-
-&lt;p&gt;IBM probably still has 50,000 software engineers?&lt;/p&gt;
-
-&lt;p&gt;Oracle probably has 10,000 or more&lt;/p&gt;
-</description>
-        <pubDate>Sun, 27 Sep 2015 15:12:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2015/09/27/engineering-at-scale.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/09/27/engineering-at-scale.html</guid>
-        
-        <category>process</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Peeking into Python</title>
-        <description>&lt;p&gt;There are a number of ways to peek into Python code and data.&lt;/p&gt;
-
-&lt;h2 id=&quot;built-in-functions-for-output&quot;&gt;Built-in functions for output&lt;/h2&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://docs.python.org/2/library/functions.html&quot;&gt;built-in primitives&lt;/a&gt; that are relevant are&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;dir()&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;repr()&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;vars()&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;dir(object)&lt;/code&gt; shows all the attributes for the object. Of course, not all objects
-have attributes. It’s really made for use at an interactive prompt, not as
-an in-code method. Basically, it either calls &lt;code&gt;__dir__()&lt;/code&gt;, or it looks at
-the &lt;code&gt;__dict__&lt;/code&gt; attribute and shows some of the information.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;repr(object)&lt;/code&gt; returns a printable representation of an object. Again, this sounds
-good until you use it, because anything other than built-in types just returns
-a string with the class name and the address of the object. Still, it’s the gateway
-to something useful if you also add &lt;code&gt;__repr__()&lt;/code&gt; methods to your classes, because &lt;code&gt;repr()&lt;/code&gt;
-will call the &lt;code&gt;__repr__&lt;/code&gt; method if it exists. Of course, the downside is that you need
-a systematic and consistent approach, and you have to write that code yourself.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;vars(object)&lt;/code&gt; is more useful for printing than &lt;code&gt;dir&lt;/code&gt; - it returns
-the &lt;code&gt;__dict__&lt;/code&gt; attribute, which means that if you call &lt;code&gt;print(vars(object))&lt;/code&gt; you’ll
-see keys and values together, whereas &lt;code&gt;dir()&lt;/code&gt; just shows the keys.&lt;/p&gt;
-
-&lt;h2 id=&quot;useful-classes-for-output&quot;&gt;Useful classes for output&lt;/h2&gt;
-
-&lt;p&gt;The &lt;code&gt;pprint&lt;/code&gt; module sounds useful until you use it. Its utility is largely restricted
-to pretty-printing, it doesn’t give you extra disassembly powers on its own. But
-see &lt;a href=&quot;https://docs.python.org/2/library/pprint.html&quot;&gt;pprint–Data pretty printer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://docs.python.org/2/library/inspect.html&quot;&gt;&lt;code&gt;inspect&lt;/code&gt;&lt;/a&gt; module is a lot more useful, but it doesn’t do output, it just lets
-you get information about objects.&lt;/p&gt;
-
-&lt;h2 id=&quot;built-in-functions-for-introspection&quot;&gt;Built-in functions for introspection&lt;/h2&gt;
-
-&lt;p&gt;Some built-ins are useful for testing objects:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;type&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;isinstance&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;hasattr&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;type(object)&lt;/code&gt; returns a string indicating the type of the object. As such, it can
-be used for both output and testing.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;isinstance(object, classinfo)&lt;/code&gt; returns &lt;code&gt;True&lt;/code&gt; if &lt;code&gt;object&lt;/code&gt; is an instance
-of &lt;code&gt;classinfo&lt;/code&gt; (including inheritance). In general, it’s more appropriate to use
-&lt;code&gt;isinstance&lt;/code&gt; for type testing because it does handle inheritance.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;types&lt;/code&gt; module is useful for both &lt;code&gt;type&lt;/code&gt; and &lt;code&gt;isintance&lt;/code&gt; use. And type
-output needs this kind of introspection so it knows what it should print.&lt;/p&gt;
-
-&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/library/l-pyint/&quot;&gt;Guide to Python introspection&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 24 Sep 2015 20:47:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2015/09/24/peeking-into-python.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/09/24/peeking-into-python.html</guid>
-        
-        <category>python,</category>
-        
-        <category>debugging</category>
         
         
         <category>dev</category>
