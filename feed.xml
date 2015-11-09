@@ -6,9 +6,64 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 Nov 2015 12:46:49 -0800</pubDate>
-    <lastBuildDate>Wed, 04 Nov 2015 12:46:49 -0800</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2015 22:54:34 -0800</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2015 22:54:34 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://radar.oreilly.com/2015/10/swarm-v-fleet-v-kubernetes-v-mesos.html&quot;&gt;Swarm v. Fleet v. Kubernetes v. Mesos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html&quot;&gt;27 languages to improve your Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tympanus.net/codrops/2015/11/04/rain-water-effect-experiments/&quot;&gt;Rain &amp;amp; Water Effect Experiments&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!topic/android-platform/Hhl_4hfOONg/discussion&quot;&gt;Re: ANN: AOSP builds with ninja&lt;/a&gt; - Android builds are now done with Ninja.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cryptography.readthedocs.org/en/latest/fernet/&quot;&gt;Fernet (symmetric encryption)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://eng.lyft.com/announcing-confidant-an-open-source-secret-management-service-from-lyft-1e256fe628a3&quot;&gt;Announcing Confidant: an open source secret management service from Lyft&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.ibm.com/open/systemml/&quot;&gt;SystemML&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.quora.com/What-is-the-difference-between-Data-Analytics-Data-Analysis-Data-Mining-Data-Science-Machine-Learning-and-Big-Data-1&quot;&gt;What is the difference between Data Analytics, Data Analysis, Data Mining, Data Science, Machine Learning, and Big Data?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/hangtwenty/dive-into-machine-learning&quot;&gt;hangtwenty/dive-into-machine-learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gizmodo.com/can-these-glasses-help-the-colorblind-we-put-en-chroma-1739433668&quot;&gt;Can These Glasses Help the Colorblind? We Put EnChroma to the Test&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.arcanoae.com/blue-lion-go/&quot;&gt;Blue Lion is Go!&lt;/a&gt;. A new OS/2 distribution!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.siftscience.com/blog/2015/how-fraudulent-users-slip-under-the-radar&quot;&gt;How Fraudulent Users Slip Under the Radar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@brandonmchu/the-black-box-of-product-management-3feb65db6ddb&quot;&gt;The Black Box of Product Management&lt;/a&gt;. “What does a product manager do, anyway?”&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.khoslaventures.com/wp-content/uploads/Good_Product_Manager_Bad_Product_Manager_KV.pdf&quot;&gt;Good Product Manager Bad Product Manager&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://techcrunch.com/2015/11/03/prop-f/&quot;&gt;Airbnb, Proposition F And The Shared Hypocrisy Of Bay Area Housing&lt;/a&gt;. Article chock-full of information, although ostensibly about Airbnb and the (failed) Proposition F in November 2015.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/symisc/libcox&quot;&gt;Symisc Libcox - Cross Platform System Calls &amp;amp; Utilities&lt;/a&gt;. Cross-platform ANSI-C library for making system calls. Dubious at the moment, but could become something great.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://homepage.ntlworld.com/jonathan.deboynepollard/Softwares/nosh.html&quot;&gt;The nosh package&lt;/a&gt;. Managing daemons, terminals and logging.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://shkspr.mobi/blog/2015/11/google-secret-screenshot-api/&quot;&gt;Google’s Secret Screenshot API&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pgbovine.net/cpython-internals.htm&quot;&gt;CPython internals: A ten-hour codewalk through the Python interpreter source code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://lwn.net/Articles/659199/&quot;&gt;tcp/dccp: lockless listener&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lemire.me/blog/2015/10/26/crazily-fast-hashing-with-carry-less-multiplications/&quot;&gt;Crazily fast hashing with carry-less multiplications&lt;/a&gt;. This is insanely fast. If it really produces good dispersion, this would become the preferred hash function for long strings that don’t need cryptographic behavior.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Nov 2015 17:32:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/11/08/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/08/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Command-line argument parsing</title>
@@ -545,87 +600,6 @@ merits but would still be somewhat neutered without PyPI.&lt;/p&gt;
         
         
         <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Current work links</title>
-        <description>&lt;p&gt;Python docs&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/functions.html&quot;&gt;2. Built-in functions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/exceptions.html#exceptions.Exception&quot;&gt;6. Built-in exceptions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/signal.html&quot;&gt;17.4. signal&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Python snippets&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.ianlewis.org/en/dynamically-adding-method-classes-or-class-instanc&quot;&gt;Dynamically Adding a Method to Classes or Class Instances in Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://igorsobreira.com/2011/02/06/adding-methods-dynamically-in-python.html&quot;&gt;Adding methods dynamically in Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/972/adding-a-method-to-an-existing-object&quot;&gt;Adding a Method to an Existing Object&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3232613/how-to-stop-sigint-being-passed-to-subprocess-in-python&quot;&gt;How to stop SIGINT being passed to subprocess in python?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://andrewbrookins.com/tech/how-to-get-the-name-of-the-class-of-a-decorated-method-in-python/&quot;&gt;Python: How to tell what class a decorated method is in at runtime&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/8804830/python-multiprocessing-pickling-error&quot;&gt;Python multiprocessing pickling error&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/842557/how-to-prevent-a-block-of-code-from-being-interrupted-by-keyboardinterrupt-in-py&quot;&gt;How to prevent a block of code from being interrupted by KeyboardInterrupt in Python?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://noswap.com/blog/python-multiprocessing-keyboardinterrupt&quot;&gt;Python: Using KeyboardInterrupt with a Multiprocessing Pool&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1408356/keyboard-interrupts-with-pythons-multiprocessing-pool&quot;&gt;Keyboard Interrupts with python’s multiprocessing Pool&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Python articles&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://sebastianraschka.com/Articles/2014_multiprocessing_intro.html&quot;&gt;An introduction to parallel programming:using Python’s multiprocessing module&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.rafekettler.com/magicmethods.html&quot;&gt;A Guide to Python’s Magic Methods&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://vimmaniac.com/blog/codejunkie/safe-use-of-unix-signals-with-multiprocessing-module-in-python/&quot;&gt;Safe use of unix signals with multiprocessing module in python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jtushman.github.io/blog/2014/01/14/python-%7C-multiprocessing-and-interrupts/&quot;&gt;Python Multiprocessing and Interrupts&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://migrateup.com/python-concurrency-story-pt1/#&quot;&gt;The Python Concurrency Story, Part 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://migrateup.com/python-concurrency-story-pt2/#&quot;&gt;The Python Concurrency Story, Part 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wiki.python.org/moin/Concurrency/&quot;&gt;Concurrency (Python Wiki)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python&quot;&gt;Python Multithreading Tutorial: Concurrency and Parallelism&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.bogotobogo.com/python/Multithread/python_multithreading_Event_Objects_between_Threads.php&quot;&gt;Multithreading - Event Objects between Threads&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://m7i.org/tutorials/python-event-queue-concurrency-modeling/&quot;&gt;Making an event queue in python: a concurrency and modeling tutorial&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://effbot.org/zone/thread-synchronization.htm&quot;&gt;Thread Synchronization Mechanisms in Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://glyph.twistedmatrix.com/2014/02/unyielding.html&quot;&gt;Unyielding&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Python Videos&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=HTLu2DFOdTg&quot;&gt;Python’s Class Development Toolkit&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=MCs5OvhV9S4&quot;&gt;David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Distributed systems&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stevenpoitras.com/the-nutanix-bible/&quot;&gt;The Nutanix Bible&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/ec2/instance-types/&quot;&gt;Amazon EC2 Instances&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://progrium.com/blog/&quot;&gt;Progrium (Jeff Lindsay)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://book.mixu.net/distsys/single-page.html&quot;&gt;Distributed systems for fun and profit&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.empathybox.com/post/19574936361/getting-real-about-distributed-system-reliability&quot;&gt;Getting Real About Distributed System Reliability&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://static.usenix.org/publications/login/2012-02/pdfs/Chansler.pdf&quot;&gt;Data Availability and Durability with the Hadoop Distributed File System&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://pbs.cs.berkeley.edu/#demo&quot;&gt;PBS: Probabilistically Bounded Staleness&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/dn589797.aspx&quot;&gt;Sharding Pattern&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Other&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://thrift.apache.org/&quot;&gt;Apache Thrift&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://avro.apache.org/&quot;&gt;Apache Avro&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://tagide.com/blog/academia/research-in-programming-languages/&quot;&gt;Research in Programming Languages&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.dreamsongs.com/RiseOfWorseIsBetter.html&quot;&gt;The Rise of Worse is Better&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://nichol.as/zeromq-an-introduction&quot;&gt;ZeroMQ an introduction&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://queues.io/&quot;&gt;Queues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 09 Oct 2015 07:26:00 -0700</pubDate>
-        <link>http://neurocline.github.io/programming/2015/10/09/work-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/programming/2015/10/09/work-links.html</guid>
-        
-        
-        <category>programming</category>
         
       </item>
     
