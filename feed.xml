@@ -6,9 +6,61 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Nov 2015 22:54:34 -0800</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2015 22:54:34 -0800</lastBuildDate>
+    <pubDate>Thu, 12 Nov 2015 16:03:09 -0800</pubDate>
+    <lastBuildDate>Thu, 12 Nov 2015 16:03:09 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>TCP auto-tuning</title>
+        <description>&lt;p&gt;TCP auto-tuning is not new, but it’s still not well-known. TCP performance has
+two competing environmental issues tugging at it. If you queue too much, then
+you have wild swings when congestion happens, causing your transmission rate
+to swing between maximum and near-zero. If you don’t have enough packets in
+flight, then you are waiting in ACKs to be returned, and thus using only a
+fraction of available bandwidth. Both of these have one input from you, the
+size of the receive buffer (and lesser but still somewhat important, the
+size of the send buffer).&lt;/p&gt;
+
+&lt;p&gt;TCP auto-tuning’s insight was to let the TCP stack participate in setting the
+size of TCP buffers. In the past 10 years, most major operating systems have
+added TCP auto-tuning to their TCP network stacks. Linux as of 2.6, Windows
+as of Vista, Mac OS X as of 10.5.&lt;/p&gt;
+
+&lt;p&gt;I think that most operating system disable auto-tuning if you manually set socket
+buffer sizes. In BSD, this is done with setsockopt:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65536&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;setsockopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOL_SOCKET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SO_SNDBUF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65536&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;setsockopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOL_SOCKET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SO_RCVBUF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://fasterdata.es.net/host-tuning/&quot;&gt;Host Tuning&lt;/a&gt; - details for various operating systems on manual and automatic tuning.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.switch.ch/network/tools/tcp_throughput/&quot;&gt;TCP Throughput Calculator&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.psc.edu/index.php/networking/641-tcp-tune&quot;&gt;Enabling High Performance Data Transfers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://serverfault.com/questions/608060/windows-tcp-window-scaling-hitting-plateau-too-early&quot;&gt;Windows TCP Window Scaling Hitting plateau too early&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.acc.umu.se/~maswan/linux-netperf.txt&quot;&gt;TCP performance tuning - how to tune linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://littledaemons.wordpress.com/2009/03/25/linux-tcp-auto-tuning/&quot;&gt;LINUX TCP AUTO-TUNING&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.riccardoriva.info/blog/?p=1286&quot;&gt;How-To disable Windows 7 TCP/IP auto-tuning&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 12 Nov 2015 09:19:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/11/12/tcp-auto-tuning.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/12/tcp-auto-tuning.html</guid>
+        
+        <category>network</category>
+        
+        <category>internet</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -578,25 +630,6 @@ merits but would still be somewhat neutered without PyPI.&lt;/p&gt;
         <category>quorum</category>
         
         <category>go</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Blogs to look at</title>
-        <description>&lt;p&gt;These are interesting blogs to study.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bitquabit.com/page/projects/&quot;&gt;bitquabit&lt;/a&gt; and &lt;a href=&quot;https://bitbucket.org/bpollack/blag&quot;&gt;source code&lt;/a&gt;. Look at revision history to make sense of it.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 13 Oct 2015 23:46:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2015/10/13/blogs-to-look-at.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/10/13/blogs-to-look-at.html</guid>
-        
-        <category>python</category>
-        
-        <category>blog</category>
         
         
         <category>dev</category>
