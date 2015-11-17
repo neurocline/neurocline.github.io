@@ -1,0 +1,117 @@
+---
+layout: post
+title:  "C++11, C++14, C++17"
+date:   2015-11-16 19:00:00 PM
+categories: dev
+tags: C++ programming
+---
+So, what exactly is here now and coming soon for C++?
+
+First off, compilers. Clang is the front-runner, GCC is close, and Visual Studio 2015 is catching up but still incomplete.
+
+Most annoyingly, VS 2015 doesn't fully support C++11. It doesn't have expression SFINAE, and its constexpr support is close but complete.
+
+Clang 3.4 and GCC 4.9 both fully support C++14. Visual Studio 2015 lacks variable templates, extended constexpr, and aggregate member initialization in its core langauge support. I think that library support for Visual Studio is complete except for the bits that can't be done due to missing core language features.
+
+## C++11
+
+There are now a lot of books covering C++11 in depth. Some precis:
+
+* [C++11 - the new ISO C++ standard](http://www.stroustrup.com/C++11FAQ.html) - Stroustroup FAQ
+
+## C++14
+
+Not much was added to the core language with C++14, true, but on the other hand, these changes made so-so features in C++11 into much better, more useful features. Some other write-ups on these features:
+
+* [C++14 Language Extensions](https://isocpp.org/wiki/faq/cpp14-language)
+* [C++14 Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B14)
+* [The C++14 Standard: What You Need to Know](http://www.drdobbs.com/cpp/the-c14-standard-what-you-need-to-know/240169034)
+* [C++14 Is Here: Summary of New Features](http://www.infoq.com/news/2014/08/cpp14-here-features)
+* [C++ Support in Clang](http://clang.llvm.org/cxx_status.html) - Clang 3.4 and up
+* [C++1y/C++14 Support in GCC](https://gcc.gnu.org/projects/cxx1y.html) - GCC 4.9 and up
+* [C++11/14/17 Features In VS 2015 RTM](http://blogs.msdn.com/b/vcblog/archive/2015/06/19/c-11-14-17-features-in-vs-2015-rtm.aspx) - VS2015 still missing Expression SFINAE from C++11, and Variable templates, extended constexpr, and aggregate member initialization (minor) in C++14.
+
+### Binary literals and digits separator.
+
+I just wish that the digits separator wasn't so unusual, but I'll get used to it.
+
+{% highlight c++ %}
+auto a = 0b100'0001;  // ASCII 'A'
+{% endhighlight %}
+
+* [Binary Literals in the C++ Core Language](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)
+* [Single-Quotation-Mark as a Digit Separator](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3781.pdf)
+
+### Variable templates
+
+Not to be confused with variadic templates - this allows you to have templates that wrap variables. Now you can have a template that is a templated variable, and really largely to write parameterized constants with constexpr in a more straightforward fashion.
+
+{% highlight c++ %}
+// math constant with precision dictated by actual type
+template<typename T> constexpr T pi = T(3.14159265358979323846);
+{% endhighlight %}
+
+* [Variable Templates](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf)
+
+### Extended constexpr
+
+This is huge, because it extends what you can do with constexpr functions. You can write loops as opposed to resorting to recursion. Specifically, your constexpr functions can have local variables, and use if, switch, for, while, or do...while (just not goto).
+
+{% highlight c++ %}
+constexpr int fact(int n)
+{
+    int sum = n;
+    while (n > 1)
+    {
+    	sum *= n;
+    	n -= 1;
+    }
+    return sum;
+}
+{% endhighlight %}
+
+* [Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)
+
+## C++17
+
+Obviously, C++17 is still baking. What's likely to be in it?
+
+First off, an internal position paper that Stroustroup wrote escaped to the wild, so he re-published it: [Thoughts about C++17](https://isocpp.org/files/papers/D4492.pdf). His goals are roughly "better support for large-scale programs, better support for concurrency, simplify core language use".
+
+The best thing to read at the moment is this: [Trip Report: C++ Standards Meeting in Kona, October 2015](https://botondballo.wordpress.com/2015/11/09/trip-report-c-standards-meeting-in-kona-october-2015/)). It's long but well worth your time.
+
+My favorite small things:
+
+* UTF-8 character literals: u8"string"
+* default message for static_assert
+* std::auto_ptr is gone
+
+Something that's baking but has hope
+
+* std::variant<T> (similar to [Variant v5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0088r0.pdf) but it throws on invalid move).
+
+Some medium things
+
+* operator dot ("operator.") - fixing a hole in original C++ overloaded operators.
+* uniform call syntax
+* namespace and enumerator attributes
+
+Some big things
+
+* concepts light
+* coroutines
+* await (part of stackless coroutines, but might make it as a keyword on its own)
+
+There's a lot on the library front
+
+* asio likely to be the official C++ network library
+* stackful coroutines can be done at the library level
+
+What's almost certainly not going to make C++17?
+
+* modules - I find both current proposals half-baked, so this is a relief.
+* contracts - similar, don't think it's thought through enough yet.
+
+Here's the list of C++17 candidate papers
+
+* [JTC1/SC22/WG21 - Papers 2015 ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/)
