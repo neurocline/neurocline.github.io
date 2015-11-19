@@ -83,6 +83,7 @@ C
 * [Arg_parser](http://www.nongnu.org/arg-parser/arg_parser.html)
 * [getoptpp](https://code.google.com/p/getoptpp/). A getopt variant.
 * [Google Commandline flags](https://google-gflags.googlecode.com/svn/trunk/doc/gflags.html)
+* [popt](http://directory.fsf.org/wiki/Popt) and [man](http://linux.die.net/man/3/popt). RedHat, X11 license.
 
 C#
 
