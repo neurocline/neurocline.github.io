@@ -6,9 +6,30 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Nov 2015 20:20:17 -0800</pubDate>
-    <lastBuildDate>Wed, 18 Nov 2015 20:20:17 -0800</lastBuildDate>
+    <pubDate>Mon, 23 Nov 2015 01:04:36 -0800</pubDate>
+    <lastBuildDate>Mon, 23 Nov 2015 01:04:36 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://libmill.org/index.html&quot;&gt;libmill&lt;/a&gt;: Go-style concurrency in C. &lt;a href=&quot;https://github.com/sustrik/libmill&quot;&gt;Github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nanomsg.org/&quot;&gt;nanomsg&lt;/a&gt; and &lt;a href=&quot;https://github.com/nanomsg/nanomsg&quot;&gt;Github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mistune.readthedocs.org/en/latest/&quot;&gt;mistune&lt;/a&gt; is a markdown parser in Python, &lt;a href=&quot;https://github.com/lepture/mistune&quot;&gt;Github repo&lt;/a&gt; here.&lt;/p&gt;
+
+&lt;p&gt;Oh yeah, and &lt;a href=&quot;https://readthedocs.org/&quot;&gt;ReadTheDocs&lt;/a&gt; itself is starting a small revolution.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Nov 2015 12:06:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/11/20/go-style-concurrency-in-c.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/20/go-style-concurrency-in-c.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>C++ functions</title>
@@ -349,6 +370,72 @@ although you can’t overload on just return type.&lt;/p&gt;
         
         
         <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Electronic Music Bands</title>
+        <description>&lt;p&gt;layout: post
+title:  “Electronic bands to listen to”
+date:   2015-11-13 15:29:00 PM
+categories: music
+tags: electronic
+—&lt;/p&gt;
+
+&lt;p&gt;This is not an inclusive list by any means. I have favorites that I forget and then
+rediscover (and wonder how I forgot them), and so I expect I’ll update this list over
+time. It’s mostly for me to remember and to discover.&lt;/p&gt;
+
+&lt;p&gt;Some of my all-time favorites&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stockhausen&lt;/li&gt;
+  &lt;li&gt;Walter/Wendy Carlos&lt;/li&gt;
+  &lt;li&gt;Synergy&lt;/li&gt;
+  &lt;li&gt;Tangering Dream&lt;/li&gt;
+  &lt;li&gt;Vangelis&lt;/li&gt;
+  &lt;li&gt;Jean-Michel Jarre&lt;/li&gt;
+  &lt;li&gt;Tomita&lt;/li&gt;
+  &lt;li&gt;Brian Eno&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some newer favorites&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;VNV Nation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And even newer (just started listening to)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Symbion Project&lt;/li&gt;
+  &lt;li&gt;Kodomo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Others I want to follow up on&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Freezepop&lt;/li&gt;
+  &lt;li&gt;Splashdown&lt;/li&gt;
+  &lt;li&gt;Yellow Magic Orchestra&lt;/li&gt;
+  &lt;li&gt;Gary Numan&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Two useful Wikipedia pages for you&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Timeline_of_electronic_music_genres&quot;&gt;Timeline of electronic music genres&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_electronic_music_genres&quot;&gt;List of electronic music genres&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the 1980s and 1990s, I listened to the radio show &lt;a href=&quot;https://www.hos.com/&quot;&gt;Hearts of Space&lt;/a&gt;
+a lot; as the name indicates, it focuses on slower electronic music: ambient and new-age. It
+can still be found on a lot of radio channels across the US.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 13 Nov 2015 00:00:00 -0800</pubDate>
+        <link>http://neurocline.github.io/2015/11/13/electronic-music-bands.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/2015/11/13/electronic-music-bands.html</guid>
+        
         
       </item>
     
@@ -793,116 +880,6 @@ LALR parser.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2015/10/20/recent-links.html</guid>
         
         <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Python doc links</title>
-        <description>&lt;p&gt;Python 2&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/argparse.html&quot;&gt;15.4 - argparse&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/logging.html&quot;&gt;15.7 - logging&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/threading.html&quot;&gt;16.2 - threading&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/multiprocessing.html&quot;&gt;16.6 - multiprocessing&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/2/library/mmap.html&quot;&gt;16.7 - mmap&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Python 3&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/3.5/library/argparse.html&quot;&gt;16.4 - argparse&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/3.5/library/logging.html&quot;&gt;16.6 - logging&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/3.5/library/threading.html&quot;&gt;17.1 - threading&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/3.5/library/multiprocessing.html&quot;&gt;17.2 - multiprocessing&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/3.5/library/asyncio.html&quot;&gt;18.5 - asyncio&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/3.5/library/mmap.html&quot;&gt;18.9 - mmap&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 20 Oct 2015 23:33:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2015/10/20/python-docs.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/10/20/python-docs.html</guid>
-        
-        <category>python</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>SIGINT clean handling in Python</title>
-        <description>&lt;p&gt;This is #1 in the series “It seems to be hard to make Python robust”. A robust program
-won’t crash malfunction when ctrl-c is pressed, it will abort down clealy if possible.
-This is important with multiprocessing programs, because naive code will actually hang
-when you try to interrupt it with ctrl-c.&lt;/p&gt;
-
-&lt;p&gt;SIGINT (the exception raised when you press ctrl-c) will raise an exception when
-I/O operations return. This is pretty annoying. This happens even on time.sleep().&lt;/p&gt;
-
-&lt;p&gt;The way around this to catch ctrl-c is to install a handler, and put try blocks around
-IO operations. Real code won’t ignore IOError like this, this is just a sample.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# sigint-clean.py&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# A SIGINT will cause an I/O operation to raise exceptions on return. This happens&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# even on Windows. This means even with a ctrl-c handler, you must wrap I/O calls&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# in a try/catch IOError block and check for interrupted. Annoying&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;signal&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;catch_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caught_sigint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;note_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;signum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caught_sigint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__enter__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oldsigint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIGINT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;note_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__exit__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIGINT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oldsigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__call__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caught_sigint&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;catch_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;got_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;running&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;running&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;got_sigint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;running&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Caught SIGINT!&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# without this try/except, you&amp;#39;ll get an IOError when ctrl-c pressed&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;ne&quot;&gt;IOError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And the other other answer is to write your serious programs in C++ (or maybe Go)? I still
-like Python, but the effort to get to silky smooth reliability is erasing all the gains from
-using Python in the first place. The answer of course is to make C++ as easy to use as Python.
-That’s not a language issue, it’s an environment/packages issue.&lt;/p&gt;
-
-&lt;p&gt;Perl, Python and R should give incredible credit to CTAN (Comprehensive Tex Archive Network) for
-blazing the trail. That’s the real reason Perl became successful. Python lives more on its own
-merits but would still be somewhat neutered without PyPI.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 17 Oct 2015 13:00:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2015/10/17/sigint-clean-handling-python.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/10/17/sigint-clean-handling-python.html</guid>
-        
-        <category>python</category>
-        
-        <category>exception</category>
         
         
         <category>dev</category>
