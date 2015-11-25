@@ -18,6 +18,7 @@ Online magazines
 
 More
 
+* [The Morning Paper](http://blog.acolyer.org/) - an interesting paper a day
 * [Marginal Revolution](http://marginalrevolution.com/) - economics blog, Tyler Cowen
 * [Sidebar](http://sidebar.io/) - design links
 * [io9](http://io9.com/) - "we come from the future"
