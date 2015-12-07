@@ -6,9 +6,44 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Nov 2015 17:46:51 -0800</pubDate>
-    <lastBuildDate>Tue, 24 Nov 2015 17:46:51 -0800</lastBuildDate>
+    <pubDate>Sun, 06 Dec 2015 21:25:47 -0800</pubDate>
+    <lastBuildDate>Sun, 06 Dec 2015 21:25:47 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://techblog.netflix.com/2015/11/linux-performance-analysis-in-60s.html&quot;&gt;Linux Performance Analysis in 60,000 Milliseconds&lt;/a&gt;, from Netflix blog.&lt;/p&gt;
+
+&lt;p&gt;[GDP Growth over the Very Long Run])(http://ourworldindata.org/data/growth-and-distribution-of-prosperity/gdp-growth-over-the-very-long-run/). GDP per person over the last 2000 years.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://google.github.io/styleguide/cppguide.html&quot;&gt;Google C++ Style Guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/rumpkernel/wiki/wiki/Tutorial:-Building-Rumprun-Unikernels&quot;&gt;Tutorial: Building Rumprun Unikernels&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/MaximAbramchuck/awesome-interviews&quot;&gt;Awesome Interviews&lt;/a&gt;. Curated list of lists of interview questions.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.conan.io/&quot;&gt;Conan&lt;/a&gt;. C++ package manager (descendent of Biicode)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/postgres/postgres/tree/master/src/backend/regex&quot;&gt;Implementation notes about Henry Spencer’s regex library&lt;/a&gt; from Postgres source code.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tillett.info/2015/08/30/ideas-are-not-cheap/&quot;&gt;Ideas are not cheap&lt;/a&gt;. OK. Hmm. I agree with the sentiment, but not his direction. He’s hoping that good ideas don’t need lots of work, or need to go up against tremendous opposition or inertia, or … most of the things that are the reason that good ideas exist that are unimplemented. Worth reading if only to react against.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.dbms2.com/2015/04/16/notes-on-indexes-and-index-like-structures/&quot;&gt;Notes on indexes and index-like structures&lt;/a&gt;. A little pompous but maybe this guy is allowed.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.jandrewrogers.com/2015/05/27/metrohash/&quot;&gt;MetroHash: Faster, Better Hash Functions&lt;/a&gt;. This also comes across as ridiculously arrogant, but again, maybe it’s deserved.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.pvk.ca/Blog/2015/11/29/retrospective-on-binary-search-and-on-compression-slash-compilation/&quot;&gt;Retrospective on Binary Search and Comp{ress,ilat}ion&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 22:26:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/12/05/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/05/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -832,54 +867,6 @@ LALR parser.&lt;/p&gt;
         <category>compiler</category>
         
         <category>parser</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://radek.io/2015/10/20/httpie/&quot;&gt;httpie&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://yahoohadoop.tumblr.com/post/129872361846/large-scale-distributed-deep-learning-on-hadoop&quot;&gt;Large Scale Distributed Deep Learning on Hadoop Clusters&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/NicolasLM/nucleon&quot;&gt;nucleon&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://01.org/hyperscan&quot;&gt;hyperscan&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://rinuboney.github.io/2015/10/18/theoretical-motivations-deep-learning.html&quot;&gt;Theoretical Motivations for Deep Learning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://codewords.recurse.com/issues/four/the-language-of-choice&quot;&gt;The language of choice&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/MagicStack/MagicPython&quot;&gt;MagicPython&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.gopl.io/ch1.pdf&quot;&gt;The Go Programming Language&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://gitpython.readthedocs.org/en/latest/index.html&quot;&gt;GitPython&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://git-for-windows.github.io/&quot;&gt;Git For Windows&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1036.html&quot;&gt;On the cruelty of really teaching computing science&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://timgolden.me.uk/python/win32_how_do_i/watch_directory_for_changes.html&quot;&gt;Watch a Directory for Changes&lt;/a&gt;, and &lt;a href=&quot;http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;http://stackoverflow.com/questions/182197/how-do-i-watch-a-file-for-changes-using-python&quot;&gt;this&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;C++ Blogs&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/151974/c-blogs-that-you-regularly-follow&quot;&gt;C++ blogs that you regularly follow&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://meetingcpp.com/index.php/blog.html&quot;&gt;Meeting C++&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://cpptruths.blogspot.com/&quot;&gt;c++ truths&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://herbsutter.com/&quot;&gt;Sutter’s mill&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.msdn.com/b/vcblog/&quot;&gt;Visual C++ Team Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.lonecpluspluscoder.com/&quot;&gt;The Lone C++ Coder’s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 20 Oct 2015 23:59:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2015/10/20/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/10/20/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>
