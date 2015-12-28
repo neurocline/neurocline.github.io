@@ -6,15 +6,264 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Dec 2015 21:25:47 -0800</pubDate>
-    <lastBuildDate>Sun, 06 Dec 2015 21:25:47 -0800</lastBuildDate>
+    <pubDate>Sun, 27 Dec 2015 22:37:25 -0800</pubDate>
+    <lastBuildDate>Sun, 27 Dec 2015 22:37:25 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://apple.stackexchange.com/questions/193368/what-is-the-rootless-feature-in-el-capitan-really/208185#208185&quot;&gt;No dtrace in Mac OS X El Capitan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://qz.com/580859/the-most-misleading-charts-of-2015-fixed/&quot;&gt;The most misleading charts of 2015, fixed&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c#.2gzkmzowv&quot;&gt;12 Fractured Apps&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pmarchive.com/how_to_hire_the_best_people.html&quot;&gt;How to hire the best people you’ve ever worked with&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codewords.recurse.com/issues/five/why-do-neural-networks-think-a-panda-is-a-vulture&quot;&gt;How to trick a neural network into thinking a panda is a vulture&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.regehr.org/archives/1287&quot;&gt;The Problem with Friendly C&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.schneier.com/blog/archives/2015/12/using_law_again.html&quot;&gt;Using Law Against Technology&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://compilers.iecc.com/crenshaw/&quot;&gt;Let’s Build a Compiler, by Jack Crenshaw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cs.indiana.edu/~dyb/pubs/nano-jfp.pdf&quot;&gt;A Nanopass Framework for Compiler Education&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm&quot;&gt;Parsing Expressions by Recursive Descent&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nautil.us/issue/31/stress/what-i-learned-from-losing-200-million&quot;&gt;What I Learned from Losing $200 Million&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://goshawkdb.io/features.html&quot;&gt;Goshawk DB&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nytimes.com/2015/12/13/books/review/antony-beevors-ardennes-1944.html?WT.mc_id=2015-KWP-AUD_DEV&amp;amp;WT.mc_ev=click&amp;amp;ad-keywords=AUDDEVREMARK&amp;amp;kwp_0=78766&amp;amp;kwp_4=421282&amp;amp;kwp_1=242392&quot;&gt;Antony Beevor’s ‘Ardennes 1944’&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://salmanarif.bitbucket.org/visual/index.html&quot;&gt;VisUAL - A Highly Visual ARM emulator&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/1512.06808&quot;&gt;Game Theory (Open Access textbook with 165 solved exercises)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://llvm.org/docs/tutorial/&quot;&gt;Kaleidoscope: Implementing a Language with LLVM&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf&quot;&gt;An Incremental Approach to Compiler Construction&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@nickgerleman/the-bkd-tree-da19cf9493fb#.o9v5jjc15&quot;&gt;The Bkd Tree&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=10783219&quot;&gt;Ask HN: Books you read in 2015&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tuhs.org/Archive/PDP-11/Distributions/research/McIlroy_v0/UnixEditionZero.txt&quot;&gt;The UNIX Time-Sharing System&lt;/a&gt;. Early draft of UNIX manual.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/document/d/112O-Q_XrbrU1I4P-oiLCN9u86Qg_BYBdcDsmh7Pn9Nw/mobilebasic&quot;&gt;[External] Optimizing C++ Const Objects in LLVM&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.cloudflare.com/whats-inside-net-http-socket-late-binding-in-the-go-standard-library/&quot;&gt;What’s inside net/http? Late binding in the Go standard library&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 24 Dec 2015 21:39:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/12/24/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/24/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Some notes on Go</title>
+        <description>&lt;h1 id=&quot;gopath-and-source-on-your-hard-disk&quot;&gt;GOPATH and source on your hard disk&lt;/h1&gt;
+
+&lt;p&gt;This is the thing that’s most annoying me about Go. Many of its proscriptive choices
+are neutral to me, but dictating how your source code is laid on on the hard disk
+is harder to work with.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;go&lt;/code&gt; tool finds files in relation to the &lt;code&gt;$GOPATH&lt;/code&gt; environment variable,
+and really wants to see a strucure like this at the root of &lt;code&gt;$GOPATH&lt;/code&gt; (using one
+of my recent projects as an example)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bin/
+pkg/
+src/
+  github.com/
+    catalog/
+      ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://golang.org/doc/code.html&quot;&gt;How to Write Go Code&lt;/a&gt; for the official explanation.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, I have been organizing projects on my hard disk thematically, and
+partially by origin. And large projects (say, 1000 files and up), tend to develop
+their own internal organization.&lt;/p&gt;
+
+&lt;p&gt;I like some of the thoughts behind the Go structure. I’ve always preferred systems where
+generated files lived outside of your source files; source files come from source control,
+and generated files are mostly temporaries. And many programming environments and languages
+make this difficult. In the Go world, your source is all inside &lt;code&gt;src/&lt;/code&gt;, your intermediate
+files are in &lt;code&gt;pkg/&lt;/code&gt;, and your output binaries are in &lt;code&gt;bin/&lt;/code&gt;. Of course, that’s a
+little limiting, but I can work in it.&lt;/p&gt;
+
+&lt;p&gt;One choice is to keep changing &lt;code&gt;$GOPATH&lt;/code&gt;. It “points to your workspace”, but there’s no
+reason you need just the one workspace. I’m at the point where I’m seriously considering
+this approach. Since I don’t use an IDE at the moment for Go code, however, this means that
+I need to remember to set &lt;code&gt;$GOPATH&lt;/code&gt; each time I create a terminal window. This would be
+necessary if I worked on large Go programs, or on dozens at the same time. A single &lt;code&gt;bin/&lt;/code&gt;
+location would be a problem. The Go docs seem to recommend against this, see
+&lt;a href=&quot;https://github.com/golang/go/wiki/GOPATH&quot;&gt;GOPATH&lt;/a&gt; from the &lt;a href=&quot;https://github.com/golang/go/wiki&quot;&gt;Go Wiki&lt;/a&gt;.
+I suspect this is advice bourne from working on lots of small programs, though.&lt;/p&gt;
+
+&lt;p&gt;There is one big reason to use multiple &lt;code&gt;$GOPATH&lt;/code&gt; hierarchies, and that’s when using &lt;code&gt;go get&lt;/code&gt;.
+While Go will search among multiple paths for files, &lt;code&gt;go get&lt;/code&gt; will download new files into
+exactly one location.&lt;/p&gt;
+
+&lt;p&gt;But there are other problems I’m wrestling with. I have some multi-language repositories. So
+I either relocate everything to suit Go, or I checkout the repo multiple times on the disk, or
+I use a symlink. The symlink approach is awkward, the multiple checkout is confusing (editing
+files in the wrong place is easy), and relocating everything to suit Go is very Go-centric.&lt;/p&gt;
+
+&lt;h1 id=&quot;relative-and-absolute-go-paths&quot;&gt;Relative and absolute Go paths&lt;/h1&gt;
+
+&lt;p&gt;The &lt;code&gt;go&lt;/code&gt; tool really likes absolute paths, and by absolute I mean paths that are relative
+to the &lt;code&gt;$GOPATH&lt;/code&gt; root.&lt;/p&gt;
+
+&lt;p&gt;If you use absolute paths to build, then your built output goes in the &lt;code&gt;bin/&lt;/code&gt; folder. If
+you use relative paths to build, then your built output goes next to the source. While that
+doesn’t sound bad, it also has implications for any &lt;code&gt;import&lt;/code&gt; statements in your source.
+Relative imports are forbidden if you use an absolute path to start. And if you have relative
+source imports (which are nice and readable and convenient), then you must use a relative
+path to trigger the build.&lt;/p&gt;
+
+&lt;p&gt;Given this plus the above, it sounds like the only sane choice is to build via relative path.
+I note that some projects do this: &lt;a href=&quot;https://github.com/Netflix/rend&quot;&gt;Netflix/rend&lt;/a&gt; must be
+built via relative paths.&lt;/p&gt;
+
+&lt;h1 id=&quot;versioning-and-go-source&quot;&gt;Versioning and Go source&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;go get&lt;/code&gt; is useful, to a point. It can automatically fetch source packages for you.&lt;/p&gt;
+
+&lt;p&gt;What you don’t get is control over a version. And this is going to be important to let build
+servers automatically get and build projects, at least without a ton of pain.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://0x74696d.com/posts/go-get-considered-harmful/&quot;&gt;GO GET CONSIDERED HARMFUL&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://golang.org/&quot;&gt;Golang.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://golang.org/doc/articles/go_command.html&quot;&gt;About the go command&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://golang.org/cmd/go/&quot;&gt;Command go&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 21 Dec 2015 16:02:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/12/21/some-notes-on-go.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/21/some-notes-on-go.html</guid>
+        
+        <category>programming</category>
+        
+        <category>go</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Hugo, a static website engine in Go</title>
+        <description>&lt;p&gt;Jekyll is beginning to annoy me, so I’ve been looking for alternatives other than “write my own”
+(which is, admittedly, still appealing). There’s one written in Go&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo: A Fast &amp;amp; Modern Static Website Engine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It looks like it would be trivial for me to switch or to try it out, so I’m going to do so.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Dec 2015 16:02:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/12/21/hugo-a-static-website-engine-in-go.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/21/hugo-a-static-website-engine-in-go.html</guid>
+        
+        <category>blog</category>
+        
+        <category>hugo</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://ipxe.org/&quot;&gt;iPXE - open source boot firmware&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.redpill-linpro.com/sysadvent/2015/12/18/stateless-osd-servers.html&quot;&gt;Stateless OSD servers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.thenewatlantis.com/publications/why-the-arabic-world-turned-away-from-science&quot;&gt;Why the Arabic World Turned Away from Science&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.theguardian.com/world/2015/dec/17/the-mystery-of-indias-deadly-exam-scam&quot;&gt;The mystery of India’s deadly exam scam&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ai.stanford.edu/~nilsson/QAI/qai.pdf&quot;&gt;THE QUEST FOR ARTIFICIAL INTELLIGENCE: A HISTORY OF IDEAS AND ACHIEVEMENTS
+&lt;/a&gt;. The caps are from the paper, not me.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!msg/flow-based-programming/iaKhbABJ9fw/XlrMf-dnBgAJ&quot;&gt;Unix and Flow Based Programming&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.meltingasphalt.com/a-codebase-is-an-organism/&quot;&gt;A Codebase is an Organism&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://queue.acm.org/detail.cfm?ref=rss&amp;amp;id=2856460&quot;&gt;A Purpose-built Global Network: Google’s Move to SDN&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://parseplatform.github.io/&quot;&gt;Parse: Open Source Hub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/information-technology/2015/12/rsync-net-zfs-replication-to-the-cloud-is-finally-here-and-its-fast/&quot;&gt;rsync.net: ZFS Replication to the cloud is finally here—and it’s fast&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tip.golang.org/cmd/go/#hdr-Vendor_Directories&quot;&gt;Command go&lt;/a&gt;. Go 1.6 has vendor directories. It’s a step. It was in 1.5 as an experiment &lt;a href=&quot;https://docs.google.com/document/d/1Bz5-UB7g2uPBdOx-rw5t9MxJwkfpx90cqG9AFL0JAYo/edit&quot;&gt;oGo 1.5 Vendor Experiment&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/&quot;&gt;Bitrot and atomic COWs: Inside “next-gen” filesystems&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pr1ntf.xyz/windowsunderbhyve.html&quot;&gt;Running Windows under FreeBSD’s bhyve&lt;/a&gt;. bhyve is the FreeBSD hypervisor. This is pretty cool.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://artint.info/html/ArtInt.html&quot;&gt;Artificial Intelligence: Foundations of Computational Agents&lt;/a&gt;. Book, University Cambridge Press, 2010, David Poole and Alan Macworth.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codewords.recurse.com/issues/five/what-restful-actually-means&quot;&gt;What RESTful actually means&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Elements-Computing-Systems-Building-Principles/dp/0262640686/&quot;&gt;The Elements of Computing Systems: Building a Modern Computer from First Principles&lt;/a&gt;. A book to recommend to people.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.cloudflare.com/why-its-harder-to-forge-a-sha-1-certificate-than-it-is-to-find-a-sha-1-collision/&quot;&gt;Why it’s harder to forge a SHA-1 certificate than it is to find a SHA-1 collision&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Dec 2015 13:26:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/12/19/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/19/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>End-end Principle and Fate-Sharing</title>
+        <description>&lt;p&gt;The End-End Principle and Fate-Sharing are sometimes confused with each other.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mercury.lcs.mit.edu/~jnc/tech/end_end.html&quot;&gt;Will The Real “End-End Principle” Please Stand Up?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.reed.com/dpr/locus/Papers/EndtoEnd.html&quot;&gt;END-TO-END ARGUMENTS IN SYSTEM DESIGN&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf&quot;&gt;The Design Philosophy of the DARPA Internet Protocols&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ietf.org/rfc/rfc3724.txt&quot;&gt;RFC 3724, The Rise of the Middle and the Future of End-to-End: Reflections on the Evolution of the Internet Architecture&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 18 Dec 2015 18:09:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/12/18/end-end-principle.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/18/end-end-principle.html</guid>
+        
+        <category>software</category>
+        
+        <category>engineering</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
         <description>&lt;p&gt;&lt;a href=&quot;http://techblog.netflix.com/2015/11/linux-performance-analysis-in-60s.html&quot;&gt;Linux Performance Analysis in 60,000 Milliseconds&lt;/a&gt;, from Netflix blog.&lt;/p&gt;
 
-&lt;p&gt;[GDP Growth over the Very Long Run])(http://ourworldindata.org/data/growth-and-distribution-of-prosperity/gdp-growth-over-the-very-long-run/). GDP per person over the last 2000 years.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://ourworldindata.org/data/growth-and-distribution-of-prosperity/gdp-growth-over-the-very-long-run/&quot;&gt;GDP Growth over the Very Long Run&lt;/a&gt;. GDP per person over the last 2000 years.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://google.github.io/styleguide/cppguide.html&quot;&gt;Google C++ Style Guide&lt;/a&gt;&lt;/p&gt;
 
@@ -471,405 +720,6 @@ can still be found on a lot of radio channels across the US.&lt;/p&gt;
         <link>http://neurocline.github.io/2015/11/13/electronic-music-bands.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/2015/11/13/electronic-music-bands.html</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>TCP auto-tuning</title>
-        <description>&lt;p&gt;TCP auto-tuning is not new, but it’s still not well-known. TCP performance has
-two competing environmental issues tugging at it. If you queue too much, then
-you have wild swings when congestion happens, causing your transmission rate
-to swing between maximum and near-zero. If you don’t have enough packets in
-flight, then you are waiting in ACKs to be returned, and thus using only a
-fraction of available bandwidth. Both of these have one input from you, the
-size of the receive buffer (and lesser but still somewhat important, the
-size of the send buffer).&lt;/p&gt;
-
-&lt;p&gt;TCP auto-tuning’s insight was to let the TCP stack participate in setting the
-size of TCP buffers. In the past 10 years, most major operating systems have
-added TCP auto-tuning to their TCP network stacks. Linux as of 2.6, Windows
-as of Vista, Mac OS X as of 10.5.&lt;/p&gt;
-
-&lt;p&gt;I think that most operating system disable auto-tuning if you manually set socket
-buffer sizes. In BSD, this is done with setsockopt:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65536&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;setsockopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOL_SOCKET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SO_SNDBUF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65536&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;setsockopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOL_SOCKET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SO_RCVBUF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bufferSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://fasterdata.es.net/host-tuning/&quot;&gt;Host Tuning&lt;/a&gt; - details for various operating systems on manual and automatic tuning.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.switch.ch/network/tools/tcp_throughput/&quot;&gt;TCP Throughput Calculator&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.psc.edu/index.php/networking/641-tcp-tune&quot;&gt;Enabling High Performance Data Transfers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://serverfault.com/questions/608060/windows-tcp-window-scaling-hitting-plateau-too-early&quot;&gt;Windows TCP Window Scaling Hitting plateau too early&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.acc.umu.se/~maswan/linux-netperf.txt&quot;&gt;TCP performance tuning - how to tune linux&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://littledaemons.wordpress.com/2009/03/25/linux-tcp-auto-tuning/&quot;&gt;LINUX TCP AUTO-TUNING&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.riccardoriva.info/blog/?p=1286&quot;&gt;How-To disable Windows 7 TCP/IP auto-tuning&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 12 Nov 2015 09:19:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/11/12/tcp-auto-tuning.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/12/tcp-auto-tuning.html</guid>
-        
-        <category>network</category>
-        
-        <category>internet</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://radar.oreilly.com/2015/10/swarm-v-fleet-v-kubernetes-v-mesos.html&quot;&gt;Swarm v. Fleet v. Kubernetes v. Mesos&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html&quot;&gt;27 languages to improve your Python&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tympanus.net/codrops/2015/11/04/rain-water-effect-experiments/&quot;&gt;Rain &amp;amp; Water Effect Experiments&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!topic/android-platform/Hhl_4hfOONg/discussion&quot;&gt;Re: ANN: AOSP builds with ninja&lt;/a&gt; - Android builds are now done with Ninja.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cryptography.readthedocs.org/en/latest/fernet/&quot;&gt;Fernet (symmetric encryption)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://eng.lyft.com/announcing-confidant-an-open-source-secret-management-service-from-lyft-1e256fe628a3&quot;&gt;Announcing Confidant: an open source secret management service from Lyft&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.ibm.com/open/systemml/&quot;&gt;SystemML&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.quora.com/What-is-the-difference-between-Data-Analytics-Data-Analysis-Data-Mining-Data-Science-Machine-Learning-and-Big-Data-1&quot;&gt;What is the difference between Data Analytics, Data Analysis, Data Mining, Data Science, Machine Learning, and Big Data?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/hangtwenty/dive-into-machine-learning&quot;&gt;hangtwenty/dive-into-machine-learning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://gizmodo.com/can-these-glasses-help-the-colorblind-we-put-en-chroma-1739433668&quot;&gt;Can These Glasses Help the Colorblind? We Put EnChroma to the Test&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.arcanoae.com/blue-lion-go/&quot;&gt;Blue Lion is Go!&lt;/a&gt;. A new OS/2 distribution!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.siftscience.com/blog/2015/how-fraudulent-users-slip-under-the-radar&quot;&gt;How Fraudulent Users Slip Under the Radar&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@brandonmchu/the-black-box-of-product-management-3feb65db6ddb&quot;&gt;The Black Box of Product Management&lt;/a&gt;. “What does a product manager do, anyway?”&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.khoslaventures.com/wp-content/uploads/Good_Product_Manager_Bad_Product_Manager_KV.pdf&quot;&gt;Good Product Manager Bad Product Manager&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://techcrunch.com/2015/11/03/prop-f/&quot;&gt;Airbnb, Proposition F And The Shared Hypocrisy Of Bay Area Housing&lt;/a&gt;. Article chock-full of information, although ostensibly about Airbnb and the (failed) Proposition F in November 2015.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/symisc/libcox&quot;&gt;Symisc Libcox - Cross Platform System Calls &amp;amp; Utilities&lt;/a&gt;. Cross-platform ANSI-C library for making system calls. Dubious at the moment, but could become something great.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://homepage.ntlworld.com/jonathan.deboynepollard/Softwares/nosh.html&quot;&gt;The nosh package&lt;/a&gt;. Managing daemons, terminals and logging.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://shkspr.mobi/blog/2015/11/google-secret-screenshot-api/&quot;&gt;Google’s Secret Screenshot API&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pgbovine.net/cpython-internals.htm&quot;&gt;CPython internals: A ten-hour codewalk through the Python interpreter source code&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lwn.net/Articles/659199/&quot;&gt;tcp/dccp: lockless listener&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lemire.me/blog/2015/10/26/crazily-fast-hashing-with-carry-less-multiplications/&quot;&gt;Crazily fast hashing with carry-less multiplications&lt;/a&gt;. This is insanely fast. If it really produces good dispersion, this would become the preferred hash function for long strings that don’t need cryptographic behavior.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 08 Nov 2015 17:32:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/11/08/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/08/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Command-line argument parsing</title>
-        <description>&lt;p&gt;One of the many things I want to see, because I want to use it, is the definitive
-library for command-line argument parsing. There are a lot of these, and yet I
-see programs doing ad-hoc command-line parsing, because most of the libraries
-are verbose to use and require effort to understand. I’ve certainly done my share of
-both ad-hoc and “real” command-line parsers, as well as used a dozen or so argument
-parsing libraries.&lt;/p&gt;
-
-&lt;p&gt;The code you write to do command-line argument parsing needs to be as straightforward
-as possible, showing the intent of the command-line. Otherwise you’ll be tempted to
-avoid it for simple command-lines, and you’ll be spending significant effort
-maintaining it for complex command-lines.&lt;/p&gt;
-
-&lt;p&gt;It also need to be flexible, as there are multiple styles of command lines. I don’t
-mind defaulting to the GNU getopt style, with single-dash and combining for single-character
-commands and double-dash for word commands. However, we do have Microsoft with their
-default disaster (command lines preceded by slash characters), and there are ecosystems
-that are stubborn with their oddball styles. Suborn by making it easy, but don’t put
-up walls.&lt;/p&gt;
-
-&lt;p&gt;And this library needs to be something that can be copied easily; any license more
-onerous than the 2-clause BSD license is yet another excuse to make a new system. It’s
-a command-line, and we don’t need 50 different ways to parse it.&lt;/p&gt;
-
-&lt;p&gt;I also want this to be multi-language. Some languages are converging towards a single
-stock library that are used for command-line parsing. The best of the breed to date I’ve
-seen is Python’s argparse. However, argparse is something that I have to read documentation
-for in order to learn to use. Instead, what I want is the same library, tweaked for language
-specifics, across all languages - where possible, of course; languages that diverge from
-procedural make that harder.&lt;/p&gt;
-
-&lt;p&gt;Of course, if you can use a descriptive definition instead of a proscriptive one, then
-you could have a common command-line argument parsing system. I just don’t know if more
-complex operations can be done in a descriptive fashion. There is one system that has
-made a valiant try, and that’s &lt;a href=&quot;http://docopt.org/&quot;&gt;docopt&lt;/a&gt;. The test of this would be
-to try to implement a large command line (like, say Git) in this system.&lt;/p&gt;
-
-&lt;p&gt;As with a lot of other things I want, this is interesting enough that I will eventually
-work on it, but if someone else gets to it first, I’ll happily use what they make.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;p&gt;The contradiction here is: ignore what others are done so that you don’t limit yourself;
-and yet know what others have done so you make something better and different (e.g don’t
-painfully re-invent the wheel). No problem. Here’s a sampling of what already exists. I don’t
-know how many hundreds of command-line argument parsing libraries exist, but I’m sure it
-is many hundreds.&lt;/p&gt;
-
-&lt;p&gt;Also, I’m not endorsing docopt. Yet. But it’s a good start.&lt;/p&gt;
-
-&lt;p&gt;Multiple languages&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://docopt.org/&quot;&gt;docopt&lt;/a&gt;. Describe command lines to generate parser. Lots of languages supported, see &lt;a href=&quot;https://github.com/docopt&quot;&gt;docopt GitHub repo&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Python&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/3/library/argparse.html&quot;&gt;argparse&lt;/a&gt;. Python’s command-line processing library.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/piranha/opster&quot;&gt;opster&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://plac.googlecode.com/hg/doc/plac.html&quot;&gt;Plac&lt;/a&gt;. Has decent minimal complexity, uses code structure to create argument parsing.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pypi.python.org/pypi/Clap/0.7&quot;&gt;Clap&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://apenwarr.ca/log/?m=201111&quot;&gt;options.py&lt;/a&gt; from Bup. Another descriptive approach.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ruby&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ruby-doc.org/stdlib-2.2.3/libdoc/optparse/rdoc/index.html&quot;&gt;optparse&lt;/a&gt;. Stock Ruby argument parser; see &lt;a href=&quot;https://gist.github.com/rtomayko/1190547&quot;&gt;decent example&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/soveran/clap&quot;&gt;clap&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/mdub/clamp&quot;&gt;clamp&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/erikhuda/thor&quot;&gt;Thor&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://clip.rubyforge.org/&quot;&gt;clip&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;C&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/libc/manual/html_node/Getopt.html&quot;&gt;getopt&lt;/a&gt;. Dates back to 1980, in POSIX.2 standard.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/libc/manual/html_node/Getopt.html&quot;&gt;GNU getopt_long&lt;/a&gt;. The GNU code is GPL, but there are BSD-license clones written by others.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/hardy/man1/genparse.1.html&quot;&gt;genparse&lt;/a&gt;. Parser generator, creates code for getopt_long.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.nongnu.org/arg-parser/arg_parser.html&quot;&gt;Arg_parser&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://code.google.com/p/getoptpp/&quot;&gt;getoptpp&lt;/a&gt;. A getopt variant.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://google-gflags.googlecode.com/svn/trunk/doc/gflags.html&quot;&gt;Google Commandline flags&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://directory.fsf.org/wiki/Popt&quot;&gt;popt&lt;/a&gt; and &lt;a href=&quot;http://linux.die.net/man/3/popt&quot;&gt;man&lt;/a&gt;. RedHat, X11 license.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;C#&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/bitdiff/synoptic&quot;&gt;synoptic&lt;/a&gt;. Argument parsing through code structure. Not sure I like this for large command lines, but it’s an interesting approach for simple ones.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;C++&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://codesynthesis.com/projects/cli/&quot;&gt;cli&lt;/a&gt;. DSL approach, so slight negative for simple command-line programs.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mih.voxindeserto.de/argvparser.html&quot;&gt;ArgvParser&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://optionparser.sourceforge.net/&quot;&gt;OptionParser&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.boost.org/doc/libs/1_59_0/doc/html/program_options.html&quot;&gt;Boost.Program_options&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://tclap.sourceforge.net/&quot;&gt;TCLAP&lt;/a&gt;. Templates.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://getpot.sourceforge.net/&quot;&gt;GetPot&lt;/a&gt;. Also has Java, Ruby and Python versions. Uses DSL and runtime parser to describe command-line argument parsing.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.bradapp.com/ftp/src/libs/C++/CmdLine.html&quot;&gt;CmdLine&lt;/a&gt;. Has descriptive/DSL mode.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ccdw.org/~cjj/prog/arg/arg_manual.xhtml&quot;&gt;arg&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Java&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://commons.apache.org/proper/commons-cli/&quot;&gt;Commons CLI&lt;/a&gt;. Default Java library (?)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://args4j.kohsuke.org/&quot;&gt;args4j&lt;/a&gt;. Anotations-based.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jcommander.org/&quot;&gt;JCommander&lt;/a&gt;. Best tagline: “Because life is too short to parse command line parameters”&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://argparse4j.sourceforge.net/&quot;&gt;ArgParse4j&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Javascript&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/substack/node-optimist&quot;&gt;Optimist&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Go&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://golang.org/pkg/flag/&quot;&gt;Flag&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 04 Nov 2015 11:06:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/11/04/command-line-argument-parsing.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/04/command-line-argument-parsing.html</guid>
-        
-        <category>command-line</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>A history of the Internet</title>
-        <description>&lt;p&gt;Recently, an ill-worded phrase by a near-friend of mine (“TCP/IP, a poorly designed protocol”),
-and his overlying thesis (“95% of the work in developing networking was done by commercial
-companies, DARPA shouldn’t get credit for the Internet”), caused me to do a lot of reading. I
-didn’t start hard-core software development myself until 1981, so while I knew a lot of this
-anecdotally, I quickly realized that I didn’t know as much as I thought.&lt;/p&gt;
-
-&lt;p&gt;I need to write all this up, but here’s a few nuggets.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The French nearly invented the Internet.&lt;/li&gt;
-  &lt;li&gt;Virtually all of the work on networking was funded by governments.&lt;/li&gt;
-  &lt;li&gt;The sole exception was Xerox PARC, but Xerox shot themselves in the foot.&lt;/li&gt;
-  &lt;li&gt;Davies, a Brit, came up with packet switching in 1959 (although perhaps it was simulataneously conceived of by Paul Baran).&lt;/li&gt;
-  &lt;li&gt;Cerf et al worked on creating ARPANET, a packet-switched network, but with a host-to-host, or connection-oriented, system called NCP, first public demonstration in 1972 (showing email, among other things).&lt;/li&gt;
-  &lt;li&gt;The University of Hawaii launched ALOHANet, a radio network using random packet transmission, in 1970.&lt;/li&gt;
-  &lt;li&gt;Then Louis Pouzin, French, came up with datagrams and smart edge/dumb router, the key innovations that turned ARPANET from unworkable to unbeatable.&lt;/li&gt;
-  &lt;li&gt;Meanwhile, Metcalfe, having done his Ph.D. thesis on what became Ethernet, was offered a job and major support by Xerox PARC; Ethernet was born in 1973.&lt;/li&gt;
-  &lt;li&gt;The French government and European industry said “nope, we like circuit switching just fine”, and even Pouzin himself became convinced, eventually abandoning his approach. But the ARPANET group saw it as a great advance.&lt;/li&gt;
-  &lt;li&gt;Then ARPA funded the rest; TCP/IP was invented, coded up, and eventually ARPANET switched over to it.&lt;/li&gt;
-  &lt;li&gt;BSD released a TCP/IP stack around 1983 that became the most influential networking stack in history.&lt;/li&gt;
-  &lt;li&gt;The actual opening of ARPANET to become the Internet we know was directly due to a $600 million US funding effort willed into existence by Al Gore.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In particular, TCP/IP had about 5 years of careful thought and initial development put to it,
-preceeded by 5 years of experimentation and trial, and then another 10 years to roll it out.
-Like many innovations that sprang out of nowhere, it did nothing of the same. From original
-idea to world-beating dominance was a 20-year timespan of thinking and implementing.&lt;/p&gt;
-
-&lt;p&gt;Note that TCP won because government funding shielded its development from the inter-company
-and inter-country politics that caused OSI to eventually become completely irrelevant. And
-the government subsidies meant that Interent protocols could be implemented for free, versus
-having to buy very expensive ISO docs for OSI. I doubt many of you have purchased ISO docs.&lt;/p&gt;
-
-&lt;p&gt;I like many of the write-ups I’ve read, and the few books on this, but I think there’s a good
-business thesis here that goes against the modern interpretation of the startup or corporation
-doing all of the work. Certainly, government funding is pitiful compared to what it was in
-the 20th century, and definitely in the period from 1950-1990. But what I see in real companies
-is that “works in practice” is not just important but “works in theory” is denigrated, and
-companies quickly reach local maxima and get stuck in a web of their own making, and stop
-advancing. As I re-read the history of efforts by IBM, DEC, ITTU and others, I see that
-clearly had happened, and I see it happening today, just less clearly.&lt;/p&gt;
-
-&lt;p&gt;In the past, people published early results, freely talked to each other, and as a result
-progress was rapid. Of course, people built on your results, and if you weren’t fast, your
-work benefitted others far more than yourself. In the modern era, there is relatively little
-sharing, and while progress is still happening, it’s starting to slow down. There are a host
-of factors, but large among them is that companies like Apple are very secretive about what
-they do, and allow no one to publish anything. Combine that with the relative lack of
-government funding, and it’s sad.&lt;/p&gt;
-
-&lt;p&gt;In particular, we should take the lessons of OSI versus TPC to heart. OSI was, in the end,
-an attempt by dominant vendors to hold onto their profits. Since telecommunications companies
-had circuits, naturally virtual circuits were the right answer, because they could still own
-connections. If they had won, we would have a fraction of the world we have today. Vested
-interests will rarely make good decisions. Just like the movie industry saw the VHS tape
-as a disaster, failing to see that it would cause their revenues and profits to skyrocket, the
-telecommunications vendors saw packet-switched networks as threatening their very existence.
-This is true for all the vendor-developed network systems; all were invented to prop up
-current modes of hardware production, or to allow them to muscle into the market as a new
-competitor.&lt;/p&gt;
-
-&lt;p&gt;Things will change. Telecommunications went from fairly open to very regulated and closed off,
-and it took a separate challenger (computing) to change that. Now computing is moving towards
-being closed off, but eventually we’ll see some other newcomer blossom and hijack attention
-and create progress. Maybe the Maker movement, or home bioengineering, will be that vector.&lt;/p&gt;
-
-&lt;h2 id=&quot;reading-list&quot;&gt;Reading list&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Donald_Davies&quot;&gt;Donald Davies&lt;/a&gt; developed the initial idea of packet-switched networks.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/CYCLADES&quot;&gt;CYCLADES&lt;/a&gt; project that created datagrams and moved thinking to the edges.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.historyofcomputercommunications.info/index.html&quot;&gt;A HISTORY OF COMPUTER COMMUNICATIONS: 1968 -1988&lt;/a&gt;, book by Jim Pelkey, well worth reading.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://xbbn.weebly.com/bbn-internet-engineering-timeline.html&quot;&gt;BBN Internet Engineering Timeline&lt;/a&gt;. BBN was one of the government-funded companies at the heart of early network development.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/rfc/rfc801.txt&quot;&gt;RFC 801&lt;/a&gt;. Transitioning ARPANET from NCP to TCP.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://rina.tssg.org/docs/PSOC-MovingBeyondTCP.pdf&quot;&gt;Moving beyond TCP&lt;/a&gt;, 2010, with some details on Pouzin’s contribution to networking, but largely as a modern “TCP/IP is not good enough, let’s replace it” proposal. Since one of the authors of this paper is John Day, the second half of the paper is a summary of his 2007 book.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Patterns-Network-Architecture-Fundamentals-paperback/dp/0137063385&quot;&gt;Patterns in Network Architecture&lt;/a&gt;, 2007, John Day, is a book both on reimagining networking, but also a good history of the development of TCP/IP and the Internet.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.techrepublic.com/blog/classics-rock/does-anyone-actually-still-use-token-ring/&quot;&gt;Does anyone still use TokenRing?&lt;/a&gt;. TokenRing was IBM’s attempt to compete with Ethernet, developed in the early 1980s as a superior approach, but a combination of royalty pricing and Ethernet advancing far past TokenRing speeds killed it.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://spectrum.ieee.org/computing/networks/osi-the-internet-that-wasnt&quot;&gt;OSI: The Internet that wasn’t&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Inventing-Internet-Inside-Technology-Abbate/dp/0262511150&quot;&gt;Inventing the Internet&lt;/a&gt;, 1999, Jane Abbate.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cambridge.org/us/academic/subjects/history/twentieth-century-american-history/open-standards-and-digital-age-history-ideology-and-networks&quot;&gt;Open Standards and the Digital Age History, Ideology, and Networks&lt;/a&gt;, 2014, Andrew L. Russell.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.circleid.com/posts/84259_microsofts_contribution_tcp_ip/&quot;&gt;Microsoft’s Contribution Was TCP/IP&lt;/a&gt;, 2008, positing Microsoft helped put TCP/IP on the map.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.newmedia.org/history-of-the-internet.html&quot;&gt;History of the Internet&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 02 Nov 2015 08:36:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/11/02/A-history-of-the-internet.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/02/A-history-of-the-internet.html</guid>
-        
-        <category>internet</category>
-        
-        <category>network</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Generalized Deterministic Parsers (GLR, GLL and more)</title>
-        <description>&lt;p&gt;Generalized deterministic parsing is an extension to deterministic parsing that
-temporarily handles ambiguous grammars under the idea that further input will resolve
-apparent conflicts.
-The first such one was called Generalized LR or GLR, under the idea that this technique
-(forking and parsing parallel parse trees each time an ambiguity was found) would only
-work with LR. Then, once a GLL parser was demonstrated, it was hard to call the
-method GLR. I’m going by the naming that Grune and Jacobs gave it in their 2007
-masterpiece Parsing techniques.&lt;/p&gt;
-
-&lt;p&gt;Bison supports GLR, and I don’t know why it’s not the default. GLR only costs more than
-LR when you have ambiguities in the grammar, and even C++ has only temporary ambiguities
-that resolve quickly. Also, you don’t need to try to rewrite the grammar to create a
-LALR parser.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.researchgate.net/publication/269645727_A_Practical_GLR_Parser_Generator_for_Software_Reverse_Engineering&quot;&gt;A Practical GLR Parser Generator for Software Reverse Engineering&lt;/a&gt; is a paper behind a gate in ResearchGate, e.g. &lt;a href=&quot;http://ojs.academypublisher.com/index.php/jnw/article/download/jnw0903769776/8857&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dparser.sourceforge.net/&quot;&gt;DParser&lt;/a&gt;, although doesn’t seem to have had much activity since initial creation in 2006.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.researchgate.net/publication/241755950_Integrating_a_GLR_Parser_Generator_in_Eli&quot;&gt;Integrating a GLR Parser Generator in Eli&lt;/a&gt; 2007 thesis. Direct PDF link &lt;a href=&quot;http://ag-kastens.uni-paderborn.de/paper/Bachelor_Schwekendiek.pdf&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pure.royalholloway.ac.uk/portal/en/publications/island-grammarbased-parsing-using-gll-and-tom(1bccc756-7ebc-4b14-abd2-8910ef5dcbeb).html&quot;&gt;Island Grammar-Based Parsing Using GLL and Tom&lt;/a&gt;. I think Adrian Johnstone is the one who demonstrated the possibility of GLL parsers.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pure.royalholloway.ac.uk/portal/en/publications/gll-parsetree-generation(bdbcf5af-d176-4389-bfcc-ecc86a5a5f77).html&quot;&gt;GLL parse-tree generation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pure.royalholloway.ac.uk/portal/en/publications/modular-grammar-specification(f73cedc9-678f-4115-8802-2add7aa0763d).html&quot;&gt;Modular grammar specification&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pure.royalholloway.ac.uk/portal/en/publications/modelling-gll-parser-implementations(2c1e93df-746c-4271-8de6-534141d0c9b5).html&quot;&gt;Modelling GLL parser implementations&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 Nov 2015 23:05:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/11/01/generalized-deterministic-parsers.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/01/generalized-deterministic-parsers.html</guid>
-        
-        <category>compiler</category>
-        
-        <category>parser</category>
-        
-        
-        <category>dev</category>
         
       </item>
     

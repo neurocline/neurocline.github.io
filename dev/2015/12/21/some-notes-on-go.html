@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Some notes on Go</title>
+  <meta name="description" content="GOPATH and source on your hard disk">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2015/12/21/some-notes-on-go.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,97 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Some notes on Go</h1>
+    <p class="post-meta">Dec 21, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Dec 24, 2015</span>
+  <article class="post-content">
+    <h1 id="gopath-and-source-on-your-hard-disk">GOPATH and source on your hard disk</h1>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/12/24/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 21, 2015</span>
+<p>This is the thing that’s most annoying me about Go. Many of its proscriptive choices
+are neutral to me, but dictating how your source code is laid on on the hard disk
+is harder to work with.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/12/21/some-notes-on-go.html">Some notes on Go</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 21, 2015</span>
+<p>The <code>go</code> tool finds files in relation to the <code>$GOPATH</code> environment variable,
+and really wants to see a strucure like this at the root of <code>$GOPATH</code> (using one
+of my recent projects as an example)</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/12/21/hugo-a-static-website-engine-in-go.html">Hugo, a static website engine in Go</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 19, 2015</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bin/
+pkg/
+src/
+  github.com/
+    catalog/
+      ...</code></pre></div>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/12/19/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 18, 2015</span>
+<p>See <a href="https://golang.org/doc/code.html">How to Write Go Code</a> for the official explanation.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2015/12/18/end-end-principle.html">End-end Principle and Fate-Sharing</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>On the other hand, I have been organizing projects on my hard disk thematically, and
+partially by origin. And large projects (say, 1000 files and up), tend to develop
+their own internal organization.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p>I like some of the thoughts behind the Go structure. I’ve always preferred systems where
+generated files lived outside of your source files; source files come from source control,
+and generated files are mostly temporaries. And many programming environments and languages
+make this difficult. In the Go world, your source is all inside <code>src/</code>, your intermediate
+files are in <code>pkg/</code>, and your output binaries are in <code>bin/</code>. Of course, that’s a
+little limiting, but I can work in it.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>One choice is to keep changing <code>$GOPATH</code>. It “points to your workspace”, but there’s no
+reason you need just the one workspace. I’m at the point where I’m seriously considering
+this approach. Since I don’t use an IDE at the moment for Go code, however, this means that
+I need to remember to set <code>$GOPATH</code> each time I create a terminal window. This would be
+necessary if I worked on large Go programs, or on dozens at the same time. A single <code>bin/</code>
+location would be a problem. The Go docs seem to recommend against this, see
+<a href="https://github.com/golang/go/wiki/GOPATH">GOPATH</a> from the <a href="https://github.com/golang/go/wiki">Go Wiki</a>.
+I suspect this is advice bourne from working on lots of small programs, though.</p>
+
+<p>There is one big reason to use multiple <code>$GOPATH</code> hierarchies, and that’s when using <code>go get</code>.
+While Go will search among multiple paths for files, <code>go get</code> will download new files into
+exactly one location.</p>
+
+<p>But there are other problems I’m wrestling with. I have some multi-language repositories. So
+I either relocate everything to suit Go, or I checkout the repo multiple times on the disk, or
+I use a symlink. The symlink approach is awkward, the multiple checkout is confusing (editing
+files in the wrong place is easy), and relocating everything to suit Go is very Go-centric.</p>
+
+<h1 id="relative-and-absolute-go-paths">Relative and absolute Go paths</h1>
+
+<p>The <code>go</code> tool really likes absolute paths, and by absolute I mean paths that are relative
+to the <code>$GOPATH</code> root.</p>
+
+<p>If you use absolute paths to build, then your built output goes in the <code>bin/</code> folder. If
+you use relative paths to build, then your built output goes next to the source. While that
+doesn’t sound bad, it also has implications for any <code>import</code> statements in your source.
+Relative imports are forbidden if you use an absolute path to start. And if you have relative
+source imports (which are nice and readable and convenient), then you must use a relative
+path to trigger the build.</p>
+
+<p>Given this plus the above, it sounds like the only sane choice is to build via relative path.
+I note that some projects do this: <a href="https://github.com/Netflix/rend">Netflix/rend</a> must be
+built via relative paths.</p>
+
+<h1 id="versioning-and-go-source">Versioning and Go source</h1>
+
+<p><code>go get</code> is useful, to a point. It can automatically fetch source packages for you.</p>
+
+<p>What you don’t get is control over a version. And this is going to be important to let build
+servers automatically get and build projects, at least without a ton of pain.</p>
+
+<p><a href="http://0x74696d.com/posts/go-get-considered-harmful/">GO GET CONSIDERED HARMFUL</a></p>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="https://golang.org/">Golang.org</a></p>
+
+<ul>
+  <li><a href="https://golang.org/doc/articles/go_command.html">About the go command</a></li>
+  <li><a href="https://golang.org/cmd/go/">Command go</a></li>
+</ul>
+
+  </article>
 
 </div>
 
