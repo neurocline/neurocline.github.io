@@ -43,3 +43,9 @@ tags: links
 [The Bkd Tree](https://medium.com/@nickgerleman/the-bkd-tree-da19cf9493fb#.o9v5jjc15)
 
 [Ask HN: Books you read in 2015](https://news.ycombinator.com/item?id=10783219)
+
+[The UNIX Time-Sharing System](http://www.tuhs.org/Archive/PDP-11/Distributions/research/McIlroy_v0/UnixEditionZero.txt). Early draft of UNIX manual.
+
+[[External] Optimizing C++ Const Objects in LLVM](https://docs.google.com/document/d/112O-Q_XrbrU1I4P-oiLCN9u86Qg_BYBdcDsmh7Pn9Nw/mobilebasic)
+
+[What's inside net/http? Late binding in the Go standard library](https://blog.cloudflare.com/whats-inside-net-http-socket-late-binding-in-the-go-standard-library/)
