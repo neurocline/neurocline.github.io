@@ -8,7 +8,7 @@ tags: links
 
 [Linux Performance Analysis in 60,000 Milliseconds](http://techblog.netflix.com/2015/11/linux-performance-analysis-in-60s.html), from Netflix blog.
 
-[GDP Growth over the Very Long Run])(http://ourworldindata.org/data/growth-and-distribution-of-prosperity/gdp-growth-over-the-very-long-run/). GDP per person over the last 2000 years.
+[GDP Growth over the Very Long Run](http://ourworldindata.org/data/growth-and-distribution-of-prosperity/gdp-growth-over-the-very-long-run/). GDP per person over the last 2000 years.
 
 [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 
