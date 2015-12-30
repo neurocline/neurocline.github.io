@@ -87,3 +87,6 @@ servers automatically get and build projects, at least without a ton of pain.
 
 * [About the go command](https://golang.org/doc/articles/go_command.html)
 * [Command go](https://golang.org/cmd/go/)
+* [Effective Go](https://golang.org/doc/effective_go.html)
+* [Package names](https://blog.golang.org/package-names)
+* [Third-party libraries: goprotobuf and beyond](https://blog.golang.org/third-party-libraries-goprotobuf-and)
