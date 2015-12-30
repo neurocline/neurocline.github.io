@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some notes on Go</title>
-  <meta name="description" content="GOPATH and source on your hard disk">
+  <title>Recent links</title>
+  <meta name="description" content="Xv6, a simple Unix-like teaching operating system. Still Unix-like, but freshly written for teaching purposes.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/dev/2015/12/21/some-notes-on-go.html">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2015/12/28/recent-links.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -72,95 +72,50 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Some notes on Go</h1>
-    <p class="post-meta">Dec 21, 2015</p>
+    <h1 class="post-title">Recent links</h1>
+    <p class="post-meta">Dec 28, 2015</p>
   </header>
 
   <article class="post-content">
-    <h1 id="gopath-and-source-on-your-hard-disk">GOPATH and source on your hard disk</h1>
+    <p><a href="https://pdos.csail.mit.edu/6.828/2012/xv6.html">Xv6, a simple Unix-like teaching operating system</a>. Still Unix-like, but freshly written for teaching purposes.</p>
 
-<p>This is the thing that’s most annoying me about Go. Many of its proscriptive choices
-are neutral to me, but dictating how your source code is laid on on the hard disk
-is harder to work with.</p>
+<p><a href="http://www.theglobeandmail.com/news/national/article24073928.ece/BINARY/World+Happiness+Report.pdf">World Happiness Report 2015</a></p>
 
-<p>The <code>go</code> tool finds files in relation to the <code>$GOPATH</code> environment variable,
-and really wants to see a strucure like this at the root of <code>$GOPATH</code> (using one
-of my recent projects as an example)</p>
+<p><a href="https://github.com/wdm0006/git-pandas">git-pandas</a>. Turns github stats into Pandas frames. Saw this from <a href="http://www.willmcginnis.com/2015/12/25/git-pandas-v0-0-5-coverage-py-risk/">GIT-PANDAS V0.0.5: COVERAGE.PY, RISK, AND MORE</a>.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">bin/
-pkg/
-src/
-  github.com/
-    catalog/
-      ...</code></pre></div>
+<p><a href="https://github.com/wdm0006/gitnoc">gitnoc</a>. UI for git-pandas.</p>
 
-<p>See <a href="https://golang.org/doc/code.html">How to Write Go Code</a> for the official explanation.</p>
+<p><a href="https://opencorporates.com/">OpenCorporates</a>. Claims to be the largest open database of companies in the world.</p>
 
-<p>On the other hand, I have been organizing projects on my hard disk thematically, and
-partially by origin. And large projects (say, 1000 files and up), tend to develop
-their own internal organization.</p>
+<p>Let’s Build A Simple Interpreter. <a href="http://ruslanspivak.com/lsbasi-part1/">Part 1</a>, <a href="http://ruslanspivak.com/lsbasi-part2/">Part 2</a> … <a href="http://ruslanspivak.com/lsbasi-part7/">Part 7</a>.</p>
 
-<p>I like some of the thoughts behind the Go structure. I’ve always preferred systems where
-generated files lived outside of your source files; source files come from source control,
-and generated files are mostly temporaries. And many programming environments and languages
-make this difficult. In the Go world, your source is all inside <code>src/</code>, your intermediate
-files are in <code>pkg/</code>, and your output binaries are in <code>bin/</code>. Of course, that’s a
-little limiting, but I can work in it.</p>
+<p><a href="https://github.com/awslabs/aws-shell">aws-shell</a>. An integrated shell for working with the AWS CLI.</p>
 
-<p>One choice is to keep changing <code>$GOPATH</code>. It “points to your workspace”, but there’s no
-reason you need just the one workspace. I’m at the point where I’m seriously considering
-this approach. Since I don’t use an IDE at the moment for Go code, however, this means that
-I need to remember to set <code>$GOPATH</code> each time I create a terminal window. This would be
-necessary if I worked on large Go programs, or on dozens at the same time. A single <code>bin/</code>
-location would be a problem. The Go docs seem to recommend against this, see
-<a href="https://github.com/golang/go/wiki/GOPATH">GOPATH</a> from the <a href="https://github.com/golang/go/wiki">Go Wiki</a>.
-I suspect this is advice bourne from working on lots of small programs, though.</p>
+<p><a href="https://github.com/nficano/gendo">gendo</a>. Lightweight Slackbot framework.</p>
 
-<p>There is one big reason to use multiple <code>$GOPATH</code> hierarchies, and that’s when using <code>go get</code>.
-While Go will search among multiple paths for files, <code>go get</code> will download new files into
-exactly one location.</p>
+<p><a href="http://cs.brown.edu/courses/cs173/2012/book/">Programming Languages: Application and Interpretation</a></p>
 
-<p>But there are other problems I’m wrestling with. I have some multi-language repositories. So
-I either relocate everything to suit Go, or I checkout the repo multiple times on the disk, or
-I use a symlink. The symlink approach is awkward, the multiple checkout is confusing (editing
-files in the wrong place is easy), and relocating everything to suit Go is very Go-centric.</p>
+<p><a href="http://www.codeupstart.com/project/build-kickstarter-with-python-and-flask">Build Kickstarter with Python and Flask</a></p>
 
-<h1 id="relative-and-absolute-go-paths">Relative and absolute Go paths</h1>
+<p><a href="http://tldr-pages.github.io/">TLDR pages</a>. Interesting but needs a lot of content.</p>
 
-<p>The <code>go</code> tool really likes absolute paths, and by absolute I mean paths that are relative
-to the <code>$GOPATH</code> root.</p>
+<p><a href="http://www.tutorialspoint.com/codingground.htm">Online terminals and IDEs</a>. Write (simple?) code online.</p>
 
-<p>If you use absolute paths to build, then your built output goes in the <code>bin/</code> folder. If
-you use relative paths to build, then your built output goes next to the source. While that
-doesn’t sound bad, it also has implications for any <code>import</code> statements in your source.
-Relative imports are forbidden if you use an absolute path to start. And if you have relative
-source imports (which are nice and readable and convenient), then you must use a relative
-path to trigger the build.</p>
+<p><a href="https://gist.github.com/bishboria/8326b17bbd652f34566a">Direct links to free Springer books (pdf versions)</a></p>
 
-<p>Given this plus the above, it sounds like the only sane choice is to build via relative path.
-I note that some projects do this: <a href="https://github.com/Netflix/rend">Netflix/rend</a> must be
-built via relative paths.</p>
+<p><a href="https://github.com/elemental/Elemental">Elemental</a>. A modern C++ library for distributed-memory dense and sparse-direct linear algebra and optimization.</p>
 
-<h1 id="versioning-and-go-source">Versioning and Go source</h1>
+<p><a href="http://os.phil-opp.com/">Writing an OS in Rust</a></p>
 
-<p><code>go get</code> is useful, to a point. It can automatically fetch source packages for you.</p>
+<p><a href="http://link.springer.com/">Springer Link</a>. Books older than 10 years old are free to download? Talk about a big turnaround. This makes Springer suddenly not all that evil after all.</p>
 
-<p>What you don’t get is control over a version. And this is going to be important to let build
-servers automatically get and build projects, at least without a ton of pain.</p>
+<p><a href="http://r-statistics.co/ggplot2-Tutorial-With-R.html">How to make any plot in ggplot2?</a>. Nice cheat sheet.</p>
 
-<p><a href="http://0x74696d.com/posts/go-get-considered-harmful/">GO GET CONSIDERED HARMFUL</a></p>
+<p><a href="http://www.gnu.org/software/libmicrohttpd/tutorial.html">libmicrohttpd tutorial</a></p>
 
-<h1 id="reference">Reference</h1>
+<p><a href="http://blog.scottfrees.com/getting-your-c-to-the-web-with-node-js">Getting your C++ to the Web with Node.js</a></p>
 
-<p><a href="https://golang.org/">Golang.org</a></p>
-
-<ul>
-  <li><a href="https://golang.org/doc/articles/go_command.html">About the go command</a></li>
-  <li><a href="https://golang.org/cmd/go/">Command go</a></li>
-  <li><a href="https://golang.org/doc/effective_go.html">Effective Go</a></li>
-  <li><a href="https://blog.golang.org/package-names">Package names</a></li>
-  <li><a href="https://blog.golang.org/third-party-libraries-goprotobuf-and">Third-party libraries: goprotobuf and beyond</a></li>
-</ul>
+<p><a href="http://reports-archive.adm.cs.cmu.edu/anon/anon/usr/ftp/usr0/ftp/scan/CMU-CS-70-fisher.pdf">Control Structures for Programming Languages</a></p>
 
   </article>
 

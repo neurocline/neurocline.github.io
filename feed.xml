@@ -6,9 +6,62 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Dec 2015 22:37:25 -0800</pubDate>
-    <lastBuildDate>Sun, 27 Dec 2015 22:37:25 -0800</lastBuildDate>
+    <pubDate>Tue, 29 Dec 2015 23:01:34 -0800</pubDate>
+    <lastBuildDate>Tue, 29 Dec 2015 23:01:34 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://pdos.csail.mit.edu/6.828/2012/xv6.html&quot;&gt;Xv6, a simple Unix-like teaching operating system&lt;/a&gt;. Still Unix-like, but freshly written for teaching purposes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.theglobeandmail.com/news/national/article24073928.ece/BINARY/World+Happiness+Report.pdf&quot;&gt;World Happiness Report 2015&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/wdm0006/git-pandas&quot;&gt;git-pandas&lt;/a&gt;. Turns github stats into Pandas frames. Saw this from &lt;a href=&quot;http://www.willmcginnis.com/2015/12/25/git-pandas-v0-0-5-coverage-py-risk/&quot;&gt;GIT-PANDAS V0.0.5: COVERAGE.PY, RISK, AND MORE&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/wdm0006/gitnoc&quot;&gt;gitnoc&lt;/a&gt;. UI for git-pandas.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://opencorporates.com/&quot;&gt;OpenCorporates&lt;/a&gt;. Claims to be the largest open database of companies in the world.&lt;/p&gt;
+
+&lt;p&gt;Let’s Build A Simple Interpreter. &lt;a href=&quot;http://ruslanspivak.com/lsbasi-part1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://ruslanspivak.com/lsbasi-part2/&quot;&gt;Part 2&lt;/a&gt; … &lt;a href=&quot;http://ruslanspivak.com/lsbasi-part7/&quot;&gt;Part 7&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/awslabs/aws-shell&quot;&gt;aws-shell&lt;/a&gt;. An integrated shell for working with the AWS CLI.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/nficano/gendo&quot;&gt;gendo&lt;/a&gt;. Lightweight Slackbot framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cs.brown.edu/courses/cs173/2012/book/&quot;&gt;Programming Languages: Application and Interpretation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.codeupstart.com/project/build-kickstarter-with-python-and-flask&quot;&gt;Build Kickstarter with Python and Flask&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tldr-pages.github.io/&quot;&gt;TLDR pages&lt;/a&gt;. Interesting but needs a lot of content.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tutorialspoint.com/codingground.htm&quot;&gt;Online terminals and IDEs&lt;/a&gt;. Write (simple?) code online.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/bishboria/8326b17bbd652f34566a&quot;&gt;Direct links to free Springer books (pdf versions)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/elemental/Elemental&quot;&gt;Elemental&lt;/a&gt;. A modern C++ library for distributed-memory dense and sparse-direct linear algebra and optimization.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://os.phil-opp.com/&quot;&gt;Writing an OS in Rust&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://link.springer.com/&quot;&gt;Springer Link&lt;/a&gt;. Books older than 10 years old are free to download? Talk about a big turnaround. This makes Springer suddenly not all that evil after all.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://r-statistics.co/ggplot2-Tutorial-With-R.html&quot;&gt;How to make any plot in ggplot2?&lt;/a&gt;. Nice cheat sheet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gnu.org/software/libmicrohttpd/tutorial.html&quot;&gt;libmicrohttpd tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.scottfrees.com/getting-your-c-to-the-web-with-node-js&quot;&gt;Getting your C++ to the Web with Node.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://reports-archive.adm.cs.cmu.edu/anon/anon/usr/ftp/usr0/ftp/scan/CMU-CS-70-fisher.pdf&quot;&gt;Control Structures for Programming Languages&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Dec 2015 21:35:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2015/12/28/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/28/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -149,6 +202,9 @@ servers automatically get and build projects, at least without a ton of pain.&lt
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://golang.org/doc/articles/go_command.html&quot;&gt;About the go command&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://golang.org/cmd/go/&quot;&gt;Command go&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://golang.org/doc/effective_go.html&quot;&gt;Effective Go&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.golang.org/package-names&quot;&gt;Package names&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.golang.org/third-party-libraries-goprotobuf-and&quot;&gt;Third-party libraries: goprotobuf and beyond&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 21 Dec 2015 16:02:00 -0800</pubDate>
@@ -654,72 +710,6 @@ although you can’t overload on just return type.&lt;/p&gt;
         
         
         <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Electronic Music Bands</title>
-        <description>&lt;p&gt;layout: post
-title:  “Electronic bands to listen to”
-date:   2015-11-13 15:29:00 PM
-categories: music
-tags: electronic
-—&lt;/p&gt;
-
-&lt;p&gt;This is not an inclusive list by any means. I have favorites that I forget and then
-rediscover (and wonder how I forgot them), and so I expect I’ll update this list over
-time. It’s mostly for me to remember and to discover.&lt;/p&gt;
-
-&lt;p&gt;Some of my all-time favorites&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Stockhausen&lt;/li&gt;
-  &lt;li&gt;Walter/Wendy Carlos&lt;/li&gt;
-  &lt;li&gt;Synergy&lt;/li&gt;
-  &lt;li&gt;Tangering Dream&lt;/li&gt;
-  &lt;li&gt;Vangelis&lt;/li&gt;
-  &lt;li&gt;Jean-Michel Jarre&lt;/li&gt;
-  &lt;li&gt;Tomita&lt;/li&gt;
-  &lt;li&gt;Brian Eno&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some newer favorites&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;VNV Nation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And even newer (just started listening to)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Symbion Project&lt;/li&gt;
-  &lt;li&gt;Kodomo&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Others I want to follow up on&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Freezepop&lt;/li&gt;
-  &lt;li&gt;Splashdown&lt;/li&gt;
-  &lt;li&gt;Yellow Magic Orchestra&lt;/li&gt;
-  &lt;li&gt;Gary Numan&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Two useful Wikipedia pages for you&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Timeline_of_electronic_music_genres&quot;&gt;Timeline of electronic music genres&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_electronic_music_genres&quot;&gt;List of electronic music genres&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the 1980s and 1990s, I listened to the radio show &lt;a href=&quot;https://www.hos.com/&quot;&gt;Hearts of Space&lt;/a&gt;
-a lot; as the name indicates, it focuses on slower electronic music: ambient and new-age. It
-can still be found on a lot of radio channels across the US.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 13 Nov 2015 00:00:00 -0800</pubDate>
-        <link>http://neurocline.github.io/2015/11/13/electronic-music-bands.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/2015/11/13/electronic-music-bands.html</guid>
-        
         
       </item>
     
