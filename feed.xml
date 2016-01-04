@@ -6,9 +6,42 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Dec 2015 23:01:34 -0800</pubDate>
-    <lastBuildDate>Tue, 29 Dec 2015 23:01:34 -0800</lastBuildDate>
+    <pubDate>Mon, 04 Jan 2016 07:21:58 -0800</pubDate>
+    <lastBuildDate>Mon, 04 Jan 2016 07:21:58 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Book scanners</title>
+        <description>&lt;p&gt;I think making and using a book scanner is in my future. I’m already at the point where I
+throw away books because I can’t store them for the far future where someone will care
+(e.g. early computer books). And I don’t want to re-buy thousands of books to have them
+in electronic format, nor do I trust ANY of the current e-book vendors for longevity (which needs
+to be measured in decades to centuries).&lt;/p&gt;
+
+&lt;p&gt;So, something like this&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.diybookscanner.org/&quot;&gt;DIY Book Scanner&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;which has a huge community around it. There’s even a semi-commercial builder, &lt;a href=&quot;http://tenrec.builders/&quot;&gt;Tenrec Builders&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/gadgets/2013/02/diy-book-scanning-is-easier-than-you-think/&quot;&gt;How we built a DIY book scanner with speeds of 150 pages per minute&lt;/a&gt;, article from 2013 on experience with the Reetz scanner kit.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.atiz.com/&quot;&gt;Atiz&lt;/a&gt; is a commercial company selling book scanners. No idea on price, will find out soon.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.noisebridge.net/&quot;&gt;Noisebridge&lt;/a&gt; is a hackerspace in San Francisco (16th &amp;amp; Mission); one of their groups is &lt;a href=&quot;https://www.noisebridge.net/wiki/Digital_Archivists&quot;&gt;Digital Archivists&lt;/a&gt;. Will be checking this out next Wednesday night.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 Jan 2016 22:27:00 -0800</pubDate>
+        <link>http://neurocline.github.io/reading/2016/01/02/book-scanners.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/reading/2016/01/02/book-scanners.html</guid>
+        
+        <category>books</category>
+        
+        <category>scanner</category>
+        
+        
+        <category>reading</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -561,150 +594,6 @@ although you can’t overload on just return type.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/17/c++-functions.html</guid>
         
         <category>c++</category>
-        
-        <category>programming</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>C++11, C++14, C++17</title>
-        <description>&lt;p&gt;So, what exactly is here now and coming soon for C++?&lt;/p&gt;
-
-&lt;p&gt;First off, compilers. Clang is the front-runner, GCC is close, and Visual Studio 2015 is catching up but still incomplete.&lt;/p&gt;
-
-&lt;p&gt;Most annoyingly, VS 2015 doesn’t fully support C++11. It doesn’t have expression SFINAE, and its constexpr support is close but complete.&lt;/p&gt;
-
-&lt;p&gt;Clang 3.4 and GCC 4.9 both fully support C++14. Visual Studio 2015 lacks variable templates, extended constexpr, and aggregate member initialization in its core langauge support. I think that library support for Visual Studio is complete except for the bits that can’t be done due to missing core language features.&lt;/p&gt;
-
-&lt;h2 id=&quot;c11&quot;&gt;C++11&lt;/h2&gt;
-
-&lt;p&gt;There are now a lot of books covering C++11 in depth. Some precis:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.stroustrup.com/C++11FAQ.html&quot;&gt;C++11 - the new ISO C++ standard&lt;/a&gt; - Stroustroup FAQ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;c14&quot;&gt;C++14&lt;/h2&gt;
-
-&lt;p&gt;Not much was added to the core language with C++14, true, but on the other hand, these changes made so-so features in C++11 into much better, more useful features. Some other write-ups on these features:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://isocpp.org/wiki/faq/cpp14-language&quot;&gt;C++14 Language Extensions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/C%2B%2B14&quot;&gt;C++14 Wikipedia&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.drdobbs.com/cpp/the-c14-standard-what-you-need-to-know/240169034&quot;&gt;The C++14 Standard: What You Need to Know&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.infoq.com/news/2014/08/cpp14-here-features&quot;&gt;C++14 Is Here: Summary of New Features&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://clang.llvm.org/cxx_status.html&quot;&gt;C++ Support in Clang&lt;/a&gt; - Clang 3.4 and up&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gcc.gnu.org/projects/cxx1y.html&quot;&gt;C++1y/C++14 Support in GCC&lt;/a&gt; - GCC 4.9 and up&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.msdn.com/b/vcblog/archive/2015/06/19/c-11-14-17-features-in-vs-2015-rtm.aspx&quot;&gt;C++11/14/17 Features In VS 2015 RTM&lt;/a&gt; - VS2015 still missing Expression SFINAE from C++11, and Variable templates, extended constexpr, and aggregate member initialization (minor) in C++14.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;binary-literals-and-digits-separator&quot;&gt;Binary literals and digits separator.&lt;/h3&gt;
-
-&lt;p&gt;I just wish that the digits separator wasn’t so unusual, but I’ll get used to it.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b100&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;0001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// ASCII &amp;#39;A&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf&quot;&gt;Binary Literals in the C++ Core Language&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3781.pdf&quot;&gt;Single-Quotation-Mark as a Digit Separator&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;variable-templates&quot;&gt;Variable templates&lt;/h3&gt;
-
-&lt;p&gt;Not to be confused with variadic templates - this allows you to have templates that wrap variables. Now you can have a template that is a templated variable, and really largely to write parameterized constants with constexpr in a more straightforward fashion.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// math constant with precision dictated by actual type&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.14159265358979323846&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf&quot;&gt;Variable Templates&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;extended-constexpr&quot;&gt;Extended constexpr&lt;/h3&gt;
-
-&lt;p&gt;This is huge, because it extends what you can do with constexpr functions. You can write loops as opposed to resorting to recursion. Specifically, your constexpr functions can have local variables, and use if, switch, for, while, or do…while (just not goto).&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    	&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    	&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html&quot;&gt;Relaxing constraints on constexpr functions&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;c17&quot;&gt;C++17&lt;/h2&gt;
-
-&lt;p&gt;Obviously, C++17 is still baking. What’s likely to be in it?&lt;/p&gt;
-
-&lt;p&gt;First off, an internal position paper that Stroustroup wrote escaped to the wild, so he re-published it: &lt;a href=&quot;https://isocpp.org/files/papers/D4492.pdf&quot;&gt;Thoughts about C++17&lt;/a&gt;. His goals are roughly “better support for large-scale programs, better support for concurrency, simplify core language use”.&lt;/p&gt;
-
-&lt;p&gt;The best thing to read at the moment is this: &lt;a href=&quot;https://botondballo.wordpress.com/2015/11/09/trip-report-c-standards-meeting-in-kona-october-2015/&quot;&gt;Trip Report: C++ Standards Meeting in Kona, October 2015&lt;/a&gt;). It’s long but well worth your time.&lt;/p&gt;
-
-&lt;p&gt;My favorite small things:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;UTF-8 character literals: u8”string”&lt;/li&gt;
-  &lt;li&gt;default message for static_assert&lt;/li&gt;
-  &lt;li&gt;std::auto_ptr is gone&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Something that’s baking but has hope&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;std::variant&lt;t&gt; (similar to [Variant v5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0088r0.pdf) but it throws on invalid move).&lt;/t&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some medium things&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;operator dot (“operator.”) - fixing a hole in original C++ overloaded operators.&lt;/li&gt;
-  &lt;li&gt;uniform call syntax&lt;/li&gt;
-  &lt;li&gt;namespace and enumerator attributes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some big things&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;concepts light&lt;/li&gt;
-  &lt;li&gt;coroutines&lt;/li&gt;
-  &lt;li&gt;await (part of stackless coroutines, but might make it as a keyword on its own)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There’s a lot on the library front&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;asio likely to be the official C++ network library&lt;/li&gt;
-  &lt;li&gt;stackful coroutines can be done at the library level&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What’s almost certainly not going to make C++17?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;modules - I find both current proposals half-baked, so this is a relief.&lt;/li&gt;
-  &lt;li&gt;contracts - similar, don’t think it’s thought through enough yet.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Here’s the list of C++17 candidate papers&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/&quot;&gt;JTC1/SC22/WG21 - Papers 2015 &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 16 Nov 2015 19:00:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/11/16/cpp-11-14-17.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/11/16/cpp-11-14-17.html</guid>
-        
-        <category>C++</category>
         
         <category>programming</category>
         
