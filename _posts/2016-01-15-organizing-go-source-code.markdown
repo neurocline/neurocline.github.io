@@ -67,6 +67,15 @@ Smaller projects, at least Go-code wise:
 - kati: [https://github.com/google/kati](https://github.com/google/kati)
 - hashicorp/raft: [https://github.com/hashicorp/raft](https://github.com/hashicorp/raft)
 
+# Lots of code in package main
+
+There are no modules or classes or other namespace systems in Go, outside of packages, so there's a
+temptation to make packages just to create namespaces. But it feels like packages that aren't reusable
+subsystems aren't really packages.
+
+One answer is to just have lots of code in package main. There's always a ton of code that is unique
+to your program; for example, the specific command-line processing that you have.
+
 # Other notes
 
 [Excellent Open Source Go Projects](http://herman.asia/open-source-go-projects-to-learn-from)
@@ -78,3 +87,8 @@ Smaller projects, at least Go-code wise:
 [Architecture for a Golang Web App](https://larry-price.com/blog/2015/06/25/architecture-for-a-golang-web-app)
 
 [Generic programming in Go using "go generate"](http://www.onebigfluke.com/2014/12/generic-programming-go-generate.html)
+
+I assume you've read at least these
+
+* http://blog.golang.org/organizing-go-code
+* http://blog.golang.org/godoc-documenting-go-code
