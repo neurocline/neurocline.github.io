@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Jan 2016 01:30:30 -0800</pubDate>
-    <lastBuildDate>Tue, 19 Jan 2016 01:30:30 -0800</lastBuildDate>
+    <pubDate>Tue, 19 Jan 2016 09:29:39 -0800</pubDate>
+    <lastBuildDate>Tue, 19 Jan 2016 09:29:39 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,15 +15,46 @@
         <description>&lt;p&gt;Here are some packages I want to see.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;gmp (assorted links &lt;a href=&quot;https://www.reddit.com/r/haskell/comments/1twtvm/the_problem_with_integer/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=6990233&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://gmplib.org/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/gx/gmp&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/ncw/gmp&quot;&gt;here&lt;/a&gt;). Of course, GMP is LGPL which really limits its ability to be used.&lt;/li&gt;
-  &lt;li&gt;libtommath, which is not GPL.&lt;/li&gt;
+  &lt;li&gt;Boost (broken into individual pieces, not a mega-package)&lt;/li&gt;
+  &lt;li&gt;crypto&lt;/li&gt;
+  &lt;li&gt;libtommath&lt;/li&gt;
+  &lt;li&gt;gmp (although non GPL projects have a hard time using it)&lt;/li&gt;
+  &lt;li&gt;pcre&lt;/li&gt;
+  &lt;li&gt;icu&lt;/li&gt;
+  &lt;li&gt;curl&lt;/li&gt;
+  &lt;li&gt;zlib&lt;/li&gt;
+  &lt;li&gt;openssl&lt;/li&gt;
+  &lt;li&gt;protobuf&lt;/li&gt;
+  &lt;li&gt;sqlite&lt;/li&gt;
+  &lt;li&gt;breakpad&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More generically, things like this&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;command-line processing&lt;/li&gt;
+  &lt;li&gt;unit test frameworks&lt;/li&gt;
   &lt;li&gt;every crypto algorithm&lt;/li&gt;
+  &lt;li&gt;database interfaces&lt;/li&gt;
+  &lt;li&gt;low-level network stacks besides just Boost.ASIO&lt;/li&gt;
   &lt;li&gt;web frameworks&lt;/li&gt;
   &lt;li&gt;graphics libraries&lt;/li&gt;
+  &lt;li&gt;embedded languages: lua, python, etc&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Also, a decent fraction of the Standard C++ library might be better off as packages, at least in the proposed
-drastically expanded version that includes game and UI libraries.&lt;/p&gt;
+drastically expanded version that includes game and UI libraries. Specifically, Boost should be available
+as packages, not as a machine-level installable thing.&lt;/p&gt;
+
+&lt;p&gt;I also expect there to be platform-specific packages. But that would be fairly rare, instead we’d
+have packages that had inside them platform-specific bits, but the user doesn’t care as long as it
+works. E.g. networking frameworks need to be built on top of platform-specific bits.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gmp assorted links: &lt;a href=&quot;https://www.reddit.com/r/haskell/comments/1twtvm/the_problem_with_integer/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=6990233&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://gmplib.org/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/gx/gmp&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/ncw/gmp&quot;&gt;here&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Tue, 19 Jan 2016 00:37:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/01/19/cpp-packages-i-want-to-see.html</link>

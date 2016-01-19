@@ -80,15 +80,46 @@
     <p>Here are some packages I want to see.</p>
 
 <ul>
-  <li>gmp (assorted links <a href="https://www.reddit.com/r/haskell/comments/1twtvm/the_problem_with_integer/">here</a> and <a href="https://news.ycombinator.com/item?id=6990233">here</a> and <a href="https://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library">here</a> and <a href="https://gmplib.org/">here</a> and <a href="https://github.com/gx/gmp">here</a> and <a href="https://github.com/ncw/gmp">here</a>). Of course, GMP is LGPL which really limits its ability to be used.</li>
-  <li>libtommath, which is not GPL.</li>
+  <li>Boost (broken into individual pieces, not a mega-package)</li>
+  <li>crypto</li>
+  <li>libtommath</li>
+  <li>gmp (although non GPL projects have a hard time using it)</li>
+  <li>pcre</li>
+  <li>icu</li>
+  <li>curl</li>
+  <li>zlib</li>
+  <li>openssl</li>
+  <li>protobuf</li>
+  <li>sqlite</li>
+  <li>breakpad</li>
+</ul>
+
+<p>More generically, things like this</p>
+
+<ul>
+  <li>command-line processing</li>
+  <li>unit test frameworks</li>
   <li>every crypto algorithm</li>
+  <li>database interfaces</li>
+  <li>low-level network stacks besides just Boost.ASIO</li>
   <li>web frameworks</li>
   <li>graphics libraries</li>
+  <li>embedded languages: lua, python, etc</li>
 </ul>
 
 <p>Also, a decent fraction of the Standard C++ library might be better off as packages, at least in the proposed
-drastically expanded version that includes game and UI libraries.</p>
+drastically expanded version that includes game and UI libraries. Specifically, Boost should be available
+as packages, not as a machine-level installable thing.</p>
+
+<p>I also expect there to be platform-specific packages. But that would be fairly rare, instead we’d
+have packages that had inside them platform-specific bits, but the user doesn’t care as long as it
+works. E.g. networking frameworks need to be built on top of platform-specific bits.</p>
+
+<h1 id="reference">Reference</h1>
+
+<ul>
+  <li>gmp assorted links: <a href="https://www.reddit.com/r/haskell/comments/1twtvm/the_problem_with_integer/">here</a> and <a href="https://news.ycombinator.com/item?id=6990233">here</a> and <a href="https://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library">here</a> and <a href="https://gmplib.org/">here</a> and <a href="https://github.com/gx/gmp">here</a> and <a href="https://github.com/ncw/gmp">here</a>).</li>
+</ul>
 
   </article>
 
