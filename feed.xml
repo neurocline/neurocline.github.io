@@ -6,9 +6,367 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 15 Jan 2016 18:36:00 -0800</pubDate>
-    <lastBuildDate>Fri, 15 Jan 2016 18:36:00 -0800</lastBuildDate>
+    <pubDate>Tue, 19 Jan 2016 01:30:30 -0800</pubDate>
+    <lastBuildDate>Tue, 19 Jan 2016 01:30:30 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>C++ packages I want to see</title>
+        <description>&lt;p&gt;Here are some packages I want to see.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gmp (assorted links &lt;a href=&quot;https://www.reddit.com/r/haskell/comments/1twtvm/the_problem_with_integer/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=6990233&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://gmplib.org/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/gx/gmp&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/ncw/gmp&quot;&gt;here&lt;/a&gt;). Of course, GMP is LGPL which really limits its ability to be used.&lt;/li&gt;
+  &lt;li&gt;libtommath, which is not GPL.&lt;/li&gt;
+  &lt;li&gt;every crypto algorithm&lt;/li&gt;
+  &lt;li&gt;web frameworks&lt;/li&gt;
+  &lt;li&gt;graphics libraries&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also, a decent fraction of the Standard C++ library might be better off as packages, at least in the proposed
+drastically expanded version that includes game and UI libraries.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 19 Jan 2016 00:37:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/01/19/cpp-packages-i-want-to-see.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/19/cpp-packages-i-want-to-see.html</guid>
+        
+        <category>c++</category>
+        
+        <category>programming</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://adambard.com/blog/PHP-ruby-python-clojure-webapps-by-example/&quot;&gt;https://adambard.com/blog/PHP-ruby-python-clojure-webapps-by-example/&lt;/a&gt;. We need more of this, a bake-off between a bunch of languages using a small but actually-does-something program. This problem is a web app, so any language without a web framework available is at a big disadvantage, of course. But what I think that says in this day and age is that any wants-to-be-serious programming language needs a web framework for it. Heck, even C and C++ have web frameworks now.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://git.github.io/rev_news/2016/01/13/edition-11/&quot;&gt;https://git.github.io/rev_news/2016/01/13/edition-11/&lt;/a&gt;. I missed this somehow, but GitHub has started their own Git development newsletter. It’s definitely more readable than the Git mailing list, not yet sure how accurate it is.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/UWSysLab/tapir&quot;&gt;TAPIR – the Transaction Application Protocol for Inconsistent Replication&lt;/a&gt;. I need to read up on this, sounds useful and dubious at the same time. I skimmed the paper, but I need to spend a few days reading through it carefully and then experimenting.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sharow/libconcurrent&quot;&gt;Concurrent Programming Library (Coroutine) for C&lt;/a&gt;. Tiny, but only has GCC-based runtime support, and with 15 seconds of reading I can’t tell if this means Linux-only.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ramsdenj.github.io/server/2016/01/01/FreeNAS-Server-Build.html&quot;&gt;FreeNAS Home Server Build&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://drmemory.org/&quot;&gt;Dr. Memory&lt;/a&gt;. I have got to start using this!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/cognitect/transit-format&quot;&gt;Transit&lt;/a&gt;. Transit is designed to be implemented as an encoding on top of formats for which high performance processors already exist, specifically &lt;a href=&quot;http://www.ietf.org/rfc/rfc7159.txt&quot;&gt;JSON&lt;/a&gt; and &lt;a href=&quot;http://msgpack.org/&quot;&gt;MessagePack&lt;/a&gt;. See &lt;a href=&quot;https://github.com/msgpack/msgpack/blob/master/spec.md&quot;&gt;MessagePack specification&lt;/a&gt;. Post on the &lt;a href=&quot;http://blog.cognitect.com/blog/2014/7/22/transit&quot;&gt;initial release of Transit&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://firstround.com/review/square-defangs-difficult-decisions-with-this-system-heres-how/&quot;&gt;Square Defangs Difficult Decisions with this System — Here’s How&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sciencedaily.com/releases/2016/01/160114163035.htm&quot;&gt;Speed reading promises are too good to be true, scientists find&lt;/a&gt;. Matches my anecdotal experience; the faster I read something, the less I really understand of it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ramcloud.atlassian.net/wiki/display/RAM/RAMCloud+Papers&quot;&gt;RAMCloud Papers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wmutils.io/about.html&quot;&gt;wmutils&lt;/a&gt;. Build your own (Linux) window manager.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://codehistoryminer.com/index.html&quot;&gt;http://codehistoryminer.com/index.html&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://eli.thegreenplace.net/2016/c11-threads-affinity-and-hyperthreading/&quot;&gt;http://codehistoryminer.com/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ramiro.org/vis/hn-most-linked-books/&quot;&gt;Top 30 books ranked by total number of links to Amazon in Hacker News comments&lt;/a&gt;. An interesting reading list, and contains many good books. And some oddballs. Really, a rent book being the most mentioned?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/startup-guide-anti-patterns/how-you-can-leverage-technical-debt-why-you-should-4ec48a387751#.g4ttnl5j0&quot;&gt;How You Can Leverage Technical Debt &amp;amp; Why You Should&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://togelius.blogspot.com/2016/01/why-video-games-are-essential-for.html&quot;&gt;Why video games are essential for inventing artificial intelligence&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 19 Jan 2016 00:06:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/01/19/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/19/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Go select: blocking by default</title>
+        <description>&lt;p&gt;I’ve not yet remembered all of the Go language details, and sometimes intuition fails me. Or, rather, my
+mental model of how I expect things to work differs from how Go actually works.&lt;/p&gt;
+
+&lt;p&gt;The select language construct is cool - it’s the networking select call turned into a language construct
+and really beefed up. There is no switch statement, but select fills in for it, because it can have
+arbitrary code as its cases.&lt;/p&gt;
+
+&lt;p&gt;So I was building up a program that wanted to handle terminating and aborting cleanly. I have a scanner
+that should terminate if some other part of the code says to. So I had this in my program&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// aborting early&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And, nothing worked. Since my program had a goroutine for status monitoring, it ran, but it said that
+nothing was happening. Hmm. A few diagnostic prints zeroed in on the above code. I had to page through
+the D&amp;amp;K Go book until I found out the critical part. The Go select function waits until some case is
+satisfied; e.g. blocking. In my case, I’d just blocked my scanner from doing anything, as opposed to
+what I thought I was doing, having it check for early abort.&lt;/p&gt;
+
+&lt;p&gt;Adding a default case that does nothing did the trick; case statements are evaluated in order, so unless
+my done channel has a value on it, the default is reached and the select exits.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// aborting early&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// do nothing (a subtlety that needs to be reinforced)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I’ve used select a few dozen times by now, but I guess I always lucked out. Or didn’t luck out.&lt;/p&gt;
+
+&lt;p&gt;If I write a Go book, it’s going to focus on the parts of the language that aren’t a direct map to C
+or other languages.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Jan 2016 19:15:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/01/18/go-select-blocking-by-default.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/18/go-select-blocking-by-default.html</guid>
+        
+        <category>go</category>
+        
+        <category>programming</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;MARISA: Matching Algorithm with Recursively Implemented StorAge&quot;&gt;MARISA Trie&lt;/a&gt; and &lt;a href=&quot;https://code.google.com/p/marisa-trie/&quot;&gt;C++ implementation&lt;/a&gt;. I’ll have to write a version in Go to make sure I understand it. However, as a practical matter, I’m not sure this is really a viable data structure, because it’s pretty slow and not that much more compression than zlib would produce. But I’ll test that with my data sets.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://maikklein.github.io/2015/11/14/Converting-strings-to-types/&quot;&gt;Type safe OpenGL - Converting strings into types in D&lt;/a&gt;. This makes me want to start programming in D.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.theguardian.com/books/2016/jan/08/anti-education-on-the-future-of-our-educational-institutions-friedrich-nietzsche-review&quot;&gt;Anti-Education by Friedrich Nietzsche review – why mainstream culture, not the universities, is doing our best thinking&lt;/a&gt;. I’ve always liked Nietzsche, so I need to read this lecture series, because it’s important to have an honest view of someone you respect. Maybe Nietzsche did have a strong basis but went in the wrong direction in the end.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nbviewer.jupyter.org/url/norvig.com/ipython/Probability.ipynb&quot;&gt;Probability, Paradox, and the Reasonable Person Principle&lt;/a&gt;. Probability theory in Python by Peter Norvig. And this reminds me to look into Jupyter Notebooks. I like the expressiveness.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/GianlucaGuarini/go-observable&quot;&gt;go-observable&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.waleson.com/2016/01/parsing-10tb-of-metadata-26m-domains.html&quot;&gt;Parsing 10TB of Metadata, 26M Domain Names and 1.4M SSL Certs for $10 on AWS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://thinkingmachines.mit.edu/blog/unreasonable-reputation-neural-networks&quot;&gt;The Unreasonable Reputation of Neural Networks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ph7FP0LnmcA&quot;&gt;Andrei Alexandrescu Writing Fast Code I&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1O6ozzZHHxGzU-McpvEG09hl7K6oQDd2Taw0FOlnxJc8/preview?slide=id.p&quot;&gt;Introduction to Machine Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ultimatepp.org/index.html&quot;&gt;Ultimate++ is a C++ cross-platform rapid application development framework&lt;/a&gt;. I like the enthusiasm.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/A_History_of_the_World_in_100_Objects&quot;&gt;A History of the World in 100 Objects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.theglobeandmail.com/report-on-business/rob-commentary/rocket-reusability-launches-new-economy/article28226300/&quot;&gt;Rocket reusability launches new economy&lt;/a&gt;. Certainly the most significant event in the 21st century, and perhaps even the most significant one since the steam engine. General computing is up there, and if we ever actually do AI that would be on par or more significant.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jadpole.github.io/arcaders/arcaders-1-0/&quot;&gt;ArcadeRS 1.0: The project&lt;/a&gt;. A game written in Rust.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.mindtangle.net/2011/07/22/the-talent-war-revisted/&quot;&gt;The “Talent War” revisited&lt;/a&gt;. From 2011. Using visualization to make sense of numbers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cseweb.ucsd.edu/~lerner/papers/fp-printing-popl16.pdf&quot;&gt;Printing floating-point numbers&lt;/a&gt;. Spectacular! And see &lt;a href=&quot;https://github.com/marcandrysco/Errol&quot;&gt;GitHub repo&lt;/a&gt;. Also, the main author on the paper has &lt;a href=&quot;https://github.com/marcandrysco&quot;&gt;other stuff&lt;/a&gt;. Also see &lt;a href=&quot;http://cseweb.ucsd.edu/~lerner/&quot;&gt;his advisor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ben174/git-draw&quot;&gt;Git Draw&lt;/a&gt;. Umm.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/facebook-design/critique-is-an-important-part-of-any-design-process-whether-you-work-as-part-of-a-team-or-solo-ef3dcb299ce3#.ir759nlye&quot;&gt;Four Things Working at Facebook Has Taught Me About Design Critique&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://numenta.com/blog/machine-intelligence-machine-learning-deep-learning-artificial-intelligence.html&quot;&gt;What Is Machine Intelligence Vs. Machine Learning Vs. Deep Learning Vs. Artificial Intelligence (AI)?&lt;/a&gt;. I feel like this is begging the question, even a little bit, since it starts out saying “In our view, there are three major approaches to building smart machines”. At least they qualified this statement.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 17 Jan 2016 13:49:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/01/17/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/17/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Go language cheat sheet</title>
+        <description>&lt;p&gt;I can’t find a terse and usable summary of the Go language. So here it is. I’ll make it all pretty at some point. In fact, it’s quickly getting not-terse, so I need to employ better HTML skills and tighten it up somehow.&lt;/p&gt;
+
+&lt;p&gt;Maybe what would work better is callouts for things that are “different from language X”, because 80% of Go
+is quite like C, Python, Java etc.&lt;/p&gt;
+
+&lt;h2 id=&quot;types&quot;&gt;Types&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Kind&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;bool&lt;/td&gt;
+      &lt;td&gt;true, false&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;integer&lt;/td&gt;
+      &lt;td&gt;int, uint, uintptr, int8, int16, int32, int64, uint8, uint16, uint32, uint64&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;float&lt;/td&gt;
+      &lt;td&gt;float32, float64&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;complex&lt;/td&gt;
+      &lt;td&gt;complex64, complex128&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;byte&lt;/td&gt;
+      &lt;td&gt;alias for uint8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;rune&lt;/td&gt;
+      &lt;td&gt;alias for int32&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;operators&quot;&gt;Operators&lt;/h2&gt;
+
+&lt;p&gt;No operator overloading, so operators only work on basic types&lt;/p&gt;
+
+&lt;h3 id=&quot;logical-operators&quot;&gt;Logical operators&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Operator&lt;/th&gt;
+      &lt;th&gt;Meaning&lt;/th&gt;
+      &lt;th&gt;Examples&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;!&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;logical negation&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;!a, a = !b&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;conditional AND&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;if a() &amp;amp;&amp;amp; b()&lt;/code&gt; (short-circuit evaluation)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;||&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;conditional OR&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;if a() || b()&lt;/code&gt; (short-circuit evaluation)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;arithmetic-operators-integer-float-complex-string&quot;&gt;Arithmetic operators (integer, float, complex, string)&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Operator&lt;/th&gt;
+      &lt;th&gt;Meaning&lt;/th&gt;
+      &lt;th&gt;Examples&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;sum&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;1 + 1 == 2, &quot;abc&quot; + &quot;d&quot; == &quot;abcd&quot;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;arithmetic-operators-integer-float-complex&quot;&gt;Arithmetic operators (integer, float, complex)&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;difference&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;2 - 1 == 1&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;product&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;2 * 2 == 4&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;quotient&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;3 / 2 == 1&lt;/code&gt;, &lt;code&gt;5.0 / 2.0 == 2.5&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;arithmetic-operators-integer&quot;&gt;Arithmetic operators (integer)&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;%&lt;/code&gt;    remainder&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;5 % 2 == 1&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;    bitwise AND&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;6 &amp;amp; 3 == 2&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;|&lt;/code&gt;    bitwise OR&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;4 | 3 == 7&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;^&lt;/code&gt;    bitwise XOR&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;7 ^ 2 == 5&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;&amp;amp;^&lt;/code&gt;   bit clear (AND NOT)&lt;/td&gt;
+      &lt;td&gt;``` 11 &amp;amp;^ 6 == 9&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;arithmetic-operators-integer-op-unsigned-integer&quot;&gt;Arithmetic operators (integer OP unsigned integer)&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;   left shift&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;1 &amp;lt;&amp;lt; 15 == 32768&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;   right shift&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;65536 &amp;gt;&amp;gt; 8 == 256&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://golang.org/doc/&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;The Go Programming Language Specification&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://golang.org/doc/effective_go.html&quot;&gt;Effective Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://golang.org/doc/code.html&quot;&gt;How to Write Go Code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://golang-examples.tumblr.com/&quot;&gt;Golang Examples&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 16 Jan 2016 22:00:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/01/16/go-language-cheat-sheet.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/16/go-language-cheat-sheet.html</guid>
+        
+        <category>go</category>
+        
+        <category>programming</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Organizing Go source code</title>
@@ -145,6 +503,15 @@ counts are reported with &lt;a href=&quot;https://github.com/AlDanial/cloc&quot;
   &lt;li&gt;hashicorp/raft: &lt;a href=&quot;https://github.com/hashicorp/raft&quot;&gt;https://github.com/hashicorp/raft&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h1 id=&quot;lots-of-code-in-package-main&quot;&gt;Lots of code in package main&lt;/h1&gt;
+
+&lt;p&gt;There are no modules or classes or other namespace systems in Go, outside of packages, so there’s a
+temptation to make packages just to create namespaces. But it feels like packages that aren’t reusable
+subsystems aren’t really packages.&lt;/p&gt;
+
+&lt;p&gt;One answer is to just have lots of code in package main. There’s always a ton of code that is unique
+to your program; for example, the specific command-line processing that you have.&lt;/p&gt;
+
 &lt;h1 id=&quot;other-notes&quot;&gt;Other notes&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://herman.asia/open-source-go-projects-to-learn-from&quot;&gt;Excellent Open Source Go Projects&lt;/a&gt;&lt;/p&gt;
@@ -156,6 +523,13 @@ counts are reported with &lt;a href=&quot;https://github.com/AlDanial/cloc&quot;
 &lt;p&gt;&lt;a href=&quot;https://larry-price.com/blog/2015/06/25/architecture-for-a-golang-web-app&quot;&gt;Architecture for a Golang Web App&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.onebigfluke.com/2014/12/generic-programming-go-generate.html&quot;&gt;Generic programming in Go using “go generate”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I assume you’ve read at least these&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://blog.golang.org/organizing-go-code&lt;/li&gt;
+  &lt;li&gt;http://blog.golang.org/godoc-documenting-go-code&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Thu, 07 Jan 2016 22:27:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/01/07/organizing-go-source-code.html</link>
@@ -344,236 +718,6 @@ to be measured in decades to centuries).&lt;/p&gt;
         <pubDate>Thu, 24 Dec 2015 21:39:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2015/12/24/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/24/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Some notes on Go</title>
-        <description>&lt;h1 id=&quot;gopath-and-source-on-your-hard-disk&quot;&gt;GOPATH and source on your hard disk&lt;/h1&gt;
-
-&lt;p&gt;This is the thing that’s most annoying me about Go. Many of its proscriptive choices
-are neutral to me, but dictating how your source code is laid on on the hard disk
-is harder to work with.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;go&lt;/code&gt; tool finds files in relation to the &lt;code&gt;$GOPATH&lt;/code&gt; environment variable,
-and really wants to see a strucure like this at the root of &lt;code&gt;$GOPATH&lt;/code&gt; (using one
-of my recent projects as an example)&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bin/
-pkg/
-src/
-  github.com/
-    catalog/
-      ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;See &lt;a href=&quot;https://golang.org/doc/code.html&quot;&gt;How to Write Go Code&lt;/a&gt; for the official explanation.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, I have been organizing projects on my hard disk thematically, and
-partially by origin. And large projects (say, 1000 files and up), tend to develop
-their own internal organization.&lt;/p&gt;
-
-&lt;p&gt;I like some of the thoughts behind the Go structure. I’ve always preferred systems where
-generated files lived outside of your source files; source files come from source control,
-and generated files are mostly temporaries. And many programming environments and languages
-make this difficult. In the Go world, your source is all inside &lt;code&gt;src/&lt;/code&gt;, your intermediate
-files are in &lt;code&gt;pkg/&lt;/code&gt;, and your output binaries are in &lt;code&gt;bin/&lt;/code&gt;. Of course, that’s a
-little limiting, but I can work in it.&lt;/p&gt;
-
-&lt;p&gt;One choice is to keep changing &lt;code&gt;$GOPATH&lt;/code&gt;. It “points to your workspace”, but there’s no
-reason you need just the one workspace. I’m at the point where I’m seriously considering
-this approach. Since I don’t use an IDE at the moment for Go code, however, this means that
-I need to remember to set &lt;code&gt;$GOPATH&lt;/code&gt; each time I create a terminal window. This would be
-necessary if I worked on large Go programs, or on dozens at the same time. A single &lt;code&gt;bin/&lt;/code&gt;
-location would be a problem. The Go docs seem to recommend against this, see
-&lt;a href=&quot;https://github.com/golang/go/wiki/GOPATH&quot;&gt;GOPATH&lt;/a&gt; from the &lt;a href=&quot;https://github.com/golang/go/wiki&quot;&gt;Go Wiki&lt;/a&gt;.
-I suspect this is advice bourne from working on lots of small programs, though.&lt;/p&gt;
-
-&lt;p&gt;There is one big reason to use multiple &lt;code&gt;$GOPATH&lt;/code&gt; hierarchies, and that’s when using &lt;code&gt;go get&lt;/code&gt;.
-While Go will search among multiple paths for files, &lt;code&gt;go get&lt;/code&gt; will download new files into
-exactly one location.&lt;/p&gt;
-
-&lt;p&gt;But there are other problems I’m wrestling with. I have some multi-language repositories. So
-I either relocate everything to suit Go, or I checkout the repo multiple times on the disk, or
-I use a symlink. The symlink approach is awkward, the multiple checkout is confusing (editing
-files in the wrong place is easy), and relocating everything to suit Go is very Go-centric.&lt;/p&gt;
-
-&lt;h1 id=&quot;relative-and-absolute-go-paths&quot;&gt;Relative and absolute Go paths&lt;/h1&gt;
-
-&lt;p&gt;The &lt;code&gt;go&lt;/code&gt; tool really likes absolute paths, and by absolute I mean paths that are relative
-to the &lt;code&gt;$GOPATH&lt;/code&gt; root.&lt;/p&gt;
-
-&lt;p&gt;If you use absolute paths to build, then your built output goes in the &lt;code&gt;bin/&lt;/code&gt; folder. If
-you use relative paths to build, then your built output goes next to the source. While that
-doesn’t sound bad, it also has implications for any &lt;code&gt;import&lt;/code&gt; statements in your source.
-Relative imports are forbidden if you use an absolute path to start. And if you have relative
-source imports (which are nice and readable and convenient), then you must use a relative
-path to trigger the build.&lt;/p&gt;
-
-&lt;p&gt;Given this plus the above, it sounds like the only sane choice is to build via relative path.
-I note that some projects do this: &lt;a href=&quot;https://github.com/Netflix/rend&quot;&gt;Netflix/rend&lt;/a&gt; must be
-built via relative paths.&lt;/p&gt;
-
-&lt;h1 id=&quot;versioning-and-go-source&quot;&gt;Versioning and Go source&lt;/h1&gt;
-
-&lt;p&gt;&lt;code&gt;go get&lt;/code&gt; is useful, to a point. It can automatically fetch source packages for you.&lt;/p&gt;
-
-&lt;p&gt;What you don’t get is control over a version. And this is going to be important to let build
-servers automatically get and build projects, at least without a ton of pain.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://0x74696d.com/posts/go-get-considered-harmful/&quot;&gt;GO GET CONSIDERED HARMFUL&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://golang.org/&quot;&gt;Golang.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://golang.org/doc/articles/go_command.html&quot;&gt;About the go command&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://golang.org/cmd/go/&quot;&gt;Command go&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://golang.org/doc/effective_go.html&quot;&gt;Effective Go&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.golang.org/package-names&quot;&gt;Package names&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.golang.org/third-party-libraries-goprotobuf-and&quot;&gt;Third-party libraries: goprotobuf and beyond&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 21 Dec 2015 16:02:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/12/21/some-notes-on-go.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/21/some-notes-on-go.html</guid>
-        
-        <category>programming</category>
-        
-        <category>go</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Hugo, a static website engine in Go</title>
-        <description>&lt;p&gt;Jekyll is beginning to annoy me, so I’ve been looking for alternatives other than “write my own”
-(which is, admittedly, still appealing). There’s one written in Go&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo: A Fast &amp;amp; Modern Static Website Engine&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It looks like it would be trivial for me to switch or to try it out, so I’m going to do so.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 21 Dec 2015 16:02:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/12/21/hugo-a-static-website-engine-in-go.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/21/hugo-a-static-website-engine-in-go.html</guid>
-        
-        <category>blog</category>
-        
-        <category>hugo</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://ipxe.org/&quot;&gt;iPXE - open source boot firmware&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.redpill-linpro.com/sysadvent/2015/12/18/stateless-osd-servers.html&quot;&gt;Stateless OSD servers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.thenewatlantis.com/publications/why-the-arabic-world-turned-away-from-science&quot;&gt;Why the Arabic World Turned Away from Science&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.theguardian.com/world/2015/dec/17/the-mystery-of-indias-deadly-exam-scam&quot;&gt;The mystery of India’s deadly exam scam&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ai.stanford.edu/~nilsson/QAI/qai.pdf&quot;&gt;THE QUEST FOR ARTIFICIAL INTELLIGENCE: A HISTORY OF IDEAS AND ACHIEVEMENTS
-&lt;/a&gt;. The caps are from the paper, not me.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!msg/flow-based-programming/iaKhbABJ9fw/XlrMf-dnBgAJ&quot;&gt;Unix and Flow Based Programming&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.meltingasphalt.com/a-codebase-is-an-organism/&quot;&gt;A Codebase is an Organism&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://queue.acm.org/detail.cfm?ref=rss&amp;amp;id=2856460&quot;&gt;A Purpose-built Global Network: Google’s Move to SDN&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://parseplatform.github.io/&quot;&gt;Parse: Open Source Hub&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/information-technology/2015/12/rsync-net-zfs-replication-to-the-cloud-is-finally-here-and-its-fast/&quot;&gt;rsync.net: ZFS Replication to the cloud is finally here—and it’s fast&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://tip.golang.org/cmd/go/#hdr-Vendor_Directories&quot;&gt;Command go&lt;/a&gt;. Go 1.6 has vendor directories. It’s a step. It was in 1.5 as an experiment &lt;a href=&quot;https://docs.google.com/document/d/1Bz5-UB7g2uPBdOx-rw5t9MxJwkfpx90cqG9AFL0JAYo/edit&quot;&gt;oGo 1.5 Vendor Experiment&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/&quot;&gt;Bitrot and atomic COWs: Inside “next-gen” filesystems&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pr1ntf.xyz/windowsunderbhyve.html&quot;&gt;Running Windows under FreeBSD’s bhyve&lt;/a&gt;. bhyve is the FreeBSD hypervisor. This is pretty cool.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://artint.info/html/ArtInt.html&quot;&gt;Artificial Intelligence: Foundations of Computational Agents&lt;/a&gt;. Book, University Cambridge Press, 2010, David Poole and Alan Macworth.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://codewords.recurse.com/issues/five/what-restful-actually-means&quot;&gt;What RESTful actually means&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Elements-Computing-Systems-Building-Principles/dp/0262640686/&quot;&gt;The Elements of Computing Systems: Building a Modern Computer from First Principles&lt;/a&gt;. A book to recommend to people.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.cloudflare.com/why-its-harder-to-forge-a-sha-1-certificate-than-it-is-to-find-a-sha-1-collision/&quot;&gt;Why it’s harder to forge a SHA-1 certificate than it is to find a SHA-1 collision&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 19 Dec 2015 13:26:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/12/19/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/19/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>End-end Principle and Fate-Sharing</title>
-        <description>&lt;p&gt;The End-End Principle and Fate-Sharing are sometimes confused with each other.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mercury.lcs.mit.edu/~jnc/tech/end_end.html&quot;&gt;Will The Real “End-End Principle” Please Stand Up?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.reed.com/dpr/locus/Papers/EndtoEnd.html&quot;&gt;END-TO-END ARGUMENTS IN SYSTEM DESIGN&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf&quot;&gt;The Design Philosophy of the DARPA Internet Protocols&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ietf.org/rfc/rfc3724.txt&quot;&gt;RFC 3724, The Rise of the Middle and the Future of End-to-End: Reflections on the Evolution of the Internet Architecture&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 18 Dec 2015 18:09:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/12/18/end-end-principle.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/18/end-end-principle.html</guid>
-        
-        <category>software</category>
-        
-        <category>engineering</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://techblog.netflix.com/2015/11/linux-performance-analysis-in-60s.html&quot;&gt;Linux Performance Analysis in 60,000 Milliseconds&lt;/a&gt;, from Netflix blog.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ourworldindata.org/data/growth-and-distribution-of-prosperity/gdp-growth-over-the-very-long-run/&quot;&gt;GDP Growth over the Very Long Run&lt;/a&gt;. GDP per person over the last 2000 years.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://google.github.io/styleguide/cppguide.html&quot;&gt;Google C++ Style Guide&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/rumpkernel/wiki/wiki/Tutorial:-Building-Rumprun-Unikernels&quot;&gt;Tutorial: Building Rumprun Unikernels&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/MaximAbramchuck/awesome-interviews&quot;&gt;Awesome Interviews&lt;/a&gt;. Curated list of lists of interview questions.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.conan.io/&quot;&gt;Conan&lt;/a&gt;. C++ package manager (descendent of Biicode)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/postgres/postgres/tree/master/src/backend/regex&quot;&gt;Implementation notes about Henry Spencer’s regex library&lt;/a&gt; from Postgres source code.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.tillett.info/2015/08/30/ideas-are-not-cheap/&quot;&gt;Ideas are not cheap&lt;/a&gt;. OK. Hmm. I agree with the sentiment, but not his direction. He’s hoping that good ideas don’t need lots of work, or need to go up against tremendous opposition or inertia, or … most of the things that are the reason that good ideas exist that are unimplemented. Worth reading if only to react against.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.dbms2.com/2015/04/16/notes-on-indexes-and-index-like-structures/&quot;&gt;Notes on indexes and index-like structures&lt;/a&gt;. A little pompous but maybe this guy is allowed.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.jandrewrogers.com/2015/05/27/metrohash/&quot;&gt;MetroHash: Faster, Better Hash Functions&lt;/a&gt;. This also comes across as ridiculously arrogant, but again, maybe it’s deserved.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.pvk.ca/Blog/2015/11/29/retrospective-on-binary-search-and-on-compression-slash-compilation/&quot;&gt;Retrospective on Binary Search and Comp{ress,ilat}ion&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 05 Dec 2015 22:26:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/12/05/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/05/recent-links.html</guid>
         
         <category>links</category>
         

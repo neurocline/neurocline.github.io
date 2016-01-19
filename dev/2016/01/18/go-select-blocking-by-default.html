@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Go select: blocking by default</title>
+  <meta name="description" content="I’ve not yet remembered all of the Go language details, and sometimes intuition fails me. Or, rather, mymental model of how I expect things to work differs f...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/01/18/go-select-blocking-by-default.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,51 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Go select: blocking by default</h1>
+    <p class="post-meta">Jan 18, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jan 19, 2016</span>
+  <article class="post-content">
+    <p>I’ve not yet remembered all of the Go language details, and sometimes intuition fails me. Or, rather, my
+mental model of how I expect things to work differs from how Go actually works.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/01/19/cpp-packages-i-want-to-see.html">C++ packages I want to see</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 19, 2016</span>
+<p>The select language construct is cool - it’s the networking select call turned into a language construct
+and really beefed up. There is no switch statement, but select fills in for it, because it can have
+arbitrary code as its cases.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/01/19/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 18, 2016</span>
+<p>So I was building up a program that wanted to handle terminating and aborting cleanly. I have a scanner
+that should terminate if some other part of the code says to. So I had this in my program</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/01/18/go-select-blocking-by-default.html">Go select: blocking by default</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 17, 2016</span>
+<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">select</span> <span class="p">{</span>
+<span class="k">case</span> <span class="o">&lt;-</span> <span class="nx">done</span><span class="p">:</span>
+    <span class="k">return</span> <span class="c1">// aborting early</span>
+<span class="p">}</span></code></pre></div>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/01/17/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 16, 2016</span>
+<p>And, nothing worked. Since my program had a goroutine for status monitoring, it ran, but it said that
+nothing was happening. Hmm. A few diagnostic prints zeroed in on the above code. I had to page through
+the D&amp;K Go book until I found out the critical part. The Go select function waits until some case is
+satisfied; e.g. blocking. In my case, I’d just blocked my scanner from doing anything, as opposed to
+what I thought I was doing, having it check for early abort.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/01/16/go-language-cheat-sheet.html">Go language cheat sheet</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>Adding a default case that does nothing did the trick; case statements are evaluated in order, so unless
+my done channel has a value on it, the default is reached and the select exits.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">select</span> <span class="p">{</span>
+<span class="k">case</span> <span class="o">&lt;-</span> <span class="nx">done</span><span class="p">:</span>
+    <span class="k">return</span> <span class="c1">// aborting early</span>
+<span class="k">default</span><span class="p">:</span>
+    <span class="c1">// do nothing (a subtlety that needs to be reinforced)</span>
+<span class="p">}</span></code></pre></div>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>I’ve used select a few dozen times by now, but I guess I always lucked out. Or didn’t luck out.</p>
+
+<p>If I write a Go book, it’s going to focus on the parts of the language that aren’t a direct map to C
+or other languages.</p>
+
+  </article>
 
 </div>
 

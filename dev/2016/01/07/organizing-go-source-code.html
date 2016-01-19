@@ -210,6 +210,15 @@ counts are reported with <a href="https://github.com/AlDanial/cloc">cloc</a>.</p
   <li>hashicorp/raft: <a href="https://github.com/hashicorp/raft">https://github.com/hashicorp/raft</a></li>
 </ul>
 
+<h1 id="lots-of-code-in-package-main">Lots of code in package main</h1>
+
+<p>There are no modules or classes or other namespace systems in Go, outside of packages, so there’s a
+temptation to make packages just to create namespaces. But it feels like packages that aren’t reusable
+subsystems aren’t really packages.</p>
+
+<p>One answer is to just have lots of code in package main. There’s always a ton of code that is unique
+to your program; for example, the specific command-line processing that you have.</p>
+
 <h1 id="other-notes">Other notes</h1>
 
 <p><a href="http://herman.asia/open-source-go-projects-to-learn-from">Excellent Open Source Go Projects</a></p>
@@ -221,6 +230,13 @@ counts are reported with <a href="https://github.com/AlDanial/cloc">cloc</a>.</p
 <p><a href="https://larry-price.com/blog/2015/06/25/architecture-for-a-golang-web-app">Architecture for a Golang Web App</a></p>
 
 <p><a href="http://www.onebigfluke.com/2014/12/generic-programming-go-generate.html">Generic programming in Go using “go generate”</a></p>
+
+<p>I assume you’ve read at least these</p>
+
+<ul>
+  <li>http://blog.golang.org/organizing-go-code</li>
+  <li>http://blog.golang.org/godoc-documenting-go-code</li>
+</ul>
 
   </article>
 
