@@ -16,6 +16,11 @@ Online magazines
 * [aeon](http://aeon.co/magazine/)
 * [Nautilus](http://nautil.us/)
 
+Newspapers
+
+* [Washington Post](https://www.washingtonpost.com/)
+* [The Guardian](http://www.theguardian.com/)
+
 More
 
 * [The Morning Paper](http://blog.acolyer.org/) - an interesting paper a day
