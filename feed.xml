@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Jan 2016 17:24:45 -0800</pubDate>
-    <lastBuildDate>Thu, 28 Jan 2016 17:24:45 -0800</lastBuildDate>
+    <pubDate>Thu, 28 Jan 2016 23:26:23 -0800</pubDate>
+    <lastBuildDate>Thu, 28 Jan 2016 23:26:23 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -184,6 +184,45 @@ you can have a value of interface type, or a pointer of interface type. Kind of.
         <pubDate>Thu, 28 Jan 2016 14:39:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/01/28/go-structs-methods-interfaces.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/28/go-structs-methods-interfaces.html</guid>
+        
+        <category>go</category>
+        
+        <category>programming</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/visualfc/goqt&quot;&gt;GoQt&lt;/a&gt;. Go language bindings to &lt;a href=&quot;http://www.qt.io/&quot;&gt;Qt&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://universesandbox.com/&quot;&gt;Universe Sandbox&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://hunch.net/?p=224&quot;&gt;All Models of Learning have Flaws&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4415.pdf&quot;&gt;Simple Contracts for C++&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Jan 2016 13:50:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/01/24/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/24/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Go code patterns</title>
+        <description>&lt;p&gt;Go facilitates casual concurrency through the ease of creating goroutines and communicating with channels.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 24 Jan 2016 13:50:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/01/24/go-code-patterns.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/24/go-code-patterns.html</guid>
         
         <category>go</category>
         
@@ -792,92 +831,6 @@ to your program; for example, the specific command-line processing that you have
         <category>go</category>
         
         <category>programming</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Book scanners</title>
-        <description>&lt;p&gt;I think making and using a book scanner is in my future. I’m already at the point where I
-throw away books because I can’t store them for the far future where someone will care
-(e.g. early computer books). And I don’t want to re-buy thousands of books to have them
-in electronic format, nor do I trust ANY of the current e-book vendors for longevity (which needs
-to be measured in decades to centuries).&lt;/p&gt;
-
-&lt;p&gt;So, something like this&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.diybookscanner.org/&quot;&gt;DIY Book Scanner&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;which has a huge community around it. There’s even a semi-commercial builder, &lt;a href=&quot;http://tenrec.builders/&quot;&gt;Tenrec Builders&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/gadgets/2013/02/diy-book-scanning-is-easier-than-you-think/&quot;&gt;How we built a DIY book scanner with speeds of 150 pages per minute&lt;/a&gt;, article from 2013 on experience with the Reetz scanner kit.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.atiz.com/&quot;&gt;Atiz&lt;/a&gt; is a commercial company selling book scanners. No idea on price, will find out soon.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.noisebridge.net/&quot;&gt;Noisebridge&lt;/a&gt; is a hackerspace in San Francisco (16th &amp;amp; Mission); one of their groups is &lt;a href=&quot;https://www.noisebridge.net/wiki/Digital_Archivists&quot;&gt;Digital Archivists&lt;/a&gt;. Will be checking this out next Wednesday night.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 02 Jan 2016 22:27:00 -0800</pubDate>
-        <link>http://neurocline.github.io/reading/2016/01/02/book-scanners.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/reading/2016/01/02/book-scanners.html</guid>
-        
-        <category>books</category>
-        
-        <category>scanner</category>
-        
-        
-        <category>reading</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://pdos.csail.mit.edu/6.828/2012/xv6.html&quot;&gt;Xv6, a simple Unix-like teaching operating system&lt;/a&gt;. Still Unix-like, but freshly written for teaching purposes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.theglobeandmail.com/news/national/article24073928.ece/BINARY/World+Happiness+Report.pdf&quot;&gt;World Happiness Report 2015&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/wdm0006/git-pandas&quot;&gt;git-pandas&lt;/a&gt;. Turns github stats into Pandas frames. Saw this from &lt;a href=&quot;http://www.willmcginnis.com/2015/12/25/git-pandas-v0-0-5-coverage-py-risk/&quot;&gt;GIT-PANDAS V0.0.5: COVERAGE.PY, RISK, AND MORE&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/wdm0006/gitnoc&quot;&gt;gitnoc&lt;/a&gt;. UI for git-pandas.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://opencorporates.com/&quot;&gt;OpenCorporates&lt;/a&gt;. Claims to be the largest open database of companies in the world.&lt;/p&gt;
-
-&lt;p&gt;Let’s Build A Simple Interpreter. &lt;a href=&quot;http://ruslanspivak.com/lsbasi-part1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://ruslanspivak.com/lsbasi-part2/&quot;&gt;Part 2&lt;/a&gt; … &lt;a href=&quot;http://ruslanspivak.com/lsbasi-part7/&quot;&gt;Part 7&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/awslabs/aws-shell&quot;&gt;aws-shell&lt;/a&gt;. An integrated shell for working with the AWS CLI.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/nficano/gendo&quot;&gt;gendo&lt;/a&gt;. Lightweight Slackbot framework.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cs.brown.edu/courses/cs173/2012/book/&quot;&gt;Programming Languages: Application and Interpretation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codeupstart.com/project/build-kickstarter-with-python-and-flask&quot;&gt;Build Kickstarter with Python and Flask&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tldr-pages.github.io/&quot;&gt;TLDR pages&lt;/a&gt;. Interesting but needs a lot of content.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.tutorialspoint.com/codingground.htm&quot;&gt;Online terminals and IDEs&lt;/a&gt;. Write (simple?) code online.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://gist.github.com/bishboria/8326b17bbd652f34566a&quot;&gt;Direct links to free Springer books (pdf versions)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/elemental/Elemental&quot;&gt;Elemental&lt;/a&gt;. A modern C++ library for distributed-memory dense and sparse-direct linear algebra and optimization.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://os.phil-opp.com/&quot;&gt;Writing an OS in Rust&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://link.springer.com/&quot;&gt;Springer Link&lt;/a&gt;. Books older than 10 years old are free to download? Talk about a big turnaround. This makes Springer suddenly not all that evil after all.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://r-statistics.co/ggplot2-Tutorial-With-R.html&quot;&gt;How to make any plot in ggplot2?&lt;/a&gt;. Nice cheat sheet.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.gnu.org/software/libmicrohttpd/tutorial.html&quot;&gt;libmicrohttpd tutorial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.scottfrees.com/getting-your-c-to-the-web-with-node-js&quot;&gt;Getting your C++ to the Web with Node.js&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://reports-archive.adm.cs.cmu.edu/anon/anon/usr/ftp/usr0/ftp/scan/CMU-CS-70-fisher.pdf&quot;&gt;Control Structures for Programming Languages&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 28 Dec 2015 21:35:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2015/12/28/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2015/12/28/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>
