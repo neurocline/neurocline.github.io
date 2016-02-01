@@ -6,9 +6,83 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Jan 2016 23:26:23 -0800</pubDate>
-    <lastBuildDate>Thu, 28 Jan 2016 23:26:23 -0800</lastBuildDate>
+    <pubDate>Mon, 01 Feb 2016 07:31:29 -0800</pubDate>
+    <lastBuildDate>Mon, 01 Feb 2016 07:31:29 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;Lots of reading this weekend. This should keep you busy for a month of nights. At least.&lt;/p&gt;
+
+&lt;p&gt;Good series of articles on “what can we learn from Linux design”. The comments on some of the articles are better even than the articles.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lwn.net/Articles/411845/&quot;&gt;Ghosts of Unix Past: a historical search for design patterns&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lwn.net/Articles/412131/&quot;&gt;Ghosts of Unix past, part 2: Conflated designs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lwn.net/Articles/414618/&quot;&gt;Ghosts of Unix past, part 3: Unfixable designs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lwn.net/Articles/416494/&quot;&gt;Ghosts of Unix past, part 4: High-maintenance designs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Older series from the same author:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lwn.net/Articles/336224/&quot;&gt;Linux kernel design patterns - part 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lwn.net/Articles/336255/&quot;&gt;Linux kernel design patterns - part 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lwn.net/Articles/336262/&quot;&gt;Linux kernel design patterns - part 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cepr.net/documents/publications/no-vacation-update-2013-05.pdf&quot;&gt;No-Vacation Nation Revisited&lt;/a&gt;. It’s a little biased in terms of intent (there’s a thesis), but it collects a lot of data on vacation and leave across the richer part of the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.vox.com/2015/7/27/9038829/automation-myth&quot;&gt;The automation myth&lt;/a&gt;. The tag line is “Robots aren’t taking your jobs— and that’s the problem”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.vox.com/2016/1/28/10860830/y-combinator-basic-income&quot;&gt;Why a bunch of Silicon Valley investors are suddenly interested in universal basic income&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dubeyko.com/development/FileSystems/NTFS/ntfsdoc.pdf&quot;&gt;http://dubeyko.com/development/FileSystems/NTFS/ntfsdoc.pdf&lt;/a&gt;. From the authors of the Linux NTFS filesystem, not Microsoft. Alas. Maybe the new Microsoft will see benefit to releasing documentation that’s accurate.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://grayscale-research.org/new/pdfs/NTFS%20forensics.pdf&quot;&gt;NTFS Forensics: A Programmers View of Raw Filesystem Data Extraction&lt;/a&gt;. NTFS on-disk layouts.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.opensource.apple.com/source/zip/zip-6/unzip/unzip/proginfo/extra.fld&quot;&gt;extra.fld&lt;/a&gt;. All the ZIP file extension fields known (to the Info-ZIP project, anyway).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tldp.org/HOWTO/Software-Building-HOWTO.html&quot;&gt;Building and Installing Software Packages for Linux&lt;/a&gt;. Getting a bit old (this is from 1999), but still mostly relevant.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.linuxfromscratch.org/&quot;&gt;Linux From Scratch&lt;/a&gt;. Build a Linux distribution from scratch. Requires access to an existing Linux system. Good source of low-level details on Linux.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://divan.github.io/posts/go_concurrency_visualize/&quot;&gt;Visualizing Concurrency in Go&lt;/a&gt;. This is awesome.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.botlibre.org/&quot;&gt;Bot Libre!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/pbhogan/Signals&quot;&gt;Signals&lt;/a&gt;. Billed as “A lightweight “signals and slots” implementation using fast delegates.”. From 2004, and slightly updated in 2009.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rsos.royalsocietypublishing.org/content/3/1/150292&quot;&gt;Do online social media cut through the constraints that limit the size of offline social networks?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://zl-lang.org/&quot;&gt;ZL&lt;/a&gt;. Interesting. Basically C++ with Scheme-style hygienic macros.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/nothings/stb/blob/master/docs/other_libs.md&quot;&gt;Other single-file public-domain/open source libraries with minimal dependencies&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/dchichkov/curious-namespace-trick/wiki/Curious-Namespace-Trick&quot;&gt;Curious Namespace Trick&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://danluu.com/perf-tracing/&quot;&gt;The limitations of sampling profilers today, with glimpses of tracing tools from the future&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://joearms.github.io/2016/01/26/The-Unintentional-Side-Effects-of-a-Bad-Concurrency-Model.html&quot;&gt;The Unintentional side-effects of a bad concurrency model&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://joearms.github.io/2016/01/28/A-Badass-Way-To-Connect-Programs-Together.html&quot;&gt;A Badass Way to Connect Programs Together&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/google/seesaw&quot;&gt;Seesaw v2&lt;/a&gt;. Load balancer written in Go.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.dwheeler.com/autotools/&quot;&gt;Introduction to the Autotools (autoconf, automake, and libtool)&lt;/a&gt;. I’m not suggesting Autotools is good, it’s the opposite. It’s time to study everything so we can learn and grow.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.etalabs.net/compare_libcs.html&quot;&gt;Comparison of C/POSIX standard library implementations for Linux&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 31 Jan 2016 12:49:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/01/31/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/31/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Understanding Go: structs, methods, interfaces</title>
@@ -788,45 +862,6 @@ to your program; for example, the specific command-line processing that you have
         <pubDate>Thu, 07 Jan 2016 22:27:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/01/07/organizing-go-source-code.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/07/organizing-go-source-code.html</guid>
-        
-        <category>go</category>
-        
-        <category>programming</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Go notes</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/20875336/how-can-i-get-a-files-ctime-atime-mtime-and-change-them-using-golang&quot;&gt;How can I get a file’s ctime,atime,mtime and change them using Golang?&lt;/a&gt;. Go is actually fetching some of these under the hood, and you can snarf them with a little platform-dependent code. For others, you need to make OS calls.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/djherbis/times&quot;&gt;djherbis/times&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/AllenDang/w32&quot;&gt;AllenDang/w32&lt;/a&gt;. A wrapper of windows apis for the Go Programming Language.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.gopheracademy.com/advent-2013/day-23-multi-platform-applications/&quot;&gt;Go Advent Day 23 - Multi-Platform Applications: Architecture and Cross-Compilation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://techblog.steelseries.com/2014/04/08/multi-platform-development-go.html&quot;&gt;DEVELOPING FOR MULTIPLE PLATFORMS WITH GO&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://gogo.github.io/&quot;&gt;gogoprotobuf&lt;/a&gt;. Also see &lt;a href=&quot;https://github.com/gogo&quot;&gt;github gogoprotobuf&lt;/a&gt;. Interesting.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.gofragments.net/client/blog/fundamentals/2016/01/04/ioTeeReaderPiped/index.html&quot;&gt;ioTeeReaderPiped&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/rakyll/gom&quot;&gt;gom&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/MediaMath/govent/&quot;&gt;govent&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/golang&quot;&gt;reddit/golang&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/golang&quot;&gt;github/golang&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!forum/golang-nuts&quot;&gt;golang-nuts&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 07 Jan 2016 22:27:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/01/07/go-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/07/go-links.html</guid>
         
         <category>go</category>
         
