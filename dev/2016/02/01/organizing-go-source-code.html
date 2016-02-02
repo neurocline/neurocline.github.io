@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Organizing Go source code part 2</title>
+  <meta name="description" content="There are a handful of rules in Go that directly affect how the source code in your project is laid out.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/02/01/organizing-go-source-code.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,64 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Organizing Go source code part 2</h1>
+    <p class="post-meta">Feb 1, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Feb 1, 2016</span>
+  <article class="post-content">
+    <p>There are a handful of rules in Go that directly affect how the source code in your project is laid out.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/01/organizing-go-source-code.html">Organizing Go source code part 2</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 1, 2016</span>
+<p>When using the <code>go</code> tool:</p>
 
-        <h2>
-          <a class="post-link" href="/blog/2016/02/01/middleman-static-content.html">Middleman static content generator</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 31, 2016</span>
+<ul>
+  <li>all the files in a directory must be in the same package</li>
+  <li>all the files in a package must be in the same directory</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/01/31/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 28, 2016</span>
+<p>The <code>go</code> tool, when iterating, assumes that all files in a directory are in the same package. You’ll get a compile
+error otherwise. When told to target a specific file, this is not the case, but this is not the normal usage of
+the <code>go</code> tool. And from this consequence, all the files in a package need to be in the same directory.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/01/28/go-structs-methods-interfaces.html">Understanding Go: structs, methods, interfaces</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 24, 2016</span>
+<p>One consequence of this is for executables - things you run. In Go, this is package main with func main().
+This means that the top-level source for each executable should be in its own directory even if a single file, and must
+be in its own directory if multiple files. In other words,
+if you have a suite of programs built from one source base, then you’ll have something like this</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/01/24/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-  </ul>
+<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="nx">binaries</span><span class="o">/</span>
+  <span class="nx">binary1</span><span class="o">/</span>
+    <span class="nx">main</span><span class="p">.</span><span class="k">go</span>
+  <span class="nx">binary2</span><span class="o">/</span>
+    <span class="nx">main</span><span class="p">.</span><span class="k">go</span>
+<span class="nx">libs</span><span class="o">/</span>
+  <span class="nx">package1</span><span class="o">/</span>
+    <span class="nx">subpkg1</span><span class="o">/</span>
+    <span class="nx">subpkg2</span><span class="o">/</span>
+  <span class="nx">package2</span><span class="o">/</span></code></pre></div>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p>There is no language-level mandate that all the files in a package are in the same directory - this is a tooling
+issue. On the other hand, it is the standard tooling at the moment.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h1 id="kubernetes">Kubernetes</h1>
+
+<p>Kubernetes, <a href="https://github.com/kubernetes/kubernetes">https://github.com/kubernetes/kubernetes</a>, is the largest Go
+program I know of outside of the Go suite itself, at 460,000 lines as of this writing.</p>
+
+<p>This uses <code>godep</code>, as most big projects are currently doing - it vendors external source into a Godeps directory and rewrites
+your source to use the vendored paths.</p>
+
+<h1 id="openshift-origin">OpenShift Origin</h1>
+
+<p>Origin, <a href="https://github.com/openshift/origin">https://github.com/openshift/origin</a>, is fairly large - as of this writing,
+it is 257,000 lines of Go code (ignoring whitespace and comment lines). It’s interesting to look at, because
+it is a suite containing a lot of independent executables. There are 6 executables in the origin/cmd package, some example programs
+in origin/examples, a bunch of tool executables in origin/tools, and then a handful of other programs.</p>
+
+<p>This uses <code>godep</code>.</p>
+
+  </article>
 
 </div>
 

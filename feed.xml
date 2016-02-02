@@ -6,9 +6,93 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Feb 2016 07:31:29 -0800</pubDate>
-    <lastBuildDate>Mon, 01 Feb 2016 07:31:29 -0800</lastBuildDate>
+    <pubDate>Mon, 01 Feb 2016 17:40:42 -0800</pubDate>
+    <lastBuildDate>Mon, 01 Feb 2016 17:40:42 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Organizing Go source code part 2</title>
+        <description>&lt;p&gt;There are a handful of rules in Go that directly affect how the source code in your project is laid out.&lt;/p&gt;
+
+&lt;p&gt;When using the &lt;code&gt;go&lt;/code&gt; tool:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;all the files in a directory must be in the same package&lt;/li&gt;
+  &lt;li&gt;all the files in a package must be in the same directory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;code&gt;go&lt;/code&gt; tool, when iterating, assumes that all files in a directory are in the same package. You’ll get a compile
+error otherwise. When told to target a specific file, this is not the case, but this is not the normal usage of
+the &lt;code&gt;go&lt;/code&gt; tool. And from this consequence, all the files in a package need to be in the same directory.&lt;/p&gt;
+
+&lt;p&gt;One consequence of this is for executables - things you run. In Go, this is package main with func main().
+This means that the top-level source for each executable should be in its own directory even if a single file, and must
+be in its own directory if multiple files. In other words,
+if you have a suite of programs built from one source base, then you’ll have something like this&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span class=&quot;nx&quot;&gt;binaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;binary1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;go&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;binary2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;go&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;libs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;package1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;subpkg1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;subpkg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;package2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There is no language-level mandate that all the files in a package are in the same directory - this is a tooling
+issue. On the other hand, it is the standard tooling at the moment.&lt;/p&gt;
+
+&lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
+
+&lt;p&gt;Kubernetes, &lt;a href=&quot;https://github.com/kubernetes/kubernetes&quot;&gt;https://github.com/kubernetes/kubernetes&lt;/a&gt;, is the largest Go
+program I know of outside of the Go suite itself, at 460,000 lines as of this writing.&lt;/p&gt;
+
+&lt;p&gt;This uses &lt;code&gt;godep&lt;/code&gt;, as most big projects are currently doing - it vendors external source into a Godeps directory and rewrites
+your source to use the vendored paths.&lt;/p&gt;
+
+&lt;h1 id=&quot;openshift-origin&quot;&gt;OpenShift Origin&lt;/h1&gt;
+
+&lt;p&gt;Origin, &lt;a href=&quot;https://github.com/openshift/origin&quot;&gt;https://github.com/openshift/origin&lt;/a&gt;, is fairly large - as of this writing,
+it is 257,000 lines of Go code (ignoring whitespace and comment lines). It’s interesting to look at, because
+it is a suite containing a lot of independent executables. There are 6 executables in the origin/cmd package, some example programs
+in origin/examples, a bunch of tool executables in origin/tools, and then a handful of other programs.&lt;/p&gt;
+
+&lt;p&gt;This uses &lt;code&gt;godep&lt;/code&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 01 Feb 2016 11:26:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/01/organizing-go-source-code.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/01/organizing-go-source-code.html</guid>
+        
+        <category>go</category>
+        
+        <category>programming</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Middleman static content generator</title>
+        <description>&lt;p&gt;Hmm, this looks interesting&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://middlemanapp.com/&quot;&gt;Middleman&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing I’ve been realizing is that I don’t just want a blog, I want something that can do a blog, and
+do books, and do reference material.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 01 Feb 2016 07:50:00 -0800</pubDate>
+        <link>http://neurocline.github.io/blog/2016/02/01/middleman-static-content.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/blog/2016/02/01/middleman-static-content.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -505,367 +589,6 @@ or other languages.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/17/recent-links.html</guid>
         
         <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Go language cheat sheet</title>
-        <description>&lt;p&gt;I can’t find a terse and usable summary of the Go language. So here it is. I’ll make it all pretty at some point. In fact, it’s quickly getting not-terse, so I need to employ better HTML skills and tighten it up somehow.&lt;/p&gt;
-
-&lt;p&gt;Maybe what would work better is callouts for things that are “different from language X”, because 80% of Go
-is quite like C, Python, Java etc.&lt;/p&gt;
-
-&lt;h2 id=&quot;types&quot;&gt;Types&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Kind&lt;/th&gt;
-      &lt;th&gt;Type&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;bool&lt;/td&gt;
-      &lt;td&gt;true, false&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;integer&lt;/td&gt;
-      &lt;td&gt;int, uint, uintptr, int8, int16, int32, int64, uint8, uint16, uint32, uint64&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;float&lt;/td&gt;
-      &lt;td&gt;float32, float64&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;complex&lt;/td&gt;
-      &lt;td&gt;complex64, complex128&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;byte&lt;/td&gt;
-      &lt;td&gt;alias for uint8&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;rune&lt;/td&gt;
-      &lt;td&gt;alias for int32&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;operators&quot;&gt;Operators&lt;/h2&gt;
-
-&lt;p&gt;No operator overloading, so operators only work on basic types&lt;/p&gt;
-
-&lt;h3 id=&quot;logical-operators&quot;&gt;Logical operators&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Operator&lt;/th&gt;
-      &lt;th&gt;Meaning&lt;/th&gt;
-      &lt;th&gt;Examples&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;!&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;logical negation&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;!a, a = !b&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;conditional AND&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;if a() &amp;amp;&amp;amp; b()&lt;/code&gt; (short-circuit evaluation)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;||&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;conditional OR&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;if a() || b()&lt;/code&gt; (short-circuit evaluation)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;arithmetic-operators-integer-float-complex-string&quot;&gt;Arithmetic operators (integer, float, complex, string)&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Operator&lt;/th&gt;
-      &lt;th&gt;Meaning&lt;/th&gt;
-      &lt;th&gt;Examples&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;sum&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;1 + 1 == 2, &quot;abc&quot; + &quot;d&quot; == &quot;abcd&quot;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;arithmetic-operators-integer-float-complex&quot;&gt;Arithmetic operators (integer, float, complex)&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;difference&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;2 - 1 == 1&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;product&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;2 * 2 == 4&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;quotient&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;3 / 2 == 1&lt;/code&gt;, &lt;code&gt;5.0 / 2.0 == 2.5&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;arithmetic-operators-integer&quot;&gt;Arithmetic operators (integer)&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;%&lt;/code&gt;    remainder&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;5 % 2 == 1&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;    bitwise AND&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;6 &amp;amp; 3 == 2&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;|&lt;/code&gt;    bitwise OR&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;4 | 3 == 7&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;^&lt;/code&gt;    bitwise XOR&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;7 ^ 2 == 5&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;&amp;amp;^&lt;/code&gt;   bit clear (AND NOT)&lt;/td&gt;
-      &lt;td&gt;``` 11 &amp;amp;^ 6 == 9&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;arithmetic-operators-integer-op-unsigned-integer&quot;&gt;Arithmetic operators (integer OP unsigned integer)&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;   left shift&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;1 &amp;lt;&amp;lt; 15 == 32768&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;   right shift&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;65536 &amp;gt;&amp;gt; 8 == 256&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://golang.org/doc/&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;The Go Programming Language Specification&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://golang.org/doc/effective_go.html&quot;&gt;Effective Go&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://golang.org/doc/code.html&quot;&gt;How to Write Go Code&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://golang-examples.tumblr.com/&quot;&gt;Golang Examples&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 16 Jan 2016 22:00:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/01/16/go-language-cheat-sheet.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/16/go-language-cheat-sheet.html</guid>
-        
-        <category>go</category>
-        
-        <category>programming</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Organizing Go source code</title>
-        <description>&lt;p&gt;How should your Go project source be organized?&lt;/p&gt;
-
-&lt;h1 id=&quot;what-are-others-doing&quot;&gt;What are others doing?&lt;/h1&gt;
-
-&lt;p&gt;Here are some big Go projects on GitHub (found via the search string “language:go size:&amp;gt;=100000”). The line
-counts are reported with &lt;a href=&quot;https://github.com/AlDanial/cloc&quot;&gt;cloc&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;OpenShift Origin: &lt;a href=&quot;https://github.com/openshift/origin&quot;&gt;https://github.com/openshift/origin&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;6442 files, 1130855 code lines, 188546 comment lines, 161550 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Kubernetes: &lt;a href=&quot;https://github.com/kubernetes/kubernetes&quot;&gt;https://github.com/kubernetes/kubernetes&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;4239 files, 946564 code lines, 152004 comment lines, 117675 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Go: &lt;a href=&quot;https://github.com/golang/go&quot;&gt;https://github.com/golang/go&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;4021 files, 704959 code lines, 114329 comment lines, 94409 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Lantern: &lt;a href=&quot;https://github.com/getlantern/lantern&quot;&gt;https://github.com/getlantern/lantern&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;1917 files, 450132 code lines, 64529 comment lines, 56765 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Flynn: &lt;a href=&quot;https://github.com/flynn/flynn&quot;&gt;https://github.com/flynn/flynn&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;1747 files, 322831 code lines, 39889 comment lines, 51175 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;etcd: &lt;a href=&quot;https://github.com/coreos/etcd&quot;&gt;https://github.com/coreos/etcd&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;1024 files, 271571 code lines, 36024 comment lines, 32832 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Docker: &lt;a href=&quot;https://github.com/docker/docker&quot;&gt;https://github.com/docker/docker&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;1832 files, 269545 code lines, 41912 comment lines, 45000 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Drone: &lt;a href=&quot;https://github.com/drone/drone&quot;&gt;https://github.com/drone/drone&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;771 files, 174022 code lines, 16641 comment lines, 21642 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Terraform: &lt;a href=&quot;https://github.com/hashicorp/terraform&quot;&gt;https://github.com/hashicorp/terraform&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;1123 files, 173273 code lines, 9779 comment lines, 31801 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CockroachDb: &lt;a href=&quot;https://github.com/cockroachdb/cockroach&quot;&gt;https://github.com/cockroachdb/cockroach&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;518 files, 134545 code lines, 27682 comment lines, 14479 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;vitess: &lt;a href=&quot;https://github.com/youtube/vitess&quot;&gt;https://github.com/youtube/vitess&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;900 files, 135015 code lines, 19664 comment lines, 19242 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;golang/tools: &lt;a href=&quot;https://github.com/golang/tools&quot;&gt;https://github.com/golang/tools&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;599 files, 112023 code lines, 27344 comment lines, 17631 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Here are some medium-sized projects:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;golang/net: &lt;a href=&quot;https://github.com/golang/net&quot;&gt;https://github.com/golang/net&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;315 files, 80168 code lines, 7270 comment lines, 6137 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;influxdb: &lt;a href=&quot;https://github.com/influxdata/influxdb&quot;&gt;https://github.com/influxdata/influxdb&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;238 files, 71848 code lines, 8578 comment lines, 13009 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;syncthing: &lt;a href=&quot;https://github.com/syncthing/syncthing&quot;&gt;https://github.com/syncthing/syncthing&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;466 files, 64198 code lines, 10316 comment lines, 11161 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Consul: &lt;a href=&quot;https://github.com/hashicorp/consul&quot;&gt;https://github.com/hashicorp/consul&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;214 files, 56563 code lines, 6802 comment lines, 9344 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Packer: &lt;a href=&quot;https://github.com/mitchellh/packer&quot;&gt;https://github.com/mitchellh/packer&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;691 files, 49973 code lines, 4359 comment lines, 10614 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;gogs: &lt;a href=&quot;https://github.com/gogits/gogs&quot;&gt;https://github.com/gogits/gogs&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;125 files, 29071 code lines, 2539 comment lines, 5524 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;godropbox: &lt;a href=&quot;https://github.com/dropbox/godropbox&quot;&gt;https://github.com/dropbox/godropbox&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;173 files, 25494 code lines, 3116 comment lines, 5400 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;lime-backend: &lt;a href=&quot;https://github.com/limetext/lime-backend&quot;&gt;https://github.com/limetext/lime-backend&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;139 files, 19970 code lines, 1515 comment lines, 2349 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Serf: &lt;a href=&quot;https://github.com/hashicorp/serf&quot;&gt;https://github.com/hashicorp/serf&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;110 files, 15804 code lines, 1982 comment lines, 3249 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;go-github: &lt;a href=&quot;https://github.com/google/go-github&quot;&gt;https://github.com/google/go-github&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;112 files, 13698 code lines, 2210 comment lines, 3090 blank lines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Smaller projects, at least Go-code wise:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Spigo/Simianviz: &lt;a href=&quot;https://github.com/adrianco/spigo&quot;&gt;https://github.com/adrianco/spigo&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;kati: &lt;a href=&quot;https://github.com/google/kati&quot;&gt;https://github.com/google/kati&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;hashicorp/raft: &lt;a href=&quot;https://github.com/hashicorp/raft&quot;&gt;https://github.com/hashicorp/raft&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;lots-of-code-in-package-main&quot;&gt;Lots of code in package main&lt;/h1&gt;
-
-&lt;p&gt;There are no modules or classes or other namespace systems in Go, outside of packages, so there’s a
-temptation to make packages just to create namespaces. But it feels like packages that aren’t reusable
-subsystems aren’t really packages.&lt;/p&gt;
-
-&lt;p&gt;One answer is to just have lots of code in package main. There’s always a ton of code that is unique
-to your program; for example, the specific command-line processing that you have.&lt;/p&gt;
-
-&lt;h1 id=&quot;other-notes&quot;&gt;Other notes&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://herman.asia/open-source-go-projects-to-learn-from&quot;&gt;Excellent Open Source Go Projects&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/gophergala/go_report&quot;&gt;Go Report Card&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/golang/go/wiki/Projects&quot;&gt;Go Projects index&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://larry-price.com/blog/2015/06/25/architecture-for-a-golang-web-app&quot;&gt;Architecture for a Golang Web App&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.onebigfluke.com/2014/12/generic-programming-go-generate.html&quot;&gt;Generic programming in Go using “go generate”&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I assume you’ve read at least these&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;http://blog.golang.org/organizing-go-code&lt;/li&gt;
-  &lt;li&gt;http://blog.golang.org/godoc-documenting-go-code&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 07 Jan 2016 22:27:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/01/07/organizing-go-source-code.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/07/organizing-go-source-code.html</guid>
-        
-        <category>go</category>
-        
-        <category>programming</category>
         
         
         <category>dev</category>
