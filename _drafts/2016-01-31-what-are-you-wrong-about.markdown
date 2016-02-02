@@ -53,3 +53,11 @@ And this is before we look at the rest of the universe; our current estimate is 
 It's not my intention to convince you that you are in error; in all likelihood, I cannot do that, just as I would have had a hard time convincing my 1600 AD fellow that witchcraft doesn't exist. But over time, your beliefs will be seen as false. It may take many hundreds of more years before this happens.
 
 There's a chance that you, the reader of 2016 AD, does not believe in any religion. Congratulations.
+
+# Pets
+
+The act of keeping pets is immoral.
+
+# Women
+
+All current societies are organized in ways that keep women as second-class citizens at best, and more typically indentured servants or slaves.
