@@ -42,3 +42,5 @@ generics in Go
 [Go's power is in emergent behavior](http://www.onebigfluke.com/2014/04/gos-power-is-in-emergent-behavior.html). Although he meant orthogonality.
 
 [Makefiles for Everyone](https://cbednarski.com/articles/makefiles-for-everyone/)
+
+[Typeplate](http://typeplate.com/) - a "typographic starter kit".
