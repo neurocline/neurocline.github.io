@@ -6,9 +6,63 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Feb 2016 17:40:42 -0800</pubDate>
-    <lastBuildDate>Mon, 01 Feb 2016 17:40:42 -0800</lastBuildDate>
+    <pubDate>Tue, 02 Feb 2016 17:59:02 -0800</pubDate>
+    <lastBuildDate>Tue, 02 Feb 2016 17:59:02 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://coreos.com/blog/building-minimal-containers-with-quay-kubernetes-wercker.html&quot;&gt;Building and deploying minimal containers on Kubernetes with Quay.io and wercker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mesosphere.com/blog/2015/11/18/dcos-time-series-demo/&quot;&gt;WE BUILT AN APP IN 3 DAYS USING DCOS, KUBERNETES, KAFKA AND MORE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/backchannel/has-deepmind-really-passed-go-adc85e256bec#.9ia2jkh6j&quot;&gt;Go, Marvin Minsky, and the Chasm that AI Hasn’t Yet Crossed&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://codeblocks.org/&quot;&gt;Code::Blocks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://io2015codelabs.appspot.com/codelabs/gRPC#1&quot;&gt;Building a gRPC service with Node.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.stavros.io/posts/microservices-cargo-cult/&quot;&gt;The microservices cargo cult&lt;/a&gt;. Ignore the article, copy the blog style.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://brandur.org/golang-packages&quot;&gt;Package Management in Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;go generate&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.golang.org/generate&quot;&gt;Generating code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://godoc.org/golang.org/x/tools/cmd/stringer&quot;&gt;Command stringer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.gopheracademy.com/advent-2015/reducing-boilerplate-with-go-generate/&quot;&gt;Reducing boilerplate with go generate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/jmhodges/a50ab84b13c2cd791571&quot;&gt;Generating protobuf Go files with &lt;code&gt;go generate&lt;/code&gt; and a vendored protobuf package (specifically, vendored with godep).&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Generic programming in Go using “go generate”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ncw/gotemplate&quot;&gt;Go templates&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://willowtreeapps.com/blog/go-generate-your-database-code/&quot;&gt;Go Generate Your Database Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.ralch.com/tutorial/golang-code-generation/&quot;&gt;Golang code generation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;generics in Go&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://clipperhouse.github.io/gen/&quot;&gt;gen (v4)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/cheekybits/genny&quot;&gt;genny - Generics for Go&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/droundy/gotgo&quot;&gt;Gotgo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bouk.co/blog/idiomatic-generics-in-go/&quot;&gt;Idiomatic Generics in Go&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/joeshaw/gengen&quot;&gt;gengen - A generics code generator for Go&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.onebigfluke.com/2014/04/gos-power-is-in-emergent-behavior.html&quot;&gt;Go’s power is in emergent behavior&lt;/a&gt;. Although he meant orthogonality.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cbednarski.com/articles/makefiles-for-everyone/&quot;&gt;Makefiles for Everyone&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 02 Feb 2016 11:40:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/02/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/02/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Organizing Go source code part 2</title>
@@ -44,22 +98,95 @@ if you have a suite of programs built from one source base, then you’ll have s
 &lt;p&gt;There is no language-level mandate that all the files in a package are in the same directory - this is a tooling
 issue. On the other hand, it is the standard tooling at the moment.&lt;/p&gt;
 
+&lt;p&gt;Of course, this is not precisely true. Build constraints can prevent some files from being seen as part
+of a package. And test code is not in the same package; files ending in _test.go often are in a package
+*_test, and you’ll see this code pulling in the directory it’s in as a package.&lt;/p&gt;
+
 &lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
 
 &lt;p&gt;Kubernetes, &lt;a href=&quot;https://github.com/kubernetes/kubernetes&quot;&gt;https://github.com/kubernetes/kubernetes&lt;/a&gt;, is the largest Go
 program I know of outside of the Go suite itself, at 460,000 lines as of this writing.&lt;/p&gt;
 
-&lt;p&gt;This uses &lt;code&gt;godep&lt;/code&gt;, as most big projects are currently doing - it vendors external source into a Godeps directory and rewrites
-your source to use the vendored paths.&lt;/p&gt;
+&lt;p&gt;The basic source layout is this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;API/protocol (swagger, in json) in &lt;code&gt;api&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;binaries (package main) in &lt;code&gt;cmd&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;build scripts in &lt;code&gt;hack&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;packages in &lt;code&gt;pkg&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;external source in &lt;code&gt;Godeps&lt;/code&gt; (uses &lt;code&gt;godep&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;manually imported external source in &lt;code&gt;thirdparty&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The source uses a short URL http://k8s.io that redirects to http://kubernetes.io. Does this further redirect
+to https://github.com/kubernetes/? I’m not sure how that would work, though, unless you clone from k8s.io and not Github. In any event, there is a set of scripts in hack that are used to build and run Kubernetes from source.
+See http://www.sebastien-han.fr/blog/2015/07/01/build-kubernetes-from-source/ for quick note on building.&lt;/p&gt;
+
+&lt;p&gt;This uses &lt;code&gt;godep&lt;/code&gt;, as most big projects are currently doing - it vendors external source into a
+Godeps directory and rewrites your source to use the vendored paths.&lt;/p&gt;
+
+&lt;p&gt;There is a contrib folder that is the remnants of Kubernetes components that aren’t part of the core system. These moved to their own repo.&lt;/p&gt;
 
 &lt;h1 id=&quot;openshift-origin&quot;&gt;OpenShift Origin&lt;/h1&gt;
 
-&lt;p&gt;Origin, &lt;a href=&quot;https://github.com/openshift/origin&quot;&gt;https://github.com/openshift/origin&lt;/a&gt;, is fairly large - as of this writing,
-it is 257,000 lines of Go code (ignoring whitespace and comment lines). It’s interesting to look at, because
-it is a suite containing a lot of independent executables. There are 6 executables in the origin/cmd package, some example programs
-in origin/examples, a bunch of tool executables in origin/tools, and then a handful of other programs.&lt;/p&gt;
+&lt;p&gt;Origin, &lt;a href=&quot;https://github.com/openshift/origin&quot;&gt;https://github.com/openshift/origin&lt;/a&gt;, is fairly large - as of
+this writing, it is 257,000 lines of Go code (ignoring whitespace and comment lines).&lt;/p&gt;
 
-&lt;p&gt;This uses &lt;code&gt;godep&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The basic source layout is this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;API/protocol (swagger, in json) in &lt;code&gt;api&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;main binaries (package main) in &lt;code&gt;cmd&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;external source in &lt;code&gt;Godeps&lt;/code&gt; (uses &lt;code&gt;godep&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;build scripts in &lt;code&gt;hack&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;tool binaries in &lt;code&gt;tools&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The build scripts in Kubernetes and Origin look similar. Not surprising, since OpenShift is built on top
+of Docker and Kubernetes.&lt;/p&gt;
+
+&lt;h1 id=&quot;cockroachdb&quot;&gt;CockroachDb&lt;/h1&gt;
+
+&lt;p&gt;CockroachDb, &lt;a href=&quot;https://github.com/cockroachdb/cockroach&quot;&gt;https://github.com/cockroachdb/cockroach&lt;/a&gt;, at 130,000 lines of code, is the largest Go program I’ve seen (outside of the Go tools themselves) that has no
+substantial dependencies on other software.&lt;/p&gt;
+
+&lt;p&gt;The main binary is at the root of the repo - &lt;code&gt;main.go&lt;/code&gt;. There are a handful of other binaries in
+a simulation directory, a handful of tools in the cmd directory, and a stray simulation file in the gossip
+directory.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;build system in &lt;code&gt;build&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;command-line suite in &lt;code&gt;cli&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The repo is fairly flat, all the major components are at the top level; there is no src or pkg directory.&lt;/p&gt;
+
+&lt;h1 id=&quot;docker&quot;&gt;Docker&lt;/h1&gt;
+
+&lt;p&gt;Docker, &lt;a href=&quot;https://github.com/docker/docker&quot;&gt;https://github.com/docker/docker&lt;/a&gt;, is also fairly large,
+at 100,000 lines of Go code. It follows the Go 1.5 vendor method of doing external code.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;API expressed in Go code in &lt;code&gt;api&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;add-ons (not part of the core) in &lt;code&gt;contrib&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;main binary in &lt;code&gt;docker&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;build scripts in &lt;code&gt;hack&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;packages in &lt;code&gt;pkg&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;external source in &lt;code&gt;vendor&lt;/code&gt; (uses Go 1.5+)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;etcd&quot;&gt;etcd&lt;/h1&gt;
+
+&lt;p&gt;Medium sized at 60K lines of code.&lt;/p&gt;
+
+&lt;p&gt;Main binary at the root of the repo. Build scripts in the root of the repo. Big packages in directories at the root of the repo.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go client library for etcd in &lt;code&gt;client&lt;/code&gt; (standalone package used by third party clients)&lt;/li&gt;
+  &lt;li&gt;main binary &lt;code&gt;etcdmain&lt;/code&gt; (main.go in root just calls into etcdmain)&lt;/li&gt;
+  &lt;li&gt;external source in &lt;code&gt;Godeps&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;packages in &lt;code&gt;pkg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Mon, 01 Feb 2016 11:26:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/02/01/organizing-go-source-code.html</link>
@@ -540,55 +667,6 @@ or other languages.&lt;/p&gt;
         <category>go</category>
         
         <category>programming</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;MARISA: Matching Algorithm with Recursively Implemented StorAge&quot;&gt;MARISA Trie&lt;/a&gt; and &lt;a href=&quot;https://code.google.com/p/marisa-trie/&quot;&gt;C++ implementation&lt;/a&gt;. I’ll have to write a version in Go to make sure I understand it. However, as a practical matter, I’m not sure this is really a viable data structure, because it’s pretty slow and not that much more compression than zlib would produce. But I’ll test that with my data sets.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://maikklein.github.io/2015/11/14/Converting-strings-to-types/&quot;&gt;Type safe OpenGL - Converting strings into types in D&lt;/a&gt;. This makes me want to start programming in D.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.theguardian.com/books/2016/jan/08/anti-education-on-the-future-of-our-educational-institutions-friedrich-nietzsche-review&quot;&gt;Anti-Education by Friedrich Nietzsche review – why mainstream culture, not the universities, is doing our best thinking&lt;/a&gt;. I’ve always liked Nietzsche, so I need to read this lecture series, because it’s important to have an honest view of someone you respect. Maybe Nietzsche did have a strong basis but went in the wrong direction in the end.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nbviewer.jupyter.org/url/norvig.com/ipython/Probability.ipynb&quot;&gt;Probability, Paradox, and the Reasonable Person Principle&lt;/a&gt;. Probability theory in Python by Peter Norvig. And this reminds me to look into Jupyter Notebooks. I like the expressiveness.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/GianlucaGuarini/go-observable&quot;&gt;go-observable&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.waleson.com/2016/01/parsing-10tb-of-metadata-26m-domains.html&quot;&gt;Parsing 10TB of Metadata, 26M Domain Names and 1.4M SSL Certs for $10 on AWS&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://thinkingmachines.mit.edu/blog/unreasonable-reputation-neural-networks&quot;&gt;The Unreasonable Reputation of Neural Networks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ph7FP0LnmcA&quot;&gt;Andrei Alexandrescu Writing Fast Code I&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1O6ozzZHHxGzU-McpvEG09hl7K6oQDd2Taw0FOlnxJc8/preview?slide=id.p&quot;&gt;Introduction to Machine Learning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ultimatepp.org/index.html&quot;&gt;Ultimate++ is a C++ cross-platform rapid application development framework&lt;/a&gt;. I like the enthusiasm.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/A_History_of_the_World_in_100_Objects&quot;&gt;A History of the World in 100 Objects&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.theglobeandmail.com/report-on-business/rob-commentary/rocket-reusability-launches-new-economy/article28226300/&quot;&gt;Rocket reusability launches new economy&lt;/a&gt;. Certainly the most significant event in the 21st century, and perhaps even the most significant one since the steam engine. General computing is up there, and if we ever actually do AI that would be on par or more significant.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jadpole.github.io/arcaders/arcaders-1-0/&quot;&gt;ArcadeRS 1.0: The project&lt;/a&gt;. A game written in Rust.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.mindtangle.net/2011/07/22/the-talent-war-revisted/&quot;&gt;The “Talent War” revisited&lt;/a&gt;. From 2011. Using visualization to make sense of numbers.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cseweb.ucsd.edu/~lerner/papers/fp-printing-popl16.pdf&quot;&gt;Printing floating-point numbers&lt;/a&gt;. Spectacular! And see &lt;a href=&quot;https://github.com/marcandrysco/Errol&quot;&gt;GitHub repo&lt;/a&gt;. Also, the main author on the paper has &lt;a href=&quot;https://github.com/marcandrysco&quot;&gt;other stuff&lt;/a&gt;. Also see &lt;a href=&quot;http://cseweb.ucsd.edu/~lerner/&quot;&gt;his advisor&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ben174/git-draw&quot;&gt;Git Draw&lt;/a&gt;. Umm.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/facebook-design/critique-is-an-important-part-of-any-design-process-whether-you-work-as-part-of-a-team-or-solo-ef3dcb299ce3#.ir759nlye&quot;&gt;Four Things Working at Facebook Has Taught Me About Design Critique&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://numenta.com/blog/machine-intelligence-machine-learning-deep-learning-artificial-intelligence.html&quot;&gt;What Is Machine Intelligence Vs. Machine Learning Vs. Deep Learning Vs. Artificial Intelligence (AI)?&lt;/a&gt;. I feel like this is begging the question, even a little bit, since it starts out saying “In our view, there are three major approaches to building smart machines”. At least they qualified this statement.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 17 Jan 2016 13:49:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/01/17/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/17/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>

@@ -109,22 +109,95 @@ if you have a suite of programs built from one source base, then you’ll have s
 <p>There is no language-level mandate that all the files in a package are in the same directory - this is a tooling
 issue. On the other hand, it is the standard tooling at the moment.</p>
 
+<p>Of course, this is not precisely true. Build constraints can prevent some files from being seen as part
+of a package. And test code is not in the same package; files ending in _test.go often are in a package
+*_test, and you’ll see this code pulling in the directory it’s in as a package.</p>
+
 <h1 id="kubernetes">Kubernetes</h1>
 
 <p>Kubernetes, <a href="https://github.com/kubernetes/kubernetes">https://github.com/kubernetes/kubernetes</a>, is the largest Go
 program I know of outside of the Go suite itself, at 460,000 lines as of this writing.</p>
 
-<p>This uses <code>godep</code>, as most big projects are currently doing - it vendors external source into a Godeps directory and rewrites
-your source to use the vendored paths.</p>
+<p>The basic source layout is this:</p>
+
+<ul>
+  <li>API/protocol (swagger, in json) in <code>api</code></li>
+  <li>binaries (package main) in <code>cmd</code></li>
+  <li>build scripts in <code>hack</code></li>
+  <li>packages in <code>pkg</code></li>
+  <li>external source in <code>Godeps</code> (uses <code>godep</code>)</li>
+  <li>manually imported external source in <code>thirdparty</code></li>
+</ul>
+
+<p>The source uses a short URL http://k8s.io that redirects to http://kubernetes.io. Does this further redirect
+to https://github.com/kubernetes/? I’m not sure how that would work, though, unless you clone from k8s.io and not Github. In any event, there is a set of scripts in hack that are used to build and run Kubernetes from source.
+See http://www.sebastien-han.fr/blog/2015/07/01/build-kubernetes-from-source/ for quick note on building.</p>
+
+<p>This uses <code>godep</code>, as most big projects are currently doing - it vendors external source into a
+Godeps directory and rewrites your source to use the vendored paths.</p>
+
+<p>There is a contrib folder that is the remnants of Kubernetes components that aren’t part of the core system. These moved to their own repo.</p>
 
 <h1 id="openshift-origin">OpenShift Origin</h1>
 
-<p>Origin, <a href="https://github.com/openshift/origin">https://github.com/openshift/origin</a>, is fairly large - as of this writing,
-it is 257,000 lines of Go code (ignoring whitespace and comment lines). It’s interesting to look at, because
-it is a suite containing a lot of independent executables. There are 6 executables in the origin/cmd package, some example programs
-in origin/examples, a bunch of tool executables in origin/tools, and then a handful of other programs.</p>
+<p>Origin, <a href="https://github.com/openshift/origin">https://github.com/openshift/origin</a>, is fairly large - as of
+this writing, it is 257,000 lines of Go code (ignoring whitespace and comment lines).</p>
 
-<p>This uses <code>godep</code>.</p>
+<p>The basic source layout is this:</p>
+
+<ul>
+  <li>API/protocol (swagger, in json) in <code>api</code></li>
+  <li>main binaries (package main) in <code>cmd</code></li>
+  <li>external source in <code>Godeps</code> (uses <code>godep</code>)</li>
+  <li>build scripts in <code>hack</code></li>
+  <li>tool binaries in <code>tools</code></li>
+</ul>
+
+<p>The build scripts in Kubernetes and Origin look similar. Not surprising, since OpenShift is built on top
+of Docker and Kubernetes.</p>
+
+<h1 id="cockroachdb">CockroachDb</h1>
+
+<p>CockroachDb, <a href="https://github.com/cockroachdb/cockroach">https://github.com/cockroachdb/cockroach</a>, at 130,000 lines of code, is the largest Go program I’ve seen (outside of the Go tools themselves) that has no
+substantial dependencies on other software.</p>
+
+<p>The main binary is at the root of the repo - <code>main.go</code>. There are a handful of other binaries in
+a simulation directory, a handful of tools in the cmd directory, and a stray simulation file in the gossip
+directory.</p>
+
+<ul>
+  <li>build system in <code>build</code></li>
+  <li>command-line suite in <code>cli</code></li>
+</ul>
+
+<p>The repo is fairly flat, all the major components are at the top level; there is no src or pkg directory.</p>
+
+<h1 id="docker">Docker</h1>
+
+<p>Docker, <a href="https://github.com/docker/docker">https://github.com/docker/docker</a>, is also fairly large,
+at 100,000 lines of Go code. It follows the Go 1.5 vendor method of doing external code.</p>
+
+<ul>
+  <li>API expressed in Go code in <code>api</code></li>
+  <li>add-ons (not part of the core) in <code>contrib</code></li>
+  <li>main binary in <code>docker</code></li>
+  <li>build scripts in <code>hack</code></li>
+  <li>packages in <code>pkg</code></li>
+  <li>external source in <code>vendor</code> (uses Go 1.5+)</li>
+</ul>
+
+<h1 id="etcd">etcd</h1>
+
+<p>Medium sized at 60K lines of code.</p>
+
+<p>Main binary at the root of the repo. Build scripts in the root of the repo. Big packages in directories at the root of the repo.</p>
+
+<ul>
+  <li>Go client library for etcd in <code>client</code> (standalone package used by third party clients)</li>
+  <li>main binary <code>etcdmain</code> (main.go in root just calls into etcdmain)</li>
+  <li>external source in <code>Godeps</code></li>
+  <li>packages in <code>pkg</code></li>
+</ul>
 
   </article>
 
