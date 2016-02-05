@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Formatting code</title>
+  <meta name="description" content="A long time ago, I was looking into writing a parser that treated comments and whitespaceas first-class citizens; not in the language grammar, but because I ...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/02/04/formatting-code.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,36 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Formatting code</h1>
+    <p class="post-meta">Feb 4, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Feb 4, 2016</span>
+  <article class="post-content">
+    <p>A long time ago, I was looking into writing a parser that treated comments and whitespace
+as first-class citizens; not in the language grammar, but because I wanted to write
+code formatters that handled comments more gracefully. It looks like the Go team ran
+into this when making <code>go fmt</code>.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/04/experimenting-with-modules-in-cpp.html">Experimenting with modules in C++</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 4, 2016</span>
+<p><a href="https://talks.go-zh.org/2015/gofmt-en.slide#1">The Cultural Evolution of gofmt</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/04/formatting-code.html">Formatting code</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 2, 2016</span>
+<p>The notes in Robert Griesemer’s presentation mention doing stuff ad-hoc and TBD to make
+it more integrated with the AST. And that’s what I had been considering - there’s the grammar
+for generating code, and then there’s the grammar for the meaning that the source code
+itself conveys, which includes where comments are “attached” to code.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/02/can-we-get-rid-of-make.html">Can we get rid of make?</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 2, 2016</span>
+<p>And on a related note, and also in <code>go fmt</code>, tab stops are a royal pain in the ass.
+It’s much better to think of tab stops at the semantic level and not at the implementation
+level of “go to fixed tab stop”. This is a proposal from 10 years ago to do exactly that.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/02/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 1, 2016</span>
+<p><a href="http://nickgravgaard.com/elastic-tabstops/">Elastic Tabstops</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/01/organizing-go-source-code.html">Organizing Go source code part 2</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>It’s interesting how problems can live for years and years, and keep coming up sporadically,
+and never actually be “solved”. It’s getting close to the time where this needs to be solved.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
 

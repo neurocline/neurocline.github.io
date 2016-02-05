@@ -6,9 +6,94 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Feb 2016 23:28:56 -0800</pubDate>
-    <lastBuildDate>Tue, 02 Feb 2016 23:28:56 -0800</lastBuildDate>
+    <pubDate>Thu, 04 Feb 2016 19:08:40 -0800</pubDate>
+    <lastBuildDate>Thu, 04 Feb 2016 19:08:40 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Experimenting with modules in C++</title>
+        <description>&lt;p&gt;There is a proposal to add modules to the C++ standard.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4465.pdf&quot;&gt;A Module System for C++ (Revision 3)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This builds on a much earlier proposal in 2006 by Daveed Vandevoorde&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n2073.pdf&quot;&gt;Modules in C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Microsoft has done an early implementation in Visual Studio 2015 Update 1 (because the authors of the
+new module proposal package work at Microsoft)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/vcblog/2015/12/03/c-modules-in-vs-2015-update-1/&quot;&gt;C++ Modules in VS 2015 Update 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m not terribly excited about some parts of their proposal and implementation. But I should play with it. So. I will play with it.
+Update to come.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3596147/c-modules-why-were-they-removed-from-c0x-will-they-be-back-later-on&quot;&gt;C++ Modules - why were they removed from C++0x? Will they be back later on?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2869.html&quot;&gt;State of C++ Evolution (Post San Francisco 2008)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://clang.llvm.org/docs/Modules.html&quot;&gt;Clang 3.9 - Modules&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lambda-the-ultimate.org/node/4649&quot;&gt;A module system for the C family&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=RwdQA0pGWa4&quot;&gt;CppCon 2015: Gabriel Dos Reis “Large Scale C++ with Modules: What You Should Know”&lt;/a&gt; and &lt;a href=&quot;https://github.com/isocpp/CppCoreGuidelines/blob/master/talks/Large-Scale-C%2B%2B-With-Modules.pdf&quot;&gt;slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://llvm.org/devmtg/2012-11/Gregor-Modules.pdf&quot;&gt;Modules&lt;/a&gt; and &lt;a href=&quot;http://llvm.org/devmtg/2012-11/videos/Gregor-Modules.mp4&quot;&gt;video&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kennykerr.ca/2015/12/03/getting-started-with-modules-in-c/&quot;&gt;Getting Started with Modules in C++&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 Feb 2016 17:05:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/04/experimenting-with-modules-in-cpp.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/04/experimenting-with-modules-in-cpp.html</guid>
+        
+        <category>C++</category>
+        
+        <category>standard</category>
+        
+        <category>modules</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Formatting code</title>
+        <description>&lt;p&gt;A long time ago, I was looking into writing a parser that treated comments and whitespace
+as first-class citizens; not in the language grammar, but because I wanted to write
+code formatters that handled comments more gracefully. It looks like the Go team ran
+into this when making &lt;code&gt;go fmt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://talks.go-zh.org/2015/gofmt-en.slide#1&quot;&gt;The Cultural Evolution of gofmt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The notes in Robert Griesemer’s presentation mention doing stuff ad-hoc and TBD to make
+it more integrated with the AST. And that’s what I had been considering - there’s the grammar
+for generating code, and then there’s the grammar for the meaning that the source code
+itself conveys, which includes where comments are “attached” to code.&lt;/p&gt;
+
+&lt;p&gt;And on a related note, and also in &lt;code&gt;go fmt&lt;/code&gt;, tab stops are a royal pain in the ass.
+It’s much better to think of tab stops at the semantic level and not at the implementation
+level of “go to fixed tab stop”. This is a proposal from 10 years ago to do exactly that.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nickgravgaard.com/elastic-tabstops/&quot;&gt;Elastic Tabstops&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s interesting how problems can live for years and years, and keep coming up sporadically,
+and never actually be “solved”. It’s getting close to the time where this needs to be solved.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 Feb 2016 16:55:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/04/formatting-code.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/04/formatting-code.html</guid>
+        
+        <category>code</category>
+        
+        <category>formatting</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Can we get rid of make?</title>
@@ -656,110 +741,6 @@ you can have a value of interface type, or a pointer of interface type. Kind of.
         <category>go</category>
         
         <category>programming</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>C++ packages I want to see</title>
-        <description>&lt;p&gt;Here are some packages I want to see.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Boost (broken into individual pieces, not a mega-package)&lt;/li&gt;
-  &lt;li&gt;crypto&lt;/li&gt;
-  &lt;li&gt;libtommath&lt;/li&gt;
-  &lt;li&gt;gmp (although non GPL projects have a hard time using it)&lt;/li&gt;
-  &lt;li&gt;pcre&lt;/li&gt;
-  &lt;li&gt;icu&lt;/li&gt;
-  &lt;li&gt;curl&lt;/li&gt;
-  &lt;li&gt;zlib&lt;/li&gt;
-  &lt;li&gt;openssl&lt;/li&gt;
-  &lt;li&gt;protobuf&lt;/li&gt;
-  &lt;li&gt;sqlite&lt;/li&gt;
-  &lt;li&gt;breakpad&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;More generically, things like this&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;command-line processing&lt;/li&gt;
-  &lt;li&gt;unit test frameworks&lt;/li&gt;
-  &lt;li&gt;every crypto algorithm&lt;/li&gt;
-  &lt;li&gt;database interfaces&lt;/li&gt;
-  &lt;li&gt;low-level network stacks besides just Boost.ASIO&lt;/li&gt;
-  &lt;li&gt;web frameworks&lt;/li&gt;
-  &lt;li&gt;graphics libraries&lt;/li&gt;
-  &lt;li&gt;embedded languages: lua, python, etc&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Also, a decent fraction of the Standard C++ library might be better off as packages, at least in the proposed
-drastically expanded version that includes game and UI libraries. Specifically, Boost should be available
-as packages, not as a machine-level installable thing.&lt;/p&gt;
-
-&lt;p&gt;I also expect there to be platform-specific packages. But that would be fairly rare, instead we’d
-have packages that had inside them platform-specific bits, but the user doesn’t care as long as it
-works. E.g. networking frameworks need to be built on top of platform-specific bits.&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;gmp assorted links: &lt;a href=&quot;https://www.reddit.com/r/haskell/comments/1twtvm/the_problem_with_integer/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=6990233&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://gmplib.org/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/gx/gmp&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/ncw/gmp&quot;&gt;here&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 19 Jan 2016 00:37:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/01/19/cpp-packages-i-want-to-see.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/19/cpp-packages-i-want-to-see.html</guid>
-        
-        <category>c++</category>
-        
-        <category>programming</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://adambard.com/blog/PHP-ruby-python-clojure-webapps-by-example/&quot;&gt;https://adambard.com/blog/PHP-ruby-python-clojure-webapps-by-example/&lt;/a&gt;. We need more of this, a bake-off between a bunch of languages using a small but actually-does-something program. This problem is a web app, so any language without a web framework available is at a big disadvantage, of course. But what I think that says in this day and age is that any wants-to-be-serious programming language needs a web framework for it. Heck, even C and C++ have web frameworks now.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://git.github.io/rev_news/2016/01/13/edition-11/&quot;&gt;https://git.github.io/rev_news/2016/01/13/edition-11/&lt;/a&gt;. I missed this somehow, but GitHub has started their own Git development newsletter. It’s definitely more readable than the Git mailing list, not yet sure how accurate it is.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/UWSysLab/tapir&quot;&gt;TAPIR – the Transaction Application Protocol for Inconsistent Replication&lt;/a&gt;. I need to read up on this, sounds useful and dubious at the same time. I skimmed the paper, but I need to spend a few days reading through it carefully and then experimenting.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/sharow/libconcurrent&quot;&gt;Concurrent Programming Library (Coroutine) for C&lt;/a&gt;. Tiny, but only has GCC-based runtime support, and with 15 seconds of reading I can’t tell if this means Linux-only.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ramsdenj.github.io/server/2016/01/01/FreeNAS-Server-Build.html&quot;&gt;FreeNAS Home Server Build&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://drmemory.org/&quot;&gt;Dr. Memory&lt;/a&gt;. I have got to start using this!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/cognitect/transit-format&quot;&gt;Transit&lt;/a&gt;. Transit is designed to be implemented as an encoding on top of formats for which high performance processors already exist, specifically &lt;a href=&quot;http://www.ietf.org/rfc/rfc7159.txt&quot;&gt;JSON&lt;/a&gt; and &lt;a href=&quot;http://msgpack.org/&quot;&gt;MessagePack&lt;/a&gt;. See &lt;a href=&quot;https://github.com/msgpack/msgpack/blob/master/spec.md&quot;&gt;MessagePack specification&lt;/a&gt;. Post on the &lt;a href=&quot;http://blog.cognitect.com/blog/2014/7/22/transit&quot;&gt;initial release of Transit&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://firstround.com/review/square-defangs-difficult-decisions-with-this-system-heres-how/&quot;&gt;Square Defangs Difficult Decisions with this System — Here’s How&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.sciencedaily.com/releases/2016/01/160114163035.htm&quot;&gt;Speed reading promises are too good to be true, scientists find&lt;/a&gt;. Matches my anecdotal experience; the faster I read something, the less I really understand of it.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ramcloud.atlassian.net/wiki/display/RAM/RAMCloud+Papers&quot;&gt;RAMCloud Papers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://wmutils.io/about.html&quot;&gt;wmutils&lt;/a&gt;. Build your own (Linux) window manager.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://codehistoryminer.com/index.html&quot;&gt;http://codehistoryminer.com/index.html&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://eli.thegreenplace.net/2016/c11-threads-affinity-and-hyperthreading/&quot;&gt;http://codehistoryminer.com/index.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ramiro.org/vis/hn-most-linked-books/&quot;&gt;Top 30 books ranked by total number of links to Amazon in Hacker News comments&lt;/a&gt;. An interesting reading list, and contains many good books. And some oddballs. Really, a rent book being the most mentioned?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/startup-guide-anti-patterns/how-you-can-leverage-technical-debt-why-you-should-4ec48a387751#.g4ttnl5j0&quot;&gt;How You Can Leverage Technical Debt &amp;amp; Why You Should&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://togelius.blogspot.com/2016/01/why-video-games-are-essential-for.html&quot;&gt;Why video games are essential for inventing artificial intelligence&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 19 Jan 2016 00:06:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/01/19/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/19/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>

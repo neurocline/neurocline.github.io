@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Experimenting with modules in C++</title>
+  <meta name="description" content="There is a proposal to add modules to the C++ standard.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/02/04/experimenting-with-modules-in-cpp.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -70,58 +69,47 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Experimenting with modules in C++</h1>
+    <p class="post-meta">Feb 4, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Feb 4, 2016</span>
+  <article class="post-content">
+    <p>There is a proposal to add modules to the C++ standard.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/04/experimenting-with-modules-in-cpp.html">Experimenting with modules in C++</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 4, 2016</span>
+<p><a href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4465.pdf">A Module System for C++ (Revision 3)</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/04/formatting-code.html">Formatting code</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 2, 2016</span>
+<p>This builds on a much earlier proposal in 2006 by Daveed Vandevoorde</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/02/can-we-get-rid-of-make.html">Can we get rid of make?</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 2, 2016</span>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n2073.pdf">Modules in C++</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/02/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 1, 2016</span>
+<p>Microsoft has done an early implementation in Visual Studio 2015 Update 1 (because the authors of the
+new module proposal package work at Microsoft)</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/02/01/organizing-go-source-code.html">Organizing Go source code part 2</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><a href="https://blogs.msdn.microsoft.com/vcblog/2015/12/03/c-modules-in-vs-2015-update-1/">C++ Modules in VS 2015 Update 1</a></p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p>I’m not terribly excited about some parts of their proposal and implementation. But I should play with it. So. I will play with it.
+Update to come.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h1 id="reference">Reference</h1>
+
+<p><a href="http://stackoverflow.com/questions/3596147/c-modules-why-were-they-removed-from-c0x-will-they-be-back-later-on">C++ Modules - why were they removed from C++0x? Will they be back later on?</a></p>
+
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2869.html">State of C++ Evolution (Post San Francisco 2008)</a></p>
+
+<p><a href="http://clang.llvm.org/docs/Modules.html">Clang 3.9 - Modules</a></p>
+
+<p><a href="http://lambda-the-ultimate.org/node/4649">A module system for the C family</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=RwdQA0pGWa4">CppCon 2015: Gabriel Dos Reis “Large Scale C++ with Modules: What You Should Know”</a> and <a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/talks/Large-Scale-C%2B%2B-With-Modules.pdf">slides</a></p>
+
+<p><a href="http://llvm.org/devmtg/2012-11/Gregor-Modules.pdf">Modules</a> and <a href="http://llvm.org/devmtg/2012-11/videos/Gregor-Modules.mp4">video</a></p>
+
+<p><a href="http://kennykerr.ca/2015/12/03/getting-started-with-modules-in-c/">Getting Started with Modules in C++</a></p>
+
+  </article>
 
 </div>
 
