@@ -99,6 +99,7 @@ C++
 * [GetPot](http://getpot.sourceforge.net/). Also has Java, Ruby and Python versions. Uses DSL and runtime parser to describe command-line argument parsing.
 * [CmdLine](http://www.bradapp.com/ftp/src/libs/C++/CmdLine.html). Has descriptive/DSL mode.
 * [arg](http://ccdw.org/~cjj/prog/arg/arg_manual.xhtml)
+* [The Lean Mean C++ Option Parser](http://optionparser.sourceforge.net/). header-only library.
 
 Java
 
