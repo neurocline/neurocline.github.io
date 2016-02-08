@@ -6,9 +6,82 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Feb 2016 19:08:40 -0800</pubDate>
-    <lastBuildDate>Thu, 04 Feb 2016 19:08:40 -0800</lastBuildDate>
+    <pubDate>Sun, 07 Feb 2016 22:35:19 -0800</pubDate>
+    <lastBuildDate>Sun, 07 Feb 2016 22:35:19 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;XCode is very spammy, and there are lots of files you don’t want in source control&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/49478/git-ignore-file-for-xcode-projects&quot;&gt;Git ignore file for Xcode projects&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/adamgit/3786883&quot;&gt;.gitignore file for Xcode4 / OS X Source projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Stack Exchange is going through a long and moderately painful process to clarify attribution. This
+seems to be driven by a combination of two things; the belief that everything is copyrighted, and
+our (overly?) litigious society. Editorial note: this should not be necessary, even large code
+snippets are not so masterful that they need or deserve copyright protection.
+&lt;a href=&quot;http://meta.stackexchange.com/questions/272956/a-new-code-license-the-mit-this-time-with-attribution-required&quot;&gt;A New Code License: The MIT, this time with Attribution Required&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/8709383/installing-git-html-help-on-osx&quot;&gt;Installing Git HTML Help on OSX&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Public Domain Curses is a project to make ncurses available for “not-Unix”; currently it covers
+DOS, OS/2, Win32, X11 and SDL. There is an interesting fork that directly uses Win32 APIs that
+the developer is trying to get merged into the main version.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;project page on SourceForge: &lt;a href=&quot;http://pdcurses.sourceforge.net/&quot;&gt;Public Domain Curses&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;source on GitHub: &lt;a href=&quot;https://github.com/wmcbrine/PDCurses&quot;&gt;wmcbrine/PDCurses&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Win32 GDI fork old project page: &lt;a href=&quot;http://www.projectpluto.com/win32a.htm&quot;&gt;PDCurses for “real” Windows&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Win32 GDI fork on GitHub: &lt;a href=&quot;https://github.com/Bill-Gray/PDCurses&quot;&gt;Bill-Gray/PDCurses&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Book catalog software&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.collectorz.com/&quot;&gt;Book Collector&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.koingosw.com/products/librarianpro/&quot;&gt;Librarian Pro 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Audio players&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.audiofile-engineering.com/fidelia/&quot;&gt;Fidelia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tmkk.undo.jp/xld/index_e.html&quot;&gt;X Lossless Decoder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://computers.tutsplus.com/tutorials/an-audiophiles-guide-to-os-x--cms-20027&quot;&gt;An Audiophile’s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.messynessychic.com/2016/01/29/meet-lilli-the-high-end-german-call-girl-who-became-americas-iconic-barbie-doll/&quot;&gt;Meet Lilli, the High-end German Call Girl who became America’s Iconic Barbie Doll&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tormeh.github.io/fumurt.html&quot;&gt;Fumurt - A Programming Language with Deterministic Multithreading&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Racket and CoreOS&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coreos.com/blog/getting-started-with-rkt-1.0.html&quot;&gt;Get Started with rkt Containers in Three Minutes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coreos.com/blog/rkt-hits-1.0.html&quot;&gt;The Security-minded Container Engine by CoreOS: rkt Hits 1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.docker.com/2016/02/docker-1-10/&quot;&gt;Docker 1.10: New Compose file, improved security, networking and much more!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/joeyh/github-backup&quot;&gt;github-backup&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.easypost.com/docs&quot;&gt;easyPost docs&lt;/a&gt;. Yet another group doing really good-looking documentation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.wildml.com/deep-learning-glossary/&quot;&gt;Deep Learning Glossary&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Feb 2016 12:25:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/06/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/06/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Experimenting with modules in C++</title>
@@ -723,24 +796,6 @@ you can have a value of interface type, or a pointer of interface type. Kind of.
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/24/recent-links.html</guid>
         
         <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Go code patterns</title>
-        <description>&lt;p&gt;Go facilitates casual concurrency through the ease of creating goroutines and communicating with channels.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 24 Jan 2016 13:50:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/01/24/go-code-patterns.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/24/go-code-patterns.html</guid>
-        
-        <category>go</category>
-        
-        <category>programming</category>
         
         
         <category>dev</category>
