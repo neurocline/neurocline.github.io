@@ -6,9 +6,135 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 Feb 2016 22:35:19 -0800</pubDate>
-    <lastBuildDate>Sun, 07 Feb 2016 22:35:19 -0800</lastBuildDate>
+    <pubDate>Tue, 09 Feb 2016 16:56:32 -0800</pubDate>
+    <lastBuildDate>Tue, 09 Feb 2016 16:56:32 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Company Tech Blogs</title>
+        <description>&lt;p&gt;A number of companies have tech blogs that are more than just self-aggrandizement or PR.&lt;/p&gt;
+
+&lt;h1 id=&quot;google&quot;&gt;Google&lt;/h1&gt;
+
+&lt;p&gt;Google is the champion. I have no idea how many tech blogs they have. Here are the ones I know about. I have no doubt that there are others.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://googleblog.blogspot.com/&quot;&gt;Official Google Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googlepublicpolicy.blogspot.com/&quot;&gt;Google Public Policy Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googleforstudents.blogspot.com/&quot;&gt;Google Student Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://officialandroid.blogspot.com/&quot;&gt;Official Android Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://chrome.blogspot.com/&quot;&gt;Google Chrome Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://google-latlong.blogspot.com/&quot;&gt;Google Lat Long&lt;/a&gt;. The official blog for Google Maps.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googledevelopers.blogspot.com/&quot;&gt;Google Developers Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googleadsdeveloper.blogspot.com/&quot;&gt;Google Ads Developer Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://android-developers.blogspot.com/&quot;&gt;Android Developers Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googletesting.blogspot.com/&quot;&gt;Google Testing Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://youtube-eng.blogspot.com/&quot;&gt;YouTube Engineering and Developers Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googleforwork.blogspot.com/&quot;&gt;Official Google for Work Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://google-opensource.blogspot.com/&quot;&gt;Google Open Source Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googleresearch.blogspot.com/&quot;&gt;Research Blog&lt;/a&gt;. Google Research Blog.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googlecloudplatform.blogspot.com/&quot;&gt;Google Cloud Platform Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Google also does research and publishes research articles&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://research.google.com/pubs/papers.html&quot;&gt;Research at Google&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;microsoft&quot;&gt;Microsoft&lt;/h1&gt;
+
+&lt;p&gt;I’m sure this is only scratching the surface. That said, Microsoft is still only a sometime
+tech blogger, most of their communication is in tech docs, magazines and books, or in PR pieces.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blogs.microsoft.com/&quot;&gt;The Official Microsoft Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blogs.technet.com/&quot;&gt;TN Home - TechNet Blogs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blogs.msdn.com/&quot;&gt;MSDN Blogs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.windows.com/&quot;&gt;Windows Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;netflix&quot;&gt;Netflix&lt;/h1&gt;
+
+&lt;p&gt;Netflix is moderately unique when it comes to tech blogging, its blogs exist to describe its
+internal technology; it develops all its tech to run its infrastructure, and releases large portions as open source.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://techblog.netflix.com/&quot;&gt;The Netflix Tech Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As part of their semi-open stance, they have a unified open source presence/portal on Github.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://netflix.github.io/&quot;&gt;Netflix Open Source Software&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The community put this summary description of their software stack together&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackshare.io/netflix/netflix&quot;&gt;Netflix’s Tech Stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;github&quot;&gt;GitHub&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://githubengineering.com/&quot;&gt;GitHub Engineering&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/blog/category/engineering&quot;&gt;The GitHub Blog: Engineering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;facebook&quot;&gt;Facebook&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://code.facebook.com/posts/&quot;&gt;Engineering Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://research.facebook.com/blog/ai/&quot;&gt;Research at Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;apple&quot;&gt;Apple&lt;/h1&gt;
+
+&lt;p&gt;I don’t think Apple has any tech blogs.&lt;/p&gt;
+
+&lt;h1 id=&quot;ibm&quot;&gt;IBM&lt;/h1&gt;
+
+&lt;p&gt;There are a lot, I should track them down. Most of IBM’s technical content is not presented in blogs, but
+in sources like developerWorks.&lt;/p&gt;
+
+&lt;h1 id=&quot;assorted&quot;&gt;Assorted&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Atlassian: &lt;a href=&quot;https://developer.atlassian.com/blog/&quot;&gt;Atlassian Developers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Cockroach Labs: &lt;a href=&quot;http://www.cockroachlabs.com/blog/&quot;&gt;Blog | Cockroach Labs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Dropbox: &lt;a href=&quot;https://blogs.dropbox.com/tech/&quot;&gt;Dropbox Tech Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;eBay: &lt;a href=&quot;http://www.ebaytechblog.com/&quot;&gt;eBay Tech Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Heroku: &lt;a href=&quot;https://engineering.heroku.com/&quot;&gt;Heroku Engineering Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Instagram: &lt;a href=&quot;http://instagram-engineering.tumblr.com/&quot;&gt;Instagram Engineering&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;LinkedIn: &lt;a href=&quot;https://engineering.linkedin.com/blog&quot;&gt;LinkedIn Engineering&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;PayPal: &lt;a href=&quot;https://devblog.paypal.com/category/engineering/&quot;&gt;PayPal Developer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Riot Games: &lt;a href=&quot;http://engineering.riotgames.com/&quot;&gt;Riot Games Engineering&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spotify: &lt;a href=&quot;https://labs.spotify.com/&quot;&gt;Spotify | Labs&lt;/a&gt;. Spotify’s Engineering and Technology Blog.&lt;/li&gt;
+  &lt;li&gt;Square: &lt;a href=&quot;https://corner.squareup.com/&quot;&gt;The Corner&lt;/a&gt;. Square Engineering Blog.&lt;/li&gt;
+  &lt;li&gt;StackOverflow: &lt;a href=&quot;http://blog.stackoverflow.com/engineering/&quot;&gt;Stack Overflow Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;StackShare: &lt;a href=&quot;http://stackshare.io/posts&quot;&gt;StackShare&lt;/a&gt;. StackShare Blog&lt;/li&gt;
+  &lt;li&gt;Yahoo: &lt;a href=&quot;http://yahooeng.tumblr.com/&quot;&gt;Yahoo Engineering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kilimchoi/engineering-blogs&quot;&gt;kilimchoi/engineering-blogs&lt;/a&gt;. A curated list of engineering blogs&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slicedham.co/&quot;&gt;SlicedHam&lt;/a&gt;. Aggregated dev blog posts from all over the web.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.thoughtworks.com/insights&quot;&gt;Thoughtworks&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Feb 2016 12:20:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/09/company-tech-blogs.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/09/company-tech-blogs.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -775,27 +901,6 @@ you can have a value of interface type, or a pointer of interface type. Kind of.
         <category>go</category>
         
         <category>programming</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/visualfc/goqt&quot;&gt;GoQt&lt;/a&gt;. Go language bindings to &lt;a href=&quot;http://www.qt.io/&quot;&gt;Qt&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://universesandbox.com/&quot;&gt;Universe Sandbox&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://hunch.net/?p=224&quot;&gt;All Models of Learning have Flaws&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4415.pdf&quot;&gt;Simple Contracts for C++&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 24 Jan 2016 13:50:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/01/24/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/01/24/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>
