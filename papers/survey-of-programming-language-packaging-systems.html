@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Survey of Programming Language Package Systems</title>
+  <meta name="description" content="Answers to some of the world's questions
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <!-- link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic"-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
+  <link rel="canonical" href="http://neurocline.github.io/papers/survey-of-programming-language-packaging-systems.html">
+  <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Some Things Are Obvious</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/papers/">Papers</a>
+          
+        
+          
+          <a class="page-link" href="/reading/">Reading List</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">A Survey of Programming Language Package Systems</h1>
+    <p class="post-meta">Feb 9, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <p>version 1, 2016/01/25</p>
+
+<p>C++ lacks a standardized or even widely used packaging system. Other languages and platforms have prospered in large part due to their packaging system. In point of fact, CTAN, the first package archive, gets the credit for a lot of TeX’s success. In that case, it wasn’t the package system per se, it was the fact that there was a global package archive that was relatively easy to use; so call it the forerunner of more integrated things like pip or cargo.</p>
+
+<p>I’m not going to cover Linux distribution packaging systems; those have a slightly different nature to them, although there are some valuable lessons to be learned there. I’m also only going to cover heavily used systems. These are in rough order of introduction to the world.</p>
+
+<ul>
+  <li>(1992) TeX - CTAN</li>
+  <li>(1995) Perl - CPAN</li>
+  <li>(2003) Python - PyPI, easy_install, pip</li>
+  <li>(2003) Ruby - RubyGems, gem</li>
+  <li>(2003) Java - Maven, Ivy, jpm, OSGi</li>
+  <li>(2005) Haskell - Cabal</li>
+  <li>(2009) Node.js - npm</li>
+  <li>(2009) Go - goget/goinstall</li>
+  <li>(2010) Windows - NuGet</li>
+  <li>(2011) Objective-C - CocoaPods</li>
+  <li>(2013) Rust - Crate</li>
+  <li>(2013) C++ - biicode -&gt; Conan, cpm, ghp</li>
+</ul>
+
+<p>As a side-note the Debian package manager dpkg came into existence sometime between January 1994 and March 1995, so it probably didn’t have any influence over CPAN. Interview Ian Jackson.</p>
+
+<h1 id="ctan-tex---1992">CTAN (TeX) - 1992</h1>
+
+<p>The TeX language has had CTAN, the Comprehensive TeX Archive Network, going back to 1992. It was the direct inspiration for CPAN, the Perl package archive.</p>
+
+<p>CTAN has two main features - it can be searched with full-text search, and there’s a web interface to view directories and files, and to download files and whole directories.</p>
+
+<p>New or updated packages are submitted to the archive curators for publishing. There is no direct publishing of packages, but the curation process is fairly light. In 2015, uploads averaged about 100/month.</p>
+
+<p>Architecture-wise, there is a core site that does all the management/curation (this is where uploads are accepted). Then there is a network of mirrors that automatically sync their site with the core site. Currently, there are about 94 mirror sites worldwide, and the main sites average about 6 TB per month in traffic.</p>
+
+<h2 id="new-features-introduced-by-ctan">New features introduced by CTAN</h2>
+
+<ul>
+  <li>central and global archive that anyone can use</li>
+  <li>full-text search</li>
+  <li>browsing</li>
+</ul>
+
+<h2 id="closely-related">Closely related</h2>
+
+<ul>
+  <li>CRAN - R (1997; has integrated but manually-driven tooling)</li>
+  <li>CEAN - Erlang</li>
+</ul>
+
+<h1 id="cpan-perl---1995">CPAN (Perl) - 1995</h1>
+
+<p>The Perl community came up with CPAN over the span of 1993-1995, and can be said to be active as of late 1995 (it went public in October 1995). Many people credit at least half of the success of Perl to CPAN.</p>
+
+<p>CPAN followed CTAN in spirit, but has an automatic upload mechanism, important since there are over 150,000 modules in CPAN as of mid-2015. It also introduced explicit tooling, rather than relying on a web browser, for both package upload and download. Most users interact with CPAN through a command-line or GUI package manager, including some limited searching. There is a fairly standard format for how distributions are made (the name for a package), but it changes over time and there are no strict rules as far as I can tell.</p>
+
+<p>While package uploading is not gated, it does take a week or more to get a PAUSE account; this is manually reviewed, I guess to have some level of accountability in terms of what can be added to CPAN.</p>
+
+<p>CPAN, due to size, also has some structure; there are 24 top categories, distributions can be browsed by author, and distributions can be browsed by their namespace hierarchy. And also due to size, there are multiple search engines, rating systems, forums, and a testing process that attempts to smoke test and validate all packages on CPAN. Like CTAN, there are a lot of mirrors</p>
+
+<p>Another big factor for CPAN was that documentation in modules can be browsed online. There is a site called AnnoCPAN that has all the documentation for modules, and facilitates user-contributed annotations to the documentation.</p>
+
+<p>The CPAN code can be run by anyone. There are sometimes private, company, or individual sites that just host an organization’s packages, perhaps due to political reasons or that the packages are seen to be too specialized to submit to CPAN itself. The tooling allows you to pull from one or more CPAN sites, just like Linux package systems.</p>
+
+<p>Despite that, CPAN is an example of a central and global archive, and the vast majority of all public packages are uploaded to CPAN itself.</p>
+
+<h2 id="perl-modules">Perl Modules</h2>
+
+<p>Using a Perl module is straightforward:</p>
+
+<div class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="sx">qw(md5)</span>
+ 
+<span class="nv">$digest</span> <span class="o">=</span> <span class="n">md5</span><span class="p">(</span><span class="s">&quot;calculate md5 on this string&quot;</span><span class="p">)</span></code></pre></div>
+
+<p>A Perl module is a single file on disk. This works well for Perl, since it is largely an interpreted language, and this makes factoring your own programs into modules pretty straightforward (you just create a folder hierarchy). For the above module, there is a file MD5.pm in a folder named Digest in the perl module path. There is no recursive include; each use statement points to a single .pm file.</p>
+
+<p>For the most part, shared modules are published to CPAN. There is tooling to create and push modules to CPAN, and then to pull modules from CPAN to your system. This is an offline process and does not happen automatically when running a Perl program. For example, assuming that Digest::MD5 were not a built-in module, you would install it to your Perl distribution like this:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cpan Digest::MD5</code></pre></div>
+
+<p>The cpan tool is built into Perl distributions, and has lots of bells and whistles that may or may not be ignorable. The new hotness is evidentally cpanminus, which is not yet bundled into Perl distributions.</p>
+
+<p>Perl modules can contain compiled code, and since most module distributions are source code, parts of the module are compiled at module install time. This is a complication that is handled by distribution tools, but it does make iterating on such modules a little painful.</p>
+
+<p>Perl has some versioning support; when you use a module, you can specify what version it needs to be. It won’t find that version of the module, but it will complain at runtime if the wrong version was found.</p>
+
+<h2 id="new-features-introduced-by-cpan">New features introduced by CPAN</h2>
+
+<ul>
+  <li>User-driven submission/upload process (no gating)</li>
+  <li>Command-line and GUI tooling</li>
+  <li>Private and custom archives</li>
+  <li>Community-driven testing, documentation, and annotating</li>
+</ul>
+
+<h2 id="syntax-in-detail">Syntax in detail</h2>
+
+<ul>
+  <li>use module version list</li>
+  <li>use module version</li>
+  <li>use module list</li>
+  <li>use module</li>
+</ul>
+
+<p>Perl uses the term package for the thing itself, and then module for using it; the two need to match, and generally this also means match the path on disk, although you can play games with the symbol table to get around that. Perl makes everything from a module available to access via its package namespace. It can also import zero or more symbols into the current namespace. There is no syntax to rename package namespaces, e.g. no way to handle two different packages that have a namespace collision. Package namespaces are not hierarchical; declaring package MD5 inside package Digest does not create Digest::MD5. The nesting is purely a manual organizational tactic.</p>
+
+<div class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="mf">2.01</span> <span class="sx">qw(md5)</span><span class="p">;</span> <span class="c1"># error if Digest::MD5 not at least version 2.01, just import md5 symbol</span>
+<span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="sx">qw(md5)</span><span class="p">;</span> <span class="c1"># any version, just import md5 symbol</span>
+<span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="mf">2.01</span><span class="p">;</span> <span class="c1"># error if Digest::MD5 not at least version 2.01, do default imports</span>
+<span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="sx">qw()</span><span class="p">;</span> <span class="c1"># any version, don&#39;t import anything to current namespace</span>
+<span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span><span class="p">;</span> <span class="c1"># do default imports</span></code></pre></div>
+
+<p>Caveat on versions; version-handling can be done in a per-module way. The default behavior is to croak if the version asked for is greater than the module version, but a module can implement any version-checking it desires. However, the caller gets to supply just one version number, not a range. But it would be possible for modules to implement semantic versioning.
+To translate this into C++ namespace terms, doing use on a package means that the entire namespace is now available to the code at that point. Imports are equivalent to <code>use namespace &lt;import&gt;</code>,which would import one or more symbols from one namespace into another namespace. There is no way to hide symbols from fully-qualified access in Perl modules.</p>
+
+<h1 id="pypi-and-pip-python---2003">PyPI and Pip (Python) - 2003</h1>
+
+<p>Python has a mixed history. There was really nothing from language inception until 2000. Distutils, the first tooling to create packages, was added to the Python standard library in 2000. There was no official repository/archive until 2003, which is why PyPI (the Python Package Index) was introduced. And there was no built-in tooling until 2014, when Pip shipped with Python 3.4 (although pip itself has existed since 2008, as an alternative to easy_install). There were tools, and they worked, but they required effort from users to configure and use. Pip existed, but it had to be downloaded and installed, and this was challenging for many users. EasyInstall could download and install from PyPI, but it couldn’t list local packages or update them as a group.</p>
+
+<p>As a result, while Python has long since outstripped Perl in popularity, there are far fewer package uploaded to PyPI than to CPAN (72000 packages on PyPI as of end of 2015 versus 200,000 on CPAN). This may change now that Pip is part of the official distribution and Setuptools and related are getting updated via the work of the Python Packaging Authority.</p>
+
+<p>At its start, PyPI was more of a location service and less of a centralized repository; packages “found” on PyPI might be hosted elsewhere. In 2014, this functionality was deprecated in favor of explicit multiple repositories; pip and setuptools support the concept of multiple repositories, so behind-the-scenes redirects are now phased out. This is in general a good thing, and <a href="https://www.python.org/dev/peps/pep-0470/">PEP 0470</a> explains it more clearly. It’s a cautionary tale for others.</p>
+
+<p>Amazingly, Python is a counter-example to the idea that packaging systems are a large part of the reason for the success of languages; Python arguably had the worst packaging support of any popular language sans C/C++. But maybe this is the counterexample that proves the rule; Python and C/C++ are great languages, so succeeded on their own merits, whereas Perl, Ruby, Javascript etc needed the boost from package systems in order to build a viable developer base.</p>
+
+<h2 id="python-packages">Python packages</h2>
+
+<p>Using a Python package is straightforward</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="k">print</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="s">&quot;calculate sha1 on this string&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span></code></pre></div>
+
+<p>A Python package is either a single file or a folder hierarchy with a specific layout. Just like with Perl, import names are turned into paths. In the case above, there is a file hashlib.py in the Python package path. Modules can also be folders; a folder is a package if there is a magic file <strong>init</strong>.py in the folder root. Modules can also be recursively included, and <strong>init</strong>.py can be used to guide what parts are imported by default and which need their own individual import.</p>
+
+<p>For the prepackaged Python modules, the vast majority are single-file modules. Unlike Perl, a module is either a single file or a folder - even though the filesystem allows it, you cannot have MODULE.py and MODULE/ in the same folder (I imagine it would just pick the single-file one). For user-level code, modules-as-folders seems to be more common.</p>
+
+<p>Getting a Python package is now simple, since pip is finally in the default distribution. Assuming hashlib were not already installed, you would get it as follows:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>pip install hashlib</code></pre></div>
+
+<p>The package manager Matthew Versluys created allowed Python code to automatically pull down its own packages if not present. Since it was an addon to Python and not altering the Python language, it required extra work to bootstrap the package manager, then use it, then pull down packages (packages are cached, so little work is done if a package is already present).</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="s">&#39;http://package.battle.net/package.zip&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="kn">import</span> <span class="nn">package.use</span>
+<span class="n">package</span><span class="o">.</span><span class="n">use</span><span class="o">.</span><span class="n">Package</span><span class="p">(</span><span class="s">&#39;Foo&#39;</span><span class="p">,</span> <span class="s">&#39;1.1.1&#39;</span><span class="p">)</span>
+ 
+<span class="kn">import</span> <span class="nn">foo</span></code></pre></div>
+
+<p>Python has very weak versioning support for packages. At install time, you can fetch specific versions of packages. At runtime, however, you have to check for versions yourself after the module is imported, and some packages lack the semi-standard <strong>version</strong> attribute.</p>
+
+<p><a href="https://pypi.python.org/pypi">PyPI - the Python Package Index</a></p>
+
+<h1 id="rubygems-and-gem-ruby---2003">RubyGems and gem (Ruby) - 2003</h1>
+
+<p>RubyGems is Ruby’s package manager. Packages in Ruby are called gems and the tool to work with them is called <code>gem</code>. <a href="https://rubygems.org/">https://rubygems.org/</a> is the Ruby community’s gem hosting service. Like with Python, RubyGems came well after Ruby. It was created at the end of 2003 and added to the standard library in Ruby 1.9 in 2007.</p>
+
+<p>The <code>gem</code> tool follows a pattern similar to apt-get, portage, yum and npm; there is a command-line tool with verbs to install, uninstall, list (local or remote), search and build.</p>
+
+<p>To use a package</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;digest/md5&#39;</span>
+<span class="nb">print</span> <span class="no">Digest</span><span class="o">::</span><span class="no">MD5</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="s1">&#39;That string again&#39;</span><span class="p">)</span>
+<span class="no">To</span> <span class="n">install</span> <span class="n">a</span> <span class="ss">package</span><span class="p">:</span>
+<span class="n">gem</span> <span class="n">install</span> <span class="n">digest</span></code></pre></div>
+
+<p><a href="http://guides.rubygems.org/">http://guides.rubygems.org/</a></p>
+
+<h1 id="java---2003">Java - 2003</h1>
+
+<p>The picture here is muddled. We have Ant as a build tool, which has the Ivy dependency manager as an integrated component, which is more like a bootstrap system (download packages and add to your project’s lib directory). Ivy can pull from Maven repositories, and probably should be looked at as a Maven-based tool. <a href="http://ant.apache.org/ivy/features.html">http://ant.apache.org/ivy/features.html</a>.</p>
+
+<p>There is Maven, which is both a replacement for Ant as a build tool, and then a dependency manager/package downloader. It’s not a bootstrap system, it can download packages at build time, and has a browser to find projects at <a href="http://search.maven.org/#browse">http://search.maven.org/#browse</a>. There is also a common global repository at <a href="http://mvnrepository.com">http://mvnrepository.com</a>.</p>
+
+<p>Maven is too complicated to describe here. You need an XML file. It is far simpler than Ant, but still runs to thousands of lines of XML or more for a large project.</p>
+
+<p>There is JPM4J, which is an attempt to make a jvm tool that is behaviorally like npm, the Javascript package manager. <a href="https://www.jpm4j.org/#!/">https://www.jpm4j.org/#!/</a>. It has a centralized repo and claims to have &gt;1 million JARs from 150,000 projects in it.</p>
+
+<p>There is bndtools, which is from the OSGi initiative/organization.</p>
+
+<p><a href="http://stackoverflow.com/questions/2710266/is-there-a-package-manager-for-java-like-easy-install-for-python">http://stackoverflow.com/questions/2710266/is-there-a-package-manager-for-java-like-easy-install-for-python</a></p>
+
+<p>Note that the first steps were taken back in 1996 - the JAR file was proposed at roughly the same time as the public launch of Java 1.0. However, JAR files have numerous problems. <a href="https://en.wikipedia.org/wiki/Java_Classloader#JAR_hell">https://en.wikipedia.org/wiki/Java_Classloader#JAR_hell</a>.</p>
+
+<p>There’s a standard being proposed (first proposed in 2011 to be part of Java 7), but at this point is deferred until at least Java 9. <a href="https://en.wikipedia.org/wiki/Java_Module_System">https://en.wikipedia.org/wiki/Java_Module_System</a>.</p>
+
+<h1 id="cabal-haskell---2005">Cabal (Haskell) - 2005</h1>
+
+<p>It’s actually HackageDB  + Cabal + cabal-install.</p>
+
+<p><a href="https://ivanmiljenovic.wordpress.com/2010/03/15/repeat-after-me-cabal-is-not-a-package-manager/">https://ivanmiljenovic.wordpress.com/2010/03/15/repeat-after-me-cabal-is-not-a-package-manager/</a></p>
+
+<h1 id="npm-nodejs---2009">npm (Node.js) - 2009</h1>
+
+<p>Specifically, this is a Node.js package manager, not a generalized Javascript package manager. It’s also one of the newest package managers in existence. It came into existence about a year after Node.js was first released, and is bundled with the Node.js system as of Node.js 0.6.3 (Nov 2011).</p>
+
+<p><a href="https://www.npmjs.com/">https://www.npmjs.com/</a></p>
+
+<h1 id="gogetgoinstall-go---2009">goget/goinstall (Go) - 2009</h1>
+
+<p>Part of Go from the beginning. Integrated with the tool suite, but not with the compiler.</p>
+
+<p>Go packages are source code that is compiled with your code as part of the build process; packages can be precompiled as libraries depending on how you are building your Go program, or can be built each time.</p>
+
+<p>Using a Go package is straightforward</p>
+
+<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+ 
+<span class="kn">import</span> <span class="s">&quot;crypto/sha1&quot;</span>
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+ 
+<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;% x&quot;</span><span class="p">,</span> <span class="nx">sha1</span><span class="p">.</span><span class="nx">Sum</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span></code></pre></div>
+
+<p>Fetching Go packages can be done manually, or with a tool that inspects code. If you know the path of the package you want, you can just pull it down, and this can be recursive: the below pulls down all the sample source from the Go Programming Language book by Kernighan&amp;Donovan:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>go get gopl.io/...</code></pre></div>
+
+<p>But go get can also scan your source code and pull down packages that aren’t present on your local machine.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>go get -u /path/to/src</code></pre></div>
+
+<p>Despite the “update” name of the flag, this will not update versions of packages already on the local system, but it will scan source and fetch missing dependencies. This is not a default action.</p>
+
+<p>Like with Perl and Python, even system libraries are accessed as packages. A Go package is a file or folder on disk. There is no privileged structure to a folder that is a package, other than that all the source files in the package must be in the same package namespace. Like with source, Go simply compiles all files named .go in your build tree.</p>
+
+<p>Unlike with Python or Perl, the Go package namespace is flat - there is no hierarchy. For crypto/sha1, the only hierarchy is that the sha1 package is stored in a folder named crypto. Doing import crypto will not include the sha1 package. Package names in source code do not need to match the leaf folder name; this is a convention. Specifically, the path in source code is called the import path; the package name itself is determined by the package declaration in the code. The intention is that import paths are globally unique, but the actual meaning of an import path is left to the Go tools.</p>
+
+<p>There is no global Go package repository, but Go has made it easy to pull directly from a Git repository. This means that big public systems like Github can be used to hold packages, and in fact Github is the defacto “Go repository” at the moment.</p>
+
+<p>The down side is that there is no direct support for versioning of packages. An import from <a href="https://github.com">github.com</a> will pull from master, which is problematic for repeatable builds. As a result, third-party tooling has created the idea of vendoring, or the pulling in of dependencies directly to your code, and then a way to manage that. This is still evolving in Go, in fact. More direct support for the vendoring approach was added in as of Go 1.5, and I expect this part to continue to evolve.</p>
+
+<h1 id="nuget-windows---2010">Nuget (Windows) - 2010</h1>
+
+<p>Microsoft does have Nuget, with the Chocolatey front-end, as a package manager. It’s not really a programming language package manager, but is a hybrid in between a distribution package manager and a dependency/build tool package manager.</p>
+
+<h1 id="crate-rust---2013">Crate (Rust) - 2013</h1>
+
+<p>Part of Rust starting with the third wave of development that began in 2012. Very integrated with the compiler.</p>
+
+<p>Rust, like Go, is somewhat dogmatic about how you lay out your source code. This reduces the amount of config. In both Go and Rust, there is no need for a makefile. Unlike Go, Rust does have a manifest file, but it has a tool to create and maintain it for you; I assume it’s an explicit file so that you can edit it if you have needs that can’t be automatically inferred.</p>
+
+<p>To get a package, you need to do several things. You need to declare a dependency in the .toml file</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>dependencies<span class="o">]</span>
+<span class="nv">regex</span> <span class="o">=</span> <span class="s2">&quot;0.1.41&quot;</span></code></pre></div>
+
+<p>Then in your source code you pull in that library (Rust calls everything a crate). But you also have to use a module out of that crate, even when the crate contains just one module</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">extern</span> <span class="n">crate</span> <span class="n">regex</span>
+<span class="n">use</span> <span class="n">regex</span><span class="o">::</span><span class="n">Regex</span></code></pre></div>
+
+<p>It all comes across as being a bit verbose. The reason is that crates can have an arbitrary number of modules. And Rust gives you a lot more control over versions than Go does. But these are in two separate places and there’s duplication to boot.</p>
+
+<p>There is goodness here. For example, the dependencies section can point to a repository revision or branch. And there’s a separate Cargo.lock file that records what specific dependency was fetched, so that you can have repeatable builds - this Cargo.lock file becomes source that gets committed. And they give you a mechanism to override dependencies so that you can fix a bug in a library deep down in the dependency chain - you use package A which uses package B which uses package C, and package C has a bug. You can override the use of package C and substitute your own version for it, fairly easily.</p>
+
+<p><a href="https://doc.rust-lang.org/book/crates-and-modules.html">https://doc.rust-lang.org/book/crates-and-modules.html</a></p>
+
+<h1 id="c">C++</h1>
+
+<p>I list systems here, but none are widely used, and none are general solutions, instead being a specific build system with a package manager.</p>
+
+<p>Of these, biicode came the closest, but it is in the process of shutting down, since it was trying to be a commercial company. Also, it was built on top of CMake, and requires you to use CMake to get most of the benefit. While this is not unlike Maven (which is a build system and a package system together), the C++ world is far more polyglot, and telling Visual Studio developers they must use CMake is perhaps not the way to go. <a href="https://www.biicode.com/">https://www.biicode.com/</a>.</p>
+
+<p>The people behind biicode went on to make Conan, which is less tied to CMake (but still, if you don’t use CMake, it’s not all that useful). <a href="https://www.conan.io/">https://www.conan.io/</a>.</p>
+
+<p>CPM is “C++ package manager”. This is heavily tied to CMake. Source code: <a href="https://github.com/iauns/cpm">https://github.com/iauns/cpm</a>. Repository browser: <a href="http://www.cpm.rocks/">http://www.cpm.rocks/</a>.</p>
+
+<p>ghp is GitHub Premake Packages, a Premake extension to consume packages from Github repositories. <a href="https://github.com/mversluys/premake-github-package">https://github.com/mversluys/premake-github-package</a>. Also, it’s not really tied to C++, and can be used as a package manager for multiple languages. Its direct parent is used for Python as well as C++.</p>
+
+<h1 id="general-reference">General Reference</h1>
+
+<p><a href="http://www.cpan.org/misc/ZCAN.html">The Zen of Comprehensive Archive Networks</a></p>
+
+<p><a href="https://www.ctan.org/ctan/">What is CTAN?</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/CPAN">CPAN</a></p>
+
+<p><a href="https://www.pypa.io/en/latest/">Python Packaging Authority</a></p>
+
+<p><a href="http://doc.crates.io/">Cargo, Rust’s Package Manager</a></p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1qV-EV6JkLNk2SKzIL0dccMb5yxiazRq2WNE8hPbujeE/edit#gid=0">Package Manager Rosetta Stone</a></p>
+
+<p><a href="https://github.com/servo/servo">The Servo Browser Engine</a> - GitHub repo containing Servo, Mozilla browser written in Rust.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Some Things Are Obvious</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Some Things Are Obvious</li>
+          <li><a href="mailto:neurocline@gmail.com">neurocline@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/neurocline">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/neurocline">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Answers to some of the world's questions
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
