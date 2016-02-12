@@ -23,3 +23,13 @@ tags: links
 [How to do distributed locking](http://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html)
 
 [The Hunt for the Algorithms That Drive Life on Earth](http://www.wired.com/2016/02/the-hunt-for-the-algorithms-that-drive-life-on-earth/)
+
+ZIP file handling in C/C++
+
+* [minizip](https://github.com/nmoinvaz/minizip). Fairly comprehensive, built on top of zlib. I think this is based on Giles Volant code for Winimage, see [Minizip: Zip and UnZip additional library](http://www.winimage.com/zLibDll/minizip.html)
+* [Zipper](https://github.com/sebastiandev/zipper) is a C++ wrapper on top of minizip.
+* [libzip](http://www.nih.at/libzip/index.html) is another library for reading/writing ZIP archives, and has seen use in some big programs. Unfortunately, it has an attribution license (binaries must reproduce the libzip copright notice).
+* [Zipping/Unzipping files in C++](http://vilipetek.com/2013/11/22/zippingunzipping-files-in-c/) is a more barebones approach, again built on top of zlib. Except that there's almost no code here, so does zlib itself have zipfile support?
+* [Zip Utils - clean, elegant, simple, C++/Win32](http://www.codeproject.com/Articles/7530/Zip-Utils-clean-elegant-simple-C-Win)
+
+[Dead2/zlib-ng](https://github.com/Dead2/zlib-ng). Zlib fork because the author wanted changes that were not being accepted upstream.
