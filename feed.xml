@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Feb 2016 15:43:08 -0800</pubDate>
-    <lastBuildDate>Thu, 11 Feb 2016 15:43:08 -0800</lastBuildDate>
+    <pubDate>Thu, 11 Feb 2016 17:33:00 -0800</pubDate>
+    <lastBuildDate>Thu, 11 Feb 2016 17:33:00 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -29,6 +29,18 @@
 &lt;p&gt;&lt;a href=&quot;http://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html&quot;&gt;How to do distributed locking&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.wired.com/2016/02/the-hunt-for-the-algorithms-that-drive-life-on-earth/&quot;&gt;The Hunt for the Algorithms That Drive Life on Earth&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ZIP file handling in C/C++&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/nmoinvaz/minizip&quot;&gt;minizip&lt;/a&gt;. Fairly comprehensive, built on top of zlib. I think this is based on Giles Volant code for Winimage, see &lt;a href=&quot;http://www.winimage.com/zLibDll/minizip.html&quot;&gt;Minizip: Zip and UnZip additional library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sebastiandev/zipper&quot;&gt;Zipper&lt;/a&gt; is a C++ wrapper on top of minizip.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.nih.at/libzip/index.html&quot;&gt;libzip&lt;/a&gt; is another library for reading/writing ZIP archives, and has seen use in some big programs. Unfortunately, it has an attribution license (binaries must reproduce the libzip copright notice).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vilipetek.com/2013/11/22/zippingunzipping-files-in-c/&quot;&gt;Zipping/Unzipping files in C++&lt;/a&gt; is a more barebones approach, again built on top of zlib. Except that there’s almost no code here, so does zlib itself have zipfile support?&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/7530/Zip-Utils-clean-elegant-simple-C-Win&quot;&gt;Zip Utils - clean, elegant, simple, C++/Win32&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Dead2/zlib-ng&quot;&gt;Dead2/zlib-ng&lt;/a&gt;. Zlib fork because the author wanted changes that were not being accepted upstream.&lt;/p&gt;
 </description>
         <pubDate>Thu, 11 Feb 2016 09:10:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/02/11/recent-links.html</link>
