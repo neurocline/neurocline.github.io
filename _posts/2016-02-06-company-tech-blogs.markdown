@@ -86,6 +86,7 @@ in sources like developerWorks.
 * Instagram: [Instagram Engineering](http://instagram-engineering.tumblr.com/)
 * LinkedIn: [LinkedIn Engineering](https://engineering.linkedin.com/blog)
 * PayPal: [PayPal Developer](https://devblog.paypal.com/category/engineering/)
+* Pinterest: [Pinterest engineering blog](https://engineering.pinterest.com/blog)
 * Riot Games: [Riot Games Engineering](http://engineering.riotgames.com/)
 * Spotify: [Spotify \| Labs](https://labs.spotify.com/). Spotify's Engineering and Technology Blog.
 * Square: [The Corner](https://corner.squareup.com/). Square Engineering Blog.
