@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The superset approach</title>
+  <meta name="description" content="The software world is a diverse place. There’s more than one way to do it, whether we like itor not. This can be exhilarating when it works in our favor, fru...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <!-- link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic"-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/02/13/the-superset-approach.html">
+  <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Some Things Are Obvious</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/papers/">Papers</a>
+          
+        
+          
+          <a class="page-link" href="/reading/">Reading List</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">The superset approach</h1>
+    <p class="post-meta">Feb 13, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <p>The software world is a diverse place. There’s more than one way to do it, whether we like it
+or not. This can be exhilarating when it works in our favor, frustrating when it does not,
+and problematic when we want to have common behavior in the face of all this choice.</p>
+
+<p>Take filesystems, for example. There are several families of filesystems; all have the same
+basic features. Files are collections of bytes that can be located by a name, almost always
+organized as a hierarchy of directories. Files have attributes: different kinds of time values
+(birth, change, modify, access), access control, file type, and more. Names themselves can
+be just a meaningless string of bytes, but more typically as an encoding such as ASCII or
+Unicode. I didn’t leave out size; strictly speaking, size is not an attribute, it’s a
+consequence of the file data. However, most filesystems do treat this like an attribute.</p>
+
+<p>So imagine you want to make a backup program, or some kind of catalog system, that wants
+to record some or all of a filesystem’s information. Or imagine that you are trying to
+present a uniform API to access any filesystem. There are two approaches. One is the
+least common denominator approach, and indeed many filesystem libraries take this approach.
+But it is an unsatisfying and even dangerous approach. Imagine that you wrote a backup
+program using least-common denominator APIs. How likely is it that you can restore files
+to the original filesystem? In fact, this leads to inferior programs using the subset
+API, and drives developers who want to excel into writing programs specific to each domain.</p>
+
+<p>A far better approach is the superset approach. Support every feature, and have fallbacks
+when filesystems don’t fully support a particular feature. This is a little more work at
+first, or even a lot of work, but can have a big payoff.</p>
+
+<p>Credit to Node.js for calling this out in their guide on working with filesystems. See
+<a href="https://nodejs.org/en/docs/guides/working-with-different-filesystems/">Working with Different Filesystems</a>.
+But this is a general approach, and not just for filesystems. So let’s look at it in the context
+of several different feature sets that see great variety. We’ll start with filesystems.</p>
+
+<h1 id="filesystem-superset">Filesystem superset</h1>
+
+<h2 id="file-times">File times</h2>
+
+<p>Windows NTFS files have 100-nanosecond resolution, and are 64-bit values with the epoch set at
+1600 A.D UTC. There are four values:</p>
+
+<ul>
+  <li>Create time: when the file was first created</li>
+  <li>Last metadata change: when the file attributes were altered</li>
+  <li>Last modified time: when the file contents were last altered (write)</li>
+  <li>Last access time: when the file contents were last accessed (read or write)</li>
+</ul>
+
+<p>Posix files have 1-second resolution, and are 32-bit or 64-bit values with the epoch set
+at 1970 A.D. Unfortunately, it is not specified as to whether times are UTC or some other
+time zone. Posix has three values</p>
+
+<ul>
+  <li>Change time: when the file inode was changed</li>
+  <li>Modified time: when the file data was changed</li>
+  <li>Access time: when the inode or data was accessed (read or write)</li>
+</ul>
+
+<p>Mac HFS+ files have 1-second resolution and are 32-bit values with the epoch set at 1904 A.D
+UTC.</p>
+
+<ul>
+  <li>Create date: when the file was created</li>
+  <li>Modify date: when the file was modified</li>
+  <li>Attribute mod date: when file attributes or directory contents where changed (Mac OS X only)</li>
+  <li>Backup date: when the file was last backed up</li>
+  <li>Access date: when the file was last read</li>
+</ul>
+
+<p>Note that there are similarities, but none of those filesystems is exactly like any other.
+If we decide that all filetimes are in seconds, then we don’t record Windows NTFS file times
+properly. Also, while Posix talks about 1-second resolution for file times, this is decidedly
+not true for all filesystems; ext4 supports nanosecond resolution on stored files if the volume
+is configured for inodes that are 256 bytes or bigger.</p>
+
+<p>Note that the C library, Python, Go and so forth present a uniform API that is a subset API.
+This makes getting “real” filetimes impossible.</p>
+
+<p>Instead, we should just get the full data from a filesystem, and then have various ways for
+our user code to access it. We could query for what is really stored, or we can ask for it in
+a format we want and have the underlying data converted to what we want to see. So if our
+user program wants to work with nanosecond times, we’d be given Windows NTFS times multipied
+by 10, and Posix times multiplied by 1 billion. But we could be given ext4 files at their
+full resolution.</p>
+
+<p>Or if we wanted our epoch to be 2000 A.D., we could ask for file times set to this epoch, and
+have their metadata translated where possible. We would not permanently convert in any case,
+although some operations would require a one-way and potentially lossy conversion. For example,
+assume we have a NTFS backup, and we need to restore it to an HFS+ volume; some time resolution
+would be lost.</p>
+
+<p>And then we have time zones. Some filesystems and operating systems do all of the underlying
+time operations in UTC, and conversion to the local time zone is just for the convenience of
+the user. There’s a problem here with daylight savings, the practice in many countries to move
+the clock back or forth by an hour depending on the season. If filetimes are stored in UTC, and
+displayed in the local timezone, then a naive algorithm will cause all the filetimes to appear
+to shift backwards or forwards by an hour when daylight savings comes or goes. This in fact
+caused all kinds of havoc to build systems and source control systems on Windows, so much so
+that Microsoft introduced a “fix” that was worse than the problem; when saving a file created
+during when daylight savings is in effect, it writes a UTC time offset by the daylight savings
+offset (typically 1 hour), so that the adjustment to local time stays consistent when daylight
+savings changes. Of course, this means that the wrong time is written for half of the year.</p>
+
+<p>There is a slightly better answer, and that is to do the time zone conversion with the awareness of when
+in each year daylight savings occurred. It has only happened a few dozen times since we first
+started saving files to disk, so we could just remember all the times when this happened, and
+adjust file times in the past to their adjusted local time zone. To my knowledge, no one is doing
+this, which is sad.</p>
+
+<p>There is one further problem in that there are discontinuities in time values. Even with UTC,
+we are adjusting the clock by seconds to account for the slowing of the Earth (UT is Universal
+Time which has no adjustments, UTC is Universal Time Coordinated which has had 20-odd 1-second
+adjustments in the past 40 years). And with daylight savings, we have entire hours that are either
+missing or duplicated.</p>
+
+<h2 id="file-name-encodings">File name encodings</h2>
+
+<p>Another problematic area is in recording file names. While file names inside the file system
+are really just very long opaque identifiers, file names are usually for the benefit of people, who
+want to read them, sort them, do substring searches, and synthesize them. This requires the
+use of an encoding.</p>
+
+<p>Of course, there is no one true encoding. Before the 1990s, file systems skirted the issue by
+just writing bytes, but interpreting them with the local encoding. This quickly stopped being feasible
+when use of computers and filesystems spread across the world. Even the introduction of Unicode
+didn’t result in this being solved completely, due to the multiplicity of Unicode encodings and
+normalizations.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Some Things Are Obvious</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Some Things Are Obvious</li>
+          <li><a href="mailto:neurocline@gmail.com">neurocline@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/neurocline">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/neurocline">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Answers to some of the world's questions
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

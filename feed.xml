@@ -6,9 +6,323 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Feb 2016 19:12:42 -0800</pubDate>
-    <lastBuildDate>Fri, 12 Feb 2016 19:12:42 -0800</lastBuildDate>
+    <pubDate>Tue, 16 Feb 2016 00:54:22 -0800</pubDate>
+    <lastBuildDate>Tue, 16 Feb 2016 00:54:22 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;Bell Labs (now part of Alcatel-Lucent) has published a book: The Future X Network: Enabling a New Digital Era (Oct 2015); author listed as Marcus Weldon, the Alcatel-Lucent CTO, but apparently the work of the entire group.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://broadbandworldforum.com/files/2015/09/Bell-labs-Future-X-Network-sample.pdf&quot;&gt;sample chapter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://readymag.com/BellLabs/415614/&quot;&gt;overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1498759262/ref=pd_luc_rh_qp_01_03_t_img_lh?ie=UTF8&amp;amp;psc=1&quot;&gt;Amazon link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://howardhinnant.github.io/&quot;&gt;HowardHinnant.github.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/81870/is-it-possible-to-print-a-variables-type-in-standard-c/20170989#20170989&quot;&gt;Is it possible to print a variable’s type in standard C++?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1487695/c-cross-platform-high-resolution-timer/5524138#5524138&quot;&gt;C++ Cross-Platform High-Resolution Timer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.iana.org/time-zones&quot;&gt;IANA: Time Zone Database&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ietf.org/timezones/data/leap-seconds.list&quot;&gt;List of all leap seconds to date (early 2016)&lt;/a&gt;. There have been 27 leap seconds (all positive, none negative) from Jan 1972 to July 2015. At first, we were doing a leap second a year, but in the past 15 years, we’ve only had 4 of them. The responsible group is considering halting the issuing of leap seconds.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix time&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tools.ietf.org/html/rfc6557&quot;&gt;RFC 6557: Procedures for Maintaining the Time Zone Database&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf&quot;&gt;How Complex Systems Fail&lt;/a&gt;. From the medical profession, but very relevant to software.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.grymoire.com/Unix/Inodes.html&quot;&gt;Inodes - an Introduction&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.linux.org/threads/intro-to-inodes.4130/&quot;&gt;Intro to Inodes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.linfo.org/inode.html&quot;&gt;Inode definition&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.kubernetes.io/2016/02/sharethis-kubernetes-in-production.html&quot;&gt;ShareThis: Kubernetes In Production&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aeon.co/essays/generational-labels-are-lazy-useless-and-just-plain-wrong&quot;&gt;Against generations&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/bup/bup&quot;&gt;bup/bup&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://octavore.com/posts/2016/02/15/distributing-go-apps-os-x&quot;&gt;How to Distribute Binaries for OS X Using Homebrew&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/linux/library/l-anatomy-ext4/&quot;&gt;Anatomy of ext4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://support.microsoft.com/en-us/kb/129574&quot;&gt;Time stamp changes with daylight savings&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2532729/daylight-saving-time-and-time-zone-best-practices&quot;&gt;Daylight saving time and time zone best practices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTimezones.html&quot;&gt;Wireshark: 7.6. Time Zones&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;ftp://pvictor.homeftp.net/public/Sci_Library/Phys%20Library/PPop_Popular-level/Jones%20T.%20%20Splitting%20the%20second%20-%20the%20story%20of%20atomic%20time%20(IOP,%202000)(202s).pdf&quot;&gt;Splitting the second: The Story of Atomic Time&lt;/a&gt;. A book on the making of atomic time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.twinsun.com/tz/tz-link.htm&quot;&gt;Sources for Time Zone and Daylight Saving Time Data&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dubeiko.com/development/FileSystems/HFSPLUS/tn1150.html&quot;&gt;Technical Note TN1150: HFS Plus Volume Format&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nobius.org/~dbg/practical-file-system-design.pdf&quot;&gt;Practical File System Design with the Be File System&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Hierarchical_File_System&quot;&gt;Hierarchical File System&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/docs/guides/working-with-different-filesystems/&quot;&gt;Node.js: Working with Different Filesystems&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3344.pdf&quot;&gt;Toward a Standard C++ ’Date’ Class&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/atemerev/skynet&quot;&gt;Skynet 1M concurrency microbenchmark&lt;/a&gt;. Go is fast, but .NET is faster, and RxJava is the fastest. Except on Linux?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://panthema.net/2009/cryptote/&quot;&gt;CryptoTE&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 15:31:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/14/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/14/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Time points</title>
+        <description>&lt;p&gt;Part 1 in a series.&lt;/p&gt;
+
+&lt;p&gt;Measuring points in time is conceptually simple, and yet we’ve managed to make a big mess of it
+over the past few thousand years. I think it can be fixed. I’m going to present a system that is
+always correct but can also be used with any past, present or future method of labelling moments
+in time. In the process, we’re going to talk about many of the ways that we have been measuring
+and labelling time, because no new system can be used in a vacuum, we have to work with existing
+systems.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-problem-with-time&quot;&gt;The problem with time&lt;/h1&gt;
+
+&lt;p&gt;The universe was born, we think, in a big explosion 13.82 billion years ago, and time has been
+marching steadily on ever since, relativity notwithstanding.&lt;/p&gt;
+
+&lt;p&gt;At first, our issues with measuring time and labelling points in time were that we had very
+poor instruments to do so. Initially, we looked in the sky and declared time based on the position
+of the sun in the sky. Since we didn’t move around much, we didn’t realize that the sun is
+in different positions in the sky based on where on Earth you are located; noon for the Egyptians
+was early morning for Britons. Label this problem 1.&lt;/p&gt;
+
+&lt;p&gt;As we got more accurate at measuring time, we noticed that the point of noon shifts; since the
+Earth’s axis is not at right angles to the orbit around the sun, the length of the day grows and
+shortens during the orbit (a solar day differs by about 20 seconds from aphelion to perihelion).
+Eventually we stopped trying to measure the day by the sun and just declared “a second is this
+arbitrary fixed amount”, “a day is 86400 seconds”, “a year is 365 days”.&lt;/p&gt;
+
+&lt;p&gt;Of course, the orbit of the Earth around the sun isn’t exactly 31,536,000 seconds. Instead, it’s more
+like 31,558,118 seconds. So first we introduced leap years to add a day every 4 years, then we removed
+leap days every 100 years, then we added back a leap day every 400 years, and then we fiddle with
+leap seconds to further fine-tune it, all to keep noon being noon.&lt;/p&gt;
+
+&lt;p&gt;And then, of course, the Earth is actually slowing down - the day is about 2 milliseconds longer compared
+to when we first set up the value for a second as an absolute value instead of something relative
+to the Earth’s rotation around its axis and orbit around the sun.&lt;/p&gt;
+
+&lt;p&gt;And we haven’t even left the Earth yet, to any appreciable degree. Imagine how much more complicated
+it will be when some of us are living on Earth, others on Mars, and others in habitats in space either
+orbiting planets or our sun or even traveling between stars or orbiting other stars.&lt;/p&gt;
+
+&lt;h1 id=&quot;absolute-seconds&quot;&gt;Absolute seconds&lt;/h1&gt;
+
+&lt;p&gt;We have an absolute second - we haven’t fiddled with its definition since it was first formally
+created in 1967 as the number of cycles of radiation from a specific Cesium-133 transition. If you’re
+curious, the definition is this: “The second is the duration of 9,192,631,770 periods of the radiation
+corresponding to the transition between the two hyperfine levels of the ground state of the caesium-133
+atom”. TAI, or International Atomic Time&lt;/p&gt;
+
+&lt;p&gt;Since we have absolute seconds, and we know the age of the Universe down to a pretty precise value,
+in some respects we have an absolute time scale that we can use, assuming we can figure out how to
+handle relativity. It might be something akin to what we did with UTC, we picked a mostly arbitrary
+point and said “here is zero”. So we might pick some patch of space and say “here is the standard
+clock, all other times are relative to this point in space”. We can ignore that for now, though,
+and just fix our time issues sans worrying about relativity’s effect on the “absolute” value of time.&lt;/p&gt;
+
+&lt;p&gt;If we had started with this, we would be done. Except, there are reasons for all our relative measures;
+large absolute numbers are hard to use and would create new problems. More importantly, we can’t erase
+the past, and we don’t have enough power to mandate a switchover.&lt;/p&gt;
+
+&lt;p&gt;Still, keep this in mind. There is some absolute scale of seconds; it is linear, and it goes back to
+the origin of the universe. We really don’t even care what that origin point is; we can pick some
+arbitrary point in time in recent history, call it zero, and then times before that point are simply
+represented by negative numbers. So let’s pick the point at which TAI really came into existence in the
+absolute form we have now, 1 January 1977 00:00:00.&lt;/p&gt;
+
+&lt;p&gt;Here is the important point to keep in mind for the next sections: there is an absolute and linear time
+scale, even if we have a hard time measuring it. All of our measurements will be approximations to
+the real time with some degree of error.&lt;/p&gt;
+
+&lt;p&gt;This is not a new concept in and of itself (see Terrestrial Time). But we need some layers so that we
+can use it in our day-to-day life.&lt;/p&gt;
+
+&lt;h1 id=&quot;bibliography&quot;&gt;Bibliography&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1986CeMec..38..155G&quot;&gt;Is the International Atomic Time TAI a Coordinate Time or a Proper Time?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Terrestrial_Time&quot;&gt;Terrestrial Time&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;ftp://pvictor.homeftp.net/public/Sci_Library/Phys%20Library/PPop_Popular-level/Jones%20T.%20%20Splitting%20the%20second%20-%20the%20story%20of%20atomic%20time%20(IOP,%202000)(202s).pdf&quot;&gt;Splitting the Second&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=tzyGjOm8AKo&quot;&gt;CppCon 2015: Howard Hinnant “A C++14 approach to dates and times”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://howardhinnant.github.io/date_algorithms.html&quot;&gt;chrono-Compatible Low-Level Date Algorithms&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 01:00:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/14/time-points.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/14/time-points.html</guid>
+        
+        <category>programming</category>
+        
+        <category>time</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>The superset approach</title>
+        <description>&lt;p&gt;The software world is a diverse place. There’s more than one way to do it, whether we like it
+or not. This can be exhilarating when it works in our favor, frustrating when it does not,
+and problematic when we want to have common behavior in the face of all this choice.&lt;/p&gt;
+
+&lt;p&gt;Take filesystems, for example. There are several families of filesystems; all have the same
+basic features. Files are collections of bytes that can be located by a name, almost always
+organized as a hierarchy of directories. Files have attributes: different kinds of time values
+(birth, change, modify, access), access control, file type, and more. Names themselves can
+be just a meaningless string of bytes, but more typically as an encoding such as ASCII or
+Unicode. I didn’t leave out size; strictly speaking, size is not an attribute, it’s a
+consequence of the file data. However, most filesystems do treat this like an attribute.&lt;/p&gt;
+
+&lt;p&gt;So imagine you want to make a backup program, or some kind of catalog system, that wants
+to record some or all of a filesystem’s information. Or imagine that you are trying to
+present a uniform API to access any filesystem. There are two approaches. One is the
+least common denominator approach, and indeed many filesystem libraries take this approach.
+But it is an unsatisfying and even dangerous approach. Imagine that you wrote a backup
+program using least-common denominator APIs. How likely is it that you can restore files
+to the original filesystem? In fact, this leads to inferior programs using the subset
+API, and drives developers who want to excel into writing programs specific to each domain.&lt;/p&gt;
+
+&lt;p&gt;A far better approach is the superset approach. Support every feature, and have fallbacks
+when filesystems don’t fully support a particular feature. This is a little more work at
+first, or even a lot of work, but can have a big payoff.&lt;/p&gt;
+
+&lt;p&gt;Credit to Node.js for calling this out in their guide on working with filesystems. See
+&lt;a href=&quot;https://nodejs.org/en/docs/guides/working-with-different-filesystems/&quot;&gt;Working with Different Filesystems&lt;/a&gt;.
+But this is a general approach, and not just for filesystems. So let’s look at it in the context
+of several different feature sets that see great variety. We’ll start with filesystems.&lt;/p&gt;
+
+&lt;h1 id=&quot;filesystem-superset&quot;&gt;Filesystem superset&lt;/h1&gt;
+
+&lt;h2 id=&quot;file-times&quot;&gt;File times&lt;/h2&gt;
+
+&lt;p&gt;Windows NTFS files have 100-nanosecond resolution, and are 64-bit values with the epoch set at
+1600 A.D UTC. There are four values:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create time: when the file was first created&lt;/li&gt;
+  &lt;li&gt;Last metadata change: when the file attributes were altered&lt;/li&gt;
+  &lt;li&gt;Last modified time: when the file contents were last altered (write)&lt;/li&gt;
+  &lt;li&gt;Last access time: when the file contents were last accessed (read or write)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Posix files have 1-second resolution, and are 32-bit or 64-bit values with the epoch set
+at 1970 A.D. Unfortunately, it is not specified as to whether times are UTC or some other
+time zone. Posix has three values&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Change time: when the file inode was changed&lt;/li&gt;
+  &lt;li&gt;Modified time: when the file data was changed&lt;/li&gt;
+  &lt;li&gt;Access time: when the inode or data was accessed (read or write)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mac HFS+ files have 1-second resolution and are 32-bit values with the epoch set at 1904 A.D
+UTC.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create date: when the file was created&lt;/li&gt;
+  &lt;li&gt;Modify date: when the file was modified&lt;/li&gt;
+  &lt;li&gt;Attribute mod date: when file attributes or directory contents where changed (Mac OS X only)&lt;/li&gt;
+  &lt;li&gt;Backup date: when the file was last backed up&lt;/li&gt;
+  &lt;li&gt;Access date: when the file was last read&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that there are similarities, but none of those filesystems is exactly like any other.
+If we decide that all filetimes are in seconds, then we don’t record Windows NTFS file times
+properly. Also, while Posix talks about 1-second resolution for file times, this is decidedly
+not true for all filesystems; ext4 supports nanosecond resolution on stored files if the volume
+is configured for inodes that are 256 bytes or bigger.&lt;/p&gt;
+
+&lt;p&gt;Note that the C library, Python, Go and so forth present a uniform API that is a subset API.
+This makes getting “real” filetimes impossible.&lt;/p&gt;
+
+&lt;p&gt;Instead, we should just get the full data from a filesystem, and then have various ways for
+our user code to access it. We could query for what is really stored, or we can ask for it in
+a format we want and have the underlying data converted to what we want to see. So if our
+user program wants to work with nanosecond times, we’d be given Windows NTFS times multipied
+by 10, and Posix times multiplied by 1 billion. But we could be given ext4 files at their
+full resolution.&lt;/p&gt;
+
+&lt;p&gt;Or if we wanted our epoch to be 2000 A.D., we could ask for file times set to this epoch, and
+have their metadata translated where possible. We would not permanently convert in any case,
+although some operations would require a one-way and potentially lossy conversion. For example,
+assume we have a NTFS backup, and we need to restore it to an HFS+ volume; some time resolution
+would be lost.&lt;/p&gt;
+
+&lt;p&gt;And then we have time zones. Some filesystems and operating systems do all of the underlying
+time operations in UTC, and conversion to the local time zone is just for the convenience of
+the user. There’s a problem here with daylight savings, the practice in many countries to move
+the clock back or forth by an hour depending on the season. If filetimes are stored in UTC, and
+displayed in the local timezone, then a naive algorithm will cause all the filetimes to appear
+to shift backwards or forwards by an hour when daylight savings comes or goes. This in fact
+caused all kinds of havoc to build systems and source control systems on Windows, so much so
+that Microsoft introduced a “fix” that was worse than the problem; when saving a file created
+during when daylight savings is in effect, it writes a UTC time offset by the daylight savings
+offset (typically 1 hour), so that the adjustment to local time stays consistent when daylight
+savings changes. Of course, this means that the wrong time is written for half of the year.&lt;/p&gt;
+
+&lt;p&gt;There is a slightly better answer, and that is to do the time zone conversion with the awareness of when
+in each year daylight savings occurred. It has only happened a few dozen times since we first
+started saving files to disk, so we could just remember all the times when this happened, and
+adjust file times in the past to their adjusted local time zone. To my knowledge, no one is doing
+this, which is sad.&lt;/p&gt;
+
+&lt;p&gt;There is one further problem in that there are discontinuities in time values. Even with UTC,
+we are adjusting the clock by seconds to account for the slowing of the Earth (UT is Universal
+Time which has no adjustments, UTC is Universal Time Coordinated which has had 20-odd 1-second
+adjustments in the past 40 years). And with daylight savings, we have entire hours that are either
+missing or duplicated.&lt;/p&gt;
+
+&lt;h2 id=&quot;file-name-encodings&quot;&gt;File name encodings&lt;/h2&gt;
+
+&lt;p&gt;Another problematic area is in recording file names. While file names inside the file system
+are really just very long opaque identifiers, file names are usually for the benefit of people, who
+want to read them, sort them, do substring searches, and synthesize them. This requires the
+use of an encoding.&lt;/p&gt;
+
+&lt;p&gt;Of course, there is no one true encoding. Before the 1990s, file systems skirted the issue by
+just writing bytes, but interpreting them with the local encoding. This quickly stopped being feasible
+when use of computers and filesystems spread across the world. Even the introduction of Unicode
+didn’t result in this being solved completely, due to the multiplicity of Unicode encodings and
+normalizations.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 Feb 2016 22:27:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/13/the-superset-approach.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/13/the-superset-approach.html</guid>
+        
+        <category>programming</category>
+        
+        <category>design</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -525,219 +839,6 @@ a plan and a loose design.&lt;/p&gt;
         
         
         <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://coreos.com/blog/building-minimal-containers-with-quay-kubernetes-wercker.html&quot;&gt;Building and deploying minimal containers on Kubernetes with Quay.io and wercker&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mesosphere.com/blog/2015/11/18/dcos-time-series-demo/&quot;&gt;WE BUILT AN APP IN 3 DAYS USING DCOS, KUBERNETES, KAFKA AND MORE&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/backchannel/has-deepmind-really-passed-go-adc85e256bec#.9ia2jkh6j&quot;&gt;Go, Marvin Minsky, and the Chasm that AI Hasn’t Yet Crossed&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://codeblocks.org/&quot;&gt;Code::Blocks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://io2015codelabs.appspot.com/codelabs/gRPC#1&quot;&gt;Building a gRPC service with Node.js&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.stavros.io/posts/microservices-cargo-cult/&quot;&gt;The microservices cargo cult&lt;/a&gt;. Ignore the article, copy the blog style.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://brandur.org/golang-packages&quot;&gt;Package Management in Go&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;go generate&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.golang.org/generate&quot;&gt;Generating code&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://godoc.org/golang.org/x/tools/cmd/stringer&quot;&gt;Command stringer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.gopheracademy.com/advent-2015/reducing-boilerplate-with-go-generate/&quot;&gt;Reducing boilerplate with go generate&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/jmhodges/a50ab84b13c2cd791571&quot;&gt;Generating protobuf Go files with &lt;code&gt;go generate&lt;/code&gt; and a vendored protobuf package (specifically, vendored with godep).&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Generic programming in Go using “go generate”&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/ncw/gotemplate&quot;&gt;Go templates&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://willowtreeapps.com/blog/go-generate-your-database-code/&quot;&gt;Go Generate Your Database Code&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.ralch.com/tutorial/golang-code-generation/&quot;&gt;Golang code generation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;generics in Go&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://clipperhouse.github.io/gen/&quot;&gt;gen (v4)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/cheekybits/genny&quot;&gt;genny - Generics for Go&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/droundy/gotgo&quot;&gt;Gotgo&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://bouk.co/blog/idiomatic-generics-in-go/&quot;&gt;Idiomatic Generics in Go&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/joeshaw/gengen&quot;&gt;gengen - A generics code generator for Go&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.onebigfluke.com/2014/04/gos-power-is-in-emergent-behavior.html&quot;&gt;Go’s power is in emergent behavior&lt;/a&gt;. Although he meant orthogonality.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://cbednarski.com/articles/makefiles-for-everyone/&quot;&gt;Makefiles for Everyone&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://typeplate.com/&quot;&gt;Typeplate&lt;/a&gt; - a “typographic starter kit”.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 02 Feb 2016 11:40:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/02/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/02/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Organizing Go source code part 2</title>
-        <description>&lt;p&gt;There are a handful of rules in Go that directly affect how the source code in your project is laid out.&lt;/p&gt;
-
-&lt;p&gt;When using the &lt;code&gt;go&lt;/code&gt; tool:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;all the files in a directory must be in the same package&lt;/li&gt;
-  &lt;li&gt;all the files in a package must be in the same directory&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The &lt;code&gt;go&lt;/code&gt; tool, when iterating, assumes that all files in a directory are in the same package. You’ll get a compile
-error otherwise. When told to target a specific file, this is not the case, but this is not the normal usage of
-the &lt;code&gt;go&lt;/code&gt; tool. And from this consequence, all the files in a package need to be in the same directory.&lt;/p&gt;
-
-&lt;p&gt;One consequence of this is for executables - things you run. In Go, this is package main with func main().
-This means that the top-level source for each executable should be in its own directory even if a single file, and must
-be in its own directory if multiple files. In other words,
-if you have a suite of programs built from one source base, then you’ll have something like this&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span class=&quot;nx&quot;&gt;binaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;binary1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;go&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;binary2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;go&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;libs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;package1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;subpkg1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;subpkg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;package2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;There is no language-level mandate that all the files in a package are in the same directory - this is a tooling
-issue. On the other hand, it is the standard tooling at the moment.&lt;/p&gt;
-
-&lt;p&gt;Of course, this is not precisely true. Build constraints can prevent some files from being seen as part
-of a package. And test code is not in the same package; files ending in _test.go often are in a package
-*_test, and you’ll see this code pulling in the directory it’s in as a package.&lt;/p&gt;
-
-&lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
-
-&lt;p&gt;Kubernetes, &lt;a href=&quot;https://github.com/kubernetes/kubernetes&quot;&gt;https://github.com/kubernetes/kubernetes&lt;/a&gt;, is the largest Go
-program I know of outside of the Go suite itself, at 460,000 lines as of this writing.&lt;/p&gt;
-
-&lt;p&gt;The basic source layout is this:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;API/protocol (swagger, in json) in &lt;code&gt;api&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;binaries (package main) in &lt;code&gt;cmd&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;build scripts in &lt;code&gt;hack&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;packages in &lt;code&gt;pkg&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;external source in &lt;code&gt;Godeps&lt;/code&gt; (uses &lt;code&gt;godep&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;manually imported external source in &lt;code&gt;thirdparty&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The source uses a short URL http://k8s.io that redirects to http://kubernetes.io. Does this further redirect
-to https://github.com/kubernetes/? I’m not sure how that would work, though, unless you clone from k8s.io and not Github. In any event, there is a set of scripts in hack that are used to build and run Kubernetes from source.
-See http://www.sebastien-han.fr/blog/2015/07/01/build-kubernetes-from-source/ for quick note on building.&lt;/p&gt;
-
-&lt;p&gt;This uses &lt;code&gt;godep&lt;/code&gt;, as most big projects are currently doing - it vendors external source into a
-Godeps directory and rewrites your source to use the vendored paths.&lt;/p&gt;
-
-&lt;p&gt;There is a contrib folder that is the remnants of Kubernetes components that aren’t part of the core system. These moved to their own repo.&lt;/p&gt;
-
-&lt;h1 id=&quot;openshift-origin&quot;&gt;OpenShift Origin&lt;/h1&gt;
-
-&lt;p&gt;Origin, &lt;a href=&quot;https://github.com/openshift/origin&quot;&gt;https://github.com/openshift/origin&lt;/a&gt;, is fairly large - as of
-this writing, it is 257,000 lines of Go code (ignoring whitespace and comment lines).&lt;/p&gt;
-
-&lt;p&gt;The basic source layout is this:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;API/protocol (swagger, in json) in &lt;code&gt;api&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;main binaries (package main) in &lt;code&gt;cmd&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;external source in &lt;code&gt;Godeps&lt;/code&gt; (uses &lt;code&gt;godep&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;build scripts in &lt;code&gt;hack&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;tool binaries in &lt;code&gt;tools&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The build scripts in Kubernetes and Origin look similar. Not surprising, since OpenShift is built on top
-of Docker and Kubernetes.&lt;/p&gt;
-
-&lt;h1 id=&quot;cockroachdb&quot;&gt;CockroachDb&lt;/h1&gt;
-
-&lt;p&gt;CockroachDb, &lt;a href=&quot;https://github.com/cockroachdb/cockroach&quot;&gt;https://github.com/cockroachdb/cockroach&lt;/a&gt;, at 130,000 lines of code, is the largest Go program I’ve seen (outside of the Go tools themselves) that has no
-substantial dependencies on other software.&lt;/p&gt;
-
-&lt;p&gt;The main binary is at the root of the repo - &lt;code&gt;main.go&lt;/code&gt;. There are a handful of other binaries in
-a simulation directory, a handful of tools in the cmd directory, and a stray simulation file in the gossip
-directory.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;build system in &lt;code&gt;build&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;command-line suite in &lt;code&gt;cli&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The repo is fairly flat, all the major components are at the top level; there is no src or pkg directory.&lt;/p&gt;
-
-&lt;h1 id=&quot;docker&quot;&gt;Docker&lt;/h1&gt;
-
-&lt;p&gt;Docker, &lt;a href=&quot;https://github.com/docker/docker&quot;&gt;https://github.com/docker/docker&lt;/a&gt;, is also fairly large,
-at 100,000 lines of Go code. It follows the Go 1.5 vendor method of doing external code.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;API expressed in Go code in &lt;code&gt;api&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;add-ons (not part of the core) in &lt;code&gt;contrib&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;main binary in &lt;code&gt;docker&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;build scripts in &lt;code&gt;hack&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;packages in &lt;code&gt;pkg&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;external source in &lt;code&gt;vendor&lt;/code&gt; (uses Go 1.5+)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;etcd&quot;&gt;etcd&lt;/h1&gt;
-
-&lt;p&gt;Medium sized at 60K lines of code.&lt;/p&gt;
-
-&lt;p&gt;Main binary at the root of the repo. Build scripts in the root of the repo. Big packages in directories at the root of the repo.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Go client library for etcd in &lt;code&gt;client&lt;/code&gt; (standalone package used by third party clients)&lt;/li&gt;
-  &lt;li&gt;main binary &lt;code&gt;etcdmain&lt;/code&gt; (main.go in root just calls into etcdmain)&lt;/li&gt;
-  &lt;li&gt;external source in &lt;code&gt;Godeps&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;packages in &lt;code&gt;pkg&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 01 Feb 2016 11:26:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/01/organizing-go-source-code.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/01/organizing-go-source-code.html</guid>
-        
-        <category>go</category>
-        
-        <category>programming</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Middleman static content generator</title>
-        <description>&lt;p&gt;Hmm, this looks interesting&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://middlemanapp.com/&quot;&gt;Middleman&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;One thing I’ve been realizing is that I don’t just want a blog, I want something that can do a blog, and
-do books, and do reference material.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 01 Feb 2016 07:50:00 -0800</pubDate>
-        <link>http://neurocline.github.io/blog/2016/02/01/middleman-static-content.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/blog/2016/02/01/middleman-static-content.html</guid>
-        
-        <category>blog</category>
-        
-        
-        <category>blog</category>
         
       </item>
     
