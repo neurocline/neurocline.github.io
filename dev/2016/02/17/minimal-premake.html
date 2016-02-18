@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Minimal Premake</title>
+  <meta name="description" content="Premake is useful, and Premake 5 more so. With any tool, it’s important to understand it. But it’s also importantto know how to use it properly. The apocryph...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <!-- link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic"-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/02/17/minimal-premake.html">
+  <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Some Things Are Obvious</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/papers/">Papers</a>
+          
+        
+          
+          <a class="page-link" href="/reading/">Reading List</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Minimal Premake</h1>
+    <p class="post-meta">Feb 17, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <p>Premake is useful, and Premake 5 more so. With any tool, it’s important to understand it. But it’s also important
+to know how to use it properly. The apocryphal legend about <code>make</code> is that there is only one original
+<code>Makefile</code>, and all others are just edited copies of the ur-file. While not true in fact, it is true that
+<code>make</code> is complex and most people who use it don’t really understand what they are doing.</p>
+
+<p>If you don’t have a <code>premake</code> binary on your system and in your path, grab a copy from here:
+<a href="https://premake.github.io/download.html">https://premake.github.io/download.html</a>. I strongly suggest Premake 5.0, which while
+listed as alpha is still stable (Blizzard has been using it for the past 6 months). The examples here start
+with Visual Studio, and then move on to XCode and Gmake.</p>
+
+<p>Let’s look at Premake through the filter of “what is the simplest Premake file we can make?”. We’re going to
+use it to build a single-file project. Here’s the layout for our working folder:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">test/
+|-- premake-minimal.lua
+|-- src/
+    |-- main.cpp</code></pre></div>
+
+<p>Our <code>main.cpp</code> file looks like this:</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp">#include &lt;iostream&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>This is the smallest <code>premake-minimal</code> file; every line in here is necessary, as far as I can tell:</p>
+
+<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+    <span class="n">configurations</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">Debug&quot;</span> <span class="p">}</span>
+
+    <span class="n">project</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+        <span class="n">kind</span> <span class="s2">&quot;</span><span class="s">ConsoleApp&quot;</span>
+        <span class="n">files</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">src/main.cpp&quot;</span> <span class="p">}</span></code></pre></div>
+
+<p>The word <code>solution</code> comes from its original Visual Studio focus; supposedly, newer Premake versions are now
+preferring <code>workspace</code>, with <code>solution</code> as a synonym.</p>
+
+<p>You must have one or more configurations; Premake has no defaults. Configurations are sets of build options that
+can cut across targets.</p>
+
+<p>Likewise, the word <code>project</code> shows Visual Studio bias, but is a reasonable concept (for Visual Studio builds,
+each <code>project</code> section generates a corresponding .vcxproj file); ther build systems might
+call this a target. A project need a <code>kind</code>, which declares what kind of thing is being made:
+choices are <code>StaticLib</code> for
+static libraries, <code>SharedLib</code> for shared libraries (called DLLs on Windows), <code>ConsoleApp</code> for console applications,
+and <code>WindowedApp</code> for apps that run in a window (mostly a distinction for Windows and Mac OS X).</p>
+
+<p>Finally, a project has to reference files, or it does nothing. This is the one piece that is optional, we
+could have made a project that has no source; but there’s little point to this. Note that we reference files relative to
+where the premake script is found. In this case, we just have the single file <code>src/main.cpp</code>, but this could be
+an entire comma-separated list of files.</p>
+
+<p>Use premake to generate make system files from this script; the parameter <code>--file=&lt;PREMAKE-SCRIPT&gt;</code> is optional
+if your premake script has the default name, which for Premake 5 is <code>premake5.lua</code>.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">C:<span class="se">\t</span>est&gt; premake5.exe --file<span class="o">=</span>premake-minimal.lua vs2013</code></pre></div>
+
+<p>This will create a Visual Studio 2013 project that you can open and compile. Of course, you would never make even
+a simple project this way. So what can we add?</p>
+
+<p>First, we can control where the generated project files go. The Premake directive is <code>location (&lt;PATH&gt;)</code>; this
+sets the base location for all generated output. Let’s create a folder named <code>project</code> to place
+our project files:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">test/
+|-- premake-minimal.lua
+|-- project/
+|-- src/
+    |-- main.cpp</code></pre></div>
+
+<p>and update our premake script to put generated files in this location</p>
+
+<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+    <span class="n">configurations</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">Debug&quot;</span> <span class="p">}</span>
+    <span class="n">location</span> <span class="p">(</span><span class="s2">&quot;</span><span class="s">project&quot;</span><span class="p">)</span>
+
+    <span class="n">project</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+        <span class="n">kind</span> <span class="s2">&quot;</span><span class="s">ConsoleApp&quot;</span>
+        <span class="n">files</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">src/main.cpp&quot;</span> <span class="p">}</span></code></pre></div>
+
+<p>and (after throwing away all previous artifacts so we don’t confuse ourselves), re-generate:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">C:<span class="se">\t</span>est&gt; premake5.exe --file<span class="o">=</span>premake-minimal.lua vs2013</code></pre></div>
+
+<p>After running this, you’ll see some project files in the <code>project/</code> directory:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">test/
+|-- premake-minimal.lua
+|-- project/
+    |-- mine.sln
+    |-- mine.vcxproj
+|-- src/
+    |-- main.cpp</code></pre></div>
+
+<p>And, all the generated files that Visual Studio creates are now tucked away in this project folder. In fact, after you
+build this project, you’ll see that Premake also decided to put all the compiler artifacts in sub-folders in this
+folder:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">test/
+|-- premake-minimal.lua
+|-- project/
+    |-- bin/
+        |-- Debug/
+            |-- mine.exe
+            |-- mine.ilk
+    |-- obj/
+        |-- main.obj
+        |-- mine.log
+        |-- mine.tlog/
+        |-- vc120.pdb
+    |-- mine.opensdf
+    |-- mine.sln
+    |-- mine.vcxproj
+|-- src/
+    |-- main.cpp</code></pre></div>
+
+<p>Still, if you try to debug with this project in Visual Studio, you’ll see Visual Studio complaining that it can’t find
+the debug symbols for your program. Premake by default does not create projects that generate debug symbols. Let’s fix
+that. The premake directive for this is <code>flags { "Symbols" }</code>. The <code>flags</code> keyword sets some Premake-specific
+values. The <code>"Symbols"</code> flag means “set up project to generate debug symbols”.</p>
+
+<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+    <span class="n">configurations</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">Debug&quot;</span> <span class="p">}</span>
+    <span class="n">location</span> <span class="p">(</span><span class="s2">&quot;</span><span class="s">project&quot;</span><span class="p">)</span>
+
+    <span class="n">project</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+        <span class="n">kind</span> <span class="s2">&quot;</span><span class="s">ConsoleApp&quot;</span>
+        <span class="n">files</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">src/main.cpp&quot;</span> <span class="p">}</span>
+        <span class="n">flags</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">Symbols&quot;</span> <span class="p">}</span></code></pre></div>
+
+<p>Now, when we re-generate (throwing away our old <code>project/</code> directory is not strictly necessary) and rebuild,
+we’ll have debug symbols in our project.</p>
+
+<p>We can add a Release configuration easily enough. Let’s also set it up so that the Debug configuration generates debug
+symbols, but the Release configuration does not. Also, we want the Release configuration to generated optimized code.</p>
+
+<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+    <span class="n">configurations</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">Debug&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Release&quot;</span> <span class="p">}</span>
+    <span class="n">location</span> <span class="p">(</span><span class="s2">&quot;</span><span class="s">project&quot;</span><span class="p">)</span>
+
+    <span class="n">project</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+        <span class="n">kind</span> <span class="s2">&quot;</span><span class="s">ConsoleApp&quot;</span>
+        <span class="n">files</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">src/main.cpp&quot;</span> <span class="p">}</span>
+
+        <span class="n">filter</span> <span class="s2">&quot;</span><span class="s">configurations:Debug&quot;</span>
+            <span class="n">defines</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">_DEBUG&quot;</span> <span class="p">}</span>    
+            <span class="n">flags</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">Symbols&quot;</span> <span class="p">}</span>
+        <span class="n">filter</span> <span class="s2">&quot;</span><span class="s">configurations:Release&quot;</span>
+            <span class="n">defines</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">NDEBUG&quot;</span> <span class="p">}</span>    
+            <span class="n">optimize</span> <span class="s2">&quot;</span><span class="s">On&quot;</span>
+        <span class="n">filter</span> <span class="p">{}</span></code></pre></div>
+
+<p>This introduces a new Premake feature called <code>filter</code>; any settings that appear after <code>filter</code> will only be
+applied to the subset of builds that match the keywords in the filter. Our first filter, <code>configurations:Debug</code>,
+means that subsequent lines only apply to configuration <code>Debug</code>. The <code>defines</code> directive introduces a C
+preprocessor define <code>_DEBUG</code> into our debug configuration, and then the <code>flags { "Symbols" }</code> directive turns
+on generating of debug symbols just for our debug configuration.</p>
+
+<p>Filters stay in effect until removed or replaced. The way to remove a filter is to just “apply” the empty filter. At the
+end of our block, you’ll see <code>filter {}</code>. In our very short premake script, this is not needed, but it’s a good
+practice to follow, because it will be essential in large premake scripts, especially ones that include other scripts.</p>
+
+<p>Filters can replace other filters. That’s why we don’t bother resetting the filter before applying our second filter,
+<code>filter "configuration:Release"</code>. This just replaces the debug filter. And like before, our <code>NDEBUG</code> symbol
+is only defined for the release configuration. The directive <code>optimize "On"</code> is how you tell Premake to do whatever
+it takes to configure for optimized builds. This is the cross-platform and generic way; more complex projects may
+wish to directly issue compiler flags, but that requires per-build-platform sections. We’ll get there eventually, but
+not just yet.</p>
+
+<p>If you regenerate and inspect the generated project files, you’ll see that we now have two solution configurations,
+Debug and Release; debug has debug symbols and does not have optimized code, whereas release does not have debug
+symbols but has optimized code.</p>
+
+<p>The final thing we’re going to cover in our minimal Premake project is on specifying source files. While it is
+possible to list every file in our <code>files</code> directive, we can use wildcards, including recursing through
+multiple layers of directories:</p>
+
+<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+    <span class="n">configurations</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">Debug&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Release&quot;</span> <span class="p">}</span>
+    <span class="n">location</span> <span class="p">(</span><span class="s2">&quot;</span><span class="s">project&quot;</span><span class="p">)</span>
+
+    <span class="n">project</span> <span class="s2">&quot;</span><span class="s">mine&quot;</span>
+        <span class="n">kind</span> <span class="s2">&quot;</span><span class="s">ConsoleApp&quot;</span>
+        <span class="n">files</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">**.cpp&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">**.h&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">**.c&quot;</span> <span class="p">}</span>
+
+        <span class="n">filter</span> <span class="s2">&quot;</span><span class="s">configurations:Debug&quot;</span>
+            <span class="n">defines</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">_DEBUG&quot;</span> <span class="p">}</span>    
+            <span class="n">flags</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">Symbols&quot;</span> <span class="p">}</span>
+        <span class="n">filter</span> <span class="s2">&quot;</span><span class="s">configurations:Release&quot;</span>
+            <span class="n">defines</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">NDEBUG&quot;</span> <span class="p">}</span>    
+            <span class="n">optimize</span> <span class="s2">&quot;</span><span class="s">On&quot;</span>
+        <span class="n">filter</span> <span class="p">{}</span></code></pre></div>
+
+<p>The new files line will add any .cpp, .h, or .c files found anywhere in the <code>src/</code> directory. By default, Premake
+will try to be nice and will create groupings in the generated projects to match the directory structure. As long as
+you are disciplined and don’t keep stray files in your workspace, you may find you never need explicit listing of files
+in the premake script. Note that the first level isn’t replicated in the project file - <code>main.cpp</code> shows up at the top
+level, and not inside a <code>src</code> group. If you add more files and directories to your <code>src</code> folder, you’ll see
+those files put into groups named to match the directories.</p>
+
+<p>So, that’s it. There are the basics of Premake that will serve you for small to medium projects. You’ll find that it’s
+far easier to write a quick Premake script than to manually construct a Visual Studio project. More importantly, this
+also removes one small but important barrier to being cross-platform. Let’s copy our source files to a Mac, and grab
+a Mac version of the premake binary.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span><span class="nv">$ </span>premake5 --file<span class="o">=</span>premake-minimal.lua xcode4</code></pre></div>
+
+<p>Success! We have a project/mine.xcodeproj that we can build and debug and run. And this is why people like using
+Premake (or CMake, or Scons, or Gyp), because there are many projects that are cross-platform.</p>
+
+<p>And, for fun, we can generate a makefile project that is consumed by GNU Make (gmake). We’ll do this on the Mac,
+although with a little tweaking, you could turn it into a makefile that Windows NMake could consume.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span><span class="nv">$ </span>premake5 --file<span class="o">=</span>premake-minimal.lua gmake</code></pre></div>
+
+<p>And, if we look in our <code>project/</code> directory, we’ll see a makefile named <code>Makefile</code>.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>Unfortunately, Premake documentation is now disjoint. There was a major version change, but lots of useful
+documentation was orphaned. Concepts were explained better in older documentation, you just need to be careful
+because syntax and features have changed.</p>
+
+<p><a href="http://industriousone.com/premake/userguide">Original User Guide</a></p>
+
+<p><a href="https://github.com/premake/premake-4.x/wiki">Premake 4.x User Guide</a></p>
+
+<p><a href="https://github.com/premake/premake-core/wiki">Premake 5.x User Guide</a></p>
+
+<p>Likewise, the original home for Premake development was on the industriousone web site, but is now in GitHub.</p>
+
+<p><a href="https://github.com/premake">premake on GitHub</a></p>
+
+<p><a href="http://premake.github.io/">New Premake home page</a></p>
+
+<p><a href="http://industriousone.com/">industriousone</a>. However, there are no links to Premake content, but Google searches
+will show links to the old forums and help articles.</p>
+
+<p><a href="http://industriousone.com/forums/premake">Old forums for Premake</a></p>
+
+<p><a href="https://groups.google.com/forum/#!forum/premake-development">Google Groups Premake forum</a></p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Some Things Are Obvious</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Some Things Are Obvious</li>
+          <li><a href="mailto:neurocline@gmail.com">neurocline@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/neurocline">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/neurocline">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Answers to some of the world's questions
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
