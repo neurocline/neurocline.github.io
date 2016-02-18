@@ -6,13 +6,16 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Feb 2016 17:05:03 -0800</pubDate>
-    <lastBuildDate>Wed, 17 Feb 2016 17:05:03 -0800</lastBuildDate>
+    <pubDate>Wed, 17 Feb 2016 19:08:12 -0800</pubDate>
+    <lastBuildDate>Wed, 17 Feb 2016 19:08:12 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Minimal Premake</title>
-        <description>&lt;p&gt;Premake is useful, and Premake 5 more so. With any tool, it’s important to understand it. But it’s also important
+        <description>&lt;p&gt;This is part of a planned series of articles, discussing both usage of Premake and analysis of it (what is good
+about Premake, what is bad), as well as usage and analysis of equivalent tools like CMake, SCons and Gyp.&lt;/p&gt;
+
+&lt;p&gt;Premake is useful, and Premake 5 more so. With any tool, it’s important to understand it. But it’s also important
 to know how to use it properly. The apocryphal legend about &lt;code&gt;make&lt;/code&gt; is that there is only one original
 &lt;code&gt;Makefile&lt;/code&gt;, and all others are just edited copies of the ur-file. While not true in fact, it is true that
 &lt;code&gt;make&lt;/code&gt; is complex and most people who use it don’t really understand what they are doing.&lt;/p&gt;
@@ -21,6 +24,8 @@ to know how to use it properly. The apocryphal legend about &lt;code&gt;make&lt;
 &lt;a href=&quot;https://premake.github.io/download.html&quot;&gt;https://premake.github.io/download.html&lt;/a&gt;. I strongly suggest Premake 5.0, which while
 listed as alpha is still stable (Blizzard has been using it for the past 6 months). The examples here start
 with Visual Studio, and then move on to XCode and Gmake.&lt;/p&gt;
+
+&lt;h2 id=&quot;bare-skeleton&quot;&gt;Bare skeleton&lt;/h2&gt;
 
 &lt;p&gt;Let’s look at Premake through the filter of “what is the simplest Premake file we can make?”. We’re going to
 use it to build a single-file project. Here’s the layout for our working folder:&lt;/p&gt;
@@ -42,25 +47,49 @@ use it to build a single-file project. Here’s the layout for our working folde
 
 &lt;p&gt;This is the smallest &lt;code&gt;premake-minimal&lt;/code&gt; file; every line in here is necessary, as far as I can tell:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mysolution&amp;quot;&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Debug&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;myproject&amp;quot;&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ConsoleApp&amp;quot;&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;src/main.cpp&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The word &lt;code&gt;solution&lt;/code&gt; comes from its original Visual Studio focus; supposedly, newer Premake versions are now
-preferring &lt;code&gt;workspace&lt;/code&gt;, with &lt;code&gt;solution&lt;/code&gt; as a synonym.&lt;/p&gt;
+&lt;p&gt;First off, indentation in Premake scripts is arbitrary; Premake scripts are just Lua scripts with predefined
+behavior, and Lua scripts are agnostic to whitespace (think C, not Python). The indentation is chosen to
+show meaning and ownership, but to Premake, a file with none of the above indentation would mean the same thing.
+This is important to keep in mind for future features like &lt;code&gt;filter&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;You must have one or more configurations; Premake has no defaults. Configurations are sets of build options that
-can cut across targets.&lt;/p&gt;
+&lt;p&gt;All Premake scripts declare a single solution.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mysolution&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The word &lt;code&gt;solution&lt;/code&gt; comes from its original Visual Studio
+focus; supposedly, newer Premake versions are now preferring &lt;code&gt;workspace&lt;/code&gt;, with &lt;code&gt;solution&lt;/code&gt; as a synonym.
+The name you give your solution is, while arbitrary, also practical: this is the name given to the generated
+solution/workspace/makefile, and (where relevant), is also the name that shows up when you open your solution.&lt;/p&gt;
+
+&lt;p&gt;Your Premake scripts must have one or more &lt;code&gt;configurations&lt;/code&gt;; Premake has no defaults.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Debug&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Configurations are sets of build options that
+can cut across targets. The name configuration comes from Visual Studio; Xcode also calls them configurations,
+although I think that might be recent. In makefiles, configurations are a Premake-made-up concept.&lt;/p&gt;
+
+&lt;p&gt;A solution contains one or more projects.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;myproject&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Likewise, the word &lt;code&gt;project&lt;/code&gt; shows Visual Studio bias, but is a reasonable concept (for Visual Studio builds,
-each &lt;code&gt;project&lt;/code&gt; section generates a corresponding .vcxproj file); ther build systems might
-call this a target. A project need a &lt;code&gt;kind&lt;/code&gt;, which declares what kind of thing is being made:
+each &lt;code&gt;project&lt;/code&gt; section generates a corresponding .vcxproj file); other build systems might
+call this a target. Like with solution, the name you give a project is both arbitrary and practical; any generated
+project file (just for Visual Studio, as far as I know) will have this name, and when open in an editor, the project
+will present this name.&lt;/p&gt;
+
+&lt;p&gt;A project need a &lt;code&gt;kind&lt;/code&gt;, which declares what type of thing to build:
 choices are &lt;code&gt;StaticLib&lt;/code&gt; for
 static libraries, &lt;code&gt;SharedLib&lt;/code&gt; for shared libraries (called DLLs on Windows), &lt;code&gt;ConsoleApp&lt;/code&gt; for console applications,
-and &lt;code&gt;WindowedApp&lt;/code&gt; for apps that run in a window (mostly a distinction for Windows and Mac OS X).&lt;/p&gt;
+and &lt;code&gt;WindowedApp&lt;/code&gt; for apps that run in a window (mostly a distinction for Windows and Mac OS X). Premake is
+used for building code projects, and this shows up in the set of items for kind.&lt;/p&gt;
 
 &lt;p&gt;Finally, a project has to reference files, or it does nothing. This is the one piece that is optional, we
 could have made a project that has no source; but there’s little point to this. Note that we reference files relative to
@@ -72,26 +101,47 @@ if your premake script has the default name, which for Premake 5 is &lt;code&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;C:&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;est&amp;gt; premake5.exe --file&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;premake-minimal.lua vs2013&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;This will create a Visual Studio 2013 project that you can open and compile. Of course, you would never make even
-a simple project this way. So what can we add?&lt;/p&gt;
-
-&lt;p&gt;First, we can control where the generated project files go. The Premake directive is &lt;code&gt;location (&amp;lt;PATH&amp;gt;)&lt;/code&gt;; this
-sets the base location for all generated output. Let’s create a folder named &lt;code&gt;project&lt;/code&gt; to place
-our project files:&lt;/p&gt;
+&lt;p&gt;This will create a Visual Studio 2013 project that you can open and compile. After building, you should see
+output something like this:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;test/
+|-- bin/
+    |-- Debug/
+        |-- myproject.exe
+        |-- myproject.ilk
+|-- myproject.vcxproj
+|-- mysolution.sdf
+|-- mysolution.sln
+|-- mysolution.v12.suo
+|-- obj/
+    |-- myproject.tlog/
+    |-- myproject.log
+    |-- main.obj
+    |-- vc120.pdb
 |-- premake-minimal.lua
-|-- project/
 |-- src/
     |-- main.cpp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;and update our premake script to put generated files in this location&lt;/p&gt;
+&lt;p&gt;This will look slightly different if you use a different version of Visual Studio.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
+&lt;p&gt;It’s a little messy, but Premake has imposed some structure without us asking. In general, Premake tries to have
+sensible defaults while letting you override them if you want or need to.&lt;/p&gt;
+
+&lt;h2 id=&quot;simple-organization&quot;&gt;Simple organization&lt;/h2&gt;
+
+&lt;p&gt;Of course, you would never make even a simple project this way. So what should we add?&lt;/p&gt;
+
+&lt;p&gt;First, we can control where the generated project files go. The Premake directive is &lt;code&gt;location (&amp;lt;PATH&amp;gt;)&lt;/code&gt;; this
+sets the base location for all generated output. Let’s place our generated project files in a &lt;code&gt;build&lt;/code&gt; folder
+(foreshadowing: unless we specify otherwise, all compiler outputs will go here too).&lt;/p&gt;
+
+&lt;p&gt;So we update our premake script to put generated files in this location:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mysolution&amp;quot;&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Debug&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;project&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;build&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;myproject&amp;quot;&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ConsoleApp&amp;quot;&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;src/main.cpp&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -99,63 +149,47 @@ our project files:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;C:&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;est&amp;gt; premake5.exe --file&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;premake-minimal.lua vs2013&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;After running this, you’ll see some project files in the &lt;code&gt;project/&lt;/code&gt; directory:&lt;/p&gt;
+&lt;p&gt;After running this, you’ll see a &lt;code&gt;build/&lt;/code&gt; directory with files in it; I won’t list those files again, our
+previous list suffices.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;test/
+|-- build/
 |-- premake-minimal.lua
-|-- project/
-    |-- mine.sln
-    |-- mine.vcxproj
 |-- src/
     |-- main.cpp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;And, all the generated files that Visual Studio creates are now tucked away in this project folder. In fact, after you
-build this project, you’ll see that Premake also decided to put all the compiler artifacts in sub-folders in this
-folder:&lt;/p&gt;
+&lt;p&gt;As well as Premake-generated files, all the files that Visual Studio creates are now tucked away in this build folder.
+A big advantage to doing this is that all build artifacts
+are in a single folder that can be ignored when committing to source control, and can be removed in order to
+facilitate a clean build.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;test/
-|-- premake-minimal.lua
-|-- project/
-    |-- bin/
-        |-- Debug/
-            |-- mine.exe
-            |-- mine.ilk
-    |-- obj/
-        |-- main.obj
-        |-- mine.log
-        |-- mine.tlog/
-        |-- vc120.pdb
-    |-- mine.opensdf
-    |-- mine.sln
-    |-- mine.vcxproj
-|-- src/
-    |-- main.cpp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;multiple-configurations&quot;&gt;Multiple configurations&lt;/h2&gt;
 
-&lt;p&gt;Still, if you try to debug with this project in Visual Studio, you’ll see Visual Studio complaining that it can’t find
+&lt;p&gt;If you try to debug with this project in Visual Studio, you’ll see Visual Studio complaining that it can’t find
 the debug symbols for your program. Premake by default does not create projects that generate debug symbols. Let’s fix
 that. The premake directive for this is &lt;code&gt;flags { &quot;Symbols&quot; }&lt;/code&gt;. The &lt;code&gt;flags&lt;/code&gt; keyword sets some Premake-specific
 values. The &lt;code&gt;&quot;Symbols&quot;&lt;/code&gt; flag means “set up project to generate debug symbols”.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mysolution&amp;quot;&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Debug&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;project&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;build&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;myproject&amp;quot;&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ConsoleApp&amp;quot;&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;src/main.cpp&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Symbols&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Now, when we re-generate (throwing away our old &lt;code&gt;project/&lt;/code&gt; directory is not strictly necessary) and rebuild,
+&lt;p&gt;Now, when we re-generate (throwing away our old &lt;code&gt;build/&lt;/code&gt; directory is not strictly necessary) and rebuild,
 we’ll have debug symbols in our project.&lt;/p&gt;
 
 &lt;p&gt;We can add a Release configuration easily enough. Let’s also set it up so that the Debug configuration generates debug
 symbols, but the Release configuration does not. Also, we want the Release configuration to generated optimized code.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mysolution&amp;quot;&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Debug&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Release&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;project&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;build&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;myproject&amp;quot;&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ConsoleApp&amp;quot;&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;src/main.cpp&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
@@ -175,7 +209,9 @@ on generating of debug symbols just for our debug configuration.&lt;/p&gt;
 
 &lt;p&gt;Filters stay in effect until removed or replaced. The way to remove a filter is to just “apply” the empty filter. At the
 end of our block, you’ll see &lt;code&gt;filter {}&lt;/code&gt;. In our very short premake script, this is not needed, but it’s a good
-practice to follow, because it will be essential in large premake scripts, especially ones that include other scripts.&lt;/p&gt;
+practice to follow, because it will be essential in large premake scripts, especially ones that include other scripts.
+The best way to visualize this is to remove all the indentation from your premake script. Now it’s clear that filters
+are in effect until removed; the indentation is fooling your brain into thinking there is some sort of scope.&lt;/p&gt;
 
 &lt;p&gt;Filters can replace other filters. That’s why we don’t bother resetting the filter before applying our second filter,
 &lt;code&gt;filter &quot;configuration:Release&quot;&lt;/code&gt;. This just replaces the debug filter. And like before, our &lt;code&gt;NDEBUG&lt;/code&gt; symbol
@@ -188,25 +224,13 @@ not just yet.&lt;/p&gt;
 Debug and Release; debug has debug symbols and does not have optimized code, whereas release does not have debug
 symbols but has optimized code.&lt;/p&gt;
 
+&lt;h2 id=&quot;multiple-source-files&quot;&gt;Multiple source files&lt;/h2&gt;
+
 &lt;p&gt;The final thing we’re going to cover in our minimal Premake project is on specifying source files. While it is
 possible to list every file in our &lt;code&gt;files&lt;/code&gt; directive, we can use wildcards, including recursing through
 multiple layers of directories:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Debug&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Release&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;project&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mine&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ConsoleApp&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**.cpp&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**.h&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**.c&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;configurations:Debug&amp;quot;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;defines&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;_DEBUG&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;    
-            &lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Symbols&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;configurations:Release&amp;quot;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;defines&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;NDEBUG&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;    
-            &lt;span class=&quot;n&quot;&gt;optimize&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;On&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**.cpp&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**.h&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**.c&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The new files line will add any .cpp, .h, or .c files found anywhere in the &lt;code&gt;src/&lt;/code&gt; directory. By default, Premake
 will try to be nice and will create groupings in the generated projects to match the directory structure. As long as
@@ -222,7 +246,7 @@ a Mac version of the premake binary.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;premake5 --file&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;premake-minimal.lua xcode4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Success! We have a project/mine.xcodeproj that we can build and debug and run. And this is why people like using
+&lt;p&gt;Success! We have a build/mine.xcodeproj that we can build and debug and run. And this is why people like using
 Premake (or CMake, or Scons, or Gyp), because there are many projects that are cross-platform.&lt;/p&gt;
 
 &lt;p&gt;And, for fun, we can generate a makefile project that is consumed by GNU Make (gmake). We’ll do this on the Mac,
@@ -230,7 +254,101 @@ although with a little tweaking, you could turn it into a makefile that Windows 
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;premake5 --file&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;premake-minimal.lua gmake&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;And, if we look in our &lt;code&gt;project/&lt;/code&gt; directory, we’ll see a makefile named &lt;code&gt;Makefile&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;And, if we look in our &lt;code&gt;build/&lt;/code&gt; directory, we’ll see a makefile named &lt;code&gt;Makefile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;identifying-boilerplate&quot;&gt;Identifying boilerplate&lt;/h2&gt;
+
+&lt;p&gt;Boilerplate is a term that means “stuff I copy over and over again just to make the system happy”. In
+general, we want a system that is as concise as possible, where everything I add is necessary and
+unique to my project. This has to be balanced against the needs of syntax and semantics. Keywords like
+“solution” aren’t boilerplate if they are necessary to declare some information that is needed.&lt;/p&gt;
+
+&lt;p&gt;Looking at our minimal project, there is some boilerplate related to how we define debug and release
+builds. For example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;defines&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;NDEBUG&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Every C/C++ project I make that uses the standard C library needs to have &lt;code&gt;NDEBUG&lt;/code&gt; defined for
+non-debug builds. And Microsoft long ago introduced a parallel construction, every debug build should
+have &lt;code&gt;_DEBUG&lt;/code&gt; defined (I suppose they didn’t like &lt;code&gt;#ifndef NDEBUG&lt;/code&gt; as a guard).&lt;/p&gt;
+
+&lt;p&gt;This is right on the edge of boilerplate, because Premake doesn’t have any idea of predefined meaning
+for configurations, so how does Premake now that my config is debug or release? However, and also
+looking at symbols and optimization, there are common idioms. Maybe we should have been able to
+introduce all of them at once. This makes sense given that &lt;code&gt;optimize &quot;On&quot;&lt;/code&gt; itself is a collection
+of predefined options for what “optimized” means.&lt;/p&gt;
+
+&lt;p&gt;One way would have been to attach information to a configuration. Doing it in a filter is one way, but
+verbose. What if we just told it when we declared the configurations.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Debug&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;debug&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Release&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;release&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And if the configuration name matches one of our sets (built-in or not), then we wouldn’t need to
+specify this. In the above, I’m saying that the “debug” set is “#define _DEBUG, build debug symbols”,
+and the “release” set is “#define NDEBUG, turn full optimization on”.&lt;/p&gt;
+
+&lt;p&gt;This makes my small script even smaller, but more importantly it gets rid of duplicated code. The lines
+above are likely to be seen, in one form or another, in every Premake script ever made. This is
+a large part of what leads to copy/paste makefiles; a ton of common operations that need to be done,
+so why not just copy it instead of re-write it. It’s just that copying is the poor man’s code re-use,
+because errors and misunderstandings are just as easily propagated as best practices and required
+structure.&lt;/p&gt;
+
+&lt;h2 id=&quot;canonical-minimal-premake-script&quot;&gt;Canonical minimal Premake script&lt;/h2&gt;
+
+&lt;p&gt;Here’s a commented version of the minimal premake script, usable as a standalone reference. Because this
+is Lua, we can comment it, and we could even compose it as functions (which we would do for a very large
+project).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span class=&quot;c1&quot;&gt;-- A solution is the top-level entity in Premake. In Visual Studio, this&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- maps to a Visual Studio solution file (.sln). In XCode, this maps&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- to an XCode workspace (.xcworkspace). In make, this is a makefile.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mysolution&amp;quot;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;-- A solution has one or more configurations. The names of the configurations&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;-- are arbitrary and are strings that can be matched by filters to customize&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;-- behavior. Each project is generated for each possible configuration.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Debug&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Release&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;-- The location specifies where Premake will put generated files. If not&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;-- specified, the default is the directory where the premake script lives.&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;-- Non-absolute paths are relative to the premake script (and good practice&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;-- would be to avoid absolute paths in project scripts).&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;build&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;-- A project is the next-level entity in Premake; solutions contain one&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;-- or more projects. While this conceptually belongs to the solution, it&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;-- belongs to the solution only because solution is a singleton.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;myproject&amp;quot;&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;-- A project has a kind, which is the form of the generated output for&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- this project. There are four kinds: StaticLib, SharedLib, ConsoleApp,&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- and WindowedApp (the last is unique to Windows and Mac OS X).&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ConsoleApp&amp;quot;&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;-- A project has one or more source files in it. These can be enumerated&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- individually, or specified with wildcards. The &amp;#39;**&amp;#39; wildcard is used&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- to recurse through directories, not just to match in a single directory.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**.cpp&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**.h&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**.c&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;-- filters can be used to apply settings to a subset of the configurations&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- and architectures. In this case, we are applying some settings to just&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- the debug configuration.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;configurations:Debug&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;defines&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;_DEBUG&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;    
+            &lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Symbols&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;-- In this case, we are applying some settings to just the release&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- configuration&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;configurations:Release&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;defines&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;NDEBUG&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;    
+            &lt;span class=&quot;n&quot;&gt;optimize&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;On&amp;quot;&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;-- A filter is in effect until the end of the file, or until it is replaced&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- with another filter. As a good engineering practice, we want to end a&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- filter as soon as we no longer need it; the way to do this is to say&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;-- &amp;quot;filter nothing&amp;quot;.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 
@@ -256,6 +374,8 @@ will show links to the old forums and help articles.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://industriousone.com/forums/premake&quot;&gt;Old forums for Premake&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!forum/premake-development&quot;&gt;Google Groups Premake forum&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://industriousone.com/forums/premake/premake-cookbook&quot;&gt;Premake Cookbook&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 17 Feb 2016 09:00:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/02/17/minimal-premake.html</link>
