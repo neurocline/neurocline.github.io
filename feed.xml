@@ -6,9 +6,72 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Feb 2016 01:10:13 -0800</pubDate>
-    <lastBuildDate>Thu, 18 Feb 2016 01:10:13 -0800</lastBuildDate>
+    <pubDate>Mon, 22 Feb 2016 16:24:25 -0800</pubDate>
+    <lastBuildDate>Mon, 22 Feb 2016 16:24:25 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://nautil.us/issue/33/attraction/why-our-intuition-about-sea_level-rise-is-wrong&quot;&gt;Why Our Intuition About Sea-Level Rise Is Wrong&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.mikeash.com/pyblog/friday-qa-2016-02-19-what-is-the-secure-enclave.html&quot;&gt;Friday Q&amp;amp;A 2016-02-19: What Is the Secure Enclave?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cockroachlabs.com/blog/what-can-we-learn-from-our-github-stars/&quot;&gt;What can we learn from our GitHub stars?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@ConsenSys/an-introduction-to-ipfs-9bba4860abd0#.n2zvl5up1&quot;&gt;An Introduction to IPFS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://techcrunch.com/2016/02/20/solving-the-h-1b-visa-problem/&quot;&gt;Solving The H-1B Visa Problem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pcottle.github.io/learnGitBranching/&quot;&gt;Learn Git Branching&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rogerdudler.github.io/git-guide/&quot;&gt;git - the simple guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://isocpp.org/files/papers/p0225r0.html&quot;&gt;Why I want Concepts, and why I want them sooner rather than later&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@cdixon/what-s-next-in-computing-e54b870b80cc#.m8xxvbouy&quot;&gt;What’s Next in Computing?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.privateinternetaccess.com/blog/2016/01/linux-networking-stack-from-the-ground-up-part-1/&quot;&gt;Linux networking stack from the ground up, part 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://thewinnower.com/papers/now-i-am-become-doi-destroyer-of-gatekeeping-worlds&quot;&gt;Now I am become DOI, destroyer of gatekeeping worlds&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tacticalsecret.com/early-impacts-of-letsencrypt/&quot;&gt;Early Impacts of Let’s Encrypt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@pierreda/understanding-git-for-real-by-exploring-the-git-directory-1e079c15b807#.fn5tpm1ax&quot;&gt;Understanding git for real by exploring the .git directory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://infolab.stanford.edu/pub/cstr/reports/csl/tr/83/247/CSL-TR-83-247.pdf&quot;&gt;Maintaining the Time in a Distributed System&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Peng.pdf&quot;&gt;Large-scale Incremental Processing Using Distributed Transactions and Notifications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cockroachlabs.com/blog/living-without-atomic-clocks/&quot;&gt;Living Without Atomic Clocks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://thewinnower.com/about&quot;&gt;The Winnower: About&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.clockss.org/clockss/Home&quot;&gt;The CLOCKSS Archive: A Trusted Community-Governed Archive&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.lockss.org/&quot;&gt;LOCKSS: Lots Of Copies Keep Stuff Safe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://preshing.com/20160222/a-resizable-concurrent-map/&quot;&gt;A Resizable Concurrent Map&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://morsmachine.dk/causalprof&quot;&gt;Causal Profiling for Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.polygon.com/2016/2/22/11051686/golem-playstationvr-highwire-games&quot;&gt;A SEATTLE SUPERGROUP OF DEVELOPERS IS TRYING TO CRACK VR’S TRICKIEST PROBLEMS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mintomic.github.io/&quot;&gt;Mintomic: A Small, Portable Lock-Free API&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/preshing/turf&quot;&gt;preshing/turf&lt;/a&gt;. Turf is a configurable C++ platform adapter for threads, atomics, mutexes and other concurrency mechanisms.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/preshing/junction&quot;&gt;preshing/junction&lt;/a&gt;. Concurrent data structures in C++.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 21 Feb 2016 16:48:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/02/21/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/21/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Minimal Premake</title>
@@ -1034,55 +1097,6 @@ the developer is trying to get merged into the main version.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/06/recent-links.html</guid>
         
         <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Experimenting with modules in C++</title>
-        <description>&lt;p&gt;There is a proposal to add modules to the C++ standard.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4465.pdf&quot;&gt;A Module System for C++ (Revision 3)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This builds on a much earlier proposal in 2006 by Daveed Vandevoorde&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n2073.pdf&quot;&gt;Modules in C++&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Microsoft has done an early implementation in Visual Studio 2015 Update 1 (because the authors of the
-new module proposal package work at Microsoft)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/vcblog/2015/12/03/c-modules-in-vs-2015-update-1/&quot;&gt;C++ Modules in VS 2015 Update 1&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I’m not terribly excited about some parts of their proposal and implementation. But I should play with it. So. I will play with it.
-Update to come.&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3596147/c-modules-why-were-they-removed-from-c0x-will-they-be-back-later-on&quot;&gt;C++ Modules - why were they removed from C++0x? Will they be back later on?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2869.html&quot;&gt;State of C++ Evolution (Post San Francisco 2008)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://clang.llvm.org/docs/Modules.html&quot;&gt;Clang 3.9 - Modules&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lambda-the-ultimate.org/node/4649&quot;&gt;A module system for the C family&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=RwdQA0pGWa4&quot;&gt;CppCon 2015: Gabriel Dos Reis “Large Scale C++ with Modules: What You Should Know”&lt;/a&gt; and &lt;a href=&quot;https://github.com/isocpp/CppCoreGuidelines/blob/master/talks/Large-Scale-C%2B%2B-With-Modules.pdf&quot;&gt;slides&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://llvm.org/devmtg/2012-11/Gregor-Modules.pdf&quot;&gt;Modules&lt;/a&gt; and &lt;a href=&quot;http://llvm.org/devmtg/2012-11/videos/Gregor-Modules.mp4&quot;&gt;video&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://kennykerr.ca/2015/12/03/getting-started-with-modules-in-c/&quot;&gt;Getting Started with Modules in C++&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 04 Feb 2016 17:05:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/04/experimenting-with-modules-in-cpp.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/04/experimenting-with-modules-in-cpp.html</guid>
-        
-        <category>C++</category>
-        
-        <category>standard</category>
-        
-        <category>modules</category>
         
         
         <category>dev</category>
