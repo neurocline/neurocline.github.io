@@ -83,8 +83,10 @@ can use it in our day-to-day life.
 
 [Terrestrial Time](https://en.wikipedia.org/wiki/Terrestrial_Time)
 
-[Splitting the Second](ftp://pvictor.homeftp.net/public/Sci_Library/Phys%20Library/PPop_Popular-level/Jones%20T.%20%20Splitting%20the%20second%20-%20the%20story%20of%20atomic%20time%20(IOP,%202000)(202s).pdf)
+[Splitting the Second: The Story of Atomic Time](ftp://pvictor.homeftp.net/public/Sci_Library/Phys%20Library/PPop_Popular-level/Jones%20T.%20%20Splitting%20the%20second%20-%20the%20story%20of%20atomic%20time%20(IOP,%202000)(202s).pdf)
 
 [CppCon 2015: Howard Hinnant “A C++14 approach to dates and times"](https://www.youtube.com/watch?v=tzyGjOm8AKo)
 
 [chrono-Compatible Low-Level Date Algorithms](http://howardhinnant.github.io/date_algorithms.html)
+
+[Time&mdash;From Earth Rotation to Atomic Physics](http://dl.yazdanpress.com/BOOKS/PHYSICS/Time_From_Earth_Rotation_to_Atomic_Physics(marked).pdf)
