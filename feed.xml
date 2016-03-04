@@ -6,9 +6,174 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 Feb 2016 23:37:10 -0800</pubDate>
-    <lastBuildDate>Tue, 23 Feb 2016 23:37:10 -0800</lastBuildDate>
+    <pubDate>Thu, 03 Mar 2016 20:10:12 -0800</pubDate>
+    <lastBuildDate>Thu, 03 Mar 2016 20:10:12 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>C++ things to write</title>
+        <description>&lt;p&gt;Write a C++ source highighter that uses Clang to identify the various
+syntactic and semantic elements.&lt;/p&gt;
+
+&lt;p&gt;Write a web template/blog engine in C++.&lt;/p&gt;
+
+&lt;p&gt;Turn Clang into a two-pass compiler so that forward declarations aren’t
+needed any more. Do templates make this impossible? Find out.&lt;/p&gt;
+
+&lt;p&gt;Find a way to get rid of most/all of the undefined and unspecified
+behavior in the C++ standard.&lt;/p&gt;
+
+&lt;p&gt;Find all the usable C and C++ source in the world, catalog it, and make it
+available for use.&lt;/p&gt;
+
+&lt;p&gt;Solve text encoding.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Mar 2016 11:30:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/03/things-to-write.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/03/things-to-write.html</guid>
+        
+        <category>programming</category>
+        
+        <category>design</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install&quot;&gt;The magic behind configure, make, make install&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Configure_script&quot;&gt;configure script&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://airs.com/ian/configure/configure_toc.html&quot;&gt;The GNU configure and build system&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html&quot;&gt;Self-Documented Makefile&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=11195539&quot;&gt;discussion&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nicholasjackson.github.io/microservices/go/building-and-testing-microservices-part1/&quot;&gt;0 to Microservice in 5 minutes with Go, go-microservice-template and Minke&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.iar.com/support/resources/articles/advanced-preprocessor-tips-and-tricks/&quot;&gt;Advanced preprocessor tips and tricks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=11198329&quot;&gt;Ask HN: Is it possible to live off technical writing?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://llogiq.github.io/2016/02/28/java-rust.html&quot;&gt;Comparing Rust and Java&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://failedevolution.blogspot.com/2015/10/stephen-hawking-confirms-problem-is.html&quot;&gt;Stephen Hawking confirms: The problem is Capitalism, not robots!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mirage.io/blog/introducing-functoria&quot;&gt;Introducing Functoria&lt;/a&gt;. MirageOS for microkernels/unikernels&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ilikebigbits.com/blog/2016/2/28/error-context-better-logging-with&quot;&gt;Error Context - a stack trace for data&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pythontutor.com/&quot;&gt;VISUALIZE Python, Java, JavaScript, TypeScript, Ruby, C, and C++ programs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://makers.airware.com/open-source/this-blog/&quot;&gt;Airware - this blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.blog.pythonlibrary.org/2016/03/01/python-101-all-about-imports/&quot;&gt;Python 101: All about imports&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@bertrandom/unfundable-slack-bots-9369a75fdd#.nuomxx68y&quot;&gt;Unfundable Slack bots&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://eng.uber.com/go-geofence/&quot;&gt;HOW WE BUILT UBER ENGINEERING’S HIGHEST QUERY PER SECOND SERVICE USING GO&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gitkraken.com/&quot;&gt;GitKracken&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://zachholman.com/posts/deploying-software&quot;&gt;How to Deploy Software&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 01 Mar 2016 23:42:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/01/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/01/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>C++ Package Management notes</title>
+        <description>&lt;p&gt;How should a package system for C++ work?&lt;/p&gt;
+
+&lt;p&gt;Here’s one ideal&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;quot;curl&amp;quot; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// this is a package&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// this is a system header&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CurlGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Download file&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;c1&quot;&gt;// Download argv[1] into a std::string&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CurlGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is a real program, except for one small detail.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;quot;curl&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In an ideal world, this is all you would need to use Curl in your program; no
+downloading installing a Curl distribution, no adding of search path and linker
+entries to a makefile or other build system artifact.&lt;/p&gt;
+
+&lt;p&gt;The function &lt;code&gt;CurlGet&lt;/code&gt; isn’t from the curl package, it’s my code. I separated it
+out just to make it clearer. Here it is, for completeness’ sake. Put this together
+with the code above and a compiler that supports packages, and you get this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WriteStdString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nmemb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nmemb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;c1&quot;&gt;// Add this new chunk to the string. Yes, ugly, writing into a string buffer.&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;memcpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CurlGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reserve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// reserve enough for a moderate sized file&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;curl_global_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CURL_GLOBAL_DEFAULT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curl_easy_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;curl_easy_setopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CURLOPT_URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;curl_easy_setopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CURLOPT_WRITEFUNCTION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WriteStdString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;curl_easy_setopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CURLOPT_WRITEDATA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;curl_easy_setopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CURLOPT_USERAGENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;packagedemo/1.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curl_easy_perform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;cm&quot;&gt;/* should really check result, eh? */&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;curl_easy_cleanup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;curl_global_cleanup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In our current world, if you have a computer without Curl on it, and are not
+running an operating system where Curl has been packaged up for you to grab,
+you’re in for an hour to a day of finding Curl source, building it, and then
+adding it to your program.&lt;/p&gt;
+
+&lt;p&gt;So how can we get closer to this ideal world?&lt;/p&gt;
+</description>
+        <pubDate>Tue, 01 Mar 2016 13:30:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/01/cpp-package-management-notes.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/01/cpp-package-management-notes.html</guid>
+        
+        <category>programming</category>
+        
+        <category>design</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Barycentric Coordinate Time</title>
@@ -871,224 +1036,6 @@ normalizations.&lt;/p&gt;
         <category>programming</category>
         
         <category>design</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://medium.com/@sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527#.qfeojmnq4&quot;&gt;So you want to write a package manager&lt;/a&gt;. This is halfway between a rant and a proposal and a theory of programming language package managers.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/apple/swift-package-manager&quot;&gt;apple/swift-package-manager&lt;/a&gt;. The Package Manager for the Swift Programming Language. Apple is working on an integrated package system for Swift.&lt;/p&gt;
-
-&lt;p&gt;Where do you put user/program files on various operating systems?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/files/folders&quot;&gt;Folder Structures Used by npm&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/cli/cache&quot;&gt;npm-cache&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/misc/config&quot;&gt;npm-config&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/packages.html&quot;&gt;GHC Packages&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration&quot;&gt;Customizing Git - Git Configuration&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://unix.stackexchange.com/questions/48870/global-bash-profile&quot;&gt;Global bash_profile&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb762494.aspx&quot;&gt;CSIDL&lt;/a&gt;. Windows known folders&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457.aspx&quot;&gt;KNOWNFOLDERID&lt;/a&gt;. The modern version, but see CSIDL for what things actually mean.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/CaptainCrowbar/unicorn-lib&quot;&gt;Unicorn Library&lt;/a&gt;. Unicode library for C++ by Ross Smith.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://subuser.org/&quot;&gt;Subuser - Portability, Security, Maintainability&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://engineering.pinterest.com/blog/open-sourcing-teletraan-code-deployment-system&quot;&gt;Open-sourcing Teletraan, a code deployment system&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Some arguments over ggplot2 (the “better” R graphing system). Read all of these and you’ll probably love ggplot2 and R. Also see &lt;a href=&quot;http://swirlstats.com/&quot;&gt;swirl&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://simplystatistics.org/2016/02/11/why-i-dont-use-ggplot2/&quot;&gt;Why I don’t use ggplot2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://varianceexplained.org/r/why-I-use-ggplot2/&quot;&gt;Why I use ggplot2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://varianceexplained.org/r/teach_ggplot2_to_beginners/&quot;&gt;Don’t teach built-in plotting to beginners (teach ggplot2)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.pybloggers.com/tree-kernels-quantifying-similarity-among-tree-structured-data/&quot;&gt;Tree Kernels: Quantifying Similarity Among Tree-Structured Data&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.jorgecastro.org/2016/02/12/super-fast-local-workloads-with-juju/&quot;&gt;Super Fast Local Workloads With LXD, ZFS, and Juju&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 12 Feb 2016 17:19:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/12/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/12/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://babun.github.io/&quot;&gt;Babun&lt;/a&gt;. A Windows shell you will love - except it’s mostly just a packaged Cygwin. But maybe that’s enough?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://corte.si/posts/modd/announce/index.html&quot;&gt;modd: a flexible tool for responding to filesystem change&lt;/a&gt; and &lt;a href=&quot;https://github.com/cortesi/modd&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@chrstphrhrt/microservices-the-unix-philosophy-and-the-richardson-maturity-model-425abed44826#.myo0t8nfz&quot;&gt;API microservices, the Unix philosophy, and the Richardson Maturity Model&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mholt.github.io/curl-to-go/&quot;&gt;curl-to-Go&lt;/a&gt;. Dynamically converts curl commands to tiny Go programs.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bokeh.pydata.org/en/latest/&quot;&gt;Bokeh&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jbranchaud/til&quot;&gt;TIL - Today I Learned&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.mustafaak.in/2016/02/08/writing-my-own-init-with-go.html&quot;&gt;Writing my own init with Go - Part 1&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html&quot;&gt;How to do distributed locking&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.wired.com/2016/02/the-hunt-for-the-algorithms-that-drive-life-on-earth/&quot;&gt;The Hunt for the Algorithms That Drive Life on Earth&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ZIP file handling in C/C++&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/nmoinvaz/minizip&quot;&gt;minizip&lt;/a&gt;. Fairly comprehensive, built on top of zlib. I think this is based on Giles Volant code for Winimage, see &lt;a href=&quot;http://www.winimage.com/zLibDll/minizip.html&quot;&gt;Minizip: Zip and UnZip additional library&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/sebastiandev/zipper&quot;&gt;Zipper&lt;/a&gt; is a C++ wrapper on top of minizip.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.nih.at/libzip/index.html&quot;&gt;libzip&lt;/a&gt; is another library for reading/writing ZIP archives, and has seen use in some big programs. Unfortunately, it has an attribution license (binaries must reproduce the libzip copright notice).&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://vilipetek.com/2013/11/22/zippingunzipping-files-in-c/&quot;&gt;Zipping/Unzipping files in C++&lt;/a&gt; is a more barebones approach, again built on top of zlib. Except that there’s almost no code here, so does zlib itself have zipfile support?&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/7530/Zip-Utils-clean-elegant-simple-C-Win&quot;&gt;Zip Utils - clean, elegant, simple, C++/Win32&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Dead2/zlib-ng&quot;&gt;Dead2/zlib-ng&lt;/a&gt;. Zlib fork because the author wanted changes that were not being accepted upstream.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 11 Feb 2016 09:10:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/11/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/11/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Company Tech Blogs</title>
-        <description>&lt;p&gt;A number of companies have tech blogs that are more than just self-aggrandizement or PR.&lt;/p&gt;
-
-&lt;h1 id=&quot;google&quot;&gt;Google&lt;/h1&gt;
-
-&lt;p&gt;Google is the champion. I have no idea how many tech blogs they have. Here are the ones I know about. I have no doubt that there are others.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://googleblog.blogspot.com/&quot;&gt;Official Google Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://googlepublicpolicy.blogspot.com/&quot;&gt;Google Public Policy Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://googleforstudents.blogspot.com/&quot;&gt;Google Student Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://officialandroid.blogspot.com/&quot;&gt;Official Android Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://chrome.blogspot.com/&quot;&gt;Google Chrome Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://google-latlong.blogspot.com/&quot;&gt;Google Lat Long&lt;/a&gt;. The official blog for Google Maps.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://googledevelopers.blogspot.com/&quot;&gt;Google Developers Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://googleadsdeveloper.blogspot.com/&quot;&gt;Google Ads Developer Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://android-developers.blogspot.com/&quot;&gt;Android Developers Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://googletesting.blogspot.com/&quot;&gt;Google Testing Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://youtube-eng.blogspot.com/&quot;&gt;YouTube Engineering and Developers Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://googleforwork.blogspot.com/&quot;&gt;Official Google for Work Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://google-opensource.blogspot.com/&quot;&gt;Google Open Source Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://googleresearch.blogspot.com/&quot;&gt;Research Blog&lt;/a&gt;. Google Research Blog.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://googlecloudplatform.blogspot.com/&quot;&gt;Google Cloud Platform Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Google also does research and publishes research articles&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://research.google.com/pubs/papers.html&quot;&gt;Research at Google&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;microsoft&quot;&gt;Microsoft&lt;/h1&gt;
-
-&lt;p&gt;I’m sure this is only scratching the surface. That said, Microsoft is still only a sometime
-tech blogger, most of their communication is in tech docs, magazines and books, or in PR pieces.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.microsoft.com/&quot;&gt;The Official Microsoft Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.technet.com/&quot;&gt;TN Home - TechNet Blogs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.msdn.com/&quot;&gt;MSDN Blogs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blogs.windows.com/&quot;&gt;Windows Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;netflix&quot;&gt;Netflix&lt;/h1&gt;
-
-&lt;p&gt;Netflix is moderately unique when it comes to tech blogging, its blogs exist to describe its
-internal technology; it develops all its tech to run its infrastructure, and releases large portions as open source.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://techblog.netflix.com/&quot;&gt;The Netflix Tech Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As part of their semi-open stance, they have a unified open source presence/portal on Github.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://netflix.github.io/&quot;&gt;Netflix Open Source Software&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The community put this summary description of their software stack together&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackshare.io/netflix/netflix&quot;&gt;Netflix’s Tech Stack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;github&quot;&gt;GitHub&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://githubengineering.com/&quot;&gt;GitHub Engineering&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/blog/category/engineering&quot;&gt;The GitHub Blog: Engineering&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;facebook&quot;&gt;Facebook&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://code.facebook.com/posts/&quot;&gt;Engineering Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://research.facebook.com/blog/ai/&quot;&gt;Research at Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;apple&quot;&gt;Apple&lt;/h1&gt;
-
-&lt;p&gt;I don’t think Apple has any tech blogs.&lt;/p&gt;
-
-&lt;h1 id=&quot;ibm&quot;&gt;IBM&lt;/h1&gt;
-
-&lt;p&gt;There are a lot, I should track them down. Most of IBM’s technical content is not presented in blogs, but
-in sources like developerWorks.&lt;/p&gt;
-
-&lt;h1 id=&quot;assorted&quot;&gt;Assorted&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Atlassian: &lt;a href=&quot;https://developer.atlassian.com/blog/&quot;&gt;Atlassian Developers&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Cockroach Labs: &lt;a href=&quot;http://www.cockroachlabs.com/blog/&quot;&gt;Blog | Cockroach Labs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Dropbox: &lt;a href=&quot;https://blogs.dropbox.com/tech/&quot;&gt;Dropbox Tech Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;eBay: &lt;a href=&quot;http://www.ebaytechblog.com/&quot;&gt;eBay Tech Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Heroku: &lt;a href=&quot;https://engineering.heroku.com/&quot;&gt;Heroku Engineering Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Instagram: &lt;a href=&quot;http://instagram-engineering.tumblr.com/&quot;&gt;Instagram Engineering&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;LinkedIn: &lt;a href=&quot;https://engineering.linkedin.com/blog&quot;&gt;LinkedIn Engineering&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;PayPal: &lt;a href=&quot;https://devblog.paypal.com/category/engineering/&quot;&gt;PayPal Developer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Pinterest: &lt;a href=&quot;https://engineering.pinterest.com/blog&quot;&gt;Pinterest engineering blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Riot Games: &lt;a href=&quot;http://engineering.riotgames.com/&quot;&gt;Riot Games Engineering&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spotify: &lt;a href=&quot;https://labs.spotify.com/&quot;&gt;Spotify | Labs&lt;/a&gt;. Spotify’s Engineering and Technology Blog.&lt;/li&gt;
-  &lt;li&gt;Square: &lt;a href=&quot;https://corner.squareup.com/&quot;&gt;The Corner&lt;/a&gt;. Square Engineering Blog.&lt;/li&gt;
-  &lt;li&gt;StackOverflow: &lt;a href=&quot;http://blog.stackoverflow.com/engineering/&quot;&gt;Stack Overflow Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;StackShare: &lt;a href=&quot;http://stackshare.io/posts&quot;&gt;StackShare&lt;/a&gt;. StackShare Blog&lt;/li&gt;
-  &lt;li&gt;Yahoo: &lt;a href=&quot;http://yahooeng.tumblr.com/&quot;&gt;Yahoo Engineering&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/kilimchoi/engineering-blogs&quot;&gt;kilimchoi/engineering-blogs&lt;/a&gt;. A curated list of engineering blogs&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.slicedham.co/&quot;&gt;SlicedHam&lt;/a&gt;. Aggregated dev blog posts from all over the web.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.thoughtworks.com/insights&quot;&gt;Thoughtworks&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 09 Feb 2016 12:20:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/09/company-tech-blogs.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/09/company-tech-blogs.html</guid>
-        
-        <category>blog</category>
         
         
         <category>dev</category>
