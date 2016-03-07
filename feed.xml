@@ -6,9 +6,77 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Mar 2016 20:10:12 -0800</pubDate>
-    <lastBuildDate>Thu, 03 Mar 2016 20:10:12 -0800</lastBuildDate>
+    <pubDate>Mon, 07 Mar 2016 00:11:39 -0800</pubDate>
+    <lastBuildDate>Mon, 07 Mar 2016 00:11:39 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://mvogt.wordpress.com/2014/04/04/apt-1-0/&quot;&gt;apt 1.0&lt;/a&gt;. Evidently apt was in beta all this time? apt is Debian’s high-level packaging tool, and stands for “A Package Tool”. dpkg is the package management
+system itself. And then Aptitude and Synaptic are front-ends to apt itself. It’s turtles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;Docset Direct Download Links&lt;/a&gt;
+&lt;a href=&quot;https://kapeli.com/dash&quot;&gt;Dash&lt;/a&gt; is an offline API documentation browser for OS X and iOS. Looks interesting.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://sunaku.github.io/dasht/man/man0/README.html&quot;&gt;dasht&lt;/a&gt; is a command-line version.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://kapeli.com/docset_links&quot;&gt;Docset Direct Download Links&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://haneefmubarak.com/2016/02/25/assembly-optimizations-i-un-packing-structures/&quot;&gt;Assembly Optimizations I: (Un)Packing Structures&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://eli.thegreenplace.net/2016/returning-multiple-values-from-functions-in-c/&quot;&gt;Returning multiple values from functions in C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://developers.redhat.com/blog/2016/02/29/why-cstdlib-is-more-complicated-than-you-might-think/&quot;&gt;Why &amp;lt; cstdlib &amp;gt; is more complicated than you might think&lt;/a&gt;. Good article if you approach it from the point of view of “GNU C standard library” and not “any C Standard Library”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.codinghorror.com/we-hire-the-best-just-like-everyone-else/&quot;&gt;We Hire the Best, Just Like Everyone Else&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lambda-the-ultimate.org/node/5313&quot;&gt;Why not C++?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Introduction%20to%20type%20and%20resource%20safety.pdf&quot;&gt;A brief introduction to C++’s model for type- and resource-safety&lt;/a&gt;. Bjarne Stroustrup, Herb Sutter, Gabriel Dos Reis.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jeroenpelgrims.com/pushing-to-dokku-from-gitlab-ci/&quot;&gt;Pushing to Dokku from GitLab CI&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/joowani/dtags&quot;&gt;DTags - Directory Tags for Lazy Programmers.&lt;/a&gt;. I wish there was a good shell for Windows.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yrp604/rappel&quot;&gt;yrp604/rappel&lt;/a&gt;. A linux-based assembly REPL for x86, amd64, and armv7.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=IRTfhkiAqPw&quot;&gt;Object-Oriented Programming is Embarrassing: 4 Short Examples&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://llvm.linuxfoundation.org/index.php/Main_Page&quot;&gt;LLVMLinux&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://lwn.net/Articles/322823/&quot;&gt;ext4 and data loss&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dranger.com/ffmpeg/&quot;&gt;An ffmpeg and SDL Tutorial&lt;/a&gt;. How to Write a Video Player in
+Less Than 1000 Lines.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.saminiir.com/lets-code-tcp-ip-stack-1-ethernet-arp&quot;&gt;Let’s code a TCP/IP stack, 1: Ethernet &amp;amp; ARP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lazyfoo.net/tutorials/SDL/index.php&quot;&gt;Beginning Game Programming v2.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://svpow.com/2016/03/04/sci-hub-is-a-scholarly-litmus-test/&quot;&gt;Sci-Hub is a scholarly litmus test&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.codersnotes.com/notes/cpp-rant-1/&quot;&gt;Ill-Advised C++ Rant, Part 1&lt;/a&gt; and &lt;a href=&quot;http://www.codersnotes.com/notes/cpp-rant-2/&quot;&gt;Ill-Advised C++ Rant, Part 2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.archive.org/2016/03/04/saving-500-apple-ii-programs-from-oblivion/&quot;&gt;Saving 500 Apple II Programs from Oblivion&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/tj/luna&quot;&gt;luna&lt;/a&gt;. Luna is an expressive, minimalistic, elegant programming language implemented in C.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://trafficways.org/ascii/ascii.pdf&quot;&gt;The Evolution of Character Codes, 1874-1968&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://msm.runhello.com/p/1003&quot;&gt;No Compiler&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://denninginstitute.com/pjd/GP/GP-site/welcome.html&quot;&gt;GREAT PRINCIPLES OF COMPUTING&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 06 Mar 2016 08:33:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/06/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/06/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>C++ things to write</title>
@@ -897,145 +965,6 @@ can use it in our day-to-day life.&lt;/p&gt;
         <category>programming</category>
         
         <category>time</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>The superset approach</title>
-        <description>&lt;p&gt;The software world is a diverse place. There’s more than one way to do it, whether we like it
-or not. This can be exhilarating when it works in our favor, frustrating when it does not,
-and problematic when we want to have common behavior in the face of all this choice.&lt;/p&gt;
-
-&lt;p&gt;Take filesystems, for example. There are several families of filesystems; all have the same
-basic features. Files are collections of bytes that can be located by a name, almost always
-organized as a hierarchy of directories. Files have attributes: different kinds of time values
-(birth, change, modify, access), access control, file type, and more. Names themselves can
-be just a meaningless string of bytes, but more typically as an encoding such as ASCII or
-Unicode. I didn’t leave out size; strictly speaking, size is not an attribute, it’s a
-consequence of the file data. However, most filesystems do treat this like an attribute.&lt;/p&gt;
-
-&lt;p&gt;So imagine you want to make a backup program, or some kind of catalog system, that wants
-to record some or all of a filesystem’s information. Or imagine that you are trying to
-present a uniform API to access any filesystem. There are two approaches. One is the
-least common denominator approach, and indeed many filesystem libraries take this approach.
-But it is an unsatisfying and even dangerous approach. Imagine that you wrote a backup
-program using least-common denominator APIs. How likely is it that you can restore files
-to the original filesystem? In fact, this leads to inferior programs using the subset
-API, and drives developers who want to excel into writing programs specific to each domain.&lt;/p&gt;
-
-&lt;p&gt;A far better approach is the superset approach. Support every feature, and have fallbacks
-when filesystems don’t fully support a particular feature. This is a little more work at
-first, or even a lot of work, but can have a big payoff.&lt;/p&gt;
-
-&lt;p&gt;Credit to Node.js for calling this out in their guide on working with filesystems. See
-&lt;a href=&quot;https://nodejs.org/en/docs/guides/working-with-different-filesystems/&quot;&gt;Working with Different Filesystems&lt;/a&gt;.
-But this is a general approach, and not just for filesystems. So let’s look at it in the context
-of several different feature sets that see great variety. We’ll start with filesystems.&lt;/p&gt;
-
-&lt;h1 id=&quot;filesystem-superset&quot;&gt;Filesystem superset&lt;/h1&gt;
-
-&lt;h2 id=&quot;file-times&quot;&gt;File times&lt;/h2&gt;
-
-&lt;p&gt;Windows NTFS files have 100-nanosecond resolution, and are 64-bit values with the epoch set at
-1600 A.D UTC. There are four values:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Create time: when the file was first created&lt;/li&gt;
-  &lt;li&gt;Last metadata change: when the file attributes were altered&lt;/li&gt;
-  &lt;li&gt;Last modified time: when the file contents were last altered (write)&lt;/li&gt;
-  &lt;li&gt;Last access time: when the file contents were last accessed (read or write)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Posix files have 1-second resolution, and are 32-bit or 64-bit values with the epoch set
-at 1970 A.D. Unfortunately, it is not specified as to whether times are UTC or some other
-time zone. Posix has three values&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Change time: when the file inode was changed&lt;/li&gt;
-  &lt;li&gt;Modified time: when the file data was changed&lt;/li&gt;
-  &lt;li&gt;Access time: when the inode or data was accessed (read or write)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mac HFS+ files have 1-second resolution and are 32-bit values with the epoch set at 1904 A.D
-UTC.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Create date: when the file was created&lt;/li&gt;
-  &lt;li&gt;Modify date: when the file was modified&lt;/li&gt;
-  &lt;li&gt;Attribute mod date: when file attributes or directory contents where changed (Mac OS X only)&lt;/li&gt;
-  &lt;li&gt;Backup date: when the file was last backed up&lt;/li&gt;
-  &lt;li&gt;Access date: when the file was last read&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Note that there are similarities, but none of those filesystems is exactly like any other.
-If we decide that all filetimes are in seconds, then we don’t record Windows NTFS file times
-properly. Also, while Posix talks about 1-second resolution for file times, this is decidedly
-not true for all filesystems; ext4 supports nanosecond resolution on stored files if the volume
-is configured for inodes that are 256 bytes or bigger.&lt;/p&gt;
-
-&lt;p&gt;Note that the C library, Python, Go and so forth present a uniform API that is a subset API.
-This makes getting “real” filetimes impossible.&lt;/p&gt;
-
-&lt;p&gt;Instead, we should just get the full data from a filesystem, and then have various ways for
-our user code to access it. We could query for what is really stored, or we can ask for it in
-a format we want and have the underlying data converted to what we want to see. So if our
-user program wants to work with nanosecond times, we’d be given Windows NTFS times multipied
-by 10, and Posix times multiplied by 1 billion. But we could be given ext4 files at their
-full resolution.&lt;/p&gt;
-
-&lt;p&gt;Or if we wanted our epoch to be 2000 A.D., we could ask for file times set to this epoch, and
-have their metadata translated where possible. We would not permanently convert in any case,
-although some operations would require a one-way and potentially lossy conversion. For example,
-assume we have a NTFS backup, and we need to restore it to an HFS+ volume; some time resolution
-would be lost.&lt;/p&gt;
-
-&lt;p&gt;And then we have time zones. Some filesystems and operating systems do all of the underlying
-time operations in UTC, and conversion to the local time zone is just for the convenience of
-the user. There’s a problem here with daylight savings, the practice in many countries to move
-the clock back or forth by an hour depending on the season. If filetimes are stored in UTC, and
-displayed in the local timezone, then a naive algorithm will cause all the filetimes to appear
-to shift backwards or forwards by an hour when daylight savings comes or goes. This in fact
-caused all kinds of havoc to build systems and source control systems on Windows, so much so
-that Microsoft introduced a “fix” that was worse than the problem; when saving a file created
-during when daylight savings is in effect, it writes a UTC time offset by the daylight savings
-offset (typically 1 hour), so that the adjustment to local time stays consistent when daylight
-savings changes. Of course, this means that the wrong time is written for half of the year.&lt;/p&gt;
-
-&lt;p&gt;There is a slightly better answer, and that is to do the time zone conversion with the awareness of when
-in each year daylight savings occurred. It has only happened a few dozen times since we first
-started saving files to disk, so we could just remember all the times when this happened, and
-adjust file times in the past to their adjusted local time zone. To my knowledge, no one is doing
-this, which is sad.&lt;/p&gt;
-
-&lt;p&gt;There is one further problem in that there are discontinuities in time values. Even with UTC,
-we are adjusting the clock by seconds to account for the slowing of the Earth (UT is Universal
-Time which has no adjustments, UTC is Universal Time Coordinated which has had 20-odd 1-second
-adjustments in the past 40 years). And with daylight savings, we have entire hours that are either
-missing or duplicated.&lt;/p&gt;
-
-&lt;h2 id=&quot;file-name-encodings&quot;&gt;File name encodings&lt;/h2&gt;
-
-&lt;p&gt;Another problematic area is in recording file names. While file names inside the file system
-are really just very long opaque identifiers, file names are usually for the benefit of people, who
-want to read them, sort them, do substring searches, and synthesize them. This requires the
-use of an encoding.&lt;/p&gt;
-
-&lt;p&gt;Of course, there is no one true encoding. Before the 1990s, file systems skirted the issue by
-just writing bytes, but interpreting them with the local encoding. This quickly stopped being feasible
-when use of computers and filesystems spread across the world. Even the introduction of Unicode
-didn’t result in this being solved completely, due to the multiplicity of Unicode encodings and
-normalizations.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 13 Feb 2016 22:27:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/13/the-superset-approach.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/13/the-superset-approach.html</guid>
-        
-        <category>programming</category>
-        
-        <category>design</category>
         
         
         <category>dev</category>
