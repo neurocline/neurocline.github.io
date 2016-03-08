@@ -305,3 +305,12 @@ ghp is GitHub Premake Packages, a Premake extension to consume packages from Git
 [Package Manager Rosetta Stone](https://docs.google.com/spreadsheets/d/1qV-EV6JkLNk2SKzIL0dccMb5yxiazRq2WNE8hPbujeE/edit#gid=0)
 
 [The Servo Browser Engine](https://github.com/servo/servo) - GitHub repo containing Servo, Mozilla browser written in Rust.
+
+# TBD
+
+Add section on DUB, the D package manager.
+
+- https://github.com/D-Programming-Language/dub
+- https://code.dlang.org/getting_started
+
+In short, every D file is a module, and modules can be grouped together in hierarchies called packages.

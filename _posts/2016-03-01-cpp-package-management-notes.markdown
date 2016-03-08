@@ -3,7 +3,7 @@ layout: post
 title:  "C++ Package Management notes"
 date:   2016-03-01 13:30:00 PM
 categories: dev
-tags: programming design
+tags: programming C++
 ---
 
 How should a package system for C++ work?
