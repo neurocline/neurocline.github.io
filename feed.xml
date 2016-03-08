@@ -6,9 +6,51 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Mar 2016 00:23:55 -0800</pubDate>
-    <lastBuildDate>Mon, 07 Mar 2016 00:23:55 -0800</lastBuildDate>
+    <pubDate>Mon, 07 Mar 2016 18:20:13 -0800</pubDate>
+    <lastBuildDate>Mon, 07 Mar 2016 18:20:13 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>C++ standardization notes</title>
+        <description>&lt;p&gt;The C++ standard has been a thing since 1998. In recent years, it’s been a concerted and ongoing effort, which
+is great to see, since C++ is still the closest thing we have to the one true language.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/&quot;&gt;JTC1/SC22/WG21 - The C++ Standards Committee - ISOCPP&lt;/a&gt; is the
+home of the C++ standards committee itself.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://isocpp.org&quot;&gt;https://isocpp.org&lt;/a&gt; web site is relatively new, but it is becoming the one-stop place
+for information about the C++ standard.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://isocpp.org/std/the-committee&quot;&gt;The Committee: WG21&lt;/a&gt; is the group that oversees the evolution of the standard,
+both language and libraries. They meet face-to-face two to three times a year, see &lt;a href=&quot;https://isocpp.org/std/meetings-and-participation&quot;&gt;Meetings and Participation&lt;/a&gt;. Having attended one of their quarterly week-long meetings (Jacksonville, FL), I have even more respect for the &lt;a href=&quot;https://isocpp.org/wiki/faq/wg21&quot;&gt;people involved&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://isocpp.org/files/papers/N4570.pdf&quot;&gt;June 2016 WG21 Meeting&lt;/a&gt; will be in Oulu, Finland from 20-June-2016
+through 25-June-2016. It should be interesting, as we shephard our prototype paper from scary idea to something
+that meets general approval.&lt;/p&gt;
+
+&lt;p&gt;WG21 allows walk-in observers, but to be a voting member, you need to be a member of a national standards body that
+ISO recognizes. For the US, this is ANSI. It’s slightly unclear to me how much this costs. I assume this is ANSI
+in the US, but the &lt;a href=&quot;http://publicaa.ansi.org/sites/apdl/Documents/Membership/Company_Application.pdf&quot;&gt;ANSI Company Membership Application 2016&lt;/a&gt; quote a basic membership cost of $995 whereas the
+&lt;a href=&quot;https://isocpp.org/std/meetings-and-participation&quot;&gt;Meetings and Participation&lt;/a&gt; quotes $1995. For a large company,
+it’s upwards of $30K/year, so you need to be serious about it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://isocpp.org/std/iso-iec-jtc1-procedures&quot;&gt;ISO/IEC JTC1 Procedures&lt;/a&gt; details how the ISO C++ committee operates, relative to ISO and IEC. USNC/IEC is the specific section of ANSI that this falls under, at least for the US.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://standards.incits.org/a/public/group/pl22.16&quot;&gt;PL22.16 - Programming Language C++&lt;/a&gt; is the US group that
+corresponsds to SC22/WG21.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 07 Mar 2016 09:24:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/07/cpp-standardization-notes.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/07/cpp-standardization-notes.html</guid>
+        
+        <category>programming</category>
+        
+        <category>C++</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -275,7 +317,7 @@ adding it to your program.&lt;/p&gt;
         
         <category>programming</category>
         
-        <category>design</category>
+        <category>C++</category>
         
         
         <category>dev</category>
@@ -825,83 +867,6 @@ will show links to the old forums and help articles.&lt;/p&gt;
         <pubDate>Tue, 16 Feb 2016 23:57:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/02/16/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/16/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;Bell Labs (now part of Alcatel-Lucent) has published a book: The Future X Network: Enabling a New Digital Era (Oct 2015); author listed as Marcus Weldon, the Alcatel-Lucent CTO, but apparently the work of the entire group.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://broadbandworldforum.com/files/2015/09/Bell-labs-Future-X-Network-sample.pdf&quot;&gt;sample chapter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://readymag.com/BellLabs/415614/&quot;&gt;overview&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1498759262/ref=pd_luc_rh_qp_01_03_t_img_lh?ie=UTF8&amp;amp;psc=1&quot;&gt;Amazon link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://howardhinnant.github.io/&quot;&gt;HowardHinnant.github.io&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/81870/is-it-possible-to-print-a-variables-type-in-standard-c/20170989#20170989&quot;&gt;Is it possible to print a variable’s type in standard C++?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1487695/c-cross-platform-high-resolution-timer/5524138#5524138&quot;&gt;C++ Cross-Platform High-Resolution Timer&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.iana.org/time-zones&quot;&gt;IANA: Time Zone Database&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ietf.org/timezones/data/leap-seconds.list&quot;&gt;List of all leap seconds to date (early 2016)&lt;/a&gt;. There have been 27 leap seconds (all positive, none negative) from Jan 1972 to July 2015. At first, we were doing a leap second a year, but in the past 15 years, we’ve only had 4 of them. The responsible group is considering halting the issuing of leap seconds.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix time&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tools.ietf.org/html/rfc6557&quot;&gt;RFC 6557: Procedures for Maintaining the Time Zone Database&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf&quot;&gt;How Complex Systems Fail&lt;/a&gt;. From the medical profession, but very relevant to software.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.grymoire.com/Unix/Inodes.html&quot;&gt;Inodes - an Introduction&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.linux.org/threads/intro-to-inodes.4130/&quot;&gt;Intro to Inodes&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.linfo.org/inode.html&quot;&gt;Inode definition&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.kubernetes.io/2016/02/sharethis-kubernetes-in-production.html&quot;&gt;ShareThis: Kubernetes In Production&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://aeon.co/essays/generational-labels-are-lazy-useless-and-just-plain-wrong&quot;&gt;Against generations&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/bup/bup&quot;&gt;bup/bup&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://octavore.com/posts/2016/02/15/distributing-go-apps-os-x&quot;&gt;How to Distribute Binaries for OS X Using Homebrew&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/linux/library/l-anatomy-ext4/&quot;&gt;Anatomy of ext4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://support.microsoft.com/en-us/kb/129574&quot;&gt;Time stamp changes with daylight savings&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2532729/daylight-saving-time-and-time-zone-best-practices&quot;&gt;Daylight saving time and time zone best practices&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTimezones.html&quot;&gt;Wireshark: 7.6. Time Zones&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;ftp://pvictor.homeftp.net/public/Sci_Library/Phys%20Library/PPop_Popular-level/Jones%20T.%20%20Splitting%20the%20second%20-%20the%20story%20of%20atomic%20time%20(IOP,%202000)(202s).pdf&quot;&gt;Splitting the second: The Story of Atomic Time&lt;/a&gt;. A book on the making of atomic time.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.twinsun.com/tz/tz-link.htm&quot;&gt;Sources for Time Zone and Daylight Saving Time Data&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dubeiko.com/development/FileSystems/HFSPLUS/tn1150.html&quot;&gt;Technical Note TN1150: HFS Plus Volume Format&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.nobius.org/~dbg/practical-file-system-design.pdf&quot;&gt;Practical File System Design with the Be File System&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Hierarchical_File_System&quot;&gt;Hierarchical File System&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/docs/guides/working-with-different-filesystems/&quot;&gt;Node.js: Working with Different Filesystems&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3344.pdf&quot;&gt;Toward a Standard C++ ’Date’ Class&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/atemerev/skynet&quot;&gt;Skynet 1M concurrency microbenchmark&lt;/a&gt;. Go is fast, but .NET is faster, and RxJava is the fastest. Except on Linux?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://panthema.net/2009/cryptote/&quot;&gt;CryptoTE&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 14 Feb 2016 15:31:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/14/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/14/recent-links.html</guid>
         
         <category>links</category>
         
