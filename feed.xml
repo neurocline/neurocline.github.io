@@ -6,9 +6,52 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Mar 2016 18:20:13 -0800</pubDate>
-    <lastBuildDate>Mon, 07 Mar 2016 18:20:13 -0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 22:21:59 -0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 22:21:59 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/Microsoft/GSL&quot;&gt;GSL: Guidelines Support Library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Microsoft/unittest-cpp&quot;&gt;UnitTest++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://code.woboq.org/&quot;&gt;Code Browser by Woboq&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/cpp/comments/49eyer/shimo_maven_for_c/&quot;&gt;Shimo - Maven for C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pocoproject.org/index.html&quot;&gt;POCO C++ Libraries&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pandoc.org/&quot;&gt;Pandoc: a universal document converter&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/CocoaPods/CocoaPods/issues/4989#issuecomment-193772935&quot;&gt;Issues Cloning Spec repo - GitHub taking a very long time to download changes to the Specs Repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://githubengineering.com/counting-objects/&quot;&gt;Counting Objects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=HxYFSlDdl0c&quot;&gt;Boris Kolpackov: New Build System for New C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.codesynthesis.com/&quot;&gt;Code Synthesis&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.murrayc.com/permalink/2016/03/07/libsigc-3-0-very-variadic/&quot;&gt;libsigc++ 3.0: Very variadic&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://buildroot.org/&quot;&gt;Buildroot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cacm.acm.org/magazines/2016/3/198849-a-differential-approach-to-undefined-behavior-detection/fulltext&quot;&gt;A Differential Approach to Undefined Behavior Detection&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.copperspice.com/docs/doxypress/index.html&quot;&gt;DoxyPress&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/cpp/comments/48shrb/seriously_c_wtf/&quot;&gt;Seriously, C++, WTF?&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 21:07:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/08/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/08/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>C++ standardization notes</title>
@@ -824,51 +867,6 @@ will show links to the old forums and help articles.&lt;/p&gt;
         <category>premake,</category>
         
         <category>build</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://urubu.jandecaluwe.com/&quot;&gt;Urubu, a micro CMS&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/src-d/go-git&quot;&gt;src-d/go-git&lt;/a&gt;. A Git client library written in Go.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://appfs.rkeene.org/web/index&quot;&gt;AppFS&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://rdeltour.github.io/xmlprague2016-epub31/#1&quot;&gt;EPUB 3.1 Standard Update&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.idpf.org/epub/31/spec/epub-spec.html&quot;&gt;EPUB 3.1 Editor’s Draft&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2245962/is-there-an-alternative-for-flex-bison-that-is-usable-on-8-bit-embedded-systems/2336769#2336769&quot;&gt;Is there an alternative for flex/bison that is usable on 8-bit embedded systems?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/META_II&quot;&gt;META II&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/25049751/constructing-an-abstract-syntax-tree-with-a-list-of-tokens/25106688#25106688&quot;&gt;Constructing an Abstract Syntax Tree with a list of Tokens&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/31600121/without-using-eval-or-a-constructor-function-in-javascript-how-can-i-calculate/31621205#31621205&quot;&gt;Without using eval or a constructor function in Javascript , how can I calculate arithmetic in a given string&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5629981/question-about-visual-studio-sln-file-format&quot;&gt;Question about Visual Studio *.sln file format&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/bb165951.aspx&quot;&gt;Solution (.Sln) File&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codeproject.com/Reference/720512/List-of-Visual-Studio-Project-Type-GUIDs&quot;&gt;List of Visual Studio Project Type GUIDs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2911565/what-is-the-significance-of-projecttypeguids-tag-in-the-visual-studio-project-fi&quot;&gt;What is the significance of ProjectTypeGuids tag in the visual studio project file&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://raph.es/blog/2011/04/targeting-platforms-in-visual-studio/&quot;&gt;Targeting Platforms In Visual Studio&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://code4k.blogspot.com/2014/05/managing-multiple-platforms-in-visual.html&quot;&gt;Managing multiple platforms in Visual Studio&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.spinthemoose.com/2013/05/05/parsing-vs-solution-files-with-sprache/&quot;&gt;Parsing VS Solution files with Sprache&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 16 Feb 2016 23:57:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/16/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/16/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>
