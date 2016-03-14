@@ -61,3 +61,20 @@ Three-part article on the Jacksonville C++17 meeting
 [nall](https://gitlab.com/higan/higan/tree/master/nall). Another STL-like/replacement.
 
 [Counting words in different programming languages](http://juditacs.github.io/2015/11/26/wordcount.html)
+
+Piper replaced Perforce at Google in 2012.
+
+- [Google Is 2 Billion Lines of Code—And It’s All in One Place](http://www.wired.com/2015/09/google-2-billion-lines-codeand-one-place/)
+- [Video](https://plus.google.com/+DominicMitchell/posts/DjABWzqp4kj)
+
+[Bazel](http://bazel.io/) is a public version of Google's internal build system.
+
+[Unorthodocs: Abandon your DVCS and Return to Sanity](https://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity/)
+
+[Google’s Hybrid Approach to Research](http://blog.acolyer.org/2016/03/04/googles-hybrid-approach-to-research/) overview from The Morning Paper, and [paper](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/38149.pdf).
+
+[A Brief Glance at How Various Text Editors Manage Their Textual Data](http://ecc-comp.blogspot.com/2015/05/a-brief-glance-at-how-5-text-editors.html)
+
+[C2: Insanely Affordable x86-64 Servers](https://blog.scaleway.com/2016/03/08/c2-insanely-affordable-x64-servers/)
+
+[Docker Swarm Exceeds Kubernetes Performance at Scale](https://blog.docker.com/2016/03/swarmweek-docker-swarm-exceeds-kubernetes-scale/)
