@@ -7,7 +7,7 @@ tags: package language
 short-description: A survey of the major packaging systems used in programming languages, from CTAN in 1992 to Rust in 2013; in order to support the next generations of packaging systems, we want to know what made previous ones successful.
 ---
 
-version 1, 2016/01/25
+version 1.1, 2016/03/13
 
 C++ lacks a standardized or even widely used packaging system. Other languages and platforms have prospered in large part due to their packaging system. In point of fact, CTAN, the first package archive, gets the credit for a lot of TeX's success. In that case, it wasn't the package system per se, it was the fact that there was a global package archive that was relatively easy to use; so call it the forerunner of more integrated things like pip or cargo.
 
@@ -284,11 +284,27 @@ I list systems here, but none are widely used, and none are general solutions, i
 
 Of these, biicode came the closest, but it is in the process of shutting down, since it was trying to be a commercial company. Also, it was built on top of CMake, and requires you to use CMake to get most of the benefit. While this is not unlike Maven (which is a build system and a package system together), the C++ world is far more polyglot, and telling Visual Studio developers they must use CMake is perhaps not the way to go. [https://www.biicode.com/](https://www.biicode.com/).
 
-The people behind biicode went on to make Conan, which is less tied to CMake (but still, if you don't use CMake, it's not all that useful). [https://www.conan.io/](https://www.conan.io/).
+The people behind biicode went on to make Conan, which is less tied to CMake (but still, if you don't use CMake, it's not all that useful). [https://www.conan.io/](https://www.conan.io/). There's a fair amount of documentation
+at [Welcome to conan](http://conanio.readthedocs.org/en/latest/index.html) on https://readthedocs.org/. One
+interesting and almost disqualifying factor is that Conan is written in Python; you would expect a package
+manager for a language to be written in that language for it to get wide adoption, much less adopted as
+a standard.
 
 CPM is "C++ package manager". This is heavily tied to CMake. Source code: [https://github.com/iauns/cpm](https://github.com/iauns/cpm). Repository browser: [http://www.cpm.rocks/](http://www.cpm.rocks/).
 
 ghp is GitHub Premake Packages, a Premake extension to consume packages from Github repositories. [https://github.com/mversluys/premake-github-package](https://github.com/mversluys/premake-github-package). Also, it's not really tied to C++, and can be used as a package manager for multiple languages. Its direct parent is used for Python as well as C++.
+
+[build2](https://build2.org/) is a build system with a package manager built in and a hope for a universal
+package repository [https://cppget.org/](https://cppget.org/).
+
+- [build2 FAQ](https://build2.org/faq.xhtml)
+- [The build2 Toolchain Introduction](https://build2.org/build2-toolchain/doc/build2-toolchain-intro.xhtml)
+- [Video link](https://www.youtube.com/watch?v=HxYFSlDdl0c)
+
+Shimo: "Maven for C++". The only information so far is from a post to Reddit.
+
+  - [Reddit thread](https://www.reddit.com/r/cpp/comments/49eyer/shimo_maven_for_c/)
+  - [Video link](https://www.youtube.com/watch?v=DZywdalCXwM)
 
 # General Reference
 
