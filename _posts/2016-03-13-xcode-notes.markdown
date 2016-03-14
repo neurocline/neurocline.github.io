@@ -26,3 +26,20 @@ organize the Xcode project first?
 
 [XCode 4.2 and Using a Static Library Causing Problems](http://stackoverflow.com/questions/9726000/xcode-4-2-and-using-a-static-library-causing-problems/9726445). I read things like this and I think someone must have gone
 horribly wrong somewhere.
+
+[Xcode Project File Format](http://www.monobjc.net/xcode-project-file-format.html). Some notes from the
+Monobjc bridge project on the Xcode project file format.
+
+[A brief look at the Xcode project format](http://danwright.info/blog/2010/10/xcode-pbxproject-files/), and [More on the Xcode project format](http://danwright.info/blog/2010/10/xcode-pbxproject-files-2/) and [Xcode project object UUIDs](http://danwright.info/blog/2010/10/xcode-pbxproject-files-3/). A slightly more in depth explanation and spelunking.
+
+[[Cmake] Re: CMake Apple XCode support?](https://cmake.org/pipermail/cmake/2004-April/005015.html). A thread from 2004 that apparently predated CMake's ability to create Xcode projects.
+
+[PBTOMAKE -- Xcode to Unix](http://www.macdevcenter.com/pub/a/mac/2004/04/20/xcodetounix.html). Another 2004 era Xcode project format tool.
+
+[CocoaPods Under The Hood](https://www.objc.io/issues/6-build-tools/cocoapods-under-the-hood/). Also see [How does CocoaPods work](http://stackoverflow.com/questions/18917137/how-does-cocoapods-work). And then see [The problem with Cocoapods](http://blog.mugunthkumar.com/articles/the-problem-with-cocoapods/).
+
+[Install a Google SDK using CocoaPods](https://developers.google.com/ios/guides/cocoapods).
+
+[0xced/xcproj](https://github.com/0xced/xcproj). Command line tool for manipulating Xcode project files.
+
+[XCode project file merges (or not) & Cocoapods](http://drekka.ghost.io/xcode-project-file-merges-or-not-cocoapods/). One technique to mergeable .xcodeproj files is to keep internal sections sorted.
