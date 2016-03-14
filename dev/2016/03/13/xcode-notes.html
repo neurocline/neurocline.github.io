@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Xcode notes</title>
+  <meta name="description" content="Xcode is in parts good to great, and in parts terrible. One thing that’s terrible is all the documentationthat I can lay my hands on. It seems to be aimed at...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/03/13/xcode-notes.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,36 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Xcode notes</h1>
+    <p class="post-meta">Mar 13, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Mar 13, 2016</span>
+  <article class="post-content">
+    <p>Xcode is in parts good to great, and in parts terrible. One thing that’s terrible is all the documentation
+that I can lay my hands on. It seems to be aimed at people who work on small projects.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/13/xcode-notes.html">Xcode notes</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 12, 2016</span>
+<p>This is not a replacement, it’s just some things I was searching while I was trying to figure things
+out on my own. This is stuff that people have had to figure out, e.g. the Premake and CMake authors doing
+Xcode project generation.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/12/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 8, 2016</span>
+<p><a href="https://pewpewthespells.com/blog/managing_xcode.html">Managing Xcode</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/08/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 7, 2016</span>
+<p><a href="http://vocaro.com/trevor/blog/2012/10/21/xcode-groups-vs-folder-references/">Xcode Groups vs. Folder References</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/07/cpp-standardization-notes.html">C++ standardization notes</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 7, 2016</span>
+<p>By the way, I think CocoaPods is approaching it from the wrong direction, it’s maintaining a foreign
+build system inside Xcode. I think. I should really actually use CocoaPods before I condemn it :)</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/07/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><a href="https://github.com/venmo/synx">venmo/synx</a> is an interesting project that reorganizes the files on disk
+to match the order declared in the Xcode project. This is presumably because people find it easier to
+organize the Xcode project first?</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p><a href="http://stackoverflow.com/questions/9726000/xcode-4-2-and-using-a-static-library-causing-problems/9726445">XCode 4.2 and Using a Static Library Causing Problems</a>. I read things like this and I think someone must have gone
+horribly wrong somewhere.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
 
