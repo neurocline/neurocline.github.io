@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Mar 2016 17:08:54 -0700</pubDate>
-    <lastBuildDate>Sun, 13 Mar 2016 17:08:54 -0700</lastBuildDate>
+    <pubDate>Sun, 13 Mar 2016 22:12:38 -0700</pubDate>
+    <lastBuildDate>Sun, 13 Mar 2016 22:12:38 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -69,6 +69,25 @@
 &lt;p&gt;&lt;a href=&quot;https://gitlab.com/higan/higan/tree/master/nall&quot;&gt;nall&lt;/a&gt;. Another STL-like/replacement.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://juditacs.github.io/2015/11/26/wordcount.html&quot;&gt;Counting words in different programming languages&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Piper replaced Perforce at Google in 2012.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.wired.com/2015/09/google-2-billion-lines-codeand-one-place/&quot;&gt;Google Is 2 Billion Lines of Code—And It’s All in One Place&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://plus.google.com/+DominicMitchell/posts/DjABWzqp4kj&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bazel.io/&quot;&gt;Bazel&lt;/a&gt; is a public version of Google’s internal build system.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity/&quot;&gt;Unorthodocs: Abandon your DVCS and Return to Sanity&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.acolyer.org/2016/03/04/googles-hybrid-approach-to-research/&quot;&gt;Google’s Hybrid Approach to Research&lt;/a&gt; overview from The Morning Paper, and &lt;a href=&quot;https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/38149.pdf&quot;&gt;paper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ecc-comp.blogspot.com/2015/05/a-brief-glance-at-how-5-text-editors.html&quot;&gt;A Brief Glance at How Various Text Editors Manage Their Textual Data&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.scaleway.com/2016/03/08/c2-insanely-affordable-x64-servers/&quot;&gt;C2: Insanely Affordable x86-64 Servers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.docker.com/2016/03/swarmweek-docker-swarm-exceeds-kubernetes-scale/&quot;&gt;Docker Swarm Exceeds Kubernetes Performance at Scale&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 12 Mar 2016 22:03:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/03/12/recent-links.html</link>
