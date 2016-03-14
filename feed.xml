@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Mar 2016 22:45:50 -0700</pubDate>
-    <lastBuildDate>Sun, 13 Mar 2016 22:45:50 -0700</lastBuildDate>
+    <pubDate>Sun, 13 Mar 2016 23:01:41 -0700</pubDate>
+    <lastBuildDate>Sun, 13 Mar 2016 23:01:41 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -32,6 +32,23 @@ organize the Xcode project first?&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/9726000/xcode-4-2-and-using-a-static-library-causing-problems/9726445&quot;&gt;XCode 4.2 and Using a Static Library Causing Problems&lt;/a&gt;. I read things like this and I think someone must have gone
 horribly wrong somewhere.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.monobjc.net/xcode-project-file-format.html&quot;&gt;Xcode Project File Format&lt;/a&gt;. Some notes from the
+Monobjc bridge project on the Xcode project file format.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://danwright.info/blog/2010/10/xcode-pbxproject-files/&quot;&gt;A brief look at the Xcode project format&lt;/a&gt;, and &lt;a href=&quot;http://danwright.info/blog/2010/10/xcode-pbxproject-files-2/&quot;&gt;More on the Xcode project format&lt;/a&gt; and &lt;a href=&quot;http://danwright.info/blog/2010/10/xcode-pbxproject-files-3/&quot;&gt;Xcode project object UUIDs&lt;/a&gt;. A slightly more in depth explanation and spelunking.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cmake.org/pipermail/cmake/2004-April/005015.html&quot;&gt;[Cmake] Re: CMake Apple XCode support?&lt;/a&gt;. A thread from 2004 that apparently predated CMake’s ability to create Xcode projects.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.macdevcenter.com/pub/a/mac/2004/04/20/xcodetounix.html&quot;&gt;PBTOMAKE – Xcode to Unix&lt;/a&gt;. Another 2004 era Xcode project format tool.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.objc.io/issues/6-build-tools/cocoapods-under-the-hood/&quot;&gt;CocoaPods Under The Hood&lt;/a&gt;. Also see &lt;a href=&quot;http://stackoverflow.com/questions/18917137/how-does-cocoapods-work&quot;&gt;How does CocoaPods work&lt;/a&gt;. And then see &lt;a href=&quot;http://blog.mugunthkumar.com/articles/the-problem-with-cocoapods/&quot;&gt;The problem with Cocoapods&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/ios/guides/cocoapods&quot;&gt;Install a Google SDK using CocoaPods&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/0xced/xcproj&quot;&gt;0xced/xcproj&lt;/a&gt;. Command line tool for manipulating Xcode project files.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://drekka.ghost.io/xcode-project-file-merges-or-not-cocoapods/&quot;&gt;XCode project file merges (or not) &amp;amp; Cocoapods&lt;/a&gt;. One technique to mergeable .xcodeproj files is to keep internal sections sorted.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Mar 2016 22:14:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/03/13/xcode-notes.html</link>
