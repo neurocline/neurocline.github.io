@@ -6,9 +6,108 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Mar 2016 23:01:41 -0700</pubDate>
-    <lastBuildDate>Sun, 13 Mar 2016 23:01:41 -0700</lastBuildDate>
+    <pubDate>Fri, 18 Mar 2016 16:38:50 -0700</pubDate>
+    <lastBuildDate>Fri, 18 Mar 2016 16:38:50 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Visual Studio notes</title>
+        <description>&lt;p&gt;For those of us who want to work on Visual Studio project files:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/visualstudio/2010/05/14/a-guide-to-vcxproj-and-props-file-structure/&quot;&gt;A guide to .vcxproj and .props file structure&lt;/a&gt;. This is a 6-year old post, but the solution and project file formats haven’t changed substantially since then.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.bfitz.us/?p=922&quot;&gt;Hand-constructing Visual Studio 2012 vcxproj&lt;/a&gt;. An older post where I talked about minimum required elements in a vcxproj.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.bfitz.us/?p=955&quot;&gt;VISUAL STUDIO 2012 SOLUTION FILE GRAMMAR&lt;/a&gt;. A stab at a Visual Studio solution grammar.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/ee862524.aspx&quot;&gt;Build System Changes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/dd293626.aspx&quot;&gt;MSBuild (Visual C++)&lt;/a&gt;. Since MSBuild is used to drive builds via .vcxproj files, knowing MSBuild can help you understand the items in a .vcxproj file.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/5dy88c2e.aspx&quot;&gt;MSBuild Project File Schema Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/2208a1f2.aspx&quot;&gt;Project Files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://robrich.org/archive/2010/04/20/working-with-both-vs-2010-and-2008-on-the-team.aspx&quot;&gt;Working with both VS 2010 and 2008 on the team&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://manski.net/2012/01/sharing-project-properties-in-visual-c/&quot;&gt;Sharing project properties in Visual C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pascoal.net/2011/05/getting-visual-studio-version-of-a-solution-file/&quot;&gt;Getting Visual Studio version of a Solution file&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5629981/question-about-visual-studio-sln-file-format&quot;&gt;Question about Visual Studio *.sln file format&lt;/a&gt;. An explanation for why the files are so messed up.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/bb165951.aspx&quot;&gt;Solution (.Sln) File&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/7683869/what-does-the-link-library-dependency-linker-option-actually-do-in-visual-stud&quot;&gt;What does the “Link Library Dependency” linker option actually do in Visual Studio 2010?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!topic/premake-development/x-cCFNBKVC0&quot;&gt;Premake5 alpha6 issue - ProjectReference’s in vcxproj have disappeared&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/premake/premake-core/issues/208&quot;&gt;dependson can break links in VS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+MSVC++ 14.0 _MSC_VER == 1900 (Visual Studio 2015)
+MSVC++ 12.0 _MSC_VER == 1800 (Visual Studio 2013)
+MSVC++ 11.0 _MSC_VER == 1700 (Visual Studio 2012)
+MSVC++ 10.0 _MSC_VER == 1600 (Visual Studio 2010)
+MSVC++ 9.0  _MSC_VER == 1500 (Visual Studio 2008)
+MSVC++ 8.0  _MSC_VER == 1400 (Visual Studio 2005)
+MSVC++ 7.1  _MSC_VER == 1310 (Visual Studio 2003)
+MSVC++ 7.0  _MSC_VER == 1300
+MSVC++ 6.0  _MSC_VER == 1200
+MSVC++ 5.0  _MSC_VER == 1100
+&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 17 Mar 2016 22:14:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/17/visual-studio-notes.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/17/visual-studio-notes.html</guid>
+        
+        <category>programming</category>
+        
+        <category>VisualStudio</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://doc.qt.io/qt-5/qmake-project-files.html&quot;&gt;Creating Project Files&lt;/a&gt;. Qmake project file format.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mbevin.wordpress.com/2012/11/16/uniform-initialization/&quot;&gt;LESSON #3: UNIFORM INITIALIZATION&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2179722/checking-out-old-file-with-original-create-modified-timestamps&quot;&gt;Checking out old file WITH original create/modified timestamps&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1964470/whats-the-equivalent-of-use-commit-times-for-git&quot;&gt;What’s the equivalent of use-commit-times for git?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://repo.or.cz/w/metastore.git&quot;&gt;http://repo.or.cz/w/metastore.git&lt;/a&gt;. Making git usable for backing up file attributes too&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/MestreLion/git-tools&quot;&gt;https://github.com/MestreLion/git-tools&lt;/a&gt;. Assorted git-related scripts. See git-restore-mtime for a script to set file-modified times to match commit times.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cognitivewaves.wordpress.com/cmake-and-visual-studio/&quot;&gt;CMAKE AND VISUAL STUDIO&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.lua.org/manual/5.2/manual.html&quot;&gt;Lua 5.2 Reference Manual&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://code.google.com/archive/p/msinttypes/&quot;&gt;https://code.google.com/archive/p/msinttypes/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://utf8everywhere.org/&quot;&gt;UTF-8 Everywhere&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://luarocks.org/&quot;&gt;https://luarocks.org/&lt;/a&gt;. LuaRocks is the package manager for Lua modules.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/keplerproject/luarocks/wiki/Rockspec-format&quot;&gt;Rockspec format&lt;/a&gt;. From the Luarocks package manager.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.nodejitsu.com/package-dependencies-done-right/&quot;&gt;Package.json dependencies done right&lt;/a&gt;. Notes from the npm package manager.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 17 Mar 2016 22:03:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/17/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/17/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Xcode notes</title>
@@ -419,154 +518,6 @@ available for use.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/01/recent-links.html</guid>
         
         <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>C++ Package Management notes</title>
-        <description>&lt;p&gt;How should a package system for C++ work?&lt;/p&gt;
-
-&lt;p&gt;Here’s one ideal&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;quot;curl&amp;quot; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// this is a package&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// this is a system header&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CurlGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Download file&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;c1&quot;&gt;// Download argv[1] into a std::string&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CurlGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is a real program, except for one small detail.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;quot;curl&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In an ideal world, this is all you would need to use Curl in your program; no
-downloading installing a Curl distribution, no adding of search path and linker
-entries to a makefile or other build system artifact.&lt;/p&gt;
-
-&lt;p&gt;The function &lt;code&gt;CurlGet&lt;/code&gt; isn’t from the curl package, it’s my code. I separated it
-out just to make it clearer. Here it is, for completeness’ sake. Put this together
-with the code above and a compiler that supports packages, and you get this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WriteStdString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nmemb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nmemb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-	&lt;span class=&quot;c1&quot;&gt;// Add this new chunk to the string. Yes, ugly, writing into a string buffer.&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;memcpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CurlGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reserve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// reserve enough for a moderate sized file&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;curl_global_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CURL_GLOBAL_DEFAULT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curl_easy_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;curl_easy_setopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CURLOPT_URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;curl_easy_setopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CURLOPT_WRITEFUNCTION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WriteStdString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;curl_easy_setopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CURLOPT_WRITEDATA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;curl_easy_setopt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CURLOPT_USERAGENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;packagedemo/1.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curl_easy_perform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;cm&quot;&gt;/* should really check result, eh? */&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;curl_easy_cleanup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;curl_global_cleanup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In our current world, if you have a computer without Curl on it, and are not
-running an operating system where Curl has been packaged up for you to grab,
-you’re in for an hour to a day of finding Curl source, building it, and then
-adding it to your program.&lt;/p&gt;
-
-&lt;p&gt;So how can we get closer to this ideal world?&lt;/p&gt;
-</description>
-        <pubDate>Tue, 01 Mar 2016 13:30:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/03/01/cpp-package-management-notes.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/01/cpp-package-management-notes.html</guid>
-        
-        <category>programming</category>
-        
-        <category>C++</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Barycentric Coordinate Time</title>
-        <description>&lt;p&gt;We have half of a better computer timestamp system. Barycentric Coordinate time, or TCB, is defined
-as the SI second, duration of radiation periods of cesium centered at the spacetime coordinate of
-the geocenter of the solar system at 1977 January 1, 0h 0m 32s.184 TAI; in other words, an atomic clock
-centered here starting at the given time would count TCB time. This time was picked to provide a bridge
-between current standards and TCB time.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dl.yazdanpress.com/BOOKS/PHYSICS/Time_From_Earth_Rotation_to_Atomic_Physics(marked).pdf&quot;&gt;Time: from Earth Rotation to Atomic Physics&lt;/a&gt;, page 118.&lt;/p&gt;
-
-&lt;p&gt;I further propose that for computer timestamps, we use integers of the duration of radiation periods
-of cesium, which is precisely 9,192,631,770 ticks per second. There are transforms for general
-relativity to treat this properly for any point in the solar system, and we should be able to
-extend it beyond the solar system as we start travelling, without too much effort (relative to the
-effort of actually travelling beyond the solar system, of course). A 96-bit integer can hold a comfortably
-large range (273 billion years), and a 128-bit value would be able to date every event in the lifetime
-of the universe, at least as we currently understand it,
-A 64-bit value can only hold a timespan of 63 years at this tick rate, so that would be infeasible, although
-maybe acceptable in specific use cases.&lt;/p&gt;
-
-&lt;p&gt;Note that TCG, or Geocentric Coordinate Time, was also defined at this point, and there is a (admittedly nonlinear)
-transformation between TCG and TCB. But we don’t want to be using TCG time, as this is Earth-centric, and
-some software we are writing now will almost certainly be used other than on or around Earth.&lt;/p&gt;
-
-&lt;p&gt;Also note that other clocks than cesium are being considered; if someday we switch to a higher-resolution clock,
-there would be a simple linear transform, since almost certainly that system will hold onto the SI second.&lt;/p&gt;
-
-&lt;p&gt;Finally, we will probably have Mars Time, Moon Time etc alongside Terrestrial Time, further complicating things
-and thus further driving home the point that computer timestamps should switch to TCB time now.&lt;/p&gt;
-
-&lt;p&gt;So, to summarize, a modern computer timestamp is&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;a 128 bit value (96-bit is optional but could cover most time ranges)&lt;/li&gt;
-  &lt;li&gt;zero at 1977 January 1, 0h 0m 32.184s&lt;/li&gt;
-  &lt;li&gt;clock located at the geocenter of the solar system&lt;/li&gt;
-  &lt;li&gt;tick count is 9,192,631,770 ticks/second&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is a bridge from UTC to TAI to TCB. I don’t care at all about civil time, or rather I don’t want to be
-measuring time events in civil time (calendars and the like). TCB is irrelevant of geographical concerns.&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/International_Atomic_Time&quot;&gt;International Atomic Time&lt;/a&gt;, TAI time&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Geocentric_Coordinate_Time&quot;&gt;Geocentric Coordinate Time&lt;/a&gt;, TCG time&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Barycentric_Coordinate_Time&quot;&gt;Barycentric Coordinate Time&lt;/a&gt;, TCB time&lt;/p&gt;
-</description>
-        <pubDate>Mon, 22 Feb 2016 17:32:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/02/22/barycentric-coordinate-time.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/02/22/barycentric-coordinate-time.html</guid>
-        
-        <category>programming</category>
-        
-        <category>design</category>
         
         
         <category>dev</category>

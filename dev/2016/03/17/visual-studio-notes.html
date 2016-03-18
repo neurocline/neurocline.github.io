@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Visual Studio notes</title>
+  <meta name="description" content="For those of us who want to work on Visual Studio project files:">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/03/17/visual-studio-notes.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,60 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Visual Studio notes</h1>
+    <p class="post-meta">Mar 17, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Mar 17, 2016</span>
+  <article class="post-content">
+    <p>For those of us who want to work on Visual Studio project files:</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/17/visual-studio-notes.html">Visual Studio notes</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 17, 2016</span>
+<p><a href="https://blogs.msdn.microsoft.com/visualstudio/2010/05/14/a-guide-to-vcxproj-and-props-file-structure/">A guide to .vcxproj and .props file structure</a>. This is a 6-year old post, but the solution and project file formats haven’t changed substantially since then.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/17/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 13, 2016</span>
+<p><a href="http://blog.bfitz.us/?p=922">Hand-constructing Visual Studio 2012 vcxproj</a>. An older post where I talked about minimum required elements in a vcxproj.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/13/xcode-notes.html">Xcode notes</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 12, 2016</span>
+<p><a href="http://blog.bfitz.us/?p=955">VISUAL STUDIO 2012 SOLUTION FILE GRAMMAR</a>. A stab at a Visual Studio solution grammar.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/12/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 8, 2016</span>
+<p><a href="https://msdn.microsoft.com/en-us/library/ee862524.aspx">Build System Changes</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/03/08/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><a href="https://msdn.microsoft.com/en-us/library/dd293626.aspx">MSBuild (Visual C++)</a>. Since MSBuild is used to drive builds via .vcxproj files, knowing MSBuild can help you understand the items in a .vcxproj file.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p><a href="https://msdn.microsoft.com/en-us/library/5dy88c2e.aspx">MSBuild Project File Schema Reference</a></p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p><a href="https://msdn.microsoft.com/en-us/library/2208a1f2.aspx">Project Files</a></p>
+
+<p><a href="http://robrich.org/archive/2010/04/20/working-with-both-vs-2010-and-2008-on-the-team.aspx">Working with both VS 2010 and 2008 on the team</a></p>
+
+<p><a href="http://manski.net/2012/01/sharing-project-properties-in-visual-c/">Sharing project properties in Visual C++</a></p>
+
+<p><a href="http://pascoal.net/2011/05/getting-visual-studio-version-of-a-solution-file/">Getting Visual Studio version of a Solution file</a></p>
+
+<p><a href="http://stackoverflow.com/questions/5629981/question-about-visual-studio-sln-file-format">Question about Visual Studio *.sln file format</a>. An explanation for why the files are so messed up.</p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/bb165951.aspx">Solution (.Sln) File</a></p>
+
+<p><a href="http://stackoverflow.com/questions/7683869/what-does-the-link-library-dependency-linker-option-actually-do-in-visual-stud">What does the “Link Library Dependency” linker option actually do in Visual Studio 2010?</a></p>
+
+<p><a href="https://groups.google.com/forum/#!topic/premake-development/x-cCFNBKVC0">Premake5 alpha6 issue - ProjectReference’s in vcxproj have disappeared</a></p>
+
+<p><a href="https://github.com/premake/premake-core/issues/208">dependson can break links in VS</a></p>
+
+<p><code>
+MSVC++ 14.0 _MSC_VER == 1900 (Visual Studio 2015)
+MSVC++ 12.0 _MSC_VER == 1800 (Visual Studio 2013)
+MSVC++ 11.0 _MSC_VER == 1700 (Visual Studio 2012)
+MSVC++ 10.0 _MSC_VER == 1600 (Visual Studio 2010)
+MSVC++ 9.0  _MSC_VER == 1500 (Visual Studio 2008)
+MSVC++ 8.0  _MSC_VER == 1400 (Visual Studio 2005)
+MSVC++ 7.1  _MSC_VER == 1310 (Visual Studio 2003)
+MSVC++ 7.0  _MSC_VER == 1300
+MSVC++ 6.0  _MSC_VER == 1200
+MSVC++ 5.0  _MSC_VER == 1100
+</code></p>
+
+  </article>
 
 </div>
 
