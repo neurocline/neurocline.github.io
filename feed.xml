@@ -6,9 +6,75 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Mar 2016 16:38:50 -0700</pubDate>
-    <lastBuildDate>Fri, 18 Mar 2016 16:38:50 -0700</lastBuildDate>
+    <pubDate>Mon, 21 Mar 2016 00:39:13 -0700</pubDate>
+    <lastBuildDate>Mon, 21 Mar 2016 00:39:13 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;Rcpp looks very interesting, letting you use R from inside a C++ program.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://dirk.eddelbuettel.com/code/rinside.html&quot;&gt;RInside&lt;/a&gt;. The RInside package provides C++ classes that make it easier to embed &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; in C++ codee – on either Linux, OS X or Windows. This is part of the Rcpp project.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.rcpp.org/&quot;&gt;Rcpp&lt;/a&gt;. Rcpp provides a powerful API on top of R, permitting direct interchange of rich R objects (including S3, S4 or Reference Class objects) between R and C++&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.rcpp.org/book/&quot;&gt;Seamless R and C++ Integration with Rcpp&lt;/a&gt;. The book. &lt;a href=&quot;http://www.amazon.com/Seamless-Integration-Rcpp-Dirk-Eddelbuettel/dp/1461468671&quot;&gt;Amazon link&lt;/a&gt;. Also see &lt;a href=&quot;http://dirk.eddelbuettel.com/code/rcpp/Rcpp-introduction.pdf&quot;&gt;Intro paper&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/RcppCore/Rcpp&quot;&gt;RcppCore/Rcpp&lt;/a&gt;. Github repo.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gallery.rcpp.org/&quot;&gt;Gallery&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.r-project.org/&quot;&gt;The R project&lt;/a&gt;. Of course, it still leads back to here.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Voultapher/Vool/blob/master/GNP.h&quot;&gt;GNP.h&lt;/a&gt;. A simple wrapper to drive Gnuplot with popen.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stahlke.org/dan/gnuplot-iostream/&quot;&gt;Gnuplot-iostream interface&lt;/a&gt;. Drive gnuplot with an iostream pipe.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://root.cern.ch/&quot;&gt;ROOT&lt;/a&gt;. A data anlysis framework largely written in C++. Used by CERN.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://siliconframework.org/blog/silicon-0-1.html&quot;&gt;Silicon 0.1&lt;/a&gt;. Write HTTP APIs in C++.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gnu.org/software/libmicrohttpd/&quot;&gt;GNU Libmicrohttpd&lt;/a&gt;. GNU libmicrohttpd is a small C library that is supposed to make it easy to run an HTTP server as part of another application (their words, not mine).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.dest-unreach.org/socat/&quot;&gt;socat - Multipurpose relay&lt;/a&gt;. socat is a relay for bidirectional data transfer between two independent data channels.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gnutls.org/&quot;&gt;GnuTLS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://lwan.ws/&quot;&gt;LWAN&lt;/a&gt;. Lightweight asynchronous multithreaded event-based web server. Written in C.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://templated-thoughts.blogspot.in/2016/03/sub-processing-with-modern-c.html&quot;&gt;Sub-processing with modern C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://google.github.io/styleguide/cppguide.html&quot;&gt;Google C++ Style Guide&lt;/a&gt;. This has been evolving over the years, and is becoming something I can agree with.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jinja.pocoo.org/docs/dev/&quot;&gt;Jinja2&lt;/a&gt;. Templating library for Python. Use it as a model for a C++ template library?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/cppit/jucipp&quot;&gt;cppit/jucipp&lt;/a&gt;. juCi++: a lightweight, cross-platform C++-IDE supporting C++11, C++14, and experimental C++17 features. Lots of dependencies.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cppformat.github.io/latest/index.html&quot;&gt;cppformat&lt;/a&gt;. Small, safe and fast formatting library for C++. &lt;a href=&quot;https://github.com/cppformat/cppformat&quot;&gt;Github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r1.html&quot;&gt;P0067R1: Elementary string conversions, revision 1&lt;/a&gt;. No implementation yet?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3506.html&quot;&gt;A printf-like Interface for the Streams Library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dany74q.wordpress.com/2016/03/11/recursively-walking-a-directory-with-cxy-filesystem-yield-similar-to-os-walk-in-python/&quot;&gt;RECURSIVELY WALKING A DIRECTORY WITH C++XY (FILESYSTEM + YIELD) [SIMILAR TO OS.WALK IN PYTHON]&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://codexpert.ro/blog/2016/03/07/guidelines-support-library-review-spant/&quot;&gt;Guidelines Support Library Review: span&amp;lt;T&amp;gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ilikebigbits.com/blog/2016/2/28/error-context-better-logging-with&quot;&gt;Error Context - a stack trace for data&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3797.pdf&quot;&gt;C++14 standard&lt;/a&gt;. Approximately; from late 2013.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf&quot;&gt;C11 standard&lt;/a&gt;. Late committee draft.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.cppreference.com/w/cpp/language/translation_phases&quot;&gt;Phases of translation&lt;/a&gt;. Slightly more readable than the standard. The preprocessor should be identical between C and C++.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 20 Mar 2016 22:42:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/20/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/20/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Visual Studio notes</title>
@@ -469,55 +535,6 @@ available for use.&lt;/p&gt;
         <category>programming</category>
         
         <category>design</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install&quot;&gt;The magic behind configure, make, make install&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Configure_script&quot;&gt;configure script&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://airs.com/ian/configure/configure_toc.html&quot;&gt;The GNU configure and build system&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html&quot;&gt;Self-Documented Makefile&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=11195539&quot;&gt;discussion&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nicholasjackson.github.io/microservices/go/building-and-testing-microservices-part1/&quot;&gt;0 to Microservice in 5 minutes with Go, go-microservice-template and Minke&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.iar.com/support/resources/articles/advanced-preprocessor-tips-and-tricks/&quot;&gt;Advanced preprocessor tips and tricks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=11198329&quot;&gt;Ask HN: Is it possible to live off technical writing?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://llogiq.github.io/2016/02/28/java-rust.html&quot;&gt;Comparing Rust and Java&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://failedevolution.blogspot.com/2015/10/stephen-hawking-confirms-problem-is.html&quot;&gt;Stephen Hawking confirms: The problem is Capitalism, not robots!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mirage.io/blog/introducing-functoria&quot;&gt;Introducing Functoria&lt;/a&gt;. MirageOS for microkernels/unikernels&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ilikebigbits.com/blog/2016/2/28/error-context-better-logging-with&quot;&gt;Error Context - a stack trace for data&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pythontutor.com/&quot;&gt;VISUALIZE Python, Java, JavaScript, TypeScript, Ruby, C, and C++ programs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://makers.airware.com/open-source/this-blog/&quot;&gt;Airware - this blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.blog.pythonlibrary.org/2016/03/01/python-101-all-about-imports/&quot;&gt;Python 101: All about imports&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@bertrandom/unfundable-slack-bots-9369a75fdd#.nuomxx68y&quot;&gt;Unfundable Slack bots&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://eng.uber.com/go-geofence/&quot;&gt;HOW WE BUILT UBER ENGINEERING’S HIGHEST QUERY PER SECOND SERVICE USING GO&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.gitkraken.com/&quot;&gt;GitKracken&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://zachholman.com/posts/deploying-software&quot;&gt;How to Deploy Software&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 01 Mar 2016 23:42:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/03/01/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/01/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>
