@@ -7,7 +7,7 @@ tags: package language
 short-description: A survey of the major packaging systems used in programming languages, from CTAN in 1992 to Rust in 2013; in order to support the next generations of packaging systems, we want to know what made previous ones successful.
 ---
 
-version 1.1, 2016/03/13
+version 1.2, 2016/03/20
 
 C++ lacks a standardized or even widely used packaging system. Other languages and platforms have prospered in large part due to their packaging system. In point of fact, CTAN, the first package archive, gets the credit for a lot of TeX's success. In that case, it wasn't the package system per se, it was the fact that there was a global package archive that was relatively easy to use; so call it the forerunner of more integrated things like pip or cargo.
 
@@ -306,6 +306,15 @@ Shimo: "Maven for C++". The only information so far is from a post to Reddit.
   - [Reddit thread](https://www.reddit.com/r/cpp/comments/49eyer/shimo_maven_for_c/)
   - [Video link](https://www.youtube.com/watch?v=DZywdalCXwM)
 
+There are several that are basically Cmake package managers.
+
+- [pfultz2/cget](https://github.com/pfultz2/cget).
+- [ruslo/hunter](https://github.com/ruslo/hunter).
+
+POCO now has bundles, which are package, as part of its [Open Service Platform](http://www.appinf.com/docs/poco/00100-OSPOverview.html).
+
+- [OSP Bundles](http://www.appinf.com/docs/poco/00200-OSPBundles.html).
+
 # General Reference
 
 [The Zen of Comprehensive Archive Networks](http://www.cpan.org/misc/ZCAN.html)
@@ -330,3 +339,7 @@ Add section on DUB, the D package manager.
 - https://code.dlang.org/getting_started
 
 In short, every D file is a module, and modules can be grouped together in hierarchies called packages.
+
+Add section on Quicklistp, the library manager for Common Lisp.
+
+- https://www.quicklisp.org/beta/
