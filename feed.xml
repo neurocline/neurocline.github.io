@@ -6,9 +6,73 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Mar 2016 00:39:13 -0700</pubDate>
-    <lastBuildDate>Mon, 21 Mar 2016 00:39:13 -0700</lastBuildDate>
+    <pubDate>Sun, 27 Mar 2016 20:02:49 -0700</pubDate>
+    <lastBuildDate>Sun, 27 Mar 2016 20:02:49 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/&quot;&gt;NPM &amp;amp; left-pad: Have We Forgotten How To Program?&lt;/a&gt;. The comments are the best part.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@robbyrussell/d-oh-my-zsh-af99ca54212c#.ykwlny1s9&quot;&gt;d’Oh My Zsh&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nytimes.com/2016/03/26/opinion/andy-groves-warning-to-silicon-valley.html&quot;&gt;Andy Grove’s Warning to Silicon Valley&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/tech-policy/2016/03/game-companies-knock-out-patent-that-slammed-microsoft-with-388m-verdict/&quot;&gt;Patent that cost Microsoft millions gets invalidated&lt;/a&gt;. Crappy patent gets overturned after many years of litigation and use.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ANSSI-FR/caradoc&quot;&gt;Caradoc - a PDF parser and validator&lt;/a&gt;. This looks like it is related to something I was working towards, binary file grammars.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lucumr.pocoo.org/2016/3/24/open-source-trust-scaling/&quot;&gt;Micropackages and Open Source Trust Scaling&lt;/a&gt;. 
+&lt;a href=&quot;https://news.ycombinator.com/item?id=11352704&quot;&gt;comment thread&lt;/a&gt;. And another &lt;a href=&quot;https://news.ycombinator.com/item?id=11354147&quot;&gt;comment thread&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://caremad.io/2013/07/packaging-signing-not-holy-grail/&quot;&gt;Why Package Signing is not the Holy Grail&lt;/a&gt;. Signing with private keys isn’t practical for many reasons. But it is possible to have a trusted upstream sign and send you a list of content hashes for approved packages, or you can do that yourself.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;Contribution Points - package.json&lt;/a&gt;. Visual Studio Code extensions have a package.json manifest file. I think Visual Studio Code is written in Node.js?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pythonhosted.org/distil/packaging.html&quot;&gt;Packaging distributions&lt;/a&gt;. Python distutil now uses a package.json file instead of a setup.py file for config.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.pauleveritt.org/articles/pylyglot/package_json/&quot;&gt;JavaScript Packaging with package.json&lt;/a&gt;. Walkthrough on creating packages for npm.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@alonisser/things-i-wish-pip-learned-from-npm-f712fa26f5bc#.w4u3fte4w&quot;&gt;Things I wish Pip learned from Npm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://devcenter.heroku.com/articles/how-heroku-works&quot;&gt;How Heroku Works&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/whyrusleeping/gx&quot;&gt;gx&lt;/a&gt;. “The language-agnostic, universal package manager”. Bold claim.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://webdocs.cs.ualberta.ca/~cdavid/starcraftaicomp/history.shtml&quot;&gt;A History of Starcraft AI Competitions (and UAlbertaBot)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.metzdowd.com/pipermail/cryptography/2016-March/028824.html&quot;&gt;On the Impending Crypto Monoculture&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cs.cmu.edu/~chensm/Big_Data_reading_group/papers/flexsc-osdi10.pdf&quot;&gt;FlexSC: Flexible System Call Scheduling with Exception-Less System Calls&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dev.otto.de/2016/03/20/why-microservices/&quot;&gt;Why Microservices?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.patternlanguage.com/archive/ieee/ieeetext.htm&quot;&gt;The Origins of Pattern Theory, the Future of the Theory, And The Generation of a Living World&lt;/a&gt;. Christopher Alexander talk from 1996.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF&quot;&gt;Why numbering should start at zero&lt;/a&gt;. Dijkstra letter, 1982.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/agauniyal/rang&quot;&gt;agauniyal/rang&lt;/a&gt;. A simple, modern &amp;amp; header only c++11 library for colors in your terminal. Right now, just term support, doesn’t work on Windows.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nghttp2.org/documentation/libnghttp2_asio.html&quot;&gt;libnghttp2_asio: High level HTTP/2 C++ library&lt;/a&gt;. Mix libnghttp2 and Boost.Asio together.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://shaharmike.com/cpp/vtable-part1/&quot;&gt;C++ vtables - Part 1 - Basics&lt;/a&gt;. Just covers Clang at the moment. See &lt;a href=&quot;https://www.reddit.com/r/cpp/comments/4bxpnc/how_are_vtables_implemented_4_parts_series/&quot;&gt;reddit/r/cpp&lt;/a&gt; thread for comment on MSVC.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arobenko.gitbooks.io/bare_metal_cpp/content/index.html&quot;&gt;Practical Guide to Bare Metal C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ziacko/TinyWindow&quot;&gt;ziacko/TinyWindow&lt;/a&gt;. a cross platform single header window management library. Also see &lt;a href=&quot;https://www.reddit.com/r/cpp/comments/4bqc5a/tinywindow_a_cross_platform_linux_and_windows/&quot;&gt;reddit/r/cpp&lt;/a&gt; thread.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/&quot;&gt;Houdini: Maybe The Most Exciting Development In CSS You’ve Never Heard Of&lt;/a&gt;. Extending the browser model to allow developers to extend the CSS model.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Mar 2016 18:37:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/26/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/26/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -504,37 +568,6 @@ Less Than 1000 Lines.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/06/recent-links.html</guid>
         
         <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>C++ things to write</title>
-        <description>&lt;p&gt;Write a C++ source highighter that uses Clang to identify the various
-syntactic and semantic elements.&lt;/p&gt;
-
-&lt;p&gt;Write a web template/blog engine in C++.&lt;/p&gt;
-
-&lt;p&gt;Turn Clang into a two-pass compiler so that forward declarations aren’t
-needed any more. Do templates make this impossible? Find out.&lt;/p&gt;
-
-&lt;p&gt;Find a way to get rid of most/all of the undefined and unspecified
-behavior in the C++ standard.&lt;/p&gt;
-
-&lt;p&gt;Find all the usable C and C++ source in the world, catalog it, and make it
-available for use.&lt;/p&gt;
-
-&lt;p&gt;Solve text encoding.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 03 Mar 2016 11:30:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/03/03/things-to-write.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/03/things-to-write.html</guid>
-        
-        <category>programming</category>
-        
-        <category>design</category>
         
         
         <category>dev</category>
