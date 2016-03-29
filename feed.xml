@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Mar 2016 18:05:04 -0700</pubDate>
-    <lastBuildDate>Mon, 28 Mar 2016 18:05:04 -0700</lastBuildDate>
+    <pubDate>Mon, 28 Mar 2016 23:39:59 -0700</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2016 23:39:59 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -17,6 +17,48 @@
 &lt;p&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/465087/Introduction-to-MSBuild-Part&quot;&gt;ntroduction to MSBuild - Part 1&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://matroska.org/technical/specs/rfc/index.html&quot;&gt;EBML RFC (Draft)&lt;/a&gt;. Also see &lt;a href=&quot;https://github.com/Matroska-Org/libebml&quot;&gt;Matroska-Org/libebml&lt;/a&gt; for C++ EBML parser with LGPL license.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gnu.org/prep/standards/html_node/Configuration.html&quot;&gt;How Configuration Should Work&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gnu.org/prep/standards/html_node/Directory-Variables.html&quot;&gt;Variables for Installation Directories&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tldp.org/LDP/LG/current/smith.html&quot;&gt;configure; make; make install&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tldp.org/HOWTO/Software-Building-HOWTO-3.html&quot;&gt;Using Make&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install&quot;&gt;The magic behind configure, make, make install&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.snake.net/software/imake-stuff/imake-faq.html&quot;&gt;imake Frequently Asked Questions&lt;/a&gt;. Except I think imake is dead.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_Build_System&quot;&gt;GNU Build System&lt;/a&gt;. Mainly for the picture.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://inti.sourceforge.net/tutorial/libinti/autotoolsproject.html&quot;&gt;Building a GNU Autotools Project&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.codecoffee.com/tipsforlinux/articles/27.html&quot;&gt;Understanding software Installation (configure, make, make install)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/chen3feng/typhoon-blade/&quot;&gt;chen3feng/typhoon-blade&lt;/a&gt;. Build system inspired by Google paper. Also see projects that blade can build at &lt;a href=&quot;https://github.com/chjp2046/thirdparty&quot;&gt;chjp2046/thirdparty&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/antirez/linenoise&quot;&gt;antirez/linenoise&lt;/a&gt;. A BSD licensed readline replacement. Halleluja!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ggreer/the_silver_searcher&quot;&gt;ggreer/the_silver_searcher&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/stedolan/jq&quot;&gt;stedolan/jq&lt;/a&gt;. Command-line JSON processor http://stedolan.github.io/jq/&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://libevent.org/&quot;&gt;libevent&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/libuv/libuv&quot;&gt;libuv/libuv&lt;/a&gt;. Also see &lt;a href=&quot;http://nikhilm.github.io/uvbook/introduction.html&quot;&gt;An Introduction to libuv&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.kegel.com/c10k.html&quot;&gt;The C10K problem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/wishstudio/flinux&quot;&gt;wishstudio/flinux&lt;/a&gt;. Foreign LINUX is a dynamic binary translator and a Linux system call interface emulator for the Windows platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/nanomsg/nanomsg&quot;&gt;nanomsg&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/nodejs/http-parser&quot;&gt;nodejs/http-parser&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/clibs/clib&quot;&gt;clibs/clib&lt;/a&gt;. Package manager for the C programming language. The Wiki has a list of &lt;a href=&quot;https://github.com/clibs/clib/wiki/Packages&quot;&gt;Packages&lt;/a&gt;. See &lt;a href=&quot;https://medium.com/@tjholowaychuk/introducing-clib-b32e6e769cb3#.t6bd5p3qo&quot;&gt;Introducing Clib&lt;/a&gt; for an introductory article. See older article &lt;a href=&quot;https://blog.ashworth.in/the-advent-of-clib-the-c-package-manager/&quot;&gt;The Advent of Clib: the C Package Manager&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/vmg/sundown&quot;&gt;https://github.com/vmg/sundown&lt;/a&gt;. Markdown processing library in C. See original &lt;a href=&quot;http://fossil.instinctive.eu/libsoldout/index&quot;&gt;upskirt/libsoldout&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 28 Mar 2016 17:43:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/03/28/recent-links.html</link>
