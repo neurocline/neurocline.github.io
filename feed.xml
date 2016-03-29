@@ -6,9 +6,28 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Mar 2016 20:02:49 -0700</pubDate>
-    <lastBuildDate>Sun, 27 Mar 2016 20:02:49 -0700</lastBuildDate>
+    <pubDate>Mon, 28 Mar 2016 18:05:04 -0700</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2016 18:05:04 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2007689/is-there-a-standard-file-extension-for-msbuild-files&quot;&gt;Is there a standard file extension for MSBuild files?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/465087/Introduction-to-MSBuild-Part&quot;&gt;ntroduction to MSBuild - Part 1&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://matroska.org/technical/specs/rfc/index.html&quot;&gt;EBML RFC (Draft)&lt;/a&gt;. Also see &lt;a href=&quot;https://github.com/Matroska-Org/libebml&quot;&gt;Matroska-Org/libebml&lt;/a&gt; for C++ EBML parser with LGPL license.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Mar 2016 17:43:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/03/28/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/28/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -498,74 +517,6 @@ corresponsds to SC22/WG21.&lt;/p&gt;
         <pubDate>Mon, 07 Mar 2016 00:15:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/03/07/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/07/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://mvogt.wordpress.com/2014/04/04/apt-1-0/&quot;&gt;apt 1.0&lt;/a&gt;. Evidently apt was in beta all this time? apt is Debian’s high-level packaging tool, and stands for “A Package Tool”. dpkg is the package management
-system itself. And then Aptitude and Synaptic are front-ends to apt itself. It’s turtles.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;&quot;&gt;Docset Direct Download Links&lt;/a&gt;
-&lt;a href=&quot;https://kapeli.com/dash&quot;&gt;Dash&lt;/a&gt; is an offline API documentation browser for OS X and iOS. Looks interesting.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://sunaku.github.io/dasht/man/man0/README.html&quot;&gt;dasht&lt;/a&gt; is a command-line version.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://kapeli.com/docset_links&quot;&gt;Docset Direct Download Links&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://haneefmubarak.com/2016/02/25/assembly-optimizations-i-un-packing-structures/&quot;&gt;Assembly Optimizations I: (Un)Packing Structures&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://eli.thegreenplace.net/2016/returning-multiple-values-from-functions-in-c/&quot;&gt;Returning multiple values from functions in C++&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://developers.redhat.com/blog/2016/02/29/why-cstdlib-is-more-complicated-than-you-might-think/&quot;&gt;Why &amp;lt; cstdlib &amp;gt; is more complicated than you might think&lt;/a&gt;. Good article if you approach it from the point of view of “GNU C standard library” and not “any C Standard Library”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.codinghorror.com/we-hire-the-best-just-like-everyone-else/&quot;&gt;We Hire the Best, Just Like Everyone Else&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lambda-the-ultimate.org/node/5313&quot;&gt;Why not C++?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Introduction%20to%20type%20and%20resource%20safety.pdf&quot;&gt;A brief introduction to C++’s model for type- and resource-safety&lt;/a&gt;. Bjarne Stroustrup, Herb Sutter, Gabriel Dos Reis.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jeroenpelgrims.com/pushing-to-dokku-from-gitlab-ci/&quot;&gt;Pushing to Dokku from GitLab CI&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/joowani/dtags&quot;&gt;DTags - Directory Tags for Lazy Programmers.&lt;/a&gt;. I wish there was a good shell for Windows.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/yrp604/rappel&quot;&gt;yrp604/rappel&lt;/a&gt;. A linux-based assembly REPL for x86, amd64, and armv7.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=IRTfhkiAqPw&quot;&gt;Object-Oriented Programming is Embarrassing: 4 Short Examples&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://llvm.linuxfoundation.org/index.php/Main_Page&quot;&gt;LLVMLinux&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lwn.net/Articles/322823/&quot;&gt;ext4 and data loss&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dranger.com/ffmpeg/&quot;&gt;An ffmpeg and SDL Tutorial&lt;/a&gt;. How to Write a Video Player in
-Less Than 1000 Lines.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.saminiir.com/lets-code-tcp-ip-stack-1-ethernet-arp&quot;&gt;Let’s code a TCP/IP stack, 1: Ethernet &amp;amp; ARP&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lazyfoo.net/tutorials/SDL/index.php&quot;&gt;Beginning Game Programming v2.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://svpow.com/2016/03/04/sci-hub-is-a-scholarly-litmus-test/&quot;&gt;Sci-Hub is a scholarly litmus test&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codersnotes.com/notes/cpp-rant-1/&quot;&gt;Ill-Advised C++ Rant, Part 1&lt;/a&gt; and &lt;a href=&quot;http://www.codersnotes.com/notes/cpp-rant-2/&quot;&gt;Ill-Advised C++ Rant, Part 2&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.archive.org/2016/03/04/saving-500-apple-ii-programs-from-oblivion/&quot;&gt;Saving 500 Apple II Programs from Oblivion&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/tj/luna&quot;&gt;luna&lt;/a&gt;. Luna is an expressive, minimalistic, elegant programming language implemented in C.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://trafficways.org/ascii/ascii.pdf&quot;&gt;The Evolution of Character Codes, 1874-1968&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://msm.runhello.com/p/1003&quot;&gt;No Compiler&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://denninginstitute.com/pjd/GP/GP-site/welcome.html&quot;&gt;GREAT PRINCIPLES OF COMPUTING&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 06 Mar 2016 08:33:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/03/06/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/06/recent-links.html</guid>
         
         <category>links</category>
         
