@@ -179,6 +179,8 @@ gem install digest
 
 [http://guides.rubygems.org/](http://guides.rubygems.org/)
 
+Bundler vs gem - explain.
+
 # Java - 2003
 
 The picture here is muddled. We have Ant as a build tool, which has the Ivy dependency manager as an integrated component, which is more like a bootstrap system (download packages and add to your project's lib directory). Ivy can pull from Maven repositories, and probably should be looked at as a Maven-based tool. [http://ant.apache.org/ivy/features.html](http://ant.apache.org/ivy/features.html).
@@ -251,6 +253,8 @@ The down side is that there is no direct support for versioning of packages. An 
 # Nuget (Windows) - 2010
 
 Microsoft does have Nuget, with the Chocolatey front-end, as a package manager. It's not really a programming language package manager, but is a hybrid in between a distribution package manager and a dependency/build tool package manager.
+
+It's also Windows-specific at the moment, so it's a cross between a language package manager and an OS package manager like dpkg.
 
 # Crate (Rust) - 2013
 
