@@ -6,9 +6,64 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Apr 2016 07:26:11 -0700</pubDate>
-    <lastBuildDate>Mon, 04 Apr 2016 07:26:11 -0700</lastBuildDate>
+    <pubDate>Thu, 14 Apr 2016 01:21:23 -0700</pubDate>
+    <lastBuildDate>Thu, 14 Apr 2016 01:21:23 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/lunixbochs/usercorn&quot;&gt;Usercorn&lt;/a&gt;. User-space system emulator, backed by Unicorn.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.unicorn-engine.org/&quot;&gt;Unicorn&lt;/a&gt;. The ultimate CPU emulator. Unicorn is a lightweight multi-platform, multi-architecture CPU emulator framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.capstone-engine.org/&quot;&gt;Capstone&lt;/a&gt;. The Ultimate Disassembler. Capstone is a lightweight multi-platform, multi-architecture disassembly framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mikegerwitz.com/2016/04/GNU-kWindows&quot;&gt;GNU/kWindows&lt;/a&gt;. I find this line of thinking somewhat farcical.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/martanne/vis&quot;&gt;vis&lt;/a&gt;. A vim-like text editor. “80% of vim’s features in 1% of the code”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.musl-libc.org/&quot;&gt;musl&lt;/a&gt;. A libc (C library as described in ISO C and POSIX standards) to replace glibc; MIT license. Designed for static linking. “A new standard library to power a new generation of Linux-based devices”. &lt;a href=&quot;http://www.etalabs.net/compare_libcs.html&quot;&gt;Comparison&lt;/a&gt; of muscl to uClibc, dietlibc and glibc.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gnu.org/software/ncurses/&quot;&gt;ncurses&lt;/a&gt;. Now under the GNU project, but still MIT-X11 license, whatever that means: &lt;a href=&quot;http://invisible-island.net/ncurses/ncurses-license.html&quot;&gt;ncurses-license&lt;/a&gt;. Somewhat disparaging to Eric Raymond.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://imgur.com/gallery/vqUQ5&quot;&gt;Fake O’Reilly book covers&lt;/a&gt;. Funny. I should print some of these onto real books.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.leonerd.org.uk/code/libtickit/&quot;&gt;libtickit&lt;/a&gt;. Terminal Interface Construction Kit, apparently supplanting &lt;a href=&quot;http://www.leonerd.org.uk/code/libtermkey/&quot;&gt;libtermkey&lt;/a&gt;, so it is presumably still MIT license.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.inf.puc-rio.br/~roberto/lpeg/&quot;&gt;LPeg&lt;/a&gt;. Parsing Expression Grammars For Lua.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/graph-commons/analyzing-the-npm-dependency-network-e2cf318c1d0d#.c0355ll1g&quot;&gt;Analyzing the NPM dependency network&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/anvaka/pm&quot;&gt;Software Galaxies&lt;/a&gt;. Visualizations of major software package managers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://thebookofshaders.com/&quot;&gt;The Book of Shaders&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://rg3.github.io/youtube-dl/&quot;&gt;youtube-dl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm&quot;&gt;Amazon 2015 shareholder letter&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://events.linuxfoundation.org/sites/events/files/slides/elc-2016.pdf&quot;&gt;Porting Linux to a new processor architecture&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Dekken/maiken&quot;&gt;maiken&lt;/a&gt;. Cross platform build tool for C/C++/Obj-C/C#/CUDA/opencl. Also see &lt;a href=&quot;https://raw.githubusercontent.com/Dekken/maiken/master/README.noformat&quot;&gt;README&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/vcblog/2016/04/06/clangc2-we-need-your-advice/&quot;&gt;Clang/C2: We need your advice!&lt;/a&gt;. Is Clang/C2 real yet?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://clang.llvm.org/doxygen/group__CINDEX.html&quot;&gt;libclang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://research.microsoft.com/en-us/um/people/simonpj/papers/ghc-shake/ghc-shake.pdf&quot;&gt;Non-recursive Make Considered Harmful&lt;/a&gt;. A paper about a recursive make system implemented as a new version of the Haskell build system.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/commandline/2016/04/06/bash-on-ubuntu-on-windows-download-now-3/&quot;&gt;Bash on Ubuntu on Windows&lt;/a&gt;. Available now. Windows 10.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 09 Apr 2016 08:46:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/04/09/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/09/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Rules for cross-platform programming</title>
@@ -572,49 +627,6 @@ Monobjc bridge project on the Xcode project file format.&lt;/p&gt;
         <pubDate>Sat, 12 Mar 2016 22:03:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/03/12/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/12/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/Microsoft/GSL&quot;&gt;GSL: Guidelines Support Library&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Microsoft/unittest-cpp&quot;&gt;UnitTest++&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://code.woboq.org/&quot;&gt;Code Browser by Woboq&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/cpp/comments/49eyer/shimo_maven_for_c/&quot;&gt;Shimo - Maven for C++&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pocoproject.org/index.html&quot;&gt;POCO C++ Libraries&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pandoc.org/&quot;&gt;Pandoc: a universal document converter&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/CocoaPods/CocoaPods/issues/4989#issuecomment-193772935&quot;&gt;Issues Cloning Spec repo - GitHub taking a very long time to download changes to the Specs Repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://githubengineering.com/counting-objects/&quot;&gt;Counting Objects&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=HxYFSlDdl0c&quot;&gt;Boris Kolpackov: New Build System for New C++&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codesynthesis.com/&quot;&gt;Code Synthesis&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.murrayc.com/permalink/2016/03/07/libsigc-3-0-very-variadic/&quot;&gt;libsigc++ 3.0: Very variadic&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://buildroot.org/&quot;&gt;Buildroot&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cacm.acm.org/magazines/2016/3/198849-a-differential-approach-to-undefined-behavior-detection/fulltext&quot;&gt;A Differential Approach to Undefined Behavior Detection&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.copperspice.com/docs/doxypress/index.html&quot;&gt;DoxyPress&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/cpp/comments/48shrb/seriously_c_wtf/&quot;&gt;Seriously, C++, WTF?&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 08 Mar 2016 21:07:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/03/08/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/08/recent-links.html</guid>
         
         <category>links</category>
         
