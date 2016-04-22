@@ -6,9 +6,33 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Apr 2016 01:40:52 -0700</pubDate>
-    <lastBuildDate>Thu, 21 Apr 2016 01:40:52 -0700</lastBuildDate>
+    <pubDate>Fri, 22 Apr 2016 00:14:49 -0700</pubDate>
+    <lastBuildDate>Fri, 22 Apr 2016 00:14:49 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;Time to use Read The Docs
+- &lt;a href=&quot;https://readthedocs.org/&quot;&gt;Read the Docs&lt;/a&gt;
+- &lt;a href=&quot;https://github.com/rtfd/readthedocs.org&quot;&gt;rtfd/readthedocs.org&lt;/a&gt; Read The Docs source code.
+- &lt;a href=&quot;http://www.sphinx-doc.org/en/stable/&quot;&gt;Sphinx&lt;/a&gt;
+- &lt;a href=&quot;http://www.sphinx-doc.org/en/stable/rest.html&quot;&gt;reStructuredText Primer&lt;/a&gt;
+- &lt;a href=&quot;https://github.com/snide/sphinx_rtd_theme&quot;&gt;Read the Docs Sphinx Theme&lt;/a&gt;
+- &lt;a href=&quot;http://read-the-docs.readthedocs.org/en/latest/install.html&quot;&gt;Installation&lt;/a&gt;. Get a local instance running.
+- &lt;a href=&quot;http://stackoverflow.com/questions/19892310/hosting-a-read-the-docs-like-server-in-house&quot;&gt;Hosting a Read the Docs-like server in-house?&lt;/a&gt;
+- &lt;a href=&quot;http://www.robg3d.com/2014/03/introducing-host-the-docs/&quot;&gt;Introducing Host The Docs&lt;/a&gt;. Lightweight doc hosting.
+- &lt;a href=&quot;https://github.com/rgalanakis/hostthedocs&quot;&gt;rgalanakis/hostthedocs&lt;/a&gt;. Source for Host The Docs.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Apr 2016 00:09:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/04/22/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/22/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Xcode - xcworkspace and xcodeproj - part 2</title>
@@ -1677,72 +1701,6 @@ to prop up the current regime, whatever that is.&lt;/p&gt;
         <pubDate>Sat, 26 Mar 2016 18:37:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/03/26/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/26/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;Rcpp looks very interesting, letting you use R from inside a C++ program.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://dirk.eddelbuettel.com/code/rinside.html&quot;&gt;RInside&lt;/a&gt;. The RInside package provides C++ classes that make it easier to embed &lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; in C++ codee – on either Linux, OS X or Windows. This is part of the Rcpp project.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.rcpp.org/&quot;&gt;Rcpp&lt;/a&gt;. Rcpp provides a powerful API on top of R, permitting direct interchange of rich R objects (including S3, S4 or Reference Class objects) between R and C++&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.rcpp.org/book/&quot;&gt;Seamless R and C++ Integration with Rcpp&lt;/a&gt;. The book. &lt;a href=&quot;http://www.amazon.com/Seamless-Integration-Rcpp-Dirk-Eddelbuettel/dp/1461468671&quot;&gt;Amazon link&lt;/a&gt;. Also see &lt;a href=&quot;http://dirk.eddelbuettel.com/code/rcpp/Rcpp-introduction.pdf&quot;&gt;Intro paper&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/RcppCore/Rcpp&quot;&gt;RcppCore/Rcpp&lt;/a&gt;. Github repo.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://gallery.rcpp.org/&quot;&gt;Gallery&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.r-project.org/&quot;&gt;The R project&lt;/a&gt;. Of course, it still leads back to here.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Voultapher/Vool/blob/master/GNP.h&quot;&gt;GNP.h&lt;/a&gt;. A simple wrapper to drive Gnuplot with popen.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stahlke.org/dan/gnuplot-iostream/&quot;&gt;Gnuplot-iostream interface&lt;/a&gt;. Drive gnuplot with an iostream pipe.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://root.cern.ch/&quot;&gt;ROOT&lt;/a&gt;. A data anlysis framework largely written in C++. Used by CERN.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://siliconframework.org/blog/silicon-0-1.html&quot;&gt;Silicon 0.1&lt;/a&gt;. Write HTTP APIs in C++.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.gnu.org/software/libmicrohttpd/&quot;&gt;GNU Libmicrohttpd&lt;/a&gt;. GNU libmicrohttpd is a small C library that is supposed to make it easy to run an HTTP server as part of another application (their words, not mine).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.dest-unreach.org/socat/&quot;&gt;socat - Multipurpose relay&lt;/a&gt;. socat is a relay for bidirectional data transfer between two independent data channels.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.gnutls.org/&quot;&gt;GnuTLS&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lwan.ws/&quot;&gt;LWAN&lt;/a&gt;. Lightweight asynchronous multithreaded event-based web server. Written in C.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://templated-thoughts.blogspot.in/2016/03/sub-processing-with-modern-c.html&quot;&gt;Sub-processing with modern C++&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://google.github.io/styleguide/cppguide.html&quot;&gt;Google C++ Style Guide&lt;/a&gt;. This has been evolving over the years, and is becoming something I can agree with.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jinja.pocoo.org/docs/dev/&quot;&gt;Jinja2&lt;/a&gt;. Templating library for Python. Use it as a model for a C++ template library?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/cppit/jucipp&quot;&gt;cppit/jucipp&lt;/a&gt;. juCi++: a lightweight, cross-platform C++-IDE supporting C++11, C++14, and experimental C++17 features. Lots of dependencies.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cppformat.github.io/latest/index.html&quot;&gt;cppformat&lt;/a&gt;. Small, safe and fast formatting library for C++. &lt;a href=&quot;https://github.com/cppformat/cppformat&quot;&gt;Github repo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r1.html&quot;&gt;P0067R1: Elementary string conversions, revision 1&lt;/a&gt;. No implementation yet?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3506.html&quot;&gt;A printf-like Interface for the Streams Library&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dany74q.wordpress.com/2016/03/11/recursively-walking-a-directory-with-cxy-filesystem-yield-similar-to-os-walk-in-python/&quot;&gt;RECURSIVELY WALKING A DIRECTORY WITH C++XY (FILESYSTEM + YIELD) [SIMILAR TO OS.WALK IN PYTHON]&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://codexpert.ro/blog/2016/03/07/guidelines-support-library-review-spant/&quot;&gt;Guidelines Support Library Review: span&amp;lt;T&amp;gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ilikebigbits.com/blog/2016/2/28/error-context-better-logging-with&quot;&gt;Error Context - a stack trace for data&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3797.pdf&quot;&gt;C++14 standard&lt;/a&gt;. Approximately; from late 2013.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf&quot;&gt;C11 standard&lt;/a&gt;. Late committee draft.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.cppreference.com/w/cpp/language/translation_phases&quot;&gt;Phases of translation&lt;/a&gt;. Slightly more readable than the standard. The preprocessor should be identical between C and C++.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 20 Mar 2016 22:42:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/03/20/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/20/recent-links.html</guid>
         
         <category>links</category>
         
