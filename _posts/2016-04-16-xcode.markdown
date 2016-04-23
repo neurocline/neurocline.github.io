@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "Xcode"
+date:   2016-04-22 13:07:00 PM
+categories: dev
+tags: programming Xcode
+---
+
+For better or for worse, Xcode versions are in rough lockstep with Mac OS X versions. Old versions
+of Xcode won't work on new Mac OS X releases, and new versions of Xcode won't work on old Mac OS X
+releases. This is because Xcode takes advantage of new Mac OS X features, and Apple is relentless
+about dropping obsolete features from Mac OS X, thus breaking old versions of Xcode.
+
+Xcode 3.2 - min Mac OS X 10.6, still supported PPC
+
+Xcode 4.0 - min Mac OS X 10.6, min OSX SDK 10.6, min iOS SDK 4.3, drops PPC
+
+Xcode 4.2 - min Mac OS X 10.6, drops GCC support
+
+Xcode 4.3 - min Mac OS X 10.7
+
+Xcode 4.6.3 - min Mac OS X 10.7.5
+
+Xcode 5.0 - min Mac OS X 10.8 (?)
+
+Xcode 6.0 - min Mac OS X 10.9.4
+
+Xcode 6.2 - min Mac OS X 10.9.5
+
+Xcode 6.3 - min Mac OS X 10.10.0 (?)
+
+Xcode 7.0 - min Mac OS X 10.10.4
+
+Xcode 7.1 - min Mac OS X 10.10.5
+
+Xcode 7.3 - min Mac OS X 10.11
+
+# Reference
+
+[xcode-clang-vers gist](https://gist.github.com/yamaya/2924292)
+
+[Xcode (Wikipedia)](https://en.wikipedia.org/wiki/Xcode)
+
+[Xcode downloads](http://stackoverflow.com/questions/10335747/how-to-download-xcode-4-5-6-7-and-get-the-dmg-file/10335943#10335943)
