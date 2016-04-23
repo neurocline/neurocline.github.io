@@ -6,9 +6,61 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Apr 2016 00:14:49 -0700</pubDate>
-    <lastBuildDate>Fri, 22 Apr 2016 00:14:49 -0700</lastBuildDate>
+    <pubDate>Fri, 22 Apr 2016 17:30:19 -0700</pubDate>
+    <lastBuildDate>Fri, 22 Apr 2016 17:30:19 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Xcode</title>
+        <description>&lt;p&gt;For better or for worse, Xcode versions are in rough lockstep with Mac OS X versions. Old versions
+of Xcode won’t work on new Mac OS X releases, and new versions of Xcode won’t work on old Mac OS X
+releases. This is because Xcode takes advantage of new Mac OS X features, and Apple is relentless
+about dropping obsolete features from Mac OS X, thus breaking old versions of Xcode.&lt;/p&gt;
+
+&lt;p&gt;Xcode 3.2 - min Mac OS X 10.6, still supported PPC&lt;/p&gt;
+
+&lt;p&gt;Xcode 4.0 - min Mac OS X 10.6, min OSX SDK 10.6, min iOS SDK 4.3, drops PPC&lt;/p&gt;
+
+&lt;p&gt;Xcode 4.2 - min Mac OS X 10.6, drops GCC support&lt;/p&gt;
+
+&lt;p&gt;Xcode 4.3 - min Mac OS X 10.7&lt;/p&gt;
+
+&lt;p&gt;Xcode 4.6.3 - min Mac OS X 10.7.5&lt;/p&gt;
+
+&lt;p&gt;Xcode 5.0 - min Mac OS X 10.8 (?)&lt;/p&gt;
+
+&lt;p&gt;Xcode 6.0 - min Mac OS X 10.9.4&lt;/p&gt;
+
+&lt;p&gt;Xcode 6.2 - min Mac OS X 10.9.5&lt;/p&gt;
+
+&lt;p&gt;Xcode 6.3 - min Mac OS X 10.10.0 (?)&lt;/p&gt;
+
+&lt;p&gt;Xcode 7.0 - min Mac OS X 10.10.4&lt;/p&gt;
+
+&lt;p&gt;Xcode 7.1 - min Mac OS X 10.10.5&lt;/p&gt;
+
+&lt;p&gt;Xcode 7.3 - min Mac OS X 10.11&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/yamaya/2924292&quot;&gt;xcode-clang-vers gist&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Xcode&quot;&gt;Xcode (Wikipedia)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/10335747/how-to-download-xcode-4-5-6-7-and-get-the-dmg-file/10335943#10335943&quot;&gt;Xcode downloads&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Apr 2016 13:07:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/04/22/xcode.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/22/xcode.html</guid>
+        
+        <category>programming</category>
+        
+        <category>Xcode</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -1637,70 +1689,6 @@ to prop up the current regime, whatever that is.&lt;/p&gt;
         <pubDate>Mon, 28 Mar 2016 17:43:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/03/28/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/28/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/&quot;&gt;NPM &amp;amp; left-pad: Have We Forgotten How To Program?&lt;/a&gt;. The comments are the best part.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@robbyrussell/d-oh-my-zsh-af99ca54212c#.ykwlny1s9&quot;&gt;d’Oh My Zsh&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.nytimes.com/2016/03/26/opinion/andy-groves-warning-to-silicon-valley.html&quot;&gt;Andy Grove’s Warning to Silicon Valley&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/tech-policy/2016/03/game-companies-knock-out-patent-that-slammed-microsoft-with-388m-verdict/&quot;&gt;Patent that cost Microsoft millions gets invalidated&lt;/a&gt;. Crappy patent gets overturned after many years of litigation and use.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ANSSI-FR/caradoc&quot;&gt;Caradoc - a PDF parser and validator&lt;/a&gt;. This looks like it is related to something I was working towards, binary file grammars.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lucumr.pocoo.org/2016/3/24/open-source-trust-scaling/&quot;&gt;Micropackages and Open Source Trust Scaling&lt;/a&gt;. 
-&lt;a href=&quot;https://news.ycombinator.com/item?id=11352704&quot;&gt;comment thread&lt;/a&gt;. And another &lt;a href=&quot;https://news.ycombinator.com/item?id=11354147&quot;&gt;comment thread&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://caremad.io/2013/07/packaging-signing-not-holy-grail/&quot;&gt;Why Package Signing is not the Holy Grail&lt;/a&gt;. Signing with private keys isn’t practical for many reasons. But it is possible to have a trusted upstream sign and send you a list of content hashes for approved packages, or you can do that yourself.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;&quot;&gt;Contribution Points - package.json&lt;/a&gt;. Visual Studio Code extensions have a package.json manifest file. I think Visual Studio Code is written in Node.js?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pythonhosted.org/distil/packaging.html&quot;&gt;Packaging distributions&lt;/a&gt;. Python distutil now uses a package.json file instead of a setup.py file for config.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.pauleveritt.org/articles/pylyglot/package_json/&quot;&gt;JavaScript Packaging with package.json&lt;/a&gt;. Walkthrough on creating packages for npm.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@alonisser/things-i-wish-pip-learned-from-npm-f712fa26f5bc#.w4u3fte4w&quot;&gt;Things I wish Pip learned from Npm&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://devcenter.heroku.com/articles/how-heroku-works&quot;&gt;How Heroku Works&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/whyrusleeping/gx&quot;&gt;gx&lt;/a&gt;. “The language-agnostic, universal package manager”. Bold claim.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://webdocs.cs.ualberta.ca/~cdavid/starcraftaicomp/history.shtml&quot;&gt;A History of Starcraft AI Competitions (and UAlbertaBot)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.metzdowd.com/pipermail/cryptography/2016-March/028824.html&quot;&gt;On the Impending Crypto Monoculture&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cs.cmu.edu/~chensm/Big_Data_reading_group/papers/flexsc-osdi10.pdf&quot;&gt;FlexSC: Flexible System Call Scheduling with Exception-Less System Calls&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dev.otto.de/2016/03/20/why-microservices/&quot;&gt;Why Microservices?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.patternlanguage.com/archive/ieee/ieeetext.htm&quot;&gt;The Origins of Pattern Theory, the Future of the Theory, And The Generation of a Living World&lt;/a&gt;. Christopher Alexander talk from 1996.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF&quot;&gt;Why numbering should start at zero&lt;/a&gt;. Dijkstra letter, 1982.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/agauniyal/rang&quot;&gt;agauniyal/rang&lt;/a&gt;. A simple, modern &amp;amp; header only c++11 library for colors in your terminal. Right now, just term support, doesn’t work on Windows.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nghttp2.org/documentation/libnghttp2_asio.html&quot;&gt;libnghttp2_asio: High level HTTP/2 C++ library&lt;/a&gt;. Mix libnghttp2 and Boost.Asio together.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://shaharmike.com/cpp/vtable-part1/&quot;&gt;C++ vtables - Part 1 - Basics&lt;/a&gt;. Just covers Clang at the moment. See &lt;a href=&quot;https://www.reddit.com/r/cpp/comments/4bxpnc/how_are_vtables_implemented_4_parts_series/&quot;&gt;reddit/r/cpp&lt;/a&gt; thread for comment on MSVC.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://arobenko.gitbooks.io/bare_metal_cpp/content/index.html&quot;&gt;Practical Guide to Bare Metal C++&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ziacko/TinyWindow&quot;&gt;ziacko/TinyWindow&lt;/a&gt;. a cross platform single header window management library. Also see &lt;a href=&quot;https://www.reddit.com/r/cpp/comments/4bqc5a/tinywindow_a_cross_platform_linux_and_windows/&quot;&gt;reddit/r/cpp&lt;/a&gt; thread.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/&quot;&gt;Houdini: Maybe The Most Exciting Development In CSS You’ve Never Heard Of&lt;/a&gt;. Extending the browser model to allow developers to extend the CSS model.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 26 Mar 2016 18:37:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/03/26/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/03/26/recent-links.html</guid>
         
         <category>links</category>
         
