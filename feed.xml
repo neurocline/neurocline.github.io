@@ -6,9 +6,50 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Apr 2016 23:32:36 -0700</pubDate>
-    <lastBuildDate>Fri, 29 Apr 2016 23:32:36 -0700</lastBuildDate>
+    <pubDate>Mon, 02 May 2016 07:32:37 -0700</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 07:32:37 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://thejunkland.com/blog/how-to-write-good-readme.html&quot;&gt;How to write good README and why should you care&lt;/a&gt;. There is a Git repo with a README template at &lt;a href=&quot;https://github.com/jehna/readme-best-practices&quot;&gt;jehna/readme-best-practices&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://anapioficeandfire.com/Documentation&quot;&gt;An API Of Ice And Fire&lt;/a&gt;. I’m not sure if this is serious or not, maybe this is just a great example project on “how to document a REST API”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2016/05/01/TypeWars.html&quot;&gt;Type Wars&lt;/a&gt;. A moderately partisan take on type safety.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://anteru.net/2016/05/01/3249/&quot;&gt;Designing C APIs in 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://coreos.com/blog/coreos-and-prometheus-improve-cluster-monitoring.html&quot;&gt;CoreOS and Prometheus: Building monitoring for the next generation of cluster infrastructure&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://steshaw.org/plt/&quot;&gt;Programming Language Theory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.codinghorror.com/the-ten-commandments-of-egoless-programming/&quot;&gt;The Ten Commandments of Egoless Programming&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://peter.bourgon.org/go-best-practices-2016/&quot;&gt;Go best practices, six years in&lt;/a&gt;. Weak. Or, rather, lightweight and surface.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/0xAX/linux-insides/blob/master/Theory/asm.md&quot;&gt;Inline assembly&lt;/a&gt;. GCC and Intel specific.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://preshing.com/20141202/cpp-has-become-more-pythonic/&quot;&gt;C++ Has Become More Pythonic&lt;/a&gt;. Kind of. See comments.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/fmtlib/fmt&quot;&gt;{fmt}&lt;/a&gt;. Nice formatting library, vast improvement to streams but can interoperate. This is almost as fast as printf, but there’s a big hit in compile time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://michaelfeathers.silvrback.com/the-myth-of-scaling&quot;&gt;Moving Past the Scaling Myth&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://coreos.com/blog/coreos-and-prometheus-improve-cluster-monitoring.html&quot;&gt;https://coreos.com/blog/coreos-and-prometheus-improve-cluster-monitoring.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://slatestarcodex.com/2016/04/27/book-review-albions-seed/&quot;&gt;BOOK REVIEW: ALBION’S SEED&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 May 2016 16:23:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/05/01/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/01/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Local ReadTheDocs</title>
@@ -1744,84 +1785,6 @@ files.&lt;/p&gt;
         <pubDate>Sat, 09 Apr 2016 08:46:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/04/09/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/09/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Rules for cross-platform programming</title>
-        <description>&lt;p&gt;Writing reusable code is in general a good thing to do, and the number one lesson there is about
-managing dependencies. Writing cross-platform code has a different set of challenges, and is best
-considered as a super-set of the reusable code problem.&lt;/p&gt;
-
-&lt;p&gt;This is a “part 1 of N” series”. Consider this the notes for that book you’ve always wished existed.&lt;/p&gt;
-
-&lt;h1 id=&quot;use-utf-8-as-your-text-format&quot;&gt;Use UTF-8 as your text format&lt;/h1&gt;
-
-&lt;p&gt;Unicode has grown into its original arrogant name of “Universal character set”. Of all the encodings
-of Unicode, UTF-8 is the most practical. Use UTF-8 as your program’s character set, keep all your
-strings in UTF-8. This includes any of your own data you read and write.&lt;/p&gt;
-
-&lt;p&gt;Convert to the platform character set/encoding on input and output. When you get a string from an
-operating system function, convert it to UTF-8. When you need to output a string, convert it to
-what the platform needs.&lt;/p&gt;
-
-&lt;p&gt;By doing this, you’ll find that all your special cases are kept at the boundaries of your code. You’ll
-also ensure that you only have N conversions (where N is the number of distinct operating system
-encodings that you support), and not creep into N^2.&lt;/p&gt;
-
-&lt;p&gt;This task is actually fairly easy on modern Linux and Mac OS X, which both use UTF-8 as their
-platform character set (or can be told to do so). The best current way to write Windows programs is
-as UCS16-LE (their “Unicode” setting is really 16-bit UCS stored as little-endian characters). It’s
-best to write a set of wrappers to convert to/from “native” (your format), and have that be passthrough
-functions when running on a platform that uses UTF-8.&lt;/p&gt;
-
-&lt;p&gt;At some point soon, I’ll create a package that does this, that follows the other dictum of “carefully
-manage dependencies”. There are larger projects like iconv and icu that can be bent to this task, but
-they lack the easy helper functions we would need to make this transparent in our code.&lt;/p&gt;
-
-&lt;h1 id=&quot;a-file-names-is-the-sequence-of-characters-the-os-gave-you&quot;&gt;A file names is the sequence of characters the OS gave you&lt;/h1&gt;
-
-&lt;p&gt;Despite appearances, file names and the paths constructed from them aren’t really text. The end
-user thinks of names this way, of course, because file names by and large are meant for use by
-people. But a file name is really a sequence of octets that a filesystem has matched up with
-an file entry. If you change any of the bytes in the file name, then you will find that you can no longer
-find that file entry, and then the user will think the file is missing.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, while we can usually preserve meaning in round-trips between encodings, it is all too easy
-to change byte sequences. Consider Mac OS X filenames - these are UTF-8 strings stored in a mostly but
-not completely decomposed form (&lt;a href=&quot;https://developer.apple.com/library/mac/qa/qa1173/_index.html&quot;&gt;Text Encodings in VFS&lt;/a&gt;).
-And while that is possible to manage, many filesystems don’t actually specify the name encoding, so it’s
-quite likely for you to mangle filenames by making incorrect assumptions.&lt;/p&gt;
-
-&lt;p&gt;The best approach is to never alter filenames, but to leave them as octet strings. This means several
-things. First, you’ll manipulate paths via path functions, and not as strings. Second, if you need to
-output a string, you’ll make your best guess as to the encoding and convert it as you need.&lt;/p&gt;
-
-&lt;p&gt;This is a little awkward, but means that your code will be robust across encodings. It does mean that you
-have a challenge if you need to record paths in config files or databases. But since paths are only relevant
-to the filesystem they came from, I suggest that you record the paths as the original byte sequences.&lt;/p&gt;
-
-&lt;p&gt;Some times programs can dictate the names that are used for filenames, but this is very rare, and not worth
-considering.&lt;/p&gt;
-
-&lt;p&gt;When I say that file names are tied to file systems, I mean specifically that. If you copy a file to another
-file system, it now potentially has two different sets of octets it is known by, depending on the limitations
-of each filesystem. It is the name that the copy is created under that is the name on the destination
-filesystem. Most of the time, the octets for the source file and the octets for the destination file are
-the same. This is not guaranteed, so do not rely on it.&lt;/p&gt;
-
-&lt;p&gt;Well-known filenames are a different matter. Not all filenames are discovered, some are predetermined. However,
-that doesn’t make your life any easier. As long as there can be user-defined filenames, it’s best to treat
-all filenames by the same rule.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 03 Apr 2016 09:04:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/04/03/rules-for-cross-platform-programming.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/03/rules-for-cross-platform-programming.html</guid>
         
         <category>links</category>
         
