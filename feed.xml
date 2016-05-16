@@ -6,9 +6,52 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 May 2016 08:31:37 -0700</pubDate>
-    <lastBuildDate>Wed, 04 May 2016 08:31:37 -0700</lastBuildDate>
+    <pubDate>Mon, 16 May 2016 00:02:41 -0700</pubDate>
+    <lastBuildDate>Mon, 16 May 2016 00:02:41 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://blog.rust-lang.org/2016/05/05/cargo-pillars.html&quot;&gt;Cargo: predictable dependency management&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jimon/osx_app_in_plain_c&quot;&gt;OS X app in plain C&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gradle.org/blog/agile-is-dead/&quot;&gt;Agile is Dead, Long Live Continuous Delivery&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/vcblog/2016/05/04/new-code-optimizer/&quot;&gt;Introducing a new, advanced Visual C++ code optimizer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@tltx/the-void-left-by-the-parallel-port-51eb6c919e8a#.pzn7ihrwt&quot;&gt;The void left by the parallel port&lt;/a&gt;. A nifty USB-to-Parallel Port adapter.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/pypa/manylinux&quot;&gt;manylinux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.equasys.de/colorconversion.html&quot;&gt;Color Conversion&lt;/a&gt;. The equations for converting betweeen luminance/chrominance formats (YUV, YCbCr, YPbPr) and RGB. Also see &lt;a href=&quot;http://www.equasys.de/colorformat.html&quot;&gt;Color Formats&lt;/a&gt;. Note that digital video is always YCbCr and the other two formats are for analog video.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://theweek.com/articles/617776/how-identify-language-glance&quot;&gt;How to identify any language at a glance&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.eff.org/deeplinks/2016/05/announcing-certbot-new-tls-robot&quot;&gt;Certbot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://googleresearch.blogspot.com/2016/05/announcing-syntaxnet-worlds-most.html?m=1&quot;&gt;Announcing SyntaxNet: The World’s Most Accurate Parser Goes Open Source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://the-paper-trail.org/blog/distributed-systems-theory-for-the-distributed-systems-engineer/&quot;&gt;Distributed systems theory for the distributed systems engineer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ribbonfarm.com/2016/05/12/artem-vs-predator/&quot;&gt;Artem vs. Predator&lt;/a&gt;. Implementing heat vision.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://calteches.library.caltech.edu/51/2/CargoCult.htm&quot;&gt;Cargo Cult Science&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gcc.godbolt.org/&quot;&gt;https://gcc.godbolt.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qH6sSOr-yk8&amp;amp;list=PL0IJqh3Gjgo2dfreKafVN8siMoIiW21lc&quot;&gt;C++ Seasoning&lt;/a&gt;. Watch this several times.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 May 2016 10:14:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/05/08/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/08/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -1713,52 +1756,6 @@ files.&lt;/p&gt;
         <category>programming</category>
         
         <category>Xcode</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;C++ streams are great in theory.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/cpp/comments/4eu1k3/what_would_iostreams_look_like_without/&quot;&gt;What would iostreams look like without inheritance? (What would a “properly designed” iostreams look like?)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4187.html&quot;&gt;C++ Ostream Buffers&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://cppformat.github.io/latest/index.html&quot;&gt;C++ Format&lt;/a&gt;: “C++ Format (cppformat) is an open-source formatting library for C++.”. Also see Github repo &lt;a href=&quot;https://github.com/cppformat/cppformat&quot;&gt;cppformat/cppformat&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/seanmiddleditch/formatxx&quot;&gt;seanmiddleditch/formatxx&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://caca.zoy.org/wiki/libcaca&quot;&gt;libcaca&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/thelink2012/any&quot;&gt;Any&lt;/a&gt;. “This is a implementation of N4562 std::experimental::any (merged into C++17) for C++11 compilers.”&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.jyt.io/&quot;&gt;Jyt&lt;/a&gt;. “Jyt is a just-in-time compiler for C++”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/microsoft/cpprestsdk&quot;&gt;Microsoft/cpprestsdk&lt;/a&gt;. “The C++ REST SDK is a Microsoft project for cloud-based client-server communication in native code using a modern asynchronous C++ API design. This project aims to help C++ developers connect to and interact with services.”&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://whoshuu.github.io/cpr/&quot;&gt;Curl for People&lt;/a&gt;. “C++ Requests is a simple wrapper around libcurl inspired by the excellent Python Requests project.”. Also see Github at: &lt;a href=&quot;https://github.com/whoshuu/cpr&quot;&gt;whoshuu/cpr&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://think-async.com/Urdl/doc/html/index.html&quot;&gt;Urdl&lt;/a&gt;. “Urdl is a cross-platform C++ library for downloading web content using a URL. It provides an easy-to-use extension to standard C++ iostreams and an asynchronous interface for use with Boost.Asio.”. Also see Github at: &lt;a href=&quot;https://github.com/chriskohlhoff/urdl&quot;&gt;chriskohlhoff/urdl&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/google/gumbo-parser&quot;&gt;google/gumbo-parser&lt;/a&gt;. Gumbo is an HTML5 parsing library written in pure C99 with no outside dependencies.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/lazytiger/gumbo-query&quot;&gt;lazytiger/gumbo-query&lt;/a&gt;. “c++ library to provide jQuery style api for gumbo library”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pugixml.org/&quot;&gt;pugixml&lt;/a&gt;. “Light-weight, simple and fast XML parser for C++ with XPath support”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.sigurdhsson.org/2016/02/deploying-cpp-documentation/&quot;&gt;Deploying C++ documentation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/michaeljones/breathe&quot;&gt;michaeljones/breathe&lt;/a&gt;. “ReStructuredText and Sphinx bridge to Doxygen &lt;a href=&quot;http://breathe.readthedocs.org/&quot;&gt;http://breathe.readthedocs.org/&lt;/a&gt;”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jessevdk/cldoc&quot;&gt;jessevdk/cldoc&lt;/a&gt;. “clang based documentation generator for C and C++”.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 16 Apr 2016 04:28:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/04/16/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/16/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>
