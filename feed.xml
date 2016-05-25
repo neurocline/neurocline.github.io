@@ -6,9 +6,71 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 May 2016 11:16:35 -0700</pubDate>
-    <lastBuildDate>Sun, 22 May 2016 11:16:35 -0700</lastBuildDate>
+    <pubDate>Wed, 25 May 2016 08:55:21 -0700</pubDate>
+    <lastBuildDate>Wed, 25 May 2016 08:55:21 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://stanleycen.com/blog/directx11-hooking/&quot;&gt;DirectX 11 Hooking&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/scen/ionlib&quot;&gt;scen/ionlib&lt;/a&gt;. c++11 reverse engineering library. bootstraps common tasks in game hacking and reverse engineering&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/scen/libembryo&quot;&gt;scen/libembryo&lt;/a&gt;. screwing around with osx reversing :)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.unknowncheats.me/forum/d3d-tutorials-and-source/88369-universal-d3d11-hook.html&quot;&gt;Universal D3D11 hook&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fw1.codeplex.com/&quot;&gt;FW1FontWrapper&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/28684509/draw-in-present-hook-without-destroying-existing-content&quot;&gt;Draw in Present() hook without destroying existing content&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5979632/d3d11-how-to-draw-gdi-text-to-a-gxdi-surface-without-d2d?rq=1&quot;&gt;D3D11: How to draw GDI Text to a GXDI Surface? (Without D2D)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/8993979/api-hooking-without-detours?rq=1&quot;&gt;API Hooking without Detours&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/30140/API-Hooking-with-MS-Detours&quot;&gt;API Hooking with MS Detours&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/22432546/why-does-the-directx-device-present-hook-not-work-in-detours&quot;&gt;Why does the DirectX Device Present hook not work in detours?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.metaclassofnil.com/?tag=dsfix&quot;&gt;DSFix 2.4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ownedcore.com/forums/world-of-warcraft/world-of-warcraft-bots-programs/wow-memory-editing/401141-beware-other-apps-hook-d3d11.html&quot;&gt;Beware other apps that hook D3D11&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.dreamincode.net/forums/topic/286194-obtaining-reference-to-id3d11device-from-a-reference-to-idxgiadapter1/&quot;&gt;Obtaining Reference To ID3D11Device From A Reference To IDXGIAdapter1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gamedev.net/topic/647530-direct3d-111-and-dxgi-12-on-windows-7/&quot;&gt;Direct3D 11.1 and DXGI 1.2 on Windows 7&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/jj863687(v=vs.85).aspx&quot;&gt;Platform Update for Windows 7&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ee913554(v=vs.85).aspx&quot;&gt;Surface Sharing Between Windows Graphics APIs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ee417025(v=vs.85).aspx&quot;&gt;DirectX Graphics Infrastructure (DXGI): Best Practices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;DXGI introduced with Windows Vista&lt;/p&gt;
+
+&lt;p&gt;DXGI 1.1 was added in Windows 7&lt;/p&gt;
+
+&lt;p&gt;DXGI 1.2 was added in Windows 8&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“When you use Direct3D 11, the runtime will use DXGI 1.1 by default when calling D3D11CreateDevice or D3D11CreateDeviceAndSwapChain with a NULL IDXGIAdapter pointer.”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;DXGI 1.4 (??) in Windows 10&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205075(v=vs.85).aspx&quot;&gt;DXGI Overview&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 24 May 2016 21:22:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/05/24/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/24/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -1008,57 +1070,6 @@ we see a handful of important changes to &lt;code&gt;xplore.xcodeproj/project.pb
         <category>programming</category>
         
         <category>Xcode</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/vurtun/nuklear&quot;&gt;Nuklear&lt;/a&gt;. “This is a minimal state immediate mode graphical user interface toolkit written in ANSI C and licensed under public domain.” Or to be specific, a 20,000 line header file that has a lot of a UI toolkit in it. Caught my eye because the last gallery picture was showing a Diablo II-styled dialog box.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.nccgroup.trust/globalassets/our-research/us/whitepapers/2016/april/ncc_group_understanding_hardening_linux_containers-10pdf/&quot;&gt;Understanding and Hardening Linux Containers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.alexkras.com/19-git-tips-for-everyday-use/&quot;&gt;19 Tips For Everyday Git Use&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hex.pm/&quot;&gt;hex&lt;/a&gt;. The package manager for the Erlang ecosystem.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/marioballano/emudore&quot;&gt;emudore, a Commodore 64 emulator&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nikitablack.github.io/2016/04/12/Generic-C-delegates.html&quot;&gt;Generic C++ delegates&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://code.facebook.com/posts/215466732167400/wangle-an-asynchronous-c-networking-and-rpc-library/&quot;&gt;Wangle — an asynchronous C++ networking and RPC library&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/folly/tree/master/folly/io/async&quot;&gt;folly/io/async: An object-oriented wrapper around libevent&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://libevent.org/&quot;&gt;libevent&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/proxygen&quot;&gt;Proxygen: Facebook’s C++ HTTP Libraries&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/fbthrift&quot;&gt;FBThrift: Facebook’s branch of apache thrift&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://code.facebook.com/posts/1661982097368498&quot;&gt;Futures for C++11 at Facebook&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://deplinenoise.wordpress.com/2014/02/23/using-c11-capturing-lambdas-w-vanilla-c-api-functions/&quot;&gt;Using C++11 Capturing Lambdas w/ Vanilla C API Functions&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/cpp/comments/4flb8z/fighting_through_a_cmake_hell/&quot;&gt;Fighting through a CMake hell!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/mesonbuild/meson/wiki/Wrap%20dependency%20system%20manual&quot;&gt;Wrap dependency system manual&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mesonbuild.com/dependencies.html&quot;&gt;The Meson Build System&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://waf.io/&quot;&gt;Waf&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://cmake.org/cmake/help/v3.5/manual/cmake-buildsystem.7.html&quot;&gt;cmake-buildsystem&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://purplekarrot.net/blog/cmake-introduction-and-best-practices.html&quot;&gt;CMake introduction and best practices&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 20 Apr 2016 19:21:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/04/20/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/20/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>
