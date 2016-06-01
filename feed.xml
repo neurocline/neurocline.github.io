@@ -6,9 +6,56 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 May 2016 08:55:21 -0700</pubDate>
-    <lastBuildDate>Wed, 25 May 2016 08:55:21 -0700</lastBuildDate>
+    <pubDate>Tue, 31 May 2016 20:43:01 -0700</pubDate>
+    <lastBuildDate>Tue, 31 May 2016 20:43:01 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;Good practice for patching/hooking DirectX&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if Present() returns D3DERR_DEVICELOST, then free every resource you are holding&lt;/li&gt;
+  &lt;li&gt;hook TestCooperativeLevel and Reset to be in sync with what the game is thinking (and again, if you get D3DERR_DEVICELOST, free everything and wait)&lt;/li&gt;
+  &lt;li&gt;what’s important is freeing everything allocated into the D3DPOOL_DEFAULT memory class. But if you are holding resources, you’ll prevent the app from closing DirectX (which it might want to do in order to do a stronger version of reset).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb174714(v=vs.85).aspx&quot;&gt;Lost Devices (Direct3D 9)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb174423(v=vs.85).aspx&quot;&gt;IDirect3DDevice9::Present method&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/TsudaKageyu/minhook&quot;&gt;TsudaKageyu/minhook&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/27970403/create-directx9texture-from-rgba-const-char-buffer&quot;&gt;Create DirectX9Texture from RGBA (const char*) buffer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205073(v=vs.85).aspx&quot;&gt;Direct3D 9 to Direct3D 10 Considerations (Direct3D 10)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cplusplus.com/forum/windows/53725/&quot;&gt;Help with DirectX 9 Textures&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.rastertek.com/dx11tut11.html&quot;&gt;Tutorial 11: 2D Rendering&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb219690(v=vs.85).aspx&quot;&gt;Directly Mapping Texels to Pixels (Direct3D 9)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gamedev.net/page/resources/_/technical/directx-and-xna/2d-in-direct3d-using-textured-quads-r1972&quot;&gt;2D in Direct3D using Textured Quads&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/16346184/drawing-a-texture-to-the-screen&quot;&gt;Drawing a Texture to the Screen&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205858(v=vs.85).aspx&quot;&gt;IDirect3DDevice9::UpdateTexture method&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205913(v=vs.85).aspx&quot;&gt;IDirect3DTexture9::LockRect method&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205857(v=vs.85).aspx&quot;&gt;IDirect3DDevice9::UpdateSurface method&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 29 May 2016 11:57:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/05/29/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/29/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -552,524 +599,6 @@ about dropping obsolete features from Mac OS X, thus breaking old versions of Xc
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/22/recent-links.html</guid>
         
         <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Xcode - xcworkspace and xcodeproj - part 2</title>
-        <description>&lt;p&gt;This is an update of the previous post &lt;a href=&quot;http://neurocline.github.io/dev/2016/04/16/xcode-xcworkspace-and-xcodeproj.html&quot;&gt;Xcode - xcworkspace and xcodeproj&lt;/a&gt;. I imagine that when I’m done, I’ll have a mini-book.&lt;/p&gt;
-
-&lt;p&gt;In the examples below, I used Xcode 6.1.1 to create a command-line tool:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-6.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I used all defaults, and a project name of &lt;code&gt;xplore&lt;/code&gt;. I refer to this in places as “using the Xcode wizard”.&lt;/p&gt;
-
-&lt;h1 id=&quot;project-with-embedded-workspace&quot;&gt;Project with embedded workspace&lt;/h1&gt;
-
-&lt;p&gt;If you create a project from Xcode instead of a workspace (File -&amp;gt; New -&amp;gt; Project), you still get
-a workspace, it’s just embedded inside your project file. Here’s the project visually:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-1.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;On disk, the project looks like this (ignoring irrelevant files):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;xplore.xcodeproj/
-├── project.pbxproj
-└── project.xcworkspace
-    └── contents.xcworkspacedata&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;contents.xcworkspacedata&lt;/code&gt; looks like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;Workspace&lt;/span&gt;
-   &lt;span class=&quot;na&quot;&gt;version =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;FileRef&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;location =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;self:xplore.xcodeproj&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/FileRef&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/Workspace&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that the project location is &lt;code&gt;self:xplore.xcodeproj&lt;/code&gt;. I’m guessing that &lt;code&gt;self&lt;/code&gt; in this context
-means the directory containing the opened project file. In this case, we’re literally
-pointing to ourself, but this keeps things sane for Xcode, I imagine.&lt;/p&gt;
-
-&lt;p&gt;This was the default until Xcode 4 - the workspace file existed, but was hidden from sight. With
-Xcode 4, the workspace file became a user-visible item so that groups of projects could be more
-easily navigated and built.&lt;/p&gt;
-
-&lt;h1 id=&quot;project-with-external-workspace&quot;&gt;Project with external workspace&lt;/h1&gt;
-
-&lt;p&gt;If you create a workspace (File -&amp;gt; New -&amp;gt; Workspace), then you have a separate external workspace file.
-Unlike like with, say, Visual Studio, you aren’t prompted to create a project. But when you now go to
-create a project, you’ll have a prompt to add it to a currently open workspace:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-2.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Visually, there’s little to distinguish workspace+project from workspace-inside-project:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-3.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I don’t know why the embedded workspace has ‘?’ marks next to items, and the separate workspace
-has ‘A’ characters.&lt;/p&gt;
-
-&lt;p&gt;On disk, we now have a named workspace visible in the Finder:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;xplore.xcworkspace/
-└── contents.xcworkspacedata&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;contents.xcworkspacedata&lt;/code&gt; looks like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;Workspace&lt;/span&gt;
-   &lt;span class=&quot;na&quot;&gt;version =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;FileRef&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;location =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;group:xplore.xcodeproj&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/FileRef&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/Workspace&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that the location is now &lt;code&gt;group:xplore.xcodeproj&lt;/code&gt;. This time, our base is the directory containing
-the opened workspace file.&lt;/p&gt;
-
-&lt;h1 id=&quot;project-file-walkthrough&quot;&gt;Project file walkthrough&lt;/h1&gt;
-
-&lt;p&gt;The project file &lt;code&gt;xplore.xcodeproj&lt;/code&gt; is identical, whether it is attached to an external
-workspace or hosting its own embedded workspace. Let’s walk through it a bit.&lt;/p&gt;
-
-&lt;p&gt;This is the on-disk layout, ignoring non-important files:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;xplore.xcodeproj
-└── project.pbxproj&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The project file itself is the &lt;code&gt;project.pbxproj&lt;/code&gt; file inside the xplore.xcodeproj package.&lt;/p&gt;
-
-&lt;p&gt;This is the top-level view of a project file, ignoring the contents of the &lt;code&gt;objects&lt;/code&gt; key:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;// !&lt;span class=&quot;nv&quot;&gt;$*&lt;/span&gt;UTF8*&lt;span class=&quot;nv&quot;&gt;$!&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;archiveVersion&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;classes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;objectVersion&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 46&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;objects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-...
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;rootObject&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 999A68361CC86ECD0001FC48 /* Project object */&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is using the text version of NeXt/Mac OS X plist files; this format is now obsolete except
-for Xcode, and I think Xcode 7 is now switching to XML, which is a pity, because the text version
-is straightforward to read. Plist files have numbers, strings, uuids (which are really just strings of
-hexadecimal characters), lists and dictionaries.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;archiveVersion&lt;/code&gt; is always 1, and &lt;code&gt;classes&lt;/code&gt; is always (?) empty.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;objectVersion&lt;/code&gt; indicates the project format. As you can see, this project was made with Xcode 3.2
-compatibility:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;39: something really old, when the project files were called .xcode&lt;/li&gt;
-  &lt;li&gt;42: Xcode 2.4&lt;/li&gt;
-  &lt;li&gt;44: Xcode 3.0&lt;/li&gt;
-  &lt;li&gt;45: Xcode 3.1 compatible&lt;/li&gt;
-  &lt;li&gt;46: Xcode 3.2 compatible&lt;/li&gt;
-  &lt;li&gt;47: Xcode 6.3 compatible&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;objects&lt;/code&gt; is a dictionary containing all the objects in the project, as &lt;code&gt;key&lt;/code&gt; = &lt;code&gt;value&lt;/code&gt;, where &lt;code&gt;value&lt;/code&gt;
-can be one of the aforementioned number, string, uuid, list or dictionary. The keys in our dictionary
-are always uuids. There doesn’t appear to be any rule as to the length of the uuids, I’ve seen both
-24-character (12-byte) and 48-character (24-byte) uuids in Xcode projects. I’ve even see 47-character
-uuids work (a bug in many versions of Mac Premake up through at least 5.0.0-alpha8). Xcode seems to
-be forgiving, as long as the uuids don’t collide.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;rootObject&lt;/code&gt; points to a &lt;code&gt;PBXProject&lt;/code&gt; object that is the root for this project. There’s only one
-&lt;code&gt;PBXProject&lt;/code&gt; object in our project file, and this is typical.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin PBXProject section */
-        999A68361CC86ECD0001FC48 /* Project object */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXProject&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;attributes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;LastUpgradeCheck&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0610&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;ORGANIZATIONNAME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Blizzard Entertainment&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;TargetAttributes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;nv&quot;&gt;999A683D1CC86ECD0001FC48&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                        &lt;span class=&quot;nv&quot;&gt;CreatedOnToolsVersion&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 6.1.1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildConfigurationList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 999A68391CC86ECD0001FC48 /* Build configuration list &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; PBXProject &lt;span class=&quot;s2&quot;&gt;&amp;quot;xplore&amp;quot;&lt;/span&gt; */&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;compatibilityVersion&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Xcode 3.2&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;developmentRegion&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; English&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;hasScannedForEncodings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;knownRegions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                en,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;mainGroup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 999A68351CC86ECD0001FC48&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;productRefGroup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 999A683F1CC86ECD0001FC48 /* Products */&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;projectDirPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;projectRoot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;targets&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A683D1CC86ECD0001FC48 /* xplore */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End PBXProject section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;mainGroup&lt;/code&gt; is the &lt;code&gt;PBXGroup&lt;/code&gt; that is the root of the displayed items. Don’t confuse this with build
-instructions; this is purely for visual looks.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin PBXGroup section */
-        &lt;span class=&quot;nv&quot;&gt;999A68351CC86ECD0001FC48&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXGroup&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A68401CC86ECD0001FC48 /* xplore */,
-                999A683F1CC86ECD0001FC48 /* Products */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;sourceTree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;group&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Groups can contain files and more groups. The main group contains two more groups:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;...
-        999A683F1CC86ECD0001FC48 /* Products */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXGroup&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A683E1CC86ECD0001FC48 /* xplore */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Products&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;sourceTree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;group&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        999A68401CC86ECD0001FC48 /* xplore */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXGroup&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A68411CC86ECD0001FC48 /* main.cpp */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; xplore&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;sourceTree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;group&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End PBXGroup section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Each of these groups contain files - or rather, &lt;code&gt;PBXFileReference&lt;/code&gt; objects, which actually hold the
-information about files:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin PBXFileReference section */
-        999A683E1CC86ECD0001FC48 /* xplore */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXFileReference&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;explicitFileType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;compiled.mach-o.executable&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;includeInIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; xplore&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;sourceTree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; BUILT_PRODUCTS_DIR&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        999A68411CC86ECD0001FC48 /* main.cpp */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXFileReference&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;lastKnownFileType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sourcecode.cpp.cpp&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; main.cpp&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;sourceTree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;group&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End PBXFileReference section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;For some reason, this is the one dictionary that Xcode puts into a single-line flattened form,
-so for readability, I’ve shown the &lt;code&gt;PBXFileReference&lt;/code&gt; items in indented form, instead of what’s in the
-Xcode project file. All other items are displayed exactly as they are in the project file.&lt;/p&gt;
-
-&lt;p&gt;Since Xcode likes to put helpful comments in the project file, we can see that this matches the GUI display:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-3.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you were to rearrange the order of the items in &lt;code&gt;mainGroup&lt;/code&gt;, then the GUI output would change.&lt;/p&gt;
-
-&lt;p&gt;Going back to the &lt;code&gt;PBXProject&lt;/code&gt; object, note that there is one other group that gets top billing, Products:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;productRefGroup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 999A683F1CC86ECD0001FC48 /* Products */&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In Xcode parlance, products are the things that are built. Products are built by targets, and configurations
-are orthogonal groups of build settings that can be applied to any number of targets or projects.&lt;/p&gt;
-
-&lt;p&gt;I assume that Products gets top billing in the &lt;code&gt;PBXProject&lt;/code&gt; object so that the various actions in
-Xcode know what to operate on.&lt;/p&gt;
-
-&lt;p&gt;The two build-related items in the &lt;code&gt;PBXProject&lt;/code&gt; are &lt;code&gt;buildConfigurationList&lt;/code&gt;, which points to the
-project configurations available, and &lt;code&gt;targets&lt;/code&gt;, which is the list of build targets themselves.&lt;/p&gt;
-
-&lt;p&gt;In this simple project, we have one build target&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin PBXProject section */
-        999A68361CC86ECD0001FC48 /* Project object */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-...
-            &lt;span class=&quot;nv&quot;&gt;targets&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A683D1CC86ECD0001FC48 /* xplore */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End PBXProject section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This points to a &lt;code&gt;PBXNativeTarget&lt;/code&gt; object, which describes how to build a native Mac OS X binary:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin PBXNativeTarget section */
-        999A683D1CC86ECD0001FC48 /* xplore */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXNativeTarget&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildConfigurationList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 999A68451CC86ECD0001FC48 /* Build configuration list &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; PBXNativeTarget &lt;span class=&quot;s2&quot;&gt;&amp;quot;xplore&amp;quot;&lt;/span&gt; */&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildPhases&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A683A1CC86ECD0001FC48 /* Sources */,
-                999A683B1CC86ECD0001FC48 /* Frameworks */,
-                999A683C1CC86ECD0001FC48 /* CopyFiles */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildRules&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; xplore&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;productName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; xplore&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;productReference&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 999A683E1CC86ECD0001FC48 /* xplore */&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;productType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;com.apple.product-type.tool&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End PBXNativeTarget section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Once again, we have a reference &lt;code&gt;productReference&lt;/code&gt; to the Products group, presumably because that’s
-how Xcode finds where to put the built target.&lt;/p&gt;
-
-&lt;p&gt;The actual binary type is noted by the &lt;code&gt;productType&lt;/code&gt; key: its value declares this to be a command-line
-tool, e.g. &lt;code&gt;com.apple.product-type.tool&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Note that the target also has a &lt;code&gt;buildConfigurationList&lt;/code&gt;. In this case, this points to configurations
-for the target, which are distinct from configurations for the project. So let’s look at configurations
-for a bit.&lt;/p&gt;
-
-&lt;p&gt;The project configurations are in a &lt;code&gt;XCConfigurationList&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin XCConfigurationList section */
-        999A68391CC86ECD0001FC48 /* Build configuration list &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; PBXProject &lt;span class=&quot;s2&quot;&gt;&amp;quot;xplore&amp;quot;&lt;/span&gt; */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; XCConfigurationList&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildConfigurations&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A68431CC86ECD0001FC48 /* Debug */,
-                999A68441CC86ECD0001FC48 /* Release */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;defaultConfigurationIsVisible&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;defaultConfigurationName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Release&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Xcode defaults to having a Debug configuration and a Release configuration. While these are pretty
-common, there is no standard configuration. Do not count on all projects having Debug and Release
-configs.&lt;/p&gt;
-
-&lt;p&gt;Xcode’s project wizard creates a pretty comprehensive Debug and Release configuration for you.
-And in point of fact, you’ll find out that a lot of these settings can be omitted, because Xcode
-defaults are pretty reasonable. This is a matter of style. Note that defining everything possible
-is many hundreds of settings; you might get tired after a bit.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin XCBuildConfiguration section */
-        999A68431CC86ECD0001FC48 /* Debug */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; XCBuildConfiguration&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildSettings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;ALWAYS_SEARCH_USER_PATHS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; NO&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_CXX_LANGUAGE_STANDARD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;gnu++0x&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_CXX_LIBRARY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;libc++&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_ENABLE_MODULES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_ENABLE_OBJC_ARC&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_WARN_BOOL_CONVERSION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_WARN_CONSTANT_CONVERSION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_WARN_DIRECT_OBJC_ISA_USAGE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES_ERROR&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_WARN_EMPTY_BODY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_WARN_ENUM_CONVERSION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_WARN_INT_CONVERSION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_WARN_OBJC_ROOT_CLASS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES_ERROR&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_WARN_UNREACHABLE_CODE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;CLANG_WARN__DUPLICATE_METHOD_MATCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;COPY_PHASE_STRIP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; NO&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;ENABLE_STRICT_OBJC_MSGSEND&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_C_LANGUAGE_STANDARD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; gnu99&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_DYNAMIC_NO_PIC&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; NO&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_OPTIMIZATION_LEVEL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_PREPROCESSOR_DEFINITIONS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                    &lt;span class=&quot;s2&quot;&gt;&amp;quot;DEBUG=1&amp;quot;&lt;/span&gt;,
-                    &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(inherited)&amp;quot;&lt;/span&gt;,
-                &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_SYMBOLS_PRIVATE_EXTERN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; NO&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_WARN_64_TO_32_BIT_CONVERSION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_WARN_ABOUT_RETURN_TYPE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES_ERROR&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_WARN_UNDECLARED_SELECTOR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_WARN_UNINITIALIZED_AUTOS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES_AGGRESSIVE&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_WARN_UNUSED_FUNCTION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;GCC_WARN_UNUSED_VARIABLE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;MACOSX_DEPLOYMENT_TARGET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 10.9&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;MTL_ENABLE_DEBUG_INFO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;ONLY_ACTIVE_ARCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; YES&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;SDKROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; macosx&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Debug&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;By comparison, target configurations are much leaner, and are usually just about settings
-related to the target itself. This is the &lt;code&gt;XCConfigurationList&lt;/code&gt; for target settings&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;...
-        999A68451CC86ECD0001FC48 /* Build configuration list &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; PBXNativeTarget &lt;span class=&quot;s2&quot;&gt;&amp;quot;xplore&amp;quot;&lt;/span&gt; */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; XCConfigurationList&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildConfigurations&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A68461CC86ECD0001FC48 /* Debug */,
-                999A68471CC86ECD0001FC48 /* Release */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;defaultConfigurationIsVisible&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End XCConfigurationList section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And here is the Debug target configuration:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;999A68461CC86ECD0001FC48 /* Debug */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; XCBuildConfiguration&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildSettings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;PRODUCT_NAME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(TARGET_NAME)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Debug&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The variable &lt;code&gt;$(TARGET_NAME)&lt;/code&gt; contains the value from the &lt;code&gt;name&lt;/code&gt; key in &lt;code&gt;PBXNativeTarget&lt;/code&gt;, and this
-in turn is creating an environment variable that is passed to the compiler when it runs. In the GUI
-configuration editor for target, it looks like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-4.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And I have turned on two settings in the GUI, Show Setting Names and Show Definitions, to see
-the underlying names instead of “human-readable” ones:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-5.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Returning to the &lt;code&gt;PBXNativeTarget&lt;/code&gt; object, the most important part from the point of actually
-doing stuff is the &lt;code&gt;buildPhases&lt;/code&gt; key, which is a list of build phases.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin PBXNativeTarget section */
-        999A683D1CC86ECD0001FC48 /* xplore */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-...
-            &lt;span class=&quot;nv&quot;&gt;buildPhases&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A683A1CC86ECD0001FC48 /* Sources */,
-                999A683B1CC86ECD0001FC48 /* Frameworks */,
-                999A683C1CC86ECD0001FC48 /* CopyFiles */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-...
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End PBXNativeTarget section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;These are all magic singleton objects. There are a number of possible phases, not all projects
-have all phases. Here are the possible phases I know about&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;PBXAppleScriptBuildPhase&lt;/li&gt;
-  &lt;li&gt;PBXCopyFilesBuildPhase&lt;/li&gt;
-  &lt;li&gt;PBXFileReference&lt;/li&gt;
-  &lt;li&gt;PBXFrameworksBuildPhase&lt;/li&gt;
-  &lt;li&gt;PBXHeadersBuildPhase&lt;/li&gt;
-  &lt;li&gt;PBXResourcesBuildPhase&lt;/li&gt;
-  &lt;li&gt;PBXShellScriptBuildPhase&lt;/li&gt;
-  &lt;li&gt;PBXSourcesBuildPhase&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The two most important ones are &lt;code&gt;PBXSourcesBuildPhase&lt;/code&gt; for building your own sources, and then
-&lt;code&gt;PBXFrameworksBuildPhase&lt;/code&gt; for linking in external libraries and frameworks. In our Xcode wizard
-generated project, we also have a &lt;code&gt;PBXCopyFilesBuildPhase&lt;/code&gt;, although this is a legacy of how
-Unix command-line tools are built (it copies man files into &lt;code&gt;/usr/share/man/man1/&lt;/code&gt;, but in vain).
-We’ll ignore a Copy Files phase for now.&lt;/p&gt;
-
-&lt;p&gt;If you want to see this in the GUI, select a target (in our case, xplore) and click on the
-Build Phases tab. Since we have no files to copy, Copy Files says “0 items”, and since we have
-no frameworks or libraries to link against yet, Link Binary With Libraries also says “0 items”.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-7.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since this is a small project, our Sources Build phase is short&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin PBXSourcesBuildPhase section */
-        999A683A1CC86ECD0001FC48 /* Sources */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXSourcesBuildPhase&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildActionMask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2147483647&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                999A68421CC86ECD0001FC48 /* main.cpp in Sources */,
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;runOnlyForDeploymentPostprocessing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End PBXSourcesBuildPhase section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We have one file to build, indicated with a &lt;code&gt;PBXBuildFile&lt;/code&gt; object in the &lt;code&gt;files&lt;/code&gt; list in the
-&lt;code&gt;PBXSourcesBuildPhase&lt;/code&gt; object.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin PBXBuildFile section */
-        999A68421CC86ECD0001FC48 /* main.cpp in Sources */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXBuildFile&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;fileRef&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 999A68411CC86ECD0001FC48 /* main.cpp */&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End PBXBuildFile section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This in turn points to a &lt;code&gt;PBXFileReference&lt;/code&gt; object. Xcode’s indirection is a little annoying,
-but keeps duplication and duplication-related error to a minimum. In this specific case, I’m not sure
-what is gained, because the build file item has no extra annotations on it, but maybe other kinds
-of objects have some build-specific annotation that goes here.&lt;/p&gt;
-
-&lt;p&gt;The Xcode wizard added a Build Frameworks phase for us as a courtesy, but there’s nothing in it:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/* Begin PBXFrameworksBuildPhase section */
-        999A683B1CC86ECD0001FC48 /* Frameworks */ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;isa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; PBXFrameworksBuildPhase&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;buildActionMask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2147483647&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;runOnlyForDeploymentPostprocessing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-/* End PBXFrameworksBuildPhase section */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And, that’s the entire wizard-generated project file.&lt;/p&gt;
-
-&lt;h1 id=&quot;adding-a-library-to-our-project&quot;&gt;Adding a library to our project&lt;/h1&gt;
-
-&lt;p&gt;Let’s add a static library to our workspace. This is File -&amp;gt; New -&amp;gt; Project, and choosing static
-library:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-8.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We will name it xlib, add it to our workspace, and put it in the top group.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-10.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, let’s look at the workspace. We see a new project added (it’s in a folder because Xcode likes
-to do things that way, but we could move it around and edit the workspace to match):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;Workspace&lt;/span&gt;
-   &lt;span class=&quot;na&quot;&gt;version =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;FileRef&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;location =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;group:xplore.xcodeproj&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/FileRef&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;FileRef&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;location =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;group:xlib/xlib.xcodeproj&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/FileRef&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/Workspace&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;At this point, we have a new xlib.xcodeproj that will build a library (assuming we add sources
-to it), but there are no changes to the xplore.xcodeproj/project.pbxproj file. And if we put code
-into our static library and built, we would find out that this library is not being linked to from
-our main command-line binary.&lt;/p&gt;
-
-&lt;p&gt;So we add xlib into the Build Frameworks phase:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/xplore-11.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, if we diff the project before and after adding this library to the Build Frameworks phase,
-we see a handful of important changes to &lt;code&gt;xplore.xcodeproj/project.pbxproj&lt;/code&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;a new &lt;code&gt;PBXBuildFile&lt;/code&gt; entry to link against libxlib.a&lt;/li&gt;
-  &lt;li&gt;a new &lt;code&gt;PBXFileReference&lt;/code&gt; object pointing to the file libxlib.a&lt;/li&gt;
-  &lt;li&gt;an &lt;code&gt;files&lt;/code&gt; entry in the &lt;code&gt;PBXFrameworksBuildPhase&lt;/code&gt; object&lt;/li&gt;
-  &lt;li&gt;a libxlib.a entry added to the top &lt;code&gt;PBXGroup&lt;/code&gt; (which is a weird place to put it)&lt;/li&gt;
-  &lt;li&gt;a library search path added to the &lt;code&gt;XCBuildConfiguration&lt;/code&gt; for the target&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 20 Apr 2016 19:21:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/04/20/xcode-xcworkspace-and-xcodeproj-part2.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/20/xcode-xcworkspace-and-xcodeproj-part2.html</guid>
-        
-        <category>programming</category>
-        
-        <category>Xcode</category>
         
         
         <category>dev</category>

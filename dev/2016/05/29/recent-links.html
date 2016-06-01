@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Recent links</title>
+  <meta name="description" content="Good practice for patching/hooking DirectX">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/05/29/recent-links.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,49 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Recent links</h1>
+    <p class="post-meta">May 29, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">May 29, 2016</span>
+  <article class="post-content">
+    <p>Good practice for patching/hooking DirectX</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/05/29/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 24, 2016</span>
+<ul>
+  <li>if Present() returns D3DERR_DEVICELOST, then free every resource you are holding</li>
+  <li>hook TestCooperativeLevel and Reset to be in sync with what the game is thinking (and again, if you get D3DERR_DEVICELOST, free everything and wait)</li>
+  <li>what’s important is freeing everything allocated into the D3DPOOL_DEFAULT memory class. But if you are holding resources, you’ll prevent the app from closing DirectX (which it might want to do in order to do a stronger version of reset).</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/05/24/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 22, 2016</span>
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb174714(v=vs.85).aspx">Lost Devices (Direct3D 9)</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/05/22/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 8, 2016</span>
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb174423(v=vs.85).aspx">IDirect3DDevice9::Present method</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/05/08/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 3, 2016</span>
+<p><a href="https://github.com/TsudaKageyu/minhook">TsudaKageyu/minhook</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/05/03/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><a href="http://stackoverflow.com/questions/27970403/create-directx9texture-from-rgba-const-char-buffer">Create DirectX9Texture from RGBA (const char*) buffer</a></p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb205073(v=vs.85).aspx">Direct3D 9 to Direct3D 10 Considerations (Direct3D 10)</a></p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p><a href="http://www.cplusplus.com/forum/windows/53725/">Help with DirectX 9 Textures</a></p>
+
+<p><a href="http://www.rastertek.com/dx11tut11.html">Tutorial 11: 2D Rendering</a></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb219690(v=vs.85).aspx">Directly Mapping Texels to Pixels (Direct3D 9)</a></p>
+
+<p><a href="http://www.gamedev.net/page/resources/_/technical/directx-and-xna/2d-in-direct3d-using-textured-quads-r1972">2D in Direct3D using Textured Quads</a></p>
+
+<p><a href="http://stackoverflow.com/questions/16346184/drawing-a-texture-to-the-screen">Drawing a Texture to the Screen</a></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb205858(v=vs.85).aspx">IDirect3DDevice9::UpdateTexture method</a></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb205913(v=vs.85).aspx">IDirect3DTexture9::LockRect method</a></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb205857(v=vs.85).aspx">IDirect3DDevice9::UpdateSurface method</a></p>
+
+  </article>
 
 </div>
 
