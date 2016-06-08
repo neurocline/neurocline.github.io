@@ -1,0 +1,125 @@
+---
+layout: post
+title:  "Direct3D"
+date:   2016-06-07 19:34:00 PM
+categories: dev
+tags: graphics windows directx
+---
+
+Most Direct3D books and articles are crap. Microsoft's documentation is ok but sparse, and
+really meant for experts. You also need to know a little bit about COM.
+
+[Compiling Shaders](Compiling Shaders)
+
+- [fxc](https://msdn.microsoft.com/en-us/library/windows/desktop/bb232919(v=vs.85).aspx)
+- [D3DCompile](https://msdn.microsoft.com/en-us/library/windows/desktop/dd607324(v=vs.85).aspx)
+- [HLSL, FXC, and D3DCompile](https://blogs.msdn.microsoft.com/chuckw/2012/05/07/hlsl-fxc-and-d3dcompile/)
+- [What’s up with D3DCompiler_xx.DLL?](https://blogs.msdn.microsoft.com/chuckw/2010/04/21/whats-up-with-d3dcompiler_xx-dll/)
+
+If shaders aren't changed a lot, then it's probably best to compile them with fxc, perhaps
+to header files. Otherwise, you'll want to distribute d3dcompiler_46.dll or d3dcompiler_47.dll
+with your program. But contrary to earlier information, as of Windows 8.1, d3dcompiler_47.dll is
+part of the OS.
+
+Pixel shaders - the number is shader model, and is also hardware-dependent
+
+- ps_5_0: Direct3D 11.0/11.1
+- ps_4_1: Direct3D 10.1
+- ps_4_0: Direct3D 10.0
+- ps_4_0_level_9_3: Direct3D 9.3
+- ps_3_0: Direct3D 9 legacy
+
+Vertex shaders
+
+- vs_5_0: Direct3D 11.0/11.1
+- vs_4_1: Direct3D 10.1
+- vs_4_0: Direct3D 10.0
+- vs_4_0_level_9_3: Direct3D 9.3
+- vs_3_0: Direct3D 9 legacy
+
+Effects are considered legacy now.
+
+[DXGI Overview](https://msdn.microsoft.com/en-us/library/windows/desktop/bb205075(v=vs.85).aspx)
+
+- DXGI 1.0: Windows Vista+
+- DXGI 1.1: Windows Vista with Service Pack 2, Windows 7+
+- DXGI 1.2: Windows 7 with Platform Update, Windows 8+
+- DXGI 1.3: Windows 8.1+
+
+[CreateDXGIFactory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb204862(v=vs.85).aspx)
+
+In Direct3D 10 and up, this is the gateway function. It has several overrides
+
+- [CreateDXGIFactory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb204862(v=vs.85).aspx) - DXGI 1.0
+- [CreateDXGIFactory1](https://msdn.microsoft.com/en-us/library/windows/desktop/ff471318(v=vs.85).aspx) - DXGI 1.1
+- [CreateDXGIFactory2]() - DXGI 1.3
+
+DllMain cannot call CreateDXGIFactory[N], so that LoadLibrary dependency loops don't form.
+
+After creating a factory, use EnumAdapters to find the IDXGIAdapter interfaces.
+
+You should not mix DXGI factories in an application. Use one of IDXGIFactory, IDXGIFactory1 etc.
+
+[IDXGIFactory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb174535(v=vs.85).aspx)
+
+This is the interface used to create DXGI objects like swap chains.
+
+- [IDXGIFactory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb174535(v=vs.85).aspx) - DXGI 1.0
+- [IDXGIFactory1](https://msdn.microsoft.com/en-us/library/windows/desktop/ff471335(v=vs.85).aspx) - DXGI 1.1
+- [IDXGIFactory2](https://msdn.microsoft.com/en-us/library/windows/desktop/hh404556(v=vs.85).aspx) - DXGI 1.2
+- [IDXGIFactory3](https://msdn.microsoft.com/en-us/library/windows/desktop/dn457942(v=vs.85).aspx) - DXGI 1.3
+- [IDXGIFactory4](https://msdn.microsoft.com/en-us/library/windows/desktop/mt427785(v=vs.85).aspx) - DXGI 1.4
+- [IDXGIFactory5](https://msdn.microsoft.com/en-us/library/windows/desktop/mt722566(v=vs.85).aspx) - DXGI 1.5
+
+If you have a device, you can get the factory from it, so that you can create a compatible swap chain
+
+{% highlight c++ %}
+IDXGIDevice * pDXGIDevice = nullptr;
+hr = g_pd3dDevice->QueryInterface(__uuidof(IDXGIDevice), (void **)&pDXGIDevice);
+
+IDXGIAdapter * pDXGIAdapter = nullptr;
+hr = pDXGIDevice->GetAdapter( &pDXGIAdapter );
+
+IDXGIFactory * pIDXGIFactory = nullptr;
+pDXGIAdapter->GetParent(__uuidof(IDXGIFactory), (void **)&pIDXGIFactory);
+{% endhighlight %}
+
+[IDXGIAdapter]()
+
+This is basically a video card, which can be one or more GPUs, DACs and video memory.
+
+- [IDXGIAdapter](https://msdn.microsoft.com/en-us/library/windows/desktop/bb174523(v=vs.85).aspx) - DXGI 1.0
+- [IDXGIAdapter1](https://msdn.microsoft.com/en-us/library/windows/desktop/ff471329(v=vs.85).aspx) - DXGI 1.1
+- [IDXGIAdapter2](https://msdn.microsoft.com/en-us/library/windows/desktop/hh404537(v=vs.85).aspx) - DXGI 1.2
+- [IDXGIAdapter3](https://msdn.microsoft.com/en-us/library/windows/desktop/dn933221(v=vs.85).aspx) - DXGI 1.3
+
+One way to get an adapter is to call [IDXGIFactory::EnumAdapters](https://msdn.microsoft.com/en-us/library/windows/desktop/ff471336(v=vs.85).aspx). Note that if adapters are added or removed (e.g. a laptop), you need to destroy and recreate the factory before you enumerate again.
+
+EnumAdapters(0, &adapter) returns the adapter that holds the output that is considered the primary monitor.
+
+[DXGIOutput](https://msdn.microsoft.com/en-us/library/windows/desktop/bb174546(v=vs.85).aspx)
+
+This represents an output of an adapter, typically a monitor.
+
+- [IDXGIOutput](https://msdn.microsoft.com/en-us/library/windows/desktop/bb174546(v=vs.85).aspx) - DXGI 1.0
+- [IDXGIOutput1](https://msdn.microsoft.com/en-us/library/windows/desktop/hh404597(v=vs.85).aspx) - DXGI 1.2
+- [IDXGIOutput2](https://msdn.microsoft.com/en-us/library/windows/desktop/dn280410(v=vs.85).aspx) - DXGI 1.3
+- [IDXGIOutput3](https://msdn.microsoft.com/en-us/library/windows/desktop/dn903669(v=vs.85).aspx) - DXGI 1.3
+- [IDXGIOutput4](https://msdn.microsoft.com/en-us/library/windows/desktop/dn903671(v=vs.85).aspx) - DXGI 1.4
+- [IDXGIOutput5](https://msdn.microsoft.com/en-us/library/windows/desktop/mt679495(v=vs.85).aspx) - DXGI 1.5
+
+Call [IDXGIAdapter::EnumOutputs](https://msdn.microsoft.com/en-us/library/windows/desktop/bb174525(v=vs.85).aspx) to get the outputs for a specific adapter.
+
+The number of outputs can change dynamically (monitors plugged or unplugged). There will be
+a WM_DISPLAYCHANGE message, and at that point applications should check to make sure that all
+[HMONITOR](HMONITOR and the Device Context)s are valid. I assume this means re-enumerate? Also, I'm not sure what this line means:
+"A physical display has the same HMONITOR as long as it is part of the desktop". Or maybe use
+[GetMonitorInfo](https://msdn.microsoft.com/en-us/library/windows/desktop/dd144901(v=vs.85).aspx) to see if the HMONITOR is valid?
+
+EnumOutputs(0, &output) returns the output that is considered the primary monitor.
+
+[Introduction to Multithreading in Direct3D 11](https://msdn.microsoft.com/en-us/library/windows/desktop/ff476891(v=vs.85).aspx)
+
+[High DPI](https://msdn.microsoft.com/en-us/library/windows/desktop/dd464646(v=vs.85).aspx)
+
+[Positioning Objects on a Multiple Display Setup](https://msdn.microsoft.com/en-us/library/windows/desktop/dd162826(v=vs.85).aspx)
