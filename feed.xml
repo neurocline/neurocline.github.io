@@ -6,9 +6,57 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Jun 2016 23:22:31 -0700</pubDate>
-    <lastBuildDate>Mon, 13 Jun 2016 23:22:31 -0700</lastBuildDate>
+    <pubDate>Tue, 14 Jun 2016 18:27:45 -0700</pubDate>
+    <lastBuildDate>Tue, 14 Jun 2016 18:27:45 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;Windows&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms684320(v=vs.85).aspx&quot;&gt;OpenProcess&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms684880(v=vs.85).aspx&quot;&gt;Process Security and Access Rights&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms687069(v=vs.85).aspx&quot;&gt;Wait Functions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms686701(v=vs.85).aspx&quot;&gt;Taking a Snapshot and Viewing Processes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms686724(v=vs.85).aspx&quot;&gt;Terminating a Thread&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms682658(v=vs.85).aspx&quot;&gt;ExitProcess function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms683189(v=vs.85).aspx&quot;&gt;GetExitCodeProcess function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms683190(v=vs.85).aspx&quot;&gt;GetExitCodeThread function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms644959(v=vs.85).aspx&quot;&gt;Hooks Overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms644990.aspx&quot;&gt;SetWindowsHookEx function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms644981.aspx&quot;&gt;GetMsgProc callback function&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;DLL and notification and injection&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24303817/notification-on-thread-destroy&quot;&gt;Notification on thread destroy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/378380/how-can-i-debug-a-win32-process-that-unexpectedly-terminates-silently&quot;&gt;How can I debug a win32 process that unexpectedly terminates silently?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/4610/Three-Ways-to-Inject-Your-Code-into-Another-Proces&quot;&gt;Three Ways to Inject Your Code into Another Process&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/6453084/how-to-terminate-worker-thread-properly-in-an-injected-dll&quot;&gt;How to terminate worker thread properly in an injected DLL?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://resources.infosecinstitute.com/using-createremotethread-for-dll-injection-on-windows/&quot;&gt;Using CreateRemoteThread for DLL Injection on Windows&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.rohitab.com/discuss/topic/40160-inject-code-into-other-processes-using-pe-injection/&quot;&gt;Inject code into other processes using PE injection&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/26869973/global-hook-using-wh-getmessage-and-wh-keyboard&quot;&gt;Global hook using WH_GETMESSAGE and WH_KEYBOARD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://disman.tl/2015/03/16/cross-architecture-reflective-dll-inection.html&quot;&gt;Cross-Architecture Reflective DLL Injection&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3155782/what-is-the-difference-between-wm-quit-wm-close-and-wm-destroy-in-a-windows-pr&quot;&gt;What is the difference between WM_QUIT, WM_CLOSE, and WM_DESTROY in a windows program?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/13915332/hook-window-message-loop-wm-close&quot;&gt;Hook Window Message loop WM_CLOSE&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/11647689/hooking-to-the-windows-process&quot;&gt;Hooking to the windows process&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/2082/API-hooking-revealed&quot;&gt;API hooking revealed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/proteansec/visual-studio-projects&quot;&gt;proteansec/visual-studio-projects&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Jun 2016 22:56:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/06/14/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/06/14/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -497,213 +545,6 @@ a WM_DISPLAYCHANGE message, and at that point applications should check to make 
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/01/recent-links.html</guid>
         
         <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Local ReadTheDocs</title>
-        <description>&lt;p&gt;FYI - failed. Maybe I’ll succeed when I try again.&lt;/p&gt;
-
-&lt;p&gt;I want to have a local ReadTheDocs install. Well, eventually running on a server on AWS, but
-for now on a local machine. Here’s my little diary of getting a loccal ReadTheDocs server running.&lt;/p&gt;
-
-&lt;p&gt;I’m on Windows 7, behind the times a bit (Windows 10 is nicer).&lt;/p&gt;
-
-&lt;p&gt;Following &lt;a href=&quot;http://read-the-docs.readthedocs.io/en/latest/install.html&quot;&gt;Installation&lt;/a&gt; from ReadTheDocs. Hmm,
-never used &lt;code&gt;virtualenv&lt;/code&gt; before.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip install virtualenv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;and then a little Stack Overflow&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/4527958/python-virtualenv-questions&quot;&gt;http://stackoverflow.com/questions/4527958/python-virtualenv-questions&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;leads me to do&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;virtualenv rtd
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;rtd
-Scripts&lt;span class=&quot;se&quot;&gt;\a&lt;/span&gt;ctivate.bat
-mkdir checkouts
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;checkouts
-git clone https://github.com/rtfd/readthedocs.org.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;readthedocs.org
-pip install -r requirements.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Total time to this point, less than 5 minutes. Now we do some database stuff, apparently.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;manage.py migrate&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hmm, no Windows support?&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;rtd&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; C:&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;rojects&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ython&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;td&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;heckouts&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;eadthedocs.org&amp;gt;manage.py migrate
-Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;C:\projects\python\rtd\checkouts\readthedocs.org\manage.py&amp;quot;&lt;/span&gt;, line 9, in &amp;lt;module&amp;gt;
-    from django.core.management import execute_from_command_line
-ImportError: No module named django.core.management&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And, StackOverflow tells me that this actually means I don’t have django installed. Hmm, I thought that
-the &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; line was meant to install Django.&lt;/p&gt;
-
-&lt;p&gt;Ah, it did, but I didn’t pay attention to errors in the &lt;code&gt;pip install&lt;/code&gt; output&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;HTTP error &lt;span class=&quot;m&quot;&gt;500&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; getting https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;de307d2771370cbbdb866282a6093fc9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from https://pypi.python.org/simple/lxml/&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Could not install requirement &lt;span class=&quot;nv&quot;&gt;lxml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;3.3.5 from https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;de307d2771370cbbdb866282a6093fc9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from -r requirements/pip.txt &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;line 22&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; because of error &lt;span class=&quot;m&quot;&gt;500&lt;/span&gt; Server Error: Internal Server Error &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; url: https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl
-Could not install requirement &lt;span class=&quot;nv&quot;&gt;lxml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;3.3.5 from https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;de307d2771370cbbdb866282a6093fc9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from -r requirements/pip.txt &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;line 22&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; because of HTTP error &lt;span class=&quot;m&quot;&gt;500&lt;/span&gt; Server Error: Internal Server Error &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; url: https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; URL https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;de307d2771370cbbdb866282a6093fc9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from https://pypi.python.org/simple/lxml/&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is annoying.&lt;/p&gt;
-
-&lt;p&gt;Apparently, this is because you can’t just &lt;code&gt;pip install lxml&lt;/code&gt; on Windows.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/23944465/installing-lxml-for-python-3-4-on-windows-x-86-32-bit-with-visual-studio-c-2&quot;&gt;http://stackoverflow.com/questions/23944465/installing-lxml-for-python-3-4-on-windows-x-86-32-bit-with-visual-studio-c-2&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Although, I’m not sure that’s what it means, now that I think about it, that’s silly, I think that post is
-just if you try to build from source. I was able to do this&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install
-Collecting lxml
-  Downloading lxml-3.6.0-cp27-none-win32.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3.0MB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;################################| 3.1MB 261kB/s&lt;/span&gt;
-Installing collected packages: lxml
-Successfully installed lxml-3.6.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;and it got and installed the latest version. So maybe it’s just that there no longer is a 3.3.5 version
-on PyPI. And that appears to be the case, the oldest version listed there is 3.4.4.&lt;/p&gt;
-
-&lt;p&gt;So what if I edit requirements/pip.txt? Can I get a working build?&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hmm, should I have uninstalled lxml 3.6.0? It seems to be downloading stuff. Also, it looks like there was a heck
-of a lot more to install. Holy crap. Virtualenv may be cool and all, but it’s like Docker, a cool solution for
-a problem that shouldn’t exist in the first place.&lt;/p&gt;
-
-&lt;p&gt;Wow, this is annoying. A nice, nasty error at maybe the end of install&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Exception:
-Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\basecommand.py&amp;quot;&lt;/span&gt;, line 209,
-in main
-    &lt;span class=&quot;nv&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; self.run&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;options, args&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\commands\install.py&amp;quot;&lt;/span&gt;, line
-317, in run
-    &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;options.prefix_path,
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\req\req_set.py&amp;quot;&lt;/span&gt;, line 743,
-in install
-    requirement.remove_temporary_source&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\req\req_install.py&amp;quot;&lt;/span&gt;, line 7
-59, in commit_uninstall
-    logger.error&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\req\req_uninstall.py&amp;quot;&lt;/span&gt;, line
- 142, in commit
-    rmtree&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;self.save_dir&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\_vendor\retrying.py&amp;quot;&lt;/span&gt;, line
-49, in wrapped_f
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; Retrying&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;*dargs, **dkw&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.call&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;f, *args, **kw&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\_vendor\retrying.py&amp;quot;&lt;/span&gt;, line
-212, in call
-    raise attempt.get&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\_vendor\retrying.py&amp;quot;&lt;/span&gt;, line
-247, in get
-    six.reraise&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;self.value&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;, self.value&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;, self.value&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;2&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\_vendor\retrying.py&amp;quot;&lt;/span&gt;, line
-200, in call
-    &lt;span class=&quot;nv&quot;&gt;attempt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Attempt&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;fn&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;*args, **kwargs&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, attempt_number, False&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\utils\__init__.py&amp;quot;&lt;/span&gt;, line 10
-2, in rmtree
-
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;C:\Python27\Lib\shutil.py&amp;quot;&lt;/span&gt;, line 247, in rmtree
-    rmtree&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;fullname, ignore_errors, onerror&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;C:\Python27\Lib\shutil.py&amp;quot;&lt;/span&gt;, line 247, in rmtree
-    rmtree&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;fullname, ignore_errors, onerror&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;C:\Python27\Lib\shutil.py&amp;quot;&lt;/span&gt;, line 247, in rmtree
-    rmtree&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;fullname, ignore_errors, onerror&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;C:\Python27\Lib\shutil.py&amp;quot;&lt;/span&gt;, line 247, in rmtree
-    rmtree&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;fullname, ignore_errors, onerror&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;C:\Python27\Lib\shutil.py&amp;quot;&lt;/span&gt;, line 252, in rmtree
-    onerror&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;os.remove, fullname, sys.exc_info&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\projects\python\rtd\lib\site-packages\pip\utils\__init__.py&amp;quot;&lt;/span&gt;, line 11
-4, in rmtree_errorhandler
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-WindowsError: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Error 5&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; Access is denied: &lt;span class=&quot;s1&quot;&gt;&amp;#39;c:\\users\\bfitz\\appdata\\local\\tem&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;p\\pip-09ja6p-uninstall\\projects\\python\\rtd\\scripts\\pip.exe&amp;#39;&lt;/span&gt;
-You are using pip version 8.0.2, however version 8.1.1 is available.
-You should consider upgrading via the &lt;span class=&quot;s1&quot;&gt;&amp;#39;python -m pip install --upgrade pip&amp;#39;&lt;/span&gt; comm
-and.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;It looks like it tried to uninstall a running program. And why the heck is it trying to run something from
-a temp folder? Ugly.&lt;/p&gt;
-
-&lt;p&gt;I’m building up notes for a second try (because maybe I broke my virtualenv Python folder), but let’s continue.
-Back to the database init.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;manage.py migrate&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hmm, same error as before.&lt;/p&gt;
-
-&lt;p&gt;(rtd) C:\projects\python\rtd\checkouts\readthedocs.org&amp;gt;manage.py migrate
-Traceback (most recent call last):
-  File “C:\projects\python\rtd\checkouts\readthedocs.org\manage.py”, line 9, in &lt;module&gt;
-    from django.core.management import execute_from_command_line
-ImportError: No module named django.core.management&lt;/module&gt;&lt;/p&gt;
-
-&lt;p&gt;Interestingly, I don’t see django installed in my virtualenv folder. Isn’t it supposed to be?
-The progress from the &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; claimed that it download Django&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Collecting &lt;span class=&quot;nv&quot;&gt;django&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;1.8.3 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from -r requirements/pip.txt &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;line 9&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-  Downloading Django-1.8.3-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;6.2MB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;################################| 6.2MB 161kB/s&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;but I see no evidence of it anywhere. I see a bunch of other *.whl files
-in &lt;code&gt;checkouts\readthedocs.org\deploy\wheels&lt;/code&gt;. I don’t know enough about Python, but it seems
-like I should see a &lt;code&gt;Django-1.8.3-py2.py3-none-any.whl&lt;/code&gt; file in there. Although, now I look at
-things, I don’t see many of the .whl files in there.&lt;/p&gt;
-
-&lt;p&gt;Maybe they went somewhere else on the hard disk? Temp folder? There are Django wheels in there, but
-not for Django itself.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&amp;gt;dir *django* /s /b
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\2&lt;/span&gt;1&lt;span class=&quot;se&quot;&gt;\7&lt;/span&gt;9&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;5&lt;span class=&quot;se&quot;&gt;\7&lt;/span&gt;e4204d7cc5dbb1c9941de3e9
-c18106417f30dd9179c892ab2&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_haystack-2.1.0-cp27-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\2&lt;/span&gt;5&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;8&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;0&lt;span class=&quot;se&quot;&gt;\8&lt;/span&gt;39a46f5f8c4d0d8f45e49695
-84913ffdbc62426216b1aa98d&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_celery_transactions-0.3.6-cp27-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\4&lt;/span&gt;5&lt;span class=&quot;se&quot;&gt;\6&lt;/span&gt;4&lt;span class=&quot;se&quot;&gt;\3&lt;/span&gt;5&lt;span class=&quot;se&quot;&gt;\4&lt;/span&gt;0b9cfc97eb9d9cbb4430accf
-2018c6fb2f106b9e2a24e6e60&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_guardian-1.3-py2.py3-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\5&lt;/span&gt;8&lt;span class=&quot;se&quot;&gt;\a&lt;/span&gt;e&lt;span class=&quot;se&quot;&gt;\7&lt;/span&gt;4&lt;span class=&quot;se&quot;&gt;\0&lt;/span&gt;9cb1c72d6c064bfca913e3e9
-9d8b13299ba2714b80c1ed4ec&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_dynamic_fixture-1.8.5-cp27-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\9&lt;/span&gt;c&lt;span class=&quot;se&quot;&gt;\4&lt;/span&gt;0&lt;span class=&quot;se&quot;&gt;\8&lt;/span&gt;7&lt;span class=&quot;se&quot;&gt;\4&lt;/span&gt;f8ddfc22173ba38155c7caad
-be36a07979403916ad57e22ce&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_copyright-1.0.0-cp27-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\9&lt;/span&gt;d&lt;span class=&quot;se&quot;&gt;\6&lt;/span&gt;0&lt;span class=&quot;se&quot;&gt;\a&lt;/span&gt;a&lt;span class=&quot;se&quot;&gt;\1&lt;/span&gt;45d80c18a9a99a3e8b5c5b1e
-6424209a51ea831bfc7f18a3f&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_secure-0.1.2-cp27-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\a&lt;/span&gt;5&lt;span class=&quot;se&quot;&gt;\8&lt;/span&gt;e&lt;span class=&quot;se&quot;&gt;\7&lt;/span&gt;5&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;5eede5318e889b6e2257ab85
-9a2db5cacc0f0208d0a3023c1&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_kombu-0.9.4-cp27-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;c&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;2&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;7&lt;span class=&quot;se&quot;&gt;\3&lt;/span&gt;5c317e3d293d88b2a515e85c
-ad1a0c56ccd63675d7ae99863&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_vanilla_views-1.0.4-cp27-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;e&lt;span class=&quot;se&quot;&gt;\f&lt;/span&gt;6&lt;span class=&quot;se&quot;&gt;\a&lt;/span&gt;f&lt;span class=&quot;se&quot;&gt;\8&lt;/span&gt;6c6954d4a2f0d811c6423780
-6de246856aee0fca90d2579bd&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_gravatar2-1.0.6-cp27-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\f&lt;/span&gt;0&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;c&lt;span class=&quot;se&quot;&gt;\8&lt;/span&gt;7&lt;span class=&quot;se&quot;&gt;\8&lt;/span&gt;927de315c2f138f1811d3e6a
-ccf5f40326d718f641972f713&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_cors_headers-0.13-cp27-none-any.whl
-c:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\f&lt;/span&gt;6&lt;span class=&quot;se&quot;&gt;\0&lt;/span&gt;4&lt;span class=&quot;se&quot;&gt;\6&lt;/span&gt;4&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;f5dc0eea5c486d22ffebb1c6
-1fac5653d406a6713a5077d39&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;jango_annoying-0.8.4-cp27-none-any.whl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Maybe I should go install it on a Mac instead? Or in a Linux VM? Or even just on a Linux box?&lt;/p&gt;
-
-&lt;p&gt;I’m done for now. Temporarily defeated.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;rtd&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; C:&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;rojects&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ython&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;td&amp;gt;Scripts&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;eactivate.bat&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Fri, 29 Apr 2016 22:37:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/04/29/local-readthedocs.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/04/29/local-readthedocs.html</guid>
-        
-        <category>programming</category>
-        
-        <category>Python</category>
         
         
         <category>dev</category>
