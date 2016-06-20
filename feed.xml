@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Jun 2016 18:27:45 -0700</pubDate>
-    <lastBuildDate>Tue, 14 Jun 2016 18:27:45 -0700</lastBuildDate>
+    <pubDate>Mon, 20 Jun 2016 08:30:43 -0700</pubDate>
+    <lastBuildDate>Mon, 20 Jun 2016 08:30:43 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -61,6 +61,25 @@
       <item>
         <title>Recent links</title>
         <description>&lt;p&gt;&lt;a href=&quot;http://pixelscommander.com/wp-content/uploads/2014/12/P10.pdf&quot;&gt;The Power of Ten – Rules for Developing Safety Critical Code1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;defer(std::bind(&amp;amp;func, p1, p2))&lt;/p&gt;
+
+&lt;p&gt;Let’s get serious about writing documentation. reStructuredText and Sphinx&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zverovich.net/2016/06/16/rst-vs-markdown.html&quot;&gt;reStructuredText vs Markdown for documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://fmtlib.net/latest/index.html&quot;&gt;fmt&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sphinx-doc.org/en/stable/changes.html&quot;&gt;Changes in Sphinx&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jakobandersen&quot;&gt;jakobandersen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sphinx-doc.org/en/stable/&quot;&gt;Sphinx overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sphinx-doc.org/en/stable/domains.html&quot;&gt;Sphinx domains&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mkdocs.org/&quot;&gt;MkDocs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://doc.rust-lang.org/std/&quot;&gt;Rust Standard Library&lt;/a&gt;. Uses Markdown&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://journal.stuffwithstuff.com/2016/06/16/long-names-are-long/&quot;&gt;Long Names Are Long&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.binsim.com/pdf/esh-paper.pdf&quot;&gt;Statistical Similarity of Binaries&lt;/a&gt; and &lt;a href=&quot;http://www.binsim.com/&quot;&gt;http://www.binsim.com/&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 22:56:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/06/13/recent-links.html</link>
