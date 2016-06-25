@@ -6,9 +6,38 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jun 2016 08:30:43 -0700</pubDate>
-    <lastBuildDate>Mon, 20 Jun 2016 08:30:43 -0700</lastBuildDate>
+    <pubDate>Fri, 24 Jun 2016 17:31:48 -0700</pubDate>
+    <lastBuildDate>Fri, 24 Jun 2016 17:31:48 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb944006(v=vs.85).aspx&quot;&gt;Writing HLSL Shaders in Direct3D 9&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.realtimerendering.com/resources/shaderx/Introductions_and_Tutorials_with_DirectX_9.pdf&quot;&gt;ShaderX2: Introductions &amp;amp; Tutorials with DirectX 9&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/207642/Video-Shadering-with-Direct-D&quot;&gt;Video Shadering with Direct3D&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gamasutra.com/view/feature/3993/sponsored_feature_implementation_.php?print=1&quot;&gt;Implementation of Fast Fourier Transform for Image Processing in DirectX 10&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.create-games.com/article.asp?id=2275&quot;&gt;A Guide to Pixel Shader Development&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://drilian.com/2008/11/25/understanding-half-pixel-and-half-texel-offsets/&quot;&gt;Understanding Half-Pixel and Half-Texel Offsets&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cockroachlabs.com/blog/time-travel-queries-select-witty_subtitle-the_future/&quot;&gt;Time-Travel Queries: SELECT witty_subtitle FROM THE FUTURE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://donw.io/post/reflection-cpp-1/&quot;&gt;Reflection in C++, Part 1: Introduction&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 24 Jun 2016 16:36:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/06/24/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/06/24/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -521,47 +550,6 @@ a WM_DISPLAYCHANGE message, and at that point applications should check to make 
         <pubDate>Tue, 03 May 2016 19:14:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/05/03/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/03/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://thejunkland.com/blog/how-to-write-good-readme.html&quot;&gt;How to write good README and why should you care&lt;/a&gt;. There is a Git repo with a README template at &lt;a href=&quot;https://github.com/jehna/readme-best-practices&quot;&gt;jehna/readme-best-practices&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://anapioficeandfire.com/Documentation&quot;&gt;An API Of Ice And Fire&lt;/a&gt;. I’m not sure if this is serious or not, maybe this is just a great example project on “how to document a REST API”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2016/05/01/TypeWars.html&quot;&gt;Type Wars&lt;/a&gt;. A moderately partisan take on type safety.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://anteru.net/2016/05/01/3249/&quot;&gt;Designing C APIs in 2016&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://coreos.com/blog/coreos-and-prometheus-improve-cluster-monitoring.html&quot;&gt;CoreOS and Prometheus: Building monitoring for the next generation of cluster infrastructure&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://steshaw.org/plt/&quot;&gt;Programming Language Theory&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.codinghorror.com/the-ten-commandments-of-egoless-programming/&quot;&gt;The Ten Commandments of Egoless Programming&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://peter.bourgon.org/go-best-practices-2016/&quot;&gt;Go best practices, six years in&lt;/a&gt;. Weak. Or, rather, lightweight and surface.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/0xAX/linux-insides/blob/master/Theory/asm.md&quot;&gt;Inline assembly&lt;/a&gt;. GCC and Intel specific.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://preshing.com/20141202/cpp-has-become-more-pythonic/&quot;&gt;C++ Has Become More Pythonic&lt;/a&gt;. Kind of. See comments.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/fmtlib/fmt&quot;&gt;{fmt}&lt;/a&gt;. Nice formatting library, vast improvement to streams but can interoperate. This is almost as fast as printf, but there’s a big hit in compile time.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://michaelfeathers.silvrback.com/the-myth-of-scaling&quot;&gt;Moving Past the Scaling Myth&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://coreos.com/blog/coreos-and-prometheus-improve-cluster-monitoring.html&quot;&gt;https://coreos.com/blog/coreos-and-prometheus-improve-cluster-monitoring.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://slatestarcodex.com/2016/04/27/book-review-albions-seed/&quot;&gt;BOOK REVIEW: ALBION’S SEED&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 May 2016 16:23:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/05/01/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/01/recent-links.html</guid>
         
         <category>links</category>
         
