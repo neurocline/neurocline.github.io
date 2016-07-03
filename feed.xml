@@ -6,9 +6,44 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 Jun 2016 17:31:48 -0700</pubDate>
-    <lastBuildDate>Fri, 24 Jun 2016 17:31:48 -0700</lastBuildDate>
+    <pubDate>Sun, 03 Jul 2016 13:54:49 -0700</pubDate>
+    <lastBuildDate>Sun, 03 Jul 2016 13:54:49 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/fffaraz/awesome-cpp&quot;&gt;Awesome C/C++&lt;/a&gt;. A curated list of awesome C/C++ frameworks, libraries, resources, and shiny things. Also available as a web page &lt;a href=&quot;http://fffaraz.github.io/awesome-cpp/&quot;&gt;Awesome C/C++&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mosra.cz/blog/magnum.php&quot;&gt;Magnum - C++11/C++14 and OpenGL graphics engine&lt;/a&gt; and &lt;a href=&quot;https://github.com/mosra/magnum&quot;&gt;Github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/horde3d/Horde3D&quot;&gt;Horde3D&lt;/a&gt;. Rendering engine on top of OpenGL 2.0+.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/bkaradzic/bgfx&quot;&gt;bgfx - Cross-platform rendering library&lt;/a&gt;. Supports Direct3D, Metal, OpenGL, WebGL back-ends.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lucumr.pocoo.org/2013/8/18/beautiful-native-libraries/&quot;&gt;Beautiful Native Libraries&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mechanicalkeyboards.com/mechanical_switches.php&quot;&gt;OFFICIAL MECHANICAL SWITCH RATER AND GUIDE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.pcgamer.com/best-mechanical-switches-for-gaming/&quot;&gt;Mechanical switches for gaming&lt;/a&gt;. Buckling spring is still probably the best for typing, but they are loud.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/xcage01/octo-dragon&quot;&gt;Octo-Dragon&lt;/a&gt;. Django-like written in C++, or rather, the beginning.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Introduction-Intel-Assembly-Language-Programming-ebook/dp/B008H7HL3M/ref=zg_bs_3954_1#nav-subnav&quot;&gt;Introduction to 64 Bit Intel Assembly Language Programming for Linux: Second Edition&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@flyosity/building-my-1-200-hackintosh-49a1a186241e#.2kbrphvvb&quot;&gt;Building My $1,200 Hackintosh&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tonymacx86.com/&quot;&gt;http://www.tonymacx86.com/&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 Jul 2016 09:38:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/07/02/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/07/02/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -523,33 +558,6 @@ a WM_DISPLAYCHANGE message, and at that point applications should check to make 
         <pubDate>Sun, 08 May 2016 10:14:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/05/08/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/08/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://munificent.github.io/wren/&quot;&gt;Wren&lt;/a&gt;. Wren is a small, fast, class-based concurrent scripting language.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://overapi.com/&quot;&gt;OverAPI.com&lt;/a&gt;. This is pretty awesome. Or, would be, but there are a lot of dead links. Still, good idea.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ece.eng.wayne.edu/~sjiang/pubs/papers/wu15-lsm-trie.pdf&quot;&gt;LSM-trie: An LSM-tree-based Ultra-Large Key-Value Store for Small Data&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.talend.com/blog/2016/05/02/introduction-to-apache-beam&quot;&gt;Introduction to Apache Beam&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://slatestarcodex.com/2013/11/28/the-story-of-thanksgiving-is-a-science-fiction-story/&quot;&gt;THE STORY OF THANKSGIVING IS A SCIENCE-FICTION STORY&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.baekdal.com/analysis/the-increasing-problem-with-the-misinformed&quot;&gt;The Increasing Problem With the Misinformed&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://tectonic.com/blog/improved-scalability-tectonic-1.2.html&quot;&gt;Tectonic 1.2&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 03 May 2016 19:14:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/05/03/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/03/recent-links.html</guid>
         
         <category>links</category>
         
