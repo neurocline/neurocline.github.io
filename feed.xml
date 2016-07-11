@@ -6,9 +6,58 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Jul 2016 10:14:36 -0700</pubDate>
-    <lastBuildDate>Thu, 07 Jul 2016 10:14:36 -0700</lastBuildDate>
+    <pubDate>Sun, 10 Jul 2016 21:27:18 -0700</pubDate>
+    <lastBuildDate>Sun, 10 Jul 2016 21:27:18 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>RTMP</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://rtmpdump.mplayerhq.hu/&quot;&gt;RTMPDump&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/RTMPDump&quot;&gt;RTMPDump&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.adobe.com/content/dam/Adobe/en/devnet/rtmp/pdf/rtmp_specification_1.0.pdf&quot;&gt;Adobe’s Real Time Messaging Protocol&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Action_Message_Format&quot;&gt;Action Message Format&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://rtmpdump.mplayerhq.hu/ChangeLog&quot;&gt;rtmpdump change log&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mailing lists and forums&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stream-recorder.com/forum/rtmpdump-f54.html?s=e695bbdb782ca095bf7908137696f712&amp;amp;&quot;&gt;Streaming media recording forum&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ffmpeg.zeranoe.com/forum/viewforum.php?f=29&quot;&gt;RTMPDump specific&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lists.mplayerhq.hu/pipermail/rtmpdump/&quot;&gt;The rtmpdump Archives&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.streaminglearningcenter.com/about-jan-ozer.html&quot;&gt;Streaming Learning Center - about Jan Ozer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.streamingmedia.com/Articles/Editorial/Featured-Articles/The-Decline-of-the-Standards-Based-Codec-and-Good-Riddance-111602.aspx&quot;&gt;The Decline of the Standards-Based Codec&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://iphome.hhi.de/wiegand/assets/pdfs/h264-AVC-Standard.pdf&quot;&gt;The H.264/MPEG4 Advanced Video Coding Standard and its Applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC&quot;&gt;H.264/MPEG-4 AVC&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Compression-Standards-Broadband-Multimedia-Applications/dp/0387710426&quot;&gt;The VC-1 and H.264 Video Compression Standards for Broadband Video Services&lt;/a&gt;. The cost! insane.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/H-264-Advanced-Video-Compression-Standard/dp/0470516925&quot;&gt;The H.264 Advanced Video Compression Standard&lt;/a&gt;. Cheaper but more like an overview.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://iphome.hhi.de/wiegand/assets/pdfs/h264-AVC-Standard.pdf&quot;&gt;The H.264/MPEG4 Advanced Video Coding Standard and its Applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.itu.int/rec/T-REC-H.264&quot;&gt;H.264 : Advanced video coding for generic audiovisual services&lt;/a&gt;. The series of H.264 docs&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.itu.int/rec/T-REC-H.264-201602-I/en&quot;&gt;H.264 : Advanced video coding for generic audiovisual services&lt;/a&gt;. I think this is the latest rev of the actual H.264 standard document, it says Feb 2016.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 10 Jul 2016 19:37:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/07/10/rtmp.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/07/10/rtmp.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Direct3D shaders</title>
@@ -498,52 +547,6 @@ a WM_DISPLAYCHANGE message, and at that point applications should check to make 
         <pubDate>Tue, 24 May 2016 21:22:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/05/24/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/24/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://zinascii.com/2016/the-illumos-syscall-handler.html&quot;&gt;The illumos SYSCALL Handler&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.intercom.io/principles-bot-design/&quot;&gt;PRINCIPLES OF BOT DESIGN&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/1605.06022&quot;&gt;Quantum nonlocality, and the end of classical space-time&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://benedikt-bitterli.me/buddhabrot/&quot;&gt;Rendering a Buddhabrot at 4K and Other Bad Ideas&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://x64dbg.com/index.html#start&quot;&gt;x64dbg&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://levels.io/from-web-dev-to-3d/&quot;&gt;From web dev to 3d: Learning 3d modeling in a month&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://abstrusegoose.com/567&quot;&gt;Electromagnetic Leak (update 2014)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://root.cern.ch/cling&quot;&gt;Cling&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A host of Direct3D stuff&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.gamedev.net/page/resources/_/technical/directx-and-xna/2d-in-direct3d-using-textured-quads-r1972&quot;&gt;2D in Direct3D using Textured Quads&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/forum/windows/53725/&quot;&gt;Help with DirectX 9 Textures&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://takinginitiative.wordpress.com/2011/01/12/directx10-tutorial-9-the-geometry-shader/&quot;&gt;DirectX10 Tutorial 9: The Geometry Shader&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://directxtk.codeplex.com/&quot;&gt;DirectX Tool Kit&lt;/a&gt;, now on Github &lt;a href=&quot;https://github.com/Microsoft/DirectXTK&quot;&gt;DirectXTK&lt;/a&gt; and see &lt;a href=&quot;https://blogs.msdn.microsoft.com/chuckw/2012/03/02/directxtk/&quot;&gt;MSDN: DirectXTK&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.directxtutorial.com/&quot;&gt;DirectXTutorial.com&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.rastertek.com/&quot;&gt;RasterTek&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.d3dcoder.net/&quot;&gt;d3dcoder.net&lt;/a&gt;. Frank Luna website.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/hh309465(v=vs.85).aspx&quot;&gt;Classic DirectX Graphics&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb219838(v=vs.85).aspx&quot;&gt;Programming Guide for Direct3D 9&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb219679(v=vs.85).aspx&quot;&gt;Direct3D Architecture (Direct3D 9)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ee663275(v=vs.85).aspx&quot;&gt;Where is the DirectX SDK?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb147171(v=vs.85).aspx&quot;&gt;Mapping between a Direct3D 9 Declaration and a Direct3D 8 Declaration (Direct3D 9)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 22 May 2016 09:22:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/05/22/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/22/recent-links.html</guid>
         
         <category>links</category>
         
