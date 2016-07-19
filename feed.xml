@@ -6,9 +6,59 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Jul 2016 21:27:18 -0700</pubDate>
-    <lastBuildDate>Sun, 10 Jul 2016 21:27:18 -0700</lastBuildDate>
+    <pubDate>Mon, 18 Jul 2016 18:53:13 -0700</pubDate>
+    <lastBuildDate>Mon, 18 Jul 2016 18:53:13 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Sync in video streams</title>
+        <description>&lt;p&gt;Some useful acronyms:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;PTS: Presentation time stamp; used to order frames for display. &lt;a href=&quot;https://en.wikipedia.org/wiki/Presentation_timestamp&quot;&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;DTS: Decoding time stamp; used to order frames for decoding&lt;/li&gt;
+  &lt;li&gt;VBV: Video Buffering Verifier; used to prevent underflow/overflow of MPEG bit stream&lt;/li&gt;
+  &lt;li&gt;PCR: Program Clock reference, base timme for PTS values. &lt;a href=&quot;https://en.wikipedia.org/wiki/Presentation_timestamp&quot;&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;FLV files have a CompositionTime field in the VideoData segment; this is PTS - DTS.&lt;/p&gt;
+
+&lt;p&gt;PTS and DTS should be 90Khz values. CTS is in units of milliseconds, so compositionTime = (PTS - DTS) / 90.0.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dranger.com/ffmpeg/tutorial05.html&quot;&gt;Tutorial 05: Synching Video&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ffmpeg-users.933282.n4.nabble.com/understanding-DTS-PTS-td940270.html&quot;&gt;understanding DTS PTS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.bretl.com/mpeghtml/timebuf.HTM&quot;&gt;Timing and Buffer Control&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/MPEG_transport_stream&quot;&gt;MPEG transport stream&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Video_compression_picture_types&quot;&gt;Video compression picture types&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://xcshen.blog.51cto.com/attachment/201104/2835389_1302074539.pdf&quot;&gt;ISO/IEC 14496-12 Part 12: ISO base media file format&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=6&amp;amp;ved=0ahUKEwish5mEiP7NAhUTwWMKHfsTCooQFghGMAU&amp;amp;url=https%3A%2F%2Fwww.itscj.ipsj.or.jp%2Fsc29%2Fopen%2F29view%2F29n12786t.doc&amp;amp;usg=AFQjCNEDeyVkuC8i_g3OU27P5kOHSxefvQ&amp;amp;sig2=YWML8aQq7xg7DmTlTIB3vg&amp;amp;bvm=bv.127178174,d.cGc&amp;amp;cad=rja&quot;&gt;Information technology — Coding of audio-visual objects — Part 15: Advanced Video Coding (AVC) file format&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/MPEG-4&quot;&gt;MPEG-4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding&quot;&gt;MPEG-4 Advanced Video Coding&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Flash_Video&quot;&gt;Flash Video&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://download.macromedia.com/f4v/video_file_format_spec_v10_1.pdf&quot;&gt;Adobe Flash Video File Format Specification Version 10.1&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Jul 2016 19:37:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/07/18/sync-in-video-streams.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/07/18/sync-in-video-streams.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>RTMP</title>
@@ -485,68 +535,6 @@ a WM_DISPLAYCHANGE message, and at that point applications should check to make 
         <pubDate>Sun, 29 May 2016 11:57:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/05/29/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/29/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://stanleycen.com/blog/directx11-hooking/&quot;&gt;DirectX 11 Hooking&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/scen/ionlib&quot;&gt;scen/ionlib&lt;/a&gt;. c++11 reverse engineering library. bootstraps common tasks in game hacking and reverse engineering&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/scen/libembryo&quot;&gt;scen/libembryo&lt;/a&gt;. screwing around with osx reversing :)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.unknowncheats.me/forum/d3d-tutorials-and-source/88369-universal-d3d11-hook.html&quot;&gt;Universal D3D11 hook&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://fw1.codeplex.com/&quot;&gt;FW1FontWrapper&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/28684509/draw-in-present-hook-without-destroying-existing-content&quot;&gt;Draw in Present() hook without destroying existing content&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5979632/d3d11-how-to-draw-gdi-text-to-a-gxdi-surface-without-d2d?rq=1&quot;&gt;D3D11: How to draw GDI Text to a GXDI Surface? (Without D2D)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/8993979/api-hooking-without-detours?rq=1&quot;&gt;API Hooking without Detours&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/30140/API-Hooking-with-MS-Detours&quot;&gt;API Hooking with MS Detours&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/22432546/why-does-the-directx-device-present-hook-not-work-in-detours&quot;&gt;Why does the DirectX Device Present hook not work in detours?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.metaclassofnil.com/?tag=dsfix&quot;&gt;DSFix 2.4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ownedcore.com/forums/world-of-warcraft/world-of-warcraft-bots-programs/wow-memory-editing/401141-beware-other-apps-hook-d3d11.html&quot;&gt;Beware other apps that hook D3D11&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.dreamincode.net/forums/topic/286194-obtaining-reference-to-id3d11device-from-a-reference-to-idxgiadapter1/&quot;&gt;Obtaining Reference To ID3D11Device From A Reference To IDXGIAdapter1&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.gamedev.net/topic/647530-direct3d-111-and-dxgi-12-on-windows-7/&quot;&gt;Direct3D 11.1 and DXGI 1.2 on Windows 7&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/jj863687(v=vs.85).aspx&quot;&gt;Platform Update for Windows 7&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ee913554(v=vs.85).aspx&quot;&gt;Surface Sharing Between Windows Graphics APIs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ee417025(v=vs.85).aspx&quot;&gt;DirectX Graphics Infrastructure (DXGI): Best Practices&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;DXGI introduced with Windows Vista&lt;/p&gt;
-
-&lt;p&gt;DXGI 1.1 was added in Windows 7&lt;/p&gt;
-
-&lt;p&gt;DXGI 1.2 was added in Windows 8&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“When you use Direct3D 11, the runtime will use DXGI 1.1 by default when calling D3D11CreateDevice or D3D11CreateDeviceAndSwapChain with a NULL IDXGIAdapter pointer.”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;DXGI 1.4 (??) in Windows 10&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205075(v=vs.85).aspx&quot;&gt;DXGI Overview&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 24 May 2016 21:22:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/05/24/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/24/recent-links.html</guid>
         
         <category>links</category>
         

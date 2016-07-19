@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Sync in video streams</title>
+  <meta name="description" content="Some useful acronyms:">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/07/18/sync-in-video-streams.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,52 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Sync in video streams</h1>
+    <p class="post-meta">Jul 18, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jul 18, 2016</span>
+  <article class="post-content">
+    <p>Some useful acronyms:</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/07/18/sync-in-video-streams.html">Sync in video streams</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 10, 2016</span>
+<ul>
+  <li>PTS: Presentation time stamp; used to order frames for display. <a href="https://en.wikipedia.org/wiki/Presentation_timestamp">Wikipedia</a></li>
+  <li>DTS: Decoding time stamp; used to order frames for decoding</li>
+  <li>VBV: Video Buffering Verifier; used to prevent underflow/overflow of MPEG bit stream</li>
+  <li>PCR: Program Clock reference, base timme for PTS values. <a href="https://en.wikipedia.org/wiki/Presentation_timestamp">Wikipedia</a></li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/07/10/rtmp.html">RTMP</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 5, 2016</span>
+<p>FLV files have a CompositionTime field in the VideoData segment; this is PTS - DTS.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/07/05/direct3d-shaders.html">Direct3D shaders</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 2, 2016</span>
+<p>PTS and DTS should be 90Khz values. CTS is in units of milliseconds, so compositionTime = (PTS - DTS) / 90.0.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/07/02/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 24, 2016</span>
+<h1 id="reference">Reference</h1>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/06/24/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><a href="http://dranger.com/ffmpeg/tutorial05.html">Tutorial 05: Synching Video</a></p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p><a href="http://ffmpeg-users.933282.n4.nabble.com/understanding-DTS-PTS-td940270.html">understanding DTS PTS</a></p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p><a href="http://www.bretl.com/mpeghtml/timebuf.HTM">Timing and Buffer Control</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/MPEG_transport_stream">MPEG transport stream</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Video_compression_picture_types">Video compression picture types</a></p>
+
+<p><a href="http://xcshen.blog.51cto.com/attachment/201104/2835389_1302074539.pdf">ISO/IEC 14496-12 Part 12: ISO base media file format</a></p>
+
+<p><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=6&amp;ved=0ahUKEwish5mEiP7NAhUTwWMKHfsTCooQFghGMAU&amp;url=https%3A%2F%2Fwww.itscj.ipsj.or.jp%2Fsc29%2Fopen%2F29view%2F29n12786t.doc&amp;usg=AFQjCNEDeyVkuC8i_g3OU27P5kOHSxefvQ&amp;sig2=YWML8aQq7xg7DmTlTIB3vg&amp;bvm=bv.127178174,d.cGc&amp;cad=rja">Information technology — Coding of audio-visual objects — Part 15: Advanced Video Coding (AVC) file format</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/MPEG-4">MPEG-4</a></p>
+
+<p><a href="http://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding">MPEG-4 Advanced Video Coding</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Flash_Video">Flash Video</a></p>
+
+<p><a href="http://download.macromedia.com/f4v/video_file_format_spec_v10_1.pdf">Adobe Flash Video File Format Specification Version 10.1</a></p>
+
+  </article>
 
 </div>
 
