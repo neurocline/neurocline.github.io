@@ -6,9 +6,190 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jul 2016 18:53:13 -0700</pubDate>
-    <lastBuildDate>Mon, 18 Jul 2016 18:53:13 -0700</lastBuildDate>
+    <pubDate>Thu, 28 Jul 2016 14:40:50 -0700</pubDate>
+    <lastBuildDate>Thu, 28 Jul 2016 14:40:50 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Video and containers</title>
+        <description>&lt;h1 id=&quot;nalu-annex-b-and-start-codes&quot;&gt;NALU, Annex B, and Start Codes&lt;/h1&gt;
+
+&lt;p&gt;A start code is 2-3 0x00 bytes followed by a 0x01 byte.&lt;/p&gt;
+
+&lt;p&gt;A NALU representation without emulation prevention bytes is called a Raw Byte Sequence Payload, or RBSP.&lt;/p&gt;
+
+&lt;p&gt;The four-byte sequences 0x00000000, 0x00000001, 0x00000002, and 0x00000003 are illegal within a non-RBSP NALU. In order to turn an RBSP into a NALU with start codes, byte stuffing is employed by inserting an Emulation Prevention byte 0x03 after two consecutive 0x00 bytes. To reverse this, when reading the stream, remove any 0x03 seen after two consecutive 0x00 bytes.&lt;/p&gt;
+
+&lt;p&gt;To determine the length of a NALU, start with a byte stream (which will have a start code), skip to the next start code, and count the bytes in between.&lt;/p&gt;
+
+&lt;p&gt;In order to convert between Annex B and AVCC, convert between start codes and lengths, and remove/add emulation bytes.&lt;/p&gt;
+
+&lt;p&gt;An AVCC stream always starts with a specific header&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;8 bits = 0x01 (this is illegal in Annex B)&lt;/li&gt;
+  &lt;li&gt;8 bits of avc profile (from sps[0][1])&lt;/li&gt;
+  &lt;li&gt;8 bits of avc compatibility (from sps[0][2])&lt;/li&gt;
+  &lt;li&gt;8 bits of avc level (from sps[0][3])&lt;/li&gt;
+  &lt;li&gt;6 bits = 0b111111&lt;/li&gt;
+  &lt;li&gt;2 bits of NALULengthSizeMinusOne (typically 3)&lt;/li&gt;
+  &lt;li&gt;3 bits of 0b111&lt;/li&gt;
+  &lt;li&gt;5 bits of number of SPS NALU (usually 1)&lt;/li&gt;
+  &lt;li&gt;Repeated per SPS
+    &lt;ul&gt;
+      &lt;li&gt;16 bits of SPS size
+-Variable SPS NALU data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;8 bits of number of PPS NALU (usually 1)&lt;/li&gt;
+  &lt;li&gt;Repeated once per PPS
+    &lt;ul&gt;
+      &lt;li&gt;16 bits of PPS size&lt;/li&gt;
+      &lt;li&gt;Variable PPS NALU data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;FLV streams must be written as AVCC.&lt;/p&gt;
+
+&lt;h1 id=&quot;tbr-tbc-tbn&quot;&gt;tbr, tbc, tbn&lt;/h1&gt;
+
+&lt;p&gt;tbn is the time base from the container.&lt;/p&gt;
+
+&lt;p&gt;tbc is the time base from the codec.&lt;/p&gt;
+
+&lt;p&gt;tbr is video frame rate guessed from the video stream. A note from the FFMpeg source:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;tbr is NOT the average frame rate, it is the smallest frame rate that can accurately represent all timestamps.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.adobe.com/content/dam/Adobe/en/devnet/flv/pdfs/video_file_format_spec_v10.pdf&quot;&gt;Video File Format Specification, Version 10, 2008&lt;/a&gt;. FLV and F4V file format spec.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/smartdu/srs/blob/master/trunk/doc/video_file_format_spec_v10_1.pdf&quot;&gt;Version 10.1&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.oipf.tv/docs/oipf-archive/OIPF-T1-R2-Specification-Volume-2-Media_Formats-v2_2-2013-05-15.pdf&quot;&gt;OIPF, Release 2 Specification, Volume 2 – Media Formats&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ip.hhi.de/imagecom_G1/assets/pdfs/csvt_overview_0305.pdf&quot;&gt;Overview of the H.264/AVC Video Coding Standard&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;isoiec-14496-coding-of-audio-visual-objects&quot;&gt;ISO/IEC 14496, “Coding of audio-visual objects”&lt;/h2&gt;
+
+&lt;h2 id=&quot;sound&quot;&gt;Sound&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://sound.media.mit.edu/resources/mpeg4/SA-FDIS.pdf&quot;&gt;ISO/IEC JTC 1/SC 29/WG 11N2503-sec5&lt;/a&gt;. Information technology - Coding of audio-visual objects. Part 3: Audio. Section 5: Structured audio.&lt;/p&gt;
+
+&lt;h2 id=&quot;base-iso-format&quot;&gt;Base ISO format&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://l.web.umkc.edu/lizhu/teaching/2016sp.video-communication/ref/mp4.pdf&quot;&gt;ISO/IEC 14496-12&lt;/a&gt;. Information technology — Coding of audio-visual objects — Part 12: ISO base media file format&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/c061988_ISO_IEC_14496-12_2012.zip&quot;&gt;ISO/IEC 14496-12:2012&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/c063525_ISO_IEC_14496-12_2012_Cor_1_2013.zip&quot;&gt;ISO/IEC 14496-12:2012/Cor 1:2013&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/c063187_ISO_IEC_14496-12_2012_Amd_1_2013.zip&quot;&gt;ISO/IEC 14496-12:2012/Amd 1:2013&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/c063188_ISO_IEC_14496-12_2012_Amd_2_2014.zip&quot;&gt;ISO/IEC 14496-12:2012/Amd 2:2014&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mp4&quot;&gt;MP4&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cmlab.csie.ntu.edu.tw/~cathyp/eBooks/14496_MPEG4/ISO_IEC_14496-14_2003-11-15.pdf&quot;&gt;ISO/IEC 14496-14&lt;/a&gt;. Information technology — Coding of
+audio-visual objects — Part 14: MP4 file format.&lt;/p&gt;
+
+&lt;h3 id=&quot;avc-file-format&quot;&gt;AVC file format&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.itscj.ipsj.or.jp/sc29/open/29view/29n14632t.doc&quot;&gt;ISO/IEC JTC 1/SC 29 N, ISO/IEC 14496-15:2014/PDAM 2&lt;/a&gt;. Information technology — Coding of audio-visual objects — Part 15: Carriage of NAL unit structured video in the ISO Base Media File Format, AMENDMENT 2: Carriage of AVC based 3D video excluding MVC.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.itscj.ipsj.or.jp/sc29/open/29view/29n12786t.doc&quot;&gt;ISO/IEC JTC 1/SC 29 N, ISO/IEC 14496-15:2010/PDAM 2&lt;/a&gt;. Information technology — Coding of audio-visual objects — Part 15: Advanced Video Coding (AVC) file format, AMENDMENT 2: Carriage of high efficiency video coding (HEVC).&lt;/p&gt;
+
+&lt;h1 id=&quot;unsorted&quot;&gt;Unsorted&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24884827/possible-locations-for-sequence-picture-parameter-sets-for-h-264-stream&quot;&gt;Possible Locations for Sequence/Picture Parameter Set(s) for H.264 Stream&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Network_Abstraction_Layer&quot;&gt;Network Abstraction Layer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://forum.doom9.org/archive/index.php/t-165995.html&quot;&gt;Emulation Prevention Question&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://software.intel.com/sites/default/files/m/b/a/5/b/5/43685-Intel_Media_Developers_Guide.pdf&quot;&gt;Intel Media SDK 2012 Developer’s Guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/8525824/mp4-iso-14496-12-how-do-you-find-the-video-and-audio-access-units&quot;&gt;MP4 / ISO 14496-12 : How do you find the video and audio access units?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5544696/parsing-h264-in-mdat-mp4/8527819&quot;&gt;Parsing H264 in mdat MP4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://aviadr1.blogspot.com/2010/05/h264-extradata-partially-explained-for.html&quot;&gt;H.264 extradata (partially) explained - for dummies&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://src.chromium.org/svn/trunk/src/media/filters/h264_to_annex_b_bitstream_converter.cc&quot;&gt;Chromium h264_to_annex_b_bitstream_converter.cc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://code.mythtv.org/doxygen/H264Parser_8cpp_source.html&quot;&gt;MythTV H264Parser.cpp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://yumichan.net/video-processing/video-compression/introduction-to-h264-nal-unit/&quot;&gt;Introduction to H.264: (1) NAL Unit&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nsl.cs.usc.edu/enl/trunk/aqua/loader/jni/src/libavformat/flvenc.c&quot;&gt;FLV muxer libavformat/flvenc.c&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ffmpeg.org/pipermail/libav-user/2013-June/004980.html&quot;&gt;H264+flv bad video stream&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://code.google.com/archive/p/comserver/source/default/source&quot;&gt;Red5 Multi-User Application Framework&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/23404403/need-to-convert-h264-stream-from-annex-b-format-to-avcc-format&quot;&gt;Need to convert h264 stream from annex-b format to AVCC format&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/11862666/how-to-generate-flv-stream-from-raw-h264-which-can-be-played-by-actionscript-net&quot;&gt;How to generate FLV stream from raw h264 which can be played by Actionscript NetStream?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/29751805/h264-annexb-bitstream-to-flv-mux-ffmpeg-library&quot;&gt;h264 annexb bitstream to flv mux ffmpeg library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/37300963/how-to-mux-live-h264-stream-in-annexb-nal-unit-format-to-flv-container&quot;&gt;How to mux live h264 stream in AnnexB nal unit format to flv container&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://livertmpjavapublisher.blogspot.com/2011/06/h264-avcvideopacket.html&quot;&gt;H264 AVCVIDEOPACKET&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ossrs/srs/tree/2.0release&quot;&gt;Simple-RTMP-Server&lt;/a&gt;. This is the original, now defuct, but there are &lt;a href=&quot;https://github.com/ossrs/srs&quot;&gt;forks&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/smartdu/srs/tree/master/trunk/doc&quot;&gt;Assorted spec docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/filippobrizzi/raw_rgb_straming&quot;&gt;filippobrizzi/raw_rgb_straming&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ffmpeg.org/ffprobe.html&quot;&gt;ffprobe Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://siliconandlithium.blogspot.no/2014/03/building-x264-on-windows-with-visual.html&quot;&gt;Building x264 on Windows with Visual Studio&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://birds-are-nice.me/publications/extremex264_1.shtml&quot;&gt;x264 Settings&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.lighterra.com/papers/videoencodingh264/&quot;&gt;Video Encoding Settings for H.264 Excellence&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://eldar.cz/kangaroo/binarni-sxizofrenie/howto-handbrake-limit-peak-bitrate.html&quot;&gt;Eliminating H.264 bitrate peaks with Handbrake&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/18586700/x264-rate-control-modes&quot;&gt;x264 rate control modes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/20051784/how-to-reduce-latency-when-streaming-x264&quot;&gt;How to reduce latency when streaming x264&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://matroska.org/technical/specs/codecid/index.html&quot;&gt;Matroska codec specs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ffmpeg.org/ffmpeg-formats.html&quot;&gt;FFmpeg Formats Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.garymcgath.com/streamingprotocols.html&quot;&gt;Basics of streaming protocols&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/14322670/h264-ffmpeg-how-to-initialize-ffmpeg-to-decode-nals-created-with-x264&quot;&gt;h264 ffmpeg: How to initialize ffmpeg to decode NALs created with x264&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.diva-portal.org/smash/get/diva2:432684/FULLTEXT01.pdf&quot;&gt;Optimizing an H.264 video encoder for real-time HD-video encoding&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/6603979/ffmpegavcodec-encode-video-setting-pts-h264&quot;&gt;ffmpeg::avcodec_encode_video setting PTS h264&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://superuser.com/questions/322354/using-ffmpeg-to-encode-a-raw-video-to-h-264-format&quot;&gt;Using ffmpeg to encode a raw video to H.264 format&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://thompsonng.blogspot.com.au/search/label/FFMPEG&quot;&gt;transcode with ffmpeg&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.tribler.org/FfmpegYuv/&quot;&gt;Processing EBU’s YUV files with FFmpeg&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs&quot;&gt;19 FFMPEG COMMANDS FOR ALL NEEDS&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 28 Jul 2016 09:50:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/07/28/video-and-containers.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/07/28/video-and-containers.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Sync in video streams</title>
@@ -488,53 +669,6 @@ a WM_DISPLAYCHANGE message, and at that point applications should check to make 
         <pubDate>Sun, 05 Jun 2016 12:09:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/06/05/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/06/05/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;Good practice for patching/hooking DirectX&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;if Present() returns D3DERR_DEVICELOST, then free every resource you are holding&lt;/li&gt;
-  &lt;li&gt;hook TestCooperativeLevel and Reset to be in sync with what the game is thinking (and again, if you get D3DERR_DEVICELOST, free everything and wait)&lt;/li&gt;
-  &lt;li&gt;what’s important is freeing everything allocated into the D3DPOOL_DEFAULT memory class. But if you are holding resources, you’ll prevent the app from closing DirectX (which it might want to do in order to do a stronger version of reset).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb174714(v=vs.85).aspx&quot;&gt;Lost Devices (Direct3D 9)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb174423(v=vs.85).aspx&quot;&gt;IDirect3DDevice9::Present method&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/TsudaKageyu/minhook&quot;&gt;TsudaKageyu/minhook&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/27970403/create-directx9texture-from-rgba-const-char-buffer&quot;&gt;Create DirectX9Texture from RGBA (const char*) buffer&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205073(v=vs.85).aspx&quot;&gt;Direct3D 9 to Direct3D 10 Considerations (Direct3D 10)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cplusplus.com/forum/windows/53725/&quot;&gt;Help with DirectX 9 Textures&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.rastertek.com/dx11tut11.html&quot;&gt;Tutorial 11: 2D Rendering&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb219690(v=vs.85).aspx&quot;&gt;Directly Mapping Texels to Pixels (Direct3D 9)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.gamedev.net/page/resources/_/technical/directx-and-xna/2d-in-direct3d-using-textured-quads-r1972&quot;&gt;2D in Direct3D using Textured Quads&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/16346184/drawing-a-texture-to-the-screen&quot;&gt;Drawing a Texture to the Screen&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205858(v=vs.85).aspx&quot;&gt;IDirect3DDevice9::UpdateTexture method&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205913(v=vs.85).aspx&quot;&gt;IDirect3DTexture9::LockRect method&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb205857(v=vs.85).aspx&quot;&gt;IDirect3DDevice9::UpdateSurface method&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 29 May 2016 11:57:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/05/29/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/05/29/recent-links.html</guid>
         
         <category>links</category>
         
