@@ -6,9 +6,225 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Jul 2016 14:40:50 -0700</pubDate>
-    <lastBuildDate>Thu, 28 Jul 2016 14:40:50 -0700</lastBuildDate>
+    <pubDate>Sat, 27 Aug 2016 18:42:48 -0700</pubDate>
+    <lastBuildDate>Sat, 27 Aug 2016 18:42:48 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>New computers</title>
+        <description>&lt;p&gt;Time for new computers. I’m behind the times and reading quickly.&lt;/p&gt;
+
+&lt;h1 id=&quot;cpu&quot;&gt;CPU&lt;/h1&gt;
+
+&lt;p&gt;Broadwell-E LGA-2011, probably a Core i7 6850K at $600 for the 40 PCIe lanes.&lt;/p&gt;
+
+&lt;p&gt;Water cooling time? Corsair Hydro H100i GTX&lt;/p&gt;
+
+&lt;h1 id=&quot;motherboard&quot;&gt;Motherboard&lt;/h1&gt;
+
+&lt;p&gt;Motherboards with X99 chipsets can have 128 GB RAM and read/write speed is around 60 GB/sec. SSDs on a M.2
+interface can read/write 1500 MB/sec.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ocaholic.ch/modules/smartsection/item.php?itemid=1425&quot;&gt;18 boards&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;asus-rampage-v-extreme-10&quot;&gt;Asus Rampage V Extreme 10&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$600&lt;/li&gt;
+  &lt;li&gt;EATX&lt;/li&gt;
+  &lt;li&gt;1 M.2, 1 U.2&lt;/li&gt;
+  &lt;li&gt;10 SATA 6G&lt;/li&gt;
+  &lt;li&gt;6 USB 2.0, 8 USB 3.0, 2 USB 3.1 Type-A, 2 USB 3.1 Type-C&lt;/li&gt;
+  &lt;li&gt;Wifi, Bluetooth&lt;/li&gt;
+  &lt;li&gt;SupremeFX Hi-Fi Kit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reviews&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/08/17/asus_rampage_v_extreme_10_motherboard_review/#.V702wpgrKV0&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;asus-rog-strix-x99-gaming&quot;&gt;Asus ROG Strix X99 Gaming&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$340&lt;/li&gt;
+  &lt;li&gt;ATX&lt;/li&gt;
+  &lt;li&gt;1 M.2, 1 U.2&lt;/li&gt;
+  &lt;li&gt;8 SATA 6 GB/s, 1 SATA Express&lt;/li&gt;
+  &lt;li&gt;1 USB 3.1 Type A, 1 USB 3.1 Type C, 5 USB 3.0, 8 USB 2.0&lt;/li&gt;
+  &lt;li&gt;Thunderbolt (header on board - needs add-on card)&lt;/li&gt;
+  &lt;li&gt;Bluetooth 4.1&lt;/li&gt;
+  &lt;li&gt;Intel NIC&lt;/li&gt;
+  &lt;li&gt;WiFi on board&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reviews&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.techpowerup.com/forums/threads/asus-rog-strix-x99-gaming-motherboard-review.223241/&quot;&gt;Tech PowerUp&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.overclockers.com/asus-rog-strix-x99-gaming-motherboard-review/&quot;&gt;Overclockers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kitguru.net/components/ryan-martin/asus-rog-strix-x99-gaming-motherboard-review/&quot;&gt;KitGuru&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.tweaktown.com/reviews/7751/asus-rog-strix-x99-gaming-intel-motherboard-review/index.html&quot;&gt;TweakTown&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/07/05/asus_rog_x99_strix_gaming_lga_2011v3_review#.V8Ij6JgrLuo&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.tweaktown.com/reviews/7751/asus-rog-strix-x99-gaming-intel-motherboard-review/index.html&quot;&gt;Tweaktown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;asus-x99-a-ii&quot;&gt;Asus X99 A-II&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$250&lt;/li&gt;
+  &lt;li&gt;ATX&lt;/li&gt;
+  &lt;li&gt;1 M.2, 1 U.2&lt;/li&gt;
+  &lt;li&gt;10 SATA 6G, 1 SATA Express&lt;/li&gt;
+  &lt;li&gt;8 USB 2.0, 8 USB 2.0, 1 USB 3.1 Type-A, 1 USB 3.1 Type-C&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reviews&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bit-tech.net/hardware/2016/06/09/asus-x99-a-ii-review/1&quot;&gt;bit-tech&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;asus-x-99-deluxe-ii&quot;&gt;Asus X-99 Deluxe-II&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$420&lt;/li&gt;
+  &lt;li&gt;2 M.2 (one via PCIe), 2 U.2&lt;/li&gt;
+  &lt;li&gt;Thunderbolt and card ($70 separately)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reviews&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hardwarecanucks.com/forum/hardware-canucks-reviews/72994-asus-x99-deluxe-ii-motherboard-review.html&quot;&gt;Hardware Canucks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gigabyte-x99-designare-ex-lga2011-v3&quot;&gt;Gigabyte X99 Designare EX LGA2011-v3&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$400&lt;/li&gt;
+  &lt;li&gt;ATX&lt;/li&gt;
+  &lt;li&gt;1 M.2, 2 U.2&lt;/li&gt;
+  &lt;li&gt;10 SATA 6G, 1 SATA Express&lt;/li&gt;
+  &lt;li&gt;4 USB 2.0, 9 USB 3.0, 1 USB 3.1 Type-A, 2 USB 3.1 Type-C&lt;/li&gt;
+  &lt;li&gt;Wifi, Bluetooth&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The M.2 drive goes under the primary PCI-Express slots, so probably runs hot and
+would be thermally throttled.&lt;/p&gt;
+
+&lt;p&gt;Reviews&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/07/12/gigabyte_x99_designare_ex_lga2011v3_review/#.V8I6iZgrLuo&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;msi-x99a-gaming-pro-carbon&quot;&gt;MSI X99A Gaming Pro Carbon&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$340&lt;/li&gt;
+  &lt;li&gt;ATX&lt;/li&gt;
+  &lt;li&gt;M.2, U.2&lt;/li&gt;
+  &lt;li&gt;10 SATA 6G, 1 SATA Express&lt;/li&gt;
+  &lt;li&gt;8 USB 2.0, 11 USB 3.1 Type-A, 2 USB 3.1. Type-C&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reviews&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/05/31/msi_x99a_gaming_pro_carbon_broadwelle_motherboard/#.V703BpgrKV0&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;msi-x99a-xpower-gaming-titanium&quot;&gt;MSI® X99A XPOWER GAMING TITANIUM&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$430&lt;/li&gt;
+  &lt;li&gt;ATX&lt;/li&gt;
+  &lt;li&gt;M.2, U.2&lt;/li&gt;
+  &lt;li&gt;10 SATA 6G, 1 SATA Express&lt;/li&gt;
+  &lt;li&gt;7 USB 2.0, 12 USB 3.1 Type-A, 1 USB 3.1 Type-C&lt;/li&gt;
+  &lt;li&gt;WiFi, Bluetooth&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reviews&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/08/10/msi_x99a_xpower_gaming_titanium_lga2011v3_review/#.V702xJgrKV0&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;video&quot;&gt;Video&lt;/h1&gt;
+
+&lt;p&gt;GeForce GTX 1080 sounds good. &lt;a href=&quot;http://www.corsair.com/en-us/hydro-gfx-gtx-1080-liquid-cooled-graphics-card&quot;&gt;Water-cooled Corsair&lt;/a&gt; for $750.&lt;/p&gt;
+
+&lt;p&gt;Or air-cooled MSI GTX 1080 Gaming Z, also $750.&lt;/p&gt;
+
+&lt;h1 id=&quot;ssd&quot;&gt;SSD&lt;/h1&gt;
+
+&lt;p&gt;Samsung 950 1TB, of course. Two of them if the motherboard permits.&lt;/p&gt;
+
+&lt;h1 id=&quot;power-supply&quot;&gt;Power supply&lt;/h1&gt;
+
+&lt;p&gt;Probably something fairly beefy&lt;/p&gt;
+
+&lt;p&gt;Antec CP-1000 (1000W)&lt;/p&gt;
+
+&lt;h1 id=&quot;sound&quot;&gt;Sound&lt;/h1&gt;
+
+&lt;p&gt;Yes? No?&lt;/p&gt;
+
+&lt;p&gt;Asus Xonar DX.&lt;/p&gt;
+
+&lt;h1 id=&quot;case&quot;&gt;Case&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Antec P380&lt;/li&gt;
+  &lt;li&gt;Cooler Master MasterCase 5&lt;/li&gt;
+  &lt;li&gt;Corsair Carbide Series 400C&lt;/li&gt;
+  &lt;li&gt;Fractal Design Define S&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;benchmarkstats-programs&quot;&gt;Benchmark/stats programs&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AIDA64&lt;/li&gt;
+  &lt;li&gt;AS SSD Benchmark&lt;/li&gt;
+  &lt;li&gt;ATTO&lt;/li&gt;
+  &lt;li&gt;Cinebench&lt;/li&gt;
+  &lt;li&gt;CPU-Z&lt;/li&gt;
+  &lt;li&gt;CrystalDiskMark&lt;/li&gt;
+  &lt;li&gt;HWBOT Prime&lt;/li&gt;
+  &lt;li&gt;Hyper PI&lt;/li&gt;
+  &lt;li&gt;PCMark&lt;/li&gt;
+  &lt;li&gt;POV Ray&lt;/li&gt;
+  &lt;li&gt;Sisoft Sandra&lt;/li&gt;
+  &lt;li&gt;3DMark&lt;/li&gt;
+  &lt;li&gt;WPrime 32M/1024M&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;review-sites&quot;&gt;Review sites&lt;/h1&gt;
+
+&lt;p&gt;There are far fewer than there used to be&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://hexus.net&quot;&gt;Hexus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hardwarecanucks.com/&quot;&gt;Hardware Canucks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.tomshardware.com/&quot;&gt;Tom’s Hardware&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 23 Aug 2016 20:42:00 -0700</pubDate>
+        <link>http://neurocline.github.io/hardware/2016/08/23/new-computers.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/hardware/2016/08/23/new-computers.html</guid>
+        
+        <category>pc</category>
+        
+        <category>mac</category>
+        
+        
+        <category>hardware</category>
+        
+      </item>
     
       <item>
         <title>Video and containers</title>
@@ -608,69 +824,6 @@ a WM_DISPLAYCHANGE message, and at that point applications should check to make 
         <category>windows</category>
         
         <category>directx</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S1877050916302290&quot;&gt;A Proposal for an Antifragile Software Manifesto&lt;/a&gt;. Seems very short on actual details.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf&quot;&gt;Why Most Unit Testing is Waste &lt;/a&gt;. Probably correct but uses anecdotal information. Should stick to logic and big longitudinal surveys.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ithare.com/c-for-games-performance-allocations-and-data-locality/&quot;&gt;C++ for Games: Performance. Allocations and Data Locality&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.nicolabortignon.com/startup-reading-list/&quot;&gt;http://www.nicolabortignon.com/startup-reading-list/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dq756f9pzlyr3.cloudfront.net/file/2016_internet_trends_report_final.pdf&quot;&gt;INTERNET TRENDS 2016 – CODE CONFERENCE&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://coreos.com/blog/torus-distributed-storage-by-coreos.html&quot;&gt;Presenting Torus: A modern distributed storage system by CoreOS&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.washingtonpost.com/graphics/business/rockets/&quot;&gt;THE NEW SPACE RACE&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cl.cam.ac.uk/~pes20/cerberus/pldi16.pdf&quot;&gt;Into the Depths of C: Elaborating the De Facto Standards&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://unbound.co.uk/books/macgaming&quot;&gt;The Secret History of Mac Gaming&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/wg/arc&quot;&gt;arc - secure file archiver&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://liblfds.org/&quot;&gt;liblfds&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity/&quot;&gt;Unorthodocs: Abandon your DVCS and Return to Sanity&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://terrytao.wordpress.com/2016/06/01/how-to-assign-partial-credit-on-an-exam-of-true-false-questions/&quot;&gt;How to assign partial credit on an exam of true-false questions?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://theintercept.com/2016/06/02/fbi-kept-demanding-email-records-despite-doj-saying-it-needed-a-warrant/&quot;&gt;FBI Kept Demanding Email Records Despite DOJ Saying It Needed a Warrant&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.technologyreview.com/s/601615/finally-in-sight-1-a-watt-solar-milestone-shows-long-road-ahead/&quot;&gt;Finally in Sight, $1-a-Watt Solar Milestone Shows Long Road Ahead&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://theringer.com/ticket-industry-problem-solution-e4b3b71fdff6#.u5ialiu6x&quot;&gt;Why You Can’t Get a Ticket to the NBA Finals …&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://swifting.io/blog/2016/05/30/16-parse-server-100-days-later/&quot;&gt;#16 Parse Server – 100 days later&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://longhorn.ms/&quot;&gt;Experience Longhorn&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://vivaldi.com/?pk_campaign=1.2_newsletter&quot;&gt;Vivaldi web browser&lt;/a&gt;. From the makers of Opera.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tagide.com/blog/research/constraints/&quot;&gt;Constraints&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://gcc.gnu.org/ml/gcc/2016-06/msg00030.html&quot;&gt;April/May 2016 GNU Toolchain Update&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.cia.gov/library/center-for-the-study-of-intelligence/csi-publications/csi-studies/studies/vol50no4/using-prediction-markets-to-enhance-us-intelligence-capabilities.html&quot;&gt;Using Prediction Markets to Enhance US Intelligence Capabilities&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.lvh.io/posts/nonce-misuse-resistance-101.html&quot;&gt;Nonce misuse resistance 101&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ipfs/go-libp2p&quot;&gt;libp2p in Go&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://libdill.org/structured-concurrency.html&quot;&gt;libdill: Structured Concurrency for C&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 05 Jun 2016 12:09:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/06/05/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/06/05/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>
