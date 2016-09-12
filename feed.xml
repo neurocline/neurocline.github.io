@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Aug 2016 18:42:48 -0700</pubDate>
-    <lastBuildDate>Sat, 27 Aug 2016 18:42:48 -0700</lastBuildDate>
+    <pubDate>Sun, 11 Sep 2016 23:25:18 -0700</pubDate>
+    <lastBuildDate>Sun, 11 Sep 2016 23:25:18 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -161,7 +161,11 @@ would be thermally throttled.&lt;/p&gt;
 
 &lt;h1 id=&quot;ssd&quot;&gt;SSD&lt;/h1&gt;
 
-&lt;p&gt;Samsung 950 1TB, of course. Two of them if the motherboard permits.&lt;/p&gt;
+&lt;p&gt;Samsung 950 512GB, of course. Two of them if the motherboard permits.&lt;/p&gt;
+
+&lt;p&gt;OCZ RD400 1 TB&lt;/p&gt;
+
+&lt;p&gt;Samsung 850 EVO 2 TB.&lt;/p&gt;
 
 &lt;h1 id=&quot;power-supply&quot;&gt;Power supply&lt;/h1&gt;
 
@@ -212,6 +216,47 @@ would be thermally throttled.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.tomshardware.com/&quot;&gt;Tom’s Hardware&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&quot;suggestions&quot;&gt;Suggestions&lt;/h1&gt;
+
+&lt;h2 id=&quot;newegg&quot;&gt;Newegg&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Item&lt;/th&gt;
+      &lt;th&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16819117647&quot;&gt;Intel Core i7-6850K&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;$609.99&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16813132822&quot;&gt;ASUS ROG STRIX X99 Motherboard&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;$334.99&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16820147467&quot;&gt;Samsung 950 Pro M.2 512GB&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;$317.99&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?item=N82E16820147441&quot;&gt;Samsung 850 EVO 2 TB&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;$624.99&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16820233894&amp;amp;cm_re=ddr4_32gb-_-20-233-894-_-Product&quot;&gt;Corsair Vengeance 2 x 16GB DDR4 3200&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;$189.99&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16820233871&amp;amp;cm_re=ddr4_32gb-_-20-233-871-_-Product&quot;&gt;Corsair Vengeance 2 x 16GB DDR4 3000&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;$169.99&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;amazon&quot;&gt;Amazon&lt;/h2&gt;
 </description>
         <pubDate>Tue, 23 Aug 2016 20:42:00 -0700</pubDate>
         <link>http://neurocline.github.io/hardware/2016/08/23/new-computers.html</link>
