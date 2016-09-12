@@ -127,7 +127,11 @@ Or air-cooled MSI GTX 1080 Gaming Z, also $750.
 
 # SSD
 
-Samsung 950 1TB, of course. Two of them if the motherboard permits.
+Samsung 950 512GB, of course. Two of them if the motherboard permits.
+
+OCZ RD400 1 TB
+
+Samsung 850 EVO 2 TB.
 
 # Power supply
 
@@ -172,3 +176,18 @@ There are far fewer than there used to be
 - [Hardware Canucks](http://www.hardwarecanucks.com/)
 - [HardOCP](http://www.hardocp.com/)
 - [Tom's Hardware](http://www.tomshardware.com/)
+
+# Suggestions
+
+## Newegg
+
+| Item  | Price |
+| ----- | ----- |
+| [Intel Core i7-6850K](http://www.newegg.com/Product/Product.aspx?Item=N82E16819117647) | $609.99 |
+| [ASUS ROG STRIX X99 Motherboard](http://www.newegg.com/Product/Product.aspx?Item=N82E16813132822) | $334.99 |
+| [Samsung 950 Pro M.2 512GB](http://www.newegg.com/Product/Product.aspx?Item=N82E16820147467) | $317.99 |
+| [Samsung 850 EVO 2 TB](http://www.newegg.com/Product/Product.aspx?item=N82E16820147441) | $624.99 |
+| [Corsair Vengeance 2 x 16GB DDR4 3200](http://www.newegg.com/Product/Product.aspx?Item=N82E16820233894&cm_re=ddr4_32gb-_-20-233-894-_-Product) | $189.99 |
+| [Corsair Vengeance 2 x 16GB DDR4 3000](http://www.newegg.com/Product/Product.aspx?Item=N82E16820233871&cm_re=ddr4_32gb-_-20-233-871-_-Product) | $169.99 |
+
+## Amazon
