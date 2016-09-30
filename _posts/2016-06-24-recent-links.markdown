@@ -21,3 +21,21 @@ tags: links
 [Time-Travel Queries: SELECT witty_subtitle FROM THE FUTURE](https://www.cockroachlabs.com/blog/time-travel-queries-select-witty_subtitle-the_future/)
 
 [Reflection in C++, Part 1: Introduction](http://donw.io/post/reflection-cpp-1/)
+
+[PEP 426 -- Metadata for Python Software Packages 2.0](https://www.python.org/dev/peps/pep-0426/). Although deferred and for Python, this is useful for all package system maintainers/creators to use.
+
+[Pixels and voxels, the long answer](https://medium.com/retronator-magazine/pixels-and-voxels-the-long-answer-5889ecc18190)
+
+[Python Packaging at PayPal](https://www.paypal-engineering.com/2016/09/07/python-packaging-at-paypal/)
+
+[Conda: Myths and Misconceptions](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
+
+[Python Packaging Is Good Now](https://glyph.twistedmatrix.com/2016/08/python-packaging.html)
+
+[The Python Packaging Ecosystem](http://www.curiousefficiency.org/posts/2016/09/python-packaging-ecosystem.html)
+
+[The Problem with Linux Kernel Documentation, and How We’re Fixing it](https://blogs.s-osg.org/problem-linux-kernel-documentation-fixing/)
+
+[Introducing osquery for Windows](https://m.facebook.com/notes/protect-the-graph/introducing-osquery-for-windows/1775110322729111/)
+
+[Red Hat, Google Engineers Work on a Way for Kubernetes to Run Containers Without Docker](http://thenewstack.io/oci-building-way-kubernetes-run-containers-without-docker/)
