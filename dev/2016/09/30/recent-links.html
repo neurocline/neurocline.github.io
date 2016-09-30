@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Recent links</title>
-  <meta name="description" content="Writing HLSL Shaders in Direct3D 9">
+  <meta name="description" content="Requests: HTTP for Humans. A much easier to use HTTP library for Python. I wish something like this existed in C++.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/dev/2016/06/24/recent-links.html">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/09/30/recent-links.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -77,43 +77,25 @@
 
   <header class="post-header">
     <h1 class="post-title">Recent links</h1>
-    <p class="post-meta">Jun 24, 2016</p>
+    <p class="post-meta">Sep 30, 2016</p>
   </header>
 
   <article class="post-content">
-    <p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb944006(v=vs.85).aspx">Writing HLSL Shaders in Direct3D 9</a></p>
+    <p><a href="http://docs.python-requests.org/en/latest/">Requests: HTTP for Humans</a>. A much easier to use HTTP library for Python. I wish something like this existed in C++.</p>
 
-<p><a href="http://www.realtimerendering.com/resources/shaderx/Introductions_and_Tutorials_with_DirectX_9.pdf">ShaderX2: Introductions &amp; Tutorials with DirectX 9</a></p>
+<p><a href="https://certifi.io/en/latest/">Certifi, Trust Database for Humans</a>. The Python requests project decided that system-installed certs are a bad thing, so they curate their own collection.</p>
 
-<p><a href="http://www.codeproject.com/Articles/207642/Video-Shadering-with-Direct-D">Video Shadering with Direct3D</a></p>
+<p><a href="http://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho">Suppress InsecureRequestWarning: Unverified HTTPS request</a>. Requests has one issue in that if you disable cert validation (a bad idea but sometimes you have to, then you get a big fat warning to stderr. This post details a way to suppress that warning:</p>
 
-<p><a href="http://www.gamasutra.com/view/feature/3993/sponsored_feature_implementation_.php?print=1">Implementation of Fast Fourier Transform for Image Processing in DirectX 10</a></p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">requests.packages.urllib3.exceptions</span> <span class="kn">import</span> <span class="n">InsecureRequestWarning</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">packages</span><span class="o">.</span><span class="n">urllib3</span><span class="o">.</span><span class="n">disable_warnings</span><span class="p">(</span><span class="n">InsecureRequestWarning</span><span class="p">)</span></code></pre></div>
 
-<p><a href="http://www.create-games.com/article.asp?id=2275">A Guide to Pixel Shader Development</a></p>
+<p><a href="http://engineering.hackerearth.com/2014/08/21/python-requests-module/">Using APIs with Python Requests Module</a>. Tidbits on using requests.</p>
 
-<p><a href="http://drilian.com/2008/11/25/understanding-half-pixel-and-half-texel-offsets/">Understanding Half-Pixel and Half-Texel Offsets</a></p>
+<p><a href="https://developer.github.com/v3/">GitHub v3 API</a>. The GitHub API is fairly clean.</p>
 
-<p><a href="https://www.cockroachlabs.com/blog/time-travel-queries-select-witty_subtitle-the_future/">Time-Travel Queries: SELECT witty_subtitle FROM THE FUTURE</a></p>
-
-<p><a href="http://donw.io/post/reflection-cpp-1/">Reflection in C++, Part 1: Introduction</a></p>
-
-<p><a href="https://www.python.org/dev/peps/pep-0426/">PEP 426 – Metadata for Python Software Packages 2.0</a>. Although deferred and for Python, this is useful for all package system maintainers/creators to use.</p>
-
-<p><a href="https://medium.com/retronator-magazine/pixels-and-voxels-the-long-answer-5889ecc18190">Pixels and voxels, the long answer</a></p>
-
-<p><a href="https://www.paypal-engineering.com/2016/09/07/python-packaging-at-paypal/">Python Packaging at PayPal</a></p>
-
-<p><a href="https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/">Conda: Myths and Misconceptions</a></p>
-
-<p><a href="https://glyph.twistedmatrix.com/2016/08/python-packaging.html">Python Packaging Is Good Now</a></p>
-
-<p><a href="http://www.curiousefficiency.org/posts/2016/09/python-packaging-ecosystem.html">The Python Packaging Ecosystem</a></p>
-
-<p><a href="https://blogs.s-osg.org/problem-linux-kernel-documentation-fixing/">The Problem with Linux Kernel Documentation, and How We’re Fixing it</a></p>
-
-<p><a href="https://m.facebook.com/notes/protect-the-graph/introducing-osquery-for-windows/1775110322729111/">Introducing osquery for Windows</a></p>
-
-<p><a href="http://thenewstack.io/oci-building-way-kubernetes-run-containers-without-docker/">Red Hat, Google Engineers Work on a Way for Kubernetes to Run Containers Without Docker</a></p>
+<p><a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Creating an access token for command-line use</a>. Most uses of the GitHub API need to do the work on authenticated logins, and the easiest way to do that is to create an access token to avoid needing to implement the full OAuth flow.</p>
 
   </article>
 
