@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Oct 2016 08:12:42 -0700</pubDate>
-    <lastBuildDate>Mon, 03 Oct 2016 08:12:42 -0700</lastBuildDate>
+    <pubDate>Mon, 03 Oct 2016 13:04:28 -0700</pubDate>
+    <lastBuildDate>Mon, 03 Oct 2016 13:04:28 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -29,6 +29,20 @@
 &lt;p&gt;&lt;a href=&quot;http://www.curiousefficiency.org/posts/2016/09/python-packaging-ecosystem.html&quot;&gt;The Python Packaging Ecosystem&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.python.org/dev/peps/pep-0426/&quot;&gt;PEP 426 – Metadata for Python Software Packages 2.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://aosabook.org/en/index.html&quot;&gt;The Architecture of Open Source Applications&lt;/a&gt;. The 4th volume is out: 500 Lines or Less.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://monoskop.org/images/f/ff/Alexander_Christopher_Notes_on_the_Synthesis_of_Form.pdf&quot;&gt;Notes on the Synthesis of Form&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.doerry.org/norbert/papers/SBDFinal.pdf&quot;&gt;What is Set-Based Design?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.rose-hulman.edu/~stienstr/ME470/Set-basedDesign_Fall2012.pdf&quot;&gt;Set-Based Design&lt;/a&gt;. Notes from a class.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://deepblue.lib.umich.edu/bitstream/handle/2027.42/97124/AIAA2012-5444.pdf?sequence=1&quot;&gt;Including Principles of Set-Based Design in Multidisciplinary Design Optimization&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ce.berkeley.edu/~tommelein/design/Sobek&amp;amp;Ward&amp;amp;Liker%201999%20Toyota&#39;s%20Principles%20of%20Set%20Based%20Concurrent%20Engineering.pdf&quot;&gt;Toyota’s Principles of Set-Based Concurrent Engineering&lt;/a&gt;. Article from 1999 by Sobek, Ward and Liker, largely drawing from Toyota studies.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ce.berkeley.edu/~tommelein/papers/2009-Parrish-PhD.pdf&quot;&gt;APPLYING A SET-BASED DESIGN APPROACH TO REINFORCING STEEL DESIGN&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 03 Oct 2016 08:00:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/10/03/recent-links.html</link>
