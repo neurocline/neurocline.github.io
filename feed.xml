@@ -6,9 +6,40 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 30 Sep 2016 15:08:45 -0700</pubDate>
-    <lastBuildDate>Fri, 30 Sep 2016 15:08:45 -0700</lastBuildDate>
+    <pubDate>Mon, 03 Oct 2016 08:12:42 -0700</pubDate>
+    <lastBuildDate>Mon, 03 Oct 2016 08:12:42 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://sdg.csail.mit.edu/pubs/2015/concept-essay.pdf&quot;&gt;Towards a Theory of Conceptual Design for Software&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/sperezde/pre-print-oopsla16.pdf&quot;&gt;Purposes, Concepts, Misfits, and a Redesign of Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gitless.com/&quot;&gt;Gitless: a version control system&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://neverworkintheory.org/blog.html&quot;&gt;It Will Never Work in Theory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.wildml.com/2016/10/learning-reinforcement-learning/&quot;&gt;LEARNING REINFORCEMENT LEARNING (WITH CODE, EXERCISES AND SOLUTIONS)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nanotechweb.org/cws/article/tech/66462&quot;&gt;Memristor behaves like a synapse&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.bloomberg.com/view/articles/2016-09-30/the-economics-of-dining-as-a-couple&quot;&gt;The Economics of Dining as a Couple&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.curiousefficiency.org/posts/2016/09/python-packaging-ecosystem.html&quot;&gt;The Python Packaging Ecosystem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.python.org/dev/peps/pep-0426/&quot;&gt;PEP 426 – Metadata for Python Software Packages 2.0&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 03 Oct 2016 08:00:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2016/10/03/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/10/03/recent-links.html</guid>
+        
+        <category>links</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -759,54 +790,6 @@ audio-visual objects — Part 14: MP4 file format.&lt;/p&gt;
         <pubDate>Fri, 24 Jun 2016 16:36:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/06/24/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/06/24/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;Windows&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms684320(v=vs.85).aspx&quot;&gt;OpenProcess&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms684880(v=vs.85).aspx&quot;&gt;Process Security and Access Rights&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms687069(v=vs.85).aspx&quot;&gt;Wait Functions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms686701(v=vs.85).aspx&quot;&gt;Taking a Snapshot and Viewing Processes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms686724(v=vs.85).aspx&quot;&gt;Terminating a Thread&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms682658(v=vs.85).aspx&quot;&gt;ExitProcess function&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms683189(v=vs.85).aspx&quot;&gt;GetExitCodeProcess function&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms683190(v=vs.85).aspx&quot;&gt;GetExitCodeThread function&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms644959(v=vs.85).aspx&quot;&gt;Hooks Overview&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms644990.aspx&quot;&gt;SetWindowsHookEx function&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms644981.aspx&quot;&gt;GetMsgProc callback function&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;DLL and notification and injection&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24303817/notification-on-thread-destroy&quot;&gt;Notification on thread destroy&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/378380/how-can-i-debug-a-win32-process-that-unexpectedly-terminates-silently&quot;&gt;How can I debug a win32 process that unexpectedly terminates silently?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/4610/Three-Ways-to-Inject-Your-Code-into-Another-Proces&quot;&gt;Three Ways to Inject Your Code into Another Process&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/6453084/how-to-terminate-worker-thread-properly-in-an-injected-dll&quot;&gt;How to terminate worker thread properly in an injected DLL?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://resources.infosecinstitute.com/using-createremotethread-for-dll-injection-on-windows/&quot;&gt;Using CreateRemoteThread for DLL Injection on Windows&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.rohitab.com/discuss/topic/40160-inject-code-into-other-processes-using-pe-injection/&quot;&gt;Inject code into other processes using PE injection&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/26869973/global-hook-using-wh-getmessage-and-wh-keyboard&quot;&gt;Global hook using WH_GETMESSAGE and WH_KEYBOARD&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://disman.tl/2015/03/16/cross-architecture-reflective-dll-inection.html&quot;&gt;Cross-Architecture Reflective DLL Injection&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3155782/what-is-the-difference-between-wm-quit-wm-close-and-wm-destroy-in-a-windows-pr&quot;&gt;What is the difference between WM_QUIT, WM_CLOSE, and WM_DESTROY in a windows program?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/13915332/hook-window-message-loop-wm-close&quot;&gt;Hook Window Message loop WM_CLOSE&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/11647689/hooking-to-the-windows-process&quot;&gt;Hooking to the windows process&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/2082/API-hooking-revealed&quot;&gt;API hooking revealed&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/proteansec/visual-studio-projects&quot;&gt;proteansec/visual-studio-projects&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 14 Jun 2016 22:56:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/06/14/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/06/14/recent-links.html</guid>
         
         <category>links</category>
         
