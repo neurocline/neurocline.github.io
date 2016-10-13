@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Python and UTF-8 and Windows</title>
+  <meta name="description" content="Some day, everyone will have their act together when it comes to encoding and decodingof strings that have meaning. Until then, we need hacks.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/10/13/python-utf8-windows.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,58 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Python and UTF-8 and Windows</h1>
+    <p class="post-meta">Oct 13, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Oct 13, 2016</span>
+  <article class="post-content">
+    <p>Some day, everyone will have their act together when it comes to encoding and decoding
+of strings that have meaning. Until then, we need hacks.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/10/13/python-utf8-windows.html">Python and UTF-8 and Windows</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 3, 2016</span>
+<p>This is what I do in Python programs that print to the screen. Currently I try to make my
+Python code work in both Python 2 and Python 3 - I look forward to being able to ditch
+Python 2, but not yet.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/10/03/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 30, 2016</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">PY2</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">3</span><span class="p">,)</span>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/09/30/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 14, 2016</span>
+<span class="c"># This is a hack so that we have UTF-8 throughout in Python 2. The &quot;correct&quot; way is to use</span>
+<span class="c"># encode(s) at the point of output, http://farmdev.com/talks/unicode/. Or switch to Python 3.</span>
+<span class="k">if</span> <span class="n">PY2</span><span class="p">:</span>
+    <span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/09/14/git-committer-info.html">Git committer info</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 23, 2016</span>
+    <span class="c"># note - on windows, use chcp 65001 (default is chcp 437)</span>
+    <span class="c"># Fixed in Python 3.6 and up, apparently</span>
+    <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s">&quot;win32&quot;</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">codecs</span>
+        <span class="n">codecs</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="n">codecs</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s">&#39;cp65001&#39;</span> <span class="k">else</span> <span class="bp">None</span><span class="p">)</span></code></pre></div>
 
-        <h2>
-          <a class="post-link" href="/hardware/2016/08/23/new-computers.html">New computers</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>This way, my programs don’t croak when they encounter Unicode codepoints.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p>This is <em>mostly</em> better in Python 3.5 and up, but still not totally seamless.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h1 id="reference">Reference</h1>
+
+<p><a href="http://stackoverflow.com/questions/878972/windows-cmd-encoding-change-causes-python-crash">Windows cmd encoding change causes Python crash</a></p>
+
+<p><a href="http://stackoverflow.com/questions/5419/python-unicode-and-the-windows-console/32176732">Python, Unicode, and the Windows console</a></p>
+
+<p><a href="https://www.metachris.com/2015/11/python-tools-for-string-unicode-encoding-decoding-printing/">Python Helpers for String/Unicode Encoding, Decoding and Printing</a></p>
+
+<p><a href="http://chase-seibert.github.io/blog/2014/01/12/python-unicode-console-output.html">Print to the console in Python without UnicodeEncodeErrors</a> - note, this did not work for me in Python 2.7.9</p>
+
+<p><a href="http://legacy.python.org/dev/peps/pep-0263/">Defining Python Source Code Encodings</a> - I think this is irrelevant now, doesn’t Python assume that your source code is UTF-8?</p>
+
+<p><a href="http://stackoverflow.com/questions/492483/setting-the-correct-encoding-when-piping-stdout-in-python">Setting the correct encoding when piping stdout in Python</a></p>
+
+<p><a href="http://stackoverflow.com/questions/1473577/writing-unicode-strings-via-sys-stdout-in-python">Writing unicode strings via sys.stdout in Python</a></p>
+
+  </article>
 
 </div>
 
