@@ -6,9 +6,106 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Nov 2016 10:18:44 -0700</pubDate>
-    <lastBuildDate>Wed, 02 Nov 2016 10:18:44 -0700</lastBuildDate>
+    <pubDate>Mon, 07 Nov 2016 18:55:01 -0800</pubDate>
+    <lastBuildDate>Mon, 07 Nov 2016 18:55:01 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Package manager failure</title>
+        <description>&lt;p&gt;Package managers shouldn’t do this. TL/DR - I just wanted to install Sphinx. It
+installed fine on one machine, but the install barfed on another. I have no idea
+how to fix this, and casual googling provided no relief. So - I am actually
+uninstalling and re-installing Python, for lack of any better idea.&lt;/p&gt;
+
+&lt;p&gt;I tried upgrading to the newest pip as suggested, but of course that did nothing.
+Maybe it’s because I’m running Python 3.6 beta on the machine in question. Of course,
+I would like to know why it didn’t give me a sensible error instead of this. So I’ll
+uninstall Python 3.6 beta and install latest Python 3.5, because I’m guessing it’s
+something related to that.&lt;/p&gt;
+
+&lt;p&gt;My actual point is that this is not sensible behavior for a package manager. Package
+managers should just work. This indicates a design flaw to me somewhere in the system.&lt;/p&gt;
+
+&lt;p&gt;Update: a slightly better Google search did turn up a Stackoverflow page (of course),
+and I guess Python 3.6 beta is a little too bleeding edge for me. So my point might
+still stand, but not precisely pointed at Python and pip, just in general.&lt;/p&gt;
+
+&lt;p&gt;Things should work, dammit.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;C:&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;&amp;gt;pip install sphinx
+Collecting sphinx
+  Downloading Sphinx-1.4.8-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1.6MB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 1.6MB 618kB/s
+Collecting snowballstemmer&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1.1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading snowballstemmer-1.2.1-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;64kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 71kB 3.8MB/s
+Collecting docutils&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0.11 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading docutils-0.12-py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;508kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 512kB 1.2MB/s
+Collecting Pygments&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading Pygments-2.1.3-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;755kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 757kB 282kB/s
+Collecting alabaster&amp;lt;0.8,&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0.7 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading alabaster-0.7.9-py2.py3-none-any.whl
+Collecting babel!&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.0,&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1.3 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading Babel-2.3.4-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;7.1MB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 7.1MB 136kB/s
+Collecting imagesize &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading imagesize-0.7.1-py2.py3-none-any.whl
+Collecting six&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1.5 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading six-1.10.0-py2.py3-none-any.whl
+Collecting colorama&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0.3.5&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sys_platform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;win32&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading colorama-0.3.7-py2.py3-none-any.whl
+Collecting Jinja2&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.3 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading Jinja2-2.8-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;263kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 266kB 345kB/s
+Collecting pytz&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0a &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from babel!&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.0,&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1.3-&amp;gt;sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading pytz-2016.7-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;480kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 481kB 480kB/s
+Collecting MarkupSafe &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from Jinja2&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.3-&amp;gt;sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  Downloading MarkupSafe-0.23.tar.gz
+Installing collected packages: snowballstemmer, docutils, Pygments, alabaster, pytz, babel, imagesize, six, colorama, MarkupSafe, Jinja2, sphinx
+Exception:
+Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\basecommand.py&amp;quot;&lt;/span&gt;, line 215, in main
+    &lt;span class=&quot;nv&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; self.run&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;options, args&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\commands\install.py&amp;quot;&lt;/span&gt;, line 317, in run
+    &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;options.prefix_path,
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\req\req_set.py&amp;quot;&lt;/span&gt;, line 742, in install
+    **kwargs
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\req\req_install.py&amp;quot;&lt;/span&gt;, line 831, in install
+    self.move_wheel_files&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;self.source_dir, &lt;span class=&quot;nv&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;root, &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;prefix&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\req\req_install.py&amp;quot;&lt;/span&gt;, line 1032, in move_wheel_files
+    &lt;span class=&quot;nv&quot;&gt;isolated&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;self.isolated,
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\wheel.py&amp;quot;&lt;/span&gt;, line 493, in move_wheel_files
+    maker.make_multiple&lt;span class=&quot;o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%s = %s&amp;#39;&lt;/span&gt; % kv &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; kv in console.items&lt;span class=&quot;o&quot;&gt;()])&lt;/span&gt;
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 383, in make_multiple
+    filenames.extend&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;self.make&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;specification, options&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 372, in make
+    self._make_script&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;entry, filenames, &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;options&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 276, in _make_script
+    self._write_script&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;scriptnames, shebang, script, filenames, ext&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 212, in _write_script
+    &lt;span class=&quot;nv&quot;&gt;launcher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; self._get_launcher&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;t&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 351, in _get_launcher
+    &lt;span class=&quot;nv&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; finder&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;distlib_package&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.bytes
+  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\resources.py&amp;quot;&lt;/span&gt;, line 324, in finder
+    raise DistlibException&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Unable to locate finder for %r&amp;#39;&lt;/span&gt; % package&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+pip._vendor.distlib.DistlibException: Unable to locate finder &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;pip._vendor.distlib&amp;#39;&lt;/span&gt;
+You are using pip version 8.1.2, however version 9.0.1 is available.
+You should consider upgrading via the &lt;span class=&quot;s1&quot;&gt;&amp;#39;python -m pip install --upgrade pip&amp;#39;&lt;/span&gt; command.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 07 Nov 2016 17:39:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/11/07/package-manager-failure.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/07/package-manager-failure.html</guid>
+        
+        <category>python</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Git repos - forks, subtrees and other shenanigans</title>
@@ -860,35 +957,6 @@ audio-visual objects — Part 14: MP4 file format.&lt;/p&gt;
         <pubDate>Sun, 10 Jul 2016 19:37:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/07/10/rtmp.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/07/10/rtmp.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Direct3D shaders</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb509633(v=vs.85).aspx&quot;&gt;Compiling Shaders&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb509709(v=vs.85).aspx&quot;&gt;Syntax&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb509710(v=vs.85).aspx&quot;&gt;Offline Compiling&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/chuckw/2012/05/07/hlsl-fxc-and-d3dcompile/&quot;&gt;HLSL, FXC, and D3DCompile&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/dd607324(v=vs.85).aspx&quot;&gt;D3DCompile function&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/hh446869.aspx&quot;&gt;D3DCompile2 function&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ff476876(v=vs.85).aspx&quot;&gt;Direct3D feature levels&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/bb509553(v=vs.85).aspx&quot;&gt;DXGI_ERROR&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 05 Jul 2016 19:43:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/07/05/direct3d-shaders.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/07/05/direct3d-shaders.html</guid>
         
         <category>links</category>
         
