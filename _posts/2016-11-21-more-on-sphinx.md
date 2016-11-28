@@ -12,27 +12,27 @@ a blog in it, but it can't be worse than Jekyll.
 I'm now at the point where I want it to look a certain way, so here's what I'm reading
 about modifying and controlling Sphinx. I'll get it into shape with conclusions in a bit.
 
-http://matplotlib.org/sampledoc/
+[matplotlib: sampledoc](http://matplotlib.org/sampledoc/)
 
-http://docutils.sourceforge.net/docs/ref/rst/directives.html#include
+[reStructuredText: Including an External Document Fragment](http://docutils.sourceforge.net/docs/ref/rst/directives.html#include)
 
-https://readthedocs.org/
+[Read The Docs](https://readthedocs.org/)
 
-http://www.sphinx-doc.org/en/1.4.8/theming.html
+[Sphinx: HTML theming support](http://www.sphinx-doc.org/en/1.4.8/theming.html)
 
-http://www.writethedocs.org/guide/tools/sphinx-themes/
+[Write The Docs: Sphinx Themes](http://www.writethedocs.org/guide/tools/sphinx-themes/)
 
-https://github.com/snide/sphinx_rtd_theme
+[snide/sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme) - the source for the Read The Docs Sphinx theme.
 
-http://docs.readthedocs.io/en/latest/theme.html
+[Read the Docs Theme](http://docs.readthedocs.io/en/latest/theme.html)
 
-http://stackoverflow.com/questions/14622698/customize-sphinxdoc-theme
+[StackOverflow: Customize sphinxdoc theme](http://stackoverflow.com/questions/14622698/customize-sphinxdoc-theme) - simple example of Sphinx theming.
 
-http://stackoverflow.com/questions/2075691/some-good-sphinx-customization-examples
+[StackOverflow: Some good Sphinx customization examples?](http://stackoverflow.com/questions/2075691/some-good-sphinx-customization-examples) - useful compendium of Sphinx theming links.
 
-https://github.com/coordt/ADCtheme
+[coordt/ADCtheme](https://github.com/coordt/ADCtheme) - a Sphinx theme that mimics the look of Apple Developer Connection documentation.
 
-https://github.com/pallets/flask-sphinx-themes
+[pallets/flask-sphinx-themes](https://github.com/pallets/flask-sphinx-themes) - source for Flask Sphinx Themes
 
 http://loose-bits.com/2012/11/19/sphinx-bootstrap-theme-updates.html
 
