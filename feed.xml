@@ -6,9 +6,320 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Nov 2016 18:16:13 -0800</pubDate>
-    <lastBuildDate>Wed, 09 Nov 2016 18:16:13 -0800</lastBuildDate>
+    <pubDate>Sun, 27 Nov 2016 17:08:16 -0800</pubDate>
+    <lastBuildDate>Sun, 27 Nov 2016 17:08:16 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>History: told by the winners or the losers?</title>
+        <description>&lt;p&gt;There is a saying: “history is told by the winners”. It seems intuitively true, and that
+is usually a warning sign that we’re not thinking things through.&lt;/p&gt;
+
+&lt;p&gt;Recently a new thesis has been advanced: history is told by the losers. For an example of
+the argument:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://scholars-stage.blogspot.com/2016/11/history-is-written-by-losers.html&quot;&gt;History is Written by the Losers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This makes a compelling case - when you have an erudite person who is the winner, they
+don’t have time to write anything, but when that person is shoved aside, that person
+may just write a history that’s more palatable to them. The two cases cited cover the
+origins of history-from-historians.&lt;/p&gt;
+
+&lt;p&gt;Here’s how I look at it. There are two ways that history is written. The first is that history
+is written by consensus; over time, we mostly converge to the same view. This maps to the “history
+is written by the winners” side of things, because of course the winners have an outsized
+influence on what is said.&lt;/p&gt;
+
+&lt;p&gt;But the other way that history is written is the auteur approach - a single person or small
+group that selects what it thinks should be recorded. In the case of Siam Qian or Herodotus
+or Thucydides, the stories are powerful enough to survive when the consensus history did not.
+And over the very long stretch of time, when we have wars or other catastrophes that upset
+and destroy specific civilizations, the consensus form of history doesn’t survive.&lt;/p&gt;
+
+&lt;p&gt;It’s an interesting thought. I’m still not sure that history is only or even largely written
+by losers, but maybe with enough research we’ll determine this is true.&lt;/p&gt;
+
+&lt;p&gt;Or maybe this view will be the one that survives because some loser will write it down and
+promote it.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;Another bit on history written by losers:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://history.stackexchange.com/questions/5597/is-history-always-written-by-the-victors&quot;&gt;Is history always written by the victors?&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Nov 2016 04:52:00 -0800</pubDate>
+        <link>http://neurocline.github.io/philosophy/2016/11/27/history-told-by-winners-or-losers.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/philosophy/2016/11/27/history-told-by-winners-or-losers.html</guid>
+        
+        <category>history</category>
+        
+        
+        <category>philosophy</category>
+        
+      </item>
+    
+      <item>
+        <title>Git: The Theoretical Minimum</title>
+        <description>&lt;p&gt;I intend to write a book titled “Git: The Theoretical Minimum”, inspired by Leonard Susskind’s
+two books &lt;a href=&quot;https://www.amazon.com/Theoretical-Minimum-Start-Doing-Physics/dp/0465075681&quot;&gt;The Theoretical Minimum: What You Need to Know to Start Doing Physics&lt;/a&gt;
+and &lt;a href=&quot;https://www.amazon.com/Quantum-Mechanics-Theoretical-Leonard-Susskind/dp/0465062903&quot;&gt;Quantum Mechanics: The Theoretical Minimum&lt;/a&gt;
+(also see his web site &lt;a href=&quot;http://theoreticalminimum.com/&quot;&gt;The Theoretical Minimum&lt;/a&gt;). These
+are awesome books and I recommend them to anyone, because physics is all around us and
+having a working knowledge of it is a good thing.&lt;/p&gt;
+
+&lt;p&gt;My reasoning in a nutshell is this: Git is the first real version control system, or rather
+it is probably the ancestor of the first real one. And while it is not as complicated to use
+as detractors like to say, it’s also not been explained in a succinct fashion. There are now
+many thousands of pages written, and yet a lot of Git is not explained except in answers
+to StackOverflow questions or by looking at the source.&lt;/p&gt;
+
+&lt;p&gt;I think this means that there is a need for a short volume that explains everything you need
+in order to do anything with Git, and I also think that this overlaps with “everything about
+version control” to a staggering degree. I don’t mean to have the encyclopedic volume that
+literally writes down everything, but rather the bare minimum you need in order to do anything
+you need to on your own. For example, the Git help is pretty good, but it’s also only good if
+you already understand things - it’s more a reminder reference than something you consult in
+order to learn what to do.&lt;/p&gt;
+
+&lt;p&gt;For example, it is probably not important to describe the Git plumbing model, but it is
+important to describe exactly how commits work, because that’s at the heart of many Git
+operations. What I hope to do is to find the basic set of things you need to know about
+any useful version control system, and describe them; the fact that it will be Git-centric
+is because Git is the most popular example of a good version control system at the moment.&lt;/p&gt;
+
+&lt;p&gt;Separately, I want to finish the survey of all version control systems, so that we can put
+most of them to bed as past history. “I have not come here to praise Perforce but to bury it”.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.rath.org/mercurial-for-git-users-and-vice-versa.html&quot;&gt;Mercurial for Git Users (and vice versa)&lt;/a&gt; - a more modern (early 2016) comparison between
+Mercurial and Git.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://softwareengineering.stackexchange.com/questions/940/what-are-your-favorite-version-control-systems&quot;&gt;What are your favorite version control systems?&lt;/a&gt; - I remember using both PVCS and Projector.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Comparison_of_version_control_software&quot;&gt;Comparison of version control software&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.improgrammer.net/top-version-control-systems/&quot;&gt;Top Version Control Systems&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://rhodecode.com/insights/version-control-systems-2016&quot;&gt;Version Control Systems Popularity in 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webinerds.com/version-control-systems-keep-your-code-in-order/&quot;&gt;Version Control Systems: Keep Your Code In Order!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.catb.org/esr/writings/version-control/version-control.html&quot;&gt;Understanding Version-Control Systems (DRAFT)&lt;/a&gt; - written in 2008, and may be the first attempt to cover the general theory of revision control.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot;&gt;Version control&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ericsink.com/scm/source_control.html&quot;&gt;Source Control HOWTO&lt;/a&gt; - from Eric Sink, useful for common terminology.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ericsink.com/vcbe/html/index.html&quot;&gt;Version Control by Example&lt;/a&gt; - a 2011 online book by Eric Sink.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://betterexplained.com/articles/a-visual-guide-to-version-control/&quot;&gt;A Visual Guide to Version Control&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/&quot;&gt;Intro to Distributed Version Control (Illustrated)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cs.ru.nl/~wouters/Publications/PrincipledVersionControl.pdf&quot;&gt;A Principled Approach to Version Control&lt;/a&gt; - a 2006 paper: “This paper aims to give a precise, mathematical description of the version control problem and different version control systems”&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.staff.science.uu.nl/~swier004/publications/2014-onward.pdf&quot;&gt;The Semantics of Version Control&lt;/a&gt;. A 2014 paper by the authors of the previous paper.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pijul.org/&quot;&gt;Pijul&lt;/a&gt;, based on Darcs. Pijul was announced in 2014 but it’s still in (mostly slow moving) development. See &lt;a href=&quot;https://news.ycombinator.com/item?id=10470281&quot;&gt;HackerNews comment thread&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://darcs.net/Theory/Bibliography&quot;&gt;Darcs: Theory/Bibliography&lt;/a&gt;. Darcs is one the few systems that claims to be based on a strong theory; in fact, Darcs devotees are often dismissive of other efforts as not having a formal backdrop. Darcs vs Git is a classic example of “it works in theory”; to two significant digits, no one uses Darcs, everyone uses Git.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://projects.haskell.org/camp/&quot;&gt;Camp (Haskell)&lt;/a&gt;. Another system ideologically related to Darcs. Start in 2009, and seems to have been abandoned as of 2010.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pasky.or.cz/bc/bcthesis-final.pdf&quot;&gt;Current Concepts in Version Control Systems&lt;/a&gt;. 2008 Bachelor thesis by Petr Baudiˇs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cs.cmu.edu/~rwh/papers/htpt/paper.pdf&quot;&gt;Homotopical Patch Theory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cstheory.stackexchange.com/questions/32374/math-talk-theorem-about-git-revision-control-system&quot;&gt;Math talk: Theorem about git revision control system?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://rahul.gopinath.org/post/2011/12/30/version-control-systems/&quot;&gt;Version Control Systems&lt;/a&gt;. The best historical overview I’ve seen to date.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.278.6065&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Branching and Merging: An Investigation into Current Version Control Practices&lt;/a&gt;. 2011 paper.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://is.muni.cz/th/98961/fi_b/BcThesis.pdf&quot;&gt;Distributed Source Code Version Control Systems: Comparison and Usage Evaluation&lt;/a&gt;. 2006 Bachelor’s thesis by Michal M¥rka.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://files.codersbase.com/thesis.pdf&quot;&gt;Type-Correct Changes — A Safe Approach to Version Control Implementation&lt;/a&gt;. 2009 Master’s Thesis by Jason Dagit.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://hyperpolyglot.org/version-control&quot;&gt;Version Control: Git, Mercurial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.aosabook.org/en/mercurial.html&quot;&gt;TAOSA: Mercurial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://duckrowing.com/2013/12/26/bzr-init-a-bazaar-tutorial/&quot;&gt;BZR INIT: A BAZAAR TUTORIAL&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://marklodato.github.io/visual-git-guide/index-en.html&quot;&gt;A Visual Git Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jhw.dreamwidth.org/1868.html&quot;&gt;WHY I LIKE MERCURIAL MORE THAN GIT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://schacon.github.io/2008/11/24/on-mercurial.html&quot;&gt;On Mercurial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.mercurial-scm.org/wiki/GitConcepts&quot;&gt;Mercurial for Git users&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 25 Nov 2016 13:33:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/11/25/git-the-theoretical-minimum.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/25/git-the-theoretical-minimum.html</guid>
+        
+        <category>git</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://blog.mailgun.com/machine-learning-for-everyday-tasks/&quot;&gt;Machine Learning for Everyday Tasks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cs.cornell.edu/~asampson/blog/statsmistakes.html&quot;&gt;Statistical Mistakes and How to Avoid Them&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://talkpython.fm/episodes/show/86/python-at-stackoverflow&quot;&gt;TalkPython: Episode #86: Python at StackOverflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python&quot;&gt;What is a metaclass in Python?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://subgraph.com/&quot;&gt;Subgraph OS: Adversary resistant computing platform&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://aelkus.github.io/essays/ai_manhattan_project.html&quot;&gt;The Manhattan Project Fallacy&lt;/a&gt; - this is mostly wrong, in my opinion.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-need-to-know/&quot;&gt;NIST’s new password rules – what you need to know&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=13021722&quot;&gt;Ask HN: What free or low-cost static site hosting do you use most?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://neocities.org/&quot;&gt;neocities&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://p5js.org/&quot;&gt;p5*js&lt;/a&gt;. A spin-off of Processing, in the Javascript language&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twinery.org/&quot;&gt;Twine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hugotunius.se/2016/01/10/the-one-cent-blog.html&quot;&gt;The one cent blog&lt;/a&gt; - about running a blog for $0.01/month (discounting domain registration).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ampproject.org/&quot;&gt;AMP HTML&lt;/a&gt; - a new thing I should use?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.pmease.com/gitplex&quot;&gt;GixPlex&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.netlify.com/&quot;&gt;Netlify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.theguardian.com/media/2016/nov/22/conservative-websites-media-bubble?CMP=share_btn_fb&quot;&gt;So you want to get out of your bubble: try reading these conservative websites&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 24 Nov 2016 19:45:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/11/24/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/24/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Python makes me cry</title>
+        <description>&lt;p&gt;I don’t hate Python. If I hated it, I wouldn’t use it. But every time I start using Python
+for serious work, I run into silly problems.&lt;/p&gt;
+
+&lt;p&gt;For example, I used Python 2.x for a long time, but finally switched to Python 3.x because
+it was pretty much impossible to correctly handle localized text - you can mostly handle it,
+but if you want to be perfect, the edge cases get in your way. But then, once I switched to
+Python 3, I remembered that I ran programs that didn’t like Python 2. So then I had to do
+shenanigans to get things to run, like mentioned here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://testerstories.com/2014/06/multiple-versions-of-python-on-windows/&quot;&gt;Multiple Versions of Python on Windows&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The main issue is that Python emphasizes quick turnaround at the cost of other factors.
+For many small problems, this is great. If you’re writing software you just want to use
+for weeks, months or years, this is not so great. I find myself constantly fiddling with
+things.&lt;/p&gt;
+
+&lt;p&gt;That said, Zeb Shaw went off the deep end when he wrote this.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://learnpythonthehardway.org/book/nopython3.html&quot;&gt;The Case Against Python 3&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;He may or may not learn the lesson that many others have - you make think you are
+“exaggerating for effect’, whereas your opposition will call you a liar, or an idiot,
+or other very unkind things. Zeb advances some arguments that are silly, in his attempt
+to have a very strong argument.&lt;/p&gt;
+
+&lt;p&gt;Instead, my issue is that I want it all - I want a language where I can quickly run and
+test code, and I want to produce programs that just run, on anyone’s machine, or on my
+machine years later. I have Mac programs that I wrote in 1988 that still work just fine.
+I have Windows programs that I wrote in 1995 that still work just fine. I have lots of
+Python, Perl and Ruby code that stop working months after written, because there’s too
+much interaction with the machine environment.&lt;/p&gt;
+
+&lt;p&gt;The correct answer is a staticly typed language with a kick-ass package system and
+a compiler that’s universally available, where you distribute both binary and source, and
+source can be recompiled as needed. Python has parts of this, but the language fights
+against stability, and the fact that you need exactly the right VM fights against it.
+I can’t just distribute a Python program. But I can distribute just a Windows binary or
+a Mac binary.&lt;/p&gt;
+
+&lt;p&gt;Time to get to work.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Nov 2016 16:45:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/11/23/python-makes-me-cry.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/23/python-makes-me-cry.html</guid>
+        
+        <category>python</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>More on Sphinx</title>
+        <description>&lt;p&gt;I’ve been using Sphinx for a few weeks now, and I like it. I’m not sure yet about writing
+a blog in it, but it can’t be worse than Jekyll.&lt;/p&gt;
+
+&lt;p&gt;I’m now at the point where I want it to look a certain way, so here’s what I’m reading
+about modifying and controlling Sphinx. I’ll get it into shape with conclusions in a bit.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://matplotlib.org/sampledoc/&quot;&gt;matplotlib: sampledoc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docutils.sourceforge.net/docs/ref/rst/directives.html#include&quot;&gt;reStructuredText: Including an External Document Fragment&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://readthedocs.org/&quot;&gt;Read The Docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sphinx-doc.org/en/1.4.8/theming.html&quot;&gt;Sphinx: HTML theming support&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.writethedocs.org/guide/tools/sphinx-themes/&quot;&gt;Write The Docs: Sphinx Themes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/snide/sphinx_rtd_theme&quot;&gt;snide/sphinx_rtd_theme&lt;/a&gt; - the source for the Read The Docs Sphinx theme.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.readthedocs.io/en/latest/theme.html&quot;&gt;Read the Docs Theme&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/14622698/customize-sphinxdoc-theme&quot;&gt;StackOverflow: Customize sphinxdoc theme&lt;/a&gt; - simple example of Sphinx theming.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2075691/some-good-sphinx-customization-examples&quot;&gt;StackOverflow: Some good Sphinx customization examples?&lt;/a&gt; - useful compendium of Sphinx theming links.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/coordt/ADCtheme&quot;&gt;coordt/ADCtheme&lt;/a&gt; - a Sphinx theme that mimics the look of Apple Developer Connection documentation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/pallets/flask-sphinx-themes&quot;&gt;pallets/flask-sphinx-themes&lt;/a&gt; - source for Flask Sphinx Themes&lt;/p&gt;
+
+&lt;p&gt;http://loose-bits.com/2012/11/19/sphinx-bootstrap-theme-updates.html&lt;/p&gt;
+
+&lt;p&gt;http://ryan-roemer.github.io/sphinx-bootstrap-theme/README.html&lt;/p&gt;
+
+&lt;p&gt;http://matplotlib.org/&lt;/p&gt;
+
+&lt;p&gt;http://matplotlib.org/devel/documenting_mpl.html#dynamically-generated-figures&lt;/p&gt;
+
+&lt;p&gt;http://matplotlib.org/devel/documenting_mpl.html#inheritance-diagrams&lt;/p&gt;
+
+&lt;p&gt;https://pypi.python.org/pypi/sphinx-bootstrap-theme/&lt;/p&gt;
+
+&lt;p&gt;https://pythonhosted.org/sphinxjp.themes.basicstrap/options.html&lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Nov 2016 15:20:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/11/21/more-on-sphinx.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/21/more-on-sphinx.html</guid>
+        
+        <category>python</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Sphinx for documentation</title>
@@ -482,603 +793,6 @@ Python 2, but not yet.&lt;/p&gt;
         <pubDate>Mon, 03 Oct 2016 08:00:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2016/10/03/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/10/03/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://docs.python-requests.org/en/latest/&quot;&gt;Requests: HTTP for Humans&lt;/a&gt;. A much easier to use HTTP library for Python. I wish something like this existed in C++.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://certifi.io/en/latest/&quot;&gt;Certifi, Trust Database for Humans&lt;/a&gt;. The Python requests project decided that system-installed certs are a bad thing, so they curate their own collection.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho&quot;&gt;Suppress InsecureRequestWarning: Unverified HTTPS request&lt;/a&gt;. Requests has one issue in that if you disable cert validation (a bad idea but sometimes you have to, then you get a big fat warning to stderr. This post details a way to suppress that warning:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests.packages.urllib3.exceptions&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InsecureRequestWarning&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urllib3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disable_warnings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InsecureRequestWarning&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://engineering.hackerearth.com/2014/08/21/python-requests-module/&quot;&gt;Using APIs with Python Requests Module&lt;/a&gt;. Tidbits on using requests.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.github.com/v3/&quot;&gt;GitHub v3 API&lt;/a&gt;. The GitHub API is fairly clean.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Creating an access token for command-line use&lt;/a&gt;. Most uses of the GitHub API need to do the work on authenticated logins, and the easiest way to do that is to create an access token to avoid needing to implement the full OAuth flow.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 30 Sep 2016 09:35:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/09/30/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/09/30/recent-links.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Git committer info</title>
-        <description>&lt;p&gt;Simple queries can be done with the Git command-line. To see aggregate commit
-history for the past year in all branches (and assuming that merges don’t count as commits):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log --no-merges --since&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1 year ago&amp;quot;&lt;/span&gt; --all &amp;gt; log.txt
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git shortlog -sne &amp;lt; log.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This could be done with pipes as well to avoid intermediate files.&lt;/p&gt;
-
-&lt;p&gt;Note that –all looks at remotes, and for the most part this is what you want - your clone of
-a repo rarely has tracking branches for all branches in the the remote(s), but you almost
-certainly want information about that data.&lt;/p&gt;
-
-&lt;p&gt;By default, &lt;code&gt;git log&lt;/code&gt; uses the medium pretty format, which looks like this&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;commit e22c092b573c93e8d9c358330ad65c82c14bff0a
-Author: Brian Fitzgerald &amp;lt;bfitz@blizzard.com&amp;gt;
-Date:   Thu Sep &lt;span class=&quot;m&quot;&gt;29&lt;/span&gt; 17:07:11 &lt;span class=&quot;m&quot;&gt;2016&lt;/span&gt; -0700
-
-    Mass query of Github
-
-    Do queries &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; repos, orgs, users &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; GitHub. Also handle GitHub
-    Enterprise &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;the Ghosthub instance&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.
-
-    Add --dir option to working.py to allow working dir to be &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;    &lt;/span&gt;from the &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;line &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;slight improvement to workflow&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You might find you want to go
-beyond that, but &lt;code&gt;--pretty=format:&amp;lt;fmt&amp;gt;&lt;/code&gt; looks daunting. Here is a format string that
-reproduces the medium pretty format:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s2&quot;&gt;&amp;quot;%C(auto)commit %H%nAuthor: %an &amp;lt;%ae&amp;gt;%nDate: %ad%n%n%w(0,4,4)%s%n%n%b&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The &lt;code&gt;git log help&lt;/code&gt; page has a section that covers all the format operators, although
-some are hard to puzzle out just from the docs. In particular, indented formatting is
-not explained well. The string &lt;code&gt;%w(0,4,4)&lt;/code&gt; means to not wrap lines, indent the first line
-by 4 spaces, and indent remaining lines by 4 spaces. This also stays in effect until
-changed.&lt;/p&gt;
-
-&lt;p&gt;More importantly, in logs you want to process with code, you’ll probably not indent them, and
-you won’t colorize them either.&lt;/p&gt;
-
-&lt;p&gt;If you use one-line formats, you’ll probably want to use &lt;code&gt;---pretty=tformat:&amp;lt;fmt&amp;gt;&lt;/code&gt;&lt;code&gt;instead.
-The&lt;/code&gt;&lt;code&gt;format&lt;/code&gt;&lt;code&gt;option uses separator semantics, whereas the&lt;/code&gt;&lt;code&gt;tformat&lt;/code&gt;&lt;code&gt;option uses terminator semantics.
-This is a lot of words to say that the file entry in&lt;/code&gt;&lt;code&gt;format&lt;/code&gt;`` won’t have a newline appended.&lt;/p&gt;
-
-&lt;h1 id=&quot;same-commit-hash-in-two-or-more-repos&quot;&gt;Same commit hash in two or more repos&lt;/h1&gt;
-
-&lt;p&gt;If you have the same commit in two repos, then you have some kind of fork or clone relationship.
-Since a commit hash depends on the parent commit hash(es), and because the likelihood of random
-hashes colliding is close to zero, then the only way that the same commit can appear in two repos
-is if one is a fork or clone of the other. It’s not possible to determine which is the clone of
-the other, algorithmically, but this can usually be done by inspection.&lt;/p&gt;
-
-&lt;p&gt;This also doesn’t have to go back to the root commit(s): one party could have pruned old history.&lt;/p&gt;
-
-&lt;p&gt;There is one other way that’s technically not a fork, and that is to have pulled in commits from
-another repo into your repo as a new independent tree. Git is a collection of commits, and you can
-have more than one root commit. I think you could get this with a subtree merge, as well as by
-just directly doing it.&lt;/p&gt;
-
-&lt;p&gt;But the starting principle is that each commit hash refers to unique work, so identical commit
-hashes are referring to the same exact work.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 14 Sep 2016 13:55:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/09/14/git-committer-info.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/09/14/git-committer-info.html</guid>
-        
-        <category>git</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>New computers</title>
-        <description>&lt;p&gt;Time for new computers. I’m behind the times and reading quickly.&lt;/p&gt;
-
-&lt;h1 id=&quot;cpu&quot;&gt;CPU&lt;/h1&gt;
-
-&lt;p&gt;Broadwell-E LGA-2011, probably a Core i7 6850K at $600 for the 40 PCIe lanes.&lt;/p&gt;
-
-&lt;p&gt;Water cooling time? Corsair Hydro H100i GTX&lt;/p&gt;
-
-&lt;h1 id=&quot;motherboard&quot;&gt;Motherboard&lt;/h1&gt;
-
-&lt;p&gt;Motherboards with X99 chipsets can have 128 GB RAM and read/write speed is around 60 GB/sec. SSDs on a M.2
-interface can read/write 1500 MB/sec.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ocaholic.ch/modules/smartsection/item.php?itemid=1425&quot;&gt;18 boards&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;asus-rampage-v-extreme-10&quot;&gt;Asus Rampage V Extreme 10&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$600&lt;/li&gt;
-  &lt;li&gt;EATX&lt;/li&gt;
-  &lt;li&gt;1 M.2, 1 U.2&lt;/li&gt;
-  &lt;li&gt;10 SATA 6G&lt;/li&gt;
-  &lt;li&gt;6 USB 2.0, 8 USB 3.0, 2 USB 3.1 Type-A, 2 USB 3.1 Type-C&lt;/li&gt;
-  &lt;li&gt;Wifi, Bluetooth&lt;/li&gt;
-  &lt;li&gt;SupremeFX Hi-Fi Kit&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Reviews&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/08/17/asus_rampage_v_extreme_10_motherboard_review/#.V702wpgrKV0&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;asus-rog-strix-x99-gaming&quot;&gt;Asus ROG Strix X99 Gaming&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$340&lt;/li&gt;
-  &lt;li&gt;ATX&lt;/li&gt;
-  &lt;li&gt;1 M.2, 1 U.2&lt;/li&gt;
-  &lt;li&gt;8 SATA 6 GB/s, 1 SATA Express&lt;/li&gt;
-  &lt;li&gt;1 USB 3.1 Type A, 1 USB 3.1 Type C, 5 USB 3.0, 8 USB 2.0&lt;/li&gt;
-  &lt;li&gt;Thunderbolt (header on board - needs add-on card)&lt;/li&gt;
-  &lt;li&gt;Bluetooth 4.1&lt;/li&gt;
-  &lt;li&gt;Intel NIC&lt;/li&gt;
-  &lt;li&gt;WiFi on board&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Reviews&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.techpowerup.com/forums/threads/asus-rog-strix-x99-gaming-motherboard-review.223241/&quot;&gt;Tech PowerUp&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.overclockers.com/asus-rog-strix-x99-gaming-motherboard-review/&quot;&gt;Overclockers&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kitguru.net/components/ryan-martin/asus-rog-strix-x99-gaming-motherboard-review/&quot;&gt;KitGuru&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.tweaktown.com/reviews/7751/asus-rog-strix-x99-gaming-intel-motherboard-review/index.html&quot;&gt;TweakTown&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/07/05/asus_rog_x99_strix_gaming_lga_2011v3_review#.V8Ij6JgrLuo&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.tweaktown.com/reviews/7751/asus-rog-strix-x99-gaming-intel-motherboard-review/index.html&quot;&gt;Tweaktown&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;asus-x99-a-ii&quot;&gt;Asus X99 A-II&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$250&lt;/li&gt;
-  &lt;li&gt;ATX&lt;/li&gt;
-  &lt;li&gt;1 M.2, 1 U.2&lt;/li&gt;
-  &lt;li&gt;10 SATA 6G, 1 SATA Express&lt;/li&gt;
-  &lt;li&gt;8 USB 2.0, 8 USB 2.0, 1 USB 3.1 Type-A, 1 USB 3.1 Type-C&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Reviews&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.bit-tech.net/hardware/2016/06/09/asus-x99-a-ii-review/1&quot;&gt;bit-tech&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;asus-x-99-deluxe-ii&quot;&gt;Asus X-99 Deluxe-II&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$420&lt;/li&gt;
-  &lt;li&gt;2 M.2 (one via PCIe), 2 U.2&lt;/li&gt;
-  &lt;li&gt;Thunderbolt and card ($70 separately)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Reviews&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hardwarecanucks.com/forum/hardware-canucks-reviews/72994-asus-x99-deluxe-ii-motherboard-review.html&quot;&gt;Hardware Canucks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;gigabyte-x99-designare-ex-lga2011-v3&quot;&gt;Gigabyte X99 Designare EX LGA2011-v3&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$400&lt;/li&gt;
-  &lt;li&gt;ATX&lt;/li&gt;
-  &lt;li&gt;1 M.2, 2 U.2&lt;/li&gt;
-  &lt;li&gt;10 SATA 6G, 1 SATA Express&lt;/li&gt;
-  &lt;li&gt;4 USB 2.0, 9 USB 3.0, 1 USB 3.1 Type-A, 2 USB 3.1 Type-C&lt;/li&gt;
-  &lt;li&gt;Wifi, Bluetooth&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The M.2 drive goes under the primary PCI-Express slots, so probably runs hot and
-would be thermally throttled.&lt;/p&gt;
-
-&lt;p&gt;Reviews&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/07/12/gigabyte_x99_designare_ex_lga2011v3_review/#.V8I6iZgrLuo&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;msi-x99a-gaming-pro-carbon&quot;&gt;MSI X99A Gaming Pro Carbon&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$340&lt;/li&gt;
-  &lt;li&gt;ATX&lt;/li&gt;
-  &lt;li&gt;M.2, U.2&lt;/li&gt;
-  &lt;li&gt;10 SATA 6G, 1 SATA Express&lt;/li&gt;
-  &lt;li&gt;8 USB 2.0, 11 USB 3.1 Type-A, 2 USB 3.1. Type-C&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Reviews&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/05/31/msi_x99a_gaming_pro_carbon_broadwelle_motherboard/#.V703BpgrKV0&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;msi-x99a-xpower-gaming-titanium&quot;&gt;MSI® X99A XPOWER GAMING TITANIUM&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$430&lt;/li&gt;
-  &lt;li&gt;ATX&lt;/li&gt;
-  &lt;li&gt;M.2, U.2&lt;/li&gt;
-  &lt;li&gt;10 SATA 6G, 1 SATA Express&lt;/li&gt;
-  &lt;li&gt;7 USB 2.0, 12 USB 3.1 Type-A, 1 USB 3.1 Type-C&lt;/li&gt;
-  &lt;li&gt;WiFi, Bluetooth&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Reviews&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/article/2016/08/10/msi_x99a_xpower_gaming_titanium_lga2011v3_review/#.V702xJgrKV0&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;video&quot;&gt;Video&lt;/h1&gt;
-
-&lt;p&gt;GeForce GTX 1080 sounds good. &lt;a href=&quot;http://www.corsair.com/en-us/hydro-gfx-gtx-1080-liquid-cooled-graphics-card&quot;&gt;Water-cooled Corsair&lt;/a&gt; for $750.&lt;/p&gt;
-
-&lt;p&gt;Or air-cooled MSI GTX 1080 Gaming Z, also $750.&lt;/p&gt;
-
-&lt;h1 id=&quot;ssd&quot;&gt;SSD&lt;/h1&gt;
-
-&lt;p&gt;Samsung 950 512GB, of course. Two of them if the motherboard permits.&lt;/p&gt;
-
-&lt;p&gt;OCZ RD400 1 TB&lt;/p&gt;
-
-&lt;p&gt;Samsung 850 EVO 2 TB.&lt;/p&gt;
-
-&lt;h1 id=&quot;power-supply&quot;&gt;Power supply&lt;/h1&gt;
-
-&lt;p&gt;Probably something fairly beefy&lt;/p&gt;
-
-&lt;p&gt;Antec CP-1000 (1000W)&lt;/p&gt;
-
-&lt;h1 id=&quot;sound&quot;&gt;Sound&lt;/h1&gt;
-
-&lt;p&gt;Yes? No?&lt;/p&gt;
-
-&lt;p&gt;Asus Xonar DX.&lt;/p&gt;
-
-&lt;h1 id=&quot;case&quot;&gt;Case&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Antec P380&lt;/li&gt;
-  &lt;li&gt;Cooler Master MasterCase 5&lt;/li&gt;
-  &lt;li&gt;Corsair Carbide Series 400C&lt;/li&gt;
-  &lt;li&gt;Fractal Design Define S&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;benchmarkstats-programs&quot;&gt;Benchmark/stats programs&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;AIDA64&lt;/li&gt;
-  &lt;li&gt;AS SSD Benchmark&lt;/li&gt;
-  &lt;li&gt;ATTO&lt;/li&gt;
-  &lt;li&gt;Cinebench&lt;/li&gt;
-  &lt;li&gt;CPU-Z&lt;/li&gt;
-  &lt;li&gt;CrystalDiskMark&lt;/li&gt;
-  &lt;li&gt;HWBOT Prime&lt;/li&gt;
-  &lt;li&gt;Hyper PI&lt;/li&gt;
-  &lt;li&gt;PCMark&lt;/li&gt;
-  &lt;li&gt;POV Ray&lt;/li&gt;
-  &lt;li&gt;Sisoft Sandra&lt;/li&gt;
-  &lt;li&gt;3DMark&lt;/li&gt;
-  &lt;li&gt;WPrime 32M/1024M&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;review-sites&quot;&gt;Review sites&lt;/h1&gt;
-
-&lt;p&gt;There are far fewer than there used to be&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://hexus.net&quot;&gt;Hexus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hardwarecanucks.com/&quot;&gt;Hardware Canucks&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hardocp.com/&quot;&gt;HardOCP&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.tomshardware.com/&quot;&gt;Tom’s Hardware&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;suggestions&quot;&gt;Suggestions&lt;/h1&gt;
-
-&lt;h2 id=&quot;newegg&quot;&gt;Newegg&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Item&lt;/th&gt;
-      &lt;th&gt;Price&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16819117647&quot;&gt;Intel Core i7-6850K&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;$609.99&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16813132822&quot;&gt;ASUS ROG STRIX X99 Motherboard&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;$334.99&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16820147467&quot;&gt;Samsung 950 Pro M.2 512GB&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;$317.99&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?item=N82E16820147441&quot;&gt;Samsung 850 EVO 2 TB&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;$624.99&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16820233894&amp;amp;cm_re=ddr4_32gb-_-20-233-894-_-Product&quot;&gt;Corsair Vengeance 2 x 16GB DDR4 3200&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;$189.99&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;http://www.newegg.com/Product/Product.aspx?Item=N82E16820233871&amp;amp;cm_re=ddr4_32gb-_-20-233-871-_-Product&quot;&gt;Corsair Vengeance 2 x 16GB DDR4 3000&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;$169.99&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;amazon&quot;&gt;Amazon&lt;/h2&gt;
-</description>
-        <pubDate>Tue, 23 Aug 2016 20:42:00 -0700</pubDate>
-        <link>http://neurocline.github.io/hardware/2016/08/23/new-computers.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/hardware/2016/08/23/new-computers.html</guid>
-        
-        <category>pc</category>
-        
-        <category>mac</category>
-        
-        
-        <category>hardware</category>
-        
-      </item>
-    
-      <item>
-        <title>Video and containers</title>
-        <description>&lt;h1 id=&quot;nalu-annex-b-and-start-codes&quot;&gt;NALU, Annex B, and Start Codes&lt;/h1&gt;
-
-&lt;p&gt;A start code is 2-3 0x00 bytes followed by a 0x01 byte.&lt;/p&gt;
-
-&lt;p&gt;A NALU representation without emulation prevention bytes is called a Raw Byte Sequence Payload, or RBSP.&lt;/p&gt;
-
-&lt;p&gt;The four-byte sequences 0x00000000, 0x00000001, 0x00000002, and 0x00000003 are illegal within a non-RBSP NALU. In order to turn an RBSP into a NALU with start codes, byte stuffing is employed by inserting an Emulation Prevention byte 0x03 after two consecutive 0x00 bytes. To reverse this, when reading the stream, remove any 0x03 seen after two consecutive 0x00 bytes.&lt;/p&gt;
-
-&lt;p&gt;To determine the length of a NALU, start with a byte stream (which will have a start code), skip to the next start code, and count the bytes in between.&lt;/p&gt;
-
-&lt;p&gt;In order to convert between Annex B and AVCC, convert between start codes and lengths, and remove/add emulation bytes.&lt;/p&gt;
-
-&lt;p&gt;An AVCC stream always starts with a specific header&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;8 bits = 0x01 (this is illegal in Annex B)&lt;/li&gt;
-  &lt;li&gt;8 bits of avc profile (from sps[0][1])&lt;/li&gt;
-  &lt;li&gt;8 bits of avc compatibility (from sps[0][2])&lt;/li&gt;
-  &lt;li&gt;8 bits of avc level (from sps[0][3])&lt;/li&gt;
-  &lt;li&gt;6 bits = 0b111111&lt;/li&gt;
-  &lt;li&gt;2 bits of NALULengthSizeMinusOne (typically 3)&lt;/li&gt;
-  &lt;li&gt;3 bits of 0b111&lt;/li&gt;
-  &lt;li&gt;5 bits of number of SPS NALU (usually 1)&lt;/li&gt;
-  &lt;li&gt;Repeated per SPS
-    &lt;ul&gt;
-      &lt;li&gt;16 bits of SPS size
--Variable SPS NALU data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;8 bits of number of PPS NALU (usually 1)&lt;/li&gt;
-  &lt;li&gt;Repeated once per PPS
-    &lt;ul&gt;
-      &lt;li&gt;16 bits of PPS size&lt;/li&gt;
-      &lt;li&gt;Variable PPS NALU data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;FLV streams must be written as AVCC.&lt;/p&gt;
-
-&lt;h1 id=&quot;tbr-tbc-tbn&quot;&gt;tbr, tbc, tbn&lt;/h1&gt;
-
-&lt;p&gt;tbn is the time base from the container.&lt;/p&gt;
-
-&lt;p&gt;tbc is the time base from the codec.&lt;/p&gt;
-
-&lt;p&gt;tbr is video frame rate guessed from the video stream. A note from the FFMpeg source:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;tbr is NOT the average frame rate, it is the smallest frame rate that can accurately represent all timestamps.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.adobe.com/content/dam/Adobe/en/devnet/flv/pdfs/video_file_format_spec_v10.pdf&quot;&gt;Video File Format Specification, Version 10, 2008&lt;/a&gt;. FLV and F4V file format spec.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/smartdu/srs/blob/master/trunk/doc/video_file_format_spec_v10_1.pdf&quot;&gt;Version 10.1&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.oipf.tv/docs/oipf-archive/OIPF-T1-R2-Specification-Volume-2-Media_Formats-v2_2-2013-05-15.pdf&quot;&gt;OIPF, Release 2 Specification, Volume 2 – Media Formats&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ip.hhi.de/imagecom_G1/assets/pdfs/csvt_overview_0305.pdf&quot;&gt;Overview of the H.264/AVC Video Coding Standard&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;isoiec-14496-coding-of-audio-visual-objects&quot;&gt;ISO/IEC 14496, “Coding of audio-visual objects”&lt;/h2&gt;
-
-&lt;h2 id=&quot;sound&quot;&gt;Sound&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://sound.media.mit.edu/resources/mpeg4/SA-FDIS.pdf&quot;&gt;ISO/IEC JTC 1/SC 29/WG 11N2503-sec5&lt;/a&gt;. Information technology - Coding of audio-visual objects. Part 3: Audio. Section 5: Structured audio.&lt;/p&gt;
-
-&lt;h2 id=&quot;base-iso-format&quot;&gt;Base ISO format&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://l.web.umkc.edu/lizhu/teaching/2016sp.video-communication/ref/mp4.pdf&quot;&gt;ISO/IEC 14496-12&lt;/a&gt;. Information technology — Coding of audio-visual objects — Part 12: ISO base media file format&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/c061988_ISO_IEC_14496-12_2012.zip&quot;&gt;ISO/IEC 14496-12:2012&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/c063525_ISO_IEC_14496-12_2012_Cor_1_2013.zip&quot;&gt;ISO/IEC 14496-12:2012/Cor 1:2013&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/c063187_ISO_IEC_14496-12_2012_Amd_1_2013.zip&quot;&gt;ISO/IEC 14496-12:2012/Amd 1:2013&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/c063188_ISO_IEC_14496-12_2012_Amd_2_2014.zip&quot;&gt;ISO/IEC 14496-12:2012/Amd 2:2014&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mp4&quot;&gt;MP4&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.cmlab.csie.ntu.edu.tw/~cathyp/eBooks/14496_MPEG4/ISO_IEC_14496-14_2003-11-15.pdf&quot;&gt;ISO/IEC 14496-14&lt;/a&gt;. Information technology — Coding of
-audio-visual objects — Part 14: MP4 file format.&lt;/p&gt;
-
-&lt;h3 id=&quot;avc-file-format&quot;&gt;AVC file format&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.itscj.ipsj.or.jp/sc29/open/29view/29n14632t.doc&quot;&gt;ISO/IEC JTC 1/SC 29 N, ISO/IEC 14496-15:2014/PDAM 2&lt;/a&gt;. Information technology — Coding of audio-visual objects — Part 15: Carriage of NAL unit structured video in the ISO Base Media File Format, AMENDMENT 2: Carriage of AVC based 3D video excluding MVC.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.itscj.ipsj.or.jp/sc29/open/29view/29n12786t.doc&quot;&gt;ISO/IEC JTC 1/SC 29 N, ISO/IEC 14496-15:2010/PDAM 2&lt;/a&gt;. Information technology — Coding of audio-visual objects — Part 15: Advanced Video Coding (AVC) file format, AMENDMENT 2: Carriage of high efficiency video coding (HEVC).&lt;/p&gt;
-
-&lt;h1 id=&quot;unsorted&quot;&gt;Unsorted&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24884827/possible-locations-for-sequence-picture-parameter-sets-for-h-264-stream&quot;&gt;Possible Locations for Sequence/Picture Parameter Set(s) for H.264 Stream&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Network_Abstraction_Layer&quot;&gt;Network Abstraction Layer&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://forum.doom9.org/archive/index.php/t-165995.html&quot;&gt;Emulation Prevention Question&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://software.intel.com/sites/default/files/m/b/a/5/b/5/43685-Intel_Media_Developers_Guide.pdf&quot;&gt;Intel Media SDK 2012 Developer’s Guide&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/8525824/mp4-iso-14496-12-how-do-you-find-the-video-and-audio-access-units&quot;&gt;MP4 / ISO 14496-12 : How do you find the video and audio access units?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5544696/parsing-h264-in-mdat-mp4/8527819&quot;&gt;Parsing H264 in mdat MP4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://aviadr1.blogspot.com/2010/05/h264-extradata-partially-explained-for.html&quot;&gt;H.264 extradata (partially) explained - for dummies&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://src.chromium.org/svn/trunk/src/media/filters/h264_to_annex_b_bitstream_converter.cc&quot;&gt;Chromium h264_to_annex_b_bitstream_converter.cc&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://code.mythtv.org/doxygen/H264Parser_8cpp_source.html&quot;&gt;MythTV H264Parser.cpp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://yumichan.net/video-processing/video-compression/introduction-to-h264-nal-unit/&quot;&gt;Introduction to H.264: (1) NAL Unit&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nsl.cs.usc.edu/enl/trunk/aqua/loader/jni/src/libavformat/flvenc.c&quot;&gt;FLV muxer libavformat/flvenc.c&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ffmpeg.org/pipermail/libav-user/2013-June/004980.html&quot;&gt;H264+flv bad video stream&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://code.google.com/archive/p/comserver/source/default/source&quot;&gt;Red5 Multi-User Application Framework&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/23404403/need-to-convert-h264-stream-from-annex-b-format-to-avcc-format&quot;&gt;Need to convert h264 stream from annex-b format to AVCC format&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/11862666/how-to-generate-flv-stream-from-raw-h264-which-can-be-played-by-actionscript-net&quot;&gt;How to generate FLV stream from raw h264 which can be played by Actionscript NetStream?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/29751805/h264-annexb-bitstream-to-flv-mux-ffmpeg-library&quot;&gt;h264 annexb bitstream to flv mux ffmpeg library&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/37300963/how-to-mux-live-h264-stream-in-annexb-nal-unit-format-to-flv-container&quot;&gt;How to mux live h264 stream in AnnexB nal unit format to flv container&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://livertmpjavapublisher.blogspot.com/2011/06/h264-avcvideopacket.html&quot;&gt;H264 AVCVIDEOPACKET&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ossrs/srs/tree/2.0release&quot;&gt;Simple-RTMP-Server&lt;/a&gt;. This is the original, now defuct, but there are &lt;a href=&quot;https://github.com/ossrs/srs&quot;&gt;forks&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/smartdu/srs/tree/master/trunk/doc&quot;&gt;Assorted spec docs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/filippobrizzi/raw_rgb_straming&quot;&gt;filippobrizzi/raw_rgb_straming&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ffmpeg.org/ffprobe.html&quot;&gt;ffprobe Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://siliconandlithium.blogspot.no/2014/03/building-x264-on-windows-with-visual.html&quot;&gt;Building x264 on Windows with Visual Studio&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://birds-are-nice.me/publications/extremex264_1.shtml&quot;&gt;x264 Settings&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.lighterra.com/papers/videoencodingh264/&quot;&gt;Video Encoding Settings for H.264 Excellence&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://eldar.cz/kangaroo/binarni-sxizofrenie/howto-handbrake-limit-peak-bitrate.html&quot;&gt;Eliminating H.264 bitrate peaks with Handbrake&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/18586700/x264-rate-control-modes&quot;&gt;x264 rate control modes&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/20051784/how-to-reduce-latency-when-streaming-x264&quot;&gt;How to reduce latency when streaming x264&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://matroska.org/technical/specs/codecid/index.html&quot;&gt;Matroska codec specs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ffmpeg.org/ffmpeg-formats.html&quot;&gt;FFmpeg Formats Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.garymcgath.com/streamingprotocols.html&quot;&gt;Basics of streaming protocols&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/14322670/h264-ffmpeg-how-to-initialize-ffmpeg-to-decode-nals-created-with-x264&quot;&gt;h264 ffmpeg: How to initialize ffmpeg to decode NALs created with x264&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.diva-portal.org/smash/get/diva2:432684/FULLTEXT01.pdf&quot;&gt;Optimizing an H.264 video encoder for real-time HD-video encoding&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/6603979/ffmpegavcodec-encode-video-setting-pts-h264&quot;&gt;ffmpeg::avcodec_encode_video setting PTS h264&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://superuser.com/questions/322354/using-ffmpeg-to-encode-a-raw-video-to-h-264-format&quot;&gt;Using ffmpeg to encode a raw video to H.264 format&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://thompsonng.blogspot.com.au/search/label/FFMPEG&quot;&gt;transcode with ffmpeg&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.tribler.org/FfmpegYuv/&quot;&gt;Processing EBU’s YUV files with FFmpeg&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs&quot;&gt;19 FFMPEG COMMANDS FOR ALL NEEDS&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 28 Jul 2016 09:50:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/07/28/video-and-containers.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/07/28/video-and-containers.html</guid>
-        
-        <category>links</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Sync in video streams</title>
-        <description>&lt;p&gt;Some useful acronyms:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;PTS: Presentation time stamp; used to order frames for display. &lt;a href=&quot;https://en.wikipedia.org/wiki/Presentation_timestamp&quot;&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;DTS: Decoding time stamp; used to order frames for decoding&lt;/li&gt;
-  &lt;li&gt;VBV: Video Buffering Verifier; used to prevent underflow/overflow of MPEG bit stream&lt;/li&gt;
-  &lt;li&gt;PCR: Program Clock reference, base timme for PTS values. &lt;a href=&quot;https://en.wikipedia.org/wiki/Presentation_timestamp&quot;&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;FLV files have a CompositionTime field in the VideoData segment; this is PTS - DTS.&lt;/p&gt;
-
-&lt;p&gt;PTS and DTS should be 90Khz values. CTS is in units of milliseconds, so compositionTime = (PTS - DTS) / 90.0.&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dranger.com/ffmpeg/tutorial05.html&quot;&gt;Tutorial 05: Synching Video&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ffmpeg-users.933282.n4.nabble.com/understanding-DTS-PTS-td940270.html&quot;&gt;understanding DTS PTS&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.bretl.com/mpeghtml/timebuf.HTM&quot;&gt;Timing and Buffer Control&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/MPEG_transport_stream&quot;&gt;MPEG transport stream&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Video_compression_picture_types&quot;&gt;Video compression picture types&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://xcshen.blog.51cto.com/attachment/201104/2835389_1302074539.pdf&quot;&gt;ISO/IEC 14496-12 Part 12: ISO base media file format&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=6&amp;amp;ved=0ahUKEwish5mEiP7NAhUTwWMKHfsTCooQFghGMAU&amp;amp;url=https%3A%2F%2Fwww.itscj.ipsj.or.jp%2Fsc29%2Fopen%2F29view%2F29n12786t.doc&amp;amp;usg=AFQjCNEDeyVkuC8i_g3OU27P5kOHSxefvQ&amp;amp;sig2=YWML8aQq7xg7DmTlTIB3vg&amp;amp;bvm=bv.127178174,d.cGc&amp;amp;cad=rja&quot;&gt;Information technology — Coding of audio-visual objects — Part 15: Advanced Video Coding (AVC) file format&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/MPEG-4&quot;&gt;MPEG-4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding&quot;&gt;MPEG-4 Advanced Video Coding&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Flash_Video&quot;&gt;Flash Video&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://download.macromedia.com/f4v/video_file_format_spec_v10_1.pdf&quot;&gt;Adobe Flash Video File Format Specification Version 10.1&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 18 Jul 2016 19:37:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/07/18/sync-in-video-streams.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/07/18/sync-in-video-streams.html</guid>
         
         <category>links</category>
         

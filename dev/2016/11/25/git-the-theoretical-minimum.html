@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Git: The Theoretical Minimum</title>
+  <meta name="description" content="I intend to write a book titled “Git: The Theoretical Minimum”, inspired by Leonard Susskind’stwo books The Theoretical Minimum: What You Need to Know to Sta...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <!-- link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic"-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/11/25/git-the-theoretical-minimum.html">
+  <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Some Things Are Obvious</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/papers/">Papers</a>
+          
+        
+          
+          <a class="page-link" href="/reading/">Reading List</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Git: The Theoretical Minimum</h1>
+    <p class="post-meta">Nov 25, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <p>I intend to write a book titled “Git: The Theoretical Minimum”, inspired by Leonard Susskind’s
+two books <a href="https://www.amazon.com/Theoretical-Minimum-Start-Doing-Physics/dp/0465075681">The Theoretical Minimum: What You Need to Know to Start Doing Physics</a>
+and <a href="https://www.amazon.com/Quantum-Mechanics-Theoretical-Leonard-Susskind/dp/0465062903">Quantum Mechanics: The Theoretical Minimum</a>
+(also see his web site <a href="http://theoreticalminimum.com/">The Theoretical Minimum</a>). These
+are awesome books and I recommend them to anyone, because physics is all around us and
+having a working knowledge of it is a good thing.</p>
+
+<p>My reasoning in a nutshell is this: Git is the first real version control system, or rather
+it is probably the ancestor of the first real one. And while it is not as complicated to use
+as detractors like to say, it’s also not been explained in a succinct fashion. There are now
+many thousands of pages written, and yet a lot of Git is not explained except in answers
+to StackOverflow questions or by looking at the source.</p>
+
+<p>I think this means that there is a need for a short volume that explains everything you need
+in order to do anything with Git, and I also think that this overlaps with “everything about
+version control” to a staggering degree. I don’t mean to have the encyclopedic volume that
+literally writes down everything, but rather the bare minimum you need in order to do anything
+you need to on your own. For example, the Git help is pretty good, but it’s also only good if
+you already understand things - it’s more a reminder reference than something you consult in
+order to learn what to do.</p>
+
+<p>For example, it is probably not important to describe the Git plumbing model, but it is
+important to describe exactly how commits work, because that’s at the heart of many Git
+operations. What I hope to do is to find the basic set of things you need to know about
+any useful version control system, and describe them; the fact that it will be Git-centric
+is because Git is the most popular example of a good version control system at the moment.</p>
+
+<p>Separately, I want to finish the survey of all version control systems, so that we can put
+most of them to bed as past history. “I have not come here to praise Perforce but to bury it”.</p>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="https://www.rath.org/mercurial-for-git-users-and-vice-versa.html">Mercurial for Git Users (and vice versa)</a> - a more modern (early 2016) comparison between
+Mercurial and Git.</p>
+
+<p><a href="http://softwareengineering.stackexchange.com/questions/940/what-are-your-favorite-version-control-systems">What are your favorite version control systems?</a> - I remember using both PVCS and Projector.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Comparison_of_version_control_software">Comparison of version control software</a></p>
+
+<p><a href="http://www.improgrammer.net/top-version-control-systems/">Top Version Control Systems</a></p>
+
+<p><a href="https://rhodecode.com/insights/version-control-systems-2016">Version Control Systems Popularity in 2016</a></p>
+
+<p><a href="https://webinerds.com/version-control-systems-keep-your-code-in-order/">Version Control Systems: Keep Your Code In Order!</a></p>
+
+<p><a href="http://www.catb.org/esr/writings/version-control/version-control.html">Understanding Version-Control Systems (DRAFT)</a> - written in 2008, and may be the first attempt to cover the general theory of revision control.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Version_control">Version control</a></p>
+
+<p><a href="http://ericsink.com/scm/source_control.html">Source Control HOWTO</a> - from Eric Sink, useful for common terminology.</p>
+
+<p><a href="http://ericsink.com/vcbe/html/index.html">Version Control by Example</a> - a 2011 online book by Eric Sink.</p>
+
+<p><a href="https://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></p>
+
+<p><a href="https://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/">Intro to Distributed Version Control (Illustrated)</a></p>
+
+<p><a href="http://cs.ru.nl/~wouters/Publications/PrincipledVersionControl.pdf">A Principled Approach to Version Control</a> - a 2006 paper: “This paper aims to give a precise, mathematical description of the version control problem and different version control systems”</p>
+
+<p><a href="http://www.staff.science.uu.nl/~swier004/publications/2014-onward.pdf">The Semantics of Version Control</a>. A 2014 paper by the authors of the previous paper.</p>
+
+<p><a href="https://pijul.org/">Pijul</a>, based on Darcs. Pijul was announced in 2014 but it’s still in (mostly slow moving) development. See <a href="https://news.ycombinator.com/item?id=10470281">HackerNews comment thread</a>.</p>
+
+<p><a href="http://darcs.net/Theory/Bibliography">Darcs: Theory/Bibliography</a>. Darcs is one the few systems that claims to be based on a strong theory; in fact, Darcs devotees are often dismissive of other efforts as not having a formal backdrop. Darcs vs Git is a classic example of “it works in theory”; to two significant digits, no one uses Darcs, everyone uses Git.</p>
+
+<p><a href="http://projects.haskell.org/camp/">Camp (Haskell)</a>. Another system ideologically related to Darcs. Start in 2009, and seems to have been abandoned as of 2010.</p>
+
+<p><a href="http://pasky.or.cz/bc/bcthesis-final.pdf">Current Concepts in Version Control Systems</a>. 2008 Bachelor thesis by Petr Baudiˇs.</p>
+
+<p><a href="https://www.cs.cmu.edu/~rwh/papers/htpt/paper.pdf">Homotopical Patch Theory</a></p>
+
+<p><a href="http://cstheory.stackexchange.com/questions/32374/math-talk-theorem-about-git-revision-control-system">Math talk: Theorem about git revision control system?</a></p>
+
+<p><a href="https://rahul.gopinath.org/post/2011/12/30/version-control-systems/">Version Control Systems</a>. The best historical overview I’ve seen to date.</p>
+
+<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.278.6065&amp;rep=rep1&amp;type=pdf">Branching and Merging: An Investigation into Current Version Control Practices</a>. 2011 paper.</p>
+
+<p><a href="http://is.muni.cz/th/98961/fi_b/BcThesis.pdf">Distributed Source Code Version Control Systems: Comparison and Usage Evaluation</a>. 2006 Bachelor’s thesis by Michal M¥rka.</p>
+
+<p><a href="https://files.codersbase.com/thesis.pdf">Type-Correct Changes — A Safe Approach to Version Control Implementation</a>. 2009 Master’s Thesis by Jason Dagit.</p>
+
+<p><a href="http://hyperpolyglot.org/version-control">Version Control: Git, Mercurial</a></p>
+
+<p><a href="http://www.aosabook.org/en/mercurial.html">TAOSA: Mercurial</a>.</p>
+
+<p><a href="https://duckrowing.com/2013/12/26/bzr-init-a-bazaar-tutorial/">BZR INIT: A BAZAAR TUTORIAL</a></p>
+
+<p><a href="http://marklodato.github.io/visual-git-guide/index-en.html">A Visual Git Reference</a></p>
+
+<p><a href="https://jhw.dreamwidth.org/1868.html">WHY I LIKE MERCURIAL MORE THAN GIT</a></p>
+
+<p><a href="http://schacon.github.io/2008/11/24/on-mercurial.html">On Mercurial</a></p>
+
+<p><a href="https://www.mercurial-scm.org/wiki/GitConcepts">Mercurial for Git users</a></p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Some Things Are Obvious</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Some Things Are Obvious</li>
+          <li><a href="mailto:neurocline@gmail.com">neurocline@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/neurocline">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/neurocline">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Answers to some of the world's questions
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
