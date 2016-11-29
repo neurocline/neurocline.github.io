@@ -6,9 +6,122 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Nov 2016 17:08:16 -0800</pubDate>
-    <lastBuildDate>Sun, 27 Nov 2016 17:08:16 -0800</lastBuildDate>
+    <pubDate>Mon, 28 Nov 2016 17:38:04 -0800</pubDate>
+    <lastBuildDate>Mon, 28 Nov 2016 17:38:04 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Python virtualenv</title>
+        <description>&lt;p&gt;Lately I use virtualenv reflexively, because big packages have lots of dependencies. It’s
+mildly annoying, I wish version conflicts didn’t happen, but that’s life. This happens 
+at the OS level, but it’s epochal - the transition from DOS to Windows, say, or from
+Mac OS 9 to Mac OS X.&lt;/p&gt;
+
+&lt;p&gt;That said, there is an advantage to using virtualenv, and that is that it makes it
+a little easier to use multiple major versions of Python on the same machine, because
+activating a virtualenv environment fiddles with paths.&lt;/p&gt;
+
+&lt;p&gt;I have two main reasons for using virtualenv. First, I actually do have conflicts from
+time to time with package versions, and I also do need to run both Python 2 and Python 3
+(sigh). But the second reason is equally nice - I can install something to try it out, and
+if it fails, I just trash a virtualenv directory. This is also why people use Docker, and
+why things like Vagrant or Puppet also started seeing widespread use; it’s easy to screw
+things up when everything is installed globally, so until operating systems get fixed, use
+systems like this to pretend to have a global system, or to hide the pain of constantly
+re-installing. For Python, we have &lt;code&gt;pip freeze&lt;/code&gt; and &lt;code&gt;pip install -r&lt;/code&gt; to somewhat automate
+that, and Ruby has Bundler.&lt;/p&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;The basic operations are these&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create a virtualenv environment based on a physical Python install; this is essentially a
+new custom Python install.&lt;/li&gt;
+  &lt;li&gt;Activate a specific virtualenv environment&lt;/li&gt;
+  &lt;li&gt;Deactivate the current virtualenv environment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I don’t think this is a stack, but it might be (I’ve never experimented).&lt;/p&gt;
+
+&lt;p&gt;That’s it. Best practice would probably be to put all these virtualenv directories
+in one place, maybe alongside the physical Python installs, because the virtualenv
+folders point back to your physical installs; you can’t just copy these to a new system.&lt;/p&gt;
+
+&lt;p&gt;They are fairly small, on the order of 20 MB, so not too painful to have lots of them, and
+they only take a few seconds to create.&lt;/p&gt;
+
+&lt;h1 id=&quot;windows&quot;&gt;Windows&lt;/h1&gt;
+
+&lt;p&gt;Using virtualenv on Windows is a little different than on Unix (Linux/Mac). Creating is
+pretty much the same, but activating is a little different.&lt;/p&gt;
+
+&lt;p&gt;Note: My command prompts are using the &lt;code&gt;$&lt;/code&gt; character because the syntax highlighter I’m
+using doesn’t work for DOS/Powershell style consoles. I’ll fix that at some point. I also
+transcribed &lt;code&gt;\\&lt;/code&gt; to &lt;code&gt;/&lt;/code&gt; for the same reason. Microsoft really needs to abandon &lt;code&gt;\\&lt;/code&gt; as 
+the path separator char.&lt;/p&gt;
+
+&lt;p&gt;For the following, I have two versions of Python installed in these global directories:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;C:/Python27&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;C:/Python35&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;create-new-virtualenv-environment&quot;&gt;Create new virtualenv environment&lt;/h2&gt;
+
+&lt;p&gt;The simple version is this - create a new virtual environment into the directory &lt;code&gt;matplotlib&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; virtualenv matplotlib
+&lt;span class=&quot;go&quot;&gt;Using base prefix &amp;#39;C:/python35&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;New python executable in C:/w/matplotlib/Scripts/python.exe&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Installing setuptools, pip, wheel...done.&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you want, you can specify a specific version. For running Jekyll, I need Python 2.7
+(because I’m using Pygments).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; virtualenv -p C:/Python27/python.exe py-jekyll
+&lt;span class=&quot;go&quot;&gt;Using base prefix &amp;#39;c:/python35&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;New python executable in C:/w/py-jekyll/Scripts/python.exe&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Installing setuptools, pip, wheel...done.&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;By default, the packages you already had installed in your base Python version are not carried
+over into your new version. This is a good thing, but it means you’ll have to install packages.&lt;/p&gt;
+
+&lt;h2 id=&quot;activate-environment&quot;&gt;Activate environment&lt;/h2&gt;
+
+&lt;p&gt;From whatever command prompt you’re going to issue further Python commands from:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;matplotlib
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; Scripts/activate
+&lt;span class=&quot;go&quot;&gt;(matplotlib) $&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that the prompt changes to remind you which virtual environment you have active.&lt;/p&gt;
+
+&lt;p&gt;If you’re going to install packages, make sure you do this first. All this does is fiddle with
+the environment variables to put your &lt;code&gt;virtualenv&lt;/code&gt; Python version first.&lt;/p&gt;
+
+&lt;h2 id=&quot;deactivate-environment&quot;&gt;Deactivate environment&lt;/h2&gt;
+
+&lt;p&gt;Since this is Windows, you could just close the command window. Or you can deactivate the
+environment to get back to whatever you had set globally:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;go&quot;&gt;(matplotlib) $ deactivate&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 28 Nov 2016 12:11:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/11/28/python-virtualenv.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/28/python-virtualenv.html</guid>
+        
+        <category>python</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>History: told by the winners or the losers?</title>
@@ -750,51 +863,6 @@ Python 2, but not yet.&lt;/p&gt;
         <category>python</category>
         
         <category>unicode</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://sdg.csail.mit.edu/pubs/2015/concept-essay.pdf&quot;&gt;Towards a Theory of Conceptual Design for Software&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/sperezde/pre-print-oopsla16.pdf&quot;&gt;Purposes, Concepts, Misfits, and a Redesign of Git&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://gitless.com/&quot;&gt;Gitless: a version control system&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://neverworkintheory.org/blog.html&quot;&gt;It Will Never Work in Theory&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.wildml.com/2016/10/learning-reinforcement-learning/&quot;&gt;LEARNING REINFORCEMENT LEARNING (WITH CODE, EXERCISES AND SOLUTIONS)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nanotechweb.org/cws/article/tech/66462&quot;&gt;Memristor behaves like a synapse&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.bloomberg.com/view/articles/2016-09-30/the-economics-of-dining-as-a-couple&quot;&gt;The Economics of Dining as a Couple&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.curiousefficiency.org/posts/2016/09/python-packaging-ecosystem.html&quot;&gt;The Python Packaging Ecosystem&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.python.org/dev/peps/pep-0426/&quot;&gt;PEP 426 – Metadata for Python Software Packages 2.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://aosabook.org/en/index.html&quot;&gt;The Architecture of Open Source Applications&lt;/a&gt;. The 4th volume is out: 500 Lines or Less.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://monoskop.org/images/f/ff/Alexander_Christopher_Notes_on_the_Synthesis_of_Form.pdf&quot;&gt;Notes on the Synthesis of Form&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.doerry.org/norbert/papers/SBDFinal.pdf&quot;&gt;What is Set-Based Design?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.rose-hulman.edu/~stienstr/ME470/Set-basedDesign_Fall2012.pdf&quot;&gt;Set-Based Design&lt;/a&gt;. Notes from a class.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://deepblue.lib.umich.edu/bitstream/handle/2027.42/97124/AIAA2012-5444.pdf?sequence=1&quot;&gt;Including Principles of Set-Based Design in Multidisciplinary Design Optimization&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ce.berkeley.edu/~tommelein/design/Sobek&amp;amp;Ward&amp;amp;Liker%201999%20Toyota&#39;s%20Principles%20of%20Set%20Based%20Concurrent%20Engineering.pdf&quot;&gt;Toyota’s Principles of Set-Based Concurrent Engineering&lt;/a&gt;. Article from 1999 by Sobek, Ward and Liker, largely drawing from Toyota studies.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ce.berkeley.edu/~tommelein/papers/2009-Parrish-PhD.pdf&quot;&gt;APPLYING A SET-BASED DESIGN APPROACH TO REINFORCING STEEL DESIGN&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 03 Oct 2016 08:00:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2016/10/03/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/10/03/recent-links.html</guid>
-        
-        <category>links</category>
         
         
         <category>dev</category>
