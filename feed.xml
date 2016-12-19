@@ -6,9 +6,115 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Nov 2016 18:51:13 -0800</pubDate>
-    <lastBuildDate>Tue, 29 Nov 2016 18:51:13 -0800</lastBuildDate>
+    <pubDate>Mon, 19 Dec 2016 00:45:00 -0800</pubDate>
+    <lastBuildDate>Mon, 19 Dec 2016 00:45:00 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Creating packages for C/C++</title>
+        <description>&lt;p&gt;If only we had a package manager for C++. By this I mean something that C/C++ developers on
+any operating system could use; packages that can only be used from Red Hat don’t do Mac
+or Windows or even Debian developers any good.&lt;/p&gt;
+
+&lt;p&gt;But that’s not actually the problem - if only all the libraries we collectively need
+were available as packages.&lt;/p&gt;
+
+&lt;p&gt;There are a dozen C++ package managers now. Each of them has 10-50 packages. And then that’s
+usually about it. Since any single package manager lacks all the packages one needs, no
+package manager gets widespread adoption.&lt;/p&gt;
+
+&lt;p&gt;This is not a chicken-and-egg situation. And it’s not that none of the package managers are
+all that terrible. None are great, but many are usable.&lt;/p&gt;
+
+&lt;p&gt;The problem needs to be attacked from the other end. Instead of designing a package manager
+and then starting to assemble packages for it, just make all the packages. All the packages.
+Thousands and tens of thousands of them. Actually, millions, because source is constantly
+updated to keep it working and add features.&lt;/p&gt;
+
+&lt;p&gt;This either means an army of people spending a collective hundred thousand hours,
+or a (semi) automated tool.&lt;/p&gt;
+
+&lt;p&gt;I started on this; just barely. Here are some notes towards the system I think is needed.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-basic-idea&quot;&gt;The basic idea&lt;/h2&gt;
+
+&lt;p&gt;Something like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make-package curl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and out pops a package for curl. This implies several things.&lt;/p&gt;
+
+&lt;p&gt;First, that we can take the string &lt;code&gt;curl&lt;/code&gt; and find curl source with it. This could be&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;looking on Github or another source repository.&lt;/li&gt;
+  &lt;li&gt;looking in a &lt;code&gt;make-package&lt;/code&gt; forwarding list&lt;/li&gt;
+  &lt;li&gt;searching in Google&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then, we need to analyze what we downloaded, whether it is a Git repo, tar/zip file, or
+some other collection.&lt;/p&gt;
+
+&lt;p&gt;Since purely automated analysis is unlikely to result in a usable package for all but the
+most trivial of projects, we will have to add a little human input from time to time.&lt;/p&gt;
+
+&lt;p&gt;Once we know how to assemble our package, we do so, in whatever format of the day is desired.&lt;/p&gt;
+
+&lt;p&gt;Then, repeat, for all versions of all projects that we wish as packages.&lt;/p&gt;
+
+&lt;p&gt;There is a common engine fronted by one or more input systems and backed by one or more output
+systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;input-systems&quot;&gt;Input systems&lt;/h2&gt;
+
+&lt;p&gt;Git - Github, Gitorius, Gitlab, arbitrary Git upstreams.&lt;/p&gt;
+
+&lt;p&gt;Launchpad - https://launchpad.net/&lt;/p&gt;
+
+&lt;p&gt;Sourceforge, although no one cares any more, do they?&lt;/p&gt;
+
+&lt;p&gt;Maybe every Linux distribution can serve as an upstream?&lt;/p&gt;
+
+&lt;p&gt;Private company source control systems.&lt;/p&gt;
+
+&lt;p&gt;FTP sites.&lt;/p&gt;
+
+&lt;p&gt;Google can help us find things, but it will likely require human sifting. I assume eventually
+that there will be a master repository - not of source, but of pointers to source.&lt;/p&gt;
+
+&lt;h2 id=&quot;analysis&quot;&gt;Analysis&lt;/h2&gt;
+
+&lt;p&gt;Jumping to the end, package source will have metadata, a manifest, that instructs how to
+assemble the source into a package. That is best kept with the source, but that’s clearly
+not going to happen right away. So we keep it and associate it with the source on need. Someday,
+maybe, once we have packages for everything, package authors will take over the maintenance
+of the package metadata. But we will not count on that.&lt;/p&gt;
+
+&lt;p&gt;In fact, this is the key. We have to do all of it and keep it running without expecting
+anyone else to participate. Oddly enough, I think that’s the best way to guarantee
+that everyone else does join in.&lt;/p&gt;
+
+&lt;h2 id=&quot;output-systems&quot;&gt;Output systems&lt;/h2&gt;
+
+&lt;p&gt;We are very definitely not going to presume the one true package format. That is just as mad
+as trying to have everyone adopt a package metadata format.&lt;/p&gt;
+
+&lt;p&gt;For this, we embrace a polyglot nature. Whatever package format is desired, we write a generator
+for it. This is actually not very hard. Every existing package format to date is pretty simple,
+it’s some kind of simple container with one or more manifest files embedded. This is very close
+to how compilers work - the compiler itself can be generic, with several backends to generate
+code in the appropriate format, and several front-ends to parse text into syntax trees.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 18 Dec 2016 13:11:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/12/18/creating-packages-for-c++.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/12/18/creating-packages-for-c++.html</guid>
+        
+        <category>C++</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Using Matplotlib</title>
@@ -293,6 +399,39 @@ environment to get back to whatever you had set globally:&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/28/python-virtualenv.html</guid>
         
         <category>python</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://muratbuffalo.blogspot.com/2016/11/my-distributed-systems-seminars-reading.html&quot;&gt;My Distributed Systems Seminar’s reading list for Spring 2017&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.usenix.org/system/files/conference/osdi16/osdi16-adya.pdf&quot;&gt;Slicer: Auto-Sharding for Datacenter Applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.usenix.org/system/files/conference/osdi16/osdi16-liu.pdf&quot;&gt;XFT: Practical Fault Tolerance beyond Crashes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://probablydance.com/2016/11/07/lessons-learned-from-shenzhen-io/&quot;&gt;Lessons Learned from Shenzhen I/O&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mailinabox.email/&quot;&gt;Mail-in-a-Box&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cs.cornell.edu/Courses/cs4110/2016fa/lectures/lecture33.html&quot;&gt;Probabilistic Programming&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cs.cmu.edu/~rwh/pfpl/2nded.pdf&quot;&gt;Practical Foundations for Programming Languages&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://laszlo.nu/2016/11/25/s3-static-site.html&quot;&gt;S3 static site with SSL and automatic deploys using Travis&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/AndreaOrru/LaiNES&quot;&gt;Cycle-accurate NES emulator in ~1000 lines of code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.theoremoftheday.org/Theorems.html&quot;&gt;Theorem of the Day&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Nov 2016 17:12:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/11/27/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/27/recent-links.html</guid>
+        
+        <category>text</category>
         
         
         <category>dev</category>
@@ -602,274 +741,6 @@ about modifying and controlling Sphinx. I’ll get it into shape with conclusion
         <pubDate>Mon, 21 Nov 2016 15:20:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2016/11/21/more-on-sphinx.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/21/more-on-sphinx.html</guid>
-        
-        <category>python</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Sphinx for documentation</title>
-        <description>&lt;p&gt;Periodically I re-hunt for something better to write with - blogs and books, but
-most of all technical documentation. I have been using Markdown and Jekyll for a
-blog, and have long since run into limitations: lots of blog articles make the
-Jekyll generator take a long time, Liquid markup sucks, Markdown itself is too
-limited for what I want.&lt;/p&gt;
-
-&lt;p&gt;OK, on the long time bit. I have about 100 articles in my _posts folder. It
-takes Jekyll about 10 seconds to run now, and if I preview with &lt;code&gt;jekyll serve&lt;/code&gt;,
-it takes 10 seconds to pick up a change. That’s unacceptable, given that it’s
-supposed to be incremental. It’s written in Ruby, which is part of the reason
-it’s slow, and also holds me back from wanting to fix it (I have no interest
-in learning Ruby).&lt;/p&gt;
-
-&lt;p&gt;So now I’m writing technical docs with Sphinx and reStructuredText. I’m liking
-it for now, but the true test will be in the long run, but also “can I write a
-book with it?”. I cannot conceive of writing a book in Markdown.&lt;/p&gt;
-
-&lt;p&gt;I did use TeX a long time ago, but I found that I got lost in the code when
-I was writing large things. And that was with a relatively friendly program
-like Bluesky TexTures. I was a TeX fan in the 1980s, but while it made awesome
-strides compared to everything else in the 1970s and 1980s, it just didn’t stick
-for me as something I could write in.&lt;/p&gt;
-
-&lt;p&gt;Likewise with FrameMaker. I loved FrameMaker and used it successfully for a long
-while, but then Adobe basically abandoned the Mac version and I fell out of love
-with it. Also, the direction that FrameMaker took went in a direction different
-than what I was interested in.&lt;/p&gt;
-
-&lt;p&gt;Sphinx is best set up in a virtualenv, because it pulls in a lot of things. And
-since I’ve never used virtualenv before, here’s my crib notes for Windows.&lt;/p&gt;
-
-&lt;h2 id=&quot;create-new-virtualenv-environment&quot;&gt;Create new virtualenv environment&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;C:&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;&amp;gt;virtualenv sphinx
-Using base prefix &lt;span class=&quot;s1&quot;&gt;&amp;#39;c:\\python35&amp;#39;&lt;/span&gt;
-New python executable in C:&lt;span class=&quot;se&quot;&gt;\w\s&lt;/span&gt;phinx&lt;span class=&quot;se&quot;&gt;\S&lt;/span&gt;cripts&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ython.exe
-Installing setuptools, pip, wheel...done.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;activate-environment&quot;&gt;Activate environment&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;C:&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;&amp;gt;cd sphinx
-C:&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;&amp;gt;Scripts&lt;span class=&quot;se&quot;&gt;\a&lt;/span&gt;ctivate
-&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; C:&lt;span class=&quot;se&quot;&gt;\w\s&lt;/span&gt;phinx&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The activate script alters your prompt to remind you that you are in the virtualenv
-environment.&lt;/p&gt;
-
-&lt;h2 id=&quot;installing-packages-into-the-virtual-environment&quot;&gt;Installing packages into the virtual environment&lt;/h2&gt;
-
-&lt;p&gt;Once you’ve activated the environment, any new packages just go into that environment.
-That’s the entire point and reason for using virtualenv.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; C:&lt;span class=&quot;se&quot;&gt;\w\s&lt;/span&gt;phinx&amp;gt;pip install sphinx
-Collecting sphinx
-  Using cached Sphinx-1.4.8-py2.py3-none-any.whl
-Collecting snowballstemmer&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1.1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Using cached snowballstemmer-1.2.1-py2.py3-none-any.whl
-...
-Building wheels &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; collected packages: MarkupSafe
-  Running setup.py bdist_wheel &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; MarkupSafe ... &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-  Stored in directory: C:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;fitz&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;ppData&lt;span class=&quot;se&quot;&gt;\L&lt;/span&gt;ocal&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ip&lt;span class=&quot;se&quot;&gt;\C&lt;/span&gt;ache&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;heels&lt;span class=&quot;se&quot;&gt;\a&lt;/span&gt;3&lt;span class=&quot;se&quot;&gt;\f&lt;/span&gt;a&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;c&lt;span class=&quot;se&quot;&gt;\0&lt;/span&gt;198eed9ad95489b8a4f45d14dd5d2aee3f8984e46862c5748
-Successfully built MarkupSafe
-Installing collected packages: snowballstemmer, imagesize, alabaster, MarkupSafe, Jinja2, pytz, babel, Pygments, six, colorama, docutils, sphinx
-Successfully installed Jinja2-2.8 MarkupSafe-0.23 Pygments-2.1.3 alabaster-0.7.9 babel-2.3.4 colorama-0.3.7 docutils-0.12 imagesize-0.7.1 pytz-2016.7 six-1.10.0 snowballstemmer-1.2.1 sphinx-1.4.8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;deactivate-environment&quot;&gt;Deactivate environment&lt;/h2&gt;
-
-&lt;p&gt;You could just close the cmd shell you have open, or you could deactivate the virtualenv&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; C:&lt;span class=&quot;se&quot;&gt;\w\d&lt;/span&gt;oc&amp;gt;deactivate
-C:&lt;span class=&quot;se&quot;&gt;\w\d&lt;/span&gt;oc&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;using-sphinx&quot;&gt;Using Sphinx&lt;/h2&gt;
-
-&lt;p&gt;The Sphinx documentation isn’t very clearly written. Or rather, it is good reference documentation,
-but it’s a little hard to get started.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; documentation can be found starting here. 1.4.8
-is the latest version as of this moment.&lt;/p&gt;
-
-&lt;p&gt;The quickstart at &lt;a href=&quot;http://www.sphinx-doc.org/en/1.4.8/tutorial.html&quot;&gt;First Steps with Sphinx&lt;/a&gt;
-has you run &lt;code&gt;sphinx-quickstart&lt;/code&gt;. This asks a ton of questions that you’re not likely to be 
-sure on the answers. Worse, it’s not very friendly on Windows, it seems to assume that
-terminal escape codes work (not the case on cmd.exe for the most part).&lt;/p&gt;
-
-&lt;p&gt;I ran it from within my newly created doc folder and said “.” for the root path. I then
-answered everything else to the best of my knowledge.&lt;/p&gt;
-
-&lt;p&gt;In the end, all that gets created is a text config file named &lt;code&gt;conf.py&lt;/code&gt;. It’s commented
-liberally along the model of Apache and other programs with lots of config. Usefully,
-it has a lot of the options in the file, and if they don’t apply, they are commented out.&lt;/p&gt;
-
-&lt;p&gt;The defautl use is HTML, but it supports LaTeX output, and that is useful for feeding to
-a TeX-to-PDF converter.&lt;/p&gt;
-
-&lt;p&gt;All this is the simple part. The most important step is “how do I add stuff”, and then “how do
-I turn this into something others can read”.&lt;/p&gt;
-
-&lt;h3 id=&quot;adding-text&quot;&gt;Adding text&lt;/h3&gt;
-
-&lt;p&gt;The index.rst file in the root of your documentation tree is the top page and the master
-index all in one. My simple one looks like this&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;.. Provenance documentation master file, created by
-   sphinx-quickstart on Mon Nov  &lt;span class=&quot;m&quot;&gt;7&lt;/span&gt; 13:56:13 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;toctree&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; directive.
-
-Welcome to Provenance&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s documentation!
-&lt;span class=&quot;o&quot;&gt;======================================&lt;/span&gt;
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-   intro
-   github-info
-   references
-
-Indices and &lt;span class=&quot;nv&quot;&gt;tables&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;==================&lt;/span&gt;
-
-* :ref:&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;genindex&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-* :ref:&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;modindex&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-* :ref:&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;search&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is the top-level page, so anything that’s not a directive will show up in your
-output.&lt;/p&gt;
-
-&lt;p&gt;Each entry in toctree is the name of another file to process, ending in .rst. These are
-relative paths and for a big project you’ll have some organization to it. For now I have
-a handful of files.&lt;/p&gt;
-
-&lt;p&gt;The absolute coolest thing about Sphinx is that it creates a search page for your
-documentation.&lt;/p&gt;
-
-&lt;h3 id=&quot;building&quot;&gt;Building&lt;/h3&gt;
-
-&lt;p&gt;The long-form is to run &lt;code&gt;sphinx-build -b html . _build&lt;/code&gt;. There are some convenience
-makefiles that work for most use cases. Just running &lt;code&gt;make html&lt;/code&gt; is enough for
-generating your HTML site into the &lt;code&gt;_build&lt;/code&gt; folder (or whatever you named as your
-output). The site is in &lt;code&gt;_build\html&lt;/code&gt; and since it’s making a web site, there is
-a &lt;code&gt;_build\html\index.html&lt;/code&gt; that is the root page.&lt;/p&gt;
-
-&lt;h2 id=&quot;further-thoughts&quot;&gt;Further thoughts&lt;/h2&gt;
-
-&lt;p&gt;Sphinx isn’t incremental like Jekyll, so I’m not sure how happy I’ll be writing a blog
-in it. But I like restructuredText far more than Markdown.&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://matplotlib.org/sampledoc/cheatsheet.html&quot;&gt;Sphinx cheat sheet&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html&quot;&gt;Restructured Text (reST) and Sphinx CheatSheet&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.sphinx-doc.org/en/latest/invocation.html&quot;&gt;Invocation of sphinx-quickstart&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 09 Nov 2016 10:00:07 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/11/09/sphinx-for-documentation.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/09/sphinx-for-documentation.html</guid>
-        
-        <category>python</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Package manager failure</title>
-        <description>&lt;p&gt;Package managers shouldn’t do this. TL/DR - I just wanted to install Sphinx. It
-installed fine on one machine, but the install barfed on another. I have no idea
-how to fix this, and casual googling provided no relief. So - I am actually
-uninstalling and re-installing Python, for lack of any better idea.&lt;/p&gt;
-
-&lt;p&gt;I tried upgrading to the newest pip as suggested, but of course that did nothing.
-Maybe it’s because I’m running Python 3.6 beta on the machine in question. Of course,
-I would like to know why it didn’t give me a sensible error instead of this. So I’ll
-uninstall Python 3.6 beta and install latest Python 3.5, because I’m guessing it’s
-something related to that.&lt;/p&gt;
-
-&lt;p&gt;My actual point is that this is not sensible behavior for a package manager. Package
-managers should just work. This indicates a design flaw to me somewhere in the system.&lt;/p&gt;
-
-&lt;p&gt;Update: a slightly better Google search did turn up a Stackoverflow page (of course),
-and I guess Python 3.6 beta is a little too bleeding edge for me. So my point might
-still stand, but not precisely pointed at Python and pip, just in general.&lt;/p&gt;
-
-&lt;p&gt;Things should work, dammit.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;C:&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;&amp;gt;pip install sphinx
-Collecting sphinx
-  Downloading Sphinx-1.4.8-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1.6MB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 1.6MB 618kB/s
-Collecting snowballstemmer&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1.1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading snowballstemmer-1.2.1-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;64kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 71kB 3.8MB/s
-Collecting docutils&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0.11 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading docutils-0.12-py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;508kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 512kB 1.2MB/s
-Collecting Pygments&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading Pygments-2.1.3-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;755kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 757kB 282kB/s
-Collecting alabaster&amp;lt;0.8,&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0.7 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading alabaster-0.7.9-py2.py3-none-any.whl
-Collecting babel!&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.0,&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1.3 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading Babel-2.3.4-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;7.1MB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 7.1MB 136kB/s
-Collecting imagesize &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading imagesize-0.7.1-py2.py3-none-any.whl
-Collecting six&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1.5 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading six-1.10.0-py2.py3-none-any.whl
-Collecting colorama&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0.3.5&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sys_platform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;win32&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading colorama-0.3.7-py2.py3-none-any.whl
-Collecting Jinja2&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.3 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading Jinja2-2.8-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;263kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 266kB 345kB/s
-Collecting pytz&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0a &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from babel!&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.0,&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1.3-&amp;gt;sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading pytz-2016.7-py2.py3-none-any.whl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;480kB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    100% &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;████████████████████████████████&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; 481kB 480kB/s
-Collecting MarkupSafe &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;from Jinja2&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.3-&amp;gt;sphinx&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  Downloading MarkupSafe-0.23.tar.gz
-Installing collected packages: snowballstemmer, docutils, Pygments, alabaster, pytz, babel, imagesize, six, colorama, MarkupSafe, Jinja2, sphinx
-Exception:
-Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\basecommand.py&amp;quot;&lt;/span&gt;, line 215, in main
-    &lt;span class=&quot;nv&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; self.run&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;options, args&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\commands\install.py&amp;quot;&lt;/span&gt;, line 317, in run
-    &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;options.prefix_path,
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\req\req_set.py&amp;quot;&lt;/span&gt;, line 742, in install
-    **kwargs
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\req\req_install.py&amp;quot;&lt;/span&gt;, line 831, in install
-    self.move_wheel_files&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;self.source_dir, &lt;span class=&quot;nv&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;root, &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;prefix&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\req\req_install.py&amp;quot;&lt;/span&gt;, line 1032, in move_wheel_files
-    &lt;span class=&quot;nv&quot;&gt;isolated&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;self.isolated,
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\wheel.py&amp;quot;&lt;/span&gt;, line 493, in move_wheel_files
-    maker.make_multiple&lt;span class=&quot;o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%s = %s&amp;#39;&lt;/span&gt; % kv &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; kv in console.items&lt;span class=&quot;o&quot;&gt;()])&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 383, in make_multiple
-    filenames.extend&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;self.make&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;specification, options&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 372, in make
-    self._make_script&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;entry, filenames, &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;options&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 276, in _make_script
-    self._write_script&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;scriptnames, shebang, script, filenames, ext&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 212, in _write_script
-    &lt;span class=&quot;nv&quot;&gt;launcher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; self._get_launcher&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;t&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\scripts.py&amp;quot;&lt;/span&gt;, line 351, in _get_launcher
-    &lt;span class=&quot;nv&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; finder&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;distlib_package&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.bytes
-  File &lt;span class=&quot;s2&quot;&gt;&amp;quot;c:\python36b2\lib\site-packages\pip\_vendor\distlib\resources.py&amp;quot;&lt;/span&gt;, line 324, in finder
-    raise DistlibException&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Unable to locate finder for %r&amp;#39;&lt;/span&gt; % package&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-pip._vendor.distlib.DistlibException: Unable to locate finder &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;pip._vendor.distlib&amp;#39;&lt;/span&gt;
-You are using pip version 8.1.2, however version 9.0.1 is available.
-You should consider upgrading via the &lt;span class=&quot;s1&quot;&gt;&amp;#39;python -m pip install --upgrade pip&amp;#39;&lt;/span&gt; command.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Mon, 07 Nov 2016 17:39:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/11/07/package-manager-failure.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/07/package-manager-failure.html</guid>
         
         <category>python</category>
         

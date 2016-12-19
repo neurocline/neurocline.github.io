@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Creating packages for C/C++</title>
+  <meta name="description" content="If only we had a package manager for C++. By this I mean something that C/C++ developers onany operating system could use; packages that can only be used fro...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2016/12/18/creating-packages-for-c++.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,108 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Creating packages for C/C++</h1>
+    <p class="post-meta">Dec 18, 2016</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Dec 18, 2016</span>
+  <article class="post-content">
+    <p>If only we had a package manager for C++. By this I mean something that C/C++ developers on
+any operating system could use; packages that can only be used from Red Hat don’t do Mac
+or Windows or even Debian developers any good.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/12/18/creating-packages-for-c++.html">Creating packages for C/C++</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 29, 2016</span>
+<p>But that’s not actually the problem - if only all the libraries we collectively need
+were available as packages.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/11/29/using-matplotlib.html">Using Matplotlib</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 28, 2016</span>
+<p>There are a dozen C++ package managers now. Each of them has 10-50 packages. And then that’s
+usually about it. Since any single package manager lacks all the packages one needs, no
+package manager gets widespread adoption.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/11/28/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 28, 2016</span>
+<p>This is not a chicken-and-egg situation. And it’s not that none of the package managers are
+all that terrible. None are great, but many are usable.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/11/28/python-virtualenv.html">Python virtualenv</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 27, 2016</span>
+<p>The problem needs to be attacked from the other end. Instead of designing a package manager
+and then starting to assemble packages for it, just make all the packages. All the packages.
+Thousands and tens of thousands of them. Actually, millions, because source is constantly
+updated to keep it working and add features.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/11/27/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>This either means an army of people spending a collective hundred thousand hours,
+or a (semi) automated tool.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p>I started on this; just barely. Here are some notes towards the system I think is needed.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h2 id="the-basic-idea">The basic idea</h2>
+
+<p>Something like this:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>make-package curl</code></pre></div>
+
+<p>and out pops a package for curl. This implies several things.</p>
+
+<p>First, that we can take the string <code>curl</code> and find curl source with it. This could be</p>
+
+<ul>
+  <li>looking on Github or another source repository.</li>
+  <li>looking in a <code>make-package</code> forwarding list</li>
+  <li>searching in Google</li>
+</ul>
+
+<p>Then, we need to analyze what we downloaded, whether it is a Git repo, tar/zip file, or
+some other collection.</p>
+
+<p>Since purely automated analysis is unlikely to result in a usable package for all but the
+most trivial of projects, we will have to add a little human input from time to time.</p>
+
+<p>Once we know how to assemble our package, we do so, in whatever format of the day is desired.</p>
+
+<p>Then, repeat, for all versions of all projects that we wish as packages.</p>
+
+<p>There is a common engine fronted by one or more input systems and backed by one or more output
+systems.</p>
+
+<h2 id="input-systems">Input systems</h2>
+
+<p>Git - Github, Gitorius, Gitlab, arbitrary Git upstreams.</p>
+
+<p>Launchpad - https://launchpad.net/</p>
+
+<p>Sourceforge, although no one cares any more, do they?</p>
+
+<p>Maybe every Linux distribution can serve as an upstream?</p>
+
+<p>Private company source control systems.</p>
+
+<p>FTP sites.</p>
+
+<p>Google can help us find things, but it will likely require human sifting. I assume eventually
+that there will be a master repository - not of source, but of pointers to source.</p>
+
+<h2 id="analysis">Analysis</h2>
+
+<p>Jumping to the end, package source will have metadata, a manifest, that instructs how to
+assemble the source into a package. That is best kept with the source, but that’s clearly
+not going to happen right away. So we keep it and associate it with the source on need. Someday,
+maybe, once we have packages for everything, package authors will take over the maintenance
+of the package metadata. But we will not count on that.</p>
+
+<p>In fact, this is the key. We have to do all of it and keep it running without expecting
+anyone else to participate. Oddly enough, I think that’s the best way to guarantee
+that everyone else does join in.</p>
+
+<h2 id="output-systems">Output systems</h2>
+
+<p>We are very definitely not going to presume the one true package format. That is just as mad
+as trying to have everyone adopt a package metadata format.</p>
+
+<p>For this, we embrace a polyglot nature. Whatever package format is desired, we write a generator
+for it. This is actually not very hard. Every existing package format to date is pretty simple,
+it’s some kind of simple container with one or more manifest files embedded. This is very close
+to how compilers work - the compiler itself can be generic, with several backends to generate
+code in the appropriate format, and several front-ends to parse text into syntax trees.</p>
+
+  </article>
 
 </div>
 
