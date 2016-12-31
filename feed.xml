@@ -6,9 +6,232 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Dec 2016 00:45:00 -0800</pubDate>
-    <lastBuildDate>Mon, 19 Dec 2016 00:45:00 -0800</lastBuildDate>
+    <pubDate>Sat, 31 Dec 2016 14:21:38 -0800</pubDate>
+    <lastBuildDate>Sat, 31 Dec 2016 14:21:38 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Compiling C++</title>
+        <description>&lt;p&gt;To all C fans - everything I’m writing applies equally to C and C++, I just got tired of saying
+C/C++, so picked the covering term. Also, I apologize in advance for anyone who runs across this;
+I’m writing this as notes for myself, and while this will end up in a more polished form, I will
+probably forget to put a link from here to the final version.&lt;/p&gt;
+
+&lt;p&gt;I am working from the C++14 standard draft N4296, which is freely available (the formal version
+of the standard costs money, but is functionally identical to the last draft). And none of this
+stuff changes with C++17, I believe.&lt;/p&gt;
+
+&lt;p&gt;The standard uses language that keeps options open, but this means the standard doesn’t talk about
+the really interesting bits. Let’s start with files.&lt;/p&gt;
+
+&lt;h1 id=&quot;files&quot;&gt;Files&lt;/h1&gt;
+
+&lt;p&gt;We put source code into files with names; these are often organized in hierarchical file systems.
+This does not mean that this will be the only way we ever work with source code, but we do work
+with it this way at the moment.&lt;/p&gt;
+
+&lt;p&gt;What is a file? It’s a sequence of bytes. It’s also a sequence of bits, but no known file system
+handles a file of say 1023 bits, it handles files with an integral number of bytes. But if you
+want to be pedantic, substitute “sequence of bits” for everything I write and it will work.
+It’s just extra mental work that will go unused until some future date where such a bit-oriented
+file system comes into existence.&lt;/p&gt;
+
+&lt;p&gt;We can also think of this as a stream of bytes, and you’ll see a lot of file APIs expressed
+as stream APIs. I prefer to not use this terminology, because the length of a stream is not
+nececessarily known until the end of the stream is encountered. A sequence is a predetermined
+and finite list.&lt;/p&gt;
+
+&lt;p&gt;The model of “file” that I use here is of an immutable sequence of bytes; if
+we have a different sequence, we have a different file. We have ambiguity if the same name refers
+to two different sequences of bytes. This will be important later.&lt;/p&gt;
+
+&lt;p&gt;Of course, it’s not just any sequence of bytes. The bytes have to be comprehendable as C++ source
+characters. This is the basic C++ source character set:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a b c d e f g h i j k l m n o p q r s t u v w x y z
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+0 1 2 3 4 5 6 7 8 9
+_ { } [ ] # ( ) &amp;lt; &amp;gt; % : ; . ? * + - / ^ &amp;amp; | ~ ! = , \ &quot; ’
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The standard also allows for characters as identifed by universal-character-name, e.g. Unicode.&lt;/p&gt;
+
+&lt;p&gt;Also note that while this set includes all the printable ASCII characters except &lt;code&gt;@&lt;/code&gt; and &lt;code&gt;$&lt;/code&gt;,
+most compilers accept those characters as well - &lt;code&gt;@&lt;/code&gt; is needed for Objective-C, and the Gnu docs
+say something about &lt;code&gt;$&lt;/code&gt; used for VMS compatibility (still a thing, but HP announced end-of-life
+for OpenVMS in 2020).&lt;/p&gt;
+
+&lt;h1 id=&quot;separate-translation&quot;&gt;Separate translation&lt;/h1&gt;
+
+&lt;p&gt;Per 2.1 in the standard, the source program is handled in independent translation units; each
+translation unit is handled by itself and the output of all translation units is combined
+together to create the executable program.&lt;/p&gt;
+
+&lt;p&gt;A translation unit is a source file and all the files inserted with &lt;code&gt;#include&lt;/code&gt; preprocessor
+directives. Since files inserted by &lt;code&gt;#include&lt;/code&gt; are themselves source files, there is some
+external mechanism that decides which source files are the starts of translation units.&lt;/p&gt;
+
+&lt;p&gt;One reason for the persistent use of stream APIs is that files couldn’t necessarily fit into
+memory, even just the files for a single translation unit. Since C++ can be parsed with a
+context-free grammar augmented with semantic rules, a source file can be processed in a
+linear sequence from beginning to end, and so could be processed with stream API calls. It
+adds just enough complexity that it bleeds into the various steps of the compiler, so we
+will ignore this.&lt;/p&gt;
+
+&lt;p&gt;Not considering anything else, we have this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;file ... ==&amp;gt; compiler ==&amp;gt; linker ==&amp;gt; executable
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where translation of each file could be done in any arbitrary order or even in parallel.&lt;/p&gt;
+
+&lt;h1 id=&quot;character-sets&quot;&gt;Character sets&lt;/h1&gt;
+
+&lt;p&gt;When compiling C++, there are three character sets we will encounter:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;File character set&lt;/li&gt;
+  &lt;li&gt;Source character set&lt;/li&gt;
+  &lt;li&gt;Execution character set&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These may all be the same, or may be distinct. A file may have an arbitrary character set, as
+long as the compiler can translate this into the source character set. In practice, compilers
+only deal with a few character sets, and may require that this be specified in some manner by
+the user. GCC expects that the file character set is isomorphic with ISO 10646 - this does not
+mean that it must be Unicode, just that there is a 1-to-1 translation between the file character
+set and Unicode. Also, note that UTF-8 is a very common file encoding.&lt;/p&gt;
+
+&lt;p&gt;The source character set was mentioned above. It’s not ISO 646 or Unicode, and it can be unique
+to a specific compiler. The standard just says that a certain set of characters must be
+supported. In practice, modern compilers use ISO 10646 internally. The entire reason to have
+the formality of a source character set is that real-world files are messy, so this gives the
+compiler writer a chance to fix things up to be canonical. Microsoft used to put a BOM into
+UTF-8 files even though this is not needed and makes invalid files. Or the author of a file
+mixed line endings due to copy/paste (lines with LF and lines with CRLF). Or really horrible things
+like mixed encodings, where lines were merged from a CP1252-encoded file into a UTF-8 encoded file.&lt;/p&gt;
+
+&lt;p&gt;The execution character set is the character set that strings in the executable are formatted in.
+This is very implementation-specific, and driven by the target platform. Note that only strings
+and character constants need to be translated - the C++ source at this point is gone, converted to
+whatever execution language was targetted. Again, UTF-8 is a common execution character set, because
+Unix operating systems have converged to that as the default system character set. Since the compiler
+is in charge of this, it generally comes out pristine, although garbage-in-garbage-out applies here.&lt;/p&gt;
+
+&lt;h1 id=&quot;translate-to-basic-source-character-set&quot;&gt;Translate to basic source character set&lt;/h1&gt;
+
+&lt;p&gt;The first step in the C++ compilation process is to translate characters from the in-file format
+to the source-character format. This is section 2.2.1 in the C++14 standard&lt;/p&gt;
+
+&lt;p&gt;Now, there are trivial ways to solve this. If source files are encoded in ASCII, ISO/IEC 10646,
+or UTF-8, and if the compiler knows about UTF-8, then all these characters would be the same
+in the file and in the source representation. And this is how compilers worked for many years.&lt;/p&gt;
+
+&lt;p&gt;However, the world is polyglot, and the standard has advanced. Newer versions of the standard
+mention that you can use Unicode characters, inserted with universal character names, and that
+means that the character set is now much larger than it used to be. And these Unicode characters
+can be used in identifiers, not just in comments and strings.&lt;/p&gt;
+
+&lt;p&gt;You don’t literally need to encode characters with universal-character-names, which would look
+like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+\u00F6
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(which is the letter ö, if you were curious). The standard uses very careful language to allow
+for old file encodings that cannot contain Unicode characters; by using universal-character-name
+sequences, you can put Unicode characters into any file format that can hold all of the basic
+characters.&lt;/p&gt;
+
+&lt;p&gt;So now we have&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;file ... ==&amp;gt; source-chars ==&amp;gt; compiler ==&amp;gt; linker ==&amp;gt; executable
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But really, it’s a pipeline&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;file1 ==&amp;gt; source-chars ==&amp;gt; compiler ==&amp;gt; object1
+file2 ==&amp;gt; source-chars ==&amp;gt; compiler ==&amp;gt; object2
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Each stage of the pipeline transforms a sequence of bytes, although the transform may be the
+identify transform. For source character translation, if the file is already in the source character
+format, then nothing needs to happen.&lt;/p&gt;
+
+&lt;p&gt;This is a part where the standard is either insufficient or not fully implemented, because GCC
+only supports identifiers with &lt;code&gt;\u&lt;/code&gt; or &lt;code&gt;\U&lt;/code&gt; escapes, and not the Unicode characters themselves.&lt;/p&gt;
+
+&lt;h1 id=&quot;other&quot;&gt;other&lt;/h1&gt;
+
+&lt;p&gt;With the include model, we have:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(file, file, ...) ==&amp;gt; logical-source ==&amp;gt; compiler ==&amp;gt; executable
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where &lt;code&gt;logical-source&lt;/code&gt; is the file that would be created by inserting contents of files
+in place of &lt;code&gt;#include&lt;/code&gt; preprocessor directives.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Dec 2016 19:11:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/12/30/compiling-c++.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/12/30/compiling-c++.html</guid>
+        
+        <category>C++</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://intelxed.github.io/&quot;&gt;Intel XED&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.citusdata.com/blog/2016/12/15/citus-replication-model-today-and-tomorrow/&quot;&gt;Citus’ Replication Model: Today and Tomorrow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/nothings/single_file_libs&quot;&gt;Single-file public-domain/open source libraries with minimal dependencies&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://researcher.watson.ibm.com/researcher/files/us-lmandel/lattner.pdf&quot;&gt;Swift: Challenges and Opportunity for Language and Compiler Research&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/mmc-writes/the-fourth-industrial-revolution-a-primer-on-artificial-intelligence-ai-ff5e7fffcae1#.u1b2hlwp1&quot;&gt;The fourth industrial revolution: a primer on Artificial Intelligence (AI)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stroustrup.com/good_concepts.pdf&quot;&gt;Concepts: The Future of Generic Programming&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://course.fast.ai/&quot;&gt;Practical Deep Learning For Coders, Part 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docker-saigon.github.io/post/Docker-Internals/&quot;&gt;Linux Container Internals&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.plover.com/prog/git-tastrophe.html&quot;&gt;Another Git catastrophe cleaned up&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.codeproject.com/Articles/3853/Wave-a-Standard-conformant-C-preprocessor-library&quot;&gt;Wave: a Standard conformant C++ preprocessor library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gcc.gnu.org/onlinedocs/cppinternals/&quot;&gt;The GNU C Preprocessor Internals&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mcpp.sourceforge.net/&quot;&gt;mcpp – a portable C preprocessor&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/io.html&quot;&gt;Python 3: io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/glossary.html&quot;&gt;Python 3: Glossary&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/stdtypes.html&quot;&gt;Python 3: Built-in Types&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/argparse.html&quot;&gt;Python 3: argparse&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/cplusplus&quot;&gt;ISO C++ Standards Commitee&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://isocpp.org/std/the-standard&quot;&gt;ISO C++ The Standard&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Dec 2016 09:21:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2016/12/21/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/12/21/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Creating packages for C/C++</title>
@@ -634,115 +857,6 @@ Mercurial and Git.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/24/recent-links.html</guid>
         
         <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Python makes me cry</title>
-        <description>&lt;p&gt;I don’t hate Python. If I hated it, I wouldn’t use it. But every time I start using Python
-for serious work, I run into silly problems.&lt;/p&gt;
-
-&lt;p&gt;For example, I used Python 2.x for a long time, but finally switched to Python 3.x because
-it was pretty much impossible to correctly handle localized text - you can mostly handle it,
-but if you want to be perfect, the edge cases get in your way. But then, once I switched to
-Python 3, I remembered that I ran programs that didn’t like Python 2. So then I had to do
-shenanigans to get things to run, like mentioned here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://testerstories.com/2014/06/multiple-versions-of-python-on-windows/&quot;&gt;Multiple Versions of Python on Windows&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The main issue is that Python emphasizes quick turnaround at the cost of other factors.
-For many small problems, this is great. If you’re writing software you just want to use
-for weeks, months or years, this is not so great. I find myself constantly fiddling with
-things.&lt;/p&gt;
-
-&lt;p&gt;That said, Zeb Shaw went off the deep end when he wrote this.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://learnpythonthehardway.org/book/nopython3.html&quot;&gt;The Case Against Python 3&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;He may or may not learn the lesson that many others have - you make think you are
-“exaggerating for effect’, whereas your opposition will call you a liar, or an idiot,
-or other very unkind things. Zeb advances some arguments that are silly, in his attempt
-to have a very strong argument.&lt;/p&gt;
-
-&lt;p&gt;Instead, my issue is that I want it all - I want a language where I can quickly run and
-test code, and I want to produce programs that just run, on anyone’s machine, or on my
-machine years later. I have Mac programs that I wrote in 1988 that still work just fine.
-I have Windows programs that I wrote in 1995 that still work just fine. I have lots of
-Python, Perl and Ruby code that stop working months after written, because there’s too
-much interaction with the machine environment.&lt;/p&gt;
-
-&lt;p&gt;The correct answer is a staticly typed language with a kick-ass package system and
-a compiler that’s universally available, where you distribute both binary and source, and
-source can be recompiled as needed. Python has parts of this, but the language fights
-against stability, and the fact that you need exactly the right VM fights against it.
-I can’t just distribute a Python program. But I can distribute just a Windows binary or
-a Mac binary.&lt;/p&gt;
-
-&lt;p&gt;Time to get to work.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 23 Nov 2016 16:45:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/11/23/python-makes-me-cry.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/23/python-makes-me-cry.html</guid>
-        
-        <category>python</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>More on Sphinx</title>
-        <description>&lt;p&gt;I’ve been using Sphinx for a few weeks now, and I like it. I’m not sure yet about writing
-a blog in it, but it can’t be worse than Jekyll.&lt;/p&gt;
-
-&lt;p&gt;I’m now at the point where I want it to look a certain way, so here’s what I’m reading
-about modifying and controlling Sphinx. I’ll get it into shape with conclusions in a bit.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://matplotlib.org/sampledoc/&quot;&gt;matplotlib: sampledoc&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://docutils.sourceforge.net/docs/ref/rst/directives.html#include&quot;&gt;reStructuredText: Including an External Document Fragment&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://readthedocs.org/&quot;&gt;Read The Docs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.sphinx-doc.org/en/1.4.8/theming.html&quot;&gt;Sphinx: HTML theming support&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.writethedocs.org/guide/tools/sphinx-themes/&quot;&gt;Write The Docs: Sphinx Themes&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/snide/sphinx_rtd_theme&quot;&gt;snide/sphinx_rtd_theme&lt;/a&gt; - the source for the Read The Docs Sphinx theme.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://docs.readthedocs.io/en/latest/theme.html&quot;&gt;Read the Docs Theme&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/14622698/customize-sphinxdoc-theme&quot;&gt;StackOverflow: Customize sphinxdoc theme&lt;/a&gt; - simple example of Sphinx theming.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2075691/some-good-sphinx-customization-examples&quot;&gt;StackOverflow: Some good Sphinx customization examples?&lt;/a&gt; - useful compendium of Sphinx theming links.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/coordt/ADCtheme&quot;&gt;coordt/ADCtheme&lt;/a&gt; - a Sphinx theme that mimics the look of Apple Developer Connection documentation.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/pallets/flask-sphinx-themes&quot;&gt;pallets/flask-sphinx-themes&lt;/a&gt; - source for Flask Sphinx Themes&lt;/p&gt;
-
-&lt;p&gt;http://loose-bits.com/2012/11/19/sphinx-bootstrap-theme-updates.html&lt;/p&gt;
-
-&lt;p&gt;http://ryan-roemer.github.io/sphinx-bootstrap-theme/README.html&lt;/p&gt;
-
-&lt;p&gt;http://matplotlib.org/&lt;/p&gt;
-
-&lt;p&gt;http://matplotlib.org/devel/documenting_mpl.html#dynamically-generated-figures&lt;/p&gt;
-
-&lt;p&gt;http://matplotlib.org/devel/documenting_mpl.html#inheritance-diagrams&lt;/p&gt;
-
-&lt;p&gt;https://pypi.python.org/pypi/sphinx-bootstrap-theme/&lt;/p&gt;
-
-&lt;p&gt;https://pythonhosted.org/sphinxjp.themes.basicstrap/options.html&lt;/p&gt;
-</description>
-        <pubDate>Mon, 21 Nov 2016 15:20:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/11/21/more-on-sphinx.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/21/more-on-sphinx.html</guid>
-        
-        <category>python</category>
         
         
         <category>dev</category>
