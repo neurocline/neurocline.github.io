@@ -6,9 +6,36 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 31 Dec 2016 14:21:38 -0800</pubDate>
-    <lastBuildDate>Sat, 31 Dec 2016 14:21:38 -0800</lastBuildDate>
+    <pubDate>Mon, 02 Jan 2017 07:13:35 -0800</pubDate>
+    <lastBuildDate>Mon, 02 Jan 2017 07:13:35 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://www.the-adam.com/adam/rantrave/st02.pdf&quot;&gt;A Description of One Programmer’s Programming Style Revisited&lt;/a&gt;. Written in 1990, updated in 2001.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://canonical.org/~kragen/memory-models/&quot;&gt;The memory models that underlie programming languages&lt;/a&gt;. Interesting.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://statweb.stanford.edu/~cgates/PERSI/papers/The%20MCMC%20Revolution.pdf&quot;&gt;The Markov Chain Monte Carlo Revolution&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1412.6621&quot;&gt;Why does Deep Learning work? - A perspective from Group Theory&lt;/a&gt;. This feels like a seminal paper.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/clockworksoul/smudge&quot;&gt;clockworksoul/smudge&lt;/a&gt;. Smudge is a lightweight Go library that provides group member discovery, status dissemination, and failure detection using the SWIM epidemic protocol.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://idea.popcount.org/2013-07-24-ir-is-better-than-assembly/&quot;&gt;IR is better than assembly&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.nelhage.com/2016/12/how-i-test/&quot;&gt;How I Write Tests&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Jan 2017 08:57:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/01/01/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/01/01/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Compiling C++</title>
@@ -812,51 +839,6 @@ Mercurial and Git.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/25/git-the-theoretical-minimum.html</guid>
         
         <category>git</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://blog.mailgun.com/machine-learning-for-everyday-tasks/&quot;&gt;Machine Learning for Everyday Tasks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cs.cornell.edu/~asampson/blog/statsmistakes.html&quot;&gt;Statistical Mistakes and How to Avoid Them&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://talkpython.fm/episodes/show/86/python-at-stackoverflow&quot;&gt;TalkPython: Episode #86: Python at StackOverflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python&quot;&gt;What is a metaclass in Python?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://subgraph.com/&quot;&gt;Subgraph OS: Adversary resistant computing platform&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://aelkus.github.io/essays/ai_manhattan_project.html&quot;&gt;The Manhattan Project Fallacy&lt;/a&gt; - this is mostly wrong, in my opinion.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-need-to-know/&quot;&gt;NIST’s new password rules – what you need to know&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=13021722&quot;&gt;Ask HN: What free or low-cost static site hosting do you use most?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://neocities.org/&quot;&gt;neocities&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://p5js.org/&quot;&gt;p5*js&lt;/a&gt;. A spin-off of Processing, in the Javascript language&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://twinery.org/&quot;&gt;Twine&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hugotunius.se/2016/01/10/the-one-cent-blog.html&quot;&gt;The one cent blog&lt;/a&gt; - about running a blog for $0.01/month (discounting domain registration).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ampproject.org/&quot;&gt;AMP HTML&lt;/a&gt; - a new thing I should use?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.pmease.com/gitplex&quot;&gt;GixPlex&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.netlify.com/&quot;&gt;Netlify&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.theguardian.com/media/2016/nov/22/conservative-websites-media-bubble?CMP=share_btn_fb&quot;&gt;So you want to get out of your bubble: try reading these conservative websites&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 24 Nov 2016 19:45:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/11/24/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/24/recent-links.html</guid>
-        
-        <category>text</category>
         
         
         <category>dev</category>
