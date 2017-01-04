@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using Hugo for a blog"
-date:   2017-01-01 11:39:00
+date:   2017-01-02 11:39:00
 categories: blog
 tags: [hugo, blog]
 ---
