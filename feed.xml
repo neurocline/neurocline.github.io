@@ -6,9 +6,221 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 Jan 2017 07:13:35 -0800</pubDate>
-    <lastBuildDate>Mon, 02 Jan 2017 07:13:35 -0800</lastBuildDate>
+    <pubDate>Tue, 03 Jan 2017 17:49:27 -0800</pubDate>
+    <lastBuildDate>Tue, 03 Jan 2017 17:49:27 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://jeremykun.com/2015/04/06/markov-chain-monte-carlo-without-all-the-bullshit/&quot;&gt;Markov Chain Monte Carlo Without all the Bullshit&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jeremykun.com/2014/02/12/simulating-a-biased-coin-with-a-fair-coin/&quot;&gt;Simulating a Biased Coin with a Fair Coin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/book-No-Solutions-Aug-21-2014.pdf&quot;&gt;Foundations of Data Science&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.mcmchandbook.net/HandbookChapter1.pdf&quot;&gt;Introduction to Markov Chain Monte Carlo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stats.stackexchange.com/questions/165/how-would-you-explain-markov-chain-monte-carlo-mcmc-to-a-layperson&quot;&gt;How would you explain Markov Chain Monte Carlo (MCMC) to a layperson?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mlwhiz.com/blog/2015/08/19/MCMC_Algorithms_Beta_Distribution/&quot;&gt;My Tryst With MCMC Algorithms&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mlwhiz.com/blog/2015/08/21/MCMC_Algorithms_Cryptography/&quot;&gt;Behold the power of MCMC&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twiecki.github.io/blog/2015/11/10/mcmc-sampling/&quot;&gt;MCMC sampling for dummies&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cs.cornell.edu/selman/cs475/lectures/intro-mcmc-lukas.pdf&quot;&gt;Introduction to Markov Chain Monte Carlo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cs.princeton.edu/courses/archive/spr06/cos598C/papers/AndrieuFreitasDoucetJordan2003.pdf&quot;&gt;An Introduction to MCMC for Machine Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=h1NOS_wxgGg&quot;&gt;Markov Chain Monte Carlo and the Metropolis Algorithm (video)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vTUwEu53uzs&quot;&gt;A Beginner’s Guide to MCMC (video)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=uSAE1-wfIKU&quot;&gt;Introduction to Bayesian Methods (video)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stats.ox.ac.uk/~cholmes/Courses/BDA/bda_mcmc.pdf&quot;&gt;Markov Chain Monte Carlo and Applied Bayesian Statistics: a short course&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3619958/&quot;&gt;Markov Chain Monte Carlo: an introduction for epidemiologists&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stats.stackexchange.com/questions/214724/how-do-abc-and-mcmc-differ-in-their-applications&quot;&gt;How do ABC and MCMC differ in their applications?&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 10:46:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/01/03/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/01/03/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Compiling C++</title>
+        <description>&lt;p&gt;This is a continuation of my last post.&lt;/p&gt;
+
+&lt;p&gt;The C++ standard lists 9 phases of translation. Some are trivial, some are massive (phase 7 is “compile
+after preprocessing”).&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Map physical source file characters to the basic source character set&lt;/li&gt;
+  &lt;li&gt;Splice lines together as needed&lt;/li&gt;
+  &lt;li&gt;Break text into sequences of preprocessing tokens&lt;/li&gt;
+  &lt;li&gt;Evaluate preprocessing directives and expand macros&lt;/li&gt;
+  &lt;li&gt;Convert character and string literals from source character set to execution character set&lt;/li&gt;
+  &lt;li&gt;Concatenate adjacent string literals&lt;/li&gt;
+  &lt;li&gt;Compile: convert preprocessing tokens to tokens and compile into translation units&lt;/li&gt;
+  &lt;li&gt;Combine translation units and instantiation units (for templates)&lt;/li&gt;
+  &lt;li&gt;Resolve external references and produce final program image&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;phase-1---map-to-basic-source-character-set&quot;&gt;Phase 1 - map to basic source character set&lt;/h1&gt;
+
+&lt;p&gt;This can be a no-op in compilers if the physical source file characters are identical to the basic
+source character set. In modern compilers, there may be some text to text translation, especially
+for handling newline characters.&lt;/p&gt;
+
+&lt;p&gt;Without loss of generality, we could state that the basic source character set is UTF-8 and that
+newline characters are linefeeds, e.g. 0x0A. We would translate our input file to match this.&lt;/p&gt;
+
+&lt;p&gt;As a reminder, this is the basic character set:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a b c d e f g h i j k l m n o p q r s t u v w x y z
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+0 1 2 3 4 5 6 7 8 9
+_ { } [ ] # ( ) &amp;lt; &amp;gt; % : ; . ? * + - / ^ &amp;amp; | ~ ! = , \ &quot; ’
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It is augmented with universal-character-name characters for any character outside this range.
+In theory, this means the use of escapes like &lt;code&gt;\u00F6&lt;/code&gt; instead of direct Unicode characters like
+&lt;code&gt;ö&lt;/code&gt;. However, the “as-if” rule applies here: the standard states that “an implementation may use
+any internal encoding, so long as…” it works out the same.&lt;/p&gt;
+
+&lt;p&gt;This also includes conversion of trigraphs, if trigraphs are supported. Trigraph support is not required
+as of C++14 and is slated to be removed in C++17. No one should be using trigraphs.&lt;/p&gt;
+
+&lt;p&gt;Raw string literals: Trigraph and universal character translations would be reversed in phase 3. It is
+ignored here because identifying raw string literals is done in the preprocessor tokenization phase.&lt;/p&gt;
+
+&lt;h1 id=&quot;phase-2---splice-lines-together&quot;&gt;Phase 2 - splice lines together&lt;/h1&gt;
+
+&lt;p&gt;The C++ standard says that lines ending in backlash &lt;code&gt;\&lt;/code&gt; are joined together with the following line
+to create a single logical line. The main reason for this is for long string literals and for long
+preprocessor directives. The preprocessor is line-based in that a preprocessor directive must be on
+a single logical line. By splicing lines together before interpreting directives, we can make macros
+that are more readable than they would be otherwise.&lt;/p&gt;
+
+&lt;h1 id=&quot;phase-3---decompose-file-into-preprocessor-tokens&quot;&gt;Phase 3 - decompose file into preprocessor tokens&lt;/h1&gt;
+
+&lt;p&gt;This phase is an “as-if” phase. A compiler could elect to work with the text itself instead of the
+preprocessor tokens. However, there are some subtleties that make it a lot easier to talk about the
+process as if there were tokens.&lt;/p&gt;
+
+&lt;p&gt;Raw string literals are an interesting exception. If the start of a raw-string literal is detected,
+then the universal-character-name translation in phase 1 and the line-splicing in phase 2 are reverted,
+and the raw string is the shortest sequence of characters that match the raw string pattern. This
+means for example that a raw string defined as such:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;char* s = R&quot;(my\
+string)&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;would be the literal characters &lt;code&gt;my\&amp;lt;newline&amp;gt;string&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, does this mean that it’s the newline from the physical file? While the standard reads as ambiguous,
+I’m pretty sure this has to be a newline character - if the execution character set is UTF-8, then
+the string would be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;74 68 69 73 5c 0a 73 74 72 69 6e 67 00
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;regardless of the type of newline in the physical file.&lt;/p&gt;
+
+&lt;p&gt;Another exception is the &lt;code&gt;&amp;lt;:&lt;/code&gt; digraph; if the sequence &lt;code&gt;&amp;lt;::&lt;/code&gt; is followed by anything other than &lt;code&gt;:&lt;/code&gt; or &lt;code&gt;&amp;gt;&lt;/code&gt;, then
+this is treated as the token &lt;code&gt;&amp;lt;&lt;/code&gt; and not the digraph &lt;code&gt;&amp;lt;:&lt;/code&gt;. This is a little hard to puzzle out. The string &lt;code&gt;&amp;lt;::&amp;gt;&lt;/code&gt;
+would be digraphs for &lt;code&gt;[]&lt;/code&gt;, so that part makes sense, e.g a declaration such as &lt;code&gt;int main(int argc, char* argv[])&lt;/code&gt;.
+But it’s a little harder to see what &lt;code&gt;&amp;lt;:::&lt;/code&gt; would mean.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 03:27:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/01/03/compiling-c++.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/01/03/compiling-c++.html</guid>
+        
+        <category>C++</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Using Hugo for a blog</title>
+        <description>&lt;p&gt;Near the end of 2012, I started a blog using Wordpress. At the end of 2014, it fell prey to a
+hack that inserted hundreds of thousands of spam comments. I’d already been dissatisfied with
+Wordpress as being awkward to write in, so I spent no effort to fix it.&lt;/p&gt;
+
+&lt;p&gt;In May 2015, I started a new blog using Jekyll. This was somewhat better than using Wordpress;
+it went backwards on features, but was a lot easier to write new blog posts, and was a lot faster.
+Well, at first. Once I had a hundred blog posts, I noticed Jekyll getting slower and slower, to the
+point now that it takes 30 seconds to rebuild. That’s annoying. Plus, I hate Liquid, and I’m not
+really a Ruby fan.&lt;/p&gt;
+
+&lt;p&gt;So, after months of light agonizing, I’m going to switch to Hugo.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Big plus is that it’s written in Go, which means it’s almost as good as writing it in C++, both
+speed-wise and the likelihood that I would ever actually add a feature to it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/spf13/hugo&quot;&gt;Hugo source - Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hugo has a Jekyll site importer which I’ll be trying out, but I’m not too worried about that part
+(and someday I’ll import all the content from my older Wordpress blog):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gohugo.io/tutorials/migrate-from-jekyll/&quot;&gt;Migrate to Hugo from Jekyll&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a showcase of Hugo blogs that I imagine I’ll pick through to find an initial template that
+I like - while I’m picky on look&amp;amp;feel, it’s not to the point where I want to spend a lot of time
+writing CSS myself.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gohugo.io/showcase/&quot;&gt;Hugo Site Showcase&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That said, I’ve been enjoying using Sphinx and reStructuredText for writing documentation, and
+I’m not really a blogger as in “writing to be read”, instead I write to remember or as reference.
+I’m ok with using multiple systems, I think.&lt;/p&gt;
+
+&lt;p&gt;I expect that whatever I do, I’ll use Disqus to have blog comments. Those are always useful.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I am also considering using Netlify.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.netlify.com&quot;&gt;Netlify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, Netlify has this cool list of static site generators&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.staticgen.com/&quot;&gt;StaticGen - Top Open-Source Static Site Generators&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Honorable mention - I toyed with the idea of Nikola, because it was at least written in Python.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://getnikola.com/&quot;&gt;Nikola&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Another honorable mention is Forestry, which purports to create a CMS from your Jekyll or Hugo blog.
+I don’t think I need a CMS, but we’ll see. However, this does sound useful for non-technical people.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://forestry.io/&quot;&gt;Forestry&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Jan 2017 03:39:00 -0800</pubDate>
+        <link>http://neurocline.github.io/blog/2017/01/02/using-hugo.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/blog/2017/01/02/using-hugo.html</guid>
+        
+        <category>hugo</category>
+        
+        <category>blog</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -649,196 +861,6 @@ environment to get back to whatever you had set globally:&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/28/python-virtualenv.html</guid>
         
         <category>python</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://muratbuffalo.blogspot.com/2016/11/my-distributed-systems-seminars-reading.html&quot;&gt;My Distributed Systems Seminar’s reading list for Spring 2017&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.usenix.org/system/files/conference/osdi16/osdi16-adya.pdf&quot;&gt;Slicer: Auto-Sharding for Datacenter Applications&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.usenix.org/system/files/conference/osdi16/osdi16-liu.pdf&quot;&gt;XFT: Practical Fault Tolerance beyond Crashes&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://probablydance.com/2016/11/07/lessons-learned-from-shenzhen-io/&quot;&gt;Lessons Learned from Shenzhen I/O&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mailinabox.email/&quot;&gt;Mail-in-a-Box&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.cs.cornell.edu/Courses/cs4110/2016fa/lectures/lecture33.html&quot;&gt;Probabilistic Programming&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.cs.cmu.edu/~rwh/pfpl/2nded.pdf&quot;&gt;Practical Foundations for Programming Languages&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://laszlo.nu/2016/11/25/s3-static-site.html&quot;&gt;S3 static site with SSL and automatic deploys using Travis&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/AndreaOrru/LaiNES&quot;&gt;Cycle-accurate NES emulator in ~1000 lines of code&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.theoremoftheday.org/Theorems.html&quot;&gt;Theorem of the Day&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 27 Nov 2016 17:12:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/11/27/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/27/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>History: told by the winners or the losers?</title>
-        <description>&lt;p&gt;There is a saying: “history is told by the winners”. It seems intuitively true, and that
-is usually a warning sign that we’re not thinking things through.&lt;/p&gt;
-
-&lt;p&gt;Recently a new thesis has been advanced: history is told by the losers. For an example of
-the argument:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://scholars-stage.blogspot.com/2016/11/history-is-written-by-losers.html&quot;&gt;History is Written by the Losers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This makes a compelling case - when you have an erudite person who is the winner, they
-don’t have time to write anything, but when that person is shoved aside, that person
-may just write a history that’s more palatable to them. The two cases cited cover the
-origins of history-from-historians.&lt;/p&gt;
-
-&lt;p&gt;Here’s how I look at it. There are two ways that history is written. The first is that history
-is written by consensus; over time, we mostly converge to the same view. This maps to the “history
-is written by the winners” side of things, because of course the winners have an outsized
-influence on what is said.&lt;/p&gt;
-
-&lt;p&gt;But the other way that history is written is the auteur approach - a single person or small
-group that selects what it thinks should be recorded. In the case of Siam Qian or Herodotus
-or Thucydides, the stories are powerful enough to survive when the consensus history did not.
-And over the very long stretch of time, when we have wars or other catastrophes that upset
-and destroy specific civilizations, the consensus form of history doesn’t survive.&lt;/p&gt;
-
-&lt;p&gt;It’s an interesting thought. I’m still not sure that history is only or even largely written
-by losers, but maybe with enough research we’ll determine this is true.&lt;/p&gt;
-
-&lt;p&gt;Or maybe this view will be the one that survives because some loser will write it down and
-promote it.&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;Another bit on history written by losers:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://history.stackexchange.com/questions/5597/is-history-always-written-by-the-victors&quot;&gt;Is history always written by the victors?&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 27 Nov 2016 04:52:00 -0800</pubDate>
-        <link>http://neurocline.github.io/philosophy/2016/11/27/history-told-by-winners-or-losers.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/philosophy/2016/11/27/history-told-by-winners-or-losers.html</guid>
-        
-        <category>history</category>
-        
-        
-        <category>philosophy</category>
-        
-      </item>
-    
-      <item>
-        <title>Git: The Theoretical Minimum</title>
-        <description>&lt;p&gt;I intend to write a book titled “Git: The Theoretical Minimum”, inspired by Leonard Susskind’s
-two books &lt;a href=&quot;https://www.amazon.com/Theoretical-Minimum-Start-Doing-Physics/dp/0465075681&quot;&gt;The Theoretical Minimum: What You Need to Know to Start Doing Physics&lt;/a&gt;
-and &lt;a href=&quot;https://www.amazon.com/Quantum-Mechanics-Theoretical-Leonard-Susskind/dp/0465062903&quot;&gt;Quantum Mechanics: The Theoretical Minimum&lt;/a&gt;
-(also see his web site &lt;a href=&quot;http://theoreticalminimum.com/&quot;&gt;The Theoretical Minimum&lt;/a&gt;). These
-are awesome books and I recommend them to anyone, because physics is all around us and
-having a working knowledge of it is a good thing.&lt;/p&gt;
-
-&lt;p&gt;My reasoning in a nutshell is this: Git is the first real version control system, or rather
-it is probably the ancestor of the first real one. And while it is not as complicated to use
-as detractors like to say, it’s also not been explained in a succinct fashion. There are now
-many thousands of pages written, and yet a lot of Git is not explained except in answers
-to StackOverflow questions or by looking at the source.&lt;/p&gt;
-
-&lt;p&gt;I think this means that there is a need for a short volume that explains everything you need
-in order to do anything with Git, and I also think that this overlaps with “everything about
-version control” to a staggering degree. I don’t mean to have the encyclopedic volume that
-literally writes down everything, but rather the bare minimum you need in order to do anything
-you need to on your own. For example, the Git help is pretty good, but it’s also only good if
-you already understand things - it’s more a reminder reference than something you consult in
-order to learn what to do.&lt;/p&gt;
-
-&lt;p&gt;For example, it is probably not important to describe the Git plumbing model, but it is
-important to describe exactly how commits work, because that’s at the heart of many Git
-operations. What I hope to do is to find the basic set of things you need to know about
-any useful version control system, and describe them; the fact that it will be Git-centric
-is because Git is the most popular example of a good version control system at the moment.&lt;/p&gt;
-
-&lt;p&gt;Separately, I want to finish the survey of all version control systems, so that we can put
-most of them to bed as past history. “I have not come here to praise Perforce but to bury it”.&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.rath.org/mercurial-for-git-users-and-vice-versa.html&quot;&gt;Mercurial for Git Users (and vice versa)&lt;/a&gt; - a more modern (early 2016) comparison between
-Mercurial and Git.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://softwareengineering.stackexchange.com/questions/940/what-are-your-favorite-version-control-systems&quot;&gt;What are your favorite version control systems?&lt;/a&gt; - I remember using both PVCS and Projector.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Comparison_of_version_control_software&quot;&gt;Comparison of version control software&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.improgrammer.net/top-version-control-systems/&quot;&gt;Top Version Control Systems&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://rhodecode.com/insights/version-control-systems-2016&quot;&gt;Version Control Systems Popularity in 2016&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webinerds.com/version-control-systems-keep-your-code-in-order/&quot;&gt;Version Control Systems: Keep Your Code In Order!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.catb.org/esr/writings/version-control/version-control.html&quot;&gt;Understanding Version-Control Systems (DRAFT)&lt;/a&gt; - written in 2008, and may be the first attempt to cover the general theory of revision control.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot;&gt;Version control&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ericsink.com/scm/source_control.html&quot;&gt;Source Control HOWTO&lt;/a&gt; - from Eric Sink, useful for common terminology.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ericsink.com/vcbe/html/index.html&quot;&gt;Version Control by Example&lt;/a&gt; - a 2011 online book by Eric Sink.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://betterexplained.com/articles/a-visual-guide-to-version-control/&quot;&gt;A Visual Guide to Version Control&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/&quot;&gt;Intro to Distributed Version Control (Illustrated)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cs.ru.nl/~wouters/Publications/PrincipledVersionControl.pdf&quot;&gt;A Principled Approach to Version Control&lt;/a&gt; - a 2006 paper: “This paper aims to give a precise, mathematical description of the version control problem and different version control systems”&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.staff.science.uu.nl/~swier004/publications/2014-onward.pdf&quot;&gt;The Semantics of Version Control&lt;/a&gt;. A 2014 paper by the authors of the previous paper.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pijul.org/&quot;&gt;Pijul&lt;/a&gt;, based on Darcs. Pijul was announced in 2014 but it’s still in (mostly slow moving) development. See &lt;a href=&quot;https://news.ycombinator.com/item?id=10470281&quot;&gt;HackerNews comment thread&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://darcs.net/Theory/Bibliography&quot;&gt;Darcs: Theory/Bibliography&lt;/a&gt;. Darcs is one the few systems that claims to be based on a strong theory; in fact, Darcs devotees are often dismissive of other efforts as not having a formal backdrop. Darcs vs Git is a classic example of “it works in theory”; to two significant digits, no one uses Darcs, everyone uses Git.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://projects.haskell.org/camp/&quot;&gt;Camp (Haskell)&lt;/a&gt;. Another system ideologically related to Darcs. Start in 2009, and seems to have been abandoned as of 2010.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pasky.or.cz/bc/bcthesis-final.pdf&quot;&gt;Current Concepts in Version Control Systems&lt;/a&gt;. 2008 Bachelor thesis by Petr Baudiˇs.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.cs.cmu.edu/~rwh/papers/htpt/paper.pdf&quot;&gt;Homotopical Patch Theory&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cstheory.stackexchange.com/questions/32374/math-talk-theorem-about-git-revision-control-system&quot;&gt;Math talk: Theorem about git revision control system?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://rahul.gopinath.org/post/2011/12/30/version-control-systems/&quot;&gt;Version Control Systems&lt;/a&gt;. The best historical overview I’ve seen to date.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.278.6065&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Branching and Merging: An Investigation into Current Version Control Practices&lt;/a&gt;. 2011 paper.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://is.muni.cz/th/98961/fi_b/BcThesis.pdf&quot;&gt;Distributed Source Code Version Control Systems: Comparison and Usage Evaluation&lt;/a&gt;. 2006 Bachelor’s thesis by Michal M¥rka.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://files.codersbase.com/thesis.pdf&quot;&gt;Type-Correct Changes — A Safe Approach to Version Control Implementation&lt;/a&gt;. 2009 Master’s Thesis by Jason Dagit.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://hyperpolyglot.org/version-control&quot;&gt;Version Control: Git, Mercurial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.aosabook.org/en/mercurial.html&quot;&gt;TAOSA: Mercurial&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://duckrowing.com/2013/12/26/bzr-init-a-bazaar-tutorial/&quot;&gt;BZR INIT: A BAZAAR TUTORIAL&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://marklodato.github.io/visual-git-guide/index-en.html&quot;&gt;A Visual Git Reference&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jhw.dreamwidth.org/1868.html&quot;&gt;WHY I LIKE MERCURIAL MORE THAN GIT&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://schacon.github.io/2008/11/24/on-mercurial.html&quot;&gt;On Mercurial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.mercurial-scm.org/wiki/GitConcepts&quot;&gt;Mercurial for Git users&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 25 Nov 2016 13:33:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/11/25/git-the-theoretical-minimum.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/25/git-the-theoretical-minimum.html</guid>
-        
-        <category>git</category>
         
         
         <category>dev</category>

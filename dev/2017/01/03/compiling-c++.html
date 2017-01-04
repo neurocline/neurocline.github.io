@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Compiling C++</title>
+  <meta name="description" content="This is a continuation of my last post.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2017/01/03/compiling-c++.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,99 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Compiling C++</h1>
+    <p class="post-meta">Jan 3, 2017</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jan 3, 2017</span>
+  <article class="post-content">
+    <p>This is a continuation of my last post.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/01/03/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 3, 2017</span>
+<p>The C++ standard lists 9 phases of translation. Some are trivial, some are massive (phase 7 is “compile
+after preprocessing”).</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/01/03/compiling-c++.html">Compiling C++</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 2, 2017</span>
+<ol>
+  <li>Map physical source file characters to the basic source character set</li>
+  <li>Splice lines together as needed</li>
+  <li>Break text into sequences of preprocessing tokens</li>
+  <li>Evaluate preprocessing directives and expand macros</li>
+  <li>Convert character and string literals from source character set to execution character set</li>
+  <li>Concatenate adjacent string literals</li>
+  <li>Compile: convert preprocessing tokens to tokens and compile into translation units</li>
+  <li>Combine translation units and instantiation units (for templates)</li>
+  <li>Resolve external references and produce final program image</li>
+</ol>
 
-        <h2>
-          <a class="post-link" href="/blog/2017/01/02/using-hugo.html">Using Hugo for a blog</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 1, 2017</span>
+<h1 id="phase-1---map-to-basic-source-character-set">Phase 1 - map to basic source character set</h1>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/01/01/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 30, 2016</span>
+<p>This can be a no-op in compilers if the physical source file characters are identical to the basic
+source character set. In modern compilers, there may be some text to text translation, especially
+for handling newline characters.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2016/12/30/compiling-c++.html">Compiling C++</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>Without loss of generality, we could state that the basic source character set is UTF-8 and that
+newline characters are linefeeds, e.g. 0x0A. We would translate our input file to match this.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p>As a reminder, this is the basic character set:</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<pre><code>a b c d e f g h i j k l m n o p q r s t u v w x y z
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+0 1 2 3 4 5 6 7 8 9
+_ { } [ ] # ( ) &lt; &gt; % : ; . ? * + - / ^ &amp; | ~ ! = , \ " ’
+</code></pre>
+
+<p>It is augmented with universal-character-name characters for any character outside this range.
+In theory, this means the use of escapes like <code>\u00F6</code> instead of direct Unicode characters like
+<code>ö</code>. However, the “as-if” rule applies here: the standard states that “an implementation may use
+any internal encoding, so long as…” it works out the same.</p>
+
+<p>This also includes conversion of trigraphs, if trigraphs are supported. Trigraph support is not required
+as of C++14 and is slated to be removed in C++17. No one should be using trigraphs.</p>
+
+<p>Raw string literals: Trigraph and universal character translations would be reversed in phase 3. It is
+ignored here because identifying raw string literals is done in the preprocessor tokenization phase.</p>
+
+<h1 id="phase-2---splice-lines-together">Phase 2 - splice lines together</h1>
+
+<p>The C++ standard says that lines ending in backlash <code>\</code> are joined together with the following line
+to create a single logical line. The main reason for this is for long string literals and for long
+preprocessor directives. The preprocessor is line-based in that a preprocessor directive must be on
+a single logical line. By splicing lines together before interpreting directives, we can make macros
+that are more readable than they would be otherwise.</p>
+
+<h1 id="phase-3---decompose-file-into-preprocessor-tokens">Phase 3 - decompose file into preprocessor tokens</h1>
+
+<p>This phase is an “as-if” phase. A compiler could elect to work with the text itself instead of the
+preprocessor tokens. However, there are some subtleties that make it a lot easier to talk about the
+process as if there were tokens.</p>
+
+<p>Raw string literals are an interesting exception. If the start of a raw-string literal is detected,
+then the universal-character-name translation in phase 1 and the line-splicing in phase 2 are reverted,
+and the raw string is the shortest sequence of characters that match the raw string pattern. This
+means for example that a raw string defined as such:</p>
+
+<pre><code>char* s = R"(my\
+string)";
+</code></pre>
+
+<p>would be the literal characters <code>my\&lt;newline&gt;string</code>.</p>
+
+<p>Now, does this mean that it’s the newline from the physical file? While the standard reads as ambiguous,
+I’m pretty sure this has to be a newline character - if the execution character set is UTF-8, then
+the string would be:</p>
+
+<pre><code>74 68 69 73 5c 0a 73 74 72 69 6e 67 00
+</code></pre>
+
+<p>regardless of the type of newline in the physical file.</p>
+
+<p>Another exception is the <code>&lt;:</code> digraph; if the sequence <code>&lt;::</code> is followed by anything other than <code>:</code> or <code>&gt;</code>, then
+this is treated as the token <code>&lt;</code> and not the digraph <code>&lt;:</code>. This is a little hard to puzzle out. The string <code>&lt;::&gt;</code>
+would be digraphs for <code>[]</code>, so that part makes sense, e.g a declaration such as <code>int main(int argc, char* argv[])</code>.
+But it’s a little harder to see what <code>&lt;:::</code> would mean.</p>
+
+  </article>
 
 </div>
 
