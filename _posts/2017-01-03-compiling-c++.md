@@ -84,3 +84,9 @@ Another exception is the `<:` digraph; if the sequence `<::` is followed by anyt
 this is treated as the token `<` and not the digraph `<:`. This is a little hard to puzzle out. The string `<::>`
 would be digraphs for `[]`, so that part makes sense, e.g a declaration such as `int main(int argc, char* argv[])`.
 But it's a little harder to see what `<:::` would mean.
+
+Personally, I think compilers should refuse to implement the punctuation diagraphs, and it look like MSVC
+does not support them (and maybe never did). I'm neutral on the keyword "diagraphs" like `and`, `or` etc.
+I feel like those are too much like trying to pretend C++ is a different language. I also notice that
+MSVC doesn't directly support them, only through a header file <iso646.h> where it creates macros for them...
+so not really digraphs. Just say no to digraphs.
