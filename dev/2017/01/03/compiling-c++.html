@@ -165,6 +165,12 @@ this is treated as the token <code>&lt;</code> and not the digraph <code>&lt;:</
 would be digraphs for <code>[]</code>, so that part makes sense, e.g a declaration such as <code>int main(int argc, char* argv[])</code>.
 But it’s a little harder to see what <code>&lt;:::</code> would mean.</p>
 
+<p>Personally, I think compilers should refuse to implement the punctuation diagraphs, and it look like MSVC
+does not support them (and maybe never did). I’m neutral on the keyword “diagraphs” like <code>and</code>, <code>or</code> etc.
+I feel like those are too much like trying to pretend C++ is a different language. I also notice that
+MSVC doesn’t directly support them, only through a header file <iso646.h> where it creates macros for them...
+so not really digraphs. Just say no to digraphs.</iso646.h></p>
+
   </article>
 
 </div>
