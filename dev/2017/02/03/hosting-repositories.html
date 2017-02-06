@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Hosting repositories</title>
+  <meta name="description" content="Public access">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2017/02/03/hosting-repositories.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,100 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Hosting repositories</h1>
+    <p class="post-meta">Feb 3, 2017</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Feb 3, 2017</span>
+  <article class="post-content">
+    <h2 id="public-access">Public access</h2>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/02/03/hosting-repositories.html">Hosting repositories</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 6, 2017</span>
+<p>So, who hosts repositories for public access?</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/01/06/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 3, 2017</span>
+<ul>
+  <li>Github: https://github.com</li>
+  <li>Bitbucket: https://bitbucket.org</li>
+  <li>CodePlex: http://www.codeplex.com/</li>
+  <li>SourceForge: https://sourceforge.net/</li>
+  <li>LaunchPad: https://launchpad.net/</li>
+  <li>Savannah: http://savannah.gnu.org/</li>
+  <li>Gna: http://gna.org/</li>
+  <li>Gitlab: http://gitlab.com</li>
+  <li>Apache Software Foundation: https://www.apache.org/dev/version-control.html</li>
+  <li>repo.or.cz: http://repo.or.cz/</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/01/03/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 3, 2017</span>
+<h3 id="codeplex">CodePlex</h3>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/01/03/compiling-c++.html">Compiling C++</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 2, 2017</span>
+<p>Slow to browse, and the UI is a little lame by modern standards. I think it’s mostly
+dead, because the last blog post on the site is from October 13 2013. I didn’t find
+any “we are going away” post but they must be going away. And I see people still using it,
+so hmm.</p>
 
-        <h2>
-          <a class="post-link" href="/blog/2017/01/02/using-hugo.html">Using Hugo for a blog</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>CodePlex has Subversion repositories on it, e.g. https://vstortoise.svn.codeplex.com/svn.
+But I think you have to guess where they are, you can’t just easily browse just
+Subversion repositories. Don’t think there’s an API either.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<h3 id="sourceforge">Sourceforge</h3>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>Still around, and getting disreputable. Sourceforge I think is only Subversion,
+e.g. svn checkout https://svn.code.sf.net/p/doublecmd/code/trunk doublecmd-code</p>
+
+<h2 id="from-the-past">From the past</h2>
+
+<p>These are the big players of the past that shut down (largely because Github won). Some
+still run in read-only mode:</p>
+
+<ul>
+  <li>Google Code: https://code.google.com (archived at https://code.google.com/archive/)</li>
+  <li>Gitorious: https://gitorious.org/ (migrating to Gitlab)</li>
+</ul>
+
+<h2 id="hosted-providers">Hosted providers</h2>
+
+<p>There are also hosted providers that will host your repositories, but I don’t think there
+is public access</p>
+
+<ul>
+  <li>Assembla: https://assembla.com</li>
+  <li>ProjectLocker: https://www.projectlocker.com/</li>
+  <li>XP-Dev.com: https://xp-dev.com/</li>
+  <li>SVNRepository.com: http://svnrepository.com/</li>
+  <li>SlikSVN: https://sliksvn.com</li>
+  <li>CloudForge: http://www.cloudforge.com/</li>
+  <li>Codebase: https://www.codebasehq.com/</li>
+  <li>repositoryhosting.com: http://repositoryhosting.com/</li>
+  <li>Unfuddle: https://unfuddle.com/</li>
+  <li>Beanstalk: http://beanstalkapp.com/</li>
+  <li>Deveo: https://deveo.com/</li>
+  <li>FogBugz Dev hub: https://www.fogcreek.com/fogbugz/devhub</li>
+  <li>Planio: https://plan.io/subversion-hosting-and-git-hosting/</li>
+  <li>RhodeCode: https://rhodecode.com/</li>
+</ul>
+
+<h2 id="what-i-was-reading">What I was reading</h2>
+
+<ul>
+  <li><a href="http://www.cvsync.org/">CVSync</a></li>
+  <li><a href="https://github.com/file/file">file/file</a></li>
+  <li><a href="http://www.catb.org/~esr/cvs-fast-export/cvssync.html">cvssync</a></li>
+  <li><a href="http://www.embecosm.com/appnotes/ean11/ean11-howto-cvs-git-1.0.html">Howto: CVS to Git</a></li>
+  <li><a href="https://github.com/akavel/cvsclone">akavel/cvsclone</a></li>
+  <li><a href="https://survs.com/report/nz2odu1spl">Git User’s Survey 2016</a></li>
+  <li><a href="http://www.yaml.org/">YAML</a></li>
+  <li><a href="https://snapcraft.io/">snapcraft</a></li>
+  <li><a href="https://github.com/snapcore/snapd">snapcore/snapd</a></li>
+  <li><a href="http://cs.gettysburg.edu/~tneller/modelai/2013/cfr/index.html">An Introduction to Counterfactual Regret Minimization</a></li>
+  <li><a href="http://www.bookadvice.co/military-reading-list.html">Military Reading List</a></li>
+  <li><a href="https://landing.google.com/sre/book/">Google SRE book</a></li>
+  <li><a href="http://www.pagetable.com/?p=46">Create your own Version of Microsoft BASIC for 6502</a></li>
+  <li><a href="http://www.txbobsc.com/scsc/scdocumentor/">S-C DocuMentor: Applesoft</a></li>
+  <li><a href="https://blogs.msdn.microsoft.com/visualstudioalm/2017/02/03/announcing-gvfs-git-virtual-file-system/">Announcing GVFS (Git Virtual File System)</a></li>
+</ul>
+
+  </article>
 
 </div>
 

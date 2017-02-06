@@ -6,9 +6,107 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 06 Jan 2017 15:33:38 -0800</pubDate>
-    <lastBuildDate>Fri, 06 Jan 2017 15:33:38 -0800</lastBuildDate>
+    <pubDate>Mon, 06 Feb 2017 09:07:48 -0800</pubDate>
+    <lastBuildDate>Mon, 06 Feb 2017 09:07:48 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Hosting repositories</title>
+        <description>&lt;h2 id=&quot;public-access&quot;&gt;Public access&lt;/h2&gt;
+
+&lt;p&gt;So, who hosts repositories for public access?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Github: https://github.com&lt;/li&gt;
+  &lt;li&gt;Bitbucket: https://bitbucket.org&lt;/li&gt;
+  &lt;li&gt;CodePlex: http://www.codeplex.com/&lt;/li&gt;
+  &lt;li&gt;SourceForge: https://sourceforge.net/&lt;/li&gt;
+  &lt;li&gt;LaunchPad: https://launchpad.net/&lt;/li&gt;
+  &lt;li&gt;Savannah: http://savannah.gnu.org/&lt;/li&gt;
+  &lt;li&gt;Gna: http://gna.org/&lt;/li&gt;
+  &lt;li&gt;Gitlab: http://gitlab.com&lt;/li&gt;
+  &lt;li&gt;Apache Software Foundation: https://www.apache.org/dev/version-control.html&lt;/li&gt;
+  &lt;li&gt;repo.or.cz: http://repo.or.cz/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;codeplex&quot;&gt;CodePlex&lt;/h3&gt;
+
+&lt;p&gt;Slow to browse, and the UI is a little lame by modern standards. I think it’s mostly
+dead, because the last blog post on the site is from October 13 2013. I didn’t find
+any “we are going away” post but they must be going away. And I see people still using it,
+so hmm.&lt;/p&gt;
+
+&lt;p&gt;CodePlex has Subversion repositories on it, e.g. https://vstortoise.svn.codeplex.com/svn.
+But I think you have to guess where they are, you can’t just easily browse just
+Subversion repositories. Don’t think there’s an API either.&lt;/p&gt;
+
+&lt;h3 id=&quot;sourceforge&quot;&gt;Sourceforge&lt;/h3&gt;
+
+&lt;p&gt;Still around, and getting disreputable. Sourceforge I think is only Subversion,
+e.g. svn checkout https://svn.code.sf.net/p/doublecmd/code/trunk doublecmd-code&lt;/p&gt;
+
+&lt;h2 id=&quot;from-the-past&quot;&gt;From the past&lt;/h2&gt;
+
+&lt;p&gt;These are the big players of the past that shut down (largely because Github won). Some
+still run in read-only mode:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Google Code: https://code.google.com (archived at https://code.google.com/archive/)&lt;/li&gt;
+  &lt;li&gt;Gitorious: https://gitorious.org/ (migrating to Gitlab)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hosted-providers&quot;&gt;Hosted providers&lt;/h2&gt;
+
+&lt;p&gt;There are also hosted providers that will host your repositories, but I don’t think there
+is public access&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Assembla: https://assembla.com&lt;/li&gt;
+  &lt;li&gt;ProjectLocker: https://www.projectlocker.com/&lt;/li&gt;
+  &lt;li&gt;XP-Dev.com: https://xp-dev.com/&lt;/li&gt;
+  &lt;li&gt;SVNRepository.com: http://svnrepository.com/&lt;/li&gt;
+  &lt;li&gt;SlikSVN: https://sliksvn.com&lt;/li&gt;
+  &lt;li&gt;CloudForge: http://www.cloudforge.com/&lt;/li&gt;
+  &lt;li&gt;Codebase: https://www.codebasehq.com/&lt;/li&gt;
+  &lt;li&gt;repositoryhosting.com: http://repositoryhosting.com/&lt;/li&gt;
+  &lt;li&gt;Unfuddle: https://unfuddle.com/&lt;/li&gt;
+  &lt;li&gt;Beanstalk: http://beanstalkapp.com/&lt;/li&gt;
+  &lt;li&gt;Deveo: https://deveo.com/&lt;/li&gt;
+  &lt;li&gt;FogBugz Dev hub: https://www.fogcreek.com/fogbugz/devhub&lt;/li&gt;
+  &lt;li&gt;Planio: https://plan.io/subversion-hosting-and-git-hosting/&lt;/li&gt;
+  &lt;li&gt;RhodeCode: https://rhodecode.com/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-i-was-reading&quot;&gt;What I was reading&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cvsync.org/&quot;&gt;CVSync&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/file/file&quot;&gt;file/file&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.catb.org/~esr/cvs-fast-export/cvssync.html&quot;&gt;cvssync&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.embecosm.com/appnotes/ean11/ean11-howto-cvs-git-1.0.html&quot;&gt;Howto: CVS to Git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/akavel/cvsclone&quot;&gt;akavel/cvsclone&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://survs.com/report/nz2odu1spl&quot;&gt;Git User’s Survey 2016&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.yaml.org/&quot;&gt;YAML&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/&quot;&gt;snapcraft&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/snapcore/snapd&quot;&gt;snapcore/snapd&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cs.gettysburg.edu/~tneller/modelai/2013/cfr/index.html&quot;&gt;An Introduction to Counterfactual Regret Minimization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bookadvice.co/military-reading-list.html&quot;&gt;Military Reading List&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://landing.google.com/sre/book/&quot;&gt;Google SRE book&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.pagetable.com/?p=46&quot;&gt;Create your own Version of Microsoft BASIC for 6502&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.txbobsc.com/scsc/scdocumentor/&quot;&gt;S-C DocuMentor: Applesoft&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/visualstudioalm/2017/02/03/announcing-gvfs-git-virtual-file-system/&quot;&gt;Announcing GVFS (Git Virtual File System)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 03 Feb 2017 16:12:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/02/03/hosting-repositories.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/03/hosting-repositories.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -752,41 +850,6 @@ code in this:&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/29/using-matplotlib.html</guid>
         
         <category>python</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://mpld3.github.io/&quot;&gt;mpld3: Bringing Matplotlib to the Browser&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bokeh.pydata.org/en/latest/&quot;&gt;Bokeh&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://vispy.org/&quot;&gt;VisPy&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.scipy.org/&quot;&gt;SciPy.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://matplotlib.org/&quot;&gt;Matplotlib&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.scipy-lectures.org/intro/matplotlib/matplotlib.html&quot;&gt;1.4. Matplotlib: plotting&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://rouge.jneen.net/&quot;&gt;{Rouge}&lt;/a&gt; with lots of &lt;a href=&quot;https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers&quot;&gt;supported languages&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pygments.org/&quot;&gt;Pygments&lt;/a&gt; with lots of &lt;a href=&quot;http://pygments.org/docs/lexers/&quot;&gt;supported languages&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib-so-it-can-be&quot;&gt;Save plot to image file instead of displaying it using Matplotlib&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://matplotlib.org/faq/howto_faq.html#generate-images-without-having-a-window-appear&quot;&gt;http://matplotlib.org/faq/howto_faq.html#generate-images-without-having-a-window-appear&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers&quot;&gt;https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 28 Nov 2016 17:53:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/11/28/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/28/recent-links.html</guid>
-        
-        <category>text</category>
         
         
         <category>dev</category>
