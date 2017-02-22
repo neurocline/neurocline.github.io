@@ -6,9 +6,151 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Feb 2017 09:07:48 -0800</pubDate>
-    <lastBuildDate>Mon, 06 Feb 2017 09:07:48 -0800</lastBuildDate>
+    <pubDate>Wed, 22 Feb 2017 08:35:23 -0800</pubDate>
+    <lastBuildDate>Wed, 22 Feb 2017 08:35:23 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;It looks like Gnuplot is still in CVS. This is the first live project I’ve come across
+that is still in CVS.&lt;/p&gt;
+
+&lt;p&gt;https://sourceforge.net/p/gnuplot/code/?source=navbar&lt;/p&gt;
+
+&lt;p&gt;Some bits about Python object-oriented code, because I’m a beginner.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rhettinger.wordpress.com/2011/05/26/super-considered-super/&quot;&gt;Python’s super() considered super!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/&quot;&gt;Improve Your Python: Python Classes and Object Oriented Programming&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/576169/understanding-python-super-with-init-methods&quot;&gt;Understanding Python super() with &lt;strong&gt;init&lt;/strong&gt;() methods&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://fuhm.net/super-harmful/&quot;&gt;Python’s Super is nifty, but you can’t use it&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amyboyle.ninja/Python-Inheritance&quot;&gt;Multiple Inheritance Minefield&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dylan added things to the computing landscape. One of them was the C3 superclass linearization
+algorithm, and is also called Method Resolution Order (MRO). Python started using it in 2.3.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/C3_linearization&quot;&gt;C3 linearization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.python.org/download/releases/2.3/mro/&quot;&gt;The Python 2.3 Method Resolution Order&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://python-history.blogspot.com/2010/06/method-resolution-order.html&quot;&gt;Method Resolution Order&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.3910&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;A Monotonic Superclass Linearization for Dylan&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 19 Feb 2017 19:00:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/02/19/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/19/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Dependencies</title>
+        <description>&lt;p&gt;Dependencies are one of the main pain points when working on a large code base.&lt;/p&gt;
+
+&lt;p&gt;You can make a monolithic codebase where you write everything from scratch. This is
+a daunting task and I don’t think anyone does this any more, even when they have
+their own hardware. The amount of code and the depth of some of the code is so
+big that even Google or Microsoft can’t really afford to do this.&lt;/p&gt;
+
+&lt;p&gt;So we use code we didn’t write to extend our own code.&lt;/p&gt;
+
+&lt;p&gt;INSERT STUFF HERE&lt;/p&gt;
+
+&lt;p&gt;It’s our program, so we should make all policy decisions at the top level. But we also
+don’t want to modify package code in order to use it, and we don’t want heavy
+configuration required to use code.&lt;/p&gt;
+
+&lt;p&gt;The crudest form of policy is “use this package/don’t use this package”. Since it
+is our program, nothing forces us to use a specific package. But we really want to
+use packages, because we want to make and ship our program in a reasonable amount
+of time.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 Feb 2017 11:36:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/02/18/dependencies.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/18/dependencies.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Converting Subversion to Git</title>
+        <description>&lt;p&gt;Several groups have converted their large Subversion repository to Git. The largest I
+know about is KDE, and they ended up writing a new program &lt;code&gt;svntogit&lt;/code&gt; to do that.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/svn-all-fast-export/svn2git&quot;&gt;svn2git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://techbase.kde.org/Projects/MoveToGit/UsingSvn2Git&quot;&gt;UsingSvn2Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The KDE Subversion repository is still accessible at&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;svn://anonsvn.kde.org/home/kde&quot;&gt;svn://anonsvn.kde.org/home/kde&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://websvn.kde.org&quot;&gt;https://websvn.kde.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Other people have used their tool&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.jeffgeerling.com/blogs/jeff-geerling/switching-svn-repository-svn2git&quot;&gt;Switching an SVN repository to Git with KDE’s Svn2Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some people persevere with &lt;code&gt;git-svn&lt;/code&gt;, bundled with Git.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://john.albin.net/git/convert-subversion-to-git&quot;&gt;Converting a Subversion repository to Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I was writing my own partly because of pathologies in in-house repos that choked everything
+I found, and partly because I have bigger plans.&lt;/p&gt;
+
+&lt;h2 id=&quot;large-subversion-repos&quot;&gt;Large Subversion repos&lt;/h2&gt;
+
+&lt;p&gt;The Apache Software Foundation puts all projects into a single common repo. As of this writing,
+it has 1,783,493 revisions:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://svn.apache.org/repos/asf&quot;&gt;https://svn.apache.org/repos/asf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;KDE used to be in Subversion, and small pieces stil live there (just localization at
+this point, I think). As of this writing, it has 1,482,977 revisions:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;svn://anonsvn.kde.org/home/kde&quot;&gt;svn://anonsvn.kde.org/home/kde&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GCC is in Subversion, although I think they are trying to switch to Git. As of this writing,
+it has 245,564 revisions:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;svn://gcc.gnu.org/svn/gcc&quot;&gt;svn://gcc.gnu.org/svn/gcc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;SourceForge still uses Subversion for project repos.&lt;/p&gt;
+
+&lt;h2 id=&quot;random-notes&quot;&gt;Random notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=7648237&quot;&gt;Facebook’s git repo is 54GB&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/geerlingguy/ansible-vagrant-examples&quot;&gt;geerlingguy/ansible-vagrant-examples&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gcc.gnu.org/svn.html&quot;&gt;GCC: Anonymous read-only SVN access&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://scholarslab.org/research-and-development/adventures-in-converting-subversion-to-git/&quot;&gt;Adventures in Converting Subversion to Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.chiark.greenend.org.uk/~sgtatham/svn.html&quot;&gt;My Experiences With Subversion&lt;/a&gt; - this is
+really about a CVS -&amp;gt; Subversion conversion.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 Feb 2017 11:36:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/02/18/converting-subversion-to-git.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/18/converting-subversion-to-git.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Hosting repositories</title>
@@ -554,302 +696,6 @@ in place of &lt;code&gt;#include&lt;/code&gt; preprocessor directives.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2016/12/30/compiling-c++.html</guid>
         
         <category>C++</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://intelxed.github.io/&quot;&gt;Intel XED&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.citusdata.com/blog/2016/12/15/citus-replication-model-today-and-tomorrow/&quot;&gt;Citus’ Replication Model: Today and Tomorrow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/nothings/single_file_libs&quot;&gt;Single-file public-domain/open source libraries with minimal dependencies&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://researcher.watson.ibm.com/researcher/files/us-lmandel/lattner.pdf&quot;&gt;Swift: Challenges and Opportunity for Language and Compiler Research&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/mmc-writes/the-fourth-industrial-revolution-a-primer-on-artificial-intelligence-ai-ff5e7fffcae1#.u1b2hlwp1&quot;&gt;The fourth industrial revolution: a primer on Artificial Intelligence (AI)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stroustrup.com/good_concepts.pdf&quot;&gt;Concepts: The Future of Generic Programming&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://course.fast.ai/&quot;&gt;Practical Deep Learning For Coders, Part 1&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://docker-saigon.github.io/post/Docker-Internals/&quot;&gt;Linux Container Internals&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.plover.com/prog/git-tastrophe.html&quot;&gt;Another Git catastrophe cleaned up&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.codeproject.com/Articles/3853/Wave-a-Standard-conformant-C-preprocessor-library&quot;&gt;Wave: a Standard conformant C++ preprocessor library&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://gcc.gnu.org/onlinedocs/cppinternals/&quot;&gt;The GNU C Preprocessor Internals&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mcpp.sourceforge.net/&quot;&gt;mcpp – a portable C preprocessor&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/io.html&quot;&gt;Python 3: io&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/glossary.html&quot;&gt;Python 3: Glossary&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/stdtypes.html&quot;&gt;Python 3: Built-in Types&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/argparse.html&quot;&gt;Python 3: argparse&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/cplusplus&quot;&gt;ISO C++ Standards Commitee&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://isocpp.org/std/the-standard&quot;&gt;ISO C++ The Standard&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 21 Dec 2016 09:21:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/12/21/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/12/21/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Creating packages for C/C++</title>
-        <description>&lt;p&gt;If only we had a package manager for C++. By this I mean something that C/C++ developers on
-any operating system could use; packages that can only be used from Red Hat don’t do Mac
-or Windows or even Debian developers any good.&lt;/p&gt;
-
-&lt;p&gt;But that’s not actually the problem - if only all the libraries we collectively need
-were available as packages.&lt;/p&gt;
-
-&lt;p&gt;There are a dozen C++ package managers now. Each of them has 10-50 packages. And then that’s
-usually about it. Since any single package manager lacks all the packages one needs, no
-package manager gets widespread adoption.&lt;/p&gt;
-
-&lt;p&gt;This is not a chicken-and-egg situation. And it’s not that none of the package managers are
-all that terrible. None are great, but many are usable.&lt;/p&gt;
-
-&lt;p&gt;The problem needs to be attacked from the other end. Instead of designing a package manager
-and then starting to assemble packages for it, just make all the packages. All the packages.
-Thousands and tens of thousands of them. Actually, millions, because source is constantly
-updated to keep it working and add features.&lt;/p&gt;
-
-&lt;p&gt;This either means an army of people spending a collective hundred thousand hours,
-or a (semi) automated tool.&lt;/p&gt;
-
-&lt;p&gt;I started on this; just barely. Here are some notes towards the system I think is needed.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-basic-idea&quot;&gt;The basic idea&lt;/h2&gt;
-
-&lt;p&gt;Something like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make-package curl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;and out pops a package for curl. This implies several things.&lt;/p&gt;
-
-&lt;p&gt;First, that we can take the string &lt;code&gt;curl&lt;/code&gt; and find curl source with it. This could be&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;looking on Github or another source repository.&lt;/li&gt;
-  &lt;li&gt;looking in a &lt;code&gt;make-package&lt;/code&gt; forwarding list&lt;/li&gt;
-  &lt;li&gt;searching in Google&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Then, we need to analyze what we downloaded, whether it is a Git repo, tar/zip file, or
-some other collection.&lt;/p&gt;
-
-&lt;p&gt;Since purely automated analysis is unlikely to result in a usable package for all but the
-most trivial of projects, we will have to add a little human input from time to time.&lt;/p&gt;
-
-&lt;p&gt;Once we know how to assemble our package, we do so, in whatever format of the day is desired.&lt;/p&gt;
-
-&lt;p&gt;Then, repeat, for all versions of all projects that we wish as packages.&lt;/p&gt;
-
-&lt;p&gt;There is a common engine fronted by one or more input systems and backed by one or more output
-systems.&lt;/p&gt;
-
-&lt;h2 id=&quot;input-systems&quot;&gt;Input systems&lt;/h2&gt;
-
-&lt;p&gt;Git - Github, Gitorius, Gitlab, arbitrary Git upstreams.&lt;/p&gt;
-
-&lt;p&gt;Launchpad - https://launchpad.net/&lt;/p&gt;
-
-&lt;p&gt;Sourceforge, although no one cares any more, do they?&lt;/p&gt;
-
-&lt;p&gt;Maybe every Linux distribution can serve as an upstream?&lt;/p&gt;
-
-&lt;p&gt;Private company source control systems.&lt;/p&gt;
-
-&lt;p&gt;FTP sites.&lt;/p&gt;
-
-&lt;p&gt;Google can help us find things, but it will likely require human sifting. I assume eventually
-that there will be a master repository - not of source, but of pointers to source.&lt;/p&gt;
-
-&lt;h2 id=&quot;analysis&quot;&gt;Analysis&lt;/h2&gt;
-
-&lt;p&gt;Jumping to the end, package source will have metadata, a manifest, that instructs how to
-assemble the source into a package. That is best kept with the source, but that’s clearly
-not going to happen right away. So we keep it and associate it with the source on need. Someday,
-maybe, once we have packages for everything, package authors will take over the maintenance
-of the package metadata. But we will not count on that.&lt;/p&gt;
-
-&lt;p&gt;In fact, this is the key. We have to do all of it and keep it running without expecting
-anyone else to participate. Oddly enough, I think that’s the best way to guarantee
-that everyone else does join in.&lt;/p&gt;
-
-&lt;h2 id=&quot;output-systems&quot;&gt;Output systems&lt;/h2&gt;
-
-&lt;p&gt;We are very definitely not going to presume the one true package format. That is just as mad
-as trying to have everyone adopt a package metadata format.&lt;/p&gt;
-
-&lt;p&gt;For this, we embrace a polyglot nature. Whatever package format is desired, we write a generator
-for it. This is actually not very hard. Every existing package format to date is pretty simple,
-it’s some kind of simple container with one or more manifest files embedded. This is very close
-to how compilers work - the compiler itself can be generic, with several backends to generate
-code in the appropriate format, and several front-ends to parse text into syntax trees.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 18 Dec 2016 13:11:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/12/18/creating-packages-for-c++.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/12/18/creating-packages-for-c++.html</guid>
-        
-        <category>C++</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Using Matplotlib</title>
-        <description>&lt;p&gt;Matplotlib is worth using, but it’s very finicky, and the defaults are aimed at
-a class of user that doesn’t include me.&lt;/p&gt;
-
-&lt;h2 id=&quot;matlab-style-with-pyplot&quot;&gt;MATLAB style with pyplot&lt;/h2&gt;
-
-&lt;p&gt;I started with the simple declarative style via &lt;code&gt;matplotlib.pyplot&lt;/code&gt;, but that quickly
-gets limited. It looks like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Agg&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rcParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;lines.linewidth&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rcParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;lines.color&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rcParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;figure.figsize&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;plt&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Orgs by create date&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;count&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year_fraction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;created_at&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gca&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ticklabel_format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;useOffset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savefig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bbox_inches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;tight&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;For example, without the &lt;code&gt;useOffset=False&lt;/code&gt; bit, my X axis was numbered 0-5 with
-an offset written above it, rathern than 2012-2017 as I intended. I suppose this is
-useful for scientific plots. I spent 30 minutes combing through documentation trying
-to figure this out before resorting to StackOverflow. Similarly, I had to use other
-StackOverflow entries to tell me how to write the graph as a file and not to show
-it in an interactive window. Again, I’m not the target audience.&lt;/p&gt;
-
-&lt;h2 id=&quot;object-oriented-matplotlib&quot;&gt;object-oriented Matplotlib&lt;/h2&gt;
-
-&lt;p&gt;This is the right way for me, I think. Note that the code example above had to dip
-into the object layer anyway, in order to configure the X axis.&lt;/p&gt;
-
-&lt;h2 id=&quot;xkcd-style&quot;&gt;xkcd style&lt;/h2&gt;
-
-&lt;p&gt;One cool thing is that someone made an xkcd style for Matplotlib. Just wrap your
-code in this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pyplot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xkcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# your code here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;and your graphics will have that hand-drawn xkcd style applied to them.&lt;/p&gt;
-
-&lt;p&gt;Here is the example from the Matplotlib docs&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;plt&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xkcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Based on &amp;quot;Stove Ownership&amp;quot; from XKCD by Randall Monroe&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# http://xkcd.com/418/&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_axes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;top&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xticks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yticks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_ylim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ones&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;annotate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;#39;THE DAY I REALIZED&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;I COULD COOK BACON&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WHENEVER I WANTED&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;xy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arrowprops&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arrowstyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;-&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xytext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;time&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;my overall health&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;quot;Stove Ownership&amp;quot; from xkcd by Randall Monroe&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;ha&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;center&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;c&quot;&gt;# Based on &amp;quot;The Data So Far&amp;quot; from XKCD by Randall Monroe&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# http://xkcd.com/373/&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_axes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.125&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.125&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;top&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xaxis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_ticks_position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;bottom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_xticks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_xlim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_ylim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;110&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_xticklabels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;CONFIRMED BY&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;EXPERIMENT&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;REFUTED BY&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;EXPERIMENT&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yticks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([])&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;CLAIMS OF SUPERNATURAL POWERS&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;quot;The Data So Far&amp;quot; from xkcd by Randall Monroe&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;ha&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;center&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;ggplot&quot;&gt;ggplot&lt;/h2&gt;
-
-&lt;p&gt;I wish Matplotlib learned more lessons from Leland Wilkinson’s Grammar of Graphics.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://seaborn.pydata.org/index.html#&quot;&gt;Seaborn&lt;/a&gt; is an interesting start.&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/9303728/matplotlib-yaxis-range-display-using-absolute-values-rather-than-offset-values&quot;&gt;Matplotlib yaxis range display using absolute values rather than offset values?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3677368/matplotlib-format-axis-offset-values-to-whole-numbers-or-specific-number&quot;&gt;matplotlib: format axis offset-values to whole numbers or specific number&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/&quot;&gt;A Dramatic Tour through Python’s Data Visualization Landscape (including ggplot and Altair)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.yhat.com/posts/ggplot-for-python.html&quot;&gt;ggplot for python&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jakevdp.github.io/blog/2013/03/23/matplotlib-and-the-future-of-visualization-in-python/&quot;&gt;Matplotlib and the Future of Visualization in Python&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Exploratory-Data-Analysis-John-Tukey/dp/0201076160&quot;&gt;Exploratory Data Analysis&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Semiology-Graphics-Diagrams-Networks-Maps/dp/1589482611&quot;&gt;Semiology of Graphics: Diagrams, Networks, Maps&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 29 Nov 2016 13:11:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/11/29/using-matplotlib.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/11/29/using-matplotlib.html</guid>
-        
-        <category>python</category>
         
         
         <category>dev</category>

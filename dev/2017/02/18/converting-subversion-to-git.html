@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Converting Subversion to Git</title>
+  <meta name="description" content="Several groups have converted their large Subversion repository to Git. The largest Iknow about is KDE, and they ended up writing a new program svntogit to d...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2017/02/18/converting-subversion-to-git.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,73 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Converting Subversion to Git</h1>
+    <p class="post-meta">Feb 18, 2017</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Feb 19, 2017</span>
+  <article class="post-content">
+    <p>Several groups have converted their large Subversion repository to Git. The largest I
+know about is KDE, and they ended up writing a new program <code>svntogit</code> to do that.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/02/19/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 18, 2017</span>
+<ul>
+  <li><a href="https://github.com/svn-all-fast-export/svn2git">svn2git</a></li>
+  <li><a href="https://techbase.kde.org/Projects/MoveToGit/UsingSvn2Git">UsingSvn2Git</a></li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/02/18/dependencies.html">Dependencies</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 18, 2017</span>
+<p>The KDE Subversion repository is still accessible at</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/02/18/converting-subversion-to-git.html">Converting Subversion to Git</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 3, 2017</span>
+<ul>
+  <li><a href="svn://anonsvn.kde.org/home/kde">svn://anonsvn.kde.org/home/kde</a></li>
+  <li><a href="https://websvn.kde.org">https://websvn.kde.org</a></li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/02/03/hosting-repositories.html">Hosting repositories</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 6, 2017</span>
+<p>Other people have used their tool</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/01/06/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><a href="https://www.jeffgeerling.com/blogs/jeff-geerling/switching-svn-repository-svn2git">Switching an SVN repository to Git with KDE’s Svn2Git</a></p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p>Some people persevere with <code>git-svn</code>, bundled with Git.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p><a href="http://john.albin.net/git/convert-subversion-to-git">Converting a Subversion repository to Git</a></p>
+
+<p>I was writing my own partly because of pathologies in in-house repos that choked everything
+I found, and partly because I have bigger plans.</p>
+
+<h2 id="large-subversion-repos">Large Subversion repos</h2>
+
+<p>The Apache Software Foundation puts all projects into a single common repo. As of this writing,
+it has 1,783,493 revisions:</p>
+
+<p><a href="https://svn.apache.org/repos/asf">https://svn.apache.org/repos/asf</a></p>
+
+<p>KDE used to be in Subversion, and small pieces stil live there (just localization at
+this point, I think). As of this writing, it has 1,482,977 revisions:</p>
+
+<p><a href="svn://anonsvn.kde.org/home/kde">svn://anonsvn.kde.org/home/kde</a></p>
+
+<p>GCC is in Subversion, although I think they are trying to switch to Git. As of this writing,
+it has 245,564 revisions:</p>
+
+<p><a href="svn://gcc.gnu.org/svn/gcc">svn://gcc.gnu.org/svn/gcc</a></p>
+
+<p>SourceForge still uses Subversion for project repos.</p>
+
+<h2 id="random-notes">Random notes</h2>
+
+<p><a href="https://news.ycombinator.com/item?id=7648237">Facebook’s git repo is 54GB</a></p>
+
+<p><a href="https://github.com/geerlingguy/ansible-vagrant-examples">geerlingguy/ansible-vagrant-examples</a></p>
+
+<p><a href="https://gcc.gnu.org/svn.html">GCC: Anonymous read-only SVN access</a></p>
+
+<p><a href="http://scholarslab.org/research-and-development/adventures-in-converting-subversion-to-git/">Adventures in Converting Subversion to Git</a></p>
+
+<p><a href="http://www.chiark.greenend.org.uk/~sgtatham/svn.html">My Experiences With Subversion</a> - this is
+really about a CVS -&gt; Subversion conversion.</p>
+
+  </article>
 
 </div>
 

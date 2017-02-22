@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Dependencies</title>
+  <meta name="description" content="Dependencies are one of the main pain points when working on a large code base.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2017/02/18/dependencies.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,35 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Dependencies</h1>
+    <p class="post-meta">Feb 18, 2017</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Feb 19, 2017</span>
+  <article class="post-content">
+    <p>Dependencies are one of the main pain points when working on a large code base.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/02/19/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 18, 2017</span>
+<p>You can make a monolithic codebase where you write everything from scratch. This is
+a daunting task and I don’t think anyone does this any more, even when they have
+their own hardware. The amount of code and the depth of some of the code is so
+big that even Google or Microsoft can’t really afford to do this.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/02/18/dependencies.html">Dependencies</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 18, 2017</span>
+<p>So we use code we didn’t write to extend our own code.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/02/18/converting-subversion-to-git.html">Converting Subversion to Git</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 3, 2017</span>
+<p>INSERT STUFF HERE</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/02/03/hosting-repositories.html">Hosting repositories</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 6, 2017</span>
+<p>It’s our program, so we should make all policy decisions at the top level. But we also
+don’t want to modify package code in order to use it, and we don’t want heavy
+configuration required to use code.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/01/06/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>The crudest form of policy is “use this package/don’t use this package”. Since it
+is our program, nothing forces us to use a specific package. But we really want to
+use packages, because we want to make and ship our program in a reasonable amount
+of time.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
 
