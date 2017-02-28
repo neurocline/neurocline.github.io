@@ -88,34 +88,34 @@
 <p>The <a href="https://docs.python.org/2/library/functions.html">built-in primitives</a> that are relevant are</p>
 
 <ul>
-  <li><code>dir()</code></li>
-  <li><code>repr()</code></li>
-  <li><code>vars()</code></li>
+  <li><code class="highlighter-rouge">dir()</code></li>
+  <li><code class="highlighter-rouge">repr()</code></li>
+  <li><code class="highlighter-rouge">vars()</code></li>
 </ul>
 
-<p><code>dir(object)</code> shows all the attributes for the object. Of course, not all objects
+<p><code class="highlighter-rouge">dir(object)</code> shows all the attributes for the object. Of course, not all objects
 have attributes. It’s really made for use at an interactive prompt, not as
-an in-code method. Basically, it either calls <code>__dir__()</code>, or it looks at
-the <code>__dict__</code> attribute and shows some of the information.</p>
+an in-code method. Basically, it either calls <code class="highlighter-rouge">__dir__()</code>, or it looks at
+the <code class="highlighter-rouge">__dict__</code> attribute and shows some of the information.</p>
 
-<p><code>repr(object)</code> returns a printable representation of an object. Again, this sounds
+<p><code class="highlighter-rouge">repr(object)</code> returns a printable representation of an object. Again, this sounds
 good until you use it, because anything other than built-in types just returns
 a string with the class name and the address of the object. Still, it’s the gateway
-to something useful if you also add <code>__repr__()</code> methods to your classes, because <code>repr()</code>
-will call the <code>__repr__</code> method if it exists. Of course, the downside is that you need
+to something useful if you also add <code class="highlighter-rouge">__repr__()</code> methods to your classes, because <code class="highlighter-rouge">repr()</code>
+will call the <code class="highlighter-rouge">__repr__</code> method if it exists. Of course, the downside is that you need
 a systematic and consistent approach, and you have to write that code yourself.</p>
 
-<p><code>vars(object)</code> is more useful for printing than <code>dir</code> - it returns
-the <code>__dict__</code> attribute, which means that if you call <code>print(vars(object))</code> you’ll
-see keys and values together, whereas <code>dir()</code> just shows the keys.</p>
+<p><code class="highlighter-rouge">vars(object)</code> is more useful for printing than <code class="highlighter-rouge">dir</code> - it returns
+the <code class="highlighter-rouge">__dict__</code> attribute, which means that if you call <code class="highlighter-rouge">print(vars(object))</code> you’ll
+see keys and values together, whereas <code class="highlighter-rouge">dir()</code> just shows the keys.</p>
 
 <h2 id="useful-classes-for-output">Useful classes for output</h2>
 
-<p>The <code>pprint</code> module sounds useful until you use it. Its utility is largely restricted
+<p>The <code class="highlighter-rouge">pprint</code> module sounds useful until you use it. Its utility is largely restricted
 to pretty-printing, it doesn’t give you extra disassembly powers on its own. But
 see <a href="https://docs.python.org/2/library/pprint.html">pprint–Data pretty printer</a>.</p>
 
-<p>The <a href="https://docs.python.org/2/library/inspect.html"><code>inspect</code></a> module is a lot more useful, but it doesn’t do output, it just lets
+<p>The <a href="https://docs.python.org/2/library/inspect.html"><code class="highlighter-rouge">inspect</code></a> module is a lot more useful, but it doesn’t do output, it just lets
 you get information about objects.</p>
 
 <h2 id="built-in-functions-for-introspection">Built-in functions for introspection</h2>
@@ -123,19 +123,19 @@ you get information about objects.</p>
 <p>Some built-ins are useful for testing objects:</p>
 
 <ul>
-  <li><code>type</code></li>
-  <li><code>isinstance</code></li>
-  <li><code>hasattr</code></li>
+  <li><code class="highlighter-rouge">type</code></li>
+  <li><code class="highlighter-rouge">isinstance</code></li>
+  <li><code class="highlighter-rouge">hasattr</code></li>
 </ul>
 
-<p><code>type(object)</code> returns a string indicating the type of the object. As such, it can
+<p><code class="highlighter-rouge">type(object)</code> returns a string indicating the type of the object. As such, it can
 be used for both output and testing.</p>
 
-<p><code>isinstance(object, classinfo)</code> returns <code>True</code> if <code>object</code> is an instance
-of <code>classinfo</code> (including inheritance). In general, it’s more appropriate to use
-<code>isinstance</code> for type testing because it does handle inheritance.</p>
+<p><code class="highlighter-rouge">isinstance(object, classinfo)</code> returns <code class="highlighter-rouge">True</code> if <code class="highlighter-rouge">object</code> is an instance
+of <code class="highlighter-rouge">classinfo</code> (including inheritance). In general, it’s more appropriate to use
+<code class="highlighter-rouge">isinstance</code> for type testing because it does handle inheritance.</p>
 
-<p>The <code>types</code> module is useful for both <code>type</code> and <code>isintance</code> use. And type
+<p>The <code class="highlighter-rouge">types</code> module is useful for both <code class="highlighter-rouge">type</code> and <code class="highlighter-rouge">isintance</code> use. And type
 output needs this kind of introspection so it knows what it should print.</p>
 
 <h2 id="links">Links</h2>

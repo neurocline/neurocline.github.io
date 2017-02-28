@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>A Survey of Programming Language Package Systems</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <meta name="description" content="version 1.2, 2016/03/20">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -150,15 +149,15 @@
 
 <p>Using a Perl module is straightforward:</p>
 
-<div class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="sx">qw(md5)</span>
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">use</span> <span class="nn">Digest::</span><span class="nv">MD5</span> <span class="sx">qw(md5)</span>
  
-<span class="nv">$digest</span> <span class="o">=</span> <span class="n">md5</span><span class="p">(</span><span class="s">&quot;calculate md5 on this string&quot;</span><span class="p">)</span></code></pre></div>
+<span class="nv">$digest</span> <span class="o">=</span> <span class="nv">md5</span><span class="p">(</span><span class="s">"calculate md5 on this string"</span><span class="p">)</span></code></pre></figure>
 
 <p>A Perl module is a single file on disk. This works well for Perl, since it is largely an interpreted language, and this makes factoring your own programs into modules pretty straightforward (you just create a folder hierarchy). For the above module, there is a file MD5.pm in a folder named Digest in the perl module path. There is no recursive include; each use statement points to a single .pm file.</p>
 
 <p>For the most part, shared modules are published to CPAN. There is tooling to create and push modules to CPAN, and then to pull modules from CPAN to your system. This is an offline process and does not happen automatically when running a Perl program. For example, assuming that Digest::MD5 were not a built-in module, you would install it to your Perl distribution like this:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cpan Digest::MD5</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>cpan Digest::MD5</code></pre></figure>
 
 <p>The cpan tool is built into Perl distributions, and has lots of bells and whistles that may or may not be ignorable. The new hotness is evidentally cpanminus, which is not yet bundled into Perl distributions.</p>
 
@@ -186,14 +185,14 @@
 
 <p>Perl uses the term package for the thing itself, and then module for using it; the two need to match, and generally this also means match the path on disk, although you can play games with the symbol table to get around that. Perl makes everything from a module available to access via its package namespace. It can also import zero or more symbols into the current namespace. There is no syntax to rename package namespaces, e.g. no way to handle two different packages that have a namespace collision. Package namespaces are not hierarchical; declaring package MD5 inside package Digest does not create Digest::MD5. The nesting is purely a manual organizational tactic.</p>
 
-<div class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="mf">2.01</span> <span class="sx">qw(md5)</span><span class="p">;</span> <span class="c1"># error if Digest::MD5 not at least version 2.01, just import md5 symbol</span>
-<span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="sx">qw(md5)</span><span class="p">;</span> <span class="c1"># any version, just import md5 symbol</span>
-<span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="mf">2.01</span><span class="p">;</span> <span class="c1"># error if Digest::MD5 not at least version 2.01, do default imports</span>
-<span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span> <span class="sx">qw()</span><span class="p">;</span> <span class="c1"># any version, don&#39;t import anything to current namespace</span>
-<span class="k">use</span> <span class="nn">Digest::</span><span class="n">MD5</span><span class="p">;</span> <span class="c1"># do default imports</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">use</span> <span class="nn">Digest::</span><span class="nv">MD5</span> <span class="mf">2.01</span> <span class="sx">qw(md5)</span><span class="p">;</span> <span class="c1"># error if Digest::MD5 not at least version 2.01, just import md5 symbol</span>
+<span class="k">use</span> <span class="nn">Digest::</span><span class="nv">MD5</span> <span class="sx">qw(md5)</span><span class="p">;</span> <span class="c1"># any version, just import md5 symbol</span>
+<span class="k">use</span> <span class="nn">Digest::</span><span class="nv">MD5</span> <span class="mf">2.01</span><span class="p">;</span> <span class="c1"># error if Digest::MD5 not at least version 2.01, do default imports</span>
+<span class="k">use</span> <span class="nn">Digest::</span><span class="nv">MD5</span> <span class="sx">qw()</span><span class="p">;</span> <span class="c1"># any version, don't import anything to current namespace</span>
+<span class="k">use</span> <span class="nn">Digest::</span><span class="nv">MD5</span><span class="p">;</span> <span class="c1"># do default imports</span></code></pre></figure>
 
 <p>Caveat on versions; version-handling can be done in a per-module way. The default behavior is to croak if the version asked for is greater than the module version, but a module can implement any version-checking it desires. However, the caller gets to supply just one version number, not a range. But it would be possible for modules to implement semantic versioning.
-To translate this into C++ namespace terms, doing use on a package means that the entire namespace is now available to the code at that point. Imports are equivalent to <code>use namespace &lt;import&gt;</code>,which would import one or more symbols from one namespace into another namespace. There is no way to hide symbols from fully-qualified access in Perl modules.</p>
+To translate this into C++ namespace terms, doing use on a package means that the entire namespace is now available to the code at that point. Imports are equivalent to <code class="highlighter-rouge">use namespace &lt;import&gt;</code>,which would import one or more symbols from one namespace into another namespace. There is no way to hide symbols from fully-qualified access in Perl modules.</p>
 
 <h1 id="pypi-and-pip-python---2003">PyPI and Pip (Python) - 2003</h1>
 
@@ -209,8 +208,8 @@ To translate this into C++ namespace terms, doing use on a package means that th
 
 <p>Using a Python package is straightforward</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">hashlib</span>
-<span class="k">print</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="s">&quot;calculate sha1 on this string&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="k">print</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="s">"calculate sha1 on this string"</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span></code></pre></figure>
 
 <p>A Python package is either a single file or a folder hierarchy with a specific layout. Just like with Perl, import names are turned into paths. In the case above, there is a file hashlib.py in the Python package path. Modules can also be folders; a folder is a package if there is a magic file <strong>init</strong>.py in the folder root. Modules can also be recursively included, and <strong>init</strong>.py can be used to guide what parts are imported by default and which need their own individual import.</p>
 
@@ -218,18 +217,19 @@ To translate this into C++ namespace terms, doing use on a package means that th
 
 <p>Getting a Python package is now simple, since pip is finally in the default distribution. Assuming hashlib were not already installed, you would get it as follows:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>pip install hashlib</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>pip install hashlib</code></pre></figure>
 
 <p>The package manager Matthew Versluys created allowed Python code to automatically pull down its own packages if not present. Since it was an addon to Python and not altering the Python language, it required extra work to bootstrap the package manager, then use it, then pull down packages (packages are cached, so little work is done if a package is already present).</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">urllib</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">urllib</span>
 <span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="s">&#39;http://package.battle.net/package.zip&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="s">'http://package.battle.net/package.zip'</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 
 <span class="kn">import</span> <span class="nn">package.use</span>
-<span class="n">package</span><span class="o">.</span><span class="n">use</span><span class="o">.</span><span class="n">Package</span><span class="p">(</span><span class="s">&#39;Foo&#39;</span><span class="p">,</span> <span class="s">&#39;1.1.1&#39;</span><span class="p">)</span>
+<span class="n">package</span><span class="o">.</span><span class="n">use</span><span class="o">.</span><span class="n">Package</span><span class="p">(</span><span class="s">'Foo'</span><span class="p">,</span> <span class="s">'1.1.1'</span><span class="p">)</span>
  
-<span class="kn">import</span> <span class="nn">foo</span></code></pre></div>
+<span class="kn">import</span> <span class="nn">foo</span>
+ </code></pre></figure>
 
 <p>Python has very weak versioning support for packages. At install time, you can fetch specific versions of packages. At runtime, however, you have to check for versions yourself after the module is imported, and some packages lack the semi-standard <strong>version</strong> attribute.</p>
 
@@ -237,16 +237,17 @@ To translate this into C++ namespace terms, doing use on a package means that th
 
 <h1 id="rubygems-and-gem-ruby---2003">RubyGems and gem (Ruby) - 2003</h1>
 
-<p>RubyGems is Ruby’s package manager. Packages in Ruby are called gems and the tool to work with them is called <code>gem</code>. <a href="https://rubygems.org/">https://rubygems.org/</a> is the Ruby community’s gem hosting service. Like with Python, RubyGems came well after Ruby. It was created at the end of 2003 and added to the standard library in Ruby 1.9 in 2007.</p>
+<p>RubyGems is Ruby’s package manager. Packages in Ruby are called gems and the tool to work with them is called <code class="highlighter-rouge">gem</code>. <a href="https://rubygems.org/">https://rubygems.org/</a> is the Ruby community’s gem hosting service. Like with Python, RubyGems came well after Ruby. It was created at the end of 2003 and added to the standard library in Ruby 1.9 in 2007.</p>
 
-<p>The <code>gem</code> tool follows a pattern similar to apt-get, portage, yum and npm; there is a command-line tool with verbs to install, uninstall, list (local or remote), search and build.</p>
+<p>The <code class="highlighter-rouge">gem</code> tool follows a pattern similar to apt-get, portage, yum and npm; there is a command-line tool with verbs to install, uninstall, list (local or remote), search and build.</p>
 
 <p>To use a package</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;digest/md5&#39;</span>
-<span class="nb">print</span> <span class="no">Digest</span><span class="o">::</span><span class="no">MD5</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="s1">&#39;That string again&#39;</span><span class="p">)</span>
-<span class="no">To</span> <span class="n">install</span> <span class="n">a</span> <span class="ss">package</span><span class="p">:</span>
-<span class="n">gem</span> <span class="n">install</span> <span class="n">digest</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'digest/md5'</span>
+<span class="nb">print</span> <span class="no">Digest</span><span class="o">::</span><span class="no">MD5</span><span class="p">.</span><span class="nf">hexdigest</span><span class="p">(</span><span class="s1">'That string again'</span><span class="p">)</span>
+<span class="no">To</span> <span class="n">install</span> <span class="n">a</span> <span class="ss">package:
+</span><span class="n">gem</span> <span class="n">install</span> <span class="n">digest</span>
+ </code></pre></figure>
 
 <p><a href="http://guides.rubygems.org/">http://guides.rubygems.org/</a></p>
 
@@ -290,20 +291,20 @@ To translate this into C++ namespace terms, doing use on a package means that th
 
 <p>Using a Go package is straightforward</p>
 
-<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
  
-<span class="kn">import</span> <span class="s">&quot;crypto/sha1&quot;</span>
-<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+</span><span class="k">import</span><span class="x"> </span><span class="s">"crypto/sha1"</span><span class="x">
+</span><span class="k">import</span><span class="x"> </span><span class="s">"fmt"</span><span class="x">
  
-<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;% x&quot;</span><span class="p">,</span> <span class="nx">sha1</span><span class="p">.</span><span class="nx">Sum</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span></code></pre></div>
+</span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"% x"</span><span class="p">,</span><span class="x"> </span><span class="n">sha1</span><span class="o">.</span><span class="n">Sum</span><span class="p">(</span><span class="n">data</span><span class="p">))</span></code></pre></figure>
 
 <p>Fetching Go packages can be done manually, or with a tool that inspects code. If you know the path of the package you want, you can just pull it down, and this can be recursive: the below pulls down all the sample source from the Go Programming Language book by Kernighan&amp;Donovan:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>go get gopl.io/...</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>go get gopl.io/...</code></pre></figure>
 
 <p>But go get can also scan your source code and pull down packages that aren’t present on your local machine.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>go get -u /path/to/src</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>go get -u /path/to/src</code></pre></figure>
 
 <p>Despite the “update” name of the flag, this will not update versions of packages already on the local system, but it will scan source and fetch missing dependencies. This is not a default action.</p>
 
@@ -329,13 +330,13 @@ To translate this into C++ namespace terms, doing use on a package means that th
 
 <p>To get a package, you need to do several things. You need to declare a dependency in the .toml file</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>dependencies<span class="o">]</span>
-<span class="nv">regex</span> <span class="o">=</span> <span class="s2">&quot;0.1.41&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>dependencies]
+regex <span class="o">=</span> <span class="s2">"0.1.41"</span></code></pre></figure>
 
 <p>Then in your source code you pull in that library (Rust calls everything a crate). But you also have to use a module out of that crate, even when the crate contains just one module</p>
 
-<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">extern</span> <span class="n">crate</span> <span class="n">regex</span>
-<span class="n">use</span> <span class="n">regex</span><span class="o">::</span><span class="n">Regex</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">extern</span> <span class="n">crate</span> <span class="n">regex</span>
+<span class="n">use</span> <span class="n">regex</span><span class="o">::</span><span class="n">Regex</span></code></pre></figure>
 
 <p>It all comes across as being a bit verbose. The reason is that crates can have an arbitrary number of modules. And Rust gives you a lot more control over versions than Go does. But these are in two separate places and there’s duplication to boot.</p>
 

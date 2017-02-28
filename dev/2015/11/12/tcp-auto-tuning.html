@@ -98,11 +98,11 @@ as of Vista, Mac OS X as of 10.5.</p>
 <p>I think that most operating system disable auto-tuning if you manually set socket
 buffer sizes. In BSD, this is done with setsockopt:</p>
 
-<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">int</span> <span class="n">bufferSize</span> <span class="o">=</span> <span class="mi">65536</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">int</span> <span class="n">bufferSize</span> <span class="o">=</span> <span class="mi">65536</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">optSize</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">bufferSize</span><span class="p">);</span>
 <span class="n">setsockopt</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">SO_SNDBUF</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">bufferSize</span><span class="p">,</span> <span class="n">optSize</span><span class="p">);</span>
 <span class="n">bufferSize</span> <span class="o">=</span> <span class="mi">65536</span><span class="p">;</span>
-<span class="n">setsockopt</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">SO_RCVBUF</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">bufferSize</span><span class="p">,</span> <span class="n">optSize</span><span class="p">);</span></code></pre></div>
+<span class="n">setsockopt</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">SO_RCVBUF</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">bufferSize</span><span class="p">,</span> <span class="n">optSize</span><span class="p">);</span></code></pre></figure>
 
 <p><a href="https://fasterdata.es.net/host-tuning/">Host Tuning</a> - details for various operating systems on manual and automatic tuning.</p>
 

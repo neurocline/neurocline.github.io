@@ -88,21 +88,21 @@ of strings that have meaning. Until then, we need hacks.</p>
 Python code work in both Python 2 and Python 3 - I look forward to being able to ditch
 Python 2, but not yet.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">PY2</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">3</span><span class="p">,)</span>
 
-<span class="c"># This is a hack so that we have UTF-8 throughout in Python 2. The &quot;correct&quot; way is to use</span>
+<span class="c"># This is a hack so that we have UTF-8 throughout in Python 2. The "correct" way is to use</span>
 <span class="c"># encode(s) at the point of output, http://farmdev.com/talks/unicode/. Or switch to Python 3.</span>
 <span class="k">if</span> <span class="n">PY2</span><span class="p">:</span>
     <span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
 
     <span class="c"># note - on windows, use chcp 65001 (default is chcp 437)</span>
     <span class="c"># Fixed in Python 3.6 and up, apparently</span>
-    <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s">&quot;win32&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s">"win32"</span><span class="p">:</span>
         <span class="kn">import</span> <span class="nn">codecs</span>
-        <span class="n">codecs</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="n">codecs</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s">&#39;cp65001&#39;</span> <span class="k">else</span> <span class="bp">None</span><span class="p">)</span></code></pre></div>
+        <span class="n">codecs</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="n">codecs</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s">'cp65001'</span> <span class="k">else</span> <span class="bp">None</span><span class="p">)</span></code></pre></figure>
 
 <p>This way, my programs don’t croak when they encounter Unicode codepoints.</p>
 

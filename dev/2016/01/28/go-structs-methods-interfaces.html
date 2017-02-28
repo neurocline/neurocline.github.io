@@ -92,49 +92,49 @@ distinct types.</p>
 
 <p>When we restrict things to just structs and methods, there are few surprises. Let’s look at a very simple example.</p>
 
-<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
 
-<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+</span><span class="k">import</span><span class="x"> </span><span class="s">"fmt"</span><span class="x">
 
-<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span> <span class="p">=</span> <span class="kc">nil</span>
-  <span class="nx">h</span><span class="p">.</span><span class="nx">Open</span><span class="p">()</span>
-<span class="p">}</span>
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+  </span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="no">nil</span><span class="x">
+  </span><span class="n">h</span><span class="o">.</span><span class="n">Open</span><span class="p">()</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="kd">type</span> <span class="nx">Hatch</span> <span class="kd">struct</span> <span class="p">{</span>
-  <span class="nx">label</span> <span class="kt">string</span>
-  <span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">,</span><span class="nx">z</span> <span class="kt">float</span>
-<span class="p">}</span>
+</span><span class="k">type</span><span class="x"> </span><span class="n">Hatch</span><span class="x"> </span><span class="k">struct</span><span class="x"> </span><span class="p">{</span><span class="x">
+  </span><span class="n">label</span><span class="x"> </span><span class="kt">string</span><span class="x">
+  </span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="x"> </span><span class="n">float</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="kd">func</span> <span class="p">(</span><span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span><span class="p">)</span> <span class="nx">Open</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;opening the hatch\n&quot;</span><span class="p">)</span>
-<span class="p">}</span></code></pre></div>
+</span><span class="k">func</span><span class="x"> </span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="p">)</span><span class="x"> </span><span class="n">Open</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+  </span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"opening the hatch</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span></code></pre></figure>
 
 <p>If you run this, you get</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">opening the hatch</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">opening the hatch</code></pre></figure>
 
-<p>The function <code>Open</code> is a method with a pointer receiver, taking a pointer
-to a instance of type <code>Hatch</code>. Although we create a pointer that is
-nil, the variable still has a type: (<code>*Hatch</code>). We can thus call the method
-<code>Open</code>; it gets a nil pointer, but we don’t use that pointer in our code,
+<p>The function <code class="highlighter-rouge">Open</code> is a method with a pointer receiver, taking a pointer
+to a instance of type <code class="highlighter-rouge">Hatch</code>. Although we create a pointer that is
+nil, the variable still has a type: (<code class="highlighter-rouge">*Hatch</code>). We can thus call the method
+<code class="highlighter-rouge">Open</code>; it gets a nil pointer, but we don’t use that pointer in our code,
 so we don’t crash.</p>
 
 <p>If we change the method to take a value receiver</p>
 
-<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">h</span> <span class="nx">Hatch</span><span class="p">)</span> <span class="nx">notify</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;opening the hatch\n&quot;</span><span class="p">)</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span><span class="x"> </span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="n">Hatch</span><span class="p">)</span><span class="x"> </span><span class="n">notify</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"opening the hatch</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span></code></pre></figure>
 
 <p>then we will crash if we try to run this:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">panic: runtime error: invalid memory address or nil pointer dereference
-<span class="o">[</span>signal 0xc0000005 <span class="nv">code</span><span class="o">=</span>0x1 <span class="nv">addr</span><span class="o">=</span>0x0 <span class="nv">pc</span><span class="o">=</span>0x401074<span class="o">]</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">panic: runtime error: invalid memory address or nil pointer dereference
+<span class="o">[</span>signal 0xc0000005 <span class="nv">code</span><span class="o">=</span>0x1 <span class="nv">addr</span><span class="o">=</span>0x0 <span class="nv">pc</span><span class="o">=</span>0x401074]
 
-goroutine <span class="m">1</span> <span class="o">[</span>running<span class="o">]</span>:
+goroutine 1 <span class="o">[</span>running]:
 main.main<span class="o">()</span>
         ./gotest/m.go:7 +0x34
-<span class="nb">exit </span>status 2</code></pre></div>
+<span class="nb">exit </span>status 2</code></pre></figure>
 
 <p>There’s a simple reason, Go has a
 courtesy dereference so that a pointer-to-object can be used to invoke
@@ -145,17 +145,17 @@ nil, you’ll crash.</p>
 first parameter that is the receiver object. These are equivalent in functionality and
 probably equivalent in code:</p>
 
-<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="c1">// regular function</span>
-<span class="kd">func</span> <span class="nx">Open</span><span class="p">(</span><span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="c">// regular function</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="n">Open</span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="o">...</span><span class="x"> </span><span class="p">}</span><span class="x">
 
-<span class="kd">var</span> <span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span> <span class="p">=</span> <span class="kc">nil</span>
-<span class="nx">Open</span><span class="p">(</span><span class="nx">h</span><span class="p">)</span>
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="no">nil</span><span class="x">
+</span><span class="n">Open</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="x">
 
-<span class="c1">// method</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span><span class="p">)</span> <span class="nx">Open</span><span class="p">()</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+</span><span class="c">// method</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="p">)</span><span class="x"> </span><span class="n">Open</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="o">...</span><span class="x"> </span><span class="p">}</span><span class="x">
 
-<span class="kd">var</span> <span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span> <span class="p">=</span> <span class="kc">nil</span>
-<span class="nx">h</span><span class="p">.</span><span class="nx">Open</span><span class="p">()</span></code></pre></div>
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="no">nil</span><span class="x">
+</span><span class="n">h</span><span class="o">.</span><span class="n">Open</span><span class="p">()</span></code></pre></figure>
 
 <p>The compiler is just matching up type signatures for receivers, not for full parameter
 lists; this is why Go claims it does not support overloading. In the context of how
@@ -185,29 +185,29 @@ parameter signatures nor for receiver signatures.</p>
 
 <p>When we have a value sent to a value receiver, it’s bland.</p>
 
-<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="c1">// Go method</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">h</span> <span class="nx">Hatch</span><span class="p">)</span> <span class="nx">Open</span><span class="p">()</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
-<span class="kd">var</span> <span class="nx">h</span> <span class="nx">Hatch</span>
-<span class="nx">h</span><span class="p">.</span><span class="nx">Open</span><span class="p">()</span>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="c">// Go method</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="n">Hatch</span><span class="p">)</span><span class="x"> </span><span class="n">Open</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="o">...</span><span class="x"> </span><span class="p">}</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="n">Hatch</span><span class="x">
+</span><span class="n">h</span><span class="o">.</span><span class="n">Open</span><span class="p">()</span><span class="x">
 
-<span class="c1">// equivalent to</span>
-<span class="kd">func</span> <span class="nx">Open</span><span class="p">(</span><span class="nx">h</span> <span class="nx">Hatch</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">h</span> <span class="nx">Hatch</span>
-<span class="nx">Open</span><span class="p">(</span><span class="nx">h</span><span class="p">)</span></code></pre></div>
+</span><span class="c">// equivalent to</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="n">Open</span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="n">Hatch</span><span class="p">)</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="n">Hatch</span><span class="x">
+</span><span class="n">Open</span><span class="p">(</span><span class="n">h</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="pointer-type-pointer-receiver">pointer type, pointer receiver</h3>
 
 <p>When we have a pointer sent to a pointer receiver, it’s as boring as the first case.</p>
 
-<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="c1">// Go method</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span><span class="p">)</span> <span class="nx">Open</span><span class="p">()</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
-<span class="kd">var</span> <span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span>
-<span class="nx">h</span><span class="p">.</span><span class="nx">Open</span><span class="p">()</span>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="c">// Go method</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="p">)</span><span class="x"> </span><span class="n">Open</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="o">...</span><span class="x"> </span><span class="p">}</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="x">
+</span><span class="n">h</span><span class="o">.</span><span class="n">Open</span><span class="p">()</span><span class="x">
 
-<span class="c1">// equivalent to</span>
-<span class="kd">func</span> <span class="nx">Open</span><span class="p">(</span><span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span>
-<span class="nx">Open</span><span class="p">(</span><span class="nx">h</span><span class="p">)</span></code></pre></div>
+</span><span class="c">// equivalent to</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="n">Open</span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="p">)</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="x">
+</span><span class="n">Open</span><span class="p">(</span><span class="n">h</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="value-type-pointer-receiver">value type, pointer receiver</h3>
 
@@ -215,15 +215,15 @@ parameter signatures nor for receiver signatures.</p>
 works most of the time, but we can’t always take the address of a value - for example,
 the number 42 is a constant and has no storage we can get the address of.</p>
 
-<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="c1">// Go method</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span><span class="p">)</span> <span class="nx">Open</span><span class="p">()</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
-<span class="kd">var</span> <span class="nx">h</span> <span class="nx">Hatch</span>
-<span class="nx">h</span><span class="p">.</span><span class="nx">Open</span><span class="p">()</span>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="c">// Go method</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="p">)</span><span class="x"> </span><span class="n">Open</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="o">...</span><span class="x"> </span><span class="p">}</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="n">Hatch</span><span class="x">
+</span><span class="n">h</span><span class="o">.</span><span class="n">Open</span><span class="p">()</span><span class="x">
 
-<span class="c1">// equivalent to</span>
-<span class="kd">func</span> <span class="nx">Open</span><span class="p">(</span><span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">h</span> <span class="nx">Hatch</span>
-<span class="nx">Open</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">h</span><span class="p">)</span></code></pre></div>
+</span><span class="c">// equivalent to</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="n">Open</span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="p">)</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="n">Hatch</span><span class="x">
+</span><span class="n">Open</span><span class="p">(</span><span class="o">&amp;</span><span class="n">h</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="pointer-type-value-receiver">pointer type, value receiver</h3>
 
@@ -231,15 +231,15 @@ the number 42 is a constant and has no storage we can get the address of.</p>
 That makes sense, and that’s why we can get a panic that would not happen with pointer
 receivers.</p>
 
-<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="c1">// Go method</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">h</span> <span class="nx">Hatch</span><span class="p">)</span> <span class="nx">Open</span><span class="p">()</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
-<span class="kd">var</span> <span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span> <span class="p">=</span> <span class="kc">nil</span>
-<span class="nx">h</span><span class="p">.</span><span class="nx">Open</span><span class="p">()</span>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="c">// Go method</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="n">Hatch</span><span class="p">)</span><span class="x"> </span><span class="n">Open</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="o">...</span><span class="x"> </span><span class="p">}</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="no">nil</span><span class="x">
+</span><span class="n">h</span><span class="o">.</span><span class="n">Open</span><span class="p">()</span><span class="x">
 
-<span class="c1">// equivalent to</span>
-<span class="kd">func</span> <span class="nx">Open</span><span class="p">(</span><span class="nx">h</span> <span class="nx">Hatch</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">h</span> <span class="o">*</span><span class="nx">Hatch</span> <span class="p">=</span> <span class="kc">nil</span>
-<span class="nx">Open</span><span class="p">(</span><span class="o">*</span><span class="nx">h</span><span class="p">)</span></code></pre></div>
+</span><span class="c">// equivalent to</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="n">Open</span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="n">Hatch</span><span class="p">)</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Hatch</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="no">nil</span><span class="x">
+</span><span class="n">Open</span><span class="p">(</span><span class="o">*</span><span class="n">h</span><span class="p">)</span></code></pre></figure>
 
 <p>Note that last line - we dereference the pointer to get the value, so that we can copy
 it when we call the function. If we have a nil pointer, we’ll get an exception at this point.</p>

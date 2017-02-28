@@ -86,29 +86,29 @@ a class of user that doesn’t include me.</p>
 
 <h2 id="matlab-style-with-pyplot">MATLAB style with pyplot</h2>
 
-<p>I started with the simple declarative style via <code>matplotlib.pyplot</code>, but that quickly
+<p>I started with the simple declarative style via <code class="highlighter-rouge">matplotlib.pyplot</code>, but that quickly
 gets limited. It looks like this:</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">matplotlib</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">matplotlib</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
-<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">&#39;Agg&#39;</span><span class="p">)</span>
-<span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">&#39;lines.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">&#39;lines.color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;r&#39;</span>
-<span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">'Agg'</span><span class="p">)</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'lines.linewidth'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'lines.color'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'r'</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'figure.figsize'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">&#39;Orgs by create date&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;date&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;count&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Orgs by create date'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'date'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'count'</span><span class="p">)</span>
 <span class="n">d</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">org_list</span><span class="p">:</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">year_fraction</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s">&#39;created_at&#39;</span><span class="p">]))</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">year_fraction</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s">'created_at'</span><span class="p">]))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">useOffset</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">n</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">plot_name</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s">&#39;tight&#39;</span><span class="p">)</span></code></pre></div>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">plot_name</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s">'tight'</span><span class="p">)</span></code></pre></figure>
 
-<p>For example, without the <code>useOffset=False</code> bit, my X axis was numbered 0-5 with
+<p>For example, without the <code class="highlighter-rouge">useOffset=False</code> bit, my X axis was numbered 0-5 with
 an offset written above it, rathern than 2012-2017 as I intended. I suppose this is
 useful for scientific plots. I spent 30 minutes combing through documentation trying
 to figure this out before resorting to StackOverflow. Similarly, I had to use other
@@ -125,24 +125,24 @@ into the object layer anyway, in order to configure the X axis.</p>
 <p>One cool thing is that someone made an xkcd style for Matplotlib. Just wrap your
 code in this:</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">xkcd</span><span class="p">():</span>
-    <span class="c"># your code here</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">xkcd</span><span class="p">():</span>
+    <span class="c"># your code here</span></code></pre></figure>
 
 <p>and your graphics will have that hand-drawn xkcd style applied to them.</p>
 
 <p>Here is the example from the Matplotlib docs</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">xkcd</span><span class="p">():</span>
-    <span class="c"># Based on &quot;Stove Ownership&quot; from XKCD by Randall Monroe</span>
+    <span class="c"># Based on "Stove Ownership" from XKCD by Randall Monroe</span>
     <span class="c"># http://xkcd.com/418/</span>
 
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">((</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">))</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">&#39;none&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">&#39;none&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'right'</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">'none'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'top'</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">'none'</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
@@ -151,41 +151,41 @@ code in this:</p>
     <span class="n">data</span><span class="p">[</span><span class="mi">70</span><span class="p">:]</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 
     <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
-        <span class="s">&#39;THE DAY I REALIZED</span><span class="se">\n</span><span class="s">I COULD COOK BACON</span><span class="se">\n</span><span class="s">WHENEVER I WANTED&#39;</span><span class="p">,</span>
-        <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s">&#39;-&gt;&#39;</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">))</span>
+        <span class="s">'THE DAY I REALIZED</span><span class="se">\n</span><span class="s">I COULD COOK BACON</span><span class="se">\n</span><span class="s">WHENEVER I WANTED'</span><span class="p">,</span>
+        <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s">'-&gt;'</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">))</span>
 
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;time&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;my overall health&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'time'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'my overall health'</span><span class="p">)</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
         <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span>
-        <span class="s">&#39;&quot;Stove Ownership&quot; from xkcd by Randall Monroe&#39;</span><span class="p">,</span>
-        <span class="n">ha</span><span class="o">=</span><span class="s">&#39;center&#39;</span><span class="p">)</span>
+        <span class="s">'"Stove Ownership" from xkcd by Randall Monroe'</span><span class="p">,</span>
+        <span class="n">ha</span><span class="o">=</span><span class="s">'center'</span><span class="p">)</span>
 
-    <span class="c"># Based on &quot;The Data So Far&quot; from XKCD by Randall Monroe</span>
+    <span class="c"># Based on "The Data So Far" from XKCD by Randall Monroe</span>
     <span class="c"># http://xkcd.com/373/</span>
 
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">((</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="o">-</span><span class="mf">0.125</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="mf">0.125</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="mf">0.25</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">&#39;none&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">&#39;none&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'right'</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">'none'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'top'</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">'none'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s">'bottom'</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">])</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">110</span><span class="p">])</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s">&#39;CONFIRMED BY</span><span class="se">\n</span><span class="s">EXPERIMENT&#39;</span><span class="p">,</span> <span class="s">&#39;REFUTED BY</span><span class="se">\n</span><span class="s">EXPERIMENT&#39;</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s">'CONFIRMED BY</span><span class="se">\n</span><span class="s">EXPERIMENT'</span><span class="p">,</span> <span class="s">'REFUTED BY</span><span class="se">\n</span><span class="s">EXPERIMENT'</span><span class="p">])</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">&quot;CLAIMS OF SUPERNATURAL POWERS&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">"CLAIMS OF SUPERNATURAL POWERS"</span><span class="p">)</span>
 
     <span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
         <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span>
-        <span class="s">&#39;&quot;The Data So Far&quot; from xkcd by Randall Monroe&#39;</span><span class="p">,</span>
-        <span class="n">ha</span><span class="o">=</span><span class="s">&#39;center&#39;</span><span class="p">)</span>
+        <span class="s">'"The Data So Far" from xkcd by Randall Monroe'</span><span class="p">,</span>
+        <span class="n">ha</span><span class="o">=</span><span class="s">'center'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></figure>
 
 <h2 id="ggplot">ggplot</h2>
 

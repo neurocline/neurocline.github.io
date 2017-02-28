@@ -84,8 +84,8 @@
     <p>Simple queries can be done with the Git command-line. To see aggregate commit
 history for the past year in all branches (and assuming that merges don’t count as commits):</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git log --no-merges --since<span class="o">=</span><span class="s2">&quot;1 year ago&quot;</span> --all &gt; log.txt
-<span class="nv">$ </span>git shortlog -sne &lt; log.txt</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git log --no-merges --since<span class="o">=</span><span class="s2">"1 year ago"</span> --all &gt; log.txt
+<span class="gp">$ </span>git shortlog -sne &lt; log.txt</code></pre></figure>
 
 <p>This could be done with pipes as well to avoid intermediate files.</p>
 
@@ -93,38 +93,38 @@ history for the past year in all branches (and assuming that merges don’t coun
 a repo rarely has tracking branches for all branches in the the remote(s), but you almost
 certainly want information about that data.</p>
 
-<p>By default, <code>git log</code> uses the medium pretty format, which looks like this</p>
+<p>By default, <code class="highlighter-rouge">git log</code> uses the medium pretty format, which looks like this</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">commit e22c092b573c93e8d9c358330ad65c82c14bff0a
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">commit e22c092b573c93e8d9c358330ad65c82c14bff0a
 Author: Brian Fitzgerald &lt;bfitz@blizzard.com&gt;
-Date:   Thu Sep <span class="m">29</span> 17:07:11 <span class="m">2016</span> -0700
+Date:   Thu Sep 29 17:07:11 2016 -0700
 
     Mass query of Github
 
-    Do queries <span class="k">for</span> repos, orgs, users <span class="k">for</span> GitHub. Also handle GitHub
+    Do queries <span class="k">for </span>repos, orgs, users <span class="k">for </span>GitHub. Also handle GitHub
     Enterprise <span class="o">(</span>the Ghosthub instance<span class="o">)</span>.
 
-    Add --dir option to working.py to allow working dir to be <span class="nb">set</span>
-<span class="nb">    </span>from the <span class="nb">command </span>line <span class="o">(</span>slight improvement to workflow<span class="o">)</span>.</code></pre></div>
+    Add --dir option to working.py to allow working dir to be <span class="nb">set
+    </span>from the <span class="nb">command </span>line <span class="o">(</span>slight improvement to workflow<span class="o">)</span>.</code></pre></figure>
 
 <p>You might find you want to go
-beyond that, but <code>--pretty=format:&lt;fmt&gt;</code> looks daunting. Here is a format string that
+beyond that, but <code class="highlighter-rouge">--pretty=format:&lt;fmt&gt;</code> looks daunting. Here is a format string that
 reproduces the medium pretty format:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git log --pretty<span class="o">=</span>format:<span class="s2">&quot;%C(auto)commit %H%nAuthor: %an &lt;%ae&gt;%nDate: %ad%n%n%w(0,4,4)%s%n%n%b&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git log --pretty<span class="o">=</span>format:<span class="s2">"%C(auto)commit %H%nAuthor: %an &lt;%ae&gt;%nDate: %ad%n%n%w(0,4,4)%s%n%n%b"</span></code></pre></figure>
 
-<p>The <code>git log help</code> page has a section that covers all the format operators, although
+<p>The <code class="highlighter-rouge">git log help</code> page has a section that covers all the format operators, although
 some are hard to puzzle out just from the docs. In particular, indented formatting is
-not explained well. The string <code>%w(0,4,4)</code> means to not wrap lines, indent the first line
+not explained well. The string <code class="highlighter-rouge">%w(0,4,4)</code> means to not wrap lines, indent the first line
 by 4 spaces, and indent remaining lines by 4 spaces. This also stays in effect until
 changed.</p>
 
 <p>More importantly, in logs you want to process with code, you’ll probably not indent them, and
 you won’t colorize them either.</p>
 
-<p>If you use one-line formats, you’ll probably want to use <code>---pretty=tformat:&lt;fmt&gt;</code><code>instead.
-The</code><code>format</code><code>option uses separator semantics, whereas the</code><code>tformat</code><code>option uses terminator semantics.
-This is a lot of words to say that the file entry in</code><code>format</code>`` won’t have a newline appended.</p>
+<p>If you use one-line formats, you’ll probably want to use <code class="highlighter-rouge">---pretty=tformat:&lt;fmt&gt;</code><code class="highlighter-rouge">instead.
+The</code><code class="highlighter-rouge">format</code><code class="highlighter-rouge">option uses separator semantics, whereas the</code><code class="highlighter-rouge">tformat</code><code class="highlighter-rouge">option uses terminator semantics.
+This is a lot of words to say that the file entry in</code><code class="highlighter-rouge">format</code>`` won’t have a newline appended.</p>
 
 <h1 id="same-commit-hash-in-two-or-more-repos">Same commit hash in two or more repos</h1>
 

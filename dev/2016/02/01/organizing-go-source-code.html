@@ -83,32 +83,32 @@
   <article class="post-content">
     <p>There are a handful of rules in Go that directly affect how the source code in your project is laid out.</p>
 
-<p>When using the <code>go</code> tool:</p>
+<p>When using the <code class="highlighter-rouge">go</code> tool:</p>
 
 <ul>
   <li>all the files in a directory must be in the same package</li>
   <li>all the files in a package must be in the same directory</li>
 </ul>
 
-<p>The <code>go</code> tool, when iterating, assumes that all files in a directory are in the same package. You’ll get a compile
+<p>The <code class="highlighter-rouge">go</code> tool, when iterating, assumes that all files in a directory are in the same package. You’ll get a compile
 error otherwise. When told to target a specific file, this is not the case, but this is not the normal usage of
-the <code>go</code> tool. And from this consequence, all the files in a package need to be in the same directory.</p>
+the <code class="highlighter-rouge">go</code> tool. And from this consequence, all the files in a package need to be in the same directory.</p>
 
 <p>One consequence of this is for executables - things you run. In Go, this is package main with func main().
 This means that the top-level source for each executable should be in its own directory even if a single file, and must
 be in its own directory if multiple files. In other words,
 if you have a suite of programs built from one source base, then you’ll have something like this</p>
 
-<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="nx">binaries</span><span class="o">/</span>
-  <span class="nx">binary1</span><span class="o">/</span>
-    <span class="nx">main</span><span class="p">.</span><span class="k">go</span>
-  <span class="nx">binary2</span><span class="o">/</span>
-    <span class="nx">main</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">libs</span><span class="o">/</span>
-  <span class="nx">package1</span><span class="o">/</span>
-    <span class="nx">subpkg1</span><span class="o">/</span>
-    <span class="nx">subpkg2</span><span class="o">/</span>
-  <span class="nx">package2</span><span class="o">/</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="n">binaries</span><span class="o">/</span><span class="x">
+  </span><span class="n">binary1</span><span class="o">/</span><span class="x">
+    </span><span class="n">main</span><span class="o">.</span><span class="k">go</span><span class="x">
+  </span><span class="n">binary2</span><span class="o">/</span><span class="x">
+    </span><span class="n">main</span><span class="o">.</span><span class="k">go</span><span class="x">
+</span><span class="n">libs</span><span class="o">/</span><span class="x">
+  </span><span class="n">package1</span><span class="o">/</span><span class="x">
+    </span><span class="n">subpkg1</span><span class="o">/</span><span class="x">
+    </span><span class="n">subpkg2</span><span class="o">/</span><span class="x">
+  </span><span class="n">package2</span><span class="o">/</span></code></pre></figure>
 
 <p>There is no language-level mandate that all the files in a package are in the same directory - this is a tooling
 issue. On the other hand, it is the standard tooling at the moment.</p>
@@ -125,19 +125,19 @@ program I know of outside of the Go suite itself, at 460,000 lines as of this wr
 <p>The basic source layout is this:</p>
 
 <ul>
-  <li>API/protocol (swagger, in json) in <code>api</code></li>
-  <li>binaries (package main) in <code>cmd</code></li>
-  <li>build scripts in <code>hack</code></li>
-  <li>packages in <code>pkg</code></li>
-  <li>external source in <code>Godeps</code> (uses <code>godep</code>)</li>
-  <li>manually imported external source in <code>thirdparty</code></li>
+  <li>API/protocol (swagger, in json) in <code class="highlighter-rouge">api</code></li>
+  <li>binaries (package main) in <code class="highlighter-rouge">cmd</code></li>
+  <li>build scripts in <code class="highlighter-rouge">hack</code></li>
+  <li>packages in <code class="highlighter-rouge">pkg</code></li>
+  <li>external source in <code class="highlighter-rouge">Godeps</code> (uses <code class="highlighter-rouge">godep</code>)</li>
+  <li>manually imported external source in <code class="highlighter-rouge">thirdparty</code></li>
 </ul>
 
 <p>The source uses a short URL http://k8s.io that redirects to http://kubernetes.io. Does this further redirect
 to https://github.com/kubernetes/? I’m not sure how that would work, though, unless you clone from k8s.io and not Github. In any event, there is a set of scripts in hack that are used to build and run Kubernetes from source.
 See http://www.sebastien-han.fr/blog/2015/07/01/build-kubernetes-from-source/ for quick note on building.</p>
 
-<p>This uses <code>godep</code>, as most big projects are currently doing - it vendors external source into a
+<p>This uses <code class="highlighter-rouge">godep</code>, as most big projects are currently doing - it vendors external source into a
 Godeps directory and rewrites your source to use the vendored paths.</p>
 
 <p>There is a contrib folder that is the remnants of Kubernetes components that aren’t part of the core system. These moved to their own repo.</p>
@@ -150,11 +150,11 @@ this writing, it is 257,000 lines of Go code (ignoring whitespace and comment li
 <p>The basic source layout is this:</p>
 
 <ul>
-  <li>API/protocol (swagger, in json) in <code>api</code></li>
-  <li>main binaries (package main) in <code>cmd</code></li>
-  <li>external source in <code>Godeps</code> (uses <code>godep</code>)</li>
-  <li>build scripts in <code>hack</code></li>
-  <li>tool binaries in <code>tools</code></li>
+  <li>API/protocol (swagger, in json) in <code class="highlighter-rouge">api</code></li>
+  <li>main binaries (package main) in <code class="highlighter-rouge">cmd</code></li>
+  <li>external source in <code class="highlighter-rouge">Godeps</code> (uses <code class="highlighter-rouge">godep</code>)</li>
+  <li>build scripts in <code class="highlighter-rouge">hack</code></li>
+  <li>tool binaries in <code class="highlighter-rouge">tools</code></li>
 </ul>
 
 <p>The build scripts in Kubernetes and Origin look similar. Not surprising, since OpenShift is built on top
@@ -165,13 +165,13 @@ of Docker and Kubernetes.</p>
 <p>CockroachDb, <a href="https://github.com/cockroachdb/cockroach">https://github.com/cockroachdb/cockroach</a>, at 130,000 lines of code, is the largest Go program I’ve seen (outside of the Go tools themselves) that has no
 substantial dependencies on other software.</p>
 
-<p>The main binary is at the root of the repo - <code>main.go</code>. There are a handful of other binaries in
+<p>The main binary is at the root of the repo - <code class="highlighter-rouge">main.go</code>. There are a handful of other binaries in
 a simulation directory, a handful of tools in the cmd directory, and a stray simulation file in the gossip
 directory.</p>
 
 <ul>
-  <li>build system in <code>build</code></li>
-  <li>command-line suite in <code>cli</code></li>
+  <li>build system in <code class="highlighter-rouge">build</code></li>
+  <li>command-line suite in <code class="highlighter-rouge">cli</code></li>
 </ul>
 
 <p>The repo is fairly flat, all the major components are at the top level; there is no src or pkg directory.</p>
@@ -182,12 +182,12 @@ directory.</p>
 at 100,000 lines of Go code. It follows the Go 1.5 vendor method of doing external code.</p>
 
 <ul>
-  <li>API expressed in Go code in <code>api</code></li>
-  <li>add-ons (not part of the core) in <code>contrib</code></li>
-  <li>main binary in <code>docker</code></li>
-  <li>build scripts in <code>hack</code></li>
-  <li>packages in <code>pkg</code></li>
-  <li>external source in <code>vendor</code> (uses Go 1.5+)</li>
+  <li>API expressed in Go code in <code class="highlighter-rouge">api</code></li>
+  <li>add-ons (not part of the core) in <code class="highlighter-rouge">contrib</code></li>
+  <li>main binary in <code class="highlighter-rouge">docker</code></li>
+  <li>build scripts in <code class="highlighter-rouge">hack</code></li>
+  <li>packages in <code class="highlighter-rouge">pkg</code></li>
+  <li>external source in <code class="highlighter-rouge">vendor</code> (uses Go 1.5+)</li>
 </ul>
 
 <h1 id="etcd">etcd</h1>
@@ -197,10 +197,10 @@ at 100,000 lines of Go code. It follows the Go 1.5 vendor method of doing extern
 <p>Main binary at the root of the repo. Build scripts in the root of the repo. Big packages in directories at the root of the repo.</p>
 
 <ul>
-  <li>Go client library for etcd in <code>client</code> (standalone package used by third party clients)</li>
-  <li>main binary <code>etcdmain</code> (main.go in root just calls into etcdmain)</li>
-  <li>external source in <code>Godeps</code></li>
-  <li>packages in <code>pkg</code></li>
+  <li>Go client library for etcd in <code class="highlighter-rouge">client</code> (standalone package used by third party clients)</li>
+  <li>main binary <code class="highlighter-rouge">etcdmain</code> (main.go in root just calls into etcdmain)</li>
+  <li>external source in <code class="highlighter-rouge">Godeps</code></li>
+  <li>packages in <code class="highlighter-rouge">pkg</code></li>
 </ul>
 
   </article>

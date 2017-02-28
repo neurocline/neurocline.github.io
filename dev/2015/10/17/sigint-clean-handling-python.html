@@ -92,7 +92,7 @@ I/O operations return. This is pretty annoying. This happens even on time.sleep(
 <p>The way around this to catch ctrl-c is to install a handler, and put try blocks around
 IO operations. Real code won’t ignore IOError like this, this is just a sample.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># sigint-clean.py</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># sigint-clean.py</span>
 
 <span class="c"># A SIGINT will cause an I/O operation to raise exceptions on return. This happens</span>
 <span class="c"># even on Windows. This means even with a ctrl-c handler, you must wrap I/O calls</span>
@@ -121,17 +121,17 @@ IO operations. Real code won’t ignore IOError like this, this is just a sample
             <span class="n">process</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">got_sigint</span><span class="p">():</span>
                 <span class="n">running</span> <span class="o">=</span> <span class="bp">False</span>
-                <span class="k">print</span><span class="p">(</span><span class="s">&quot;Caught SIGINT!&quot;</span><span class="p">)</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Caught SIGINT!"</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">process</span><span class="p">():</span>
-    <span class="c"># without this try/except, you&#39;ll get an IOError when ctrl-c pressed</span>
+    <span class="c"># without this try/except, you'll get an IOError when ctrl-c pressed</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="k">except</span> <span class="nb">IOError</span><span class="p">:</span>
         <span class="k">pass</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span></code></pre></div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span></code></pre></figure>
 
 <p>And the other other answer is to write your serious programs in C++ (or maybe Go)? I still
 like Python, but the effort to get to silky smooth reliability is erasing all the gains from

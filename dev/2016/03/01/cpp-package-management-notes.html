@@ -85,64 +85,64 @@
 
 <p>Here’s one ideal</p>
 
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &quot;curl&quot; </span><span class="c1">// this is a package</span>
-<span class="cp">#include &lt;iostream&gt; </span><span class="c1">// this is a system header</span>
-
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include "curl" // this is a package
+#include &lt;iostream&gt; // this is a system header
+</span>
 <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">CurlGet</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">url</span><span class="p">);</span>
 
 <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
-	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Download file&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Download file"</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
-	<span class="c1">// Download argv[1] into a std::string</span>
-	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">body</span> <span class="o">=</span> <span class="n">CurlGet</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+	<span class="c1">// Download argv[1] into a std::string
+</span>	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">body</span> <span class="o">=</span> <span class="n">CurlGet</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">body</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>This is a real program, except for one small detail.</p>
 
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &quot;curl&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include "curl"</span></code></pre></figure>
 
 <p>In an ideal world, this is all you would need to use Curl in your program; no
 downloading installing a Curl distribution, no adding of search path and linker
 entries to a makefile or other build system artifact.</p>
 
-<p>The function <code>CurlGet</code> isn’t from the curl package, it’s my code. I separated it
+<p>The function <code class="highlighter-rouge">CurlGet</code> isn’t from the curl package, it’s my code. I separated it
 out just to make it clearer. Here it is, for completeness’ sake. Put this together
 with the code above and a compiler that supports packages, and you get this:</p>
 
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">size_t</span> <span class="nf">WriteStdString</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">contents</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">nmemb</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">userp</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">size_t</span> <span class="nf">WriteStdString</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">contents</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">nmemb</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">userp</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="kt">size_t</span> <span class="n">bytes</span> <span class="o">=</span> <span class="n">size</span> <span class="o">*</span> <span class="n">nmemb</span><span class="p">;</span>
 	<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">*</span> <span class="n">str</span> <span class="o">=</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">*</span><span class="p">)</span> <span class="n">userp</span><span class="p">;</span>
 
 	<span class="kt">size_t</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">str</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">();</span>
-	<span class="n">str</span><span class="o">-&gt;</span><span class="n">append</span><span class="p">(</span><span class="n">bytes</span><span class="p">,</span> <span class="sc">&#39; &#39;</span><span class="p">);</span>
+	<span class="n">str</span><span class="o">-&gt;</span><span class="n">append</span><span class="p">(</span><span class="n">bytes</span><span class="p">,</span> <span class="sc">' '</span><span class="p">);</span>
 
-	<span class="c1">// Add this new chunk to the string. Yes, ugly, writing into a string buffer.</span>
-	<span class="n">memcpy</span><span class="p">((</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">str</span><span class="o">-&gt;</span><span class="n">c_str</span><span class="p">()</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">contents</span><span class="p">,</span> <span class="n">bytes</span><span class="p">);</span>
+	<span class="c1">// Add this new chunk to the string. Yes, ugly, writing into a string buffer.
+</span>	<span class="n">memcpy</span><span class="p">((</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">str</span><span class="o">-&gt;</span><span class="n">c_str</span><span class="p">()</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">contents</span><span class="p">,</span> <span class="n">bytes</span><span class="p">);</span>
 	<span class="k">return</span> <span class="n">bytes</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">CurlGet</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">url</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">body</span><span class="p">;</span>
-	<span class="n">body</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">);</span> <span class="c1">// reserve enough for a moderate sized file</span>
-
+	<span class="n">body</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">);</span> <span class="c1">// reserve enough for a moderate sized file
+</span>
 	<span class="n">curl_global_init</span><span class="p">(</span><span class="n">CURL_GLOBAL_DEFAULT</span><span class="p">);</span>
 	<span class="k">auto</span> <span class="n">session</span> <span class="o">=</span> <span class="n">curl_easy_init</span><span class="p">();</span>
 
 	<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">session</span><span class="p">,</span> <span class="n">CURLOPT_URL</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 	<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">session</span><span class="p">,</span> <span class="n">CURLOPT_WRITEFUNCTION</span><span class="p">,</span> <span class="n">WriteStdString</span><span class="p">);</span>
 	<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">session</span><span class="p">,</span> <span class="n">CURLOPT_WRITEDATA</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">body</span><span class="p">);</span>
-	<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">session</span><span class="p">,</span> <span class="n">CURLOPT_USERAGENT</span><span class="p">,</span> <span class="s">&quot;packagedemo/1.0&quot;</span><span class="p">);</span>
+	<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">session</span><span class="p">,</span> <span class="n">CURLOPT_USERAGENT</span><span class="p">,</span> <span class="s">"packagedemo/1.0"</span><span class="p">);</span>
 
 	<span class="k">auto</span> <span class="n">result</span> <span class="o">=</span> <span class="n">curl_easy_perform</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">session</span><span class="p">);</span>
 	<span class="cm">/* should really check result, eh? */</span>
 
 	<span class="n">curl_easy_cleanup</span><span class="p">(</span><span class="n">session</span><span class="p">);</span>
 	<span class="n">curl_global_cleanup</span><span class="p">();</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>In our current world, if you have a computer without Curl on it, and are not
 running an operating system where Curl has been packaged up for you to grab,

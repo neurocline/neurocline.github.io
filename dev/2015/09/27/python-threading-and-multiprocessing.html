@@ -83,18 +83,18 @@
   <article class="post-content">
     <p>The basic threading model in Python is extremely simple.</p>
 
-<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp"># simmple thread example</span>
-
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp"># simmple thread example
+</span>
 <span class="n">import</span> <span class="n">threading</span>
 <span class="n">import</span> <span class="n">time</span>
 
 <span class="n">def</span> <span class="n">myfunc</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span><span class="p">(</span><span class="s">&quot;I am thread %d&quot;</span> <span class="o">%</span> <span class="n">id</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">"I am thread %d"</span> <span class="o">%</span> <span class="n">id</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">t</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">:</span>
     <span class="n">threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">myfunc</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">t</span><span class="p">,)).</span><span class="n">start</span><span class="p">()</span>
 
-<span class="n">print</span><span class="p">(</span><span class="s">&quot;I am not a thread&quot;</span><span class="p">)</span></code></pre></div>
+<span class="n">print</span><span class="p">(</span><span class="s">"I am not a thread"</span><span class="p">)</span></code></pre></figure>
 
 <p>Python threads have some advantages and disadvantages, and they spring from the same source;
 you can do threads, but only one thread can execute Python code at a time. There are still

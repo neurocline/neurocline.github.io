@@ -97,7 +97,7 @@ if it fails, I just trash a virtualenv directory. This is also why people use Do
 why things like Vagrant or Puppet also started seeing widespread use; it’s easy to screw
 things up when everything is installed globally, so until operating systems get fixed, use
 systems like this to pretend to have a global system, or to hide the pain of constantly
-re-installing. For Python, we have <code>pip freeze</code> and <code>pip install -r</code> to somewhat automate
+re-installing. For Python, we have <code class="highlighter-rouge">pip freeze</code> and <code class="highlighter-rouge">pip install -r</code> to somewhat automate
 that, and Ruby has Bundler.</p>
 
 <h1 id="overview">Overview</h1>
@@ -125,36 +125,36 @@ they only take a few seconds to create.</p>
 <p>Using virtualenv on Windows is a little different than on Unix (Linux/Mac). Creating is
 pretty much the same, but activating is a little different.</p>
 
-<p>Note: My command prompts are using the <code>$</code> character because the syntax highlighter I’m
+<p>Note: My command prompts are using the <code class="highlighter-rouge">$</code> character because the syntax highlighter I’m
 using doesn’t work for DOS/Powershell style consoles. I’ll fix that at some point. I also
-transcribed <code>\\</code> to <code>/</code> for the same reason. Microsoft really needs to abandon <code>\\</code> as 
+transcribed <code class="highlighter-rouge">\\</code> to <code class="highlighter-rouge">/</code> for the same reason. Microsoft really needs to abandon <code class="highlighter-rouge">\\</code> as 
 the path separator char.</p>
 
 <p>For the following, I have two versions of Python installed in these global directories:</p>
 
 <ul>
-  <li><code>C:/Python27</code></li>
-  <li><code>C:/Python35</code></li>
+  <li><code class="highlighter-rouge">C:/Python27</code></li>
+  <li><code class="highlighter-rouge">C:/Python35</code></li>
 </ul>
 
 <h2 id="create-new-virtualenv-environment">Create new virtualenv environment</h2>
 
-<p>The simple version is this - create a new virtual environment into the directory <code>matplotlib</code>.</p>
+<p>The simple version is this - create a new virtual environment into the directory <code class="highlighter-rouge">matplotlib</code>.</p>
 
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> virtualenv matplotlib
-<span class="go">Using base prefix &#39;C:/python35&#39;</span>
-<span class="go">New python executable in C:/w/matplotlib/Scripts/python.exe</span>
-<span class="go">Installing setuptools, pip, wheel...done.</span>
-<span class="gp">$</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="w">$ </span><span class="nc">virtualenv</span><span class="kv"> matplotlib
+</span>Using base prefix 'C:/python35'
+New python executable in C:/w/matplotlib/Scripts/python.exe
+Installing setuptools, pip, wheel...done.
+<span class="err">$</span></code></pre></figure>
 
 <p>If you want, you can specify a specific version. For running Jekyll, I need Python 2.7
 (because I’m using Pygments).</p>
 
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> virtualenv -p C:/Python27/python.exe py-jekyll
-<span class="go">Using base prefix &#39;c:/python35&#39;</span>
-<span class="go">New python executable in C:/w/py-jekyll/Scripts/python.exe</span>
-<span class="go">Installing setuptools, pip, wheel...done.</span>
-<span class="gp">$</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="w">$ </span><span class="nc">virtualenv</span><span class="kv"> -p C:/Python27/python.exe py-jekyll
+</span>Using base prefix 'c:/python35'
+New python executable in C:/w/py-jekyll/Scripts/python.exe
+Installing setuptools, pip, wheel...done.
+<span class="err">$</span></code></pre></figure>
 
 <p>By default, the packages you already had installed in your base Python version are not carried
 over into your new version. This is a good thing, but it means you’ll have to install packages.</p>
@@ -163,22 +163,22 @@ over into your new version. This is a good thing, but it means you’ll have to 
 
 <p>From whatever command prompt you’re going to issue further Python commands from:</p>
 
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> <span class="nb">cd </span>matplotlib
-<span class="gp">$</span> Scripts/activate
-<span class="go">(matplotlib) $</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="w">$ </span><span class="nc">cd</span><span class="kv"> matplotlib
+</span><span class="w">$ </span><span class="nc">Scripts/activate</span><span class="kv">
+</span><span class="err">(matplotlib) $</span></code></pre></figure>
 
 <p>Note that the prompt changes to remind you which virtual environment you have active.</p>
 
 <p>If you’re going to install packages, make sure you do this first. All this does is fiddle with
-the environment variables to put your <code>virtualenv</code> Python version first.</p>
+the environment variables to put your <code class="highlighter-rouge">virtualenv</code> Python version first.</p>
 
 <h2 id="deactivate-environment">Deactivate environment</h2>
 
 <p>Since this is Windows, you could just close the command window. Or you can deactivate the
 environment to get back to whatever you had set globally:</p>
 
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">(matplotlib) $ deactivate</span>
-<span class="gp">$</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-console" data-lang="console">(matplotlib) $ deactivate
+<span class="err">$</span></code></pre></figure>
 
 
   </article>

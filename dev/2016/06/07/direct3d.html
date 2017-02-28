@@ -160,14 +160,14 @@ part of the OS.</p>
 
 <p>If you have a device, you can get the factory from it, so that you can create a compatible swap chain</p>
 
-<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">IDXGIDevice</span> <span class="o">*</span> <span class="n">pDXGIDevice</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
-<span class="n">hr</span> <span class="o">=</span> <span class="n">g_pd3dDevice</span><span class="o">-&gt;</span><span class="n">QueryInterface</span><span class="p">(</span><span class="n">__uuidof</span><span class="p">(</span><span class="n">IDXGIDevice</span><span class="p">),</span> <span class="p">(</span><span class="kt">void</span> <span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">pDXGIDevice</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">IDXGIDevice</span> <span class="o">*</span> <span class="n">pDXGIDevice</span> <span class="o">=</span> <span class="nb">nullptr</span><span class="p">;</span>
+<span class="n">hr</span> <span class="o">=</span> <span class="n">g_pd3dDevice</span><span class="o">-&gt;</span><span class="n">QueryInterface</span><span class="p">(</span><span class="kr">__uuidof</span><span class="p">(</span><span class="n">IDXGIDevice</span><span class="p">),</span> <span class="p">(</span><span class="kt">void</span> <span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">pDXGIDevice</span><span class="p">);</span>
 
-<span class="n">IDXGIAdapter</span> <span class="o">*</span> <span class="n">pDXGIAdapter</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="n">IDXGIAdapter</span> <span class="o">*</span> <span class="n">pDXGIAdapter</span> <span class="o">=</span> <span class="nb">nullptr</span><span class="p">;</span>
 <span class="n">hr</span> <span class="o">=</span> <span class="n">pDXGIDevice</span><span class="o">-&gt;</span><span class="n">GetAdapter</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">pDXGIAdapter</span> <span class="p">);</span>
 
-<span class="n">IDXGIFactory</span> <span class="o">*</span> <span class="n">pIDXGIFactory</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
-<span class="n">pDXGIAdapter</span><span class="o">-&gt;</span><span class="n">GetParent</span><span class="p">(</span><span class="n">__uuidof</span><span class="p">(</span><span class="n">IDXGIFactory</span><span class="p">),</span> <span class="p">(</span><span class="kt">void</span> <span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">pIDXGIFactory</span><span class="p">);</span></code></pre></div>
+<span class="n">IDXGIFactory</span> <span class="o">*</span> <span class="n">pIDXGIFactory</span> <span class="o">=</span> <span class="nb">nullptr</span><span class="p">;</span>
+<span class="n">pDXGIAdapter</span><span class="o">-&gt;</span><span class="n">GetParent</span><span class="p">(</span><span class="kr">__uuidof</span><span class="p">(</span><span class="n">IDXGIFactory</span><span class="p">),</span> <span class="p">(</span><span class="kt">void</span> <span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">pIDXGIFactory</span><span class="p">);</span></code></pre></figure>
 
 <p><a href="">IDXGIAdapter</a></p>
 

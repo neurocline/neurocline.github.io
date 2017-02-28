@@ -109,15 +109,16 @@ newline characters are linefeeds, e.g. 0x0A. We would translate our input file t
 
 <p>As a reminder, this is the basic character set:</p>
 
-<pre><code>a b c d e f g h i j k l m n o p q r s t u v w x y z
+<div class="highlighter-rouge"><pre class="highlight"><code>a b c d e f g h i j k l m n o p q r s t u v w x y z
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 0 1 2 3 4 5 6 7 8 9
 _ { } [ ] # ( ) &lt; &gt; % : ; . ? * + - / ^ &amp; | ~ ! = , \ " ’
 </code></pre>
+</div>
 
 <p>It is augmented with universal-character-name characters for any character outside this range.
-In theory, this means the use of escapes like <code>\u00F6</code> instead of direct Unicode characters like
-<code>ö</code>. However, the “as-if” rule applies here: the standard states that “an implementation may use
+In theory, this means the use of escapes like <code class="highlighter-rouge">\u00F6</code> instead of direct Unicode characters like
+<code class="highlighter-rouge">ö</code>. However, the “as-if” rule applies here: the standard states that “an implementation may use
 any internal encoding, so long as…” it works out the same.</p>
 
 <p>This also includes conversion of trigraphs, if trigraphs are supported. Trigraph support is not required
@@ -128,7 +129,7 @@ ignored here because identifying raw string literals is done in the preprocessor
 
 <h1 id="phase-2---splice-lines-together">Phase 2 - splice lines together</h1>
 
-<p>The C++ standard says that lines ending in backlash <code>\</code> are joined together with the following line
+<p>The C++ standard says that lines ending in backlash <code class="highlighter-rouge">\</code> are joined together with the following line
 to create a single logical line. The main reason for this is for long string literals and for long
 preprocessor directives. The preprocessor is line-based in that a preprocessor directive must be on
 a single logical line. By splicing lines together before interpreting directives, we can make macros
@@ -145,28 +146,30 @@ then the universal-character-name translation in phase 1 and the line-splicing i
 and the raw string is the shortest sequence of characters that match the raw string pattern. This
 means for example that a raw string defined as such:</p>
 
-<pre><code>char* s = R"(my\
+<div class="highlighter-rouge"><pre class="highlight"><code>char* s = R"(my\
 string)";
 </code></pre>
+</div>
 
-<p>would be the literal characters <code>my\&lt;newline&gt;string</code>.</p>
+<p>would be the literal characters <code class="highlighter-rouge">my\&lt;newline&gt;string</code>.</p>
 
 <p>Now, does this mean that it’s the newline from the physical file? While the standard reads as ambiguous,
 I’m pretty sure this has to be a newline character - if the execution character set is UTF-8, then
 the string would be:</p>
 
-<pre><code>74 68 69 73 5c 0a 73 74 72 69 6e 67 00
+<div class="highlighter-rouge"><pre class="highlight"><code>74 68 69 73 5c 0a 73 74 72 69 6e 67 00
 </code></pre>
+</div>
 
 <p>regardless of the type of newline in the physical file.</p>
 
-<p>Another exception is the <code>&lt;:</code> digraph; if the sequence <code>&lt;::</code> is followed by anything other than <code>:</code> or <code>&gt;</code>, then
-this is treated as the token <code>&lt;</code> and not the digraph <code>&lt;:</code>. This is a little hard to puzzle out. The string <code>&lt;::&gt;</code>
-would be digraphs for <code>[]</code>, so that part makes sense, e.g a declaration such as <code>int main(int argc, char* argv[])</code>.
-But it’s a little harder to see what <code>&lt;:::</code> would mean.</p>
+<p>Another exception is the <code class="highlighter-rouge">&lt;:</code> digraph; if the sequence <code class="highlighter-rouge">&lt;::</code> is followed by anything other than <code class="highlighter-rouge">:</code> or <code class="highlighter-rouge">&gt;</code>, then
+this is treated as the token <code class="highlighter-rouge">&lt;</code> and not the digraph <code class="highlighter-rouge">&lt;:</code>. This is a little hard to puzzle out. The string <code class="highlighter-rouge">&lt;::&gt;</code>
+would be digraphs for <code class="highlighter-rouge">[]</code>, so that part makes sense, e.g a declaration such as <code class="highlighter-rouge">int main(int argc, char* argv[])</code>.
+But it’s a little harder to see what <code class="highlighter-rouge">&lt;:::</code> would mean.</p>
 
 <p>Personally, I think compilers should refuse to implement the punctuation diagraphs, and it look like MSVC
-does not support them (and maybe never did). I’m neutral on the keyword “diagraphs” like <code>and</code>, <code>or</code> etc.
+does not support them (and maybe never did). I’m neutral on the keyword “diagraphs” like <code class="highlighter-rouge">and</code>, <code class="highlighter-rouge">or</code> etc.
 I feel like those are too much like trying to pretend C++ is a different language. I also notice that
 MSVC doesn’t directly support them, only through a header file <iso646.h> where it creates macros for them...
 so not really digraphs. Just say no to digraphs.</iso646.h></p>

@@ -87,7 +87,7 @@
 
 <p><img src="/assets/xplore-6.png" alt="My helpful screenshot" /></p>
 
-<p>I used all defaults, and a project name of <code>xplore</code>. I refer to this in places as “using the Xcode wizard”.</p>
+<p>I used all defaults, and a project name of <code class="highlighter-rouge">xplore</code>. I refer to this in places as “using the Xcode wizard”.</p>
 
 <h1 id="project-with-embedded-workspace">Project with embedded workspace</h1>
 
@@ -98,22 +98,22 @@ a workspace, it’s just embedded inside your project file. Here’s the project
 
 <p>On disk, the project looks like this (ignoring irrelevant files):</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">xplore.xcodeproj/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">xplore.xcodeproj/
 ├── project.pbxproj
 └── project.xcworkspace
-    └── contents.xcworkspacedata</code></pre></div>
+    └── contents.xcworkspacedata</code></pre></figure>
 
-<p><code>contents.xcworkspacedata</code> looks like this:</p>
+<p><code class="highlighter-rouge">contents.xcworkspacedata</code> looks like this:</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;Workspace</span>
-   <span class="na">version =</span> <span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+   <span class="na">version =</span> <span class="s">"1.0"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;FileRef</span>
-      <span class="na">location =</span> <span class="s">&quot;self:xplore.xcodeproj&quot;</span><span class="nt">&gt;</span>
+      <span class="na">location =</span> <span class="s">"self:xplore.xcodeproj"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;/FileRef&gt;</span>
-<span class="nt">&lt;/Workspace&gt;</span></code></pre></div>
+<span class="nt">&lt;/Workspace&gt;</span></code></pre></figure>
 
-<p>Note that the project location is <code>self:xplore.xcodeproj</code>. I’m guessing that <code>self</code> in this context
+<p>Note that the project location is <code class="highlighter-rouge">self:xplore.xcodeproj</code>. I’m guessing that <code class="highlighter-rouge">self</code> in this context
 means the directory containing the opened project file. In this case, we’re literally
 pointing to ourself, but this keeps things sane for Xcode, I imagine.</p>
 
@@ -138,56 +138,56 @@ has ‘A’ characters.</p>
 
 <p>On disk, we now have a named workspace visible in the Finder:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">xplore.xcworkspace/
-└── contents.xcworkspacedata</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">xplore.xcworkspace/
+└── contents.xcworkspacedata</code></pre></figure>
 
-<p><code>contents.xcworkspacedata</code> looks like this:</p>
+<p><code class="highlighter-rouge">contents.xcworkspacedata</code> looks like this:</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;Workspace</span>
-   <span class="na">version =</span> <span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+   <span class="na">version =</span> <span class="s">"1.0"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;FileRef</span>
-      <span class="na">location =</span> <span class="s">&quot;group:xplore.xcodeproj&quot;</span><span class="nt">&gt;</span>
+      <span class="na">location =</span> <span class="s">"group:xplore.xcodeproj"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;/FileRef&gt;</span>
-<span class="nt">&lt;/Workspace&gt;</span></code></pre></div>
+<span class="nt">&lt;/Workspace&gt;</span></code></pre></figure>
 
-<p>Note that the location is now <code>group:xplore.xcodeproj</code>. This time, our base is the directory containing
+<p>Note that the location is now <code class="highlighter-rouge">group:xplore.xcodeproj</code>. This time, our base is the directory containing
 the opened workspace file.</p>
 
 <h1 id="project-file-walkthrough">Project file walkthrough</h1>
 
-<p>The project file <code>xplore.xcodeproj</code> is identical, whether it is attached to an external
+<p>The project file <code class="highlighter-rouge">xplore.xcodeproj</code> is identical, whether it is attached to an external
 workspace or hosting its own embedded workspace. Let’s walk through it a bit.</p>
 
 <p>This is the on-disk layout, ignoring non-important files:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">xplore.xcodeproj
-└── project.pbxproj</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">xplore.xcodeproj
+└── project.pbxproj</code></pre></figure>
 
-<p>The project file itself is the <code>project.pbxproj</code> file inside the xplore.xcodeproj package.</p>
+<p>The project file itself is the <code class="highlighter-rouge">project.pbxproj</code> file inside the xplore.xcodeproj package.</p>
 
-<p>This is the top-level view of a project file, ignoring the contents of the <code>objects</code> key:</p>
+<p>This is the top-level view of a project file, ignoring the contents of the <code class="highlighter-rouge">objects</code> key:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">// !<span class="nv">$*</span>UTF8*<span class="nv">$!</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">// !<span class="nv">$*</span>UTF8<span class="k">*</span><span class="nv">$!</span>
 <span class="o">{</span>
-    <span class="nv">archiveVersion</span> <span class="o">=</span> 1<span class="p">;</span>
-    <span class="nv">classes</span> <span class="o">=</span> <span class="o">{</span>
-    <span class="o">}</span><span class="p">;</span>
-    <span class="nv">objectVersion</span> <span class="o">=</span> 46<span class="p">;</span>
-    <span class="nv">objects</span> <span class="o">=</span> <span class="o">{</span>
+    archiveVersion <span class="o">=</span> 1;
+    classes <span class="o">=</span> <span class="o">{</span>
+    <span class="o">}</span>;
+    objectVersion <span class="o">=</span> 46;
+    objects <span class="o">=</span> <span class="o">{</span>
 ...
-    <span class="o">}</span><span class="p">;</span>
-    <span class="nv">rootObject</span> <span class="o">=</span> 999A68361CC86ECD0001FC48 /* Project object */<span class="p">;</span>
-<span class="o">}</span></code></pre></div>
+    <span class="o">}</span>;
+    rootObject <span class="o">=</span> 999A68361CC86ECD0001FC48 /<span class="k">*</span> Project object <span class="k">*</span>/;
+<span class="o">}</span></code></pre></figure>
 
 <p>This is using the text version of NeXt/Mac OS X plist files; this format is now obsolete except
 for Xcode, and I think Xcode 7 is now switching to XML, which is a pity, because the text version
 is straightforward to read. Plist files have numbers, strings, uuids (which are really just strings of
 hexadecimal characters), lists and dictionaries.</p>
 
-<p><code>archiveVersion</code> is always 1, and <code>classes</code> is always (?) empty.</p>
+<p><code class="highlighter-rouge">archiveVersion</code> is always 1, and <code class="highlighter-rouge">classes</code> is always (?) empty.</p>
 
-<p><code>objectVersion</code> indicates the project format. As you can see, this project was made with Xcode 3.2
+<p><code class="highlighter-rouge">objectVersion</code> indicates the project format. As you can see, this project was made with Xcode 3.2
 compatibility:</p>
 
 <ul>
@@ -199,178 +199,178 @@ compatibility:</p>
   <li>47: Xcode 6.3 compatible</li>
 </ul>
 
-<p><code>objects</code> is a dictionary containing all the objects in the project, as <code>key</code> = <code>value</code>, where <code>value</code>
+<p><code class="highlighter-rouge">objects</code> is a dictionary containing all the objects in the project, as <code class="highlighter-rouge">key</code> = <code class="highlighter-rouge">value</code>, where <code class="highlighter-rouge">value</code>
 can be one of the aforementioned number, string, uuid, list or dictionary. The keys in our dictionary
 are always uuids. There doesn’t appear to be any rule as to the length of the uuids, I’ve seen both
 24-character (12-byte) and 48-character (24-byte) uuids in Xcode projects. I’ve even see 47-character
 uuids work (a bug in many versions of Mac Premake up through at least 5.0.0-alpha8). Xcode seems to
 be forgiving, as long as the uuids don’t collide.</p>
 
-<p><code>rootObject</code> points to a <code>PBXProject</code> object that is the root for this project. There’s only one
-<code>PBXProject</code> object in our project file, and this is typical.</p>
+<p><code class="highlighter-rouge">rootObject</code> points to a <code class="highlighter-rouge">PBXProject</code> object that is the root for this project. There’s only one
+<code class="highlighter-rouge">PBXProject</code> object in our project file, and this is typical.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin PBXProject section */
-        999A68361CC86ECD0001FC48 /* Project object */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> PBXProject<span class="p">;</span>
-            <span class="nv">attributes</span> <span class="o">=</span> <span class="o">{</span>
-                <span class="nv">LastUpgradeCheck</span> <span class="o">=</span> 0610<span class="p">;</span>
-                <span class="nv">ORGANIZATIONNAME</span> <span class="o">=</span> <span class="s2">&quot;Blizzard Entertainment&quot;</span><span class="p">;</span>
-                <span class="nv">TargetAttributes</span> <span class="o">=</span> <span class="o">{</span>
-                    <span class="nv">999A683D1CC86ECD0001FC48</span> <span class="o">=</span> <span class="o">{</span>
-                        <span class="nv">CreatedOnToolsVersion</span> <span class="o">=</span> 6.1.1<span class="p">;</span>
-                    <span class="o">}</span><span class="p">;</span>
-                <span class="o">}</span><span class="p">;</span>
-            <span class="o">}</span><span class="p">;</span>
-            <span class="nv">buildConfigurationList</span> <span class="o">=</span> 999A68391CC86ECD0001FC48 /* Build configuration list <span class="k">for</span> PBXProject <span class="s2">&quot;xplore&quot;</span> */<span class="p">;</span>
-            <span class="nv">compatibilityVersion</span> <span class="o">=</span> <span class="s2">&quot;Xcode 3.2&quot;</span><span class="p">;</span>
-            <span class="nv">developmentRegion</span> <span class="o">=</span> English<span class="p">;</span>
-            <span class="nv">hasScannedForEncodings</span> <span class="o">=</span> 0<span class="p">;</span>
-            <span class="nv">knownRegions</span> <span class="o">=</span> <span class="o">(</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin PBXProject section <span class="k">*</span>/
+        999A68361CC86ECD0001FC48 /<span class="k">*</span> Project object <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> PBXProject;
+            attributes <span class="o">=</span> <span class="o">{</span>
+                LastUpgradeCheck <span class="o">=</span> 0610;
+                ORGANIZATIONNAME <span class="o">=</span> <span class="s2">"Blizzard Entertainment"</span>;
+                TargetAttributes <span class="o">=</span> <span class="o">{</span>
+                    999A683D1CC86ECD0001FC48 <span class="o">=</span> <span class="o">{</span>
+                        CreatedOnToolsVersion <span class="o">=</span> 6.1.1;
+                    <span class="o">}</span>;
+                <span class="o">}</span>;
+            <span class="o">}</span>;
+            buildConfigurationList <span class="o">=</span> 999A68391CC86ECD0001FC48 /<span class="k">*</span> Build configuration list <span class="k">for </span>PBXProject <span class="s2">"xplore"</span> <span class="k">*</span>/;
+            compatibilityVersion <span class="o">=</span> <span class="s2">"Xcode 3.2"</span>;
+            developmentRegion <span class="o">=</span> English;
+            hasScannedForEncodings <span class="o">=</span> 0;
+            knownRegions <span class="o">=</span> <span class="o">(</span>
                 en,
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">mainGroup</span> <span class="o">=</span> 999A68351CC86ECD0001FC48<span class="p">;</span>
-            <span class="nv">productRefGroup</span> <span class="o">=</span> 999A683F1CC86ECD0001FC48 /* Products */<span class="p">;</span>
-            <span class="nv">projectDirPath</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-            <span class="nv">projectRoot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-            <span class="nv">targets</span> <span class="o">=</span> <span class="o">(</span>
-                999A683D1CC86ECD0001FC48 /* xplore */,
-            <span class="o">)</span><span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-/* End PBXProject section */</code></pre></div>
+            <span class="o">)</span>;
+            mainGroup <span class="o">=</span> 999A68351CC86ECD0001FC48;
+            productRefGroup <span class="o">=</span> 999A683F1CC86ECD0001FC48 /<span class="k">*</span> Products <span class="k">*</span>/;
+            projectDirPath <span class="o">=</span> <span class="s2">""</span>;
+            projectRoot <span class="o">=</span> <span class="s2">""</span>;
+            targets <span class="o">=</span> <span class="o">(</span>
+                999A683D1CC86ECD0001FC48 /<span class="k">*</span> xplore <span class="k">*</span>/,
+            <span class="o">)</span>;
+        <span class="o">}</span>;
+/<span class="k">*</span> End PBXProject section <span class="k">*</span>/</code></pre></figure>
 
-<p><code>mainGroup</code> is the <code>PBXGroup</code> that is the root of the displayed items. Don’t confuse this with build
+<p><code class="highlighter-rouge">mainGroup</code> is the <code class="highlighter-rouge">PBXGroup</code> that is the root of the displayed items. Don’t confuse this with build
 instructions; this is purely for visual looks.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin PBXGroup section */
-        <span class="nv">999A68351CC86ECD0001FC48</span> <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> PBXGroup<span class="p">;</span>
-            <span class="nv">children</span> <span class="o">=</span> <span class="o">(</span>
-                999A68401CC86ECD0001FC48 /* xplore */,
-                999A683F1CC86ECD0001FC48 /* Products */,
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">sourceTree</span> <span class="o">=</span> <span class="s2">&quot;&lt;group&gt;&quot;</span><span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-...</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin PBXGroup section <span class="k">*</span>/
+        999A68351CC86ECD0001FC48 <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> PBXGroup;
+            children <span class="o">=</span> <span class="o">(</span>
+                999A68401CC86ECD0001FC48 /<span class="k">*</span> xplore <span class="k">*</span>/,
+                999A683F1CC86ECD0001FC48 /<span class="k">*</span> Products <span class="k">*</span>/,
+            <span class="o">)</span>;
+            sourceTree <span class="o">=</span> <span class="s2">"&lt;group&gt;"</span>;
+        <span class="o">}</span>;
+...</code></pre></figure>
 
 <p>Groups can contain files and more groups. The main group contains two more groups:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">...
-        999A683F1CC86ECD0001FC48 /* Products */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> PBXGroup<span class="p">;</span>
-            <span class="nv">children</span> <span class="o">=</span> <span class="o">(</span>
-                999A683E1CC86ECD0001FC48 /* xplore */,
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">name</span> <span class="o">=</span> Products<span class="p">;</span>
-            <span class="nv">sourceTree</span> <span class="o">=</span> <span class="s2">&quot;&lt;group&gt;&quot;</span><span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-        999A68401CC86ECD0001FC48 /* xplore */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> PBXGroup<span class="p">;</span>
-            <span class="nv">children</span> <span class="o">=</span> <span class="o">(</span>
-                999A68411CC86ECD0001FC48 /* main.cpp */,
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">path</span> <span class="o">=</span> xplore<span class="p">;</span>
-            <span class="nv">sourceTree</span> <span class="o">=</span> <span class="s2">&quot;&lt;group&gt;&quot;</span><span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-/* End PBXGroup section */</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">...
+        999A683F1CC86ECD0001FC48 /<span class="k">*</span> Products <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> PBXGroup;
+            children <span class="o">=</span> <span class="o">(</span>
+                999A683E1CC86ECD0001FC48 /<span class="k">*</span> xplore <span class="k">*</span>/,
+            <span class="o">)</span>;
+            name <span class="o">=</span> Products;
+            sourceTree <span class="o">=</span> <span class="s2">"&lt;group&gt;"</span>;
+        <span class="o">}</span>;
+        999A68401CC86ECD0001FC48 /<span class="k">*</span> xplore <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> PBXGroup;
+            children <span class="o">=</span> <span class="o">(</span>
+                999A68411CC86ECD0001FC48 /<span class="k">*</span> main.cpp <span class="k">*</span>/,
+            <span class="o">)</span>;
+            path <span class="o">=</span> xplore;
+            sourceTree <span class="o">=</span> <span class="s2">"&lt;group&gt;"</span>;
+        <span class="o">}</span>;
+/<span class="k">*</span> End PBXGroup section <span class="k">*</span>/</code></pre></figure>
 
-<p>Each of these groups contain files - or rather, <code>PBXFileReference</code> objects, which actually hold the
+<p>Each of these groups contain files - or rather, <code class="highlighter-rouge">PBXFileReference</code> objects, which actually hold the
 information about files:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin PBXFileReference section */
-        999A683E1CC86ECD0001FC48 /* xplore */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> PBXFileReference<span class="p">;</span>
-            <span class="nv">explicitFileType</span> <span class="o">=</span> <span class="s2">&quot;compiled.mach-o.executable&quot;</span><span class="p">;</span>
-            <span class="nv">includeInIndex</span> <span class="o">=</span> 0<span class="p">;</span>
-            <span class="nv">path</span> <span class="o">=</span> xplore<span class="p">;</span>
-            <span class="nv">sourceTree</span> <span class="o">=</span> BUILT_PRODUCTS_DIR<span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-        999A68411CC86ECD0001FC48 /* main.cpp */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> PBXFileReference<span class="p">;</span>
-            <span class="nv">lastKnownFileType</span> <span class="o">=</span> sourcecode.cpp.cpp<span class="p">;</span>
-            <span class="nv">path</span> <span class="o">=</span> main.cpp<span class="p">;</span>
-            <span class="nv">sourceTree</span> <span class="o">=</span> <span class="s2">&quot;&lt;group&gt;&quot;</span><span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-/* End PBXFileReference section */</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin PBXFileReference section <span class="k">*</span>/
+        999A683E1CC86ECD0001FC48 /<span class="k">*</span> xplore <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> PBXFileReference;
+            explicitFileType <span class="o">=</span> <span class="s2">"compiled.mach-o.executable"</span>;
+            includeInIndex <span class="o">=</span> 0;
+            path <span class="o">=</span> xplore;
+            sourceTree <span class="o">=</span> BUILT_PRODUCTS_DIR;
+        <span class="o">}</span>;
+        999A68411CC86ECD0001FC48 /<span class="k">*</span> main.cpp <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> PBXFileReference;
+            lastKnownFileType <span class="o">=</span> sourcecode.cpp.cpp;
+            path <span class="o">=</span> main.cpp;
+            sourceTree <span class="o">=</span> <span class="s2">"&lt;group&gt;"</span>;
+        <span class="o">}</span>;
+/<span class="k">*</span> End PBXFileReference section <span class="k">*</span>/</code></pre></figure>
 
 <p>For some reason, this is the one dictionary that Xcode puts into a single-line flattened form,
-so for readability, I’ve shown the <code>PBXFileReference</code> items in indented form, instead of what’s in the
+so for readability, I’ve shown the <code class="highlighter-rouge">PBXFileReference</code> items in indented form, instead of what’s in the
 Xcode project file. All other items are displayed exactly as they are in the project file.</p>
 
 <p>Since Xcode likes to put helpful comments in the project file, we can see that this matches the GUI display:</p>
 
 <p><img src="/assets/xplore-3.png" alt="My helpful screenshot" /></p>
 
-<p>If you were to rearrange the order of the items in <code>mainGroup</code>, then the GUI output would change.</p>
+<p>If you were to rearrange the order of the items in <code class="highlighter-rouge">mainGroup</code>, then the GUI output would change.</p>
 
-<p>Going back to the <code>PBXProject</code> object, note that there is one other group that gets top billing, Products:</p>
+<p>Going back to the <code class="highlighter-rouge">PBXProject</code> object, note that there is one other group that gets top billing, Products:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">productRefGroup</span> <span class="o">=</span> 999A683F1CC86ECD0001FC48 /* Products */<span class="p">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">            productRefGroup <span class="o">=</span> 999A683F1CC86ECD0001FC48 /<span class="k">*</span> Products <span class="k">*</span>/;</code></pre></figure>
 
 <p>In Xcode parlance, products are the things that are built. Products are built by targets, and configurations
 are orthogonal groups of build settings that can be applied to any number of targets or projects.</p>
 
-<p>I assume that Products gets top billing in the <code>PBXProject</code> object so that the various actions in
+<p>I assume that Products gets top billing in the <code class="highlighter-rouge">PBXProject</code> object so that the various actions in
 Xcode know what to operate on.</p>
 
-<p>The two build-related items in the <code>PBXProject</code> are <code>buildConfigurationList</code>, which points to the
-project configurations available, and <code>targets</code>, which is the list of build targets themselves.</p>
+<p>The two build-related items in the <code class="highlighter-rouge">PBXProject</code> are <code class="highlighter-rouge">buildConfigurationList</code>, which points to the
+project configurations available, and <code class="highlighter-rouge">targets</code>, which is the list of build targets themselves.</p>
 
 <p>In this simple project, we have one build target</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin PBXProject section */
-        999A68361CC86ECD0001FC48 /* Project object */ <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin PBXProject section <span class="k">*</span>/
+        999A68361CC86ECD0001FC48 /<span class="k">*</span> Project object <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
 ...
-            <span class="nv">targets</span> <span class="o">=</span> <span class="o">(</span>
-                999A683D1CC86ECD0001FC48 /* xplore */,
-            <span class="o">)</span><span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-/* End PBXProject section */</code></pre></div>
+            targets <span class="o">=</span> <span class="o">(</span>
+                999A683D1CC86ECD0001FC48 /<span class="k">*</span> xplore <span class="k">*</span>/,
+            <span class="o">)</span>;
+        <span class="o">}</span>;
+/<span class="k">*</span> End PBXProject section <span class="k">*</span>/</code></pre></figure>
 
-<p>This points to a <code>PBXNativeTarget</code> object, which describes how to build a native Mac OS X binary:</p>
+<p>This points to a <code class="highlighter-rouge">PBXNativeTarget</code> object, which describes how to build a native Mac OS X binary:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin PBXNativeTarget section */
-        999A683D1CC86ECD0001FC48 /* xplore */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> PBXNativeTarget<span class="p">;</span>
-            <span class="nv">buildConfigurationList</span> <span class="o">=</span> 999A68451CC86ECD0001FC48 /* Build configuration list <span class="k">for</span> PBXNativeTarget <span class="s2">&quot;xplore&quot;</span> */<span class="p">;</span>
-            <span class="nv">buildPhases</span> <span class="o">=</span> <span class="o">(</span>
-                999A683A1CC86ECD0001FC48 /* Sources */,
-                999A683B1CC86ECD0001FC48 /* Frameworks */,
-                999A683C1CC86ECD0001FC48 /* CopyFiles */,
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">buildRules</span> <span class="o">=</span> <span class="o">(</span>
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">dependencies</span> <span class="o">=</span> <span class="o">(</span>
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">name</span> <span class="o">=</span> xplore<span class="p">;</span>
-            <span class="nv">productName</span> <span class="o">=</span> xplore<span class="p">;</span>
-            <span class="nv">productReference</span> <span class="o">=</span> 999A683E1CC86ECD0001FC48 /* xplore */<span class="p">;</span>
-            <span class="nv">productType</span> <span class="o">=</span> <span class="s2">&quot;com.apple.product-type.tool&quot;</span><span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-/* End PBXNativeTarget section */</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin PBXNativeTarget section <span class="k">*</span>/
+        999A683D1CC86ECD0001FC48 /<span class="k">*</span> xplore <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> PBXNativeTarget;
+            buildConfigurationList <span class="o">=</span> 999A68451CC86ECD0001FC48 /<span class="k">*</span> Build configuration list <span class="k">for </span>PBXNativeTarget <span class="s2">"xplore"</span> <span class="k">*</span>/;
+            buildPhases <span class="o">=</span> <span class="o">(</span>
+                999A683A1CC86ECD0001FC48 /<span class="k">*</span> Sources <span class="k">*</span>/,
+                999A683B1CC86ECD0001FC48 /<span class="k">*</span> Frameworks <span class="k">*</span>/,
+                999A683C1CC86ECD0001FC48 /<span class="k">*</span> CopyFiles <span class="k">*</span>/,
+            <span class="o">)</span>;
+            buildRules <span class="o">=</span> <span class="o">(</span>
+            <span class="o">)</span>;
+            dependencies <span class="o">=</span> <span class="o">(</span>
+            <span class="o">)</span>;
+            name <span class="o">=</span> xplore;
+            productName <span class="o">=</span> xplore;
+            productReference <span class="o">=</span> 999A683E1CC86ECD0001FC48 /<span class="k">*</span> xplore <span class="k">*</span>/;
+            productType <span class="o">=</span> <span class="s2">"com.apple.product-type.tool"</span>;
+        <span class="o">}</span>;
+/<span class="k">*</span> End PBXNativeTarget section <span class="k">*</span>/</code></pre></figure>
 
-<p>Once again, we have a reference <code>productReference</code> to the Products group, presumably because that’s
+<p>Once again, we have a reference <code class="highlighter-rouge">productReference</code> to the Products group, presumably because that’s
 how Xcode finds where to put the built target.</p>
 
-<p>The actual binary type is noted by the <code>productType</code> key: its value declares this to be a command-line
-tool, e.g. <code>com.apple.product-type.tool</code>.</p>
+<p>The actual binary type is noted by the <code class="highlighter-rouge">productType</code> key: its value declares this to be a command-line
+tool, e.g. <code class="highlighter-rouge">com.apple.product-type.tool</code>.</p>
 
-<p>Note that the target also has a <code>buildConfigurationList</code>. In this case, this points to configurations
+<p>Note that the target also has a <code class="highlighter-rouge">buildConfigurationList</code>. In this case, this points to configurations
 for the target, which are distinct from configurations for the project. So let’s look at configurations
 for a bit.</p>
 
-<p>The project configurations are in a <code>XCConfigurationList</code>:</p>
+<p>The project configurations are in a <code class="highlighter-rouge">XCConfigurationList</code>:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin XCConfigurationList section */
-        999A68391CC86ECD0001FC48 /* Build configuration list <span class="k">for</span> PBXProject <span class="s2">&quot;xplore&quot;</span> */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> XCConfigurationList<span class="p">;</span>
-            <span class="nv">buildConfigurations</span> <span class="o">=</span> <span class="o">(</span>
-                999A68431CC86ECD0001FC48 /* Debug */,
-                999A68441CC86ECD0001FC48 /* Release */,
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">defaultConfigurationIsVisible</span> <span class="o">=</span> 0<span class="p">;</span>
-            <span class="nv">defaultConfigurationName</span> <span class="o">=</span> Release<span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-...</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin XCConfigurationList section <span class="k">*</span>/
+        999A68391CC86ECD0001FC48 /<span class="k">*</span> Build configuration list <span class="k">for </span>PBXProject <span class="s2">"xplore"</span> <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> XCConfigurationList;
+            buildConfigurations <span class="o">=</span> <span class="o">(</span>
+                999A68431CC86ECD0001FC48 /<span class="k">*</span> Debug <span class="k">*</span>/,
+                999A68441CC86ECD0001FC48 /<span class="k">*</span> Release <span class="k">*</span>/,
+            <span class="o">)</span>;
+            defaultConfigurationIsVisible <span class="o">=</span> 0;
+            defaultConfigurationName <span class="o">=</span> Release;
+        <span class="o">}</span>;
+...</code></pre></figure>
 
 <p>Xcode defaults to having a Debug configuration and a Release configuration. While these are pretty
 common, there is no standard configuration. Do not count on all projects having Debug and Release
@@ -381,74 +381,74 @@ And in point of fact, you’ll find out that a lot of these settings can be omit
 defaults are pretty reasonable. This is a matter of style. Note that defining everything possible
 is many hundreds of settings; you might get tired after a bit.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin XCBuildConfiguration section */
-        999A68431CC86ECD0001FC48 /* Debug */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> XCBuildConfiguration<span class="p">;</span>
-            <span class="nv">buildSettings</span> <span class="o">=</span> <span class="o">{</span>
-                <span class="nv">ALWAYS_SEARCH_USER_PATHS</span> <span class="o">=</span> NO<span class="p">;</span>
-                <span class="nv">CLANG_CXX_LANGUAGE_STANDARD</span> <span class="o">=</span> <span class="s2">&quot;gnu++0x&quot;</span><span class="p">;</span>
-                <span class="nv">CLANG_CXX_LIBRARY</span> <span class="o">=</span> <span class="s2">&quot;libc++&quot;</span><span class="p">;</span>
-                <span class="nv">CLANG_ENABLE_MODULES</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">CLANG_ENABLE_OBJC_ARC</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">CLANG_WARN_BOOL_CONVERSION</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">CLANG_WARN_CONSTANT_CONVERSION</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">CLANG_WARN_DIRECT_OBJC_ISA_USAGE</span> <span class="o">=</span> YES_ERROR<span class="p">;</span>
-                <span class="nv">CLANG_WARN_EMPTY_BODY</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">CLANG_WARN_ENUM_CONVERSION</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">CLANG_WARN_INT_CONVERSION</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">CLANG_WARN_OBJC_ROOT_CLASS</span> <span class="o">=</span> YES_ERROR<span class="p">;</span>
-                <span class="nv">CLANG_WARN_UNREACHABLE_CODE</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">CLANG_WARN__DUPLICATE_METHOD_MATCH</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">COPY_PHASE_STRIP</span> <span class="o">=</span> NO<span class="p">;</span>
-                <span class="nv">ENABLE_STRICT_OBJC_MSGSEND</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">GCC_C_LANGUAGE_STANDARD</span> <span class="o">=</span> gnu99<span class="p">;</span>
-                <span class="nv">GCC_DYNAMIC_NO_PIC</span> <span class="o">=</span> NO<span class="p">;</span>
-                <span class="nv">GCC_OPTIMIZATION_LEVEL</span> <span class="o">=</span> 0<span class="p">;</span>
-                <span class="nv">GCC_PREPROCESSOR_DEFINITIONS</span> <span class="o">=</span> <span class="o">(</span>
-                    <span class="s2">&quot;DEBUG=1&quot;</span>,
-                    <span class="s2">&quot;$(inherited)&quot;</span>,
-                <span class="o">)</span><span class="p">;</span>
-                <span class="nv">GCC_SYMBOLS_PRIVATE_EXTERN</span> <span class="o">=</span> NO<span class="p">;</span>
-                <span class="nv">GCC_WARN_64_TO_32_BIT_CONVERSION</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">GCC_WARN_ABOUT_RETURN_TYPE</span> <span class="o">=</span> YES_ERROR<span class="p">;</span>
-                <span class="nv">GCC_WARN_UNDECLARED_SELECTOR</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">GCC_WARN_UNINITIALIZED_AUTOS</span> <span class="o">=</span> YES_AGGRESSIVE<span class="p">;</span>
-                <span class="nv">GCC_WARN_UNUSED_FUNCTION</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">GCC_WARN_UNUSED_VARIABLE</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">MACOSX_DEPLOYMENT_TARGET</span> <span class="o">=</span> 10.9<span class="p">;</span>
-                <span class="nv">MTL_ENABLE_DEBUG_INFO</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">ONLY_ACTIVE_ARCH</span> <span class="o">=</span> YES<span class="p">;</span>
-                <span class="nv">SDKROOT</span> <span class="o">=</span> macosx<span class="p">;</span>
-            <span class="o">}</span><span class="p">;</span>
-            <span class="nv">name</span> <span class="o">=</span> Debug<span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-...</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin XCBuildConfiguration section <span class="k">*</span>/
+        999A68431CC86ECD0001FC48 /<span class="k">*</span> Debug <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> XCBuildConfiguration;
+            buildSettings <span class="o">=</span> <span class="o">{</span>
+                ALWAYS_SEARCH_USER_PATHS <span class="o">=</span> NO;
+                CLANG_CXX_LANGUAGE_STANDARD <span class="o">=</span> <span class="s2">"gnu++0x"</span>;
+                CLANG_CXX_LIBRARY <span class="o">=</span> <span class="s2">"libc++"</span>;
+                CLANG_ENABLE_MODULES <span class="o">=</span> YES;
+                CLANG_ENABLE_OBJC_ARC <span class="o">=</span> YES;
+                CLANG_WARN_BOOL_CONVERSION <span class="o">=</span> YES;
+                CLANG_WARN_CONSTANT_CONVERSION <span class="o">=</span> YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE <span class="o">=</span> YES_ERROR;
+                CLANG_WARN_EMPTY_BODY <span class="o">=</span> YES;
+                CLANG_WARN_ENUM_CONVERSION <span class="o">=</span> YES;
+                CLANG_WARN_INT_CONVERSION <span class="o">=</span> YES;
+                CLANG_WARN_OBJC_ROOT_CLASS <span class="o">=</span> YES_ERROR;
+                CLANG_WARN_UNREACHABLE_CODE <span class="o">=</span> YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH <span class="o">=</span> YES;
+                COPY_PHASE_STRIP <span class="o">=</span> NO;
+                ENABLE_STRICT_OBJC_MSGSEND <span class="o">=</span> YES;
+                GCC_C_LANGUAGE_STANDARD <span class="o">=</span> gnu99;
+                GCC_DYNAMIC_NO_PIC <span class="o">=</span> NO;
+                GCC_OPTIMIZATION_LEVEL <span class="o">=</span> 0;
+                GCC_PREPROCESSOR_DEFINITIONS <span class="o">=</span> <span class="o">(</span>
+                    <span class="s2">"DEBUG=1"</span>,
+                    <span class="s2">"</span><span class="k">$(</span>inherited<span class="k">)</span><span class="s2">"</span>,
+                <span class="o">)</span>;
+                GCC_SYMBOLS_PRIVATE_EXTERN <span class="o">=</span> NO;
+                GCC_WARN_64_TO_32_BIT_CONVERSION <span class="o">=</span> YES;
+                GCC_WARN_ABOUT_RETURN_TYPE <span class="o">=</span> YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR <span class="o">=</span> YES;
+                GCC_WARN_UNINITIALIZED_AUTOS <span class="o">=</span> YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION <span class="o">=</span> YES;
+                GCC_WARN_UNUSED_VARIABLE <span class="o">=</span> YES;
+                MACOSX_DEPLOYMENT_TARGET <span class="o">=</span> 10.9;
+                MTL_ENABLE_DEBUG_INFO <span class="o">=</span> YES;
+                ONLY_ACTIVE_ARCH <span class="o">=</span> YES;
+                SDKROOT <span class="o">=</span> macosx;
+            <span class="o">}</span>;
+            name <span class="o">=</span> Debug;
+        <span class="o">}</span>;
+...</code></pre></figure>
 
 <p>By comparison, target configurations are much leaner, and are usually just about settings
-related to the target itself. This is the <code>XCConfigurationList</code> for target settings</p>
+related to the target itself. This is the <code class="highlighter-rouge">XCConfigurationList</code> for target settings</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">...
-        999A68451CC86ECD0001FC48 /* Build configuration list <span class="k">for</span> PBXNativeTarget <span class="s2">&quot;xplore&quot;</span> */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> XCConfigurationList<span class="p">;</span>
-            <span class="nv">buildConfigurations</span> <span class="o">=</span> <span class="o">(</span>
-                999A68461CC86ECD0001FC48 /* Debug */,
-                999A68471CC86ECD0001FC48 /* Release */,
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">defaultConfigurationIsVisible</span> <span class="o">=</span> 0<span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-/* End XCConfigurationList section */</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">...
+        999A68451CC86ECD0001FC48 /<span class="k">*</span> Build configuration list <span class="k">for </span>PBXNativeTarget <span class="s2">"xplore"</span> <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> XCConfigurationList;
+            buildConfigurations <span class="o">=</span> <span class="o">(</span>
+                999A68461CC86ECD0001FC48 /<span class="k">*</span> Debug <span class="k">*</span>/,
+                999A68471CC86ECD0001FC48 /<span class="k">*</span> Release <span class="k">*</span>/,
+            <span class="o">)</span>;
+            defaultConfigurationIsVisible <span class="o">=</span> 0;
+        <span class="o">}</span>;
+/<span class="k">*</span> End XCConfigurationList section <span class="k">*</span>/</code></pre></figure>
 
 <p>And here is the Debug target configuration:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">999A68461CC86ECD0001FC48 /* Debug */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> XCBuildConfiguration<span class="p">;</span>
-            <span class="nv">buildSettings</span> <span class="o">=</span> <span class="o">{</span>
-                <span class="nv">PRODUCT_NAME</span> <span class="o">=</span> <span class="s2">&quot;$(TARGET_NAME)&quot;</span><span class="p">;</span>
-            <span class="o">}</span><span class="p">;</span>
-            <span class="nv">name</span> <span class="o">=</span> Debug<span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">        999A68461CC86ECD0001FC48 /<span class="k">*</span> Debug <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> XCBuildConfiguration;
+            buildSettings <span class="o">=</span> <span class="o">{</span>
+                PRODUCT_NAME <span class="o">=</span> <span class="s2">"</span><span class="k">$(</span>TARGET_NAME<span class="k">)</span><span class="s2">"</span>;
+            <span class="o">}</span>;
+            name <span class="o">=</span> Debug;
+        <span class="o">}</span>;</code></pre></figure>
 
-<p>The variable <code>$(TARGET_NAME)</code> contains the value from the <code>name</code> key in <code>PBXNativeTarget</code>, and this
+<p>The variable <code class="highlighter-rouge">$(TARGET_NAME)</code> contains the value from the <code class="highlighter-rouge">name</code> key in <code class="highlighter-rouge">PBXNativeTarget</code>, and this
 in turn is creating an environment variable that is passed to the compiler when it runs. In the GUI
 configuration editor for target, it looks like this:</p>
 
@@ -459,20 +459,20 @@ the underlying names instead of “human-readable” ones:</p>
 
 <p><img src="/assets/xplore-5.png" alt="My helpful screenshot" /></p>
 
-<p>Returning to the <code>PBXNativeTarget</code> object, the most important part from the point of actually
-doing stuff is the <code>buildPhases</code> key, which is a list of build phases.</p>
+<p>Returning to the <code class="highlighter-rouge">PBXNativeTarget</code> object, the most important part from the point of actually
+doing stuff is the <code class="highlighter-rouge">buildPhases</code> key, which is a list of build phases.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin PBXNativeTarget section */
-        999A683D1CC86ECD0001FC48 /* xplore */ <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin PBXNativeTarget section <span class="k">*</span>/
+        999A683D1CC86ECD0001FC48 /<span class="k">*</span> xplore <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
 ...
-            <span class="nv">buildPhases</span> <span class="o">=</span> <span class="o">(</span>
-                999A683A1CC86ECD0001FC48 /* Sources */,
-                999A683B1CC86ECD0001FC48 /* Frameworks */,
-                999A683C1CC86ECD0001FC48 /* CopyFiles */,
-            <span class="o">)</span><span class="p">;</span>
+            buildPhases <span class="o">=</span> <span class="o">(</span>
+                999A683A1CC86ECD0001FC48 /<span class="k">*</span> Sources <span class="k">*</span>/,
+                999A683B1CC86ECD0001FC48 /<span class="k">*</span> Frameworks <span class="k">*</span>/,
+                999A683C1CC86ECD0001FC48 /<span class="k">*</span> CopyFiles <span class="k">*</span>/,
+            <span class="o">)</span>;
 ...
-        <span class="o">}</span><span class="p">;</span>
-/* End PBXNativeTarget section */</code></pre></div>
+        <span class="o">}</span>;
+/<span class="k">*</span> End PBXNativeTarget section <span class="k">*</span>/</code></pre></figure>
 
 <p>These are all magic singleton objects. There are a number of possible phases, not all projects
 have all phases. Here are the possible phases I know about</p>
@@ -488,10 +488,10 @@ have all phases. Here are the possible phases I know about</p>
   <li>PBXSourcesBuildPhase</li>
 </ul>
 
-<p>The two most important ones are <code>PBXSourcesBuildPhase</code> for building your own sources, and then
-<code>PBXFrameworksBuildPhase</code> for linking in external libraries and frameworks. In our Xcode wizard
-generated project, we also have a <code>PBXCopyFilesBuildPhase</code>, although this is a legacy of how
-Unix command-line tools are built (it copies man files into <code>/usr/share/man/man1/</code>, but in vain).
+<p>The two most important ones are <code class="highlighter-rouge">PBXSourcesBuildPhase</code> for building your own sources, and then
+<code class="highlighter-rouge">PBXFrameworksBuildPhase</code> for linking in external libraries and frameworks. In our Xcode wizard
+generated project, we also have a <code class="highlighter-rouge">PBXCopyFilesBuildPhase</code>, although this is a legacy of how
+Unix command-line tools are built (it copies man files into <code class="highlighter-rouge">/usr/share/man/man1/</code>, but in vain).
 We’ll ignore a Copy Files phase for now.</p>
 
 <p>If you want to see this in the GUI, select a target (in our case, xplore) and click on the
@@ -502,40 +502,40 @@ no frameworks or libraries to link against yet, Link Binary With Libraries also 
 
 <p>Since this is a small project, our Sources Build phase is short</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin PBXSourcesBuildPhase section */
-        999A683A1CC86ECD0001FC48 /* Sources */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> PBXSourcesBuildPhase<span class="p">;</span>
-            <span class="nv">buildActionMask</span> <span class="o">=</span> 2147483647<span class="p">;</span>
-            <span class="nv">files</span> <span class="o">=</span> <span class="o">(</span>
-                999A68421CC86ECD0001FC48 /* main.cpp in Sources */,
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">runOnlyForDeploymentPostprocessing</span> <span class="o">=</span> 0<span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-/* End PBXSourcesBuildPhase section */</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin PBXSourcesBuildPhase section <span class="k">*</span>/
+        999A683A1CC86ECD0001FC48 /<span class="k">*</span> Sources <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> PBXSourcesBuildPhase;
+            buildActionMask <span class="o">=</span> 2147483647;
+            files <span class="o">=</span> <span class="o">(</span>
+                999A68421CC86ECD0001FC48 /<span class="k">*</span> main.cpp <span class="k">in </span>Sources <span class="k">*</span>/,
+            <span class="o">)</span>;
+            runOnlyForDeploymentPostprocessing <span class="o">=</span> 0;
+        <span class="o">}</span>;
+/<span class="k">*</span> End PBXSourcesBuildPhase section <span class="k">*</span>/</code></pre></figure>
 
-<p>We have one file to build, indicated with a <code>PBXBuildFile</code> object in the <code>files</code> list in the
-<code>PBXSourcesBuildPhase</code> object.</p>
+<p>We have one file to build, indicated with a <code class="highlighter-rouge">PBXBuildFile</code> object in the <code class="highlighter-rouge">files</code> list in the
+<code class="highlighter-rouge">PBXSourcesBuildPhase</code> object.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin PBXBuildFile section */
-        999A68421CC86ECD0001FC48 /* main.cpp in Sources */ <span class="o">=</span> <span class="o">{</span><span class="nv">isa</span> <span class="o">=</span> PBXBuildFile<span class="p">;</span> <span class="nv">fileRef</span> <span class="o">=</span> 999A68411CC86ECD0001FC48 /* main.cpp */<span class="p">;</span> <span class="o">}</span><span class="p">;</span>
-/* End PBXBuildFile section */</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin PBXBuildFile section <span class="k">*</span>/
+        999A68421CC86ECD0001FC48 /<span class="k">*</span> main.cpp <span class="k">in </span>Sources <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>isa <span class="o">=</span> PBXBuildFile; fileRef <span class="o">=</span> 999A68411CC86ECD0001FC48 /<span class="k">*</span> main.cpp <span class="k">*</span>/; <span class="o">}</span>;
+/<span class="k">*</span> End PBXBuildFile section <span class="k">*</span>/</code></pre></figure>
 
-<p>This in turn points to a <code>PBXFileReference</code> object. Xcode’s indirection is a little annoying,
+<p>This in turn points to a <code class="highlighter-rouge">PBXFileReference</code> object. Xcode’s indirection is a little annoying,
 but keeps duplication and duplication-related error to a minimum. In this specific case, I’m not sure
 what is gained, because the build file item has no extra annotations on it, but maybe other kinds
 of objects have some build-specific annotation that goes here.</p>
 
 <p>The Xcode wizard added a Build Frameworks phase for us as a courtesy, but there’s nothing in it:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/* Begin PBXFrameworksBuildPhase section */
-        999A683B1CC86ECD0001FC48 /* Frameworks */ <span class="o">=</span> <span class="o">{</span>
-            <span class="nv">isa</span> <span class="o">=</span> PBXFrameworksBuildPhase<span class="p">;</span>
-            <span class="nv">buildActionMask</span> <span class="o">=</span> 2147483647<span class="p">;</span>
-            <span class="nv">files</span> <span class="o">=</span> <span class="o">(</span>
-            <span class="o">)</span><span class="p">;</span>
-            <span class="nv">runOnlyForDeploymentPostprocessing</span> <span class="o">=</span> 0<span class="p">;</span>
-        <span class="o">}</span><span class="p">;</span>
-/* End PBXFrameworksBuildPhase section */</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> Begin PBXFrameworksBuildPhase section <span class="k">*</span>/
+        999A683B1CC86ECD0001FC48 /<span class="k">*</span> Frameworks <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+            isa <span class="o">=</span> PBXFrameworksBuildPhase;
+            buildActionMask <span class="o">=</span> 2147483647;
+            files <span class="o">=</span> <span class="o">(</span>
+            <span class="o">)</span>;
+            runOnlyForDeploymentPostprocessing <span class="o">=</span> 0;
+        <span class="o">}</span>;
+/<span class="k">*</span> End PBXFrameworksBuildPhase section <span class="k">*</span>/</code></pre></figure>
 
 <p>And, that’s the entire wizard-generated project file.</p>
 
@@ -553,16 +553,16 @@ library:</p>
 <p>Now, let’s look at the workspace. We see a new project added (it’s in a folder because Xcode likes
 to do things that way, but we could move it around and edit the workspace to match):</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;Workspace</span>
-   <span class="na">version =</span> <span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+   <span class="na">version =</span> <span class="s">"1.0"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;FileRef</span>
-      <span class="na">location =</span> <span class="s">&quot;group:xplore.xcodeproj&quot;</span><span class="nt">&gt;</span>
+      <span class="na">location =</span> <span class="s">"group:xplore.xcodeproj"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;/FileRef&gt;</span>
    <span class="nt">&lt;FileRef</span>
-      <span class="na">location =</span> <span class="s">&quot;group:xlib/xlib.xcodeproj&quot;</span><span class="nt">&gt;</span>
+      <span class="na">location =</span> <span class="s">"group:xlib/xlib.xcodeproj"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;/FileRef&gt;</span>
-<span class="nt">&lt;/Workspace&gt;</span></code></pre></div>
+<span class="nt">&lt;/Workspace&gt;</span></code></pre></figure>
 
 <p>At this point, we have a new xlib.xcodeproj that will build a library (assuming we add sources
 to it), but there are no changes to the xplore.xcodeproj/project.pbxproj file. And if we put code
@@ -574,14 +574,14 @@ our main command-line binary.</p>
 <p><img src="/assets/xplore-11.png" alt="My helpful screenshot" /></p>
 
 <p>Now, if we diff the project before and after adding this library to the Build Frameworks phase,
-we see a handful of important changes to <code>xplore.xcodeproj/project.pbxproj</code>:</p>
+we see a handful of important changes to <code class="highlighter-rouge">xplore.xcodeproj/project.pbxproj</code>:</p>
 
 <ul>
-  <li>a new <code>PBXBuildFile</code> entry to link against libxlib.a</li>
-  <li>a new <code>PBXFileReference</code> object pointing to the file libxlib.a</li>
-  <li>an <code>files</code> entry in the <code>PBXFrameworksBuildPhase</code> object</li>
-  <li>a libxlib.a entry added to the top <code>PBXGroup</code> (which is a weird place to put it)</li>
-  <li>a library search path added to the <code>XCBuildConfiguration</code> for the target</li>
+  <li>a new <code class="highlighter-rouge">PBXBuildFile</code> entry to link against libxlib.a</li>
+  <li>a new <code class="highlighter-rouge">PBXFileReference</code> object pointing to the file libxlib.a</li>
+  <li>an <code class="highlighter-rouge">files</code> entry in the <code class="highlighter-rouge">PBXFrameworksBuildPhase</code> object</li>
+  <li>a libxlib.a entry added to the top <code class="highlighter-rouge">PBXGroup</code> (which is a weird place to put it)</li>
+  <li>a library search path added to the <code class="highlighter-rouge">XCBuildConfiguration</code> for the target</li>
 </ul>
 
   </article>

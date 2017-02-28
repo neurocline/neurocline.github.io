@@ -2,13 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Some Things Are Obvious</title>
-    <description>Answers to some of the world&#39;s questions
+    <description>Answers to some of the world's questions
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Feb 2017 08:35:23 -0800</pubDate>
-    <lastBuildDate>Wed, 22 Feb 2017 08:35:23 -0800</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Tue, 28 Feb 2017 13:51:57 -0800</pubDate>
+    <lastBuildDate>Tue, 28 Feb 2017 13:51:57 -0800</lastBuildDate>
+    <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://sacha.me/articles/jekyll-rouge/&quot;&gt;Syntax Highlighting in Jekyll With Rouge&lt;/a&gt;. Switch to GFM.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/lowleveldesign/wtrace&quot;&gt;wtrace&lt;/a&gt;. Uses ETW.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@tonywangcn/how-to-build-a-scaleable-crawler-to-crawl-million-pages-with-a-single-machine-in-just-2-hours-ab3e238d1c22#.97tw3lgs6&quot;&gt;How to build a scaleable crawler to crawl million pages with a single machine in just 2 hours&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://probablydance.com/2017/02/26/i-wrote-the-fastest-hashtable/&quot;&gt;I Wrote The Fastest Hashtable&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://idea.popcount.org/2017-02-20-epoll-is-fundamentally-broken-12/&quot;&gt;Epoll is fundamentally broken&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.jotaen.net/e7ywT/deploying-static-website-to-aws/&quot;&gt;Fast, Cheap And Automated: Deploying Static Websites To AWS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://benchmarksgame.alioth.debian.org/&quot;&gt;The Computer Language Benchmarks Game&lt;/a&gt;. I don’t know how to get to specific ones like &lt;a href=&quot;http://benchmarksgame.alioth.debian.org/u64q/performance.php?test=knucleotide&quot;&gt;k-nucleotide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rystsov.info/2017/02/15/simple-consensus.html&quot;&gt;In search of a simple consensus algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/transceptor-technology/pyleri&quot;&gt;pyleri&lt;/a&gt;. Python left-right parser.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://treefrogframework.github.io/cpi/&quot;&gt;cpi: tiny C++ interpreter&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Feb 2017 11:00:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/02/28/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/28/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Clustering</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cluster_analysis&quot;&gt;Cluster Analysis&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html&quot;&gt;Comparing Python Clustering Algorithms&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ims.uni-stuttgart.de/institut/mitarbeiter/schulte/theses/phd/algorithm.pdf&quot;&gt;Clustering Algorithms and Evaluations&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Feb 2017 10:00:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/02/28/clustering.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/28/clustering.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -84,7 +136,7 @@ of time.&lt;/p&gt;
       <item>
         <title>Converting Subversion to Git</title>
         <description>&lt;p&gt;Several groups have converted their large Subversion repository to Git. The largest I
-know about is KDE, and they ended up writing a new program &lt;code&gt;svntogit&lt;/code&gt; to do that.&lt;/p&gt;
+know about is KDE, and they ended up writing a new program &lt;code class=&quot;highlighter-rouge&quot;&gt;svntogit&lt;/code&gt; to do that.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/svn-all-fast-export/svn2git&quot;&gt;svn2git&lt;/a&gt;&lt;/li&gt;
@@ -102,7 +154,7 @@ know about is KDE, and they ended up writing a new program &lt;code&gt;svntogit&
 
 &lt;p&gt;&lt;a href=&quot;https://www.jeffgeerling.com/blogs/jeff-geerling/switching-svn-repository-svn2git&quot;&gt;Switching an SVN repository to Git with KDE’s Svn2Git&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Some people persevere with &lt;code&gt;git-svn&lt;/code&gt;, bundled with Git.&lt;/p&gt;
+&lt;p&gt;Some people persevere with &lt;code class=&quot;highlighter-rouge&quot;&gt;git-svn&lt;/code&gt;, bundled with Git.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://john.albin.net/git/convert-subversion-to-git&quot;&gt;Converting a Subversion repository to Git&lt;/a&gt;&lt;/p&gt;
 
@@ -358,15 +410,16 @@ newline characters are linefeeds, e.g. 0x0A. We would translate our input file t
 
 &lt;p&gt;As a reminder, this is the basic character set:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;a b c d e f g h i j k l m n o p q r s t u v w x y z
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a b c d e f g h i j k l m n o p q r s t u v w x y z
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 0 1 2 3 4 5 6 7 8 9
 _ { } [ ] # ( ) &amp;lt; &amp;gt; % : ; . ? * + - / ^ &amp;amp; | ~ ! = , \ &quot; ’
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;It is augmented with universal-character-name characters for any character outside this range.
-In theory, this means the use of escapes like &lt;code&gt;\u00F6&lt;/code&gt; instead of direct Unicode characters like
-&lt;code&gt;ö&lt;/code&gt;. However, the “as-if” rule applies here: the standard states that “an implementation may use
+In theory, this means the use of escapes like &lt;code class=&quot;highlighter-rouge&quot;&gt;\u00F6&lt;/code&gt; instead of direct Unicode characters like
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ö&lt;/code&gt;. However, the “as-if” rule applies here: the standard states that “an implementation may use
 any internal encoding, so long as…” it works out the same.&lt;/p&gt;
 
 &lt;p&gt;This also includes conversion of trigraphs, if trigraphs are supported. Trigraph support is not required
@@ -377,7 +430,7 @@ ignored here because identifying raw string literals is done in the preprocessor
 
 &lt;h1 id=&quot;phase-2---splice-lines-together&quot;&gt;Phase 2 - splice lines together&lt;/h1&gt;
 
-&lt;p&gt;The C++ standard says that lines ending in backlash &lt;code&gt;\&lt;/code&gt; are joined together with the following line
+&lt;p&gt;The C++ standard says that lines ending in backlash &lt;code class=&quot;highlighter-rouge&quot;&gt;\&lt;/code&gt; are joined together with the following line
 to create a single logical line. The main reason for this is for long string literals and for long
 preprocessor directives. The preprocessor is line-based in that a preprocessor directive must be on
 a single logical line. By splicing lines together before interpreting directives, we can make macros
@@ -394,28 +447,30 @@ then the universal-character-name translation in phase 1 and the line-splicing i
 and the raw string is the shortest sequence of characters that match the raw string pattern. This
 means for example that a raw string defined as such:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;char* s = R&quot;(my\
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;char* s = R&quot;(my\
 string)&quot;;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;would be the literal characters &lt;code&gt;my\&amp;lt;newline&amp;gt;string&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;would be the literal characters &lt;code class=&quot;highlighter-rouge&quot;&gt;my\&amp;lt;newline&amp;gt;string&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Now, does this mean that it’s the newline from the physical file? While the standard reads as ambiguous,
 I’m pretty sure this has to be a newline character - if the execution character set is UTF-8, then
 the string would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;74 68 69 73 5c 0a 73 74 72 69 6e 67 00
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;74 68 69 73 5c 0a 73 74 72 69 6e 67 00
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;regardless of the type of newline in the physical file.&lt;/p&gt;
 
-&lt;p&gt;Another exception is the &lt;code&gt;&amp;lt;:&lt;/code&gt; digraph; if the sequence &lt;code&gt;&amp;lt;::&lt;/code&gt; is followed by anything other than &lt;code&gt;:&lt;/code&gt; or &lt;code&gt;&amp;gt;&lt;/code&gt;, then
-this is treated as the token &lt;code&gt;&amp;lt;&lt;/code&gt; and not the digraph &lt;code&gt;&amp;lt;:&lt;/code&gt;. This is a little hard to puzzle out. The string &lt;code&gt;&amp;lt;::&amp;gt;&lt;/code&gt;
-would be digraphs for &lt;code&gt;[]&lt;/code&gt;, so that part makes sense, e.g a declaration such as &lt;code&gt;int main(int argc, char* argv[])&lt;/code&gt;.
-But it’s a little harder to see what &lt;code&gt;&amp;lt;:::&lt;/code&gt; would mean.&lt;/p&gt;
+&lt;p&gt;Another exception is the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;:&lt;/code&gt; digraph; if the sequence &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;::&lt;/code&gt; is followed by anything other than &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;, then
+this is treated as the token &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; and not the digraph &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;:&lt;/code&gt;. This is a little hard to puzzle out. The string &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;::&amp;gt;&lt;/code&gt;
+would be digraphs for &lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt;, so that part makes sense, e.g a declaration such as &lt;code class=&quot;highlighter-rouge&quot;&gt;int main(int argc, char* argv[])&lt;/code&gt;.
+But it’s a little harder to see what &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;:::&lt;/code&gt; would mean.&lt;/p&gt;
 
 &lt;p&gt;Personally, I think compilers should refuse to implement the punctuation diagraphs, and it look like MSVC
-does not support them (and maybe never did). I’m neutral on the keyword “diagraphs” like &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt; etc.
+does not support them (and maybe never did). I’m neutral on the keyword “diagraphs” like &lt;code class=&quot;highlighter-rouge&quot;&gt;and&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;or&lt;/code&gt; etc.
 I feel like those are too much like trying to pretend C++ is a different language. I also notice that
 MSVC doesn’t directly support them, only through a header file &lt;iso646.h&gt; where it creates macros for them...
 so not really digraphs. Just say no to digraphs.&lt;/iso646.h&gt;&lt;/p&gt;
@@ -498,207 +553,6 @@ I don’t think I need a CMS, but we’ll see. However, this does sound useful f
         
         
         <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://www.the-adam.com/adam/rantrave/st02.pdf&quot;&gt;A Description of One Programmer’s Programming Style Revisited&lt;/a&gt;. Written in 1990, updated in 2001.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://canonical.org/~kragen/memory-models/&quot;&gt;The memory models that underlie programming languages&lt;/a&gt;. Interesting.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://statweb.stanford.edu/~cgates/PERSI/papers/The%20MCMC%20Revolution.pdf&quot;&gt;The Markov Chain Monte Carlo Revolution&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1412.6621&quot;&gt;Why does Deep Learning work? - A perspective from Group Theory&lt;/a&gt;. This feels like a seminal paper.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/clockworksoul/smudge&quot;&gt;clockworksoul/smudge&lt;/a&gt;. Smudge is a lightweight Go library that provides group member discovery, status dissemination, and failure detection using the SWIM epidemic protocol.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://idea.popcount.org/2013-07-24-ir-is-better-than-assembly/&quot;&gt;IR is better than assembly&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.nelhage.com/2016/12/how-i-test/&quot;&gt;How I Write Tests&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 Jan 2017 08:57:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2017/01/01/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/01/01/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Compiling C++</title>
-        <description>&lt;p&gt;To all C fans - everything I’m writing applies equally to C and C++, I just got tired of saying
-C/C++, so picked the covering term. Also, I apologize in advance for anyone who runs across this;
-I’m writing this as notes for myself, and while this will end up in a more polished form, I will
-probably forget to put a link from here to the final version.&lt;/p&gt;
-
-&lt;p&gt;I am working from the C++14 standard draft N4296, which is freely available (the formal version
-of the standard costs money, but is functionally identical to the last draft). And none of this
-stuff changes with C++17, I believe.&lt;/p&gt;
-
-&lt;p&gt;The standard uses language that keeps options open, but this means the standard doesn’t talk about
-the really interesting bits. Let’s start with files.&lt;/p&gt;
-
-&lt;h1 id=&quot;files&quot;&gt;Files&lt;/h1&gt;
-
-&lt;p&gt;We put source code into files with names; these are often organized in hierarchical file systems.
-This does not mean that this will be the only way we ever work with source code, but we do work
-with it this way at the moment.&lt;/p&gt;
-
-&lt;p&gt;What is a file? It’s a sequence of bytes. It’s also a sequence of bits, but no known file system
-handles a file of say 1023 bits, it handles files with an integral number of bytes. But if you
-want to be pedantic, substitute “sequence of bits” for everything I write and it will work.
-It’s just extra mental work that will go unused until some future date where such a bit-oriented
-file system comes into existence.&lt;/p&gt;
-
-&lt;p&gt;We can also think of this as a stream of bytes, and you’ll see a lot of file APIs expressed
-as stream APIs. I prefer to not use this terminology, because the length of a stream is not
-nececessarily known until the end of the stream is encountered. A sequence is a predetermined
-and finite list.&lt;/p&gt;
-
-&lt;p&gt;The model of “file” that I use here is of an immutable sequence of bytes; if
-we have a different sequence, we have a different file. We have ambiguity if the same name refers
-to two different sequences of bytes. This will be important later.&lt;/p&gt;
-
-&lt;p&gt;Of course, it’s not just any sequence of bytes. The bytes have to be comprehendable as C++ source
-characters. This is the basic C++ source character set:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;a b c d e f g h i j k l m n o p q r s t u v w x y z
-A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-0 1 2 3 4 5 6 7 8 9
-_ { } [ ] # ( ) &amp;lt; &amp;gt; % : ; . ? * + - / ^ &amp;amp; | ~ ! = , \ &quot; ’
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The standard also allows for characters as identifed by universal-character-name, e.g. Unicode.&lt;/p&gt;
-
-&lt;p&gt;Also note that while this set includes all the printable ASCII characters except &lt;code&gt;@&lt;/code&gt; and &lt;code&gt;$&lt;/code&gt;,
-most compilers accept those characters as well - &lt;code&gt;@&lt;/code&gt; is needed for Objective-C, and the Gnu docs
-say something about &lt;code&gt;$&lt;/code&gt; used for VMS compatibility (still a thing, but HP announced end-of-life
-for OpenVMS in 2020).&lt;/p&gt;
-
-&lt;h1 id=&quot;separate-translation&quot;&gt;Separate translation&lt;/h1&gt;
-
-&lt;p&gt;Per 2.1 in the standard, the source program is handled in independent translation units; each
-translation unit is handled by itself and the output of all translation units is combined
-together to create the executable program.&lt;/p&gt;
-
-&lt;p&gt;A translation unit is a source file and all the files inserted with &lt;code&gt;#include&lt;/code&gt; preprocessor
-directives. Since files inserted by &lt;code&gt;#include&lt;/code&gt; are themselves source files, there is some
-external mechanism that decides which source files are the starts of translation units.&lt;/p&gt;
-
-&lt;p&gt;One reason for the persistent use of stream APIs is that files couldn’t necessarily fit into
-memory, even just the files for a single translation unit. Since C++ can be parsed with a
-context-free grammar augmented with semantic rules, a source file can be processed in a
-linear sequence from beginning to end, and so could be processed with stream API calls. It
-adds just enough complexity that it bleeds into the various steps of the compiler, so we
-will ignore this.&lt;/p&gt;
-
-&lt;p&gt;Not considering anything else, we have this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;file ... ==&amp;gt; compiler ==&amp;gt; linker ==&amp;gt; executable
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;where translation of each file could be done in any arbitrary order or even in parallel.&lt;/p&gt;
-
-&lt;h1 id=&quot;character-sets&quot;&gt;Character sets&lt;/h1&gt;
-
-&lt;p&gt;When compiling C++, there are three character sets we will encounter:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;File character set&lt;/li&gt;
-  &lt;li&gt;Source character set&lt;/li&gt;
-  &lt;li&gt;Execution character set&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These may all be the same, or may be distinct. A file may have an arbitrary character set, as
-long as the compiler can translate this into the source character set. In practice, compilers
-only deal with a few character sets, and may require that this be specified in some manner by
-the user. GCC expects that the file character set is isomorphic with ISO 10646 - this does not
-mean that it must be Unicode, just that there is a 1-to-1 translation between the file character
-set and Unicode. Also, note that UTF-8 is a very common file encoding.&lt;/p&gt;
-
-&lt;p&gt;The source character set was mentioned above. It’s not ISO 646 or Unicode, and it can be unique
-to a specific compiler. The standard just says that a certain set of characters must be
-supported. In practice, modern compilers use ISO 10646 internally. The entire reason to have
-the formality of a source character set is that real-world files are messy, so this gives the
-compiler writer a chance to fix things up to be canonical. Microsoft used to put a BOM into
-UTF-8 files even though this is not needed and makes invalid files. Or the author of a file
-mixed line endings due to copy/paste (lines with LF and lines with CRLF). Or really horrible things
-like mixed encodings, where lines were merged from a CP1252-encoded file into a UTF-8 encoded file.&lt;/p&gt;
-
-&lt;p&gt;The execution character set is the character set that strings in the executable are formatted in.
-This is very implementation-specific, and driven by the target platform. Note that only strings
-and character constants need to be translated - the C++ source at this point is gone, converted to
-whatever execution language was targetted. Again, UTF-8 is a common execution character set, because
-Unix operating systems have converged to that as the default system character set. Since the compiler
-is in charge of this, it generally comes out pristine, although garbage-in-garbage-out applies here.&lt;/p&gt;
-
-&lt;h1 id=&quot;translate-to-basic-source-character-set&quot;&gt;Translate to basic source character set&lt;/h1&gt;
-
-&lt;p&gt;The first step in the C++ compilation process is to translate characters from the in-file format
-to the source-character format. This is section 2.2.1 in the C++14 standard&lt;/p&gt;
-
-&lt;p&gt;Now, there are trivial ways to solve this. If source files are encoded in ASCII, ISO/IEC 10646,
-or UTF-8, and if the compiler knows about UTF-8, then all these characters would be the same
-in the file and in the source representation. And this is how compilers worked for many years.&lt;/p&gt;
-
-&lt;p&gt;However, the world is polyglot, and the standard has advanced. Newer versions of the standard
-mention that you can use Unicode characters, inserted with universal character names, and that
-means that the character set is now much larger than it used to be. And these Unicode characters
-can be used in identifiers, not just in comments and strings.&lt;/p&gt;
-
-&lt;p&gt;You don’t literally need to encode characters with universal-character-names, which would look
-like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-\u00F6
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;(which is the letter ö, if you were curious). The standard uses very careful language to allow
-for old file encodings that cannot contain Unicode characters; by using universal-character-name
-sequences, you can put Unicode characters into any file format that can hold all of the basic
-characters.&lt;/p&gt;
-
-&lt;p&gt;So now we have&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;file ... ==&amp;gt; source-chars ==&amp;gt; compiler ==&amp;gt; linker ==&amp;gt; executable
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But really, it’s a pipeline&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;file1 ==&amp;gt; source-chars ==&amp;gt; compiler ==&amp;gt; object1
-file2 ==&amp;gt; source-chars ==&amp;gt; compiler ==&amp;gt; object2
-...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Each stage of the pipeline transforms a sequence of bytes, although the transform may be the
-identify transform. For source character translation, if the file is already in the source character
-format, then nothing needs to happen.&lt;/p&gt;
-
-&lt;p&gt;This is a part where the standard is either insufficient or not fully implemented, because GCC
-only supports identifiers with &lt;code&gt;\u&lt;/code&gt; or &lt;code&gt;\U&lt;/code&gt; escapes, and not the Unicode characters themselves.&lt;/p&gt;
-
-&lt;h1 id=&quot;other&quot;&gt;other&lt;/h1&gt;
-
-&lt;p&gt;With the include model, we have:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(file, file, ...) ==&amp;gt; logical-source ==&amp;gt; compiler ==&amp;gt; executable
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;where &lt;code&gt;logical-source&lt;/code&gt; is the file that would be created by inserting contents of files
-in place of &lt;code&gt;#include&lt;/code&gt; preprocessor directives.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 30 Dec 2016 19:11:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2016/12/30/compiling-c++.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2016/12/30/compiling-c++.html</guid>
-        
-        <category>C++</category>
-        
-        
-        <category>dev</category>
         
       </item>
     
