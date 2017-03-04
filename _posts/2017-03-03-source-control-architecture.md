@@ -168,40 +168,40 @@ control system based on a strong theoretical backing.
 
 ## History
 
-1970 - Clear/Caster
-1972 - SCCS
-1980 - DSEE
-1982 - RCS
-1985 - PVCS
-1985 - MPW Projector/SourceServer (eol in 2001)
-1985 - RCS paper released
-1986 - CVS as a set of shell scripts
-1990 - CVS written in C
-1991 - QVCS (eol in 2010)
-1991 - Aegis
-1991 - TeamWare (eol in 2005)
-1992 - ClearCase (descendent of DSEE)
-1993 - Vesta
-1994 - Visual SourceSafe
-1995 - Perforce
-1996 - CVS pserver (network access)
-1998 - CVSNT (fork of CVS for better Windows NT support)
-1998 - BitKeeper
-2000 - Subversion development started
-2001 - Arch/tla ("Tom Lord's Arch") (end-of-life in 2009)
-2002 - AccuRev
-2003 - ArX (Arch fork)
-2003 - SVK
-2004 - Subversion 1.0
-2004 - ArX 2.0 incompatible with Arch
-2004 - FastCST (never reached a final state, abandoned)
-2005 - Team Foundation Server
-2005 - Baz (Arch fork) came and went in one year
-2005 - Bazaar development started (dying out in 2016)
-2005 - Git development started, 1.0 released
-2006 - Plastic SCM
-2008 - Subversion 1.5 with decent merge support
-2013 - Team Foundation Server distributed version
+- 1970 - Clear/Caster
+- 1972 - SCCS
+- 1980 - DSEE
+- 1982 - RCS
+- 1985 - PVCS
+- 1985 - MPW Projector/SourceServer (eol in 2001)
+- 1985 - RCS paper released
+- 1986 - CVS as a set of shell scripts
+- 1990 - CVS written in C
+- 1991 - QVCS (eol in 2010)
+- 1991 - Aegis
+- 1991 - TeamWare (eol in 2005)
+- 1992 - ClearCase (descendent of DSEE)
+- 1993 - Vesta
+- 1994 - Visual SourceSafe
+- 1995 - Perforce
+- 1996 - CVS pserver (network access)
+- 1998 - CVSNT (fork of CVS for better Windows NT support)
+- 1998 - BitKeeper
+- 2000 - Subversion development started
+- 2001 - Arch/tla ("Tom Lord's Arch") (end-of-life in 2009)
+- 2002 - AccuRev
+- 2003 - ArX (Arch fork)
+- 2003 - SVK
+- 2004 - Subversion 1.0
+- 2004 - ArX 2.0 incompatible with Arch
+- 2004 - FastCST (never reached a final state, abandoned)
+- 2005 - Team Foundation Server
+- 2005 - Baz (Arch fork) came and went in one year
+- 2005 - Bazaar development started (dying out in 2016)
+- 2005 - Git development started, 1.0 released
+- 2006 - Plastic SCM
+- 2008 - Subversion 1.5 with decent merge support
+- 2013 - Team Foundation Server distributed version
 
 ## Features
 
@@ -345,7 +345,7 @@ SCCS. This is because Larry McVoy, the developer, came from working on TeamWare.
 
 BitKeeper became open-source in 2016 - [bitkeeper.org](http://www.bitkeeper.org/)
 
-## Source Control versus Version Control versus Revision Control
+## "Source Control" versus "Version Control" versus "Revision Control"
 
 All three of these terms are equivalent:
 
