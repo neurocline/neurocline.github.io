@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Source Control data models</title>
+  <meta name="description" content="I’m going to discuss the designs of the currently popular source controlsystems; this is especially important if you want to convert repos fromone system to ...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <!-- link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic"-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2017/03/03/source-control-architecture.html">
+  <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Some Things Are Obvious</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/papers/">Papers</a>
+          
+        
+          
+          <a class="page-link" href="/reading/">Reading List</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Source Control data models</h1>
+    <p class="post-meta">Mar 3, 2017</p>
+  </header>
+
+  <article class="post-content">
+    <p>I’m going to discuss the designs of the currently popular source control
+systems; this is especially important if you want to convert repos from
+one system to another. This is notes for both a book on Source Control and
+for notes on converting projects from one source control system to another.</p>
+
+<p>If you want to quibble about the term, see the end of the text.</p>
+
+<p>There are several distinct systems of design when it comes to making a source
+control system, having to do with how you address lines of development. There’s also
+how you represent changes explicitly or not; some systems were based on patches as
+an implementation detail that couldn’t be changed, some expose patches as a
+first-class citizen visible to the user, and some treat patches as an optional
+optimization step.</p>
+
+<p>There are a number of old systems that I used but have forgotten how they worked,
+or never knew. They were proprietary, so little was said about their design. In
+particular, early systems like PVCS (Polytron Version Control System) and MPW
+Projector/SourceServer were used before CVS and SourceSafe existed or were
+popular.</p>
+
+<h2 id="per-file-revision">Per-file revision</h2>
+
+<p>SCCS and its descendants store revisions of individual files; each revision of a
+specific file has a version number unrelated to the version numbers in another file.</p>
+
+<p>As well as per-revision numbers that are assigned automatically, you can assign
+a symbolic name to a revision. If you assign the same name to a revision in each file,
+you can then refer to that as a tag (a fixed point in revision space) or a branch
+(a sliding point). CVS introduced the idea of reserved symbolic names: HEAD refers
+to the most recent revision of each file, and BASE the most recent revision you
+have fetched locally.</p>
+
+<p>These treat the trunk separately from branches - the trunk is the initial line of
+development, numbered 1.1, 1.2 etc, and then branches start a new numbering scheme
+at the point of branching. Thus, by looking at numbering, you can determine the
+branching hierarchy. This of course assumes a very centralized system; there is
+one source of truth.</p>
+
+<p>Because tag and branch names share the same namespace and are stored per-file, they
+pretty much need to be unique across the entire set of files.</p>
+
+<p>Because of the consequences of the per-file versioning, removing files is tricky,
+and adding files interferes with old history. If you remove a file, its history is
+gone. For this reason, CVS introduced an Attic folder on the server, where old files
+are moved into. However, of course, if you add a file, remove it, then add it again,
+then remove it again, you have a collision.</p>
+
+<p>All use deltas to store multiple revisions; SCCS and direct descendants like TeamWare
+or BitKeeper use interleaved deltas, RCS uses backward-deltas (main line) and forward-deltas
+(branches). History has shown that the RCS approach is actually very sub-optimal, but
+SCCS isn’t much better. However, deltas are not key to the data model itself, and
+are merely to reduce storage size.</p>
+
+<p>There is locking, but this doesn’t affect the data model, just the usage model.
+It’s possible to have or not have locking in any source control system.</p>
+
+<p>The last thing specific to this kind of system is that they all allow arbitrary
+precision when checking out revisions of files. You could have a single file
+checked out on a different branch, or directories, or any arbitrary combination
+you desire. This is not possible in some other systems (nor is it a good idea,
+really).</p>
+
+<p>The source control systems of this era have keyword expansion, which I hope is
+dying out. They also poorly handle binary files, having been made for small text
+files.</p>
+
+<h2 id="the-set-of-all-revisions-as-a-filesystem">The set of all revisions as a filesystem.</h2>
+
+<p>Subversion and Perforce follow a different model. There is a single logical
+filesystem that you can address as subsets either for fetching/committing
+or for branching. By convention, Subversion uses <code class="highlighter-rouge">trunk</code> as the name for a
+mainline, <code class="highlighter-rouge">branches</code> as the root for your individual branches, and <code class="highlighter-rouge">tags</code>
+as the root for all your tags, but you can have many projects in a single
+Subversion repo, each with their own <code class="highlighter-rouge">trunk</code>, <code class="highlighter-rouge">branches</code> and <code class="highlighter-rouge">tags</code> directories.</p>
+
+<p>In Subversion, this is implemented as a two-dimensional filesystem where one
+axis is the revision number and the other is the pathname, with copy-on-write
+to keep storage down to reasonable amounts, and use of diffs per-file to 
+control revision storage, much like SCCS and RCS used deltas. However, Subversion
+hides the actual storage behind a server, so it can change the implementation
+over time as required.</p>
+
+<p>In Perforce, instead of indexing by revision number, you index by changeset. But
+in practice, this is the same thing under a different name, although inside the
+implementation it’s possible that changeset is a more rigorous construct, like
+Darcs and its “theory of patches”.</p>
+
+<p>This conceptual model is simple, but has flaws. There is only tagging by convention;
+nothing stops you from adding a commit to a “tag”. In that case, strictly speaking,
+it’s now a branch, but it remains in the path you gave it, say
+<code class="highlighter-rouge">/tags/blizzcon-1-build</code>. Even worse, it’s quite easy by accident to commit
+to multiple branches at the same time (and some people see this as a desirable
+feature, in multi-project repositories). E.g. you can create a single branch
+for multiple projects at the same time.</p>
+
+<p>Subversion uses a skip-delta scheme that tries to walk a fine line between
+CVS (reverse and forward deltas) and SCCS (interleaved deltas).</p>
+
+<p>Perforce stores tags as metadata, not as entries in the filesystem. It added
+streams at some point, which is a more rigorously defined branching model
+(changes flow to the mainline, each stream has a parent stream)</p>
+
+<p>Presumably, Subversion copied Perforce, since Perforce started in 1995 and the
+Subversion project didn’t start until 2000.</p>
+
+<h2 id="snapshot-dag">Snapshot DAG</h2>
+
+<p>In some source control systems, notably Git but also Monotone (its inspiration),
+Mercurial and others, the model is actually a set of
+snapshots of trees, connected together in a DAG (directed acyclic graph).
+A branch is just a copy of a tree, and trees can be merged
+together as well; in fact, in Git, it is just as practical to merge together
+10 branches as 2 - once the merge is done, further operations on the history
+don’t care how many parents a merge has.</p>
+
+<p>In Git, every other artifact turns into an implementation detail, because the
+tree and the following and encoding of trees is the primitive. As such, Git
+repositories tend towards single-project use, since it’s easy to branch the
+entire repository and harder to branch a part of it. It’s not impossible,
+and over time Git has added the ability to do things with subtrees, such as
+moving them up or down in the tree without losing the ability to merge, but
+its origin is in whole-tree operations.</p>
+
+<p>Git has shown that many of what were thought to be ideal primitives are in fact
+a bad idea. Deltas aren’t a first-class citizen, they should be employed
+strictly as a time/space tradeoff. Even renames are inferred in Git, there is
+no mechanism to track changes to specific files. What has worked well is that
+many operations can be done directly on the DAG, without needing to look at
+individual files.</p>
+
+<p>What you lose is the more free-form ability given by “set of individual files”
+or “arbitrary tree”. This means that, even more than between SCCS and Subversion,
+going between Subversion and Git means that extra data needs to be kept out of
+band (or encoded in band) in order to save all the structure. It’s not hard to
+do a one-way transfer, but there are operations in Git that cannot be represented
+directly in Subversion (n-way merges) and there are operations in Subversion that
+cannot be represented directly in Git (mixed-revision checkouts, single-file
+or subtree branches, and especially committing to multiple branches at the same
+time). And perhaps the craziest thing in Subversion that is just flat-out illegal
+in a DAG is that you can “branch” a subtree back to the root. This is an impossible
+cycle in a DAG-based system but a legal (if bizzare) and non-breaking operation
+in Subversion.</p>
+
+<p>Monotone and Mercurial used a manifest as opposed to a tree of directory nodes.
+In Monotone, the manifest is a changeset, whereas in Mercurial there are both
+manifests and changesets. Monotone attempted a globally unique branch namespace
+by proposing that branch names incorporated DNS names and warning when branch
+names seemed to not follow this rule. Git avoids this by having branch names
+be local per repo, and a user decides how to map branch names in remote repos
+to branch names in the local repo.</p>
+
+<p>TBD: this may not be entirely true for Monotone, Mercurial and others - verify.</p>
+
+<h2 id="theory-of-patches">Theory of patches</h2>
+
+<p>Some source control systems believe that composing patches is the the single most
+important thing, and so are designed around that as the conceptual model. The
+most arrogant in this field is Darcs, which at times claims to be the only source
+control system based on a strong theoretical backing.</p>
+
+<h2 id="history">History</h2>
+
+<p>1970 - Clear/Caster
+1972 - SCCS
+1980 - DSEE
+1982 - RCS
+1985 - PVCS
+1985 - MPW Projector/SourceServer (eol in 2001)
+1985 - RCS paper released
+1986 - CVS as a set of shell scripts
+1990 - CVS written in C
+1991 - QVCS (eol in 2010)
+1991 - Aegis
+1991 - TeamWare (eol in 2005)
+1992 - ClearCase (descendent of DSEE)
+1993 - Vesta
+1994 - Visual SourceSafe
+1995 - Perforce
+1996 - CVS pserver (network access)
+1998 - CVSNT (fork of CVS for better Windows NT support)
+1998 - BitKeeper
+2000 - Subversion development started
+2001 - Arch/tla (“Tom Lord’s Arch”) (end-of-life in 2009)
+2002 - AccuRev
+2003 - ArX (Arch fork)
+2003 - SVK
+2004 - Subversion 1.0
+2004 - ArX 2.0 incompatible with Arch
+2004 - FastCST (never reached a final state, abandoned)
+2005 - Team Foundation Server
+2005 - Baz (Arch fork) came and went in one year
+2005 - Bazaar development started (dying out in 2016)
+2005 - Git development started, 1.0 released
+2006 - Plastic SCM
+2008 - Subversion 1.5 with decent merge support
+2013 - Team Foundation Server distributed version</p>
+
+<h2 id="features">Features</h2>
+
+<p>These are features that are desired by some or all users of source control.</p>
+
+<ul>
+  <li>Atomic operations</li>
+  <li>File locking</li>
+  <li>Branching</li>
+  <li>Merging</li>
+  <li>Tags</li>
+  <li>Secure</li>
+  <li>Distributed operation</li>
+  <li>Central/canonical repositories</li>
+</ul>
+
+<h2 id="notes-on-source-control-systems">Notes on source control systems</h2>
+
+<h3 id="clearcaster-sdc-cms">CLEAR/CASTER, SDC, CMS</h3>
+
+<p>Clear/Caster has a paper for it in 1970 that I haven’t read; I assume as a system it dates back to
+just before then. This appears to be unrelated to ClearCase, which was developed by Atria in
+1992.</p>
+
+<p>SDC, CMS.</p>
+
+<h3 id="sccs">SCCS</h3>
+
+<ul>
+  <li>local version control</li>
+  <li>single file history (projects are a fiction)</li>
+  <li>branches, tags</li>
+  <li>interleaved deltas to store multiple revisions</li>
+</ul>
+
+<p>SCCS was developed in 1972 by Mark Rochkind, at Bell Labs, and is credited as the first source
+control system (so maybe Clear/Caster wasn’t?). It stores version history per file with interleaved
+deltas, which means the entire revision file must be read to extract a specific version. In
+later versions of SCCS, a recursive mode was added so that an entire tree of SCCS files could
+be operated on at once. Interestingly, SCCS wasn’t open-source until 2006.</p>
+
+<p>I like the phrase I saw in a paper that called SCCS and RCS ‘local version control’: “Local version
+control stores the history of the code base on the same disk storage used for the code under
+development.”</p>
+
+<h3 id="rcs">RCS</h3>
+
+<p>Main architecture is pretty much identical to SCCS, with one big difference:</p>
+
+<ul>
+  <li>deltas as the mechanisms of storing multiple revisions</li>
+</ul>
+
+<p>RCS is a single-file source control systems, written as a reaction and proposed improvement over
+SCCS, with first release in 1982. As in SCCS, each file has individual history, but delta patches
+are used to store each version. Each version on the mainline is stored as a reverse delta from the
+next most recent version, and branches are stored as forward deltas.</p>
+
+<p>It’s not strictly true that RCS is a per-file system; if you have a directory named <code class="highlighter-rouge">RCS</code>,
+then you could operate on every file inside that RCS directory with a single command. However,
+it’s not really practical to use RCS in a multi-directory project.</p>
+
+<p>The definition of how patches are created and interpreted is baked into the system of each. SCCS/RCS
+are only of historical interest, but they had a lot of influence on systems that are alive today.</p>
+
+<p>Specifically, while SCCS did invent and RCS popularize the base concepts of source control that we
+use today, they are a dead-end because of some assumptions that sounded good at the time but turn
+out to be wrong - specifically, that deltas are the optimal way to handle changes in a file or set
+of files. This received heroic attention over the next 20 years but has been abandoned as not
+efficient in both space and access time.</p>
+
+<p>Also, to be clear, network access wasn’t an issue because there really weren’t networks
+at the time; mainframes with terminal access were the rule.</p>
+
+<p>RCS was closed-source until 1990, when it became open source. This is probably why it supplanted
+SCCS and was the base for CVS, and not on its technical merits. This is a lesson for tools
+developers - directly make money, or become the standard. In fact, very few closed-source tools
+become dominant.</p>
+
+<h3 id="cvs">CVS</h3>
+
+<p>Main architecture notes:</p>
+
+<ul>
+  <li>server-based access</li>
+  <li>whole-project-based (even though back-end storage uses RCS)</li>
+  <li>vendor branches</li>
+</ul>
+
+<p>CVS in one respect is a massive hack - it gave the user the ability to work
+on sets of files with a single command, but under the hood was just a massive set of RCS revision
+files. Thus, the features and design of CVS look remarkably like RCS, except that you can branch
+across a set of files in one operation, or check out or commit a set of files, or get history
+on a set of files.</p>
+
+<p>It started out in 1986 as a set of shell scripts running RCS, then by 1990 was reimplemented
+in C, and added network access in 1996.</p>
+
+<p>I don’t want to minimize the addition of a server - this is what made CVS be a credible source
+control system and able to be used across a network or even across the Internet. There are
+CVS repositories to this day, although no one sane would put a new project in CVS, and if
+it were zero effort, people would migrate away from it.</p>
+
+<p>More importantly, it added a cleaner user abstraction for branches.</p>
+
+<p>For a brief moment in time (2002-2006), DCVS was an attempt to turn CVS into a distributed
+system rather than a centralized system.</p>
+
+<h3 id="sourcesafe">Sourcesafe</h3>
+
+<p>Imagine a system halfway between RCS and CVS, and you have Sourcesafe. The client handles
+checkin of multiple files at the same time, but there is no server. Instead, you put your
+database in your file system, whether it’s on your computer or a file server. That decision
+led to easy implementation, but you can corrupt the repository quite easily, merely by
+having a problem with file system access in the middle of a checkout.</p>
+
+<p>Only mentioned because it had widespread use, but nothing new over CVS. And yes, VS 2005
+added a client/server mode, but SourceSafe had already died its ignominious death by then.</p>
+
+<h3 id="clearcase">ClearCase</h3>
+
+<p>Main architecture notes:</p>
+
+<ul>
+  <li>revisions as a view into the source control system (looking like the raw filesystem)</li>
+  <li>revisions as a set of overlays</li>
+</ul>
+
+<p>This was developed by Atria in 1992, and is based on an older system from Apollo called
+Domain Software Engineering system. It used the clever-in-theory but clumsy-in-practice
+metaphor of views into the revision tree - your working folder was a view mapped to the
+specific revision of files that you wanted to work on. Persistent sync and performance
+issues marred the illusion of seamlessly editing files on your system, however. The
+other barrier to widespread use was high cost, not just for the software, but in operating
+a ClearCase system; the statement was “one full-time sysop per 40 developers”.</p>
+
+<h3 id="teamware">TeamWare</h3>
+
+<p>Advanced for its time, but largely only used inside Sun.</p>
+
+<ul>
+  <li>hierarchy of repositories</li>
+  <li>atomic update of multiple files</li>
+  <li>distributed operation (by copying and merging repositories)</li>
+</ul>
+
+<p>This is a layer on top of SCCS.</p>
+
+<h3 id="bitkeeper">BitKeeper</h3>
+
+<p>Interestingly, BitKeeper is a layer on top of SCCS, or on top of a reimplementation of
+SCCS. This is because Larry McVoy, the developer, came from working on TeamWare.</p>
+
+<p>BitKeeper became open-source in 2016 - <a href="http://www.bitkeeper.org/">bitkeeper.org</a></p>
+
+<h2 id="source-control-versus-version-control-versus-revision-control">Source Control versus Version Control versus Revision Control</h2>
+
+<p>All three of these terms are equivalent:</p>
+
+<ul>
+  <li>source control</li>
+  <li>version control</li>
+  <li>revision control</li>
+</ul>
+
+<p>Source control as a phrase is geting more popular, and has now edged out
+version control - revision control is a distant third as a phrase. See the
+Google Ngram viewer:</p>
+
+<p><a href="https://books.google.com/ngrams/graph?content=revision+control%2Cversion+control%2C+source+control&amp;year_start=1980&amp;year_end=2010&amp;corpus=15&amp;smoothing=3&amp;share=&amp;direct_url=t1%3B%2Crevision%20control%3B%2Cc0%3B.t1%3B%2Cversion%20control%3B%2Cc0%3B.t1%3B%2Csource%20control%3B%2Cc0">phrase: source control, version control, revision control</a></p>
+
+<p>So, if you like version control better as a phrase, use it or lose it. If you like
+revision control as a phrase, that battle was lost from the start - give up and
+pick one of the others.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="http://sccs.sourceforge.net/">SCCS: The POSIX standard Source Code Control System</a></p>
+
+<p><a href="http://www.basepath.com/aup/talks/SCCS-Slideshow.pdf">The Source Code Control System</a></p>
+
+<p><a href="https://www.gnu.org/software/rcs/tichy-paper.pdf">RCS—A System for Version Control</a></p>
+
+<p><a href="http://people.ds.cam.ac.uk/fanf2/hermes/doc/talks/2012-04-staffsem/notes.pdf">Version Control Systems</a></p>
+
+<p><a href="http://www.nongnu.org/arx/codecon/img0.html">ArX Distributed Version Control</a></p>
+
+<p><a href="https://www.dwheeler.com/essays/scm.html">Comments on Open Source Software / Free Software (OSS/FS) Software Configuration Management (SCM) / Revision-Control Systems</a></p>
+
+<p><a href="https://www.mercurial-scm.org/wiki/Presentations?action=AttachFile&amp;do=get&amp;target=ols-mercurial-paper.pdf">Towards a Better SCM: Revlog and Mercurial</a></p>
+
+<p><a href="http://graydon.livejournal.com/186550.html">“not rocket science” (the story of monotone and bors)</a></p>
+
+<p><a href="http://www.monotone.ca/monotone.pdf">Monotone: A distributed version control system</a></p>
+
+<p><a href="http://ericsink.com/vcbe/">Version Control by Example</a></p>
+
+<p><a href="https://lwn.net/Articles/246381/">Re: clarification on git, central repositories and commit access lists</a></p>
+
+<p><a href="https://www.slideshare.net/JamesCMcPherson/the-great-migration-from-teamware-to-mercurial-presentation">The Great Migration: from TeamWare to Mercurial</a></p>
+
+<p><a href="https://www.perforce.com/sites/default/files/pdf/perforce-for-subversion-users-guide.pdf">Perforce for Subversion Users</a></p>
+
+<p><a href="https://www.perforce.com/sites/default/files/perforce_subversion.pdf">Comparison: Perforce and Subversion</a></p>
+
+<p><a href="http://stackoverflow.com/questions/17267218/perforce-for-git-users">Perforce for Git users</a></p>
+
+<p>Wikipedia (note to self: fix all the source control pages)</p>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Revision_Control_System">RCS</a>. 1982-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/PVCS">PVCS</a>. 1985-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/Macintosh_Programmer's_Workshop">MPW Projector</a>. 1985-2001</li>
+  <li><a href="https://en.wikipedia.org/wiki/QVCS">QVCS</a>. 1991-2013</li>
+  <li><a href="https://en.wikipedia.org/wiki/Vesta_(Software_configuration_management)">Vesta</a>. 1993-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/Microsoft_Visual_SourceSafe">Visual SourceSafe</a>. 1994-2005</li>
+  <li><a href="https://en.wikipedia.org/wiki/Perforce_Helix">Perforce</a>. 1995-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/CVSNT">CVSNT</a>. 1998-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/BitKeeper">BitKeeper</a>. 1998-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a>. 2000-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/GNU_arch">Arch</a>. 2001-2009</li>
+  <li><a href="https://en.wikipedia.org/wiki/Darcs">DCVS</a>. 2002-2006</li>
+  <li><a href="https://en.wikipedia.org/wiki/Surround_SCM">Surround SCM</a>. 2002-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/Monotone_(software)">Monotone</a>. 2003-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/ArX">Arx</a>. 2003-2005</li>
+  <li><a href="https://en.wikipedia.org/wiki/Darcs">Darcs</a>. 2003-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/Vault_(version_control_system)">Vault</a>. 2003-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/SVK">SVK</a>. 2003-2010</li>
+  <li><a href="https://en.wikipedia.org/wiki/Codeville">Codeville</a>. 2004-2008</li>
+  <li><a href="https://en.wikipedia.org/wiki/Git">Git</a>. 2005-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/Team_Foundation_Server">Team Foundation</a>. 2005-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/GNU_Bazaar">Bazaar</a>. 2005-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/Mercurial">Mercurial</a>. 2005-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/Fossil_(software)">Fossil</a>. 2006-present</li>
+  <li><a href="https://en.wikipedia.org/wiki/Veracity_(software)">Veracity</a>. 2010-present</li>
+</ul>
+
+<p>Needs a Wikipedia page</p>
+
+<ul>
+  <li><a href="http://aegis.sourceforge.net/">Aegis</a></li>
+  <li><a href="https://github.com/zedshaw/fcst">FastCST</a></li>
+</ul>
+
+<p>Dead and buried</p>
+
+<ul>
+  <li>OpenCM: no reference material online any more, and only indirect mentions of it.</li>
+</ul>
+
+<h2 id="more-notes">More notes</h2>
+
+<p>From <a href="https://lwn.net/Articles/271120/">Ten-year timeline part 6: almost to the present</a></p>
+
+<blockquote>
+  <p>I didn’t mean to imply that I invented the interesting ideas in monotone. Merely that it, as a
+social and researchy development project, both discovered a few fresh ideas and consolidated /
+refined many others, and has subsequently been a ripe source of ideas for its successors. I
+did some of the work, but also made a ton of mistakes; the key theoretical work we stumbled
+through during the course of monotone development was mostly the doing of others. Jerome
+Fisher, Nathaniel Smith, Derek Scherger, Bram and Ross Cohen, Timothy Brownawell, Christof
+Petig, Richard Levitte, Zack Weinberg, Peter Simons, Daniel Phillips, Emile Snyder, Markus
+Schiltknecht, Paul Crowley … and a long list of others who I am probably implicitly
+insulting by not mentioning here (sorry, limited comment space).</p>
+</blockquote>
+
+<p>Names to follow up on when tracking down the origin of both content-addressable and DAG
+as pertains to source control.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Some Things Are Obvious</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Some Things Are Obvious</li>
+          <li><a href="mailto:neurocline@gmail.com">neurocline@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/neurocline">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/neurocline">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Answers to some of the world's questions
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
