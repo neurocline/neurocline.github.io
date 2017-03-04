@@ -20,6 +20,18 @@ So, who hosts repositories for public access?
 * Gitlab: http://gitlab.com
 * Apache Software Foundation: https://www.apache.org/dev/version-control.html
 * repo.or.cz: http://repo.or.cz/
+* FusionForge: https://alioth.debian.org/
+
+While not a host itself, Blackduck Open Hub tracks many open source projects, with
+pointers to their repositories.
+
+* Blackduck Open Hub: https://www.openhub.net/
+
+If Blackduck's tracked repos match the world at large, then we are at 45% Subversion,
+41% Git, 8% CVS, 2% Mercurial, 1% Bazaar, 3% other. Since Perforce or Team Foundation
+are not mentioned at all, this means that there is some difference between the Blackduck
+open-source world and the entire world of developers. Separate stats I saw indicated
+that Team Foundation is at about 10% of source control users.
 
 ### CodePlex
 
