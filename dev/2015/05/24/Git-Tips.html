@@ -87,41 +87,41 @@
 
 <p>This removes untracked files from the working tree. Why would you do this? Let’s say
 you run a build process that litters the working tree with temporary files in
-dozens of folders, instead of being neat and tidy and putting it in a <code class="highlighter-rouge">build</code>
+dozens of folders, instead of being neat and tidy and putting it in a <code>build</code>
 folder.</p>
 
 <p>This will remove all untracked files, including ignored ones, and remove untracked
 directories as well:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clean -d -x</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clean -d -x</code></pre></div>
 
 <p>There are a handful of options, but this is my preferred “make it really clean”
-approach. You can use this with <code class="highlighter-rouge">git reset</code> to get back to a pristine working
+approach. You can use this with <code>git reset</code> to get back to a pristine working
 directory.</p>
 
 <p><a href="http://git-scm.com/docs/git-clean">git-clean</a></p>
 
-<h2 id="git-pull-rebase">git pull –rebase</h2>
+<h2 id="git-pull---rebase">git pull –rebase</h2>
 
 <p>Prefer to pull with rebasing instead of merging. Generally, your local changes
 were meant to be applied to the tip of the remote repository, so why not get
 in the habit of keeping your files rebased?</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git pull --rebase</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git pull --rebase</code></pre></div>
 
 <p>This is essentially the same as this</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git fetch
-git rebase</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git fetch
+git rebase</code></pre></div>
 
 <p>You can also set a few entries in config so that this happens without needing
-the <code class="highlighter-rouge">--rebase</code> flag. To set this so <code class="highlighter-rouge">master</code> branch always rebases:</p>
+the <code>--rebase</code> flag. To set this so <code>master</code> branch always rebases:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git config branch.master.rebase <span class="nb">true</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config branch.master.rebase <span class="nb">true</span></code></pre></div>
 
 <p>or to set it up so new branches always rebase automatically:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global branch.autosetuprebase always</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global branch.autosetuprebase always</code></pre></div>
 
 <p>There will still be cases where you will want to merge, but generally this would
 be an explicit step of merging a (feature) branch onto a (production) branch.</p>
@@ -134,12 +134,12 @@ be an explicit step of merging a (feature) branch onto a (production) branch.</p
 
 <p>If you have a workflow where you are cherry-picking commits from one branch to
 another, it’s useful to see what has been cherry-picked. If you want to see what
-has and hasn’t been cherry-picked from the current branch to <code class="highlighter-rouge">master</code>:</p>
+has and hasn’t been cherry-picked from the current branch to <code>master</code>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git cherry -v master</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git cherry -v master</code></pre></div>
 
-<p>This shows all commits on the current branch, prefixed with <code class="highlighter-rouge">+</code> for commits
-that have not yet been cherry-picked and with <code class="highlighter-rouge">-</code> for commits that have
+<p>This shows all commits on the current branch, prefixed with <code>+</code> for commits
+that have not yet been cherry-picked and with <code>-</code> for commits that have
 already been cherry-picked.</p>
 
   </article>

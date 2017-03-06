@@ -87,23 +87,23 @@
 
 <p>Since I update my blog from multiple computers, the first step is to sync with latest from GitHub:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">&gt; cd neurocline.github.io
+<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; cd neurocline.github.io
 &gt; git fetch --all
 &gt; git rebase origin/sources sources
 &gt; cd _site
 &gt; git rebase origin/master master
-&gt; cd ..</code></pre></figure>
+&gt; cd ..</code></pre></div>
 
 <p>Yes, I almost always fetch instead of pull, because if I had forgotten I’d made local changes, I
 don’t want a merge commit (even true when working in a group). That’s the reason for the rebase; I
-could do <code class="highlighter-rouge">git merge --ff-only ...</code> instead, which would either do a fast-forward or stop if
+could do <code>git merge --ff-only ...</code> instead, which would either do a fast-forward or stop if
 there are changes that need to be merged.</p>
 
 <p>Now that I’m up to date, I need to run a local jekyll server so I can preview what I’m doing:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">&gt; jekyll serve --drafts</code></pre></figure>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; jekyll serve --drafts</code></pre></div>
 
-<p>I use <code class="highlighter-rouge">--drafts</code> because I invariably have one or more draft articles, and I won’t see them
+<p>I use <code>--drafts</code> because I invariably have one or more draft articles, and I won’t see them
 otherwise.</p>
 
 <p>Now I edit posts. Currently I just do it the “hard” way, by typing everything; no help from rake
@@ -111,7 +111,7 @@ or the like. I expect I’ll get fancier as I write more.</p>
 
 <p>When I’m done for a bit, I stop the jekyll server, bake what I have, and commit:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">[ctrl-C to stop server]
+<div class="highlight"><pre><code class="language-text" data-lang="text">[ctrl-C to stop server]
 &gt; jekyll build
 &gt; git add -A
 &gt; git commit -m "First cut of workflow post"
@@ -120,7 +120,7 @@ or the like. I expect I’ll get fancier as I write more.</p>
 &gt; git add -A
 &gt; git commit -m "First cut of workflow post"
 &gt; git push origin master
-&gt; cd ..</code></pre></figure>
+&gt; cd ..</code></pre></div>
 
 <p>And since all of this is repetitive, I’ll soon look into one of the systems that automates this
 a little (I’ve seen hints of this), or I’ll write something myself.</p>

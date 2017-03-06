@@ -2,13 +2,95 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Some Things Are Obvious</title>
-    <description>Answers to some of the world's questions
+    <description>Answers to some of the world&#39;s questions
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Mar 2017 14:48:04 -0800</pubDate>
-    <lastBuildDate>Sat, 04 Mar 2017 14:48:04 -0800</lastBuildDate>
-    <generator>Jekyll v3.4.0</generator>
+    <pubDate>Mon, 06 Mar 2017 10:19:40 -0800</pubDate>
+    <lastBuildDate>Mon, 06 Mar 2017 10:19:40 -0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://selfie.cs.uni-salzburg.at/&quot;&gt;selfie&lt;/a&gt;. A compiler and VM in 7000 lines of C&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jvns.ca/blog/2013/12/30/questions-im-asking-in-interviews/&quot;&gt;Questions I’m asking in interviews&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://kukuruku.co/post/the-collapse-of-the-unix-philosophy/&quot;&gt;The Collapse of the UNIX Philosophy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leverlanguage.com/&quot;&gt;Lever&lt;/a&gt;. New Python-like language with deep GUI/OpenGL integration.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mlg.eng.cam.ac.uk/yarin/blog_2248.html&quot;&gt;Uncertainty in Deep Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://lists.gnu.org/archive/html/groff/2014-02/msg00104.html&quot;&gt;info is dead&lt;/a&gt;. What if info died and no one noticed. This is from 2014.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://undeadly.org/cgi?action=article&amp;amp;sid=20170304230520&quot;&gt;mandoc to markdown converter&lt;/a&gt;. Along with a lot of strong opinion.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://0pointer.net/blog/revisiting-how-we-put-together-linux-systems.html&quot;&gt;Revisiting How We Put Together Linux Systems&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://research.swtch.com/version-sat&quot;&gt;Version SAT&lt;/a&gt;. “Dependency hell is NP-complete. But maybe we can climb out.” Also see &lt;a href=&quot;https://thefeedbackloop.xyz/thoughts-on-dependency-hell-is-np-complete/&quot;&gt;Thoughts on “Dependency hell is NP-complete”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://slides.com/yehudakatz/deck-4#/&quot;&gt;Zen and the Art of Package Management&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://yarnpkg.com/en/&quot;&gt;Yarn package manager&lt;/a&gt;. Pretty sure it’s just for Javascript. The docs are too cute and don’t seem to get to the point.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.raywenderlich.com/148832/introduction-swift-package-manager&quot;&gt;An Introduction to the Swift Package Manager&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/apple/swift-package-manager/blob/master/Documentation/PackageManagerCommunityProposal.md&quot;&gt;Swift Package Manager Community Proposal&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://yurichev.com/blog/minesweeper/&quot;&gt;Cracking Minesweeper with Z3 SMT solver&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Mar 2017 10:00:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/03/05/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/03/05/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Local package managers</title>
+        <description>&lt;p&gt;Recently I read this presentation:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://slides.com/yehudakatz/deck-4#/&quot;&gt;Zen and the Art of Package Management&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I like the terminology of global package manager versus local package manager, so I think
+I’ll switch to that instead of “programming language package manager” (too unwieldy).&lt;/p&gt;
+
+&lt;p&gt;Specifically, we want more local package managers and fewer (no) global package managers.
+Some existing package managers claimed to be local package managers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; - for Ruby&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; - for Javascript/Node.js&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crates.io/&quot;&gt;Cargo&lt;/a&gt; - for Rust&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yarnpkg.com/en/&quot;&gt;Yarn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; - for PHP&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pub.dartlang.org/&quot;&gt;Pub&lt;/a&gt; - for Dart&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cocoapods.org/&quot;&gt;Cocoapods&lt;/a&gt; - for Cocoa (Objective-C and Swift)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://swift.org/package-manager/&quot;&gt;Swift Package Manager&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note, first off, that “local” can go along with “unwieldy” - cocoapods is getting quite
+unwieldly, so is npm.&lt;/p&gt;
+
+&lt;p&gt;I also like the clear-call out that containers are solving a problem that shouldn’t
+exist - global dependencies. The fewer global dependencies, the fewer container strategies
+you need on the development side.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Mar 2017 03:00:00 -0800</pubDate>
+        <link>http://neurocline.github.io/dev/2017/03/05/local-package-managers.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/03/05/local-package-managers.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Source Control data models</title>
@@ -82,10 +164,10 @@ files.&lt;/p&gt;
 
 &lt;p&gt;Subversion and Perforce follow a different model. There is a single logical
 filesystem that you can address as subsets either for fetching/committing
-or for branching. By convention, Subversion uses &lt;code class=&quot;highlighter-rouge&quot;&gt;trunk&lt;/code&gt; as the name for a
-mainline, &lt;code class=&quot;highlighter-rouge&quot;&gt;branches&lt;/code&gt; as the root for your individual branches, and &lt;code class=&quot;highlighter-rouge&quot;&gt;tags&lt;/code&gt;
+or for branching. By convention, Subversion uses &lt;code&gt;trunk&lt;/code&gt; as the name for a
+mainline, &lt;code&gt;branches&lt;/code&gt; as the root for your individual branches, and &lt;code&gt;tags&lt;/code&gt;
 as the root for all your tags, but you can have many projects in a single
-Subversion repo, each with their own &lt;code class=&quot;highlighter-rouge&quot;&gt;trunk&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;branches&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;tags&lt;/code&gt; directories.&lt;/p&gt;
+Subversion repo, each with their own &lt;code&gt;trunk&lt;/code&gt;, &lt;code&gt;branches&lt;/code&gt; and &lt;code&gt;tags&lt;/code&gt; directories.&lt;/p&gt;
 
 &lt;p&gt;In Subversion, this is implemented as a two-dimensional filesystem where one
 axis is the revision number and the other is the pathname, with copy-on-write
@@ -102,7 +184,7 @@ Darcs and its “theory of patches”.&lt;/p&gt;
 &lt;p&gt;This conceptual model is simple, but has flaws. There is only tagging by convention;
 nothing stops you from adding a commit to a “tag”. In that case, strictly speaking,
 it’s now a branch, but it remains in the path you gave it, say
-&lt;code class=&quot;highlighter-rouge&quot;&gt;/tags/blizzcon-1-build&lt;/code&gt;. Even worse, it’s quite easy by accident to commit
+&lt;code&gt;/tags/blizzcon-1-build&lt;/code&gt;. Even worse, it’s quite easy by accident to commit
 to multiple branches at the same time (and some people see this as a desirable
 feature, in multi-project repositories). E.g. you can create a single branch
 for multiple projects at the same time.&lt;/p&gt;
@@ -268,7 +350,7 @@ SCCS, with first release in 1982. As in SCCS, each file has individual history, 
 are used to store each version. Each version on the mainline is stored as a reverse delta from the
 next most recent version, and branches are stored as forward deltas.&lt;/p&gt;
 
-&lt;p&gt;It’s not strictly true that RCS is a per-file system; if you have a directory named &lt;code class=&quot;highlighter-rouge&quot;&gt;RCS&lt;/code&gt;,
+&lt;p&gt;It’s not strictly true that RCS is a per-file system; if you have a directory named &lt;code&gt;RCS&lt;/code&gt;,
 then you could operate on every file inside that RCS directory with a single command. However,
 it’s not really practical to use RCS in a multi-directory project.&lt;/p&gt;
 
@@ -422,7 +504,7 @@ pick one of the others.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Revision_Control_System&quot;&gt;RCS&lt;/a&gt;. 1982-present&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/PVCS&quot;&gt;PVCS&lt;/a&gt;. 1985-present&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Macintosh_Programmer's_Workshop&quot;&gt;MPW Projector&lt;/a&gt;. 1985-2001&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Macintosh_Programmer&#39;s_Workshop&quot;&gt;MPW Projector&lt;/a&gt;. 1985-2001&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/QVCS&quot;&gt;QVCS&lt;/a&gt;. 1991-2013&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Vesta_(Software_configuration_management)&quot;&gt;Vesta&lt;/a&gt;. 1993-present&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Microsoft_Visual_SourceSafe&quot;&gt;Visual SourceSafe&lt;/a&gt;. 1994-2005&lt;/li&gt;
@@ -510,22 +592,21 @@ comes when you want to faithfully represent the old repo’s lines of developmen
 &lt;p&gt;There are two typical patterns when using Subversion. The first is to have this
 top-level structure for a single-project repository:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/branches
+&lt;pre&gt;&lt;code&gt;/branches
 /tags
 /trunk
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Your main line of development is in &lt;code class=&quot;highlighter-rouge&quot;&gt;/trunk&lt;/code&gt;, you put branches as directories in
-&lt;code class=&quot;highlighter-rouge&quot;&gt;/branches&lt;/code&gt;, and you put tags in &lt;code class=&quot;highlighter-rouge&quot;&gt;/tags&lt;/code&gt;. Oh, right, forgot to mention - Subversion
+&lt;p&gt;Your main line of development is in &lt;code&gt;/trunk&lt;/code&gt;, you put branches as directories in
+&lt;code&gt;/branches&lt;/code&gt;, and you put tags in &lt;code&gt;/tags&lt;/code&gt;. Oh, right, forgot to mention - Subversion
 doesn’t have tagging either. There’s nothing to prevent you from committing to a copy
-made in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/tags&lt;/code&gt; hierarchy, thus turning it into a defacto branch, because it’s 
+made in the &lt;code&gt;/tags&lt;/code&gt; hierarchy, thus turning it into a defacto branch, because it’s 
 all convention. Hold that thought.&lt;/p&gt;
 
 &lt;p&gt;The other typical pattern is when Subversion is used to host a multi-project
 repository. In that case, you might have this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/abdera/
+&lt;pre&gt;&lt;code&gt;/abdera/
     /branches
     /tags
     /trunk
@@ -540,15 +621,14 @@ repository. In that case, you might have this:&lt;/p&gt;
     /trunk
 ...
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;As you might guess, this is from the Apache Software Foundation repo at
 https://svn.apache.org/repos/asf. Except, no, the reality is a lot messier.&lt;/p&gt;
 
 &lt;p&gt;Some projects, like ace or avro, have a handful of files and directories alongside the
-&lt;code class=&quot;highlighter-rouge&quot;&gt;trunk&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;branches&lt;/code&gt; dirs.&lt;/p&gt;
+&lt;code&gt;trunk&lt;/code&gt; and &lt;code&gt;branches&lt;/code&gt; dirs.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;KEYS
+&lt;pre&gt;&lt;code&gt;KEYS
 branches/
 doap.rdf
 releases/
@@ -556,12 +636,11 @@ sandbox/
 site/
 trunk/
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;htttp&lt;/code&gt; (Apache) project has a host of nested projects, each of which has its
-own &lt;code class=&quot;highlighter-rouge&quot;&gt;branches&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;tags&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;trunk&lt;/code&gt;. This is a subset, in the interests of space:&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;htttp&lt;/code&gt; (Apache) project has a host of nested projects, each of which has its
+own &lt;code&gt;branches&lt;/code&gt;, &lt;code&gt;tags&lt;/code&gt; and &lt;code&gt;trunk&lt;/code&gt;. This is a subset, in the interests of space:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apreq/
+&lt;pre&gt;&lt;code&gt;apreq/
 docs-build/
 flood/
 httpd/
@@ -582,11 +661,10 @@ sandbox/
 site/
 test/
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;And maven - well, maven is its own special child. This is a subset of the top level:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app-engine/
+&lt;pre&gt;&lt;code&gt;app-engine/
 archetype/
 maven-1/
 maven-2/
@@ -600,11 +678,10 @@ shared/
 site/
 trunks/
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Look, a &lt;code class=&quot;highlighter-rouge&quot;&gt;trunks&lt;/code&gt; directory. Which is - empty? And the &lt;code class=&quot;highlighter-rouge&quot;&gt;maven-1&lt;/code&gt; dir has an empty
-&lt;code class=&quot;highlighter-rouge&quot;&gt;trunks&lt;/code&gt;. We finally find source in &lt;code class=&quot;highlighter-rouge&quot;&gt;/maven/maven-2/branches&lt;/code&gt;. And the mainline
-of development is really &lt;code class=&quot;highlighter-rouge&quot;&gt;/maven/maven-3/trunk&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Look, a &lt;code&gt;trunks&lt;/code&gt; directory. Which is - empty? And the &lt;code&gt;maven-1&lt;/code&gt; dir has an empty
+&lt;code&gt;trunks&lt;/code&gt;. We finally find source in &lt;code&gt;/maven/maven-2/branches&lt;/code&gt;. And the mainline
+of development is really &lt;code&gt;/maven/maven-3/trunk&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;So, while the ASF repo is an example of the multi-project repo approach, it’s
 also an example of the heterogeniety of large Subversion repos. The approach up
@@ -759,7 +836,7 @@ of time.&lt;/p&gt;
       <item>
         <title>Converting Subversion to Git</title>
         <description>&lt;p&gt;Several groups have converted their large Subversion repository to Git. The largest I
-know about is KDE, and they ended up writing a new program &lt;code class=&quot;highlighter-rouge&quot;&gt;svntogit&lt;/code&gt; to do that.&lt;/p&gt;
+know about is KDE, and they ended up writing a new program &lt;code&gt;svntogit&lt;/code&gt; to do that.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/svn-all-fast-export/svn2git&quot;&gt;svn2git&lt;/a&gt;&lt;/li&gt;
@@ -777,7 +854,7 @@ know about is KDE, and they ended up writing a new program &lt;code class=&quot;
 
 &lt;p&gt;&lt;a href=&quot;https://www.jeffgeerling.com/blogs/jeff-geerling/switching-svn-repository-svn2git&quot;&gt;Switching an SVN repository to Git with KDE’s Svn2Git&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Some people persevere with &lt;code class=&quot;highlighter-rouge&quot;&gt;git-svn&lt;/code&gt;, bundled with Git.&lt;/p&gt;
+&lt;p&gt;Some people persevere with &lt;code&gt;git-svn&lt;/code&gt;, bundled with Git.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://john.albin.net/git/convert-subversion-to-git&quot;&gt;Converting a Subversion repository to Git&lt;/a&gt;&lt;/p&gt;
 
@@ -931,84 +1008,6 @@ is public access&lt;/p&gt;
         <pubDate>Fri, 03 Feb 2017 16:12:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2017/02/03/hosting-repositories.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/03/hosting-repositories.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/andrewchambers/c&quot;&gt;andrewchambers/c&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/m/#!msg/boring-crypto/48qa1kWignU/o8GGp2K1DAAJ&quot;&gt;boringc&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf&quot;&gt;The death of optimizing compilers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.regehr.org/archives/1453&quot;&gt;A Tourist’s Guide to the LLVM Source Code&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mattwarren.org/2016/12/12/Research-papers-in-the-.NET-source/&quot;&gt;Research papers in the .NET source&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://aiimpacts.org/concrete-ai-tasks-for-forecasting/&quot;&gt;Concrete AI tasks for forecasting&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.filfre.net/2017/01/a-time-of-endings-part-3-mediagenic-or-the-patent-from-hell/&quot;&gt;A Time of Endings, Part 3: Mediagenic (or, The Patent from Hell)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.upupgrow.com/blog/2017/1/5/the-art-of-pitching-how-i-got-published-in-the-atlantic&quot;&gt;The Art of Pitching: How I Got Published in The Atlantic&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/brilee/MuGo&quot;&gt;MuGo: A minimalist Go engine modeled after AlphaGo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dev.to/ben/which-editoride-do-you-use-and-why&quot;&gt;Which editor/IDE do you use and why?&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 06 Jan 2017 07:56:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2017/01/06/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/01/06/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://jeremykun.com/2015/04/06/markov-chain-monte-carlo-without-all-the-bullshit/&quot;&gt;Markov Chain Monte Carlo Without all the Bullshit&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jeremykun.com/2014/02/12/simulating-a-biased-coin-with-a-fair-coin/&quot;&gt;Simulating a Biased Coin with a Fair Coin&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/book-No-Solutions-Aug-21-2014.pdf&quot;&gt;Foundations of Data Science&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.mcmchandbook.net/HandbookChapter1.pdf&quot;&gt;Introduction to Markov Chain Monte Carlo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stats.stackexchange.com/questions/165/how-would-you-explain-markov-chain-monte-carlo-mcmc-to-a-layperson&quot;&gt;How would you explain Markov Chain Monte Carlo (MCMC) to a layperson?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mlwhiz.com/blog/2015/08/19/MCMC_Algorithms_Beta_Distribution/&quot;&gt;My Tryst With MCMC Algorithms&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mlwhiz.com/blog/2015/08/21/MCMC_Algorithms_Cryptography/&quot;&gt;Behold the power of MCMC&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://twiecki.github.io/blog/2015/11/10/mcmc-sampling/&quot;&gt;MCMC sampling for dummies&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cs.cornell.edu/selman/cs475/lectures/intro-mcmc-lukas.pdf&quot;&gt;Introduction to Markov Chain Monte Carlo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cs.princeton.edu/courses/archive/spr06/cos598C/papers/AndrieuFreitasDoucetJordan2003.pdf&quot;&gt;An Introduction to MCMC for Machine Learning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=h1NOS_wxgGg&quot;&gt;Markov Chain Monte Carlo and the Metropolis Algorithm (video)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vTUwEu53uzs&quot;&gt;A Beginner’s Guide to MCMC (video)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=uSAE1-wfIKU&quot;&gt;Introduction to Bayesian Methods (video)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stats.ox.ac.uk/~cholmes/Courses/BDA/bda_mcmc.pdf&quot;&gt;Markov Chain Monte Carlo and Applied Bayesian Statistics: a short course&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3619958/&quot;&gt;Markov Chain Monte Carlo: an introduction for epidemiologists&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://stats.stackexchange.com/questions/214724/how-do-abc-and-mcmc-differ-in-their-applications&quot;&gt;How do ABC and MCMC differ in their applications?&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 03 Jan 2017 10:46:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2017/01/03/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/01/03/recent-links.html</guid>
         
         <category>text</category>
         

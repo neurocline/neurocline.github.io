@@ -91,10 +91,10 @@ arbitrary code as its cases.</p>
 <p>So I was building up a program that wanted to handle terminating and aborting cleanly. I have a scanner
 that should terminate if some other part of the code says to. So I had this in my program</p>
 
-<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">select</span><span class="x"> </span><span class="p">{</span><span class="x">
+<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">select</span><span class="x"> </span><span class="p">{</span><span class="x">
 </span><span class="k">case</span><span class="x"> </span><span class="o">&lt;-</span><span class="x"> </span><span class="n">done</span><span class="o">:</span><span class="x">
     </span><span class="k">return</span><span class="x"> </span><span class="c">// aborting early</span><span class="x">
-</span><span class="p">}</span></code></pre></figure>
+</span><span class="p">}</span></code></pre></div>
 
 <p>And, nothing worked. Since my program had a goroutine for status monitoring, it ran, but it said that
 nothing was happening. Hmm. A few diagnostic prints zeroed in on the above code. I had to page through
@@ -105,12 +105,12 @@ what I thought I was doing, having it check for early abort.</p>
 <p>Adding a default case that does nothing did the trick; case statements are evaluated in order, so unless
 my done channel has a value on it, the default is reached and the select exits.</p>
 
-<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">select</span><span class="x"> </span><span class="p">{</span><span class="x">
+<div class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">select</span><span class="x"> </span><span class="p">{</span><span class="x">
 </span><span class="k">case</span><span class="x"> </span><span class="o">&lt;-</span><span class="x"> </span><span class="n">done</span><span class="o">:</span><span class="x">
     </span><span class="k">return</span><span class="x"> </span><span class="c">// aborting early</span><span class="x">
 </span><span class="k">default</span><span class="o">:</span><span class="x">
     </span><span class="c">// do nothing (a subtlety that needs to be reinforced)</span><span class="x">
-</span><span class="p">}</span></code></pre></figure>
+</span><span class="p">}</span></code></pre></div>
 
 <p>I’ve used select a few dozen times by now, but I guess I always lucked out. Or didn’t luck out.</p>
 
