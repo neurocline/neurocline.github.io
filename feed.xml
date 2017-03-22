@@ -6,9 +6,38 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Mar 2017 11:17:53 -0800</pubDate>
-    <lastBuildDate>Thu, 09 Mar 2017 11:17:53 -0800</lastBuildDate>
+    <pubDate>Wed, 22 Mar 2017 16:58:00 -0700</pubDate>
+    <lastBuildDate>Wed, 22 Mar 2017 16:58:00 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://re2c.org/&quot;&gt;re2c&lt;/a&gt;. “re2c is a lexer generator for C/C++”. See &lt;a href=&quot;https://github.com/skvadrik/re2c&quot;&gt;skvadrik/re2c&lt;/a&gt; on Github. This might be fast enough that I would use it instead of writing a hand-written scanner.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jgm/cmark&quot;&gt;cmark&lt;/a&gt;. “CommonMark parsing and rendering library and program in C”. Also see Github’s fork at &lt;a href=&quot;https://github.com/github/cmark&quot;&gt;github/cmark&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://commonmark.org/&quot;&gt;CommonMark&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.github.com/gfm/&quot;&gt;GitHub Flavored Markdown Spec&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jhallen/joes-sandbox/tree/master/editor-perf&quot;&gt;Text Editor Performance Comparison&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://distill.pub/2017/research-debt/&quot;&gt;Research Debt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bcachefs.org/&quot;&gt;bcachefs&lt;/a&gt;. “The COW filesystem for Linux that won’t eat your data”&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.topbots.com/4-different-approaches-natural-language-processing-understanding&quot;&gt;4 APPROACHES TO NATURAL LANGUAGE PROCESSING &amp;amp; UNDERSTANDING&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 22 Mar 2017 15:00:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/03/22/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/03/22/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -860,77 +889,6 @@ of time.&lt;/p&gt;
         <pubDate>Sat, 18 Feb 2017 11:36:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2017/02/18/dependencies.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/18/dependencies.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Converting Subversion to Git</title>
-        <description>&lt;p&gt;Several groups have converted their large Subversion repository to Git. The largest I
-know about is KDE, and they ended up writing a new program &lt;code&gt;svntogit&lt;/code&gt; to do that.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/svn-all-fast-export/svn2git&quot;&gt;svn2git&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://techbase.kde.org/Projects/MoveToGit/UsingSvn2Git&quot;&gt;UsingSvn2Git&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The KDE Subversion repository is still accessible at&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;svn://anonsvn.kde.org/home/kde&quot;&gt;svn://anonsvn.kde.org/home/kde&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://websvn.kde.org&quot;&gt;https://websvn.kde.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Other people have used their tool&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.jeffgeerling.com/blogs/jeff-geerling/switching-svn-repository-svn2git&quot;&gt;Switching an SVN repository to Git with KDE’s Svn2Git&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Some people persevere with &lt;code&gt;git-svn&lt;/code&gt;, bundled with Git.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://john.albin.net/git/convert-subversion-to-git&quot;&gt;Converting a Subversion repository to Git&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I was writing my own partly because of pathologies in in-house repos that choked everything
-I found, and partly because I have bigger plans.&lt;/p&gt;
-
-&lt;h2 id=&quot;large-subversion-repos&quot;&gt;Large Subversion repos&lt;/h2&gt;
-
-&lt;p&gt;The Apache Software Foundation puts all projects into a single common repo. As of this writing,
-it has 1,783,493 revisions:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://svn.apache.org/repos/asf&quot;&gt;https://svn.apache.org/repos/asf&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;KDE used to be in Subversion, and small pieces stil live there (just localization at
-this point, I think). As of this writing, it has 1,482,977 revisions:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;svn://anonsvn.kde.org/home/kde&quot;&gt;svn://anonsvn.kde.org/home/kde&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;GCC is in Subversion, although I think they are trying to switch to Git. As of this writing,
-it has 245,564 revisions:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;svn://gcc.gnu.org/svn/gcc&quot;&gt;svn://gcc.gnu.org/svn/gcc&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;SourceForge still uses Subversion for project repos.&lt;/p&gt;
-
-&lt;h2 id=&quot;random-notes&quot;&gt;Random notes&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=7648237&quot;&gt;Facebook’s git repo is 54GB&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/geerlingguy/ansible-vagrant-examples&quot;&gt;geerlingguy/ansible-vagrant-examples&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://gcc.gnu.org/svn.html&quot;&gt;GCC: Anonymous read-only SVN access&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://scholarslab.org/research-and-development/adventures-in-converting-subversion-to-git/&quot;&gt;Adventures in Converting Subversion to Git&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.chiark.greenend.org.uk/~sgtatham/svn.html&quot;&gt;My Experiences With Subversion&lt;/a&gt; - this is
-really about a CVS -&amp;gt; Subversion conversion.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 18 Feb 2017 11:36:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2017/02/18/converting-subversion-to-git.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/18/converting-subversion-to-git.html</guid>
         
         <category>text</category>
         
