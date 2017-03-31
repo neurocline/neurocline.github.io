@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Writing std::filesystem</title>
+  <meta name="description" content="Let’s write our own implementation of std::filesystem. Here’s what we’re going to work from.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2017/03/31/writing-std-filesystem.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,98 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Writing std::filesystem</h1>
+    <p class="post-meta">Mar 31, 2017</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Mar 31, 2017</span>
+  <article class="post-content">
+    <p>Let’s write our own implementation of std::filesystem. Here’s what we’re going to work from.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/03/31/writing-std-filesystem.html">Writing std::filesystem</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 22, 2017</span>
+<ul>
+  <li><a href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4618.pdf">C++17 draft standard</a> - see 27.10 File systems</li>
+  <li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf">File System Technical Specification</a> - essentially what’s in the standard</li>
+  <li><a href="http://www.boost.org/doc/libs/1_42_0/libs/filesystem/doc/index.htm">Boost Filesystem Library</a> - the TS came from Boost, after all</li>
+  <li>[<filesystem> (Visual Studio 2015)](https://msdn.microsoft.com/en-us/library/hh874694.aspx)</filesystem></li>
+  <li><a href="https://gcc.gnu.org/onlinedocs/gcc-6.1.0/libstdc++/api/a01832.html">libcstdc++ Filesystem</a></li>
+  <li><a href="http://en.cppreference.com/w/cpp/experimental/fs">Filesystem library (cppreference.com)</a></li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/03/22/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 8, 2017</span>
+<p>This shipped as std::experimental::filesystem in Visual Studio 2015 (don’t think VS2017 promoted it to
+std::filesystem).</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/03/08/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 5, 2017</span>
+<p>It shipped as <code>std::experimental::filesystem</code> in GCC 5.3 in libstdc++.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/03/05/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 5, 2017</span>
+<p>While it’s implemented in libc++, also as <code>std::experimental::filesystem</code>,
+it’s not shipping with a Clang version yet (you need to build your own Clang/libc++ to enable it).</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/03/05/local-package-managers.html">Local package managers</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>So, let’s just write our own so we can start using it everywhere. Since we’re starting from the fact of
+the C++17 standard now including it, we will just create <code>std::filesystem</code>. This makes our life a little
+easier at the moment, since no vendor has yet promoted it out of experimental.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<h1 id="filesystem"><filesystem></filesystem></h1>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>This is somewhat defined for us in the standard. This goes in the namespace <code>std::filesystem</code>:</p>
+
+<p>```
+namespace std {
+namespace filesystem {
+inline namespace v1 {</p>
+
+<p>} } } // namespace std::fileystem::v1
+```</p>
+
+<p>Note the <code>inline namespace v1</code>. See REFERENCE for an explanation about using inline namespaces to help
+in API versioning.</p>
+
+<p>The classes in our namespace:</p>
+
+<p><code>
+class path;
+class filesystem_error;
+class directory_entry;
+class directory_iterator;
+class recursive_directory_iterator;
+class file_status;
+struct space_info;
+enum class file_type;
+enum class perms;
+enum class copy_options;
+enum class directory_options;
+typedef chrono::time_point&lt;trivial-clock&gt; file_time_type;
+</code></p>
+
+<p>There are also a host of non-member functions to implement. We’re going to group these by
+functionality, rather than address them all at once.</p>
+
+<h1 id="filetimetype">file_time_type</h1>
+
+<p>The standard says that <code>trivial-clock</code> is an implementation-defined type that satisfies
+the C++ concept <code>TrivialClock</code> (all this means is that this is a clock that would make the
+<code>chrono</code> library happy) and is sufficient to represent the resolution and range of the file time
+values offered by the filesystem. What the fuck, standard committee! Right off the bat,
+we have something that could differ between filesystems and thus we can’t really pass these
+values between file systems.</p>
+
+<p>See <a href="http://en.cppreference.com/w/cpp/concept/TrivialClock">http://en.cppreference.com/w/cpp/concept/TrivialClock</a>
+for something readable about <code>TrivialClock</code>.</p>
+
+<p>We could take the easy route. Since all the <code>chrono</code> clocks meet the <code>TrivialClock</code> requirements,
+we could just do this:</p>
+
+<p><code>
+using file_time_type = std::chrono::time_point&lt;std::chrono::system_clock&gt;;
+</code></p>
+
+<p>Let’s call that the v0 implementation.</p>
+
+<p>We’re going to put a line in the sand. Our clock is 64-bit nanoseconds with a zero at 2000/01/01 00:00:00 UTC.
+This has the happy property that it’s a superset of Windows <code>FILETIME</code> and most Linux and Unix filesystems
+that I’ve ever heard of, a superset that is losslessly convertible.</p>
+
+  </article>
 
 </div>
 
