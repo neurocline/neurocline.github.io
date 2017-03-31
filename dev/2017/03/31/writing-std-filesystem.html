@@ -92,7 +92,7 @@
   <li><a href="http://en.cppreference.com/w/cpp/experimental/fs">Filesystem library (cppreference.com)</a></li>
 </ul>
 
-<p>This shipped as std::experimental::filesystem in Visual Studio 2015 (don’t think VS2017 promoted it to
+<p>This shipped as <code>std::experimental::filesystem</code> in Visual Studio 2015 (don’t think VS2017 promoted it to
 std::filesystem).</p>
 
 <p>It shipped as <code>std::experimental::filesystem</code> in GCC 5.3 in libstdc++.</p>
@@ -108,33 +108,29 @@ easier at the moment, since no vendor has yet promoted it out of experimental.</
 
 <p>This is somewhat defined for us in the standard. This goes in the namespace <code>std::filesystem</code>:</p>
 
-<p>```
-namespace std {
-namespace filesystem {
-inline namespace v1 {</p>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">namespace</span> <span class="n">std</span> <span class="p">{</span>
+<span class="k">namespace</span> <span class="n">filesystem</span> <span class="p">{</span>
+<span class="kr">inline</span> <span class="k">namespace</span> <span class="n">v1</span> <span class="p">{</span>
 
-<p>} } } // namespace std::fileystem::v1
-```</p>
+<span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="o">//</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">fileystem</span><span class="o">::</span><span class="n">v1</span></code></pre></div>
 
 <p>Note the <code>inline namespace v1</code>. See REFERENCE for an explanation about using inline namespaces to help
 in API versioning.</p>
 
 <p>The classes in our namespace:</p>
 
-<p><code>
-class path;
-class filesystem_error;
-class directory_entry;
-class directory_iterator;
-class recursive_directory_iterator;
-class file_status;
-struct space_info;
-enum class file_type;
-enum class perms;
-enum class copy_options;
-enum class directory_options;
-typedef chrono::time_point&lt;trivial-clock&gt; file_time_type;
-</code></p>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">class</span> <span class="nc">path</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">filesystem_error</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">directory_entry</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">directory_iterator</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">recursive_directory_iterator</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">file_status</span><span class="p">;</span>
+<span class="k">struct</span> <span class="n">space_info</span><span class="p">;</span>
+<span class="k">enum</span> <span class="k">class</span> <span class="nc">file_type</span><span class="p">;</span>
+<span class="k">enum</span> <span class="k">class</span> <span class="nc">perms</span><span class="p">;</span>
+<span class="k">enum</span> <span class="k">class</span> <span class="nc">copy_options</span><span class="p">;</span>
+<span class="k">enum</span> <span class="k">class</span> <span class="nc">directory_options</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">trivial</span><span class="o">-</span><span class="n">clock</span><span class="o">&gt;</span> <span class="n">file_time_type</span><span class="p">;</span></code></pre></div>
 
 <p>There are also a host of non-member functions to implement. We’re going to group these by
 functionality, rather than address them all at once.</p>
@@ -154,9 +150,7 @@ for something readable about <code>TrivialClock</code>.</p>
 <p>We could take the easy route. Since all the <code>chrono</code> clocks meet the <code>TrivialClock</code> requirements,
 we could just do this:</p>
 
-<p><code>
-using file_time_type = std::chrono::time_point&lt;std::chrono::system_clock&gt;;
-</code></p>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">using</span> <span class="n">file_time_type</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">&gt;</span><span class="p">;</span></code></pre></div>
 
 <p>Let’s call that the v0 implementation.</p>
 
