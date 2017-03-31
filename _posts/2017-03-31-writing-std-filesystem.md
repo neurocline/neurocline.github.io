@@ -15,7 +15,7 @@ Let's write our own implementation of std::filesystem. Here's what we're going t
 - [libcstdc++ Filesystem](https://gcc.gnu.org/onlinedocs/gcc-6.1.0/libstdc++/api/a01832.html)
 - [Filesystem library (cppreference.com)](http://en.cppreference.com/w/cpp/experimental/fs)
 
-This shipped as std::experimental::filesystem in Visual Studio 2015 (don't think VS2017 promoted it to
+This shipped as `std::experimental::filesystem` in Visual Studio 2015 (don't think VS2017 promoted it to
 std::filesystem).
 
 It shipped as `std::experimental::filesystem` in GCC 5.3 in libstdc++.
@@ -31,20 +31,20 @@ easier at the moment, since no vendor has yet promoted it out of experimental.
 
 This is somewhat defined for us in the standard. This goes in the namespace `std::filesystem`:
 
-```
+{% highlight c++ %}
 namespace std {
 namespace filesystem {
 inline namespace v1 {
 
 } } } // namespace std::fileystem::v1
-```
+{% endhighlight %}
 
 Note the `inline namespace v1`. See REFERENCE for an explanation about using inline namespaces to help
 in API versioning.
 
 The classes in our namespace:
 
-```
+{% highlight c++ %}
 class path;
 class filesystem_error;
 class directory_entry;
@@ -57,7 +57,7 @@ enum class perms;
 enum class copy_options;
 enum class directory_options;
 typedef chrono::time_point<trivial-clock> file_time_type;
-```
+{% endhighlight %}
 
 There are also a host of non-member functions to implement. We're going to group these by
 functionality, rather than address them all at once.
@@ -77,9 +77,9 @@ for something readable about `TrivialClock`.
 We could take the easy route. Since all the `chrono` clocks meet the `TrivialClock` requirements,
 we could just do this:
 
-```
+{% highlight c++ %}
 using file_time_type = std::chrono::time_point<std::chrono::system_clock>;
-```
+{% endhighlight %}
 
 Let's call that the v0 implementation.
 
