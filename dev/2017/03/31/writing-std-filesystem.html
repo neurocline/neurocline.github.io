@@ -87,7 +87,7 @@
   <li><a href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4618.pdf">C++17 draft standard</a> - see 27.10 File systems</li>
   <li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf">File System Technical Specification</a> - essentially what’s in the standard</li>
   <li><a href="http://www.boost.org/doc/libs/1_42_0/libs/filesystem/doc/index.htm">Boost Filesystem Library</a> - the TS came from Boost, after all</li>
-  <li>[<filesystem> (Visual Studio 2015)](https://msdn.microsoft.com/en-us/library/hh874694.aspx)</filesystem></li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/hh874694.aspx">filesystem (Visual Studio 2015)</a></li>
   <li><a href="https://gcc.gnu.org/onlinedocs/gcc-6.1.0/libstdc++/api/a01832.html">libcstdc++ Filesystem</a></li>
   <li><a href="http://en.cppreference.com/w/cpp/experimental/fs">Filesystem library (cppreference.com)</a></li>
 </ul>
@@ -104,17 +104,20 @@ it’s not shipping with a Clang version yet (you need to build your own Clang/l
 the C++17 standard now including it, we will just create <code>std::filesystem</code>. This makes our life a little
 easier at the moment, since no vendor has yet promoted it out of experimental.</p>
 
-<h1 id="filesystem"><filesystem></filesystem></h1>
+<h1 id="ltfilesystemrt">&lt;filesystem&amp;rt;</h1>
 
-<p>This is somewhat defined for us in the standard. This goes in the namespace <code>std::filesystem</code>:</p>
+<p>This is somewhat defined for us in the standard. This goes in the namespace <code>std::filesystem</code>. We
+wrap it like this:</p>
 
 <div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">namespace</span> <span class="n">std</span> <span class="p">{</span>
 <span class="k">namespace</span> <span class="n">filesystem</span> <span class="p">{</span>
 <span class="kr">inline</span> <span class="k">namespace</span> <span class="n">v1</span> <span class="p">{</span>
 
+<span class="p">...</span> <span class="n">contents</span> <span class="p">...</span>
+
 <span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="o">//</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">fileystem</span><span class="o">::</span><span class="n">v1</span></code></pre></div>
 
-<p>Note the <code>inline namespace v1</code>. See REFERENCE for an explanation about using inline namespaces to help
+<p>Note the <code>inline namespace v1</code>. See <a href="http://stackoverflow.com/questions/11016220/what-are-inline-namespaces-for">What are inline namespaces for?</a> for an explanation about using inline namespaces to help
 in API versioning.</p>
 
 <p>The classes in our namespace:</p>
@@ -134,6 +137,8 @@ in API versioning.</p>
 
 <p>There are also a host of non-member functions to implement. We’re going to group these by
 functionality, rather than address them all at once.</p>
+
+<p>Let’s cover trivial stuff first.</p>
 
 <h1 id="filetimetype">file_time_type</h1>
 
@@ -157,6 +162,119 @@ we could just do this:</p>
 <p>We’re going to put a line in the sand. Our clock is 64-bit nanoseconds with a zero at 2000/01/01 00:00:00 UTC.
 This has the happy property that it’s a superset of Windows <code>FILETIME</code> and most Linux and Unix filesystems
 that I’ve ever heard of, a superset that is losslessly convertible.</p>
+
+<h1 id="filetype">file_type</h1>
+
+<p>This one is easy, it’s a mandated enum class. The values aren’t mandated, but we’ll put the exceptional
+case as -1 and then just number others starting with 0.</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">enum</span> <span class="k">class</span> <span class="nc">file_type</span> <span class="p">{</span>
+    <span class="n">not_found</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">none</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">regular</span><span class="p">,</span>
+    <span class="n">directory</span><span class="p">,</span>
+    <span class="n">symlink</span><span class="p">,</span>
+    <span class="n">block</span><span class="p">,</span>
+    <span class="n">character</span><span class="p">,</span>
+    <span class="n">fifo</span><span class="p">,</span>
+    <span class="n">socket</span><span class="p">,</span>
+    <span class="n">unknown</span><span class="p">,</span>
+<span class="p">};</span></code></pre></div>
+
+<p>Note that we end our last enum item with a comma; this is a new best practice in my opinion, because
+it means that adding new items can’t go awry or cause extra lines to be edited.</p>
+
+<h1 id="copyoptions">copy_options</h1>
+
+<p>This one is also easy, another mandated enum class without mandated values. This is a bitmask enum, which
+means values will be combined together into a single field. So we just start
+with zero and roll up by powers of 2 to create distinct bitmaps.</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">enum</span> <span class="k">class</span> <span class="nc">copy_options</span>
+<span class="p">{</span>
+    <span class="n">none</span>                    <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+
+    <span class="c1">// options for existing target files (pick at most one)
+</span>    <span class="n">skip_existing</span>           <span class="o">=</span> <span class="mi">0</span><span class="n">b000000001</span><span class="p">,</span>      <span class="c1">// 0x001,
+</span>    <span class="n">overwrite_existing</span>      <span class="o">=</span> <span class="mi">0</span><span class="n">b000000010</span><span class="p">,</span>      <span class="c1">// 0x002,
+</span>    <span class="n">update_existing</span>         <span class="o">=</span> <span class="mi">0</span><span class="n">b000000100</span><span class="p">,</span>      <span class="c1">// 0x004,
+</span>
+    <span class="c1">// options for sub-directories
+</span>    <span class="n">recursive</span>               <span class="o">=</span> <span class="mi">0</span><span class="n">b000001000</span><span class="p">,</span>       <span class="c1">// 0x008,
+</span>
+    <span class="c1">// options for symbolic links (pick at most one)
+</span>    <span class="n">copy_symlinks</span>           <span class="o">=</span> <span class="mi">0</span><span class="n">b000010000</span><span class="p">,</span>       <span class="c1">// 0x010,
+</span>    <span class="n">skip_symlinks</span>           <span class="o">=</span> <span class="mi">0</span><span class="n">b000100000</span><span class="p">,</span>       <span class="c1">// 0x020,
+</span>
+    <span class="c1">// options for choosing the form of copying (pick at most one)
+</span>    <span class="n">directories_only</span>        <span class="o">=</span> <span class="mi">0</span><span class="n">b001000000</span><span class="p">,</span>       <span class="c1">// 0x040,
+</span>    <span class="n">create_symlinks</span>         <span class="o">=</span> <span class="mi">0</span><span class="n">b010000000</span><span class="p">,</span>       <span class="c1">// 0x080,
+</span>    <span class="n">create_hardlinks</span>        <span class="o">=</span> <span class="mi">0</span><span class="n">b100000000</span><span class="p">,</span>       <span class="c1">// 0x100,
+</span><span class="p">};</span></code></pre></div>
+
+<h1 id="perms">perms</h1>
+
+<p>This one is also easy, another mandated enum class but with mandated values.</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">enum</span> <span class="k">class</span> <span class="nc">perms</span>
+<span class="p">{</span>
+    <span class="n">none</span>                <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>        <span class="c1">// There are no permissions set for the file
+</span>
+    <span class="n">owner_read</span>          <span class="o">=</span> <span class="mo">0400</span><span class="p">,</span>     <span class="c1">// S_IRUSR: Read permission, owner
+</span>    <span class="n">owner_write</span>         <span class="o">=</span> <span class="mo">0200</span><span class="p">,</span>     <span class="c1">// S_IWUSR: Write permission, owner
+</span>    <span class="n">owner_exec</span>          <span class="o">=</span> <span class="mo">0100</span><span class="p">,</span>     <span class="c1">// S_IXUSR: Execute/search permission, owner
+</span>    <span class="n">owner_all</span>           <span class="o">=</span> <span class="mo">0700</span><span class="p">,</span>     <span class="c1">// S_IRWXU: read+write+execute, by owner
+</span>
+    <span class="n">group_read</span>          <span class="o">=</span> <span class="mo">0040</span><span class="p">,</span>     <span class="c1">// S_IRGRP: Read permission, group
+</span>    <span class="n">group_write</span>         <span class="o">=</span> <span class="mo">0020</span><span class="p">,</span>     <span class="c1">// S_IWGRP: Write permission, group
+</span>    <span class="n">group_exec</span>          <span class="o">=</span> <span class="mo">0010</span><span class="p">,</span>     <span class="c1">// S_IXGRP: Execute/search permission, group
+</span>    <span class="n">group_all</span>           <span class="o">=</span> <span class="mo">0070</span><span class="p">,</span>     <span class="c1">// S_IRWXG: read+write+execute, by group
+</span>
+    <span class="n">others_read</span>         <span class="o">=</span> <span class="mo">0004</span><span class="p">,</span>     <span class="c1">// S_IROTH: Read permission, others
+</span>    <span class="n">others_write</span>        <span class="o">=</span> <span class="mo">0002</span><span class="p">,</span>     <span class="c1">// S_IWOTH: Write permission, others
+</span>    <span class="n">others_exec</span>         <span class="o">=</span> <span class="mo">0001</span><span class="p">,</span>     <span class="c1">// S_IXOTH: Execute/search permission, others
+</span>    <span class="n">others_all</span>          <span class="o">=</span> <span class="mo">0007</span><span class="p">,</span>     <span class="c1">// S_IRWXO: read+write+execute, by others
+</span>
+    <span class="n">all</span>                 <span class="o">=</span> <span class="mo">0777</span><span class="p">,</span>     <span class="c1">// owner_all+group_all+others_all
+</span>    <span class="n">set_uid</span>             <span class="o">=</span> <span class="mo">04000</span><span class="p">,</span>    <span class="c1">// S_ISUID: Set-user-ID on execution
+</span>    <span class="n">set_gid</span>             <span class="o">=</span> <span class="mo">02000</span><span class="p">,</span>    <span class="c1">// S_ISGID: Set-group-ID on execution
+</span>    <span class="n">sticky_bit</span>          <span class="o">=</span> <span class="mo">01000</span><span class="p">,</span>    <span class="c1">// S_ISVTX: Operating system dependent
+</span>    <span class="n">mask</span>                <span class="o">=</span> <span class="mo">07777</span><span class="p">,</span>    <span class="c1">// all + set_uid + set_gid + sticky_bit
+</span>
+    <span class="n">unknown</span>             <span class="o">=</span> <span class="mh">0xFFFF</span><span class="p">,</span>   <span class="c1">// The permissions are not known, such as when a file_status object is created without specifying the permissions
+</span>    <span class="n">add_perms</span>           <span class="o">=</span> <span class="mh">0x10000</span><span class="p">,</span>  <span class="c1">// permissions() shall bitwise-or the perm argument's permissions bits to the file's current permissions bits
+</span>    <span class="n">remove_perms</span>        <span class="o">=</span> <span class="mh">0x20000</span><span class="p">,</span>  <span class="c1">// permissions() shall bitwise-and the complement of perm argument's permissions bits to the file's current permission bits
+</span>    <span class="n">symlink_nofollow</span>    <span class="o">=</span> <span class="mh">0x40000</span><span class="p">,</span>  <span class="c1">// permissions() shall change the permissions of symbolic links.
+</span><span class="p">};</span></code></pre></div>
+
+<h1 id="directoryoptions">directory_options</h1>
+
+<p>This one is also easy, another mandated enum class without mandated values. This is a bitmask enum, which
+means values will be combined together into a single field. So we just start
+with zero and roll up by powers of 2 to create distinct bitmaps.</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">enum</span> <span class="k">class</span> <span class="nc">directory_options</span>
+<span class="p">{</span>
+    <span class="n">none</span>                        <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>    <span class="c1">// (Default) Skip directory symlinks, permission denied is an error
+</span>    <span class="n">follow_directory_symlink</span>    <span class="o">=</span> <span class="mi">0</span><span class="n">b01</span><span class="p">,</span> <span class="c1">// Follow rather than skip directory symlinks
+</span>    <span class="n">skip_permission_denied</span>      <span class="o">=</span> <span class="mi">0</span><span class="n">b10</span><span class="p">,</span> <span class="c1">// Skip directories that would otherwise result in permission denied
+</span><span class="p">};</span></code></pre></div>
+
+<h1 id="spaceinfo">space_info</h1>
+
+<p>This is defined in the standard, so hurray, but then the commentary about the <code>space()</code> function itself
+has a bunch of as-if POSIX, instead of just stating the obvious.</p>
+
+<p>Specifically, <code>capacity</code> is the total size of the filesystem in bytes; <code>free</code> is the size of the
+unallocated part of the filesystem in bytes; and <code>available</code> is the number of bytes available to
+a non-super user. As such, <code>available</code> can be less than <code>free</code>.</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">struct</span> <span class="n">space_info</span> <span class="p">{</span>
+    <span class="kt">uintmax_t</span> <span class="n">capacity</span><span class="p">;</span>
+    <span class="kt">uintmax_t</span> <span class="n">free</span><span class="p">;</span>
+    <span class="kt">uintmax_t</span> <span class="n">available</span><span class="p">;</span>
+<span class="p">};</span></code></pre></div>
+
 
   </article>
 

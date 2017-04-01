@@ -6,8 +6,8 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 31 Mar 2017 16:13:16 -0700</pubDate>
-    <lastBuildDate>Fri, 31 Mar 2017 16:13:16 -0700</lastBuildDate>
+    <pubDate>Fri, 31 Mar 2017 18:11:48 -0700</pubDate>
+    <lastBuildDate>Fri, 31 Mar 2017 18:11:48 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -18,7 +18,7 @@
   &lt;li&gt;&lt;a href=&quot;http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4618.pdf&quot;&gt;C++17 draft standard&lt;/a&gt; - see 27.10 File systems&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf&quot;&gt;File System Technical Specification&lt;/a&gt; - essentially what’s in the standard&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.boost.org/doc/libs/1_42_0/libs/filesystem/doc/index.htm&quot;&gt;Boost Filesystem Library&lt;/a&gt; - the TS came from Boost, after all&lt;/li&gt;
-  &lt;li&gt;[&lt;filesystem&gt; (Visual Studio 2015)](https://msdn.microsoft.com/en-us/library/hh874694.aspx)&lt;/filesystem&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/hh874694.aspx&quot;&gt;filesystem (Visual Studio 2015)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://gcc.gnu.org/onlinedocs/gcc-6.1.0/libstdc++/api/a01832.html&quot;&gt;libcstdc++ Filesystem&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://en.cppreference.com/w/cpp/experimental/fs&quot;&gt;Filesystem library (cppreference.com)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -35,17 +35,20 @@ it’s not shipping with a Clang version yet (you need to build your own Clang/l
 the C++17 standard now including it, we will just create &lt;code&gt;std::filesystem&lt;/code&gt;. This makes our life a little
 easier at the moment, since no vendor has yet promoted it out of experimental.&lt;/p&gt;
 
-&lt;h1 id=&quot;filesystem&quot;&gt;&lt;filesystem&gt;&lt;/filesystem&gt;&lt;/h1&gt;
+&lt;h1 id=&quot;ltfilesystemrt&quot;&gt;&amp;lt;filesystem&amp;amp;rt;&lt;/h1&gt;
 
-&lt;p&gt;This is somewhat defined for us in the standard. This goes in the namespace &lt;code&gt;std::filesystem&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;This is somewhat defined for us in the standard. This goes in the namespace &lt;code&gt;std::filesystem&lt;/code&gt;. We
+wrap it like this:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filesystem&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;inline&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileystem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Note the &lt;code&gt;inline namespace v1&lt;/code&gt;. See REFERENCE for an explanation about using inline namespaces to help
+&lt;p&gt;Note the &lt;code&gt;inline namespace v1&lt;/code&gt;. See &lt;a href=&quot;http://stackoverflow.com/questions/11016220/what-are-inline-namespaces-for&quot;&gt;What are inline namespaces for?&lt;/a&gt; for an explanation about using inline namespaces to help
 in API versioning.&lt;/p&gt;
 
 &lt;p&gt;The classes in our namespace:&lt;/p&gt;
@@ -65,6 +68,8 @@ in API versioning.&lt;/p&gt;
 
 &lt;p&gt;There are also a host of non-member functions to implement. We’re going to group these by
 functionality, rather than address them all at once.&lt;/p&gt;
+
+&lt;p&gt;Let’s cover trivial stuff first.&lt;/p&gt;
 
 &lt;h1 id=&quot;filetimetype&quot;&gt;file_time_type&lt;/h1&gt;
 
@@ -88,6 +93,119 @@ we could just do this:&lt;/p&gt;
 &lt;p&gt;We’re going to put a line in the sand. Our clock is 64-bit nanoseconds with a zero at 2000/01/01 00:00:00 UTC.
 This has the happy property that it’s a superset of Windows &lt;code&gt;FILETIME&lt;/code&gt; and most Linux and Unix filesystems
 that I’ve ever heard of, a superset that is losslessly convertible.&lt;/p&gt;
+
+&lt;h1 id=&quot;filetype&quot;&gt;file_type&lt;/h1&gt;
+
+&lt;p&gt;This one is easy, it’s a mandated enum class. The values aren’t mandated, but we’ll put the exceptional
+case as -1 and then just number others starting with 0.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;file_type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;not_found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;regular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;symlink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;character&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fifo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;unknown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that we end our last enum item with a comma; this is a new best practice in my opinion, because
+it means that adding new items can’t go awry or cause extra lines to be edited.&lt;/p&gt;
+
+&lt;h1 id=&quot;copyoptions&quot;&gt;copy_options&lt;/h1&gt;
+
+&lt;p&gt;This one is also easy, another mandated enum class without mandated values. This is a bitmask enum, which
+means values will be combined together into a single field. So we just start
+with zero and roll up by powers of 2 to create distinct bitmaps.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;copy_options&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt;                    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// options for existing target files (pick at most one)
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;skip_existing&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b000000001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// 0x001,
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;overwrite_existing&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b000000010&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// 0x002,
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;update_existing&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b000000100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// 0x004,
+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// options for sub-directories
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt;               &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b000001000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x008,
+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// options for symbolic links (pick at most one)
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;copy_symlinks&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b000010000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x010,
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;skip_symlinks&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b000100000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x020,
+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// options for choosing the form of copying (pick at most one)
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;directories_only&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b001000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x040,
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;create_symlinks&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b010000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x080,
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;create_hardlinks&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b100000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x100,
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;perms&quot;&gt;perms&lt;/h1&gt;
+
+&lt;p&gt;This one is also easy, another mandated enum class but with mandated values.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;perms&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// There are no permissions set for the file
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;owner_read&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IRUSR: Read permission, owner
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;owner_write&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IWUSR: Write permission, owner
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;owner_exec&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IXUSR: Execute/search permission, owner
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;owner_all&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0700&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IRWXU: read+write+execute, by owner
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;group_read&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0040&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IRGRP: Read permission, group
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;group_write&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0020&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IWGRP: Write permission, group
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;group_exec&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0010&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IXGRP: Execute/search permission, group
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;group_all&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0070&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IRWXG: read+write+execute, by group
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;others_read&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0004&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IROTH: Read permission, others
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;others_write&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0002&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IWOTH: Write permission, others
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;others_exec&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IXOTH: Execute/search permission, others
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;others_all&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// S_IRWXO: read+write+execute, by others
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;                 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;0777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// owner_all+group_all+others_all
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;set_uid&lt;/span&gt;             &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;04000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// S_ISUID: Set-user-ID on execution
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;set_gid&lt;/span&gt;             &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;02000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// S_ISGID: Set-group-ID on execution
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;sticky_bit&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;01000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// S_ISVTX: Operating system dependent
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;07777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// all + set_uid + set_gid + sticky_bit
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;unknown&lt;/span&gt;             &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xFFFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// The permissions are not known, such as when a file_status object is created without specifying the permissions
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;add_perms&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// permissions() shall bitwise-or the perm argument&#39;s permissions bits to the file&#39;s current permissions bits
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;remove_perms&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x20000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// permissions() shall bitwise-and the complement of perm argument&#39;s permissions bits to the file&#39;s current permission bits
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;symlink_nofollow&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x40000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// permissions() shall change the permissions of symbolic links.
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;directoryoptions&quot;&gt;directory_options&lt;/h1&gt;
+
+&lt;p&gt;This one is also easy, another mandated enum class without mandated values. This is a bitmask enum, which
+means values will be combined together into a single field. So we just start
+with zero and roll up by powers of 2 to create distinct bitmaps.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;directory_options&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt;                        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// (Default) Skip directory symlinks, permission denied is an error
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;follow_directory_symlink&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Follow rather than skip directory symlinks
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;skip_permission_denied&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Skip directories that would otherwise result in permission denied
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;spaceinfo&quot;&gt;space_info&lt;/h1&gt;
+
+&lt;p&gt;This is defined in the standard, so hurray, but then the commentary about the &lt;code&gt;space()&lt;/code&gt; function itself
+has a bunch of as-if POSIX, instead of just stating the obvious.&lt;/p&gt;
+
+&lt;p&gt;Specifically, &lt;code&gt;capacity&lt;/code&gt; is the total size of the filesystem in bytes; &lt;code&gt;free&lt;/code&gt; is the size of the
+unallocated part of the filesystem in bytes; and &lt;code&gt;available&lt;/code&gt; is the number of bytes available to
+a non-super user. As such, &lt;code&gt;available&lt;/code&gt; can be less than &lt;code&gt;free&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space_info&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;uintmax_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;capacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;uintmax_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;uintmax_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 </description>
         <pubDate>Fri, 31 Mar 2017 13:30:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2017/03/31/writing-std-filesystem.html</link>
