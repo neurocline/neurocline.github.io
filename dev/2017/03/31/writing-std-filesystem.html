@@ -212,9 +212,13 @@ with zero and roll up by powers of 2 to create distinct bitmaps.</p>
 </span>    <span class="n">create_hardlinks</span>        <span class="o">=</span> <span class="mi">0</span><span class="n">b100000000</span><span class="p">,</span>       <span class="c1">// 0x100,
 </span><span class="p">};</span></code></pre></div>
 
+<p>Along with the enum class, we need some operators so that we can combine copy_options together; in the spec,
+it’s stated as a requirement that the concept BitmaskType is supported: see <a href="http://en.cppreference.com/w/cpp/concept/BitmaskType">C++ concepts: BitmaskType</a>.</p>
+
 <h1 id="perms">perms</h1>
 
-<p>This one is also easy, another mandated enum class but with mandated values.</p>
+<p>This one is also easy, another mandated enum class but with mandated values and the operators to support
+the BitmaskType concept.</p>
 
 <div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">enum</span> <span class="k">class</span> <span class="nc">perms</span>
 <span class="p">{</span>
@@ -250,8 +254,8 @@ with zero and roll up by powers of 2 to create distinct bitmaps.</p>
 <h1 id="directoryoptions">directory_options</h1>
 
 <p>This one is also easy, another mandated enum class without mandated values. This is a bitmask enum, which
-means values will be combined together into a single field. So we just start
-with zero and roll up by powers of 2 to create distinct bitmaps.</p>
+means values will be combined together into a single field. So we just start with zero and roll up by powers
+of 2 to create distinct bitmaps, and add the operators as per BitmaskType.</p>
 
 <div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">enum</span> <span class="k">class</span> <span class="nc">directory_options</span>
 <span class="p">{</span>

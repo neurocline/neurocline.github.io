@@ -6,9 +6,131 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 31 Mar 2017 18:11:48 -0700</pubDate>
-    <lastBuildDate>Fri, 31 Mar 2017 18:11:48 -0700</lastBuildDate>
+    <pubDate>Mon, 03 Apr 2017 09:51:57 -0700</pubDate>
+    <lastBuildDate>Mon, 03 Apr 2017 09:51:57 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://eli.thegreenplace.net/2014/sfinae-and-enable_if/&quot;&gt;SFINAE and enable_if&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/11898657/enable-if-iterator-as-a-default-template-parameter&quot;&gt;enable_if iterator as a default template parameter?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/257288/is-it-possible-to-write-a-template-to-check-for-a-functions-existence&quot;&gt;Is it possible to write a template to check for a function’s existence?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://rmf.io/&quot;&gt;Flaming Dangerzone&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/vcblog/2015/12/02/partial-support-for-expression-sfinae-in-vs-2015-update-1/&quot;&gt;Partial Support for Expression SFINAE in VS 2015 Update 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3/&quot;&gt;Expression SFINAE improvements in VS 2017 RC&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/vcblog/2016/11/16/sfinae-update/&quot;&gt;Updates to Expression SFINAE in VS 2017 RC&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 01 Apr 2017 18:30:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/04/01/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/01/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Writing std::filesystem: Path</title>
+        <description>&lt;p&gt;Now we get to more complicated parts.&lt;/p&gt;
+
+&lt;h1 id=&quot;path&quot;&gt;path&lt;/h1&gt;
+
+&lt;p&gt;The &lt;code&gt;path&lt;/code&gt; class abstracts the idea of a filesystem path. First off, let me just say: this is
+absurd ridiculous overkill. Just say that a path is a set of arbitrary strings of non-zero bytes
+joined together by the path separator &lt;code&gt;/&lt;/code&gt;, have some shim behavior for Windows, and be done with
+it. Microsoft really needs to join with the sane part of the world, ditch the use of the backslash
+character &lt;code&gt;\\&lt;/code&gt; for path separators, turn drive letters into something reasonable, kill the
+insanity that is universal paths. Blah blah. Sigh.&lt;/p&gt;
+
+&lt;p&gt;According to the standard, an object of class &lt;code&gt;path&lt;/code&gt; represents a path and contains a pathname.
+You can have a &lt;code&gt;path&lt;/code&gt; object that doesn’t actually map to an existing path in a filesystem - for
+one, you couldn’t create a new file if paths could only point to existing files.&lt;/p&gt;
+
+&lt;p&gt;Since &lt;code&gt;path&lt;/code&gt; has a lot of functionality, let’s start with the bare minimum:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;path&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;/&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;noexcept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;noexcept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This &lt;code&gt;path&lt;/code&gt; isn’t quite useful, because there’s no way to modify a path. But we could create
+an empty one. Let’s talk about what we have.&lt;/p&gt;
+
+&lt;p&gt;The first abstraction is in the type of character - all the standard says is that &lt;code&gt;value_type&lt;/code&gt;
+is a &lt;code&gt;typedef&lt;/code&gt; for the operating system dependent encoded character type used to represent
+pathnames. For many filesystems, either &lt;code&gt;char&lt;/code&gt; or &lt;code&gt;unsigned char&lt;/code&gt; is appropriate, because
+filesystem paths are either just strings of bytes, or UTF-8 characters which can just be
+treated as strings of bytes most of the time.&lt;/p&gt;
+
+&lt;p&gt;The second abstraction is in the path separator. Once again, this is operating system
+specific and so &lt;code&gt;path&lt;/code&gt; can’t be passed to cross-platform code.&lt;/p&gt;
+
+&lt;p&gt;Note that &lt;code&gt;path&lt;/code&gt; is not a template parameterized on these values, like say how &lt;code&gt;basic_string&lt;/code&gt;
+works, but instead these are platform-specific values. So one could imagine our code looking
+like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;path&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#ifdef _WIN32
+&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;// Assume that we only work on Unicode builds
+&lt;/span&gt;	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wchar_t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;L&#39;\\&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#else
+&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;// Every other filesystem is UTF-8/string of bytes
+&lt;/span&gt;	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;/&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;noexcept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;noexcept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;constructors&quot;&gt;constructors&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But if we want to use SFINAE so we don’t get template expansion started when it’s not an iterator,
+we can use &lt;code&gt;enable_if&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enable_if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 31 Mar 2017 19:30:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/03/31/writing-std-filesystem-path.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/03/31/writing-std-filesystem-path.html</guid>
+        
+        <category>c++</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Writing std::filesystem</title>
@@ -143,9 +265,13 @@ with zero and roll up by powers of 2 to create distinct bitmaps.&lt;/p&gt;
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;create_hardlinks&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b100000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x100,
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;Along with the enum class, we need some operators so that we can combine copy_options together; in the spec,
+it’s stated as a requirement that the concept BitmaskType is supported: see &lt;a href=&quot;http://en.cppreference.com/w/cpp/concept/BitmaskType&quot;&gt;C++ concepts: BitmaskType&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h1 id=&quot;perms&quot;&gt;perms&lt;/h1&gt;
 
-&lt;p&gt;This one is also easy, another mandated enum class but with mandated values.&lt;/p&gt;
+&lt;p&gt;This one is also easy, another mandated enum class but with mandated values and the operators to support
+the BitmaskType concept.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;perms&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -181,8 +307,8 @@ with zero and roll up by powers of 2 to create distinct bitmaps.&lt;/p&gt;
 &lt;h1 id=&quot;directoryoptions&quot;&gt;directory_options&lt;/h1&gt;
 
 &lt;p&gt;This one is also easy, another mandated enum class without mandated values. This is a bitmask enum, which
-means values will be combined together into a single field. So we just start
-with zero and roll up by powers of 2 to create distinct bitmaps.&lt;/p&gt;
+means values will be combined together into a single field. So we just start with zero and roll up by powers
+of 2 to create distinct bitmaps, and add the operators as per BitmaskType.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;directory_options&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -1007,63 +1133,6 @@ in Subversion.&lt;/p&gt;
         <pubDate>Tue, 28 Feb 2017 11:00:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2017/02/28/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/28/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Clustering</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cluster_analysis&quot;&gt;Cluster Analysis&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html&quot;&gt;Comparing Python Clustering Algorithms&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ims.uni-stuttgart.de/institut/mitarbeiter/schulte/theses/phd/algorithm.pdf&quot;&gt;Clustering Algorithms and Evaluations&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 28 Feb 2017 10:00:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2017/02/28/clustering.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/28/clustering.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;It looks like Gnuplot is still in CVS. This is the first live project I’ve come across
-that is still in CVS.&lt;/p&gt;
-
-&lt;p&gt;https://sourceforge.net/p/gnuplot/code/?source=navbar&lt;/p&gt;
-
-&lt;p&gt;Some bits about Python object-oriented code, because I’m a beginner.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://rhettinger.wordpress.com/2011/05/26/super-considered-super/&quot;&gt;Python’s super() considered super!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/&quot;&gt;Improve Your Python: Python Classes and Object Oriented Programming&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/576169/understanding-python-super-with-init-methods&quot;&gt;Understanding Python super() with &lt;strong&gt;init&lt;/strong&gt;() methods&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://fuhm.net/super-harmful/&quot;&gt;Python’s Super is nifty, but you can’t use it&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://amyboyle.ninja/Python-Inheritance&quot;&gt;Multiple Inheritance Minefield&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Dylan added things to the computing landscape. One of them was the C3 superclass linearization
-algorithm, and is also called Method Resolution Order (MRO). Python started using it in 2.3.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/C3_linearization&quot;&gt;C3 linearization&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.python.org/download/releases/2.3/mro/&quot;&gt;The Python 2.3 Method Resolution Order&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://python-history.blogspot.com/2010/06/method-resolution-order.html&quot;&gt;Method Resolution Order&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.3910&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;A Monotonic Superclass Linearization for Dylan&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 19 Feb 2017 19:00:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2017/02/19/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/02/19/recent-links.html</guid>
         
         <category>text</category>
         
