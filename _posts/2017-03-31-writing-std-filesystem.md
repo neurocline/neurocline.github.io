@@ -145,9 +145,13 @@ enum class copy_options
 };
 {% endhighlight %}
 
+Along with the enum class, we need some operators so that we can combine copy_options together; in the spec,
+it's stated as a requirement that the concept BitmaskType is supported: see [C++ concepts: BitmaskType](http://en.cppreference.com/w/cpp/concept/BitmaskType).
+
 # perms
 
-This one is also easy, another mandated enum class but with mandated values.
+This one is also easy, another mandated enum class but with mandated values and the operators to support
+the BitmaskType concept.
 
 {% highlight c++ %}
 enum class perms
@@ -185,8 +189,8 @@ enum class perms
 # directory_options
 
 This one is also easy, another mandated enum class without mandated values. This is a bitmask enum, which
-means values will be combined together into a single field. So we just start
-with zero and roll up by powers of 2 to create distinct bitmaps.
+means values will be combined together into a single field. So we just start with zero and roll up by powers
+of 2 to create distinct bitmaps, and add the operators as per BitmaskType.
 
 {% highlight c++ %}
 enum class directory_options
