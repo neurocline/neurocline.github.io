@@ -149,12 +149,86 @@ that data are passed to <code>path</code>.</p>
 
 <h2 id="path-constructors">27.10.8.4.1 path constructors</h2>
 
-<p>There are 5-7 different constructors.</p>
+<p>There are 5-7 different constructors, depending on how you look at it. In the following,
+we are going to ignore any character conversions or normalizations that might need to be
+done.</p>
 
 <ul>
-  <li>empty path constructor: <code>path()</code></li>
-  <li>construct from existing path: <code>path(const path&amp;)</code>, <code>path(path&amp;&amp;)</code>.</li>
+  <li><code>path()</code>: construct path with empty path string</li>
+  <li><code>path(const path&amp;)</code>: copy-construct from existing <code>path</code></li>
+  <li><code>path(path&amp;&amp;)</code>: move-construct from existing <code>path</code></li>
 </ul>
+
+<p>The default constructor and destructor are easy, because we don’t need any state. Likewise, the
+copy constructor and move constructor can rely on the copy and move constructor for our underlying
+data type.</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">path</span><span class="p">()</span> <span class="p">{}</span>
+    <span class="n">path</span><span class="p">(</span><span class="k">const</span> <span class="n">path</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="o">:</span> <span class="n">pathstring</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">pathstring</span><span class="p">)</span> <span class="p">{}</span>
+    <span class="n">path</span><span class="p">(</span><span class="n">path</span><span class="o">&amp;&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="o">:</span> <span class="n">pathstring</span><span class="p">(</span><span class="n">move</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">pathstring</span><span class="p">))</span> <span class="p">{}</span></code></pre></div>
+
+<ul>
+  <li><code>path(string_type&amp;&amp; source)</code>: construct from string of underlying type</li>
+</ul>
+
+<p>Another easy constructor is the one that moves from a matching <code>string_type</code>.</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">path</span><span class="p">(</span><span class="n">string_type</span><span class="o">&amp;&amp;</span> <span class="n">source</span><span class="p">)</span> <span class="o">:</span> <span class="n">pathstring</span><span class="p">(</span><span class="n">move</span><span class="p">(</span><span class="n">source</span><span class="p">))</span> <span class="p">{}</span></code></pre></div>
+
+<p>There is a “construct from Source” template where Source can be a number of things</p>
+
+<ul>
+  <li><code>template&lt;class Source&gt; path(const Source&amp; source)</code>: construct from Source</li>
+</ul>
+
+<p>The <code>Source</code> type can be one of: basic_string, string_view, iterator of NCTCS,
+or array that decays to pointer to NCTCS; NCTCS is just a fancy way of saying
+“zero-terminated string”, except that string is any sequence of characters that
+an iterator can step through. Since decay-to-pointer ends up with a pointer of
+a certain type, we could consider this as three overloads.</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">EcharT</span><span class="p">,</span> <span class="k">class</span> <span class="nc">traits</span><span class="p">,</span> <span class="k">class</span> <span class="nc">Allocator</span><span class="o">&gt;</span>
+    <span class="n">path</span><span class="p">(</span><span class="k">const</span> <span class="n">basic_string</span><span class="o">&lt;</span><span class="n">EcharT</span><span class="p">,</span> <span class="n">traits</span><span class="p">,</span> <span class="n">Allocator</span><span class="o">&gt;&amp;</span> <span class="n">source</span><span class="p">);</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">EcharT</span><span class="p">,</span> <span class="k">class</span> <span class="nc">traits</span><span class="o">&gt;</span>
+    <span class="n">path</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">basic_string_view</span><span class="o">&lt;</span><span class="n">EcharT</span><span class="p">,</span> <span class="n">traits</span><span class="o">&gt;&amp;</span> <span class="n">source</span><span class="p">);</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">InputIterator</span><span class="p">,</span>
+         <span class="k">class</span> <span class="err">=</span> <span class="nc">typename</span> <span class="n">enable_if</span><span class="o">&lt;</span><span class="n">is_iterator</span><span class="o">&lt;</span><span class="n">InputIterator</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&gt;</span>
+    <span class="n">path</span><span class="p">(</span><span class="n">InputIterator</span> <span class="n">source</span><span class="p">)</span></code></pre></div>
+
+<p>We have a constructor that is passed two input iterators - this needs a type trait
+in order to prevent it from matching non-iterator two-parameter constructors, just
+like the single-parameter template needs a type trait to prevent it from matching
+other single-parameter constructors.</p>
+
+<ul>
+  <li><code>template&lt;class InputIterator&gt; path(InputIterator first, InputIterator last)</code></li>
+</ul>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">InputIterator</span><span class="p">,</span>
+         <span class="k">class</span> <span class="err">=</span> <span class="nc">typename</span> <span class="n">enable_if</span><span class="o">&lt;</span><span class="n">is_iterator</span><span class="o">&lt;</span><span class="n">InputIterator</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&gt;</span>
+    <span class="n">path</span><span class="p">(</span><span class="n">InputIterator</span> <span class="n">first</span><span class="p">,</span> <span class="n">InputIterator</span> <span class="n">last</span><span class="p">);</span></code></pre></div>
+
+<p>And then there are some +locale versions of constructors.</p>
+
+<ul>
+  <li><code>template&lt;class Source&gt; path(const Source&amp; source, const locale&amp; loc)</code></li>
+  <li><code>template&lt;class InputIterator&gt; path(InputIterator first, InputIterator last, const locale&amp; loc)</code></li>
+</ul>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">EcharT</span><span class="p">,</span> <span class="k">class</span> <span class="nc">traits</span><span class="p">,</span> <span class="k">class</span> <span class="nc">Allocator</span><span class="o">&gt;</span>
+	<span class="n">path</span><span class="p">(</span><span class="k">const</span> <span class="n">basic_string</span><span class="o">&lt;</span><span class="n">EcharT</span><span class="p">,</span> <span class="n">traits</span><span class="p">,</span> <span class="n">Allocator</span><span class="o">&gt;&amp;</span> <span class="n">source</span><span class="p">,</span> <span class="k">const</span> <span class="n">locale</span><span class="o">&amp;</span> <span class="n">loc</span><span class="p">);</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">EcharT</span><span class="p">,</span> <span class="k">class</span> <span class="nc">traits</span><span class="o">&gt;</span>
+	<span class="n">path</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">basic_string_view</span><span class="o">&lt;</span><span class="n">EcharT</span><span class="p">,</span> <span class="n">traits</span><span class="o">&gt;&amp;</span> <span class="n">source</span><span class="p">,</span> <span class="k">const</span> <span class="n">locale</span><span class="o">&amp;</span> <span class="n">loc</span><span class="p">);</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">InputIterator</span><span class="p">,</span>
+         <span class="k">class</span> <span class="err">=</span> <span class="nc">typename</span> <span class="n">enable_if</span><span class="o">&lt;</span><span class="n">is_iterator</span><span class="o">&lt;</span><span class="n">InputIterator</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&gt;</span>
+	<span class="n">path</span><span class="p">(</span><span class="n">InputIterator</span> <span class="n">source</span><span class="p">,</span> <span class="k">const</span> <span class="n">locale</span><span class="o">&amp;</span> <span class="n">loc</span><span class="p">)</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">InputIterator</span><span class="p">,</span>
+         <span class="k">class</span> <span class="err">=</span> <span class="nc">typename</span> <span class="n">enable_if</span><span class="o">&lt;</span><span class="n">is_iterator</span><span class="o">&lt;</span><span class="n">InputIterator</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&gt;</span>
+	<span class="n">path</span><span class="p">(</span><span class="n">InputIterator</span> <span class="n">first</span><span class="p">,</span> <span class="n">InputIterator</span> <span class="n">last</span><span class="p">,</span> <span class="k">const</span> <span class="n">locale</span><span class="o">&amp;</span> <span class="n">loc</span><span class="p">);</span></code></pre></div>
+
+<h2 id="path-assignments">27.10.8.4.2 path assignments</h2>
+
+<p>stuff from code here</p>
 
 <h1 id="reference">Reference</h1>
 
