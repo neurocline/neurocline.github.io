@@ -140,6 +140,37 @@ rules often defeat our attempts at overloading.</p>
 <p>Of course, as you see, we almost never use <code>true_type</code> and <code>false_type</code> directly. Instead, they are the
 base type for type traits.</p>
 
+<h2 id="voidt">void_t</h2>
+
+<p>C++17 has <code>void_t</code>:</p>
+
+<ul>
+  <li><a href="http://en.cppreference.com/w/cpp/types/void_t">std::void_t</a></li>
+</ul>
+
+<p>and this is simply:</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span><span class="err">...</span> <span class="o">&gt;</span>
+<span class="k">using</span> <span class="n">void_t</span> <span class="o">=</span> <span class="kt">void</span><span class="p">;</span></code></pre></div>
+
+<p>with the example being</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="o">=</span> <span class="kt">void</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">is_iterable</span> <span class="o">:</span> <span class="n">std</span><span class="o">::</span><span class="n">false_type</span> <span class="p">{};</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">is_iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">void_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">().</span><span class="n">begin</span><span class="p">()),</span>
+                                  <span class="k">decltype</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">().</span><span class="n">end</span><span class="p">())</span><span class="o">&gt;&gt;</span>
+    <span class="o">:</span> <span class="n">std</span><span class="o">::</span><span class="n">true_type</span> <span class="p">{};</span></code></pre></div>
+
+<p>where <code>is_iterable</code> is a type trait and has a <code>true</code> value if type <code>T</code> is an iterable type, determined
+by the fact that</p>
+
+<p>An earlier version was proposed in:</p>
+
+<ul>
+  <li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3844.pdf">A SFINAE-Friendly std::iterator_traits</a></li>
+</ul>
+
   </article>
 
 </div>
