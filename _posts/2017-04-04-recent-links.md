@@ -19,3 +19,7 @@ tags: text
 [SFINAE Functionality Is Not Arcane Esoterica](https://accu.org/content/conf2013/Jonathan_Wakely_sfinae.pdf)
 
 [A SFINAE-Friendly std::iterator_traits](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3844.pdf)
+
+[string_view: a non-owning reference to a string, revision 5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3762.html)
+
+[C++17 string_view](https://skebanga.github.io/string-view/)

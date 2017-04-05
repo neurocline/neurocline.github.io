@@ -68,3 +68,34 @@ rules often defeat our attempts at overloading.
 
 Of course, as you see, we almost never use `true_type` and `false_type` directly. Instead, they are the
 base type for type traits.
+
+## void_t
+
+C++17 has `void_t`:
+
+- [std::void_t](http://en.cppreference.com/w/cpp/types/void_t)
+
+and this is simply:
+
+{% highlight c++ %}
+template< class... >
+using void_t = void;
+{% endhighlight %}
+
+with the example being
+
+{% highlight c++ %}
+template <typename T, typename = void>
+struct is_iterable : std::false_type {};
+template <typename T>
+struct is_iterable<T, std::void_t<decltype(std::declval<T>().begin()),
+                                  decltype(std::declval<T>().end())>>
+    : std::true_type {};
+{% endhighlight %}
+
+where `is_iterable` is a type trait and has a `true` value if type `T` is an iterable type, determined
+by the fact that 
+
+An earlier version was proposed in:
+
+- [A SFINAE-Friendly std::iterator_traits](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3844.pdf)
