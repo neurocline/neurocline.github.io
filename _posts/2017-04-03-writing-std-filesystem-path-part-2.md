@@ -76,10 +76,87 @@ that data are passed to `path`.
 
 ## 27.10.8.4.1 path constructors
 
-There are 5-7 different constructors.
+There are 5-7 different constructors, depending on how you look at it. In the following,
+we are going to ignore any character conversions or normalizations that might need to be
+done.
 
-- empty path constructor: `path()`
-- construct from existing path: `path(const path&)`, `path(path&&)`.
+- `path()`: construct path with empty path string
+- `path(const path&)`: copy-construct from existing `path`
+- `path(path&&)`: move-construct from existing `path`
+
+The default constructor and destructor are easy, because we don't need any state. Likewise, the
+copy constructor and move constructor can rely on the copy and move constructor for our underlying
+data type.
+
+{% highlight c++ %}
+    path() {}
+    path(const path& p) : pathstring(p.pathstring) {}
+    path(path&& p) : pathstring(move(p.pathstring)) {}
+{% endhighlight %}
+
+- `path(string_type&& source)`: construct from string of underlying type
+
+Another easy constructor is the one that moves from a matching `string_type`.
+
+{% highlight c++ %}
+    path(string_type&& source) : pathstring(move(source)) {}
+{% endhighlight %}
+
+There is a "construct from Source" template where Source can be a number of things
+
+- `template<class Source> path(const Source& source)`: construct from Source
+
+The `Source` type can be one of: basic_string, string_view, iterator of NCTCS,
+or array that decays to pointer to NCTCS; NCTCS is just a fancy way of saying
+"zero-terminated string", except that string is any sequence of characters that
+an iterator can step through. Since decay-to-pointer ends up with a pointer of
+a certain type, we could consider this as three overloads.
+
+{% highlight c++ %}
+template<class EcharT, class traits, class Allocator>
+    path(const basic_string<EcharT, traits, Allocator>& source);
+template<class EcharT, class traits>
+    path(const std::basic_string_view<EcharT, traits>& source);
+template<class InputIterator,
+         class = typename enable_if<is_iterator<InputIterator>::value, void>::type>
+    path(InputIterator source)
+{% endhighlight %}
+
+We have a constructor that is passed two input iterators - this needs a type trait
+in order to prevent it from matching non-iterator two-parameter constructors, just
+like the single-parameter template needs a type trait to prevent it from matching
+other single-parameter constructors.
+
+- `template<class InputIterator> path(InputIterator first, InputIterator last)`
+
+{% highlight c++ %}
+template<class InputIterator,
+         class = typename enable_if<is_iterator<InputIterator>::value, void>::type>
+    path(InputIterator first, InputIterator last);
+{% endhighlight %}
+
+And then there are some +locale versions of constructors.
+
+- `template<class Source> path(const Source& source, const locale& loc)`
+- `template<class InputIterator> path(InputIterator first, InputIterator last, const locale& loc)`
+
+{% highlight c++ %}
+template<class EcharT, class traits, class Allocator>
+	path(const basic_string<EcharT, traits, Allocator>& source, const locale& loc);
+template<class EcharT, class traits>
+	path(const std::basic_string_view<EcharT, traits>& source, const locale& loc);
+template<class InputIterator,
+         class = typename enable_if<is_iterator<InputIterator>::value, void>::type>
+	path(InputIterator source, const locale& loc)
+template<class InputIterator,
+         class = typename enable_if<is_iterator<InputIterator>::value, void>::type>
+	path(InputIterator first, InputIterator last, const locale& loc);
+{% endhighlight %}
+
+
+## 27.10.8.4.2 path assignments
+
+stuff from code here
 
 # Reference
 
