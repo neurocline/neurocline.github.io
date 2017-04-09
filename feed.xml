@@ -2,13 +2,137 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Some Things Are Obvious</title>
-    <description>Answers to some of the world&#39;s questions
+    <description>Answers to some of the world's questions
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 04 Apr 2017 17:54:51 -0700</pubDate>
-    <lastBuildDate>Tue, 04 Apr 2017 17:54:51 -0700</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Sun, 09 Apr 2017 11:30:59 -0700</pubDate>
+    <lastBuildDate>Sun, 09 Apr 2017 11:30:59 -0700</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>C++ blogs</title>
+        <description>&lt;p&gt;These aren’t the only good C++ blogs, but each is interesting and useful.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://foonathan.net/&quot;&gt;foonathan::blog()&lt;/a&gt;. Jonathan Müller.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://akrzemi1.wordpress.com/&quot;&gt;Andrzej’s C++ blog&lt;/a&gt;. Andrzej Krzemieński.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://herbsutter.com/&quot;&gt;Sutter’s Mill&lt;/a&gt;. Herb Sutter.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.lonecpluspluscoder.com/&quot;&gt;The Lone C++ Coder’s Blog&lt;/a&gt;. Timo Geusch&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://isocpp.org/blog&quot;&gt;Standard C++ Foundation Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cpptruths.blogspot.com/&quot;&gt;C++ Truths&lt;/a&gt;. Sumant Tambe&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://eli.thegreenplace.net/&quot;&gt;Eli Bendersky’s website&lt;/a&gt;. See &lt;a href=&quot;http://eli.thegreenplace.net/tag/c-c&quot;&gt;tag: C++&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ericniebler.com/&quot;&gt;Eric Niebler&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://scottmeyers.blogspot.com/&quot;&gt;THE VIEW FROM ARISTEIA&lt;/a&gt;. Scott Meyers&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://honermann.net/blog/&quot;&gt;Tom Honermann, C++ minion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://talesofcpp.fusionfenix.com/&quot;&gt;Tales of C++&lt;/a&gt;. Agustín “K-ballo” Bergé&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arne-mertz.de/&quot;&gt;Simplify C++&lt;/a&gt;. Arne Mertz&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are only loosely C++&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://codergears.com/Blog/&quot;&gt;CoderGears Blog&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pocoproject.org/blog/&quot;&gt;POCO C++ Libraries blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/vcblog/&quot;&gt;Visual C++ Team Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bartoszmilewski.com/&quot;&gt;Bartosz Milewski’s Programming Cafe&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are C++ aggregators&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/cpp/&quot;&gt;C++ subreddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are some online journals&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://accu.org/index.php/journals/c78/&quot;&gt;The ACCU Overload journals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are primary sources for C++&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/&quot;&gt;C++ Standards Committee Papers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines&quot;&gt;C++ Core Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are old but still useful&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.gotw.ca/gotw/&quot;&gt;Guru of the Week&lt;/a&gt;. Old Herb Sutter blog, material for his Exceptional C++ books.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.artima.com/cppsource&quot;&gt;Artima Developer: The C++ Source&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.think-async.com/&quot;&gt;Thinking Asynchronously in C++&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cplusplus-soup.com/&quot;&gt;C++ Soup! C++ Tips, Tricks, Reviews, and Commentary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 08 Apr 2017 11:00:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/04/08/cplusplus-blogs.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/08/cplusplus-blogs.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://blog.nullspace.io/&quot;&gt;Computer “scientist”&lt;/a&gt;. Alex Clemmer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codewords.recurse.com/&quot;&gt;Code Words&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mcfunley.com/&quot;&gt;Dan McKinley&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://davidad.github.io/&quot;&gt;Technical Journal: Stuff I hack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.evanjones.ca/&quot;&gt;Evan Jones&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.evanjones.ca/unicode-in-c.html&quot;&gt;Using Unicode in C/C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.lse.epita.fr/&quot;&gt;LSE Blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bellard.org/&quot;&gt;Fabrice Bellard&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;It Will Never Work in Theory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://duartes.org/gustavo/blog/&quot;&gt;brain food for hackers&lt;/a&gt;. Gustavo Duarte&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.jessitron.com/&quot;&gt;Abstractivate&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aphyr.com/&quot;&gt;Aphyr&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jvns.ca/&quot;&gt;Julia Evans&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.regehr.org/&quot;&gt;Embedded in Academia&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://brooker.co.za/blog/&quot;&gt;Marc’s Blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://idea.popcount.org/&quot;&gt;Marek’s totally not insane idea of the day&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://psy-lob-saw.blogspot.com/&quot;&gt;Psychosomatic, Lobotomy, Saw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.windytan.com/&quot;&gt;absorptions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://danluu.com/&quot;&gt;https://danluu.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kamalmarhubi.com/blog/&quot;&gt;Kamal Marhubi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://yosefk.com/blog/&quot;&gt;Proper Fixation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.snellman.net/blog/&quot;&gt;Juho Snellman’s Weblog&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Apr 2017 13:00:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/04/04/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/04/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -43,16 +167,16 @@
     
       <item>
         <title>Type traits</title>
-        <description>&lt;p&gt;Type traits in conjunction with &lt;code&gt;enable_if&lt;/code&gt; are turning into a required foundation for writing
-template classes. Consider &lt;code&gt;std::filesystem::path&lt;/code&gt;: this has overloads that require help in order
+        <description>&lt;p&gt;Type traits in conjunction with &lt;code class=&quot;highlighter-rouge&quot;&gt;enable_if&lt;/code&gt; are turning into a required foundation for writing
+template classes. Consider &lt;code class=&quot;highlighter-rouge&quot;&gt;std::filesystem::path&lt;/code&gt;: this has overloads that require help in order
 for the compiler to disambiguate some of the required constructors and operators.&lt;/p&gt;
 
-&lt;p&gt;Let’s start with an interesting base, &lt;code&gt;integral_constant&lt;/code&gt;. This turns a constant into a type,
+&lt;p&gt;Let’s start with an interesting base, &lt;code class=&quot;highlighter-rouge&quot;&gt;integral_constant&lt;/code&gt;. This turns a constant into a type,
 which means that templates can use it to control which template gets instantiated.&lt;/p&gt;
 
 &lt;p&gt;A modern version might look like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integral_constant&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -66,20 +190,20 @@ which means that templates can use it to control which template gets instantiate
 &lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bool_constant&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integral_constant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;true_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bool_constant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;false_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bool_constant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;false_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bool_constant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The &lt;code&gt;bool_constant&lt;/code&gt; specialization is provided as of C++17. However, except for the modern syntax
-(e.g. &lt;code&gt;using&lt;/code&gt; instead of &lt;code&gt;typedef&lt;/code&gt;), this template is basic C++.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;bool_constant&lt;/code&gt; specialization is provided as of C++17. However, except for the modern syntax
+(e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;using&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;typedef&lt;/code&gt;), this template is basic C++.&lt;/p&gt;
 
 &lt;p&gt;The entire reason for this is the side effects; otherwise, it’s a very expensive (in lines of code)
 way to represent a constant.&lt;/p&gt;
 
-&lt;p&gt;Starting with the most simple usage, we have two unique types &lt;code&gt;true_type&lt;/code&gt; and &lt;code&gt;false_type&lt;/code&gt; that are
-specializations of &lt;code&gt;bool_constant&lt;/code&gt;, itself a specialization of &lt;code&gt;integral_constant&lt;/code&gt;. We can do
+&lt;p&gt;Starting with the most simple usage, we have two unique types &lt;code class=&quot;highlighter-rouge&quot;&gt;true_type&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;false_type&lt;/code&gt; that are
+specializations of &lt;code class=&quot;highlighter-rouge&quot;&gt;bool_constant&lt;/code&gt;, itself a specialization of &lt;code class=&quot;highlighter-rouge&quot;&gt;integral_constant&lt;/code&gt;. We can do
 tag dispatching to select between two options at compile time. Let’s say we have a print function and
 we want integer and floating point versions&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print_impl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;true_type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -93,18 +217,18 @@ we want integer and floating point versions&lt;/p&gt;
 &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;print_impl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is_integral&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Here, &lt;code&gt;is_integral&lt;/code&gt; is a type trait that inherits from &lt;code&gt;bool_constant&lt;/code&gt; and returns &lt;code&gt;true_type&lt;/code&gt; if
-we have a type that is integral, e.g. &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;short&lt;/code&gt;, etc. We could use normal overloading, but the promotion
+&lt;p&gt;Here, &lt;code class=&quot;highlighter-rouge&quot;&gt;is_integral&lt;/code&gt; is a type trait that inherits from &lt;code class=&quot;highlighter-rouge&quot;&gt;bool_constant&lt;/code&gt; and returns &lt;code class=&quot;highlighter-rouge&quot;&gt;true_type&lt;/code&gt; if
+we have a type that is integral, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;short&lt;/code&gt;, etc. We could use normal overloading, but the promotion
 rules often defeat our attempts at overloading.&lt;/p&gt;
 
-&lt;p&gt;Of course, as you see, we almost never use &lt;code&gt;true_type&lt;/code&gt; and &lt;code&gt;false_type&lt;/code&gt; directly. Instead, they are the
+&lt;p&gt;Of course, as you see, we almost never use &lt;code class=&quot;highlighter-rouge&quot;&gt;true_type&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;false_type&lt;/code&gt; directly. Instead, they are the
 base type for type traits.&lt;/p&gt;
 
-&lt;h2 id=&quot;voidt&quot;&gt;void_t&lt;/h2&gt;
+&lt;h2 id=&quot;void_t&quot;&gt;void_t&lt;/h2&gt;
 
-&lt;p&gt;C++17 has &lt;code&gt;void_t&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;C++17 has &lt;code class=&quot;highlighter-rouge&quot;&gt;void_t&lt;/code&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://en.cppreference.com/w/cpp/types/void_t&quot;&gt;std::void_t&lt;/a&gt;&lt;/li&gt;
@@ -112,19 +236,19 @@ base type for type traits.&lt;/p&gt;
 
 &lt;p&gt;and this is simply:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;with the example being&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is_iterable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;false_type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is_iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;void_t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;decltype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;declval&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()),&lt;/span&gt;
                                   &lt;span class=&quot;k&quot;&gt;decltype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;declval&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;true_type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;true_type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;where &lt;code&gt;is_iterable&lt;/code&gt; is a type trait and has a &lt;code&gt;true&lt;/code&gt; value if type &lt;code&gt;T&lt;/code&gt; is an iterable type, determined
+&lt;p&gt;where &lt;code class=&quot;highlighter-rouge&quot;&gt;is_iterable&lt;/code&gt; is a type trait and has a &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; value if type &lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt; is an iterable type, determined
 by the fact that&lt;/p&gt;
 
 &lt;p&gt;An earlier version was proposed in:&lt;/p&gt;
@@ -146,44 +270,44 @@ by the fact that&lt;/p&gt;
     
       <item>
         <title>Writing std::filesystem: Path (part 2)</title>
-        <description>&lt;p&gt;OK, reboot on &lt;code&gt;std::filesystem::path&lt;/code&gt;. There are bits of it that require C++ trickery; my first
+        <description>&lt;p&gt;OK, reboot on &lt;code class=&quot;highlighter-rouge&quot;&gt;std::filesystem::path&lt;/code&gt;. There are bits of it that require C++ trickery; my first
 impulse was to dive into the hard parts first, but I ran into expression SFINAE hell with
 Visual Studio 2015 (which I need to support).&lt;/p&gt;
 
-&lt;p&gt;So instead I want to get the bulk of &lt;code&gt;path&lt;/code&gt; done before I tackle the template functions that
+&lt;p&gt;So instead I want to get the bulk of &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; done before I tackle the template functions that
 have complications around them. So ignore everything said before, let’s try again.&lt;/p&gt;
 
-&lt;h1 id=&quot;class-path&quot;&gt;27.10.8 Class path&lt;/h1&gt;
+&lt;h1 id=&quot;27108-class-path&quot;&gt;27.10.8 Class path&lt;/h1&gt;
 
-&lt;h2 id=&quot;valuetype-and-preferredseparator&quot;&gt;&lt;code&gt;value_type&lt;/code&gt; and &lt;code&gt;preferred_separator&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;value_type-and-preferred_separator&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;value_type&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;preferred_separator&lt;/code&gt;&lt;/h2&gt;
 
-&lt;p&gt;A &lt;code&gt;path&lt;/code&gt; has a &lt;code&gt;value_type&lt;/code&gt; that is platform-specific; this is meant to map directly to the
-platform filesystem character set. It also has a &lt;code&gt;preferred_separator&lt;/code&gt; that is the native
+&lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; has a &lt;code class=&quot;highlighter-rouge&quot;&gt;value_type&lt;/code&gt; that is platform-specific; this is meant to map directly to the
+platform filesystem character set. It also has a &lt;code class=&quot;highlighter-rouge&quot;&gt;preferred_separator&lt;/code&gt; that is the native
 separator; this seems to have been concocted mainly for Windows support. It also has
-a &lt;code&gt;string_type&lt;/code&gt;, but this is just &lt;code&gt;basic_string&amp;lt;value_type&lt;/code&gt;. So we have&lt;/p&gt;
+a &lt;code class=&quot;highlighter-rouge&quot;&gt;string_type&lt;/code&gt;, but this is just &lt;code class=&quot;highlighter-rouge&quot;&gt;basic_string&amp;lt;value_type&lt;/code&gt;. So we have&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#if defined(_WIN32) &amp;amp;&amp;amp; defined(UNICODE)
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;    &lt;span class=&quot;cp&quot;&gt;#if defined(_WIN32) &amp;amp;&amp;amp; defined(UNICODE)
 &lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// Windows Unicode build is UCS16LE
 &lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wchar_t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;L&#39;\\&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;L'\\'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// Otherwise, this is MBCS, e.g. single-byte
 &lt;/span&gt;    &lt;span class=&quot;cp&quot;&gt;#elif defined(_WIN32) &amp;amp;&amp;amp; !defined(UNICODE)
 &lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// Otherwise, this is MBCS, e.g. single-byte
 &lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;\\&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'\\'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;cp&quot;&gt;#else
 &lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;/&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;cp&quot;&gt;#endif
 &lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;basic_string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;basic_string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is part of what is called native format; fileystems accept and return path strings in native
 format. Windows Unicode builds use UTF16LE as the filesystem character set and separate path components
 with ‘\’. The actual definition of native pathname format is “The operating system dependent pathname
 format accepted by the host operating system”.&lt;/p&gt;
 
-&lt;h2 id=&quot;generic-pathname-format&quot;&gt;27.10.8.1 Generic pathname format&lt;/h2&gt;
+&lt;h2 id=&quot;271081-generic-pathname-format&quot;&gt;27.10.8.1 Generic pathname format&lt;/h2&gt;
 
 &lt;p&gt;Unlike the native format, generic format is specified. This is so that general-purpose code can
 form and manipulate paths, presuming that there are conversion functions from native to generic,
@@ -195,70 +319,70 @@ This hedge exists so that other filesystems can be mapped to a common format.&lt
 
 &lt;p&gt;On Windows, native format uses the preferred separator ‘\’, whereas generic paths prefer to join
 paths with ‘/’. Obviously POSIX uses ‘/’ natively, and Windows NT filesystem functions allow ‘/’
-in most cases (with the exception of so-called UNC file paths which have to start with &lt;code&gt;\\\\&lt;/code&gt;).&lt;/p&gt;
+in most cases (with the exception of so-called UNC file paths which have to start with &lt;code class=&quot;highlighter-rouge&quot;&gt;\\\\&lt;/code&gt;).&lt;/p&gt;
 
-&lt;h2 id=&quot;path-conversions&quot;&gt;27.10.8.2 path conversions&lt;/h2&gt;
+&lt;h2 id=&quot;271082-path-conversions&quot;&gt;27.10.8.2 path conversions&lt;/h2&gt;
 
 &lt;p&gt;We are going to sidestep path conversions completely to begin with, since we can use either generic
 paths or native paths at will in calls.&lt;/p&gt;
 
-&lt;h2 id=&quot;path-requirements&quot;&gt;27.10.8.3 path requirements&lt;/h2&gt;
+&lt;h2 id=&quot;271083-path-requirements&quot;&gt;27.10.8.3 path requirements&lt;/h2&gt;
 
-&lt;p&gt;There are a number of function templates that, in the spec, take a paramter named &lt;code&gt;Source&lt;/code&gt;. This
-is a stand-in for a family of function templates; &lt;code&gt;Source&lt;/code&gt; is either a specialization of 
-&lt;code&gt;basic_string&lt;/code&gt; or &lt;code&gt;basic_string_view&lt;/code&gt;, or &lt;code&gt;iterator_traits&amp;lt;decay_t&amp;lt;Source&amp;gt;&amp;gt;::value_type&lt;/code&gt; is valid
+&lt;p&gt;There are a number of function templates that, in the spec, take a paramter named &lt;code class=&quot;highlighter-rouge&quot;&gt;Source&lt;/code&gt;. This
+is a stand-in for a family of function templates; &lt;code class=&quot;highlighter-rouge&quot;&gt;Source&lt;/code&gt; is either a specialization of 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;basic_string&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;basic_string_view&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;iterator_traits&amp;lt;decay_t&amp;lt;Source&amp;gt;&amp;gt;::value_type&lt;/code&gt; is valid
 and denotes a (possibly const) encoded character type.&lt;/p&gt;
 
 &lt;p&gt;This applies to constructors, assignments, appends and concatenation, as these are the places
-that data are passed to &lt;code&gt;path&lt;/code&gt;.&lt;/p&gt;
+that data are passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;path-constructors&quot;&gt;27.10.8.4.1 path constructors&lt;/h2&gt;
+&lt;h2 id=&quot;2710841-path-constructors&quot;&gt;27.10.8.4.1 path constructors&lt;/h2&gt;
 
 &lt;p&gt;There are 5-7 different constructors, depending on how you look at it. In the following,
 we are going to ignore any character conversions or normalizations that might need to be
 done.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;path()&lt;/code&gt;: construct path with empty path string&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;path(const path&amp;amp;)&lt;/code&gt;: copy-construct from existing &lt;code&gt;path&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;path(path&amp;amp;&amp;amp;)&lt;/code&gt;: move-construct from existing &lt;code&gt;path&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;path()&lt;/code&gt;: construct path with empty path string&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;path(const path&amp;amp;)&lt;/code&gt;: copy-construct from existing &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;path(path&amp;amp;&amp;amp;)&lt;/code&gt;: move-construct from existing &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;The default constructor and destructor are easy, because we don’t need any state. Likewise, the
 copy constructor and move constructor can rely on the copy and move constructor for our underlying
 data type.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;path(string_type&amp;amp;&amp;amp; source)&lt;/code&gt;: construct from string of underlying type&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;path(string_type&amp;amp;&amp;amp; source)&lt;/code&gt;: construct from string of underlying type&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Another easy constructor is the one that moves from a matching &lt;code&gt;string_type&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Another easy constructor is the one that moves from a matching &lt;code class=&quot;highlighter-rouge&quot;&gt;string_type&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;There is a “construct from Source” template where Source can be a number of things&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;template&amp;lt;class Source&amp;gt; path(const Source&amp;amp; source)&lt;/code&gt;: construct from Source&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;template&amp;lt;class Source&amp;gt; path(const Source&amp;amp; source)&lt;/code&gt;: construct from Source&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The &lt;code&gt;Source&lt;/code&gt; type can be one of: basic_string, string_view, iterator of NCTCS,
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Source&lt;/code&gt; type can be one of: basic_string, string_view, iterator of NCTCS,
 or array that decays to pointer to NCTCS; NCTCS is just a fancy way of saying
 “zero-terminated string”, except that string is any sequence of characters that
 an iterator can step through. Since decay-to-pointer ends up with a pointer of
 a certain type, we could consider this as three overloads.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Allocator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Allocator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;basic_string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Allocator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_string_view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
          &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enable_if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;We have a constructor that is passed two input iterators - this needs a type trait
 in order to prevent it from matching non-iterator two-parameter constructors, just
@@ -266,21 +390,21 @@ like the single-parameter template needs a type trait to prevent it from matchin
 other single-parameter constructors.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;template&amp;lt;class InputIterator&amp;gt; path(InputIterator first, InputIterator last)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;template&amp;lt;class InputIterator&amp;gt; path(InputIterator first, InputIterator last)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
          &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enable_if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;And then there are some +locale versions of constructors.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;template&amp;lt;class Source&amp;gt; path(const Source&amp;amp; source, const locale&amp;amp; loc)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;template&amp;lt;class InputIterator&amp;gt; path(InputIterator first, InputIterator last, const locale&amp;amp; loc)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;template&amp;lt;class Source&amp;gt; path(const Source&amp;amp; source, const locale&amp;amp; loc)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;template&amp;lt;class InputIterator&amp;gt; path(InputIterator first, InputIterator last, const locale&amp;amp; loc)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Allocator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Allocator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;basic_string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Allocator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_string_view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EcharT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;traits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -289,17 +413,17 @@ other single-parameter constructors.&lt;/p&gt;
 	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
          &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enable_if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h2 id=&quot;path-assignments&quot;&gt;27.10.8.4.2 path assignments&lt;/h2&gt;
+&lt;h2 id=&quot;2710842-path-assignments&quot;&gt;27.10.8.4.2 path assignments&lt;/h2&gt;
 
 &lt;p&gt;stuff from code here&lt;/p&gt;
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
 
-&lt;p&gt;This is the definition of &lt;code&gt;std::filesystem::path&lt;/code&gt; from the C++ standard section 27.10.8.&lt;/p&gt;
+&lt;p&gt;This is the definition of &lt;code class=&quot;highlighter-rouge&quot;&gt;std::filesystem::path&lt;/code&gt; from the C++ standard section 27.10.8.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filesystem&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filesystem&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;see&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -433,7 +557,7 @@ other single-parameter constructors.&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// exposition only
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Mon, 03 Apr 2017 15:30:00 -0700</pubDate>
@@ -480,60 +604,60 @@ other single-parameter constructors.&lt;/p&gt;
 
 &lt;h1 id=&quot;path&quot;&gt;path&lt;/h1&gt;
 
-&lt;p&gt;The &lt;code&gt;path&lt;/code&gt; class abstracts the idea of a filesystem path. First off, let me just say: this is
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; class abstracts the idea of a filesystem path. First off, let me just say: this is
 absurd ridiculous overkill. Just say that a path is a set of arbitrary strings of non-zero bytes
-joined together by the path separator &lt;code&gt;/&lt;/code&gt;, have some shim behavior for Windows, and be done with
+joined together by the path separator &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;, have some shim behavior for Windows, and be done with
 it. Microsoft really needs to join with the sane part of the world, ditch the use of the backslash
-character &lt;code&gt;\\&lt;/code&gt; for path separators, turn drive letters into something reasonable, kill the
+character &lt;code class=&quot;highlighter-rouge&quot;&gt;\\&lt;/code&gt; for path separators, turn drive letters into something reasonable, kill the
 insanity that is universal paths. Blah blah. Sigh.&lt;/p&gt;
 
-&lt;p&gt;According to the standard, an object of class &lt;code&gt;path&lt;/code&gt; represents a path and contains a pathname.
-You can have a &lt;code&gt;path&lt;/code&gt; object that doesn’t actually map to an existing path in a filesystem - for
+&lt;p&gt;According to the standard, an object of class &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; represents a path and contains a pathname.
+You can have a &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; object that doesn’t actually map to an existing path in a filesystem - for
 one, you couldn’t create a new file if paths could only point to existing files.&lt;/p&gt;
 
-&lt;p&gt;Since &lt;code&gt;path&lt;/code&gt; has a lot of functionality, let’s start with the bare minimum:&lt;/p&gt;
+&lt;p&gt;Since &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; has a lot of functionality, let’s start with the bare minimum:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;path&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;path&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;/&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;noexcept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;noexcept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This &lt;code&gt;path&lt;/code&gt; isn’t quite useful, because there’s no way to modify a path. But we could create
+&lt;p&gt;This &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; isn’t quite useful, because there’s no way to modify a path. But we could create
 an empty one. Let’s talk about what we have.&lt;/p&gt;
 
-&lt;p&gt;The first abstraction is in the type of character - all the standard says is that &lt;code&gt;value_type&lt;/code&gt;
-is a &lt;code&gt;typedef&lt;/code&gt; for the operating system dependent encoded character type used to represent
-pathnames. For many filesystems, either &lt;code&gt;char&lt;/code&gt; or &lt;code&gt;unsigned char&lt;/code&gt; is appropriate, because
+&lt;p&gt;The first abstraction is in the type of character - all the standard says is that &lt;code class=&quot;highlighter-rouge&quot;&gt;value_type&lt;/code&gt;
+is a &lt;code class=&quot;highlighter-rouge&quot;&gt;typedef&lt;/code&gt; for the operating system dependent encoded character type used to represent
+pathnames. For many filesystems, either &lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;unsigned char&lt;/code&gt; is appropriate, because
 filesystem paths are either just strings of bytes, or UTF-8 characters which can just be
 treated as strings of bytes most of the time.&lt;/p&gt;
 
 &lt;p&gt;The second abstraction is in the path separator. Once again, this is operating system
-specific and so &lt;code&gt;path&lt;/code&gt; can’t be passed to cross-platform code.&lt;/p&gt;
+specific and so &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; can’t be passed to cross-platform code.&lt;/p&gt;
 
-&lt;p&gt;Note that &lt;code&gt;path&lt;/code&gt; is not a template parameterized on these values, like say how &lt;code&gt;basic_string&lt;/code&gt;
+&lt;p&gt;Note that &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; is not a template parameterized on these values, like say how &lt;code class=&quot;highlighter-rouge&quot;&gt;basic_string&lt;/code&gt;
 works, but instead these are platform-specific values. So one could imagine our code looking
 like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;path&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;path&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
 &lt;span class=&quot;cp&quot;&gt;#ifdef _WIN32
 &lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;// Assume that we only work on Unicode builds
 &lt;/span&gt;	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wchar_t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;L&#39;\\&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;L'\\'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;cp&quot;&gt;#else
 &lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;// Every other filesystem is UTF-8/string of bytes
 &lt;/span&gt;	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;/&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferred_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;cp&quot;&gt;#endif
 &lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -543,19 +667,19 @@ like this:&lt;/p&gt;
 
 &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;string_type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;constructors&quot;&gt;constructors&lt;/h2&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;But if we want to use SFINAE so we don’t get template expansion started when it’s not an iterator,
-we can use &lt;code&gt;enable_if&lt;/code&gt;.&lt;/p&gt;
+we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;enable_if&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputIterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enable_if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputIterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Fri, 31 Mar 2017 19:30:00 -0700</pubDate>
@@ -582,37 +706,37 @@ we can use &lt;code&gt;enable_if&lt;/code&gt;.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://en.cppreference.com/w/cpp/experimental/fs&quot;&gt;Filesystem library (cppreference.com)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This shipped as &lt;code&gt;std::experimental::filesystem&lt;/code&gt; in Visual Studio 2015 (don’t think VS2017 promoted it to
+&lt;p&gt;This shipped as &lt;code class=&quot;highlighter-rouge&quot;&gt;std::experimental::filesystem&lt;/code&gt; in Visual Studio 2015 (don’t think VS2017 promoted it to
 std::filesystem).&lt;/p&gt;
 
-&lt;p&gt;It shipped as &lt;code&gt;std::experimental::filesystem&lt;/code&gt; in GCC 5.3 in libstdc++.&lt;/p&gt;
+&lt;p&gt;It shipped as &lt;code class=&quot;highlighter-rouge&quot;&gt;std::experimental::filesystem&lt;/code&gt; in GCC 5.3 in libstdc++.&lt;/p&gt;
 
-&lt;p&gt;While it’s implemented in libc++, also as &lt;code&gt;std::experimental::filesystem&lt;/code&gt;,
+&lt;p&gt;While it’s implemented in libc++, also as &lt;code class=&quot;highlighter-rouge&quot;&gt;std::experimental::filesystem&lt;/code&gt;,
 it’s not shipping with a Clang version yet (you need to build your own Clang/libc++ to enable it).&lt;/p&gt;
 
 &lt;p&gt;So, let’s just write our own so we can start using it everywhere. Since we’re starting from the fact of
-the C++17 standard now including it, we will just create &lt;code&gt;std::filesystem&lt;/code&gt;. This makes our life a little
+the C++17 standard now including it, we will just create &lt;code class=&quot;highlighter-rouge&quot;&gt;std::filesystem&lt;/code&gt;. This makes our life a little
 easier at the moment, since no vendor has yet promoted it out of experimental.&lt;/p&gt;
 
-&lt;h1 id=&quot;ltfilesystemrt&quot;&gt;&amp;lt;filesystem&amp;amp;rt;&lt;/h1&gt;
+&lt;h1 id=&quot;filesystemrt&quot;&gt;&amp;lt;filesystem&amp;amp;rt;&lt;/h1&gt;
 
-&lt;p&gt;This is somewhat defined for us in the standard. This goes in the namespace &lt;code&gt;std::filesystem&lt;/code&gt;. We
+&lt;p&gt;This is somewhat defined for us in the standard. This goes in the namespace &lt;code class=&quot;highlighter-rouge&quot;&gt;std::filesystem&lt;/code&gt;. We
 wrap it like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filesystem&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;inline&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 
 &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
 
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileystem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileystem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Note the &lt;code&gt;inline namespace v1&lt;/code&gt;. See &lt;a href=&quot;http://stackoverflow.com/questions/11016220/what-are-inline-namespaces-for&quot;&gt;What are inline namespaces for?&lt;/a&gt; for an explanation about using inline namespaces to help
+&lt;p&gt;Note the &lt;code class=&quot;highlighter-rouge&quot;&gt;inline namespace v1&lt;/code&gt;. See &lt;a href=&quot;http://stackoverflow.com/questions/11016220/what-are-inline-namespaces-for&quot;&gt;What are inline namespaces for?&lt;/a&gt; for an explanation about using inline namespaces to help
 in API versioning.&lt;/p&gt;
 
 &lt;p&gt;The classes in our namespace:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;filesystem_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;directory_entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;directory_iterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -623,42 +747,42 @@ in API versioning.&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;perms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;copy_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;directory_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chrono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time_point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trivial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_time_type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chrono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time_point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trivial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_time_type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;There are also a host of non-member functions to implement. We’re going to group these by
 functionality, rather than address them all at once.&lt;/p&gt;
 
 &lt;p&gt;Let’s cover trivial stuff first.&lt;/p&gt;
 
-&lt;h1 id=&quot;filetimetype&quot;&gt;file_time_type&lt;/h1&gt;
+&lt;h1 id=&quot;file_time_type&quot;&gt;file_time_type&lt;/h1&gt;
 
-&lt;p&gt;The standard says that &lt;code&gt;trivial-clock&lt;/code&gt; is an implementation-defined type that satisfies
-the C++ concept &lt;code&gt;TrivialClock&lt;/code&gt; (all this means is that this is a clock that would make the
-&lt;code&gt;chrono&lt;/code&gt; library happy) and is sufficient to represent the resolution and range of the file time
+&lt;p&gt;The standard says that &lt;code class=&quot;highlighter-rouge&quot;&gt;trivial-clock&lt;/code&gt; is an implementation-defined type that satisfies
+the C++ concept &lt;code class=&quot;highlighter-rouge&quot;&gt;TrivialClock&lt;/code&gt; (all this means is that this is a clock that would make the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;chrono&lt;/code&gt; library happy) and is sufficient to represent the resolution and range of the file time
 values offered by the filesystem. What the fuck, standard committee! Right off the bat,
 we have something that could differ between filesystems and thus we can’t really pass these
 values between file systems.&lt;/p&gt;
 
 &lt;p&gt;See &lt;a href=&quot;http://en.cppreference.com/w/cpp/concept/TrivialClock&quot;&gt;http://en.cppreference.com/w/cpp/concept/TrivialClock&lt;/a&gt;
-for something readable about &lt;code&gt;TrivialClock&lt;/code&gt;.&lt;/p&gt;
+for something readable about &lt;code class=&quot;highlighter-rouge&quot;&gt;TrivialClock&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;We could take the easy route. Since all the &lt;code&gt;chrono&lt;/code&gt; clocks meet the &lt;code&gt;TrivialClock&lt;/code&gt; requirements,
+&lt;p&gt;We could take the easy route. Since all the &lt;code class=&quot;highlighter-rouge&quot;&gt;chrono&lt;/code&gt; clocks meet the &lt;code class=&quot;highlighter-rouge&quot;&gt;TrivialClock&lt;/code&gt; requirements,
 we could just do this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_time_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time_point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system_clock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_time_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time_point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system_clock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let’s call that the v0 implementation.&lt;/p&gt;
 
 &lt;p&gt;We’re going to put a line in the sand. Our clock is 64-bit nanoseconds with a zero at 2000/01/01 00:00:00 UTC.
-This has the happy property that it’s a superset of Windows &lt;code&gt;FILETIME&lt;/code&gt; and most Linux and Unix filesystems
+This has the happy property that it’s a superset of Windows &lt;code class=&quot;highlighter-rouge&quot;&gt;FILETIME&lt;/code&gt; and most Linux and Unix filesystems
 that I’ve ever heard of, a superset that is losslessly convertible.&lt;/p&gt;
 
-&lt;h1 id=&quot;filetype&quot;&gt;file_type&lt;/h1&gt;
+&lt;h1 id=&quot;file_type&quot;&gt;file_type&lt;/h1&gt;
 
 &lt;p&gt;This one is easy, it’s a mandated enum class. The values aren’t mandated, but we’ll put the exceptional
 case as -1 and then just number others starting with 0.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;file_type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;file_type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;not_found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;regular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -669,18 +793,18 @@ case as -1 and then just number others starting with 0.&lt;/p&gt;
     &lt;span class=&quot;n&quot;&gt;fifo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;unknown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Note that we end our last enum item with a comma; this is a new best practice in my opinion, because
 it means that adding new items can’t go awry or cause extra lines to be edited.&lt;/p&gt;
 
-&lt;h1 id=&quot;copyoptions&quot;&gt;copy_options&lt;/h1&gt;
+&lt;h1 id=&quot;copy_options&quot;&gt;copy_options&lt;/h1&gt;
 
 &lt;p&gt;This one is also easy, another mandated enum class without mandated values. This is a bitmask enum, which
 means values will be combined together into a single field. So we just start
 with zero and roll up by powers of 2 to create distinct bitmaps.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;copy_options&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;copy_options&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt;                    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 
@@ -700,7 +824,7 @@ with zero and roll up by powers of 2 to create distinct bitmaps.&lt;/p&gt;
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;directories_only&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b001000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x040,
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;create_symlinks&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b010000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x080,
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;create_hardlinks&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b100000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// 0x100,
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Along with the enum class, we need some operators so that we can combine copy_options together; in the spec,
 it’s stated as a requirement that the concept BitmaskType is supported: see &lt;a href=&quot;http://en.cppreference.com/w/cpp/concept/BitmaskType&quot;&gt;C++ concepts: BitmaskType&lt;/a&gt;.&lt;/p&gt;
@@ -710,7 +834,7 @@ it’s stated as a requirement that the concept BitmaskType is supported: see &l
 &lt;p&gt;This one is also easy, another mandated enum class but with mandated values and the operators to support
 the BitmaskType concept.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;perms&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;perms&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// There are no permissions set for the file
 &lt;/span&gt;
@@ -736,38 +860,38 @@ the BitmaskType concept.&lt;/p&gt;
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;07777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// all + set_uid + set_gid + sticky_bit
 &lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;unknown&lt;/span&gt;             &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xFFFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// The permissions are not known, such as when a file_status object is created without specifying the permissions
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;add_perms&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// permissions() shall bitwise-or the perm argument&#39;s permissions bits to the file&#39;s current permissions bits
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;remove_perms&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x20000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// permissions() shall bitwise-and the complement of perm argument&#39;s permissions bits to the file&#39;s current permission bits
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;add_perms&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// permissions() shall bitwise-or the perm argument's permissions bits to the file's current permissions bits
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;remove_perms&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x20000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// permissions() shall bitwise-and the complement of perm argument's permissions bits to the file's current permission bits
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;symlink_nofollow&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x40000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// permissions() shall change the permissions of symbolic links.
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h1 id=&quot;directoryoptions&quot;&gt;directory_options&lt;/h1&gt;
+&lt;h1 id=&quot;directory_options&quot;&gt;directory_options&lt;/h1&gt;
 
 &lt;p&gt;This one is also easy, another mandated enum class without mandated values. This is a bitmask enum, which
 means values will be combined together into a single field. So we just start with zero and roll up by powers
 of 2 to create distinct bitmaps, and add the operators as per BitmaskType.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;directory_options&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;directory_options&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt;                        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// (Default) Skip directory symlinks, permission denied is an error
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;follow_directory_symlink&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Follow rather than skip directory symlinks
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;skip_permission_denied&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Skip directories that would otherwise result in permission denied
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h1 id=&quot;spaceinfo&quot;&gt;space_info&lt;/h1&gt;
+&lt;h1 id=&quot;space_info&quot;&gt;space_info&lt;/h1&gt;
 
-&lt;p&gt;This is defined in the standard, so hurray, but then the commentary about the &lt;code&gt;space()&lt;/code&gt; function itself
+&lt;p&gt;This is defined in the standard, so hurray, but then the commentary about the &lt;code class=&quot;highlighter-rouge&quot;&gt;space()&lt;/code&gt; function itself
 has a bunch of as-if POSIX, instead of just stating the obvious.&lt;/p&gt;
 
-&lt;p&gt;Specifically, &lt;code&gt;capacity&lt;/code&gt; is the total size of the filesystem in bytes; &lt;code&gt;free&lt;/code&gt; is the size of the
-unallocated part of the filesystem in bytes; and &lt;code&gt;available&lt;/code&gt; is the number of bytes available to
-a non-super user. As such, &lt;code&gt;available&lt;/code&gt; can be less than &lt;code&gt;free&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Specifically, &lt;code class=&quot;highlighter-rouge&quot;&gt;capacity&lt;/code&gt; is the total size of the filesystem in bytes; &lt;code class=&quot;highlighter-rouge&quot;&gt;free&lt;/code&gt; is the size of the
+unallocated part of the filesystem in bytes; and &lt;code class=&quot;highlighter-rouge&quot;&gt;available&lt;/code&gt; is the number of bytes available to
+a non-super user. As such, &lt;code class=&quot;highlighter-rouge&quot;&gt;available&lt;/code&gt; can be less than &lt;code class=&quot;highlighter-rouge&quot;&gt;free&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space_info&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space_info&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kt&quot;&gt;uintmax_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;capacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;kt&quot;&gt;uintmax_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;kt&quot;&gt;uintmax_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Fri, 31 Mar 2017 13:30:00 -0700</pubDate>
@@ -837,88 +961,6 @@ a non-super user. As such, &lt;code&gt;available&lt;/code&gt; can be less than &
         <pubDate>Wed, 08 Mar 2017 17:30:00 -0800</pubDate>
         <link>http://neurocline.github.io/dev/2017/03/08/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/03/08/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://selfie.cs.uni-salzburg.at/&quot;&gt;selfie&lt;/a&gt;. A compiler and VM in 7000 lines of C&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jvns.ca/blog/2013/12/30/questions-im-asking-in-interviews/&quot;&gt;Questions I’m asking in interviews&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://kukuruku.co/post/the-collapse-of-the-unix-philosophy/&quot;&gt;The Collapse of the UNIX Philosophy&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://leverlanguage.com/&quot;&gt;Lever&lt;/a&gt;. New Python-like language with deep GUI/OpenGL integration.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mlg.eng.cam.ac.uk/yarin/blog_2248.html&quot;&gt;Uncertainty in Deep Learning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lists.gnu.org/archive/html/groff/2014-02/msg00104.html&quot;&gt;info is dead&lt;/a&gt;. What if info died and no one noticed. This is from 2014.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://undeadly.org/cgi?action=article&amp;amp;sid=20170304230520&quot;&gt;mandoc to markdown converter&lt;/a&gt;. Along with a lot of strong opinion.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://0pointer.net/blog/revisiting-how-we-put-together-linux-systems.html&quot;&gt;Revisiting How We Put Together Linux Systems&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://research.swtch.com/version-sat&quot;&gt;Version SAT&lt;/a&gt;. “Dependency hell is NP-complete. But maybe we can climb out.” Also see &lt;a href=&quot;https://thefeedbackloop.xyz/thoughts-on-dependency-hell-is-np-complete/&quot;&gt;Thoughts on “Dependency hell is NP-complete”&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://slides.com/yehudakatz/deck-4#/&quot;&gt;Zen and the Art of Package Management&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://yarnpkg.com/en/&quot;&gt;Yarn package manager&lt;/a&gt;. Pretty sure it’s just for Javascript. The docs are too cute and don’t seem to get to the point.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.raywenderlich.com/148832/introduction-swift-package-manager&quot;&gt;An Introduction to the Swift Package Manager&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/apple/swift-package-manager/blob/master/Documentation/PackageManagerCommunityProposal.md&quot;&gt;Swift Package Manager Community Proposal&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://yurichev.com/blog/minesweeper/&quot;&gt;Cracking Minesweeper with Z3 SMT solver&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 05 Mar 2017 10:00:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2017/03/05/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/03/05/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Local package managers</title>
-        <description>&lt;p&gt;Recently I read this presentation:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://slides.com/yehudakatz/deck-4#/&quot;&gt;Zen and the Art of Package Management&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I like the terminology of global package manager versus local package manager, so I think
-I’ll switch to that instead of “programming language package manager” (too unwieldy).&lt;/p&gt;
-
-&lt;p&gt;Specifically, we want more local package managers and fewer (no) global package managers.
-Some existing package managers claimed to be local package managers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; - for Ruby&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; - for Javascript/Node.js&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://crates.io/&quot;&gt;Cargo&lt;/a&gt; - for Rust&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://yarnpkg.com/en/&quot;&gt;Yarn&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; - for PHP&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pub.dartlang.org/&quot;&gt;Pub&lt;/a&gt; - for Dart&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cocoapods.org/&quot;&gt;Cocoapods&lt;/a&gt; - for Cocoa (Objective-C and Swift)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://swift.org/package-manager/&quot;&gt;Swift Package Manager&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Note, first off, that “local” can go along with “unwieldy” - cocoapods is getting quite
-unwieldly, so is npm.&lt;/p&gt;
-
-&lt;p&gt;I also like the clear-call out that containers are solving a problem that shouldn’t
-exist - global dependencies. The fewer global dependencies, the fewer container strategies
-you need on the development side.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 05 Mar 2017 03:00:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2017/03/05/local-package-managers.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/03/05/local-package-managers.html</guid>
         
         <category>text</category>
         

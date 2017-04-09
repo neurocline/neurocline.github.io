@@ -129,8 +129,8 @@ let it unpack to its default location, which is into a temp folder.</p>
 into your Ruby folder. The default action should find your Ruby folder, but you can double-check
 by looking at config.yml after you run dk.rb init.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>ruby dk.rb init
-<span class="gp">&gt; </span>ruby dk.rb install</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>ruby dk.rb init
+<span class="gp">&gt; </span>ruby dk.rb install</code></pre></figure>
 
 <p>Note that on one machine, DevKit didn’t install cleanly for some reason - e.g. gem install…
 failed with a “install DevKit, please”. I rebooted and that didn’t fix it, but then I reinstalled
@@ -147,14 +147,14 @@ it out, I went back to my original plan of “have a static site”.</p>
 
 <p>First, I installed Jekyll.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>gem install jekyll</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>gem install jekyll</code></pre></figure>
 
 <p>Then, I created a new Git repository and initialized it as a Jekyll-generated site.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>mkdir neurocline.github.io
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>mkdir neurocline.github.io
 <span class="gp">&gt; </span><span class="nb">cd </span>neurocline.github.io
 <span class="gp">&gt; </span>git init
-<span class="gp">&gt; </span>jekyll new .</code></pre></div>
+<span class="gp">&gt; </span>jekyll new .</code></pre></figure>
 
 <h2 id="install-pygments-or-rouge">Install Pygments or Rouge</h2>
 
@@ -166,13 +166,13 @@ understand that I needed more modules.</p>
 Jekyll. Since I am a Python user, this didn’t turn me off, so I just installed Pygments. This was
 especially easy since I’m using a Python that has pip as part of the core system</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>python -m pip install pygments</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>python -m pip install pygments</code></pre></figure>
 
 <p>I also had to add a line to my _config.yml file:</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text"># Build settings
+<figure class="highlight"><pre><code class="language-text" data-lang="text"># Build settings
 markdown: kramdown
-highlighter: pygments</code></pre></div>
+highlighter: pygments</code></pre></figure>
 
 <p>And frustratingly, even though the Pygments page said ‘shell’ was a style, there is no such
 thing and I had to use ‘bash’.</p>
@@ -183,7 +183,7 @@ thing and I had to use ‘bash’.</p>
 time you save, the file-watcher will pick up the changes and update the site. By default, your
 site is viewed on localhost:4000.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; jekyll serve
+<figure class="highlight"><pre><code class="language-text" data-lang="text">&gt; jekyll serve
 Configuration file: C:/projects/github/neurocline.github.io/_config.yml
             Source: C:/projects/github/neurocline.github.io
        Destination: C:/projects/github/neurocline.github.io/_site
@@ -196,7 +196,7 @@ Configuration file: C:/projects/github/neurocline.github.io/_config.yml
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
       Regenerating: 1 file(s) changed at 2015-05-01 19:59:33
-...</code></pre></div>
+...</code></pre></figure>
 
 <h2 id="bake-a-site">Bake a site</h2>
 
@@ -205,28 +205,28 @@ push to GitHub. And that means a little trickery. Here’s one approach.</p>
 
 <p>First, I baked the site:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>jekyll build</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>jekyll build</code></pre></figure>
 
 <p>Then, I pushed the sources for the site to a sources branch. GitHub wants to see the site itself in
 a master branch, I want my sources in source control, so I “hide” it in a branch GitHub is not
 looking at.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>git remote add origin git@ghosthub:neurocline/neurocline.git.io
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>git remote add origin git@ghosthub:neurocline/neurocline.git.io
 <span class="gp">&gt; </span>git checkout -b sources
 <span class="gp">&gt; </span>git add -A
 <span class="gp">&gt; </span>git commit -m <span class="s2">"First commit of source"</span>
-<span class="gp">&gt; </span>git push origin sources</code></pre></div>
+<span class="gp">&gt; </span>git push origin sources</code></pre></figure>
 
 <p>Finally, I pushed the baked site itself to a master branch.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nb">cd </span>_site
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nb">cd </span>_site
 <span class="gp">&gt; </span><span class="nb">echo</span> &gt; .nojekyll
 <span class="gp">&gt; </span>git init
 <span class="gp">&gt; </span>git remote add origin git@ghosthub:neurocline/neurocline.git.io
 <span class="gp">&gt; </span>git add -A
 <span class="gp">&gt; </span>git commit -m <span class="s2">"jekyll first build"</span>
 <span class="gp">&gt; </span>git push origin master
-<span class="gp">&gt; </span><span class="nb">cd</span> ..</code></pre></div>
+<span class="gp">&gt; </span><span class="nb">cd</span> ..</code></pre></figure>
 
 <p>At this point, my site is live on GitHub.</p>
 
@@ -245,11 +245,11 @@ Ruby and Python are in system directories, at least if you use the Apple-placed
 versions. Then, Python 2.7.5 doesn’t have pip, so that needs to be installed.
 Other than that, it’s exactly as detailed above.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gem install jekyll
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gem install jekyll
 sudo easy_install pip
-sudo python -m pip install pygments</code></pre></div>
+sudo python -m pip install pygments</code></pre></figure>
 
-<p>At this point, it’s <code>jekyll serve</code> and etc.</p>
+<p>At this point, it’s <code class="highlighter-rouge">jekyll serve</code> and etc.</p>
 
 <h2 id="results">Results</h2>
 

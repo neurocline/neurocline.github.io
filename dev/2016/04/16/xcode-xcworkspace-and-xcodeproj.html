@@ -99,24 +99,24 @@ contained projects; there is no other metadata.</p>
 
 <p>The simplest possible .xcworkspace has an on-disk structure like this:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">empty.xcworkspace/
-└── contents.xcworkspacedata</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">empty.xcworkspace/
+└── contents.xcworkspacedata</code></pre></figure>
 
-<p>and the <code>contents.xcworkspacedata</code> file, containing the actual workspace data, looks like this:</p>
+<p>and the <code class="highlighter-rouge">contents.xcworkspacedata</code> file, containing the actual workspace data, looks like this:</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;Workspace</span>
-    <span class="na">version =</span> <span class="s">"1.0"</span><span class="nt">&gt;</span></code></pre></div>
+    <span class="na">version =</span> <span class="s">"1.0"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <p>This workspace has nothing in it, but Xcode will open it up. Of course, once you open it up, Xcode
-will likely generate other metadata like an <code>xcshareddata/</code> directory containing source control
-information, and an <code>xcuserdata/</code> directory with user interface settings (window positions and
+will likely generate other metadata like an <code class="highlighter-rouge">xcshareddata/</code> directory containing source control
+information, and an <code class="highlighter-rouge">xcuserdata/</code> directory with user interface settings (window positions and
 so on). That metadata isn’t used for building, so we’ll ignore it here.</p>
 
 <p>A better example is from cppget, which has an Xcode workspace (albeit currently generated with
 Premake and not hand-made). The current directory structure for this package is as follows:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cppget.xcworkspace/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cppget.xcworkspace/
 ├── contents.xcworkspacedata
 ├── xcshareddata/
 │   └── cppget.xccheckout
@@ -125,11 +125,11 @@ Premake and not hand-made). The current directory structure for this package is 
         ├── UserInterfaceState.xcuserstate
         ├── WorkspaceSettings.xcsettings
         └── xcdebugger/
-            └── Breakpoints_v2.xcbkptlist</code></pre></div>
+            └── Breakpoints_v2.xcbkptlist</code></pre></figure>
 
-<p>This is the contents of the workspace file, <code>cppget.xcworkspace/contents.xcworkspacedata</code>:</p>
+<p>This is the contents of the workspace file, <code class="highlighter-rouge">cppget.xcworkspace/contents.xcworkspacedata</code>:</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;Workspace</span>
     <span class="na">version =</span> <span class="s">"1.0"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;FileRef</span>
@@ -153,12 +153,12 @@ Premake and not hand-made). The current directory structure for this package is 
     <span class="nt">&lt;FileRef</span>
         <span class="na">location =</span> <span class="s">"group:../vendor/__pkg__/unittest++/project/unittest++.xcodeproj"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/FileRef&gt;</span>
-<span class="nt">&lt;/Workspace&gt;</span></code></pre></div>
+<span class="nt">&lt;/Workspace&gt;</span></code></pre></figure>
 
-<p>The document root object is <code>&lt;Workspace&gt;</code>. The root object has a <code>version</code> attribute
+<p>The document root object is <code class="highlighter-rouge">&lt;Workspace&gt;</code>. The root object has a <code class="highlighter-rouge">version</code> attribute
 (always observed to be 1.0, indicating that the workspace file format hasn’t been changing),
-and then an array of child nodes of type <code>&lt;FileRef&gt;</code> and/or <code>&lt;Group&gt;</code>.
-Each <code>FileRef</code> node has a single attribute, which is the location of the contained item.
+and then an array of child nodes of type <code class="highlighter-rouge">&lt;FileRef&gt;</code> and/or <code class="highlighter-rouge">&lt;Group&gt;</code>.
+Each <code class="highlighter-rouge">FileRef</code> node has a single attribute, which is the location of the contained item.
 The value of the attribute is a string with either a “self:” prefix or a “group:” prefix (the
 self prefix is used when the .xcworkspace is embedded, see below). In the
 case of the “group” prefix, this auto-creates a group containing just this item in the workspace.
@@ -166,13 +166,13 @@ Groups can contain Groups or FileRefs, but FileRefs are just leaf nodes.</p>
 
 <p>In the example above, the source code structure looks like this:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cppget/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cppget/
 ├── project/
 │   └── cppget.xcworkspace/
 └── vendor/
-    └── __pkg__/</code></pre></div>
+    └── __pkg__/</code></pre></figure>
 
-<p>explaining the relative paths (getting to <code>vendor</code> from <code>project</code> requires <code>../vendor</code>).</p>
+<p>explaining the relative paths (getting to <code class="highlighter-rouge">vendor</code> from <code class="highlighter-rouge">project</code> requires <code class="highlighter-rouge">../vendor</code>).</p>
 
 <p>I say “item” because you can put anything in an .xcworkspace. Normally, you put projects into
 the workspace, but you can also put individual files, or directories. These will only be used for
@@ -210,17 +210,17 @@ in the workspace, or we add it. This means you need to take some care to have ca
 
 <p>The node we are adding follows the form</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;FileRef</span> <span class="na">location =</span> <span class="s">"group:RELATIVEPATH"</span><span class="nt">&gt;&lt;/FileRef&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;FileRef</span> <span class="na">location =</span> <span class="s">"group:RELATIVEPATH"</span><span class="nt">&gt;&lt;/FileRef&gt;</span></code></pre></figure>
 
-<p>e.g. the only data is the value for the <code>location</code> attribute, and the attribute value is prefixed
-with either <code>group:</code> or <code>self:</code>.</p>
+<p>e.g. the only data is the value for the <code class="highlighter-rouge">location</code> attribute, and the attribute value is prefixed
+with either <code class="highlighter-rouge">group:</code> or <code class="highlighter-rouge">self:</code>.</p>
 
 <p>So, for example, assuming you were using <a href="http://rapidxml.sourceforge.net/">RapidXML</a>,
 your code might look like this. I have parsed the workspace into a data structure that has
 pulled FileRefs out into a vector for easy manipulation, but then the XML itself has to be
 manipulated to add a new FileRef.</p>
 
-<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">bool</span> <span class="nf">AddProjectToXcodeWorkspace</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">projectPath</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">bool</span> <span class="nf">AddProjectToXcodeWorkspace</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">projectPath</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">XCWorkspace</span> <span class="n">workspace</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ReadXCWorkspace</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">var</span><span class="p">[</span><span class="s">"xcode.workspace"</span><span class="p">],</span> <span class="n">workspace</span><span class="p">))</span>
@@ -246,21 +246,21 @@ manipulated to add a new FileRef.</p>
         <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
     
     <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Perhaps a different XML library would have cleaner syntax. It’s a tradeoff.</p>
 
 <h1 id="xcodeproj">*.xcodeproj</h1>
 
 <p>Like the workspace, an Xcode project is a bundle containing one or more files. The most important
-and only required file is the <code>project.pbxproj</code> file.</p>
+and only required file is the <code class="highlighter-rouge">project.pbxproj</code> file.</p>
 
 <p>The simplest possible project looks like this</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">empty.xcodeproj/
-└── project.pbxproj</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">empty.xcodeproj/
+└── project.pbxproj</code></pre></figure>
 
-<p>The <code>project.pbxproj</code> file is an Xcode-specific file format using the text plist format, which came
+<p>The <code class="highlighter-rouge">project.pbxproj</code> file is an Xcode-specific file format using the text plist format, which came
 from NeXt and is now only used by legacy programs - and Xcode. Or so the internet claims.
 Also interestingly, Xcode by default is reading and writing the ASCII
 plist format, but can also read the XML plist format. But everyone seems to be creating the text
@@ -268,21 +268,21 @@ version, so we’ll stick with that (because the XML plist format is pretty hard
 
 <p>For a bigger example, let’s look at the .xcodeproj from cppget:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cppget.xcodeproj/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cppget.xcodeproj/
 ├── project.pbxproj
 └── xcuserdata/
     └── bfitz.xcuserdatad/
         └── xcschemes/
             ├── cppget.xcscheme
-            └── xcschememanagement.plist</code></pre></div>
+            └── xcschememanagement.plist</code></pre></figure>
 
 <p>As with .xcworkspace directories, Xcode puts configuration data inside the project directory, which
 we will ignore, because it doesn’t bear directly on workspaces and projects at the build level.</p>
 
-<p>The root of an Xcode project file is a dictionary. Looking at <code>cppget.xcodeproj/project.pbxproj</code>,
+<p>The root of an Xcode project file is a dictionary. Looking at <code class="highlighter-rouge">cppget.xcodeproj/project.pbxproj</code>,
 we see this:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">// !<span class="nv">$*</span>UTF8<span class="k">*</span><span class="nv">$!</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">// !<span class="nv">$*</span>UTF8<span class="k">*</span><span class="nv">$!</span>
 <span class="o">{</span>
     archiveVersion <span class="o">=</span> 1;
     classes <span class="o">=</span> <span class="o">{</span>
@@ -292,11 +292,11 @@ we see this:</p>
     ... objects here
     <span class="o">}</span>;
     rootObject <span class="o">=</span> 08FB7793FE84155DC02AAC07 /<span class="k">*</span> Project object <span class="k">*</span>/;
-<span class="o">}</span></code></pre></div>
+<span class="o">}</span></code></pre></figure>
 
-<p><code>archiveVersion</code> has always been 1.  And <code>classes</code> is usually empty (always?).</p>
+<p><code class="highlighter-rouge">archiveVersion</code> has always been 1.  And <code class="highlighter-rouge">classes</code> is usually empty (always?).</p>
 
-<p><code>objectVersion</code> indicates the project format::</p>
+<p><code class="highlighter-rouge">objectVersion</code> indicates the project format::</p>
 
 <ul>
   <li>39: something really old, when the project files were called .xcode</li>
@@ -307,9 +307,9 @@ we see this:</p>
   <li>47: Xcode 6.3 compatible</li>
 </ul>
 
-<p>The most important key is <code>rootObject</code>, which tells us which object represents the project. The entire
-project file is a tree, with <code>rootObject</code> at the top. The value of rootObject is an Xcode object
-identifier that is an index into the <code>objects</code> dictionary, which is a PBXProject object.</p>
+<p>The most important key is <code class="highlighter-rouge">rootObject</code>, which tells us which object represents the project. The entire
+project file is a tree, with <code class="highlighter-rouge">rootObject</code> at the top. The value of rootObject is an Xcode object
+identifier that is an index into the <code class="highlighter-rouge">objects</code> dictionary, which is a PBXProject object.</p>
 
 <h2 id="xcode-object-identifiers">Xcode object identifiers</h2>
 
@@ -329,7 +329,7 @@ Each element that gets a GUID has a sequence of strings that creates a virtual p
 hashed with a variant of the DJB algorithm. For example, creating a target ID uses the path
 [projectname, configname, “target”]; this whole thing is turned into a string and hashed to get a
 UUID. Since this is deterministic, regenerating the project will create the same UUID. The assumption
-is that things that are named the same are the same thing. See uses of <code>xcode.newid</code> in
+is that things that are named the same are the same thing. See uses of <code class="highlighter-rouge">xcode.newid</code> in
 <a href="https://github.com/premake/premake-xcode">premake/premake-xcode</a>,
 and refer to
 <a href="https://github.com/premake/premake-core/blob/master/src/host/string_hash.c">premake-core/src/host/string_hash.c</a>
@@ -341,7 +341,7 @@ This is safer, but requires some extra work if you want to minimize change on pr
 
 <h2 id="xcode-objects">Xcode objects</h2>
 
-<p>All objects in the <code>objects</code> directory have an <code>isa</code> that indicates the type of object. As of Xcode 3.2,
+<p>All objects in the <code class="highlighter-rouge">objects</code> directory have an <code class="highlighter-rouge">isa</code> that indicates the type of object. As of Xcode 3.2,
 there are the following object kinds</p>
 
 <ul>
@@ -370,7 +370,7 @@ there are the following object kinds</p>
 <p>The root object points to an instance of PBXProject. Typically, there is just one in an .xcodeproj
 file. The one for cppget looks like this:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">08FB7793FE84155DC02AAC07 /<span class="k">*</span> Project object <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">08FB7793FE84155DC02AAC07 /<span class="k">*</span> Project object <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> PBXProject;
     buildConfigurationList <span class="o">=</span> 1DEB928908733DD80010E9CD;
     compatibilityVersion <span class="o">=</span> <span class="s2">"Xcode 3.2"</span>;
@@ -384,22 +384,22 @@ file. The one for cppget looks like this:</p>
     targets <span class="o">=</span> <span class="o">(</span>
         9864FFB2FFF6A69F568155F2 /<span class="k">*</span> cppget <span class="k">*</span>/,
     <span class="o">)</span>;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
-<p>The <code>buildConfigurationList</code> key points to a XCConfigurationList object, which is an array
+<p>The <code class="highlighter-rouge">buildConfigurationList</code> key points to a XCConfigurationList object, which is an array
 of XCBuildConfiguration objects. Many projects have a Debug and Release configuration, but
 there are no mandatory configurations; projects can declare ones specific to their needs.
 See below: there are two sets of config, one for projects, and the other for targets. This
 is distinguished in the Xcode GUI but can be a subtle difference, since many settings are
 shared.</p>
 
-<p>The <code>mainGroup</code> key points to a PBXGroup object, which is the list of files that are built
+<p>The <code class="highlighter-rouge">mainGroup</code> key points to a PBXGroup object, which is the list of files that are built
 for this project. As seen below, this is a list of individual items as well as other groups.
 A group is just a decorative container, but Xcode will use standard names for some groups
 like Products and Frameworks and Projects. Every file that contributes to the build will
-be traced from <code>mainGroup</code>.</p>
+be traced from <code class="highlighter-rouge">mainGroup</code>.</p>
 
-<p>The <code>targets</code> key points to a list of targets that this project creates. These are:</p>
+<p>The <code class="highlighter-rouge">targets</code> key points to a list of targets that this project creates. These are:</p>
 
 <ul>
   <li>PBXNativeTarget: a build target that makes a binary (library or executable)</li>
@@ -419,14 +419,14 @@ be traced from <code>mainGroup</code>.</p>
 
 <p>As an example:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">EAEC10A24F22830F77FBC6E2 /<span class="k">*</span> Products <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">EAEC10A24F22830F77FBC6E2 /<span class="k">*</span> Products <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> PBXGroup;
     children <span class="o">=</span> <span class="o">(</span>
         ... references here
     <span class="o">)</span>;
     name <span class="o">=</span> Products;
     sourceTree <span class="o">=</span> <span class="s2">"&lt;group&gt;"</span>;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
 <p>This group has the name Products, has its source tree as the group itself, and then has zero or more children.
 Typically groups are not empty.</p>
@@ -435,67 +435,67 @@ Typically groups are not empty.</p>
 
 <p>All physical items are identified by PBXFileReference objects.</p>
 
-<p>A <code>sourceTree</code> entry is the location where this object can be found. Typically, this is <code>&lt;group&gt;</code>, meaning
+<p>A <code class="highlighter-rouge">sourceTree</code> entry is the location where this object can be found. Typically, this is <code class="highlighter-rouge">&lt;group&gt;</code>, meaning
 that the location is inside the group containing this PBXFileReference (or the project itself). Sometimes
-the <code>sourceTree</code> will be a variable like <code>BUILT_PRODUCTS_DIR</code>, which is either defined in the project itself
+the <code class="highlighter-rouge">sourceTree</code> will be a variable like <code class="highlighter-rouge">BUILT_PRODUCTS_DIR</code>, which is either defined in the project itself
 or externally (say as a default by Xcode).</p>
 
-<p>The majority of entries will be source code, with a <code>lastKnownFileType</code> indicating the file type that Xcode
-believes the file has. This is a hierarchy, so all source code tags start with <code>sourcecode.</code>; C++ files
-begin with <code>sourcecode.cpp.</code>, and so on. So a C++ source file would be <code>sourcecode.cpp.cpp</code>, and a C
-header file would be <code>sourcecode.c.h</code>.</p>
+<p>The majority of entries will be source code, with a <code class="highlighter-rouge">lastKnownFileType</code> indicating the file type that Xcode
+believes the file has. This is a hierarchy, so all source code tags start with <code class="highlighter-rouge">sourcecode.</code>; C++ files
+begin with <code class="highlighter-rouge">sourcecode.cpp.</code>, and so on. So a C++ source file would be <code class="highlighter-rouge">sourcecode.cpp.cpp</code>, and a C
+header file would be <code class="highlighter-rouge">sourcecode.c.h</code>.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">0E6510F6A5C575A340791736 <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">0E6510F6A5C575A340791736 <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> PBXFileReference;
     lastKnownFileType <span class="o">=</span> sourcecode.cpp.cpp;
     name <span class="o">=</span> main.cpp;
     path <span class="o">=</span> ../src/main.cpp;
     sourceTree <span class="o">=</span> <span class="s2">"&lt;group&gt;"</span>;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
-<p>Some entries will indicate built objects, like an executable. These have an <code>explicitFileType</code> entry with a
-value such as <code>compiled.mach-o.executable</code>.</p>
+<p>Some entries will indicate built objects, like an executable. These have an <code class="highlighter-rouge">explicitFileType</code> entry with a
+value such as <code class="highlighter-rouge">compiled.mach-o.executable</code>.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">5F42214CB908A5D9E0E93F8C <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">5F42214CB908A5D9E0E93F8C <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> PBXFileReference;
     explicitFileType <span class="o">=</span> <span class="s2">"compiled.mach-o.executable"</span>;
     includeInIndex <span class="o">=</span> 0;
     name <span class="o">=</span> cppget;
     path <span class="o">=</span> cppget;
     sourceTree <span class="o">=</span> BUILT_PRODUCTS_DIR;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
-<p>Some entries will indicate external items. These have a <code>lastKnowFileType</code> of <code>"wrapper.pb-project"</code>, and a <code>path</code>
-pointing at the project itself, located relative to <code>sourceTree</code>. In this case a <code>sourceTree</code> of <code>SOURCE_ROOT</code>
+<p>Some entries will indicate external items. These have a <code class="highlighter-rouge">lastKnowFileType</code> of <code class="highlighter-rouge">"wrapper.pb-project"</code>, and a <code class="highlighter-rouge">path</code>
+pointing at the project itself, located relative to <code class="highlighter-rouge">sourceTree</code>. In this case a <code class="highlighter-rouge">sourceTree</code> of <code class="highlighter-rouge">SOURCE_ROOT</code>
 indicates a variable set in Xcode pointing to the workspace or project.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">2A74773383797DE0775EFD73 <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">2A74773383797DE0775EFD73 <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> PBXFileReference;
     lastKnownFileType <span class="o">=</span> <span class="s2">"wrapper.pb-project"</span>;
     name <span class="o">=</span> <span class="s2">"cjson.xcodeproj"</span>;
     path <span class="o">=</span> ../packages/__pkg__/cjson/project/cjson.xcodeproj;
     sourceTree <span class="o">=</span> SOURCE_ROOT;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
 <p>Some entries indicate Mac OS X frameworks, either installed by the system (like LDAP.framework), or custom
-to the project. In this case, <code>lastKnownFileType</code> is <code>wrapper.framework</code> and <code>path</code> points to the path for
-the framework relative to <code>sourceTree</code>. In the example below, the source tree is <code>SDKROOT</code>, which is
+to the project. In this case, <code class="highlighter-rouge">lastKnownFileType</code> is <code class="highlighter-rouge">wrapper.framework</code> and <code class="highlighter-rouge">path</code> points to the path for
+the framework relative to <code class="highlighter-rouge">sourceTree</code>. In the example below, the source tree is <code class="highlighter-rouge">SDKROOT</code>, which is
 predefined by Xcode to point to the system SDKs.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">50F336C2F6C717AFAF740D02 <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">50F336C2F6C717AFAF740D02 <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> PBXFileReference;
     lastKnownFileType <span class="o">=</span> wrapper.framework;
     name <span class="o">=</span> LDAP.framework;
     path <span class="o">=</span> System/Library/Frameworks/LDAP.framework;
     sourceTree <span class="o">=</span> SDKROOT;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
 <h2 id="pbxnativetarget">PBXNativeTarget</h2>
 
 <p>A PBXNativeTarget objects describes how to build a native target. This is the various build phases,
 the output name</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">9864FFB2FFF6A69F568155F2 /<span class="k">*</span> cppget <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">9864FFB2FFF6A69F568155F2 /<span class="k">*</span> cppget <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> PBXNativeTarget;
     buildConfigurationList <span class="o">=</span> 571A991BE942DF281F6C975B;
     buildPhases <span class="o">=</span> <span class="o">(</span>
@@ -511,20 +511,20 @@ the output name</p>
     productName <span class="o">=</span> cppget;
     productReference <span class="o">=</span> 5F42214CB908A5D9E0E93F8C /<span class="k">*</span> cppget <span class="k">*</span>/;
     productType <span class="o">=</span> <span class="s2">"com.apple.product-type.tool"</span>;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
-<p>In this example, this is an executable binary, as indicated by <code>productReference</code> pointing
-to a PBXFileReference that is a <code>compiled.mach-o.executable</code>, but also by <code>productType</code>
-being “command line tool”, <code>com.apple.product-type.tool</code>.</p>
+<p>In this example, this is an executable binary, as indicated by <code class="highlighter-rouge">productReference</code> pointing
+to a PBXFileReference that is a <code class="highlighter-rouge">compiled.mach-o.executable</code>, but also by <code class="highlighter-rouge">productType</code>
+being “command line tool”, <code class="highlighter-rouge">com.apple.product-type.tool</code>.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">5F42214CB908A5D9E0E93F8C <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">5F42214CB908A5D9E0E93F8C <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> PBXFileReference;
     explicitFileType <span class="o">=</span> <span class="s2">"compiled.mach-o.executable"</span>;
     includeInIndex <span class="o">=</span> 0;
     name <span class="o">=</span> cppget;
     path <span class="o">=</span> cppget;
     sourceTree <span class="o">=</span> BUILT_PRODUCTS_DIR;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
 <p>Note that a PBXNativeTarget has its own XCConfigurationList; these are named the same
 as the project configurations, but contain target-specific information. See below for
@@ -532,13 +532,13 @@ the cascade order for config.</p>
 
 <p>For example, the debug configuration has this as its target config:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">41922E615426EFEE2E938CA1 /<span class="k">*</span> Debug <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">41922E615426EFEE2E938CA1 /<span class="k">*</span> Debug <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> XCBuildConfiguration;
     buildSettings <span class="o">=</span> <span class="o">{</span>
         PRODUCT_NAME <span class="o">=</span> cppget;
     <span class="o">}</span>;
     name <span class="o">=</span> Debug;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
 <h2 id="pbxbuildphase">PBXBuildPhase</h2>
 
@@ -560,14 +560,14 @@ the cascade order for config.</p>
 
 <p>Without a PBXSourcesBuildPhase, an Xcode project is just an expensive container.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">4273EAB3D49C30C00AC5E8F3 /<span class="k">*</span> Sources <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">4273EAB3D49C30C00AC5E8F3 /<span class="k">*</span> Sources <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> PBXSourcesBuildPhase;
     buildActionMask <span class="o">=</span> 2147483647;
     files <span class="o">=</span> <span class="o">(</span>
         ... zero or more PBXBuildFile entries
     <span class="o">)</span>;
     runOnlyForDeploymentPostprocessing <span class="o">=</span> 0;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
 <p>This is just a list of PBXBuildFile entries, with a note as to whether this is done
 in all builds or just for deployment post-processing (e.g. a PBXCopyFilesBuildPhase
@@ -583,7 +583,7 @@ information actually needed to build it. The indirection is no doubt useful to A
 since the file entry is also used in a PBXGroup for display purposes.
 For convenience, we show the PBXBuildFile entry and its associated PBXFileReference entry.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> PBXBuildFile <span class="k">*</span>/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> PBXBuildFile <span class="k">*</span>/
 36E0BEAEF615B5FB417FCCEE <span class="o">=</span> <span class="o">{</span>isa <span class="o">=</span> PBXBuildFile; fileRef <span class="o">=</span> 0E6510F6A5C575A340791736; <span class="o">}</span>;
 
 /<span class="k">*</span> PBXFileReference <span class="k">*</span>/
@@ -593,18 +593,18 @@ For convenience, we show the PBXBuildFile entry and its associated PBXFileRefere
     name <span class="o">=</span> Slurp.cpp;
     path <span class="o">=</span> ../src/Slurp.cpp;
     sourceTree <span class="o">=</span> <span class="s2">"&lt;group&gt;"</span>;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
 <p>Not everything is a source code file. We also link static libraries built from elsewhere.
 Note in this case that the reference is to a PBXReferenceProxy, indicating that this
 file is from a dependent project, which is itself pointed to by a PBXContainerItemProxy,
 which finally ends up at a PBXFileReference.</p>
 
-<p>I don’t know what <code>remoteGlobalIDString</code> is, I can’t find that GUID in any project in
+<p>I don’t know what <code class="highlighter-rouge">remoteGlobalIDString</code> is, I can’t find that GUID in any project in
 my hierarchy. Premake just assigns a value to it based on the hash of the path name (its
 idea of the hierarchy to this point).</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> PBXBuildFile <span class="k">*</span>/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> PBXBuildFile <span class="k">*</span>/
 FADCF8DBA93E5EC82C820F1B <span class="o">=</span> <span class="o">{</span>isa <span class="o">=</span> PBXBuildFile; fileRef <span class="o">=</span> 131E5623D4E73570AF0F6463; <span class="o">}</span>;
 
 /<span class="k">*</span> PBXReferenceProxy <span class="k">*</span>/
@@ -632,13 +632,13 @@ C48570AFF3172E7CF2D39EEF <span class="o">=</span> <span class="o">{</span>
     name <span class="o">=</span> <span class="s2">"zlib.xcodeproj"</span>;
     path <span class="o">=</span> ../packages/__pkg__/zlib/project/zlib.xcodeproj;
     sourceTree <span class="o">=</span> SOURCE_ROOT;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
 <p>Frameworks are semi-magic libraries with versioning and header files used with the
 libraries. For the build phase, this is linking a framework, so it just ends up directly
 at the PBXFileReference, no indirection needed.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> PBXBuildFile <span class="k">*</span>/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span> PBXBuildFile <span class="k">*</span>/
 F8E8DBA2B7DE2E6FF44F49E2 <span class="o">=</span> <span class="o">{</span>isa <span class="o">=</span> PBXBuildFile; fileRef <span class="o">=</span> 8D6BC6AAF7BB96D78F7B2CEA; <span class="o">}</span>;
 
 /<span class="k">*</span> PBXFileReference <span class="k">*</span>/
@@ -648,13 +648,13 @@ F8E8DBA2B7DE2E6FF44F49E2 <span class="o">=</span> <span class="o">{</span>isa <s
     name <span class="o">=</span> Cocoa.framework;
     path <span class="o">=</span> System/Library/Frameworks/Cocoa.framework;
     sourceTree <span class="o">=</span> SDKROOT;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
 <h2 id="xcconfigurationlist">XCConfigurationList</h2>
 
 <p>An XCConfigurationList object is just a list of XCBuildConfiguration objects.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">1DEB928908733DD80010E9CD /<span class="k">*</span> Build configuration list <span class="k">for </span>PBXProject <span class="s2">"cppget"</span> <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1DEB928908733DD80010E9CD /<span class="k">*</span> Build configuration list <span class="k">for </span>PBXProject <span class="s2">"cppget"</span> <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
     isa <span class="o">=</span> XCConfigurationList;
     buildConfigurations <span class="o">=</span> <span class="o">(</span>
         B3315B92708358DFD7FBE9D2 /<span class="k">*</span> Debug <span class="k">*</span>/,
@@ -662,12 +662,12 @@ F8E8DBA2B7DE2E6FF44F49E2 <span class="o">=</span> <span class="o">{</span>isa <s
     <span class="o">)</span>;
     defaultConfigurationIsVisible <span class="o">=</span> 0;
     defaultConfigurationName <span class="o">=</span> Debug;
-<span class="o">}</span>;</code></pre></div>
+<span class="o">}</span>;</code></pre></figure>
 
-<p>The <code>defaultConfigurationName</code> key indicates which configuration, by name, is the one to
+<p>The <code class="highlighter-rouge">defaultConfigurationName</code> key indicates which configuration, by name, is the one to
 pick as the default when a project is opened for the first time.</p>
 
-<p>The <code>defaultConfigurationIsVisible</code> key, if set to non-zero, shows the default configuration
+<p>The <code class="highlighter-rouge">defaultConfigurationIsVisible</code> key, if set to non-zero, shows the default configuration
 information in the UI.</p>
 
 <h2 id="xcbuildconfiguration">XCBuildConfiguration</h2>
@@ -675,13 +675,13 @@ information in the UI.</p>
 <p>An XCBuildConfiguration object contains the settings that describe the configuration. At its
 minimum, a build configuration looks like this:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">B3315B92708358DFD7FBE9D2 /<span class="k">*</span> Debug <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">        B3315B92708358DFD7FBE9D2 /<span class="k">*</span> Debug <span class="k">*</span>/ <span class="o">=</span> <span class="o">{</span>
             isa <span class="o">=</span> XCBuildConfiguration;
             buildSettings <span class="o">=</span> <span class="o">{</span>
                 ONLY_ACTIVE_ARCH <span class="o">=</span> YES;
             <span class="o">}</span>;
             name <span class="o">=</span> Debug;
-        <span class="o">}</span>;</code></pre></div>
+        <span class="o">}</span>;</code></pre></figure>
 
 <p>This is an example where a name needs to be unique, because, for example, the UI will look up
 a configuration by name and not by UUID. Although, it must be doing some disambiguation,
@@ -714,36 +714,36 @@ Inheritance is performed in the following order (lowest to highest precedence):<
 <h1 id="xcworkspace-internal">*.xcworkspace (internal)</h1>
 
 <p>It is possible to just have an .xcodeproj visible to the desktop, and have a .xcworkspace directory
-inside the .xcodeproj directory. In this case, the workspace is always called <code>project.xcworkspace</code>
+inside the .xcodeproj directory. In this case, the workspace is always called <code class="highlighter-rouge">project.xcworkspace</code>
 and is at the root directory of the project. This is what you get if you use the Xcode wizard to
 create a new project first, instead of creating a workspace and adding projects to it.</p>
 
 <p>The simplest possible arrangement is to have the following:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">one.xcodeproj/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">one.xcodeproj/
 ├── project.pbxproj
 └── project.xcworkspace/
-    └── contents.xcworkspacedata</code></pre></div>
+    └── contents.xcworkspacedata</code></pre></figure>
 
-<p>where <code>project.xcworkspace/contents.xcworkspacedata</code> look like this:</p>
+<p>where <code class="highlighter-rouge">project.xcworkspace/contents.xcworkspacedata</code> look like this:</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;Workspace</span>
    <span class="na">version =</span> <span class="s">"1.0"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;FileRef</span>
       <span class="na">location =</span> <span class="s">"self:one.xcodeproj"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;/FileRef&gt;</span>
-<span class="nt">&lt;/Workspace&gt;</span></code></pre></div>
+<span class="nt">&lt;/Workspace&gt;</span></code></pre></figure>
 
-<p>The <code>self</code> tag points to the top level of the <code>one.xcodeproj</code> directory. The <code>project.pbxproj</code> is
+<p>The <code class="highlighter-rouge">self</code> tag points to the top level of the <code class="highlighter-rouge">one.xcodeproj</code> directory. The <code class="highlighter-rouge">project.pbxproj</code> is
 as detailed above.</p>
 
 <h1 id="to-do">To-do</h1>
 
-<p>Write a DTD for <code>contents.xcworkspacedata</code> files. And maybe a grammar; are DTDs comprehensive
+<p>Write a DTD for <code class="highlighter-rouge">contents.xcworkspacedata</code> files. And maybe a grammar; are DTDs comprehensive
 enough that they can serve as prescriptive grammars? Looks like not really. Or maybe an XML Schema?</p>
 
-<p>Compile a list of more Xcode versions matched up againts <code>objectVersion</code>. What was before objectVersion 45?</p>
+<p>Compile a list of more Xcode versions matched up againts <code class="highlighter-rouge">objectVersion</code>. What was before objectVersion 45?</p>
 
 <p>A few Xcode projects to test a xcworkspace parser against:</p>
 

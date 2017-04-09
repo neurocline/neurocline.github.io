@@ -88,7 +88,7 @@ Jekyll generator take a long time, Liquid markup sucks, Markdown itself is too
 limited for what I want.</p>
 
 <p>OK, on the long time bit. I have about 100 articles in my _posts folder. It
-takes Jekyll about 10 seconds to run now, and if I preview with <code>jekyll serve</code>,
+takes Jekyll about 10 seconds to run now, and if I preview with <code class="highlighter-rouge">jekyll serve</code>,
 it takes 10 seconds to pick up a change. That’s unacceptable, given that it’s
 supposed to be incremental. It’s written in Ruby, which is part of the reason
 it’s slow, and also holds me back from wanting to fix it (I have no interest
@@ -114,16 +114,16 @@ since I’ve never used virtualenv before, here’s my crib notes for Windows.</
 
 <h2 id="create-new-virtualenv-environment">Create new virtualenv environment</h2>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">C:<span class="se">\w</span>&gt;virtualenv sphinx
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">C:<span class="se">\w</span>&gt;virtualenv sphinx
 Using base prefix <span class="s1">'c:\\python35'</span>
 New python executable <span class="k">in </span>C:<span class="se">\w\s</span>phinx<span class="se">\S</span>cripts<span class="se">\p</span>ython.exe
-Installing setuptools, pip, wheel...done.</code></pre></div>
+Installing setuptools, pip, wheel...done.</code></pre></figure>
 
 <h2 id="activate-environment">Activate environment</h2>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">C:<span class="se">\w</span>&gt;cd sphinx
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">C:<span class="se">\w</span>&gt;cd sphinx
 C:<span class="se">\w</span>&gt;Scripts<span class="se">\a</span>ctivate
-<span class="o">(</span>sphinx<span class="o">)</span> C:<span class="se">\w\s</span>phinx&gt;</code></pre></div>
+<span class="o">(</span>sphinx<span class="o">)</span> C:<span class="se">\w\s</span>phinx&gt;</code></pre></figure>
 
 <p>The activate script alters your prompt to remind you that you are in the virtualenv
 environment.</p>
@@ -133,7 +133,7 @@ environment.</p>
 <p>Once you’ve activated the environment, any new packages just go into that environment.
 That’s the entire point and reason for using virtualenv.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>sphinx<span class="o">)</span> C:<span class="se">\w\s</span>phinx&gt;pip install sphinx
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>sphinx<span class="o">)</span> C:<span class="se">\w\s</span>phinx&gt;pip install sphinx
 Collecting sphinx
   Using cached Sphinx-1.4.8-py2.py3-none-any.whl
 Collecting snowballstemmer&gt;<span class="o">=</span>1.1 <span class="o">(</span>from sphinx<span class="o">)</span>
@@ -144,14 +144,14 @@ Building wheels <span class="k">for </span>collected packages: MarkupSafe
   </span>Stored <span class="k">in </span>directory: C:<span class="se">\U</span>sers<span class="se">\b</span>fitz<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>ip<span class="se">\C</span>ache<span class="se">\w</span>heels<span class="se">\a</span>3<span class="se">\f</span>a<span class="se">\d</span>c<span class="se">\0</span>198eed9ad95489b8a4f45d14dd5d2aee3f8984e46862c5748
 Successfully built MarkupSafe
 Installing collected packages: snowballstemmer, imagesize, alabaster, MarkupSafe, Jinja2, pytz, babel, Pygments, six, colorama, docutils, sphinx
-Successfully installed Jinja2-2.8 MarkupSafe-0.23 Pygments-2.1.3 alabaster-0.7.9 babel-2.3.4 colorama-0.3.7 docutils-0.12 imagesize-0.7.1 pytz-2016.7 six-1.10.0 snowballstemmer-1.2.1 sphinx-1.4.8</code></pre></div>
+Successfully installed Jinja2-2.8 MarkupSafe-0.23 Pygments-2.1.3 alabaster-0.7.9 babel-2.3.4 colorama-0.3.7 docutils-0.12 imagesize-0.7.1 pytz-2016.7 six-1.10.0 snowballstemmer-1.2.1 sphinx-1.4.8</code></pre></figure>
 
 <h2 id="deactivate-environment">Deactivate environment</h2>
 
 <p>You could just close the cmd shell you have open, or you could deactivate the virtualenv</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>sphinx<span class="o">)</span> C:<span class="se">\w\d</span>oc&gt;deactivate
-C:<span class="se">\w\d</span>oc&gt;</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>sphinx<span class="o">)</span> C:<span class="se">\w\d</span>oc&gt;deactivate
+C:<span class="se">\w\d</span>oc&gt;</code></pre></figure>
 
 <h2 id="using-sphinx">Using Sphinx</h2>
 
@@ -162,14 +162,14 @@ but it’s a little hard to get started.</p>
 is the latest version as of this moment.</p>
 
 <p>The quickstart at <a href="http://www.sphinx-doc.org/en/1.4.8/tutorial.html">First Steps with Sphinx</a>
-has you run <code>sphinx-quickstart</code>. This asks a ton of questions that you’re not likely to be 
+has you run <code class="highlighter-rouge">sphinx-quickstart</code>. This asks a ton of questions that you’re not likely to be 
 sure on the answers. Worse, it’s not very friendly on Windows, it seems to assume that
 terminal escape codes work (not the case on cmd.exe for the most part).</p>
 
 <p>I ran it from within my newly created doc folder and said “.” for the root path. I then
 answered everything else to the best of my knowledge.</p>
 
-<p>In the end, all that gets created is a text config file named <code>conf.py</code>. It’s commented
+<p>In the end, all that gets created is a text config file named <code class="highlighter-rouge">conf.py</code>. It’s commented
 liberally along the model of Apache and other programs with lots of config. Usefully,
 it has a lot of the options in the file, and if they don’t apply, they are commented out.</p>
 
@@ -184,7 +184,7 @@ I turn this into something others can read”.</p>
 <p>The index.rst file in the root of your documentation tree is the top page and the master
 index all in one. My simple one looks like this</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">.. Provenance documentation master file, created by
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">.. Provenance documentation master file, created by
    sphinx-quickstart on Mon Nov  7 13:56:13 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root <span class="sb">`</span>toctree<span class="sb">`</span> directive.
@@ -206,7 +206,7 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`</span></code></pre></div>
+* :ref:`search`</span></code></pre></figure>
 
 <p>This is the top-level page, so anything that’s not a directive will show up in your
 output.</p>
@@ -220,11 +220,11 @@ documentation.</p>
 
 <h3 id="building">Building</h3>
 
-<p>The long-form is to run <code>sphinx-build -b html . _build</code>. There are some convenience
-makefiles that work for most use cases. Just running <code>make html</code> is enough for
-generating your HTML site into the <code>_build</code> folder (or whatever you named as your
-output). The site is in <code>_build\html</code> and since it’s making a web site, there is
-a <code>_build\html\index.html</code> that is the root page.</p>
+<p>The long-form is to run <code class="highlighter-rouge">sphinx-build -b html . _build</code>. There are some convenience
+makefiles that work for most use cases. Just running <code class="highlighter-rouge">make html</code> is enough for
+generating your HTML site into the <code class="highlighter-rouge">_build</code> folder (or whatever you named as your
+output). The site is in <code class="highlighter-rouge">_build\html</code> and since it’s making a web site, there is
+a <code class="highlighter-rouge">_build\html\index.html</code> that is the root page.</p>
 
 <h2 id="further-thoughts">Further thoughts</h2>
 

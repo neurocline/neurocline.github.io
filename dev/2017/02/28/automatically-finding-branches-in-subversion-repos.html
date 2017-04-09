@@ -99,21 +99,22 @@ comes when you want to faithfully represent the old repo’s lines of developmen
 <p>There are two typical patterns when using Subversion. The first is to have this
 top-level structure for a single-project repository:</p>
 
-<pre><code>/branches
+<div class="highlighter-rouge"><pre class="highlight"><code>/branches
 /tags
 /trunk
 </code></pre>
+</div>
 
-<p>Your main line of development is in <code>/trunk</code>, you put branches as directories in
-<code>/branches</code>, and you put tags in <code>/tags</code>. Oh, right, forgot to mention - Subversion
+<p>Your main line of development is in <code class="highlighter-rouge">/trunk</code>, you put branches as directories in
+<code class="highlighter-rouge">/branches</code>, and you put tags in <code class="highlighter-rouge">/tags</code>. Oh, right, forgot to mention - Subversion
 doesn’t have tagging either. There’s nothing to prevent you from committing to a copy
-made in the <code>/tags</code> hierarchy, thus turning it into a defacto branch, because it’s 
+made in the <code class="highlighter-rouge">/tags</code> hierarchy, thus turning it into a defacto branch, because it’s 
 all convention. Hold that thought.</p>
 
 <p>The other typical pattern is when Subversion is used to host a multi-project
 repository. In that case, you might have this:</p>
 
-<pre><code>/abdera/
+<div class="highlighter-rouge"><pre class="highlight"><code>/abdera/
     /branches
     /tags
     /trunk
@@ -128,14 +129,15 @@ repository. In that case, you might have this:</p>
     /trunk
 ...
 </code></pre>
+</div>
 
 <p>As you might guess, this is from the Apache Software Foundation repo at
 https://svn.apache.org/repos/asf. Except, no, the reality is a lot messier.</p>
 
 <p>Some projects, like ace or avro, have a handful of files and directories alongside the
-<code>trunk</code> and <code>branches</code> dirs.</p>
+<code class="highlighter-rouge">trunk</code> and <code class="highlighter-rouge">branches</code> dirs.</p>
 
-<pre><code>KEYS
+<div class="highlighter-rouge"><pre class="highlight"><code>KEYS
 branches/
 doap.rdf
 releases/
@@ -143,11 +145,12 @@ sandbox/
 site/
 trunk/
 </code></pre>
+</div>
 
-<p>The <code>htttp</code> (Apache) project has a host of nested projects, each of which has its
-own <code>branches</code>, <code>tags</code> and <code>trunk</code>. This is a subset, in the interests of space:</p>
+<p>The <code class="highlighter-rouge">htttp</code> (Apache) project has a host of nested projects, each of which has its
+own <code class="highlighter-rouge">branches</code>, <code class="highlighter-rouge">tags</code> and <code class="highlighter-rouge">trunk</code>. This is a subset, in the interests of space:</p>
 
-<pre><code>apreq/
+<div class="highlighter-rouge"><pre class="highlight"><code>apreq/
 docs-build/
 flood/
 httpd/
@@ -168,10 +171,11 @@ sandbox/
 site/
 test/
 </code></pre>
+</div>
 
 <p>And maven - well, maven is its own special child. This is a subset of the top level:</p>
 
-<pre><code>app-engine/
+<div class="highlighter-rouge"><pre class="highlight"><code>app-engine/
 archetype/
 maven-1/
 maven-2/
@@ -185,10 +189,11 @@ shared/
 site/
 trunks/
 </code></pre>
+</div>
 
-<p>Look, a <code>trunks</code> directory. Which is - empty? And the <code>maven-1</code> dir has an empty
-<code>trunks</code>. We finally find source in <code>/maven/maven-2/branches</code>. And the mainline
-of development is really <code>/maven/maven-3/trunk</code>.</p>
+<p>Look, a <code class="highlighter-rouge">trunks</code> directory. Which is - empty? And the <code class="highlighter-rouge">maven-1</code> dir has an empty
+<code class="highlighter-rouge">trunks</code>. We finally find source in <code class="highlighter-rouge">/maven/maven-2/branches</code>. And the mainline
+of development is really <code class="highlighter-rouge">/maven/maven-3/trunk</code>.</p>
 
 <p>So, while the ASF repo is an example of the multi-project repo approach, it’s
 also an example of the heterogeniety of large Subversion repos. The approach up
