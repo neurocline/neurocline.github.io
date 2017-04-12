@@ -1,11 +1,10 @@
 ---
 layout: post
 title:  "Recent links"
-date:   2017-04-04 1:00:00 PM
+date:   2017-04-08 1:00:00 PM
 categories: dev
 tags: text
 ---
-
 
 [Computer "scientist"](http://blog.nullspace.io/). Alex Clemmer.
 
