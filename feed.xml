@@ -6,9 +6,115 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Apr 2017 11:30:59 -0700</pubDate>
-    <lastBuildDate>Sun, 09 Apr 2017 11:30:59 -0700</lastBuildDate>
+    <pubDate>Wed, 12 Apr 2017 14:16:44 -0700</pubDate>
+    <lastBuildDate>Wed, 12 Apr 2017 14:16:44 -0700</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.gentoo.org/&quot;&gt;Gentoo Linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://distrowatch.com/&quot;&gt;DistroWatch&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://explainshell.com/&quot;&gt;explainshell&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://prettydiff.com/guide/unrelated_diff.xhtml&quot;&gt;Pretty Diff&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://niallohiggins.com/2009/01/08/mkpath-mkdir-p-alike-in-c-for-unix/&quot;&gt;mkpath() - `mkdir -p’ alike in C for UNIX&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4618.pdf&quot;&gt;Working Draft, Standard for Programming Language C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.sqlite.org/amalgamation.html&quot;&gt;the SQLite Amalgamation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://sqlite.org/howtocompile.html&quot;&gt;How To Compile SQLite&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.sqlite.org/src/doc/trunk/README.md&quot;&gt;SQLite Source Repository&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/343357/why-are-some-c-programs-written-in-one-huge-source-file/343358&quot;&gt;Why are some C programs written in one huge source file?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.forrestthewoods.com/improving-open-source-with-amalgamation-cf293592c5f4&quot;&gt;Improving Open Source with Amalgamation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.buildbot.net/&quot;&gt;Buildbot Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://borgbackup.readthedocs.io/en/stable/index.html&quot;&gt;Borg Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.fossil-scm.org/xfer/doc/trunk/www/inout.wiki&quot;&gt;FossilImport And ExportLogin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/rpm-software-management&quot;&gt;https://github.com/rpm-software-management&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rpm5.org/cvs/dir&quot;&gt;rpm5: sources&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/dropbox/librsync/tree/master/popt&quot;&gt;dropbox/librsync/popt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.linuxfromscratch.org/blfs/view/8.0/general/popt.html&quot;&gt;Linux from scratch: popt&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 10 Apr 2017 20:00:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/04/10/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/10/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://blog.nullspace.io/&quot;&gt;Computer “scientist”&lt;/a&gt;. Alex Clemmer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codewords.recurse.com/&quot;&gt;Code Words&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mcfunley.com/&quot;&gt;Dan McKinley&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://davidad.github.io/&quot;&gt;Technical Journal: Stuff I hack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.evanjones.ca/&quot;&gt;Evan Jones&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.evanjones.ca/unicode-in-c.html&quot;&gt;Using Unicode in C/C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.lse.epita.fr/&quot;&gt;LSE Blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bellard.org/&quot;&gt;Fabrice Bellard&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;It Will Never Work in Theory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://duartes.org/gustavo/blog/&quot;&gt;brain food for hackers&lt;/a&gt;. Gustavo Duarte&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.jessitron.com/&quot;&gt;Abstractivate&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aphyr.com/&quot;&gt;Aphyr&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jvns.ca/&quot;&gt;Julia Evans&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.regehr.org/&quot;&gt;Embedded in Academia&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://brooker.co.za/blog/&quot;&gt;Marc’s Blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://idea.popcount.org/&quot;&gt;Marek’s totally not insane idea of the day&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://psy-lob-saw.blogspot.com/&quot;&gt;Psychosomatic, Lobotomy, Saw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.windytan.com/&quot;&gt;absorptions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://danluu.com/&quot;&gt;https://danluu.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kamalmarhubi.com/blog/&quot;&gt;Kamal Marhubi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://yosefk.com/blog/&quot;&gt;Proper Fixation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.snellman.net/blog/&quot;&gt;Juho Snellman’s Weblog&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 08 Apr 2017 13:00:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/04/08/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/08/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>C++ blogs</title>
@@ -69,63 +175,6 @@
         <pubDate>Sat, 08 Apr 2017 11:00:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2017/04/08/cplusplus-blogs.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/08/cplusplus-blogs.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://blog.nullspace.io/&quot;&gt;Computer “scientist”&lt;/a&gt;. Alex Clemmer.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://codewords.recurse.com/&quot;&gt;Code Words&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mcfunley.com/&quot;&gt;Dan McKinley&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://davidad.github.io/&quot;&gt;Technical Journal: Stuff I hack&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.evanjones.ca/&quot;&gt;Evan Jones&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.evanjones.ca/unicode-in-c.html&quot;&gt;Using Unicode in C/C++&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.lse.epita.fr/&quot;&gt;LSE Blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bellard.org/&quot;&gt;Fabrice Bellard&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;&quot;&gt;It Will Never Work in Theory&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://duartes.org/gustavo/blog/&quot;&gt;brain food for hackers&lt;/a&gt;. Gustavo Duarte&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.jessitron.com/&quot;&gt;Abstractivate&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://aphyr.com/&quot;&gt;Aphyr&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jvns.ca/&quot;&gt;Julia Evans&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.regehr.org/&quot;&gt;Embedded in Academia&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://brooker.co.za/blog/&quot;&gt;Marc’s Blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://idea.popcount.org/&quot;&gt;Marek’s totally not insane idea of the day&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://psy-lob-saw.blogspot.com/&quot;&gt;Psychosomatic, Lobotomy, Saw&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.windytan.com/&quot;&gt;absorptions&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://danluu.com/&quot;&gt;https://danluu.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://kamalmarhubi.com/blog/&quot;&gt;Kamal Marhubi&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://yosefk.com/blog/&quot;&gt;Proper Fixation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.snellman.net/blog/&quot;&gt;Juho Snellman’s Weblog&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 04 Apr 2017 13:00:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2017/04/04/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/04/recent-links.html</guid>
         
         <category>text</category>
         
@@ -926,41 +975,6 @@ a non-super user. As such, &lt;code class=&quot;highlighter-rouge&quot;&gt;avail
         <pubDate>Wed, 22 Mar 2017 15:00:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2017/03/22/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/03/22/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://courses.csail.mit.edu/6.042/spring17/mcs.pdf&quot;&gt;Mathematics for Computer Science&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://portworx.com/lcfs-speed-up-docker-commit/&quot;&gt;How LCFS speeds up $ docker build by making $ docker commit into a constant time operation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/&quot;&gt;Announcing .NET Core Tools 1.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://chrismm.com/blog/writing-good-code-reduce-the-cognitive-load/?2&quot;&gt;Writing good code: how to reduce the cognitive load of your code&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1703.01619.pdf&quot;&gt;Neural Machine Translation and Sequence-to-sequence Models: A Tutorial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://packagecloud.io&quot;&gt;packagecloud&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://wikileaks.org/ciav7p1/&quot;&gt;Vault 7: CIA Hacking Tools Revealed&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/donnemartin/system-design-primer&quot;&gt;donnemartin/system-design-primer&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1702.04242v1&quot;&gt;Bizur: A Key-value Consensus Algorithm for Scalable File-systems&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://gitly.io/&quot;&gt;gitly&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://spin.atomicobject.com/2017/03/07/attitudes-maintainable-code/&quot;&gt;Three Attitudes that Lead to Maintainable Code&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 08 Mar 2017 17:30:00 -0800</pubDate>
-        <link>http://neurocline.github.io/dev/2017/03/08/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/03/08/recent-links.html</guid>
         
         <category>text</category>
         
