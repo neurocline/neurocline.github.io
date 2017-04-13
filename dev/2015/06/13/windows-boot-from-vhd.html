@@ -116,7 +116,7 @@ own stuff into my User folder, but separate folders like “projects”.</p>
 
 <h3 id="using-disk-management-console">Using Disk Management console</h3>
 
-<p>run <code>mmc diskmgmt.msc</code> from the command-line or launch Computer Management from Administrative tools or directly via Manage Computer. Or use DiskPart.</p>
+<p>run <code class="highlighter-rouge">mmc diskmgmt.msc</code> from the command-line or launch Computer Management from Administrative tools or directly via Manage Computer. Or use DiskPart.</p>
 
 <p>Action: Create VHD. Dynamically expanding VHDs have a slight performance overhead and aren’t appropriate
 in certain scenarios (like, for example, booting from it).</p>
@@ -145,7 +145,7 @@ NTFS, right?</p>
 
 <h2 id="mount-a-vhd">Mount a VHD</h2>
 
-<p>run <code>mmc diskmgmt.msc</code> from the command-line or launch Computer Management from Administrative tools or directly via Manage Computer.</p>
+<p>run <code class="highlighter-rouge">mmc diskmgmt.msc</code> from the command-line or launch Computer Management from Administrative tools or directly via Manage Computer.</p>
 
 <p>Action: Attach VHD. Select the mosunt point, which is typically going to be a drive letter.</p>
 
@@ -158,18 +158,18 @@ NTFS, right?</p>
 <p>DiskPart can do many disk-related tasks, and more importantly, can be driven with scripts. For
 example, create this script</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">create vdisk <span class="nv">file</span><span class="o">=</span>C:<span class="se">\V</span>HD<span class="se">\W</span>in10.vhd <span class="nv">maximum</span><span class="o">=</span>51200 <span class="nb">type</span><span class="o">=</span>fixed
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">create vdisk <span class="nv">file</span><span class="o">=</span>C:<span class="se">\V</span>HD<span class="se">\W</span>in10.vhd <span class="nv">maximum</span><span class="o">=</span>51200 <span class="nb">type</span><span class="o">=</span>fixed
 <span class="k">select </span>vdisk <span class="nv">file</span><span class="o">=</span>C:<span class="se">\V</span>HD<span class="se">\W</span>in10.vhd
 attach vdisk
 create partition primary
 assign <span class="nv">letter</span><span class="o">=</span>v
 format quick <span class="nv">label</span><span class="o">=</span>vhd
 detach vdisk
-<span class="nb">exit</span></code></pre></div>
+<span class="nb">exit</span></code></pre></figure>
 
 <p>and run it</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>diskpart /s makevhd.txt</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>diskpart /s makevhd.txt</code></pre></figure>
 
 <p>This will create a 50 GB VHD file, and then create a single primary partition on it.</p>
 

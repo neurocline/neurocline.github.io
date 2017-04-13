@@ -117,17 +117,18 @@ to two different sequences of bytes. This will be important later.</p>
 <p>Of course, it’s not just any sequence of bytes. The bytes have to be comprehendable as C++ source
 characters. This is the basic C++ source character set:</p>
 
-<pre><code>a b c d e f g h i j k l m n o p q r s t u v w x y z
+<div class="highlighter-rouge"><pre class="highlight"><code>a b c d e f g h i j k l m n o p q r s t u v w x y z
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 0 1 2 3 4 5 6 7 8 9
 _ { } [ ] # ( ) &lt; &gt; % : ; . ? * + - / ^ &amp; | ~ ! = , \ " ’
 </code></pre>
+</div>
 
 <p>The standard also allows for characters as identifed by universal-character-name, e.g. Unicode.</p>
 
-<p>Also note that while this set includes all the printable ASCII characters except <code>@</code> and <code>$</code>,
-most compilers accept those characters as well - <code>@</code> is needed for Objective-C, and the Gnu docs
-say something about <code>$</code> used for VMS compatibility (still a thing, but HP announced end-of-life
+<p>Also note that while this set includes all the printable ASCII characters except <code class="highlighter-rouge">@</code> and <code class="highlighter-rouge">$</code>,
+most compilers accept those characters as well - <code class="highlighter-rouge">@</code> is needed for Objective-C, and the Gnu docs
+say something about <code class="highlighter-rouge">$</code> used for VMS compatibility (still a thing, but HP announced end-of-life
 for OpenVMS in 2020).</p>
 
 <h1 id="separate-translation">Separate translation</h1>
@@ -136,8 +137,8 @@ for OpenVMS in 2020).</p>
 translation unit is handled by itself and the output of all translation units is combined
 together to create the executable program.</p>
 
-<p>A translation unit is a source file and all the files inserted with <code>#include</code> preprocessor
-directives. Since files inserted by <code>#include</code> are themselves source files, there is some
+<p>A translation unit is a source file and all the files inserted with <code class="highlighter-rouge">#include</code> preprocessor
+directives. Since files inserted by <code class="highlighter-rouge">#include</code> are themselves source files, there is some
 external mechanism that decides which source files are the starts of translation units.</p>
 
 <p>One reason for the persistent use of stream APIs is that files couldn’t necessarily fit into
@@ -149,8 +150,9 @@ will ignore this.</p>
 
 <p>Not considering anything else, we have this:</p>
 
-<pre><code>file ... ==&gt; compiler ==&gt; linker ==&gt; executable
+<div class="highlighter-rouge"><pre class="highlight"><code>file ... ==&gt; compiler ==&gt; linker ==&gt; executable
 </code></pre>
+</div>
 
 <p>where translation of each file could be done in any arbitrary order or even in parallel.</p>
 
@@ -204,9 +206,9 @@ can be used in identifiers, not just in comments and strings.</p>
 <p>You don’t literally need to encode characters with universal-character-names, which would look
 like this:</p>
 
-<p><code>
-\u00F6
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>\u00F6
+</code></pre>
+</div>
 
 <p>(which is the letter ö, if you were curious). The standard uses very careful language to allow
 for old file encodings that cannot contain Unicode characters; by using universal-character-name
@@ -215,32 +217,35 @@ characters.</p>
 
 <p>So now we have</p>
 
-<pre><code>file ... ==&gt; source-chars ==&gt; compiler ==&gt; linker ==&gt; executable
+<div class="highlighter-rouge"><pre class="highlight"><code>file ... ==&gt; source-chars ==&gt; compiler ==&gt; linker ==&gt; executable
 </code></pre>
+</div>
 
 <p>But really, it’s a pipeline</p>
 
-<pre><code>file1 ==&gt; source-chars ==&gt; compiler ==&gt; object1
+<div class="highlighter-rouge"><pre class="highlight"><code>file1 ==&gt; source-chars ==&gt; compiler ==&gt; object1
 file2 ==&gt; source-chars ==&gt; compiler ==&gt; object2
 ...
 </code></pre>
+</div>
 
 <p>Each stage of the pipeline transforms a sequence of bytes, although the transform may be the
 identify transform. For source character translation, if the file is already in the source character
 format, then nothing needs to happen.</p>
 
 <p>This is a part where the standard is either insufficient or not fully implemented, because GCC
-only supports identifiers with <code>\u</code> or <code>\U</code> escapes, and not the Unicode characters themselves.</p>
+only supports identifiers with <code class="highlighter-rouge">\u</code> or <code class="highlighter-rouge">\U</code> escapes, and not the Unicode characters themselves.</p>
 
 <h1 id="other">other</h1>
 
 <p>With the include model, we have:</p>
 
-<pre><code>(file, file, ...) ==&gt; logical-source ==&gt; compiler ==&gt; executable
+<div class="highlighter-rouge"><pre class="highlight"><code>(file, file, ...) ==&gt; logical-source ==&gt; compiler ==&gt; executable
 </code></pre>
+</div>
 
-<p>where <code>logical-source</code> is the file that would be created by inserting contents of files
-in place of <code>#include</code> preprocessor directives.</p>
+<p>where <code class="highlighter-rouge">logical-source</code> is the file that would be created by inserting contents of files
+in place of <code class="highlighter-rouge">#include</code> preprocessor directives.</p>
 
   </article>
 

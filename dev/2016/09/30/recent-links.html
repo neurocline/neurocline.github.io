@@ -87,9 +87,9 @@
 
 <p><a href="http://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho">Suppress InsecureRequestWarning: Unverified HTTPS request</a>. Requests has one issue in that if you disable cert validation (a bad idea but sometimes you have to, then you get a big fat warning to stderr. This post details a way to suppress that warning:</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">from</span> <span class="nn">requests.packages.urllib3.exceptions</span> <span class="kn">import</span> <span class="n">InsecureRequestWarning</span>
-<span class="n">requests</span><span class="o">.</span><span class="n">packages</span><span class="o">.</span><span class="n">urllib3</span><span class="o">.</span><span class="n">disable_warnings</span><span class="p">(</span><span class="n">InsecureRequestWarning</span><span class="p">)</span></code></pre></div>
+<span class="n">requests</span><span class="o">.</span><span class="n">packages</span><span class="o">.</span><span class="n">urllib3</span><span class="o">.</span><span class="n">disable_warnings</span><span class="p">(</span><span class="n">InsecureRequestWarning</span><span class="p">)</span></code></pre></figure>
 
 <p><a href="http://engineering.hackerearth.com/2014/08/21/python-requests-module/">Using APIs with Python Requests Module</a>. Tidbits on using requests.</p>
 

@@ -84,7 +84,7 @@
     <p>A long time ago, I was looking into writing a parser that treated comments and whitespace
 as first-class citizens; not in the language grammar, but because I wanted to write
 code formatters that handled comments more gracefully. It looks like the Go team ran
-into this when making <code>go fmt</code>.</p>
+into this when making <code class="highlighter-rouge">go fmt</code>.</p>
 
 <p><a href="https://talks.go-zh.org/2015/gofmt-en.slide#1">The Cultural Evolution of gofmt</a></p>
 
@@ -93,7 +93,7 @@ it more integrated with the AST. And that’s what I had been considering - ther
 for generating code, and then there’s the grammar for the meaning that the source code
 itself conveys, which includes where comments are “attached” to code.</p>
 
-<p>And on a related note, and also in <code>go fmt</code>, tab stops are a royal pain in the ass.
+<p>And on a related note, and also in <code class="highlighter-rouge">go fmt</code>, tab stops are a royal pain in the ass.
 It’s much better to think of tab stops at the semantic level and not at the implementation
 level of “go to fixed tab stop”. This is a proposal from 10 years ago to do exactly that.</p>
 

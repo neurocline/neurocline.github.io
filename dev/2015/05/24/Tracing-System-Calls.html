@@ -83,9 +83,9 @@
   <article class="post-content">
     <h2 id="linux">Linux</h2>
 
-<p>Tracing system calls on Linux is straightforward. The <code>ptrace</code> API lets
+<p>Tracing system calls on Linux is straightforward. The <code class="highlighter-rouge">ptrace</code> API lets
 one process trace all system calls made by another process, and the
-command-line program <code>strace</code> uses <code>ptrace</code> to allow a user to do the
+command-line program <code class="highlighter-rouge">strace</code> uses <code class="highlighter-rouge">ptrace</code> to allow a user to do the
 same.</p>
 
 <ul>
@@ -97,7 +97,7 @@ same.</p>
 <h2 id="mac-os-x">Mac OS X</h2>
 
 <p>Tracing system calls on Mac OS X is a little harder, but more powerful.
-The <code>dtrace</code> system ships with Macs starting with Mac OS X 10.5. Unlike
+The <code class="highlighter-rouge">dtrace</code> system ships with Macs starting with Mac OS X 10.5. Unlike
 strace, however, support for dtrace has to be built in to programs. Mac
 OS X ships with several thousand probes (the attachment points), and most
 normal monitoring is covered. Brendan Gregg’s blog has a Mac OS X-specific

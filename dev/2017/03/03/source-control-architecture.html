@@ -151,10 +151,10 @@ files.</p>
 
 <p>Subversion and Perforce follow a different model. There is a single logical
 filesystem that you can address as subsets either for fetching/committing
-or for branching. By convention, Subversion uses <code>trunk</code> as the name for a
-mainline, <code>branches</code> as the root for your individual branches, and <code>tags</code>
+or for branching. By convention, Subversion uses <code class="highlighter-rouge">trunk</code> as the name for a
+mainline, <code class="highlighter-rouge">branches</code> as the root for your individual branches, and <code class="highlighter-rouge">tags</code>
 as the root for all your tags, but you can have many projects in a single
-Subversion repo, each with their own <code>trunk</code>, <code>branches</code> and <code>tags</code> directories.</p>
+Subversion repo, each with their own <code class="highlighter-rouge">trunk</code>, <code class="highlighter-rouge">branches</code> and <code class="highlighter-rouge">tags</code> directories.</p>
 
 <p>In Subversion, this is implemented as a two-dimensional filesystem where one
 axis is the revision number and the other is the pathname, with copy-on-write
@@ -171,7 +171,7 @@ Darcs and its “theory of patches”.</p>
 <p>This conceptual model is simple, but has flaws. There is only tagging by convention;
 nothing stops you from adding a commit to a “tag”. In that case, strictly speaking,
 it’s now a branch, but it remains in the path you gave it, say
-<code>/tags/blizzcon-1-build</code>. Even worse, it’s quite easy by accident to commit
+<code class="highlighter-rouge">/tags/blizzcon-1-build</code>. Even worse, it’s quite easy by accident to commit
 to multiple branches at the same time (and some people see this as a desirable
 feature, in multi-project repositories). E.g. you can create a single branch
 for multiple projects at the same time.</p>
@@ -337,7 +337,7 @@ SCCS, with first release in 1982. As in SCCS, each file has individual history, 
 are used to store each version. Each version on the mainline is stored as a reverse delta from the
 next most recent version, and branches are stored as forward deltas.</p>
 
-<p>It’s not strictly true that RCS is a per-file system; if you have a directory named <code>RCS</code>,
+<p>It’s not strictly true that RCS is a per-file system; if you have a directory named <code class="highlighter-rouge">RCS</code>,
 then you could operate on every file inside that RCS directory with a single command. However,
 it’s not really practical to use RCS in a multi-directory project.</p>
 

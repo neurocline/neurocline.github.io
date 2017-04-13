@@ -95,24 +95,26 @@ commit, because there’s nothing yet to be a parent. This is most peoples’ vi
 is a single root commit, and there’s the occasional merge commit, the frequency of which depends on
 the work style (the reverse of a merge, a branch, is when two commits have the same parent).</p>
 
-<pre><code>         c &lt;-- d
+<div class="highlighter-rouge"><pre class="highlight"><code>         c &lt;-- d
        /         \
 a &lt;-- b &lt;-- e &lt;-- f &lt;-- g &lt;-- h
 </code></pre>
+</div>
 
 <p>But a repo can have more than one root commit; it could easily have many. They could merge together, or
 they could stay independent forever.</p>
 
 <p>One common way for this to happen is for two parallel but unrelated-in-details development
 activities to happen. For example, GitHub has provided the ability to have a “Github Pages” web page
-as part of your Github repository. If your repository has a branch named <code>gh-pages</code>, then with the
+as part of your Github repository. If your repository has a branch named <code class="highlighter-rouge">gh-pages</code>, then with the
 help of a setting you can have this automatically be published as a web page at
 http://<username>.github.io/<repository>.</repository></username></p>
 
-<pre><code>a &lt;-- b &lt;-- c &lt;-- d
+<div class="highlighter-rouge"><pre class="highlight"><code>a &lt;-- b &lt;-- c &lt;-- d
 
 e &lt;-- f &lt;-- g &lt;-- h &lt;-- i &lt;-- j
 </code></pre>
+</div>
 
 <p>Another common way to have multiple root commits is to use git subtree to pull in part or all of
 another repository into yours to make it easier to work with that repo. You might have a large program
@@ -120,10 +122,11 @@ that uses a socket library, but rather than try to consume it as a library or ha
 knows how to fetch multiple repos, you use subtree to add it to your repo. This has the side effect
 of adding that repo’s root commit(s) for the part you pull in.</p>
 
-<pre><code>          b &lt;-- c &lt;-- d
+<div class="highlighter-rouge"><pre class="highlight"><code>          b &lt;-- c &lt;-- d
                        \
 e &lt;-- f &lt;-- g &lt;-- h &lt;-- i &lt;-- j
 </code></pre>
+</div>
 
 <p>Here are some surprising but obvious facts. If two repos have any shared commits, then they must also
 have the root commit(s) at the base of any shared commits. So if you want to know whether two repos

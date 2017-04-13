@@ -85,11 +85,11 @@
 about Premake, what is bad), as well as usage and analysis of equivalent tools like CMake, SCons and Gyp.</p>
 
 <p>Premake is useful, and Premake 5 more so. With any tool, it’s important to understand it. But it’s also important
-to know how to use it properly. The apocryphal legend about <code>make</code> is that there is only one original
-<code>Makefile</code>, and all others are just edited copies of the ur-file. While not true in fact, it is true that
-<code>make</code> is complex and most people who use it don’t really understand what they are doing.</p>
+to know how to use it properly. The apocryphal legend about <code class="highlighter-rouge">make</code> is that there is only one original
+<code class="highlighter-rouge">Makefile</code>, and all others are just edited copies of the ur-file. While not true in fact, it is true that
+<code class="highlighter-rouge">make</code> is complex and most people who use it don’t really understand what they are doing.</p>
 
-<p>If you don’t have a <code>premake</code> binary on your system and in your path, grab a copy from here:
+<p>If you don’t have a <code class="highlighter-rouge">premake</code> binary on your system and in your path, grab a copy from here:
 <a href="https://premake.github.io/download.html">https://premake.github.io/download.html</a>. I strongly suggest Premake 5.0, which while
 listed as alpha is still stable (Blizzard has been using it for the past 6 months). The examples here start
 with Visual Studio, and then move on to XCode and Gmake.</p>
@@ -99,46 +99,46 @@ with Visual Studio, and then move on to XCode and Gmake.</p>
 <p>Let’s look at Premake through the filter of “what is the simplest Premake file we can make?”. We’re going to
 use it to build a single-file project. Here’s the layout for our working folder:</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">test/
+<figure class="highlight"><pre><code class="language-text" data-lang="text">test/
 |-- premake-minimal.lua
 |-- src/
-    |-- main.cpp</code></pre></div>
+    |-- main.cpp</code></pre></figure>
 
-<p>Our <code>main.cpp</code> file looks like this:</p>
+<p>Our <code class="highlighter-rouge">main.cpp</code> file looks like this:</p>
 
-<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp">#include &lt;iostream&gt;
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp">#include &lt;iostream&gt;
 </span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
-<p>This is the smallest <code>premake-minimal</code> file; every line in here is necessary, as far as I can tell:</p>
+<p>This is the smallest <code class="highlighter-rouge">premake-minimal</code> file; every line in here is necessary, as far as I can tell:</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span>
     <span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span> <span class="p">}</span>
     <span class="n">project</span> <span class="s2">"myproject"</span>
         <span class="n">kind</span> <span class="s2">"ConsoleApp"</span>
-        <span class="n">files</span> <span class="p">{</span> <span class="s2">"src/main.cpp"</span> <span class="p">}</span></code></pre></div>
+        <span class="n">files</span> <span class="p">{</span> <span class="s2">"src/main.cpp"</span> <span class="p">}</span></code></pre></figure>
 
 <p>First off, indentation in Premake scripts is arbitrary; Premake scripts are just Lua scripts with predefined
 behavior, and Lua scripts are agnostic to whitespace (think C, not Python). The indentation is chosen to
 show meaning and ownership, but to Premake, a file with none of the above indentation would mean the same thing.
-This is important to keep in mind for future features like <code>filter</code>.</p>
+This is important to keep in mind for future features like <code class="highlighter-rouge">filter</code>.</p>
 
 <p>All Premake scripts declare a single solution.</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span></code></pre></figure>
 
-<p>The word <code>solution</code> comes from its original Visual Studio
-focus; supposedly, newer Premake versions are now preferring <code>workspace</code>, with <code>solution</code> as a synonym.
+<p>The word <code class="highlighter-rouge">solution</code> comes from its original Visual Studio
+focus; supposedly, newer Premake versions are now preferring <code class="highlighter-rouge">workspace</code>, with <code class="highlighter-rouge">solution</code> as a synonym.
 The name you give your solution is, while arbitrary, also practical: this is the name given to the generated
 solution/workspace/makefile, and (where relevant), is also the name that shows up when you open your solution.</p>
 
-<p>Your Premake scripts must have one or more <code>configurations</code>; Premake has no defaults.</p>
+<p>Your Premake scripts must have one or more <code class="highlighter-rouge">configurations</code>; Premake has no defaults.</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span> <span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span> <span class="p">}</span></code></pre></figure>
 
 <p>Configurations are sets of build options that
 can cut across targets. The name configuration comes from Visual Studio; Xcode also calls them configurations,
@@ -146,34 +146,34 @@ although I think that might be recent. In makefiles, configurations are a Premak
 
 <p>A solution contains one or more projects.</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">project</span> <span class="s2">"myproject"</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">project</span> <span class="s2">"myproject"</span></code></pre></figure>
 
-<p>Likewise, the word <code>project</code> shows Visual Studio bias, but is a reasonable concept (for Visual Studio builds,
-each <code>project</code> section generates a corresponding .vcxproj file); other build systems might
+<p>Likewise, the word <code class="highlighter-rouge">project</code> shows Visual Studio bias, but is a reasonable concept (for Visual Studio builds,
+each <code class="highlighter-rouge">project</code> section generates a corresponding .vcxproj file); other build systems might
 call this a target. Like with solution, the name you give a project is both arbitrary and practical; any generated
 project file (just for Visual Studio, as far as I know) will have this name, and when open in an editor, the project
 will present this name.</p>
 
-<p>A project need a <code>kind</code>, which declares what type of thing to build:
-choices are <code>StaticLib</code> for
-static libraries, <code>SharedLib</code> for shared libraries (called DLLs on Windows), <code>ConsoleApp</code> for console applications,
-and <code>WindowedApp</code> for apps that run in a window (mostly a distinction for Windows and Mac OS X). Premake is
+<p>A project need a <code class="highlighter-rouge">kind</code>, which declares what type of thing to build:
+choices are <code class="highlighter-rouge">StaticLib</code> for
+static libraries, <code class="highlighter-rouge">SharedLib</code> for shared libraries (called DLLs on Windows), <code class="highlighter-rouge">ConsoleApp</code> for console applications,
+and <code class="highlighter-rouge">WindowedApp</code> for apps that run in a window (mostly a distinction for Windows and Mac OS X). Premake is
 used for building code projects, and this shows up in the set of items for kind.</p>
 
 <p>Finally, a project has to reference files, or it does nothing. This is the one piece that is optional, we
 could have made a project that has no source; but there’s little point to this. Note that we reference files relative to
-where the premake script is found. In this case, we just have the single file <code>src/main.cpp</code>, but this could be
+where the premake script is found. In this case, we just have the single file <code class="highlighter-rouge">src/main.cpp</code>, but this could be
 an entire comma-separated list of files.</p>
 
-<p>Use premake to generate make system files from this script; the parameter <code>--file=&lt;PREMAKE-SCRIPT&gt;</code> is optional
-if your premake script has the default name, which for Premake 5 is <code>premake5.lua</code>.</p>
+<p>Use premake to generate make system files from this script; the parameter <code class="highlighter-rouge">--file=&lt;PREMAKE-SCRIPT&gt;</code> is optional
+if your premake script has the default name, which for Premake 5 is <code class="highlighter-rouge">premake5.lua</code>.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">C:\test&gt; </span>premake5.exe --file<span class="o">=</span>premake-minimal.lua vs2013</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">C:\test&gt; </span>premake5.exe --file<span class="o">=</span>premake-minimal.lua vs2013</code></pre></figure>
 
 <p>This will create a Visual Studio 2013 project that you can open and compile. After building, you should see
 output something like this:</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">test/
+<figure class="highlight"><pre><code class="language-text" data-lang="text">test/
 |-- bin/
     |-- Debug/
         |-- myproject.exe
@@ -189,7 +189,7 @@ output something like this:</p>
     |-- vc120.pdb
 |-- premake-minimal.lua
 |-- src/
-    |-- main.cpp</code></pre></div>
+    |-- main.cpp</code></pre></figure>
 
 <p>This will look slightly different if you use a different version of Visual Studio.</p>
 
@@ -200,32 +200,32 @@ sensible defaults while letting you override them if you want or need to.</p>
 
 <p>Of course, you would never make even a simple project this way. So what should we add?</p>
 
-<p>First, we can control where the generated project files go. The Premake directive is <code>location (&lt;PATH&gt;)</code>; this
-sets the base location for all generated output. Let’s place our generated project files in a <code>build</code> folder
+<p>First, we can control where the generated project files go. The Premake directive is <code class="highlighter-rouge">location (&lt;PATH&gt;)</code>; this
+sets the base location for all generated output. Let’s place our generated project files in a <code class="highlighter-rouge">build</code> folder
 (foreshadowing: unless we specify otherwise, all compiler outputs will go here too).</p>
 
 <p>So we update our premake script to put generated files in this location:</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span>
     <span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span> <span class="p">}</span>
     <span class="n">location</span> <span class="p">(</span><span class="s2">"build"</span><span class="p">)</span>
 
     <span class="n">project</span> <span class="s2">"myproject"</span>
         <span class="n">kind</span> <span class="s2">"ConsoleApp"</span>
-        <span class="n">files</span> <span class="p">{</span> <span class="s2">"src/main.cpp"</span> <span class="p">}</span></code></pre></div>
+        <span class="n">files</span> <span class="p">{</span> <span class="s2">"src/main.cpp"</span> <span class="p">}</span></code></pre></figure>
 
 <p>and (after throwing away all previous artifacts so we don’t confuse ourselves), re-generate:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">C:\test&gt; </span>premake5.exe --file<span class="o">=</span>premake-minimal.lua vs2013</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">C:\test&gt; </span>premake5.exe --file<span class="o">=</span>premake-minimal.lua vs2013</code></pre></figure>
 
-<p>After running this, you’ll see a <code>build/</code> directory with files in it; I won’t list those files again, our
+<p>After running this, you’ll see a <code class="highlighter-rouge">build/</code> directory with files in it; I won’t list those files again, our
 previous list suffices.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">test/
+<figure class="highlight"><pre><code class="language-text" data-lang="text">test/
 |-- build/
 |-- premake-minimal.lua
 |-- src/
-    |-- main.cpp</code></pre></div>
+    |-- main.cpp</code></pre></figure>
 
 <p>As well as Premake-generated files, all the files that Visual Studio creates are now tucked away in this build folder.
 A big advantage to doing this is that all build artifacts
@@ -236,25 +236,25 @@ facilitate a clean build.</p>
 
 <p>If you try to debug with this project in Visual Studio, you’ll see Visual Studio complaining that it can’t find
 the debug symbols for your program. Premake by default does not create projects that generate debug symbols. Let’s fix
-that. The premake directive for this is <code>flags { "Symbols" }</code>. The <code>flags</code> keyword sets some Premake-specific
-values. The <code>"Symbols"</code> flag means “set up project to generate debug symbols”.</p>
+that. The premake directive for this is <code class="highlighter-rouge">flags { "Symbols" }</code>. The <code class="highlighter-rouge">flags</code> keyword sets some Premake-specific
+values. The <code class="highlighter-rouge">"Symbols"</code> flag means “set up project to generate debug symbols”.</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span>
     <span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span> <span class="p">}</span>
     <span class="n">location</span> <span class="p">(</span><span class="s2">"build"</span><span class="p">)</span>
 
     <span class="n">project</span> <span class="s2">"myproject"</span>
         <span class="n">kind</span> <span class="s2">"ConsoleApp"</span>
         <span class="n">files</span> <span class="p">{</span> <span class="s2">"src/main.cpp"</span> <span class="p">}</span>
-        <span class="n">flags</span> <span class="p">{</span> <span class="s2">"Symbols"</span> <span class="p">}</span></code></pre></div>
+        <span class="n">flags</span> <span class="p">{</span> <span class="s2">"Symbols"</span> <span class="p">}</span></code></pre></figure>
 
-<p>Now, when we re-generate (throwing away our old <code>build/</code> directory is not strictly necessary) and rebuild,
+<p>Now, when we re-generate (throwing away our old <code class="highlighter-rouge">build/</code> directory is not strictly necessary) and rebuild,
 we’ll have debug symbols in our project.</p>
 
 <p>We can add a Release configuration easily enough. Let’s also set it up so that the Debug configuration generates debug
 symbols, but the Release configuration does not. Also, we want the Release configuration to generated optimized code.</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">solution</span> <span class="s2">"mysolution"</span>
     <span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span><span class="p">,</span> <span class="s2">"Release"</span> <span class="p">}</span>
     <span class="n">location</span> <span class="p">(</span><span class="s2">"build"</span><span class="p">)</span>
 
@@ -268,23 +268,23 @@ symbols, but the Release configuration does not. Also, we want the Release confi
         <span class="n">filter</span> <span class="s2">"configurations:Release"</span>
             <span class="n">defines</span> <span class="p">{</span> <span class="s2">"NDEBUG"</span> <span class="p">}</span>    
             <span class="n">optimize</span> <span class="s2">"On"</span>
-        <span class="n">filter</span> <span class="p">{}</span></code></pre></div>
+        <span class="n">filter</span> <span class="p">{}</span></code></pre></figure>
 
-<p>This introduces a new Premake feature called <code>filter</code>; any settings that appear after <code>filter</code> will only be
-applied to the subset of builds that match the keywords in the filter. Our first filter, <code>configurations:Debug</code>,
-means that subsequent lines only apply to configuration <code>Debug</code>. The <code>defines</code> directive introduces a C
-preprocessor define <code>_DEBUG</code> into our debug configuration, and then the <code>flags { "Symbols" }</code> directive turns
+<p>This introduces a new Premake feature called <code class="highlighter-rouge">filter</code>; any settings that appear after <code class="highlighter-rouge">filter</code> will only be
+applied to the subset of builds that match the keywords in the filter. Our first filter, <code class="highlighter-rouge">configurations:Debug</code>,
+means that subsequent lines only apply to configuration <code class="highlighter-rouge">Debug</code>. The <code class="highlighter-rouge">defines</code> directive introduces a C
+preprocessor define <code class="highlighter-rouge">_DEBUG</code> into our debug configuration, and then the <code class="highlighter-rouge">flags { "Symbols" }</code> directive turns
 on generating of debug symbols just for our debug configuration.</p>
 
 <p>Filters stay in effect until removed or replaced. The way to remove a filter is to just “apply” the empty filter. At the
-end of our block, you’ll see <code>filter {}</code>. In our very short premake script, this is not needed, but it’s a good
+end of our block, you’ll see <code class="highlighter-rouge">filter {}</code>. In our very short premake script, this is not needed, but it’s a good
 practice to follow, because it will be essential in large premake scripts, especially ones that include other scripts.
 The best way to visualize this is to remove all the indentation from your premake script. Now it’s clear that filters
 are in effect until removed; the indentation is fooling your brain into thinking there is some sort of scope.</p>
 
 <p>Filters can replace other filters. That’s why we don’t bother resetting the filter before applying our second filter,
-<code>filter "configuration:Release"</code>. This just replaces the debug filter. And like before, our <code>NDEBUG</code> symbol
-is only defined for the release configuration. The directive <code>optimize "On"</code> is how you tell Premake to do whatever
+<code class="highlighter-rouge">filter "configuration:Release"</code>. This just replaces the debug filter. And like before, our <code class="highlighter-rouge">NDEBUG</code> symbol
+is only defined for the release configuration. The directive <code class="highlighter-rouge">optimize "On"</code> is how you tell Premake to do whatever
 it takes to configure for optimized builds. This is the cross-platform and generic way; more complex projects may
 wish to directly issue compiler flags, but that requires per-build-platform sections. We’ll get there eventually, but
 not just yet.</p>
@@ -296,16 +296,16 @@ symbols but has optimized code.</p>
 <h2 id="multiple-source-files">Multiple source files</h2>
 
 <p>The final thing we’re going to cover in our minimal Premake project is on specifying source files. While it is
-possible to list every file in our <code>files</code> directive, we can use wildcards, including recursing through
+possible to list every file in our <code class="highlighter-rouge">files</code> directive, we can use wildcards, including recursing through
 multiple layers of directories:</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">files</span> <span class="p">{</span> <span class="s2">"**.cpp"</span><span class="p">,</span> <span class="s2">"**.h"</span><span class="p">,</span> <span class="s2">"**.c"</span> <span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">files</span> <span class="p">{</span> <span class="s2">"**.cpp"</span><span class="p">,</span> <span class="s2">"**.h"</span><span class="p">,</span> <span class="s2">"**.c"</span> <span class="p">}</span></code></pre></figure>
 
-<p>The new files line will add any .cpp, .h, or .c files found anywhere in the <code>src/</code> directory. By default, Premake
+<p>The new files line will add any .cpp, .h, or .c files found anywhere in the <code class="highlighter-rouge">src/</code> directory. By default, Premake
 will try to be nice and will create groupings in the generated projects to match the directory structure. As long as
 you are disciplined and don’t keep stray files in your workspace, you may find you never need explicit listing of files
-in the premake script. Note that the first level isn’t replicated in the project file - <code>main.cpp</code> shows up at the top
-level, and not inside a <code>src</code> group. If you add more files and directories to your <code>src</code> folder, you’ll see
+in the premake script. Note that the first level isn’t replicated in the project file - <code class="highlighter-rouge">main.cpp</code> shows up at the top
+level, and not inside a <code class="highlighter-rouge">src</code> group. If you add more files and directories to your <code class="highlighter-rouge">src</code> folder, you’ll see
 those files put into groups named to match the directories.</p>
 
 <p>So, that’s it. There are the basics of Premake that will serve you for small to medium projects. You’ll find that it’s
@@ -313,7 +313,7 @@ far easier to write a quick Premake script than to manually construct a Visual S
 also removes one small but important barrier to being cross-platform. Let’s copy our source files to a Mac, and grab
 a Mac version of the premake binary.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span><span class="nv">$ </span>premake5 --file<span class="o">=</span>premake-minimal.lua xcode4</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span><span class="nv">$ </span>premake5 --file<span class="o">=</span>premake-minimal.lua xcode4</code></pre></figure>
 
 <p>Success! We have a build/mine.xcodeproj that we can build and debug and run. And this is why people like using
 Premake (or CMake, or Scons, or Gyp), because there are many projects that are cross-platform.</p>
@@ -321,9 +321,9 @@ Premake (or CMake, or Scons, or Gyp), because there are many projects that are c
 <p>And, for fun, we can generate a makefile project that is consumed by GNU Make (gmake). We’ll do this on the Mac,
 although with a little tweaking, you could turn it into a makefile that Windows NMake could consume.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span><span class="nv">$ </span>premake5 --file<span class="o">=</span>premake-minimal.lua gmake</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span><span class="nv">$ </span>premake5 --file<span class="o">=</span>premake-minimal.lua gmake</code></pre></figure>
 
-<p>And, if we look in our <code>build/</code> directory, we’ll see a makefile named <code>Makefile</code>.</p>
+<p>And, if we look in our <code class="highlighter-rouge">build/</code> directory, we’ll see a makefile named <code class="highlighter-rouge">Makefile</code>.</p>
 
 <h2 id="identifying-boilerplate">Identifying boilerplate</h2>
 
@@ -335,22 +335,22 @@ unique to my project. This has to be balanced against the needs of syntax and se
 <p>Looking at our minimal project, there is some boilerplate related to how we define debug and release
 builds. For example:</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">defines</span> <span class="p">{</span> <span class="s2">"NDEBUG"</span> <span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">defines</span> <span class="p">{</span> <span class="s2">"NDEBUG"</span> <span class="p">}</span>    </code></pre></figure>
 
-<p>Every C/C++ project I make that uses the standard C library needs to have <code>NDEBUG</code> defined for
+<p>Every C/C++ project I make that uses the standard C library needs to have <code class="highlighter-rouge">NDEBUG</code> defined for
 non-debug builds. And Microsoft long ago introduced a parallel construction, every debug build should
-have <code>_DEBUG</code> defined (I suppose they didn’t like <code>#ifndef NDEBUG</code> as a guard).</p>
+have <code class="highlighter-rouge">_DEBUG</code> defined (I suppose they didn’t like <code class="highlighter-rouge">#ifndef NDEBUG</code> as a guard).</p>
 
 <p>This is right on the edge of boilerplate, because Premake doesn’t have any idea of predefined meaning
 for configurations, so how does Premake now that my config is debug or release? However, and also
 looking at symbols and optimization, there are common idioms. Maybe we should have been able to
-introduce all of them at once. This makes sense given that <code>optimize "On"</code> itself is a collection
+introduce all of them at once. This makes sense given that <code class="highlighter-rouge">optimize "On"</code> itself is a collection
 of predefined options for what “optimized” means.</p>
 
 <p>One way would have been to attach information to a configuration. Doing it in a filter is one way, but
 verbose. What if we just told it when we declared the configurations.</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">configurations</span> <span class="p">{</span> <span class="p">[</span><span class="s2">"Debug"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"debug"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"Release"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"release"</span> <span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="n">configurations</span> <span class="p">{</span> <span class="p">[</span><span class="s2">"Debug"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"debug"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"Release"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"release"</span> <span class="p">}</span></code></pre></figure>
 
 <p>And if the configuration name matches one of our sets (built-in or not), then we wouldn’t need to
 specify this. In the above, I’m saying that the “debug” set is “#define _DEBUG, build debug symbols”,
@@ -369,7 +369,7 @@ structure.</p>
 is Lua, we can comment it, and we could even compose it as functions (which we would do for a very large
 project).</p>
 
-<div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="c1">-- A solution is the top-level entity in Premake. In Visual Studio, this</span>
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="c1">-- A solution is the top-level entity in Premake. In Visual Studio, this</span>
 <span class="c1">-- maps to a Visual Studio solution file (.sln). In XCode, this maps</span>
 <span class="c1">-- to an XCode workspace (.xcworkspace). In make, this is a makefile.</span>
 <span class="n">solution</span> <span class="s2">"mysolution"</span>
@@ -417,7 +417,7 @@ project).</p>
         <span class="c1">-- with another filter. As a good engineering practice, we want to end a</span>
         <span class="c1">-- filter as soon as we no longer need it; the way to do this is to say</span>
         <span class="c1">-- "filter nothing".</span>
-        <span class="n">filter</span> <span class="p">{}</span></code></pre></div>
+        <span class="n">filter</span> <span class="p">{}</span></code></pre></figure>
 
 <h2 id="reference">Reference</h2>
 

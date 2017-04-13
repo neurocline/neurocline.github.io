@@ -89,9 +89,9 @@ for now on a local machine. Here’s my little diary of getting a loccal ReadThe
 <p>I’m on Windows 7, behind the times a bit (Windows 10 is nicer).</p>
 
 <p>Following <a href="http://read-the-docs.readthedocs.io/en/latest/install.html">Installation</a> from ReadTheDocs. Hmm,
-never used <code>virtualenv</code> before.</p>
+never used <code class="highlighter-rouge">virtualenv</code> before.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">pip install virtualenv</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip install virtualenv</code></pre></figure>
 
 <p>and then a little Stack Overflow</p>
 
@@ -101,58 +101,58 @@ never used <code>virtualenv</code> before.</p>
 
 <p>leads me to do</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">virtualenv rtd
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">virtualenv rtd
 <span class="nb">cd </span>rtd
 Scripts<span class="se">\a</span>ctivate.bat
 mkdir checkouts
 <span class="nb">cd </span>checkouts
 git clone https://github.com/rtfd/readthedocs.org.git
 <span class="nb">cd </span>readthedocs.org
-pip install -r requirements.txt</code></pre></div>
+pip install -r requirements.txt</code></pre></figure>
 
 <p>Total time to this point, less than 5 minutes. Now we do some database stuff, apparently.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">manage.py migrate</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">manage.py migrate</code></pre></figure>
 
 <p>Hmm, no Windows support?</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>rtd<span class="o">)</span> C:<span class="se">\p</span>rojects<span class="se">\p</span>ython<span class="se">\r</span>td<span class="se">\c</span>heckouts<span class="se">\r</span>eadthedocs.org&gt;manage.py migrate
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>rtd<span class="o">)</span> C:<span class="se">\p</span>rojects<span class="se">\p</span>ython<span class="se">\r</span>td<span class="se">\c</span>heckouts<span class="se">\r</span>eadthedocs.org&gt;manage.py migrate
 Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
   File <span class="s2">"C:</span><span class="se">\p</span><span class="s2">rojects</span><span class="se">\p</span><span class="s2">ython</span><span class="se">\r</span><span class="s2">td</span><span class="se">\c</span><span class="s2">heckouts</span><span class="se">\r</span><span class="s2">eadthedocs.org</span><span class="se">\m</span><span class="s2">anage.py"</span>, line 9, <span class="k">in</span> &lt;module&gt;
     from django.core.management import execute_from_command_line
-ImportError: No module named django.core.management</code></pre></div>
+ImportError: No module named django.core.management</code></pre></figure>
 
 <p>And, StackOverflow tells me that this actually means I don’t have django installed. Hmm, I thought that
-the <code>pip install -r requirements.txt</code> line was meant to install Django.</p>
+the <code class="highlighter-rouge">pip install -r requirements.txt</code> line was meant to install Django.</p>
 
-<p>Ah, it did, but I didn’t pay attention to errors in the <code>pip install</code> output</p>
+<p>Ah, it did, but I didn’t pay attention to errors in the <code class="highlighter-rouge">pip install</code> output</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">HTTP error 500 <span class="k">while </span>getting https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5<span class="o">=</span>de307d2771370cbbdb866282a6093fc9 <span class="o">(</span>from https://pypi.python.org/simple/lxml/<span class="o">)</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">HTTP error 500 <span class="k">while </span>getting https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5<span class="o">=</span>de307d2771370cbbdb866282a6093fc9 <span class="o">(</span>from https://pypi.python.org/simple/lxml/<span class="o">)</span>
 Could not install requirement <span class="nv">lxml</span><span class="o">==</span>3.3.5 from https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5<span class="o">=</span>de307d2771370cbbdb866282a6093fc9 <span class="o">(</span>from -r requirements/pip.txt <span class="o">(</span>line 22<span class="o">))</span> because of error 500 Server Error: Internal Server Error <span class="k">for </span>url: https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl
-Could not install requirement <span class="nv">lxml</span><span class="o">==</span>3.3.5 from https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5<span class="o">=</span>de307d2771370cbbdb866282a6093fc9 <span class="o">(</span>from -r requirements/pip.txt <span class="o">(</span>line 22<span class="o">))</span> because of HTTP error 500 Server Error: Internal Server Error <span class="k">for </span>url: https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl <span class="k">for </span>URL https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5<span class="o">=</span>de307d2771370cbbdb866282a6093fc9 <span class="o">(</span>from https://pypi.python.org/simple/lxml/<span class="o">)</span></code></pre></div>
+Could not install requirement <span class="nv">lxml</span><span class="o">==</span>3.3.5 from https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5<span class="o">=</span>de307d2771370cbbdb866282a6093fc9 <span class="o">(</span>from -r requirements/pip.txt <span class="o">(</span>line 22<span class="o">))</span> because of HTTP error 500 Server Error: Internal Server Error <span class="k">for </span>url: https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl <span class="k">for </span>URL https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5<span class="o">=</span>de307d2771370cbbdb866282a6093fc9 <span class="o">(</span>from https://pypi.python.org/simple/lxml/<span class="o">)</span></code></pre></figure>
 
 <p>This is annoying.</p>
 
-<p>Apparently, this is because you can’t just <code>pip install lxml</code> on Windows.</p>
+<p>Apparently, this is because you can’t just <code class="highlighter-rouge">pip install lxml</code> on Windows.</p>
 
 <p><a href="http://stackoverflow.com/questions/23944465/installing-lxml-for-python-3-4-on-windows-x-86-32-bit-with-visual-studio-c-2">http://stackoverflow.com/questions/23944465/installing-lxml-for-python-3-4-on-windows-x-86-32-bit-with-visual-studio-c-2</a>.</p>
 
 <p>Although, I’m not sure that’s what it means, now that I think about it, that’s silly, I think that post is
 just if you try to build from source. I was able to do this</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>pip install
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>pip install
 Collecting lxml
   Downloading lxml-3.6.0-cp27-none-win32.whl <span class="o">(</span>3.0MB<span class="o">)</span>
     100% |################################| 3.1MB 261kB/s
 Installing collected packages: lxml
-Successfully installed lxml-3.6.0</code></pre></div>
+Successfully installed lxml-3.6.0</code></pre></figure>
 
 <p>and it got and installed the latest version. So maybe it’s just that there no longer is a 3.3.5 version
 on PyPI. And that appears to be the case, the oldest version listed there is 3.4.4.</p>
 
 <p>So what if I edit requirements/pip.txt? Can I get a working build?</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">pip install -r requirements.txt</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip install -r requirements.txt</code></pre></figure>
 
 <p>Hmm, should I have uninstalled lxml 3.6.0? It seems to be downloading stuff. Also, it looks like there was a heck
 of a lot more to install. Holy crap. Virtualenv may be cool and all, but it’s like Docker, a cool solution for
@@ -160,7 +160,7 @@ a problem that shouldn’t exist in the first place.</p>
 
 <p>Wow, this is annoying. A nice, nasty error at maybe the end of install</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Exception:
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Exception:
 Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
   File <span class="s2">"c:</span><span class="se">\p</span><span class="s2">rojects</span><span class="se">\p</span><span class="s2">ython</span><span class="se">\r</span><span class="s2">td</span><span class="se">\l</span><span class="s2">ib</span><span class="se">\s</span><span class="s2">ite-packages</span><span class="se">\p</span><span class="s2">ip</span><span class="se">\b</span><span class="s2">asecommand.py"</span>, line 209,
 <span class="k">in </span>main
@@ -209,7 +209,7 @@ Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
 p\\pip-09ja6p-uninstall\\projects\\python\\rtd\\scripts\\pip.exe'</span>
 You are using pip version 8.0.2, however version 8.1.1 is available.
 You should consider upgrading via the <span class="s1">'python -m pip install --upgrade pip'</span> comm
-and.</code></pre></div>
+and.</code></pre></figure>
 
 <p>It looks like it tried to uninstall a running program. And why the heck is it trying to run something from
 a temp folder? Ugly.</p>
@@ -217,7 +217,7 @@ a temp folder? Ugly.</p>
 <p>I’m building up notes for a second try (because maybe I broke my virtualenv Python folder), but let’s continue.
 Back to the database init.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">manage.py migrate</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">manage.py migrate</code></pre></figure>
 
 <p>Hmm, same error as before.</p>
 
@@ -228,21 +228,21 @@ Traceback (most recent call last):
 ImportError: No module named django.core.management</module></p>
 
 <p>Interestingly, I don’t see django installed in my virtualenv folder. Isn’t it supposed to be?
-The progress from the <code>pip install -r requirements.txt</code> claimed that it download Django</p>
+The progress from the <code class="highlighter-rouge">pip install -r requirements.txt</code> claimed that it download Django</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Collecting <span class="nv">django</span><span class="o">==</span>1.8.3 <span class="o">(</span>from -r requirements/pip.txt <span class="o">(</span>line 9<span class="o">))</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Collecting <span class="nv">django</span><span class="o">==</span>1.8.3 <span class="o">(</span>from -r requirements/pip.txt <span class="o">(</span>line 9<span class="o">))</span>
   Downloading Django-1.8.3-py2.py3-none-any.whl <span class="o">(</span>6.2MB<span class="o">)</span>
-    100% |################################| 6.2MB 161kB/s</code></pre></div>
+    100% |################################| 6.2MB 161kB/s</code></pre></figure>
 
 <p>but I see no evidence of it anywhere. I see a bunch of other *.whl files
-in <code>checkouts\readthedocs.org\deploy\wheels</code>. I don’t know enough about Python, but it seems
-like I should see a <code>Django-1.8.3-py2.py3-none-any.whl</code> file in there. Although, now I look at
+in <code class="highlighter-rouge">checkouts\readthedocs.org\deploy\wheels</code>. I don’t know enough about Python, but it seems
+like I should see a <code class="highlighter-rouge">Django-1.8.3-py2.py3-none-any.whl</code> file in there. Although, now I look at
 things, I don’t see many of the .whl files in there.</p>
 
 <p>Maybe they went somewhere else on the hard disk? Temp folder? There are Django wheels in there, but
 not for Django itself.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">c:<span class="se">\U</span>sers<span class="se">\b</span>fitz<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>ip&gt;dir <span class="k">*</span>django<span class="k">*</span> /s /b
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">c:<span class="se">\U</span>sers<span class="se">\b</span>fitz<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>ip&gt;dir <span class="k">*</span>django<span class="k">*</span> /s /b
 c:<span class="se">\U</span>sers<span class="se">\b</span>fitz<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>ip<span class="se">\c</span>ache<span class="se">\w</span>heels<span class="se">\2</span>1<span class="se">\7</span>9<span class="se">\c</span>5<span class="se">\7</span>e4204d7cc5dbb1c9941de3e9
 c18106417f30dd9179c892ab2<span class="se">\d</span>jango_haystack-2.1.0-cp27-none-any.whl
 c:<span class="se">\U</span>sers<span class="se">\b</span>fitz<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>ip<span class="se">\c</span>ache<span class="se">\w</span>heels<span class="se">\2</span>5<span class="se">\b</span>8<span class="se">\c</span>0<span class="se">\8</span>39a46f5f8c4d0d8f45e49695
@@ -264,13 +264,13 @@ c:<span class="se">\U</span>sers<span class="se">\b</span>fitz<span class="se">\
 c:<span class="se">\U</span>sers<span class="se">\b</span>fitz<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>ip<span class="se">\c</span>ache<span class="se">\w</span>heels<span class="se">\f</span>0<span class="se">\b</span>c<span class="se">\8</span>7<span class="se">\8</span>927de315c2f138f1811d3e6a
 ccf5f40326d718f641972f713<span class="se">\d</span>jango_cors_headers-0.13-cp27-none-any.whl
 c:<span class="se">\U</span>sers<span class="se">\b</span>fitz<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>ip<span class="se">\c</span>ache<span class="se">\w</span>heels<span class="se">\f</span>6<span class="se">\0</span>4<span class="se">\6</span>4<span class="se">\e</span>f5dc0eea5c486d22ffebb1c6
-1fac5653d406a6713a5077d39<span class="se">\d</span>jango_annoying-0.8.4-cp27-none-any.whl</code></pre></div>
+1fac5653d406a6713a5077d39<span class="se">\d</span>jango_annoying-0.8.4-cp27-none-any.whl</code></pre></figure>
 
 <p>Maybe I should go install it on a Mac instead? Or in a Linux VM? Or even just on a Linux box?</p>
 
 <p>I’m done for now. Temporarily defeated.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>rtd<span class="o">)</span> C:<span class="se">\p</span>rojects<span class="se">\p</span>ython<span class="se">\r</span>td&gt;Scripts<span class="se">\d</span>eactivate.bat</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>rtd<span class="o">)</span> C:<span class="se">\p</span>rojects<span class="se">\p</span>ython<span class="se">\r</span>td&gt;Scripts<span class="se">\d</span>eactivate.bat</code></pre></figure>
 
 
   </article>
