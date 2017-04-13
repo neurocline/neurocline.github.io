@@ -115,7 +115,7 @@
 
 <p>I just wish that the digits separator wasn’t so unusual, but I’ll get used to it.</p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">auto</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b100</span><span class="err">'</span><span class="mo">0001</span><span class="p">;</span>  <span class="o">//</span> <span class="n">ASCII</span> <span class="sc">'A'</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">auto</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b100</span><span class="err">'</span><span class="mo">0001</span><span class="p">;</span>  <span class="o">//</span> <span class="n">ASCII</span> <span class="sc">'A'</span></code></pre></div>
 
 <ul>
   <li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf">Binary Literals in the C++ Core Language</a></li>
@@ -126,8 +126,8 @@
 
 <p>Not to be confused with variadic templates - this allows you to have templates that wrap variables. Now you can have a template that is a templated variable, and really largely to write parameterized constants with constexpr in a more straightforward fashion.</p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// math constant with precision dictated by actual type
-</span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">constexpr</span> <span class="n">T</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">T</span><span class="p">(</span><span class="mf">3.14159265358979323846</span><span class="p">);</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// math constant with precision dictated by actual type
+</span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">constexpr</span> <span class="n">T</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">T</span><span class="p">(</span><span class="mf">3.14159265358979323846</span><span class="p">);</span></code></pre></div>
 
 <ul>
   <li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf">Variable Templates</a></li>
@@ -137,7 +137,7 @@
 
 <p>This is huge, because it extends what you can do with constexpr functions. You can write loops as opposed to resorting to recursion. Specifically, your constexpr functions can have local variables, and use if, switch, for, while, or do…while (just not goto).</p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">constexpr</span> <span class="kt">int</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">constexpr</span> <span class="kt">int</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
@@ -146,7 +146,7 @@
     	<span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 <ul>
   <li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html">Relaxing constraints on constexpr functions</a></li>
@@ -171,7 +171,7 @@
 <p>Something that’s baking but has hope</p>
 
 <ul>
-  <li>std::variant<T> (similar to [Variant v5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0088r0.pdf) but it throws on invalid move).</T></li>
+  <li>std::variant<t> (similar to [Variant v5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0088r0.pdf) but it throws on invalid move).</t></li>
 </ul>
 
 <p>Some medium things</p>

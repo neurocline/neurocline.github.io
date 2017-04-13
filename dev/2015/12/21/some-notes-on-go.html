@@ -87,16 +87,16 @@
 are neutral to me, but dictating how your source code is laid on on the hard disk
 is harder to work with.</p>
 
-<p>The <code class="highlighter-rouge">go</code> tool finds files in relation to the <code class="highlighter-rouge">$GOPATH</code> environment variable,
-and really wants to see a strucure like this at the root of <code class="highlighter-rouge">$GOPATH</code> (using one
+<p>The <code>go</code> tool finds files in relation to the <code>$GOPATH</code> environment variable,
+and really wants to see a strucure like this at the root of <code>$GOPATH</code> (using one
 of my recent projects as an example)</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bin/
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bin/
 pkg/
 src/
   github.com/
     catalog/
-      ...</code></pre></figure>
+      ...</code></pre></div>
 
 <p>See <a href="https://golang.org/doc/code.html">How to Write Go Code</a> for the official explanation.</p>
 
@@ -107,21 +107,21 @@ their own internal organization.</p>
 <p>I like some of the thoughts behind the Go structure. I’ve always preferred systems where
 generated files lived outside of your source files; source files come from source control,
 and generated files are mostly temporaries. And many programming environments and languages
-make this difficult. In the Go world, your source is all inside <code class="highlighter-rouge">src/</code>, your intermediate
-files are in <code class="highlighter-rouge">pkg/</code>, and your output binaries are in <code class="highlighter-rouge">bin/</code>. Of course, that’s a
+make this difficult. In the Go world, your source is all inside <code>src/</code>, your intermediate
+files are in <code>pkg/</code>, and your output binaries are in <code>bin/</code>. Of course, that’s a
 little limiting, but I can work in it.</p>
 
-<p>One choice is to keep changing <code class="highlighter-rouge">$GOPATH</code>. It “points to your workspace”, but there’s no
+<p>One choice is to keep changing <code>$GOPATH</code>. It “points to your workspace”, but there’s no
 reason you need just the one workspace. I’m at the point where I’m seriously considering
 this approach. Since I don’t use an IDE at the moment for Go code, however, this means that
-I need to remember to set <code class="highlighter-rouge">$GOPATH</code> each time I create a terminal window. This would be
-necessary if I worked on large Go programs, or on dozens at the same time. A single <code class="highlighter-rouge">bin/</code>
+I need to remember to set <code>$GOPATH</code> each time I create a terminal window. This would be
+necessary if I worked on large Go programs, or on dozens at the same time. A single <code>bin/</code>
 location would be a problem. The Go docs seem to recommend against this, see
 <a href="https://github.com/golang/go/wiki/GOPATH">GOPATH</a> from the <a href="https://github.com/golang/go/wiki">Go Wiki</a>.
 I suspect this is advice bourne from working on lots of small programs, though.</p>
 
-<p>There is one big reason to use multiple <code class="highlighter-rouge">$GOPATH</code> hierarchies, and that’s when using <code class="highlighter-rouge">go get</code>.
-While Go will search among multiple paths for files, <code class="highlighter-rouge">go get</code> will download new files into
+<p>There is one big reason to use multiple <code>$GOPATH</code> hierarchies, and that’s when using <code>go get</code>.
+While Go will search among multiple paths for files, <code>go get</code> will download new files into
 exactly one location.</p>
 
 <p>But there are other problems I’m wrestling with. I have some multi-language repositories. So
@@ -131,12 +131,12 @@ files in the wrong place is easy), and relocating everything to suit Go is very 
 
 <h1 id="relative-and-absolute-go-paths">Relative and absolute Go paths</h1>
 
-<p>The <code class="highlighter-rouge">go</code> tool really likes absolute paths, and by absolute I mean paths that are relative
-to the <code class="highlighter-rouge">$GOPATH</code> root.</p>
+<p>The <code>go</code> tool really likes absolute paths, and by absolute I mean paths that are relative
+to the <code>$GOPATH</code> root.</p>
 
-<p>If you use absolute paths to build, then your built output goes in the <code class="highlighter-rouge">bin/</code> folder. If
+<p>If you use absolute paths to build, then your built output goes in the <code>bin/</code> folder. If
 you use relative paths to build, then your built output goes next to the source. While that
-doesn’t sound bad, it also has implications for any <code class="highlighter-rouge">import</code> statements in your source.
+doesn’t sound bad, it also has implications for any <code>import</code> statements in your source.
 Relative imports are forbidden if you use an absolute path to start. And if you have relative
 source imports (which are nice and readable and convenient), then you must use a relative
 path to trigger the build.</p>
@@ -147,7 +147,7 @@ built via relative paths.</p>
 
 <h1 id="versioning-and-go-source">Versioning and Go source</h1>
 
-<p><code class="highlighter-rouge">go get</code> is useful, to a point. It can automatically fetch source packages for you.</p>
+<p><code>go get</code> is useful, to a point. It can automatically fetch source packages for you.</p>
 
 <p>What you don’t get is control over a version. And this is going to be important to let build
 servers automatically get and build projects, at least without a ton of pain.</p>

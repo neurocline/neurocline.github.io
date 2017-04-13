@@ -81,16 +81,16 @@
   </header>
 
   <article class="post-content">
-    <p>Type traits in conjunction with <code class="highlighter-rouge">enable_if</code> are turning into a required foundation for writing
-template classes. Consider <code class="highlighter-rouge">std::filesystem::path</code>: this has overloads that require help in order
+    <p>Type traits in conjunction with <code>enable_if</code> are turning into a required foundation for writing
+template classes. Consider <code>std::filesystem::path</code>: this has overloads that require help in order
 for the compiler to disambiguate some of the required constructors and operators.</p>
 
-<p>Let’s start with an interesting base, <code class="highlighter-rouge">integral_constant</code>. This turns a constant into a type,
+<p>Let’s start with an interesting base, <code>integral_constant</code>. This turns a constant into a type,
 which means that templates can use it to control which template gets instantiated.</p>
 
 <p>A modern version might look like this:</p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="p">,</span> <span class="n">T</span> <span class="n">val</span><span class="o">&gt;</span>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="p">,</span> <span class="n">T</span> <span class="n">val</span><span class="o">&gt;</span>
 <span class="k">struct</span> <span class="n">integral_constant</span>
 <span class="p">{</span>
     <span class="k">static</span> <span class="k">constexpr</span> <span class="n">T</span> <span class="n">value</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
@@ -104,20 +104,20 @@ which means that templates can use it to control which template gets instantiate
 <span class="k">template</span> <span class="o">&lt;</span><span class="kt">bool</span> <span class="n">B</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">bool_constant</span> <span class="o">=</span> <span class="n">integral_constant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="n">B</span><span class="o">&gt;</span><span class="p">;</span>
 
 <span class="k">using</span> <span class="n">true_type</span> <span class="o">=</span> <span class="n">bool_constant</span><span class="o">&lt;</span><span class="nb">true</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="k">using</span> <span class="n">false_type</span> <span class="o">=</span> <span class="n">bool_constant</span><span class="o">&lt;</span><span class="nb">false</span><span class="o">&gt;</span><span class="p">;</span></code></pre></figure>
+<span class="k">using</span> <span class="n">false_type</span> <span class="o">=</span> <span class="n">bool_constant</span><span class="o">&lt;</span><span class="nb">false</span><span class="o">&gt;</span><span class="p">;</span></code></pre></div>
 
-<p>The <code class="highlighter-rouge">bool_constant</code> specialization is provided as of C++17. However, except for the modern syntax
-(e.g. <code class="highlighter-rouge">using</code> instead of <code class="highlighter-rouge">typedef</code>), this template is basic C++.</p>
+<p>The <code>bool_constant</code> specialization is provided as of C++17. However, except for the modern syntax
+(e.g. <code>using</code> instead of <code>typedef</code>), this template is basic C++.</p>
 
 <p>The entire reason for this is the side effects; otherwise, it’s a very expensive (in lines of code)
 way to represent a constant.</p>
 
-<p>Starting with the most simple usage, we have two unique types <code class="highlighter-rouge">true_type</code> and <code class="highlighter-rouge">false_type</code> that are
-specializations of <code class="highlighter-rouge">bool_constant</code>, itself a specialization of <code class="highlighter-rouge">integral_constant</code>. We can do
+<p>Starting with the most simple usage, we have two unique types <code>true_type</code> and <code>false_type</code> that are
+specializations of <code>bool_constant</code>, itself a specialization of <code>integral_constant</code>. We can do
 tag dispatching to select between two options at compile time. Let’s say we have a print function and
 we want integer and floating point versions</p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
 <span class="kt">void</span> <span class="n">print_impl</span><span class="p">(</span><span class="n">T</span> <span class="n">val</span><span class="p">,</span> <span class="n">true_type</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
@@ -131,18 +131,18 @@ we want integer and floating point versions</p>
 <span class="kt">void</span> <span class="n">print</span><span class="p">(</span><span class="n">T</span> <span class="n">val</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">print_impl</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">is_integral</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">());</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
-<p>Here, <code class="highlighter-rouge">is_integral</code> is a type trait that inherits from <code class="highlighter-rouge">bool_constant</code> and returns <code class="highlighter-rouge">true_type</code> if
-we have a type that is integral, e.g. <code class="highlighter-rouge">int</code>, <code class="highlighter-rouge">short</code>, etc. We could use normal overloading, but the promotion
+<p>Here, <code>is_integral</code> is a type trait that inherits from <code>bool_constant</code> and returns <code>true_type</code> if
+we have a type that is integral, e.g. <code>int</code>, <code>short</code>, etc. We could use normal overloading, but the promotion
 rules often defeat our attempts at overloading.</p>
 
-<p>Of course, as you see, we almost never use <code class="highlighter-rouge">true_type</code> and <code class="highlighter-rouge">false_type</code> directly. Instead, they are the
+<p>Of course, as you see, we almost never use <code>true_type</code> and <code>false_type</code> directly. Instead, they are the
 base type for type traits.</p>
 
-<h2 id="void_t">void_t</h2>
+<h2 id="voidt">void_t</h2>
 
-<p>C++17 has <code class="highlighter-rouge">void_t</code>:</p>
+<p>C++17 has <code>void_t</code>:</p>
 
 <ul>
   <li><a href="http://en.cppreference.com/w/cpp/types/void_t">std::void_t</a></li>
@@ -150,19 +150,19 @@ base type for type traits.</p>
 
 <p>and this is simply:</p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span><span class="err">...</span> <span class="o">&gt;</span>
-<span class="k">using</span> <span class="n">void_t</span> <span class="o">=</span> <span class="kt">void</span><span class="p">;</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span><span class="err">...</span> <span class="o">&gt;</span>
+<span class="k">using</span> <span class="n">void_t</span> <span class="o">=</span> <span class="kt">void</span><span class="p">;</span></code></pre></div>
 
 <p>with the example being</p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="o">=</span> <span class="kt">void</span><span class="o">&gt;</span>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="o">=</span> <span class="kt">void</span><span class="o">&gt;</span>
 <span class="k">struct</span> <span class="n">is_iterable</span> <span class="o">:</span> <span class="n">std</span><span class="o">::</span><span class="n">false_type</span> <span class="p">{};</span>
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
 <span class="k">struct</span> <span class="n">is_iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">void_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">().</span><span class="n">begin</span><span class="p">()),</span>
                                   <span class="k">decltype</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">().</span><span class="n">end</span><span class="p">())</span><span class="o">&gt;&gt;</span>
-    <span class="o">:</span> <span class="n">std</span><span class="o">::</span><span class="n">true_type</span> <span class="p">{};</span></code></pre></figure>
+    <span class="o">:</span> <span class="n">std</span><span class="o">::</span><span class="n">true_type</span> <span class="p">{};</span></code></pre></div>
 
-<p>where <code class="highlighter-rouge">is_iterable</code> is a type trait and has a <code class="highlighter-rouge">true</code> value if type <code class="highlighter-rouge">T</code> is an iterable type, determined
+<p>where <code>is_iterable</code> is a type trait and has a <code>true</code> value if type <code>T</code> is an iterable type, determined
 by the fact that</p>
 
 <p>An earlier version was proposed in:</p>
