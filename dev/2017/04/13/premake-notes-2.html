@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Premake notes (2)</title>
+  <meta name="description" content="Continuing Premake notes.">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <!-- link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"-->
+  <!---link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic"-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2017/04/13/premake-notes-2.html">
+  <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Some Things Are Obvious</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/papers/">Papers</a>
+          
+        
+          
+          <a class="page-link" href="/reading/">Reading List</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Premake notes (2)</h1>
+    <p class="post-meta">Apr 13, 2017</p>
+  </header>
+
+  <article class="post-content">
+    <p>Continuing Premake notes.</p>
+
+<h2 id="lua-and-premake">Lua and Premake</h2>
+
+<p>The biggest challenge with using Premake in non-trivial ways is that you do need to learn Lua
+to some degree. But the advantage of Premake is that at least this is not a new langauge invented
+just for the make system. Lua has some quirks of its own, but can be learned quickly by someone
+familiar with one or more existing languages.</p>
+
+<p>The most important thing to realize about Premake is that most Premake “configuration” lines
+are actually function calls. This:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>workspace "HelloWorld"
+    configurations { "Debug", "Release" }
+
+project "HelloWorld"
+    kind "ConsoleApp"
+    files { "**.h", "**.c" }
+</code></pre>
+</div>
+
+<p>is identical to this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>workspace("HelloWorld")
+    configurations({ "Debug", "Release" })
+
+project("HelloWorld")
+    kind("ConsoleApp")
+    files({ "**.h", "**.c" })
+</code></pre>
+</div>
+
+<p>The Premake idiom is to use the sytax for single-parameter function calls to turn Lua into
+an IDL, which works for the most part. But you need to be aware of this, or non-trivial scripts
+will feel arbitrary to you.</p>
+
+<p>The second most important thing to realize about Premake is that the functions <code class="highlighter-rouge">workspace(), project()</code> etc
+don’t do work, they add to a data structure. Once Premake has read all the Lua, it then iterates through
+the data structure to actually call functions that generate project files. The only way to do procedural
+work is to inject your own Lua code through overrides and call arrays. You can put these inline in your
+Premake scripts or as modules, and with modules, you can share these with others as third-party modules
+(which unfortunately require the module located somewhere in Premake’s search paths)</p>
+
+<p>You can also create actions and toolsets.</p>
+
+<h2 id="configurations">Configurations</h2>
+
+<p>To Premake, configurations and platforms are just strings. What you do with them is up to you, and in fact
+you have to do some work that’s caused by this flexibility.</p>
+
+<p>Let’s make a Premake script with two configurations, a debug config and a release config. It will look
+something like this:</p>
+
+<p><code class="highlighter-rouge">06_min.lua</code></p>
+
+<div class="language-lua highlighter-rouge"><pre class="highlight"><code><span class="n">workspace</span> <span class="s2">"06_min"</span>
+    <span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span><span class="p">,</span> <span class="s2">"Release"</span> <span class="p">}</span>
+    <span class="n">location</span> <span class="s2">"build"</span>
+
+   <span class="n">filter</span> <span class="s2">"configurations:Debug"</span>
+        <span class="n">defines</span> <span class="p">{</span> <span class="s2">"_DEBUG"</span> <span class="p">}</span>
+        <span class="n">optimize</span> <span class="s2">"Off"</span>
+        <span class="n">flags</span> <span class="p">{</span> <span class="s2">"Symbols"</span> <span class="p">}</span>
+
+   <span class="n">filter</span> <span class="s2">"configurations:Release"</span>
+        <span class="n">defines</span> <span class="p">{</span> <span class="s2">"NDEBUG"</span> <span class="p">}</span>
+        <span class="n">optimize</span> <span class="s2">"On"</span>
+
+    <span class="n">filter</span> <span class="p">{}</span>
+
+<span class="n">project</span> <span class="s2">"06_min"</span>
+    <span class="n">kind</span> <span class="s2">"ConsoleApp"</span>
+    <span class="n">files</span> <span class="p">{</span> <span class="s2">"**.cpp"</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Although you have an idea for what a “Debug build” means, Premake has no idea. Nor should it, because in truth,
+there is no one true Debug and Release targets.</p>
+
+<p>The down side is that you need to list all the things that aren’t default, and it’s hard to keep all the defaults
+in your head. Listed above are common settings for Debug and Release targets. This is done using <code class="highlighter-rouge">filter</code>, which
+is Premake’s way of having settings apply to a subset of the combinations of workspace, project, config, platform,
+and so on.</p>
+
+<p>Filters stay in action until replaced with a new filter. Keep in mind that, like other Premake lines, this
+is a function call, and all it’s doing is attaching this to the active scope (global, workspace, project).
+An attached filter accepts or rejects subsequent lines. Filters are removed when the scope changes; you can
+also remove the active filter with <code class="highlighter-rouge">filter {}</code>. Just like with overzealous use of parens or braces, you could
+put <code class="highlighter-rouge">filter {}</code> as an “end”, but as you get used to filters, you’ll find yourself putting the bare minimum in.</p>
+
+<p>As an aside, the current syntax for symbols is a little goofy and is expecting to change to this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    symbols "Off"
+    symbols "On"
+</code></pre>
+</div>
+
+<h2 id="platforms">Platforms</h2>
+
+<p>Configuration is squisy - let’s talk about platform. In this case, there sometimes are dependencies between
+the architecture and the generated code’s “platform” - just don’t confuse those with the platform name in
+Premake, which is your arbitrary label.</p>
+
+<p>We can do this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>workspace "07_min"
+    configurations { "Debug", "Release" }
+    platforms { "x32", "x64" }
+    location "build"
+
+   filter "configurations:Debug"
+        defines { "_DEBUG" }
+        optimize "Off"
+        flags { "Symbols" }
+   filter "configurations:Release"
+        defines { "NDEBUG" }
+        optimize "On"
+
+   filter "platforms:x32"
+        architecture "x86"
+   filter "platforms:x64"
+        architecture "x86_64"
+
+project "07_min"
+    kind "ConsoleApp"
+    files { "**.cpp" }
+</code></pre>
+</div>
+
+<p>OK, an editorial comment. Platform has magic behavior in current versions of Premake. If the platform in Premake
+is <code class="highlighter-rouge">x32</code>, then when a Visual Studio project is generated, it has platform <code class="highlighter-rouge">Win32</code> which means architecture <code class="highlighter-rouge">x86</code>.
+And if the platform in premake is <code class="highlighter-rouge">x64</code>, then when a Visual Studio project is generated, it has platform <code class="highlighter-rouge">x64</code>,
+which means architecture <code class="highlighter-rouge">x86-64</code>. If you use other names as platform, they will be handled properly, for the
+most part, but it will look odd. So probably don’t do it.</p>
+
+<h2 id="language-and-other-settings">Language and other settings</h2>
+
+<p>By default, Premake generates C/C++ projects.</p>
+
+<p>Premake has the <code class="highlighter-rouge">language</code> keyword, which affects the toolset used by a project. Let’s create some
+C# and D source files</p>
+
+<p><code class="highlighter-rouge">08_main.cs</code></p>
+
+<pre><code class="language-C#">public class Hello1
+{
+   public static void Main()
+   {
+      System.Console.WriteLine("Hello, World!");
+   }
+}
+</code></pre>
+
+<p><code class="highlighter-rouge">08_main.d</code></p>
+
+<pre><code class="language-D">import std.stdio;
+
+void main()
+{
+    writeln("Hello, World!");
+}
+</code></pre>
+
+<div class="language-lua highlighter-rouge"><pre class="highlight"><code><span class="n">workspace</span> <span class="s2">"08_min"</span>
+    <span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span><span class="p">,</span> <span class="s2">"Release"</span> <span class="p">}</span>
+    <span class="n">platforms</span> <span class="p">{</span> <span class="s2">"x32"</span><span class="p">,</span> <span class="s2">"x64"</span> <span class="p">}</span>
+    <span class="n">location</span> <span class="s2">"build"</span>
+
+   <span class="n">filter</span> <span class="s2">"configurations:Debug"</span>
+        <span class="n">defines</span> <span class="p">{</span> <span class="s2">"_DEBUG"</span> <span class="p">}</span>
+        <span class="n">optimize</span> <span class="s2">"Off"</span>
+        <span class="n">flags</span> <span class="p">{</span> <span class="s2">"Symbols"</span> <span class="p">}</span>
+   <span class="n">filter</span> <span class="s2">"configurations:Release"</span>
+        <span class="n">defines</span> <span class="p">{</span> <span class="s2">"NDEBUG"</span> <span class="p">}</span>
+        <span class="n">optimize</span> <span class="s2">"On"</span>
+
+   <span class="n">filter</span> <span class="s2">"platforms:x32"</span>
+        <span class="n">architecture</span> <span class="s2">"x86"</span>
+   <span class="n">filter</span> <span class="s2">"platforms:x64"</span>
+        <span class="n">architecture</span> <span class="s2">"x86_64"</span>
+
+<span class="n">project</span> <span class="s2">"08_cpp"</span>
+    <span class="n">kind</span> <span class="s2">"ConsoleApp"</span>
+    <span class="n">language</span> <span class="s2">"C++"</span>
+    <span class="n">files</span> <span class="p">{</span> <span class="s2">"**.cpp"</span> <span class="p">}</span>
+
+<span class="n">project</span> <span class="s2">"08_csharp"</span>
+    <span class="n">kind</span> <span class="s2">"ConsoleApp"</span>
+    <span class="n">language</span> <span class="s2">"C#"</span>
+    <span class="n">files</span> <span class="p">{</span> <span class="s2">"**.cs"</span> <span class="p">}</span>
+
+<span class="n">project</span> <span class="s2">"08_d"</span>
+    <span class="n">kind</span> <span class="s2">"ConsoleApp"</span>
+    <span class="n">language</span> <span class="s2">"D"</span>
+    <span class="n">files</span> <span class="p">{</span> <span class="s2">"**.d"</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>And when we build, we will now see three projects: one C++, one C#, and one D. Well, theoretically - I didn’t have
+the VisualD compiler installed, so I couldn’t actually verify that it worked.</p>
+
+<h2 id="exploring-premake-options">Exploring Premake options</h2>
+
+<p>Until the documentation gets better, or someone writes a real book, one way to understand
+what will happen is to try it - generate twice, with and without an option, and see what
+happens in the generated project.</p>
+
+<p>So let’s go back to a barebones config, and see what <code class="highlighter-rouge">flags { "C++14" }</code> etc do. We’ll add
+output location handling in our scripts so we can write output to different locations.</p>
+
+<p><code class="highlighter-rouge">09_min.lua</code></p>
+
+<div class="language-lua highlighter-rouge"><pre class="highlight"><code><span class="n">newoption</span> <span class="p">{</span> <span class="n">trigger</span> <span class="o">=</span> <span class="s2">"to"</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="s2">"path"</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="s2">"Set the output location for the generated files"</span> <span class="p">}</span>
+
+<span class="n">workspace</span> <span class="s2">"09_min"</span>
+    <span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span> <span class="p">}</span>
+    <span class="n">location</span><span class="p">(</span><span class="n">_OPTIONS</span><span class="p">[</span><span class="s2">"to"</span><span class="p">])</span>
+
+<span class="n">project</span> <span class="s2">"09_min"</span>
+    <span class="n">kind</span> <span class="s2">"ConsoleApp"</span>
+    <span class="n">files</span> <span class="p">{</span> <span class="s2">"**.cpp"</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">10_min.lua</code></p>
+
+<div class="language-lua highlighter-rouge"><pre class="highlight"><code><span class="n">newoption</span> <span class="p">{</span> <span class="n">trigger</span> <span class="o">=</span> <span class="s2">"to"</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="s2">"path"</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="s2">"Set the output location for the generated files"</span> <span class="p">}</span>
+
+<span class="n">workspace</span> <span class="s2">"09_min"</span>
+    <span class="n">configurations</span> <span class="p">{</span> <span class="s2">"Debug"</span> <span class="p">}</span>
+    <span class="n">location</span><span class="p">(</span><span class="n">_OPTIONS</span><span class="p">[</span><span class="s2">"to"</span><span class="p">])</span>
+    <span class="n">flags</span> <span class="p">{</span> <span class="s2">"C++14"</span> <span class="p">}</span>
+
+<span class="n">project</span> <span class="s2">"09_min"</span>
+    <span class="n">kind</span> <span class="s2">"ConsoleApp"</span>
+    <span class="n">files</span> <span class="p">{</span> <span class="s2">"**.cpp"</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>(naming the output the same so we can compare with a diff tool), and then generate:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ premake5 --file=09_min.lua --to=build1 vs2015
+$ premake5 --file=10_min.lua --to=build2 vs2015
+merge build1 build2
+</code></pre>
+</div>
+
+<p>Nothing is different on Visual Studio, because at the moment, Premake doesn’t do anything with the <code class="highlighter-rouge">flags { "C++14" }</code>
+setting. This is Visual Studio’s fault - until Visual C++ 2015 Update 3, there weren’t actually any flags to set.</p>
+
+<p>If we generate and compare XCode or Makefile, we will see a difference. For gmake, we see <code class="highlighter-rouge">-std=c++14</code> added
+to the <code class="highlighter-rouge">ALL_CXFLAGS</code> list. For Xcode, we see - nothing. Evidently, this is not supported in the public Xcode
+builder either. But if we run this against a prerelease version, then we see <code class="highlighter-rouge">c++14</code> in <code class="highlighter-rouge">CLANG_CXX_LANGUAGE_STANDARD</code>
+and <code class="highlighter-rouge">libc++</code> in <code class="highlighter-rouge">CLANG_CXX_LIBRARY</code>.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Some Things Are Obvious</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Some Things Are Obvious</li>
+          <li><a href="mailto:neurocline@gmail.com">neurocline@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/neurocline">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/neurocline">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">neurocline</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Answers to some of the world's questions
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
