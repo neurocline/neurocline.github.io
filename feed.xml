@@ -6,9 +6,194 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Apr 2017 17:48:22 -0700</pubDate>
-    <lastBuildDate>Tue, 18 Apr 2017 17:48:22 -0700</lastBuildDate>
+    <pubDate>Thu, 27 Apr 2017 18:15:17 -0700</pubDate>
+    <lastBuildDate>Thu, 27 Apr 2017 18:15:17 -0700</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Command-line standard</title>
+        <description>&lt;p&gt;I need a good command-line parsing library that I can use in C++ programs. There aren’t any - good
+ones, that is. What is a good command-line parser? It’s easy to integrate, easy to use, and supports
+both trivial use cases (a handful of options) and huge use cases (Git, with its hundreds of sub-commands).&lt;/p&gt;
+
+&lt;p&gt;More importantly, there is a lot of variation in how people make command-lines, and a lot of inconsistency.
+What would a standard look like?&lt;/p&gt;
+
+&lt;p&gt;Command lines exist even for non-command-line environments. Services can have command lines defined
+for them, GUIs might have command-lines passed to them at launch, and so on. There is some unspecified
+tokenization happening that breaks up a string of characters into a list of values. These values are
+then interpreted as zero or more command-line arguments, which have meaning to the specific program
+that is being executed.&lt;/p&gt;
+
+&lt;h1 id=&quot;positional-parameters&quot;&gt;Positional parameters&lt;/h1&gt;
+
+&lt;p&gt;Positional parameters are referenced by their position on the command-line. It is typical but
+not required that positional parameters are mandatory.&lt;/p&gt;
+
+&lt;h2 id=&quot;no-parameters&quot;&gt;No parameters&lt;/h2&gt;
+
+&lt;p&gt;The most trivial command-line invocation looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pwd
+/Users/bfitz/projects
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This command has no parameters. It’s still a command-line, and there are useful command-line
+programs with no parameters. This is very easy to code towards - do nothing with the command-line.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int main(int, char**)
+{
+	do_work();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;one-parameter&quot;&gt;One parameter&lt;/h2&gt;
+
+&lt;p&gt;Going one step up in complexity, we have command-lines with a single mandatory parameter.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd z
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This command has a single parameter, which for the &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; command is the new desired working
+directory. This is easy to handle - just grab the first and single item on the command line
+(remembering that the 0th entry in &lt;code class=&quot;highlighter-rouge&quot;&gt;argv&lt;/code&gt; is the name of the program itself):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int main(int, char* argv[])
+{
+	do_work(argv[1]);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;multiple-parameters&quot;&gt;Multiple parameters&lt;/h2&gt;
+
+&lt;p&gt;Generalizing this past one, we talk about the general case as having positional parameters,
+because each parameter is in a specific position: first, second, third etc. In fact, the
+POSIX standard passes the commandline as individual arguments to your C &lt;code class=&quot;highlighter-rouge&quot;&gt;main()&lt;/code&gt; function via
+an array of positional parameters.&lt;/p&gt;
+
+&lt;p&gt;For the &lt;code class=&quot;highlighter-rouge&quot;&gt;cp&lt;/code&gt; (copy-file) function, we copy the file referenced by first positional parameter to the location
+specified by the second positional parameter:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cp results.txt results-backup.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;which would look like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int main(int, char* argv[])
+{
+    char* srcfile = argv[1];
+    char* dstfile = argv[2];
+	copy_file(srcfile, dstfile);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;naming-positional-parameters&quot;&gt;Naming positional parameters&lt;/h2&gt;
+
+&lt;p&gt;Conceptually, we can assign names to our positional parameters. We did this in our same program above,
+but it’s nice to let the user know what the positional parameters mean, in whatever documentation we
+provide. One of the most useful forms of documentation is command-line help. Command-line help for
+the simplified cp command might look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;usage: cp source_file target_file
+
+copy the contents of source_file to target_file
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We call them positional parameters because the user must supply them in the order that the program
+is expecting. These don’t need to be mandatory, but if we do provide them, we have to start from the
+first parameter and go to the last parameter we supply.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately for us, some commands allow for overloaded command lines, and the &lt;code class=&quot;highlighter-rouge&quot;&gt;cp&lt;/code&gt; command
+is a good example. It has two forms, the one shown above, and another that copies a list of files
+to a target directory:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cp first.txt second.txt backup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This would copy the two files &lt;code class=&quot;highlighter-rouge&quot;&gt;first.txt&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;second.txt&lt;/code&gt; to similarly-named files in the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;backup&lt;/code&gt; directory. In this case, the second parameter does not have the logical name target_file.
+Instead, our definition looks like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;usage: cp source_file ... target_directory
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;where we have two or more source files that we copy into a target directory. If we think about
+this as a grammar, we might have&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cp ::= 'cp' singlefile|multifile
+singlefile ::= source_file target_file
+multifile ::= sourcelist target_directory
+sourcelist ::= source_file source_file+
+source_file ::= string
+target_file ::= string
+target_directory ::= string
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Of course, this is awkward for people to read, even if it is precise enough for a program to use.
+And we still have multiple parameters named source_file. I don’t have a way to label this yet.&lt;/p&gt;
+
+&lt;h1 id=&quot;named-parameters&quot;&gt;Named parameters&lt;/h1&gt;
+
+&lt;p&gt;Named parameters are referenced by their name, not by their position. For the most part,
+named parameters can be presented in any order, although there are some command line patterns
+that have a semi-ordering of parameters. It is typical that named parameters are optional,
+but it is possible that some named parameters are mandatory.&lt;/p&gt;
+
+&lt;p&gt;It is very common for these to be called options, because the first use of named parameters
+was to add options to commands that contained positional parameters.&lt;/p&gt;
+
+&lt;p&gt;Almost universally, named parameters begin with a &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt; character, and in fact we typically
+refer to the named parameter by eliding the beginning &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt; prefix.&lt;/p&gt;
+
+&lt;p&gt;Named parameters might have no argument, one argument, or multiple arguments. When a named
+parameter has no arguments, it is typically treated as a boolean, where if present, the
+boolean is true, and if not present, the boolean is false.&lt;/p&gt;
+
+&lt;p&gt;The GNU system introduced a convention for short versus long names. Originally, “options”
+were single-character names that could be bundled together, e.g the following two lines are
+equivalent.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tar -x -v -c -f backup.tar
+tar -xvcf backup.tar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As command-lines became more complex, single-character options fell into disrepute; most named
+parameters are multi-character. The GNU extension was to mandate the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt; as a prefix,
+to prevent confusion with bundled single-character options.&lt;/p&gt;
+
+&lt;h3 id=&quot;named-parameters-with-no-arguments&quot;&gt;Named parameters with no arguments&lt;/h3&gt;
+
+&lt;p&gt;Consider the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git --version
+git version 2.12.2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The git command is complex, but among its many options is &lt;code class=&quot;highlighter-rouge&quot;&gt;--version&lt;/code&gt;, which prints the git
+version. It has no arguments, and in this form, needs no parameters.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 27 Apr 2017 15:06:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/04/27/command-line-standard.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/27/command-line-standard.html</guid>
+        
+        <category>command-line</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Bootstrapping</title>
@@ -964,63 +1149,6 @@ found that metaphorical desk cleaning is important from time to time.&lt;/p&gt;
         <pubDate>Mon, 10 Apr 2017 20:00:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2017/04/10/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/10/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://blog.nullspace.io/&quot;&gt;Computer “scientist”&lt;/a&gt;. Alex Clemmer.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://codewords.recurse.com/&quot;&gt;Code Words&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mcfunley.com/&quot;&gt;Dan McKinley&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://davidad.github.io/&quot;&gt;Technical Journal: Stuff I hack&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.evanjones.ca/&quot;&gt;Evan Jones&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.evanjones.ca/unicode-in-c.html&quot;&gt;Using Unicode in C/C++&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.lse.epita.fr/&quot;&gt;LSE Blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bellard.org/&quot;&gt;Fabrice Bellard&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;&quot;&gt;It Will Never Work in Theory&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://duartes.org/gustavo/blog/&quot;&gt;brain food for hackers&lt;/a&gt;. Gustavo Duarte&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.jessitron.com/&quot;&gt;Abstractivate&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://aphyr.com/&quot;&gt;Aphyr&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jvns.ca/&quot;&gt;Julia Evans&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.regehr.org/&quot;&gt;Embedded in Academia&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://brooker.co.za/blog/&quot;&gt;Marc’s Blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://idea.popcount.org/&quot;&gt;Marek’s totally not insane idea of the day&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://psy-lob-saw.blogspot.com/&quot;&gt;Psychosomatic, Lobotomy, Saw&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.windytan.com/&quot;&gt;absorptions&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://danluu.com/&quot;&gt;https://danluu.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://kamalmarhubi.com/blog/&quot;&gt;Kamal Marhubi&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://yosefk.com/blog/&quot;&gt;Proper Fixation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.snellman.net/blog/&quot;&gt;Juho Snellman’s Weblog&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 08 Apr 2017 13:00:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2017/04/08/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/08/recent-links.html</guid>
         
         <category>text</category>
         
