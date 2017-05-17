@@ -6,9 +6,38 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 May 2017 17:58:53 -0700</pubDate>
-    <lastBuildDate>Tue, 09 May 2017 17:58:53 -0700</lastBuildDate>
+    <pubDate>Tue, 16 May 2017 18:13:45 -0700</pubDate>
+    <lastBuildDate>Tue, 16 May 2017 18:13:45 -0700</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://familywhitfield.co.uk/wordpress/2007/07/07/a-simple-perforce-backup-script-for-the-home/&quot;&gt;A simple Perforce backup script for the home&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.tsunanet.net/2012/10/perforce-killed-my-productivity-again.html&quot;&gt;Perforce killed my productivity. Again.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.hep.by/gnu/rcs/Concepts.html&quot;&gt;RCS - Concepts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://search.cpan.org/~bennie/Rcs-Parser-0.08/lib/Rcs/Parser.pm&quot;&gt;Rcs-Parser&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/27426592/in-the-rcs-file-format-in-a-cvs-repo-what-does-x-y-0-2-as-a-revision-indicate&quot;&gt;In the RCS file format in a CVS repo, what does x.y.0.2 as a revision indicate?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gsp.com/cgi-bin/man.cgi?topic=rcsfile&quot;&gt;rcsfile - format of RCS file&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gnu.org/software/rcs/manual/html_node/File-format.html&quot;&gt;rcs - File format&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.tsunanet.net/2017/05/getting-cash-without-selling-stocks.html&quot;&gt;Getting cash without selling stocks&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 May 2017 17:50:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/05/16/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/05/16/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Patterns for network operations</title>
@@ -957,346 +986,6 @@ and &lt;code class=&quot;highlighter-rouge&quot;&gt;libc++&lt;/code&gt; in &lt;c
         <pubDate>Thu, 13 Apr 2017 05:30:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2017/04/13/premake-notes-2.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/13/premake-notes-2.html</guid>
-        
-        <category>premake,</category>
-        
-        <category>build</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Premake notes</title>
-        <description>&lt;h1 id=&quot;basic-premake&quot;&gt;Basic Premake&lt;/h1&gt;
-
-&lt;p&gt;So, making more use of Premake. Let’s build up from the very minimal to something reasonable,
-all the while striving for simplicity and lack of duplication.&lt;/p&gt;
-
-&lt;h2 id=&quot;minimal-premake-script&quot;&gt;Minimal premake script&lt;/h2&gt;
-
-&lt;p&gt;This is the minimal Premake script, even if it does nothing:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;00_min.lua&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;00_min&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;For each solution, and for each configuration, Premake does stuff. Without a solution, there’s nothing
-to attach it to, and without any configurations, nothing gets done.&lt;/p&gt;
-
-&lt;p&gt;Admittedly, if you run this against Premake, you’ll get some fairly useless project files.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ premake5 --file=00_min.lua gmake
-$ premake5 --file=00_min.lua vs2015
-$ premake5 --file=00_min.lua xcode
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Alas, &lt;code class=&quot;highlighter-rouge&quot;&gt;premake clean&lt;/code&gt; doesn’t work (output says “** The clean action has not yet been ported”)&lt;/p&gt;
-
-&lt;p&gt;I won’t show the generated projects here, but you can run this for yourself and look.&lt;/p&gt;
-
-&lt;h2 id=&quot;almost-useful-premake-script&quot;&gt;Almost useful Premake script&lt;/h2&gt;
-
-&lt;p&gt;Even though projects are really a consequence of IDEs like Visual Studio and XCode, they are required even
-if you just build makefile targets. So our real minimal script is this:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;01_min.lua&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;01_min&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;01_min&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;This will generate a solution with a single project in it, with a single target, and no files. You must
-specify kind. Sometimes I feel like defaults would be useful, but, that said, no real user of Premake
-would trust the defaults.&lt;/p&gt;
-
-&lt;p&gt;Run this and you can build against these generated projects.&lt;/p&gt;
-
-&lt;h2 id=&quot;scopes-indentation-is-an-illusion&quot;&gt;Scopes (Indentation is an illusion)&lt;/h2&gt;
-
-&lt;p&gt;Premake scripts are a special kind of Lua script. For the most part, there are no blocks, so there’s
-no control flow, and indentation is actually a little misleading.&lt;/p&gt;
-
-&lt;p&gt;A more human way to write the above is:&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;01_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;01_min&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;And you should do this, but fight the temptation to think that arbitrary scope rules are in force. Instead,
-there are three scopes&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;global scope&lt;/li&gt;
-  &lt;li&gt;workspace scope&lt;/li&gt;
-  &lt;li&gt;project scope&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;See &lt;a href=&quot;https://github.com/premake/premake-core/wiki/Scopes-and-Inheritance&quot;&gt;Scopes and Inheritance&lt;/a&gt; in the Premake5
-docs for more details.&lt;/p&gt;
-
-&lt;p&gt;A side note - you may see &lt;code class=&quot;highlighter-rouge&quot;&gt;solution&lt;/code&gt; used in Premake scripts - this is an older alias for &lt;code class=&quot;highlighter-rouge&quot;&gt;workspace&lt;/code&gt;, still supported
-in Premake4 but not mentioned in the documentation.&lt;/p&gt;
-
-&lt;p&gt;All workspace scopes are in the global scope, and project scopes are in workspace scopes. Each line of the form
-&lt;code class=&quot;highlighter-rouge&quot;&gt;workspace &quot;name&quot;&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;project &quot;name&quot;&lt;/code&gt; selects that scope, creating it if necessary.&lt;/p&gt;
-
-&lt;p&gt;You can select the parent of the current project scope with &lt;code class=&quot;highlighter-rouge&quot;&gt;project &quot;*&quot;&lt;/code&gt; - this selects whatever workspace is
-the parent of the current project. There is a hack to get back to global scope, and that is &lt;code class=&quot;highlighter-rouge&quot;&gt;workspace &quot;*&quot;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;So, that said, what you really need to pay attention to is that lines in a Premake script are declarations,
-and they are added to the active scope. They are not statements in an imperative program. The reason for this
-is that, once you have declared your workspaces and projects, Premake iterates through the workspaces,
-configurations and projects to actually generate output.&lt;/p&gt;
-
-&lt;p&gt;Most declarations are settings; settings in a workspace are inherited by all projects in the workspace. So,
-in general, prefer to put workspace-wide settings in the relevant workspace. And if there are truly global
-settings, put them in the global scope.&lt;/p&gt;
-
-&lt;p&gt;We’ll come back to that&lt;/p&gt;
-
-&lt;h2 id=&quot;adding-files&quot;&gt;Adding files&lt;/h2&gt;
-
-&lt;p&gt;Let’s have a file to add&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;02_main.cpp&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, world&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;and then add it to our project:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;02-min.lua&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;02_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;02_min&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;and after we generate a project and build it, we can run the output&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bin\Debug\02_min.exe
-Hello, world
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;It’s common to use wildcards to add files to projects; the &lt;code class=&quot;highlighter-rouge&quot;&gt;**.cpp&lt;/code&gt; filter means “add files in the current
-directory and any sub-directories”. In this case, it only matched one file, but if we write it this way,
-we don’t need to update our Premake script if we add more source files. In fact, for C++, we typically want
-this:&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;02_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;02_min&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We can get a lot done with just this minimal amount of Premake - we could have hundreds of source files in
-many directories.&lt;/p&gt;
-
-&lt;h2 id=&quot;cleaning-up&quot;&gt;Cleaning up&lt;/h2&gt;
-
-&lt;p&gt;We didn’t specify where to put output. Premake has defaults for that:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;generated projects go in &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;binaries go in &lt;code class=&quot;highlighter-rouge&quot;&gt;./bin/&amp;lt;target&amp;gt;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;intermediates go in &lt;code class=&quot;highlighter-rouge&quot;&gt;./obj/&amp;lt;target&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;where &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt; is the location of the Premake script, and not the current working directory. E.g. if we were
-in some other directory and ran Premake like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;premake5&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;--file=premake-scripts/tests/02_min.lua vs2015&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;then we would see generated projects in &lt;code class=&quot;highlighter-rouge&quot;&gt;premake-scripts/tests&lt;/code&gt;, and those projects would target locations
-in this directory as well.&lt;/p&gt;
-
-&lt;p&gt;First, let’s control where compiler-generated files go. Premake has a &lt;code class=&quot;highlighter-rouge&quot;&gt;location&lt;/code&gt; function which sets the
-location of generated output, so let’s use that to make &lt;code class=&quot;highlighter-rouge&quot;&gt;bin&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;obj&lt;/code&gt; go in a &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; directory.&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;03_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;03_min&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;This is, alas, where inheritance breaks down. The &lt;code class=&quot;highlighter-rouge&quot;&gt;location&lt;/code&gt; function is one of the few that aren’t inherited
-to contained scopes. So in this case, &lt;code class=&quot;highlighter-rouge&quot;&gt;location&lt;/code&gt; applies to the workspace only and this has an unexpected
-behavior - our generated projects go in our &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; directory. The reason that the project ends up in the
-build folder is that a contained project defaults to &lt;code class=&quot;highlighter-rouge&quot;&gt;location &quot;.&quot;&lt;/code&gt; which is relative to the enclosing
-workspace. Of course, this behaves like it’s inherited, so maybe the technical detail should be ignored.&lt;/p&gt;
-
-&lt;p&gt;But this still has a useful behavior: we can control where generated projects go. In a Premake world, these
-are artifacts just like objects and executables. And with everything in a &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; directory, we just have
-one directory to clean up (or not commit to source control).&lt;/p&gt;
-
-&lt;p&gt;There are specific functions to set the path for object files and binaries:&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;03_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;03_min&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;objdir&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;debug/obj&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;targetdir&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;debug&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;and if we build and run, we’ll see workspace and project in &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt;, object files in &lt;code class=&quot;highlighter-rouge&quot;&gt;build/debug/obj&lt;/code&gt;, and binaries
-in &lt;code class=&quot;highlighter-rouge&quot;&gt;build/debug&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is where simplicity and maintainability part company. We have hard-coded the configuration name twice; worse,
-if we add a new configuration, we’ll be directing files to the wrong location. That’s because the default
-paths for &lt;code class=&quot;highlighter-rouge&quot;&gt;objdir&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;targetdir&lt;/code&gt; actually look like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;objdir&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%{wks.location}/obj&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;targetdir&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%{wks.location}/bin&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;where the syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;%{...}&lt;/code&gt; is a &lt;a href=&quot;https://github.com/premake/premake-core/wiki/Tokens&quot;&gt;Value Token&lt;/a&gt; expression
-that is interpolated into the string. In this case, the &lt;code class=&quot;highlighter-rouge&quot;&gt;wks&lt;/code&gt; object is the workspace.&lt;/p&gt;
-
-&lt;p&gt;If we put these into our lua script&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;04_min.lua&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;04_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;04_min&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;objdir&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%{wks.location}/obj/%{cfg.buildcfg}&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;targetdir&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%{wks.location}/bin/%{cfg.buildcfg}&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;we will see exactly the behavior that we saw before. Of course, you don’t want to be more verbose about default
-settings; this is just to illustrate how you can access these. When you can access them, you can change them.&lt;/p&gt;
-
-&lt;p&gt;Returning back to &lt;code class=&quot;highlighter-rouge&quot;&gt;location&lt;/code&gt; for a minute, let’s set location for both the workspace and the project&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;04_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;04_min&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%{wks.location}/prjbuild&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If we generate and build, we’ll see a workspace/solution file in &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt;, a project file in &lt;code class=&quot;highlighter-rouge&quot;&gt;build/prjbuild&lt;/code&gt;, an
-object directory at &lt;code class=&quot;highlighter-rouge&quot;&gt;build/prjbuild/obj&lt;/code&gt;, and a binaries directory at &lt;code class=&quot;highlighter-rouge&quot;&gt;build/prjbuild/bin&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Note something important - all paths in the Premake script are relative to the Premake script’s location.&lt;/p&gt;
-
-&lt;h2 id=&quot;debugging&quot;&gt;Debugging&lt;/h2&gt;
-
-&lt;p&gt;Short of building Premake yourself and using a system that has a Lua debugger, it’s hard to introspect the
-process of generating project files. There are some tricks that can be employed.&lt;/p&gt;
-
-&lt;p&gt;Token expansion happens in Premake script commands. There are a few that can result in inspectable output.&lt;/p&gt;
-
-&lt;p&gt;Let’s add a text file so we can filter on it&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;05_help.txt&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Nothing important
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;and we add it to the project along with a filter and a buildmessage&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;05_min.lua&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;05_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;05_min&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%{wks.location}/prjbuild&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'files:**.txt'&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;buildmessage&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'wks.location = %{wks.location}'&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;buildcommands&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dir'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;buildoutputs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'output.i'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;This build rule won’t actually work, of course. But it will put text into the generated project that we can look at.
-Of course, if you do this with a Visual Studio target, many of the Premake variables will be translated into
-MSBuild variables. From the Premake source&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;vstudio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathVars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cfg.objdir&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(IntDir)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prj.location&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(ProjectDir)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prj.name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(ProjectName)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sln.location&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(SolutionDir)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sln.name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(SolutionName)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wks.location&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(SolutionDir)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wks.name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(SolutionName)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cfg.buildtarget.directory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(TargetDir)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cfg.buildtarget.name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(TargetFileName)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cfg.buildtarget.basename&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$(TargetName)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file.basename&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;               &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%(Filename)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file.abspath&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%(FullPath)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file.relpath&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%(Identity)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file.path&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%(Identity)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file.directory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;              &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%(RootDir)%(Directory)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file.reldirectory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%(RelativeDir)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file.extension&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;              &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%(Extension)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;but makefile targets won’t do such translation - they will be relative to the Makefile, of course.
-Still, in a pinch, you can see what variables are expanding to, since the documentation isn’t all that
-clear.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 12 Apr 2017 12:30:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2017/04/12/premake-notes.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/12/premake-notes.html</guid>
         
         <category>premake,</category>
         
