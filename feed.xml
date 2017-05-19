@@ -6,9 +6,208 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 May 2017 18:13:45 -0700</pubDate>
-    <lastBuildDate>Tue, 16 May 2017 18:13:45 -0700</lastBuildDate>
+    <pubDate>Thu, 18 May 2017 19:30:28 -0700</pubDate>
+    <lastBuildDate>Thu, 18 May 2017 19:30:28 -0700</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Standard libraries</title>
+        <description>&lt;p&gt;Before the modern era, C evolved an ecosystem that turned into the POSIX standards
+and the C Standard Library. However, this was an incomplete solution, in that there
+was a specification, but every vendor had to implement their own versions. The
+infinite varieity of what was actually available to any one person
+directly led to the abomination that is autoconf. Still, it was all we had, until
+the 1990s.&lt;/p&gt;
+
+&lt;p&gt;There are many reasons for the success of new languages, but in the past 10 years,
+it seems clear that some of the success is due to the libraries that are easily
+accessible to programmers in that language.&lt;/p&gt;
+
+&lt;p&gt;This started with TeX, actually, which is not something you think of as a programming
+language, even though it is technically (Turing-complete, that is). TeX was
+successful for two reasons. First, it was designed and written by Donald Knuth;
+he really revolutionized the writing of scientific papers. The story I’ve often heard
+told is that TeX was written to make writing the next volumes of The Art and Science
+of Computer Programming easier.&lt;/p&gt;
+
+&lt;p&gt;But TeX also had CTAN, the Comprehensive TeX Network. This meant that TeX users could
+share libraries of TeX code. This really helped TeX’s growth in popularity. But it
+also had another side-effect; it helped Perl.&lt;/p&gt;
+
+&lt;p&gt;Perl has CPAN, and without CPAN, even with being the first “language of Internet plumbing”,
+Perl probably would have stayed a niche language. And CPAN was directly inspired by CTAN.
+With CPAN, Perl entered a long virtuous cycle; new users wrote in Perl because there was
+a large library that could be easily accessed, and that library continued to grow and grow.
+Perl has since faded due to the lack of the language itself.&lt;/p&gt;
+
+&lt;p&gt;However, there’s a lesson here that has been mis-learned. It is not package archives
+that make languages successful. It’s not having an ecosystem; it’s what’s in the ecosystem.&lt;/p&gt;
+
+&lt;p&gt;It’s existing code that you can use to solve your problem. And that means it has to be usable
+code.&lt;/p&gt;
+
+&lt;p&gt;What Python got right more than most others is that their core code is pretty comprehensive,
+and is constantly argued over and refined by a group of people who are good at APIs.
+By contrast, the libraries added to the C++ standard come to the committee largely baked,
+and thus retain lots of rough edges; and are few in number compared to what Python has.&lt;/p&gt;
+
+&lt;h2 id=&quot;c-standard-library&quot;&gt;C Standard Library&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/C_standard_library&quot;&gt;C standard library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/&quot;&gt;The C Library Reference Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;posix&quot;&gt;POSIX&lt;/h2&gt;
+
+&lt;p&gt;At first, POSIX just meant this: IEEE Std 1003.1-1988. I didn’t know this, but Richard
+Stallman named it (it was going to be IEEE-IX). POSIX started as a standardization for
+Unix.&lt;/p&gt;
+
+&lt;p&gt;POSIX and C are joined at the hip, so this could be thought of as the C libraries.&lt;/p&gt;
+
+&lt;p&gt;Mostly the lessons from POSIX are “don’t do it that way”, except that this is the
+single most widely used set of interfaces in the programming world; many later system
+provide POSIX compatibility of one form or another. For example, many low-level networking
+libraries in newer languages just transliterate POSIX networking calls into their own
+language.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.opengroup.org/austin/&quot;&gt;Austin Group&lt;/a&gt; as the home of the POSIX standards.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pubs.opengroup.org/onlinepubs/9699919799/&quot;&gt;IEEE Std 1003.1™-2008, 2016 Edition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;java&quot;&gt;Java&lt;/h2&gt;
+
+&lt;p&gt;I guess I have to.&lt;/p&gt;
+
+&lt;h2 id=&quot;perl&quot;&gt;Perl&lt;/h2&gt;
+
+&lt;p&gt;Evidently Perl 6 is a thing.&lt;/p&gt;
+
+&lt;h2 id=&quot;python&quot;&gt;Python&lt;/h2&gt;
+
+&lt;p&gt;The gold standard?&lt;/p&gt;
+
+&lt;h2 id=&quot;ruby&quot;&gt;Ruby&lt;/h2&gt;
+
+&lt;p&gt;The Ruby Standard Library lacks coherent documentation. There’s a lot there, but
+it’s somewhat scattered - almost like having docstrings.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ruby-doc.org/&quot;&gt;Help and documentation for the Ruby programming language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That said, there are interesting patterns in their libraries, and the Core library
+(that built in, doesn’t need a &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; to access) is surprisingly large.&lt;/p&gt;
+
+&lt;p&gt;The Standard Library has very oddball modules in it; some don’t seem like they
+should be standard (e.g. Abbrev, LUSolv, Etc, Win32OLE). There’s also what looks like crap: see
+extmk, un.&lt;/p&gt;
+
+&lt;p&gt;The balance between what’s in the Standard Library and what’s a standalone gem (their
+name for a package) is not as clear as in other languages. It could just be a
+representation of the relative effort spent in Ruby vs other languages.&lt;/p&gt;
+
+&lt;h2 id=&quot;go&quot;&gt;Go&lt;/h2&gt;
+
+&lt;p&gt;New package manager?&lt;/p&gt;
+
+&lt;h2 id=&quot;rust&quot;&gt;Rust&lt;/h2&gt;
+
+&lt;p&gt;Need to learn. May be best of breed?&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.modulecounts.com/&quot;&gt;Module Counts&lt;/a&gt; tracks libraries in popular package
+repositories. This is a proxy for languages, since many languages have a single
+popular repository.&lt;/p&gt;
+
+&lt;p&gt;Package repositories by language:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;C#
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.nuget.org/&quot;&gt;nuget&lt;/a&gt; has 80K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Clojure
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://clojars.org/&quot;&gt;Clojars&lt;/a&gt; has 19K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;D
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://code.dlang.org/&quot;&gt;DUB&lt;/a&gt; has 1K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Erlang
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://hex.pm/&quot;&gt;Hex&lt;/a&gt; has 4K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Go
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://gopm.io/&quot;&gt;Gopm Registry&lt;/a&gt; has 19K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Haskell
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://hackage.haskell.org/&quot;&gt;Hackage&lt;/a&gt; has 11K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Java
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://search.maven.org/&quot;&gt;Maven Central&lt;/a&gt; has 188K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Javascript
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; has 455K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Perl
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.cpan.org/&quot;&gt;CPAN&lt;/a&gt; has 35K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PHP
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://packagist.org/&quot;&gt;Packagist&lt;/a&gt; has 140K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Python
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://pypi.python.org/pypi&quot;&gt;PyPI&lt;/a&gt; has 108K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;R
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://cran.r-project.org/&quot;&gt;CRAN&lt;/a&gt; has 10K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ruby
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://rubygems.org/&quot;&gt;RubyGems&lt;/a&gt; has 132K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rust
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://crates.io/&quot;&gt;Cargo&lt;/a&gt; has 9K packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 18 May 2017 14:50:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/05/18/standard-libraries.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/05/18/standard-libraries.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -720,276 +919,6 @@ functin Account:new(o)
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/13/lua-cheat-sheet.html</guid>
         
         <category>lua</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Premake notes (2)</title>
-        <description>&lt;p&gt;Continuing Premake notes.&lt;/p&gt;
-
-&lt;h2 id=&quot;lua-and-premake&quot;&gt;Lua and Premake&lt;/h2&gt;
-
-&lt;p&gt;The biggest challenge with using Premake in non-trivial ways is that you do need to learn Lua
-to some degree. But the advantage of Premake is that at least this is not a new langauge invented
-just for the make system. Lua has some quirks of its own, but can be learned quickly by someone
-familiar with one or more existing languages.&lt;/p&gt;
-
-&lt;p&gt;The most important thing to realize about Premake is that most Premake “configuration” lines
-are actually function calls. This:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;workspace &quot;HelloWorld&quot;
-    configurations { &quot;Debug&quot;, &quot;Release&quot; }
-
-project &quot;HelloWorld&quot;
-    kind &quot;ConsoleApp&quot;
-    files { &quot;**.h&quot;, &quot;**.c&quot; }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;is identical to this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;workspace(&quot;HelloWorld&quot;)
-    configurations({ &quot;Debug&quot;, &quot;Release&quot; })
-
-project(&quot;HelloWorld&quot;)
-    kind(&quot;ConsoleApp&quot;)
-    files({ &quot;**.h&quot;, &quot;**.c&quot; })
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The Premake idiom is to use the sytax for single-parameter function calls to turn Lua into
-an IDL, which works for the most part. But you need to be aware of this, or non-trivial scripts
-will feel arbitrary to you.&lt;/p&gt;
-
-&lt;p&gt;The second most important thing to realize about Premake is that the functions &lt;code class=&quot;highlighter-rouge&quot;&gt;workspace(), project()&lt;/code&gt; etc
-don’t do work, they add to a data structure. Once Premake has read all the Lua, it then iterates through
-the data structure to actually call functions that generate project files. The only way to do procedural
-work is to inject your own Lua code through overrides and call arrays. You can put these inline in your
-Premake scripts or as modules, and with modules, you can share these with others as third-party modules
-(which unfortunately require the module located somewhere in Premake’s search paths)&lt;/p&gt;
-
-&lt;p&gt;You can also create actions and toolsets.&lt;/p&gt;
-
-&lt;h2 id=&quot;configurations&quot;&gt;Configurations&lt;/h2&gt;
-
-&lt;p&gt;To Premake, configurations and platforms are just strings. What you do with them is up to you, and in fact
-you have to do some work that’s caused by this flexibility.&lt;/p&gt;
-
-&lt;p&gt;Let’s make a Premake script with two configurations, a debug config and a release config. It will look
-something like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;06_min.lua&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;06_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Release&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;
-
-   &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;configurations:Debug&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;defines&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_DEBUG&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;optimize&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Off&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Symbols&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-   &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;configurations:Release&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;defines&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;NDEBUG&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;optimize&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;On&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;06_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Although you have an idea for what a “Debug build” means, Premake has no idea. Nor should it, because in truth,
-there is no one true Debug and Release targets.&lt;/p&gt;
-
-&lt;p&gt;The down side is that you need to list all the things that aren’t default, and it’s hard to keep all the defaults
-in your head. Listed above are common settings for Debug and Release targets. This is done using &lt;code class=&quot;highlighter-rouge&quot;&gt;filter&lt;/code&gt;, which
-is Premake’s way of having settings apply to a subset of the combinations of workspace, project, config, platform,
-and so on.&lt;/p&gt;
-
-&lt;p&gt;Filters stay in action until replaced with a new filter. Keep in mind that, like other Premake lines, this
-is a function call, and all it’s doing is attaching this to the active scope (global, workspace, project).
-An attached filter accepts or rejects subsequent lines. Filters are removed when the scope changes; you can
-also remove the active filter with &lt;code class=&quot;highlighter-rouge&quot;&gt;filter {}&lt;/code&gt;. Just like with overzealous use of parens or braces, you could
-put &lt;code class=&quot;highlighter-rouge&quot;&gt;filter {}&lt;/code&gt; as an “end”, but as you get used to filters, you’ll find yourself putting the bare minimum in.&lt;/p&gt;
-
-&lt;p&gt;As an aside, the current syntax for symbols is a little goofy and is expecting to change to this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    symbols &quot;Off&quot;
-    symbols &quot;On&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;platforms&quot;&gt;Platforms&lt;/h2&gt;
-
-&lt;p&gt;Configuration is squisy - let’s talk about platform. In this case, there sometimes are dependencies between
-the architecture and the generated code’s “platform” - just don’t confuse those with the platform name in
-Premake, which is your arbitrary label.&lt;/p&gt;
-
-&lt;p&gt;We can do this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;workspace &quot;07_min&quot;
-    configurations { &quot;Debug&quot;, &quot;Release&quot; }
-    platforms { &quot;x32&quot;, &quot;x64&quot; }
-    location &quot;build&quot;
-
-   filter &quot;configurations:Debug&quot;
-        defines { &quot;_DEBUG&quot; }
-        optimize &quot;Off&quot;
-        flags { &quot;Symbols&quot; }
-   filter &quot;configurations:Release&quot;
-        defines { &quot;NDEBUG&quot; }
-        optimize &quot;On&quot;
-
-   filter &quot;platforms:x32&quot;
-        architecture &quot;x86&quot;
-   filter &quot;platforms:x64&quot;
-        architecture &quot;x86_64&quot;
-
-project &quot;07_min&quot;
-    kind &quot;ConsoleApp&quot;
-    files { &quot;**.cpp&quot; }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;OK, an editorial comment. Platform has magic behavior in current versions of Premake. If the platform in Premake
-is &lt;code class=&quot;highlighter-rouge&quot;&gt;x32&lt;/code&gt;, then when a Visual Studio project is generated, it has platform &lt;code class=&quot;highlighter-rouge&quot;&gt;Win32&lt;/code&gt; which means architecture &lt;code class=&quot;highlighter-rouge&quot;&gt;x86&lt;/code&gt;.
-And if the platform in premake is &lt;code class=&quot;highlighter-rouge&quot;&gt;x64&lt;/code&gt;, then when a Visual Studio project is generated, it has platform &lt;code class=&quot;highlighter-rouge&quot;&gt;x64&lt;/code&gt;,
-which means architecture &lt;code class=&quot;highlighter-rouge&quot;&gt;x86-64&lt;/code&gt;. If you use other names as platform, they will be handled properly, for the
-most part, but it will look odd. So probably don’t do it.&lt;/p&gt;
-
-&lt;h2 id=&quot;language-and-other-settings&quot;&gt;Language and other settings&lt;/h2&gt;
-
-&lt;p&gt;By default, Premake generates C/C++ projects.&lt;/p&gt;
-
-&lt;p&gt;Premake has the &lt;code class=&quot;highlighter-rouge&quot;&gt;language&lt;/code&gt; keyword, which affects the toolset used by a project. Let’s create some
-C# and D source files&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;08_main.cs&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;public class Hello1
-{
-   public static void Main()
-   {
-      System.Console.WriteLine(&quot;Hello, World!&quot;);
-   }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;08_main.d&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-D&quot;&gt;import std.stdio;
-
-void main()
-{
-    writeln(&quot;Hello, World!&quot;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;08_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Release&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;platforms&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x32&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x64&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;
-
-   &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;configurations:Debug&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;defines&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_DEBUG&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;optimize&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Off&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Symbols&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;configurations:Release&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;defines&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;NDEBUG&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;optimize&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;On&quot;&lt;/span&gt;
-
-   &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;platforms:x32&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;architecture&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x86&quot;&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;platforms:x64&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;architecture&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x86_64&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;08_cpp&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;language&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;C++&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;08_csharp&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;language&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;C#&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cs&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;08_d&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;language&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;D&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.d&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;And when we build, we will now see three projects: one C++, one C#, and one D. Well, theoretically - I didn’t have
-the VisualD compiler installed, so I couldn’t actually verify that it worked.&lt;/p&gt;
-
-&lt;h2 id=&quot;exploring-premake-options&quot;&gt;Exploring Premake options&lt;/h2&gt;
-
-&lt;p&gt;Until the documentation gets better, or someone writes a real book, one way to understand
-what will happen is to try it - generate twice, with and without an option, and see what
-happens in the generated project.&lt;/p&gt;
-
-&lt;p&gt;So let’s go back to a barebones config, and see what &lt;code class=&quot;highlighter-rouge&quot;&gt;flags { &quot;C++14&quot; }&lt;/code&gt; etc do. We’ll add
-output location handling in our scripts so we can write output to different locations.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;09_min.lua&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;newoption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trigger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;to&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;path&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Set the output location for the generated files&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;09_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_OPTIONS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;to&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;09_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;10_min.lua&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;newoption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trigger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;to&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;path&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Set the output location for the generated files&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;workspace&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;09_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Debug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_OPTIONS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;to&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;C++14&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;09_min&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ConsoleApp&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;**.cpp&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;(naming the output the same so we can compare with a diff tool), and then generate:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ premake5 --file=09_min.lua --to=build1 vs2015
-$ premake5 --file=10_min.lua --to=build2 vs2015
-merge build1 build2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Nothing is different on Visual Studio, because at the moment, Premake doesn’t do anything with the &lt;code class=&quot;highlighter-rouge&quot;&gt;flags { &quot;C++14&quot; }&lt;/code&gt;
-setting. This is Visual Studio’s fault - until Visual C++ 2015 Update 3, there weren’t actually any flags to set.&lt;/p&gt;
-
-&lt;p&gt;If we generate and compare XCode or Makefile, we will see a difference. For gmake, we see &lt;code class=&quot;highlighter-rouge&quot;&gt;-std=c++14&lt;/code&gt; added
-to the &lt;code class=&quot;highlighter-rouge&quot;&gt;ALL_CXFLAGS&lt;/code&gt; list. For Xcode, we see - nothing. Evidently, this is not supported in the public Xcode
-builder either. But if we run this against a prerelease version, then we see &lt;code class=&quot;highlighter-rouge&quot;&gt;c++14&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;CLANG_CXX_LANGUAGE_STANDARD&lt;/code&gt;
-and &lt;code class=&quot;highlighter-rouge&quot;&gt;libc++&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;CLANG_CXX_LIBRARY&lt;/code&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 13 Apr 2017 05:30:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2017/04/13/premake-notes-2.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/13/premake-notes-2.html</guid>
-        
-        <category>premake,</category>
-        
-        <category>build</category>
         
         
         <category>dev</category>
