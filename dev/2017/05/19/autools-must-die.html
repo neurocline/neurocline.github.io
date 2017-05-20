@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Autotools must die</title>
+  <meta name="description" content="I want to kill Autotools in the best way - automatically replace every usageof it with something much better. So I probably need to understand it first(altho...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2017/05/19/autools-must-die.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,87 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Autotools must die</h1>
+    <p class="post-meta">May 19, 2017</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">May 19, 2017</span>
+  <article class="post-content">
+    <p>I want to kill Autotools in the best way - automatically replace every usage
+of it with something much better. So I probably need to understand it first
+(although the final approach is to use machine learning for cases like this).</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/19/autools-must-die.html">Autotools must die</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 18, 2017</span>
+<p>Let’s be clear up front - things like configure are an archaic leftover of
+an older time where systems actively fought with each other to be different, or
+were poorly assembled and had no active help for building software. The world
+has changed, and we should continue to move towards a world where we don’t need
+a system that finds where header files are, or if certain tools are installed.
+That’s absurd. Use packages to declare dependencies.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/18/standard-libraries.html">Standard libraries</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 16, 2017</span>
+<p><a href="https://www.gnu.org/software/automake/manual/html_node/index.html">automake</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/16/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 9, 2017</span>
+<ul>
+  <li><a href="https://www.gnu.org/software/automake/manual/html_node/Basic-Installation.html">Basic Installation</a></li>
+  <li><a href="https://www.gnu.org/software/automake/manual/html_node/Creating-amhello.html#Creating-amhello">amehllo</a></li>
+  <li><a href="https://www.gnu.org/software/automake/manual/html_node/General-Operation.html">General Operation</a></li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/09/patterns-for-network-operation.html">Patterns for network operations</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 9, 2017</span>
+<p><a href="http://inti.sourceforge.net/tutorial/libinti/autotoolsproject.html">Building a GNU Autotools Project</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/09/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>GNU mandates that <code class="highlighter-rouge">AUTHORS</code>, <code class="highlighter-rouge">NEWS</code>, <code class="highlighter-rouge">README</code>, <code class="highlighter-rouge">ChangeLog</code> files exist in the top level, and Automake will report an error if they are missing. This is pretty heavy-handed. Oh, but
+there is an option to disable it; I think it should off by default and enabled for those
+strict folks. But this definitely says “Autotools is for making GNU projects; we guess you can
+use this, if you must”.</p>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p>It looks like this is the development flow:</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ aclocal
+$ automake --add-missing
+$ autoconf
+$ ./autogen.sh
+$ ./configure
+$ make
+$ make install
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">aclocal</code> creates <code class="highlighter-rouge">aclocal.m4</code>.<code class="highlighter-rouge">automake</code> creates <code class="highlighter-rouge">Makefile.in</code> and <code class="highlighter-rouge">configure</code>.</p>
+
+<p>Files created by hand: <code class="highlighter-rouge">configure.ac</code>, <code class="highlighter-rouge">Makefile.am</code>.</p>
+
+<p>Questions</p>
+
+<ul>
+  <li>some docs reference <code class="highlighter-rouge">aclocal</code>, is this still a thing?</li>
+</ul>
+
+<p><a href="https://www.gnu.org/software/automake/manual/html_node/VPATH-Builds.html">VPATH builds</a>. I call this “building software grows up”.</p>
+
+<p>Ugg, Autotools gets it backwards - it calls the machine on which you build the “build platform”,
+and it calls the machine on which the compiled program runs the “host platform”. This is
+backwards from “host platform” being the machine on which you build and the “target platform”
+being the machine that you run the compiled program on. I guess it’s all relative, and so
+we should all agree. Maybe the answer is to just drop the phrase “host platform”, since it
+does sound a little vague.</p>
+
+<p>GNU does specify three options</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>--build
+--target
+--host
+</code></pre>
+</div>
+
+<p>where <code class="highlighter-rouge">--build</code> is the system on which the package is built (and why can’t this be
+auto-determined?), <code class="highlighter-rouge">--target</code> is the system that built tools will run on, and then
+<code class="highlighter-rouge">--host</code> is the system on which final output runs. This is useful in the edge case
+where the build process creates a cross-compiler, e.g. we are on system A, the
+intermediate tools (like GCC) run on system B, and the final output is intended for
+system C. I’m sure there are real-world cases for this.</p>
+
+  </article>
 
 </div>
 

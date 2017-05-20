@@ -6,9 +6,94 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 May 2017 19:30:28 -0700</pubDate>
-    <lastBuildDate>Thu, 18 May 2017 19:30:28 -0700</lastBuildDate>
+    <pubDate>Sat, 20 May 2017 10:36:33 -0700</pubDate>
+    <lastBuildDate>Sat, 20 May 2017 10:36:33 -0700</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Autotools must die</title>
+        <description>&lt;p&gt;I want to kill Autotools in the best way - automatically replace every usage
+of it with something much better. So I probably need to understand it first
+(although the final approach is to use machine learning for cases like this).&lt;/p&gt;
+
+&lt;p&gt;Let’s be clear up front - things like configure are an archaic leftover of
+an older time where systems actively fought with each other to be different, or
+were poorly assembled and had no active help for building software. The world
+has changed, and we should continue to move towards a world where we don’t need
+a system that finds where header files are, or if certain tools are installed.
+That’s absurd. Use packages to declare dependencies.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gnu.org/software/automake/manual/html_node/index.html&quot;&gt;automake&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/automake/manual/html_node/Basic-Installation.html&quot;&gt;Basic Installation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/automake/manual/html_node/Creating-amhello.html#Creating-amhello&quot;&gt;amehllo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/automake/manual/html_node/General-Operation.html&quot;&gt;General Operation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://inti.sourceforge.net/tutorial/libinti/autotoolsproject.html&quot;&gt;Building a GNU Autotools Project&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GNU mandates that &lt;code class=&quot;highlighter-rouge&quot;&gt;AUTHORS&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;NEWS&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;README&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;ChangeLog&lt;/code&gt; files exist in the top level, and Automake will report an error if they are missing. This is pretty heavy-handed. Oh, but
+there is an option to disable it; I think it should off by default and enabled for those
+strict folks. But this definitely says “Autotools is for making GNU projects; we guess you can
+use this, if you must”.&lt;/p&gt;
+
+&lt;p&gt;It looks like this is the development flow:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ aclocal
+$ automake --add-missing
+$ autoconf
+$ ./autogen.sh
+$ ./configure
+$ make
+$ make install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;aclocal&lt;/code&gt; creates &lt;code class=&quot;highlighter-rouge&quot;&gt;aclocal.m4&lt;/code&gt;.&lt;code class=&quot;highlighter-rouge&quot;&gt;automake&lt;/code&gt; creates &lt;code class=&quot;highlighter-rouge&quot;&gt;Makefile.in&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;configure&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Files created by hand: &lt;code class=&quot;highlighter-rouge&quot;&gt;configure.ac&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Makefile.am&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Questions&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;some docs reference &lt;code class=&quot;highlighter-rouge&quot;&gt;aclocal&lt;/code&gt;, is this still a thing?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gnu.org/software/automake/manual/html_node/VPATH-Builds.html&quot;&gt;VPATH builds&lt;/a&gt;. I call this “building software grows up”.&lt;/p&gt;
+
+&lt;p&gt;Ugg, Autotools gets it backwards - it calls the machine on which you build the “build platform”,
+and it calls the machine on which the compiled program runs the “host platform”. This is
+backwards from “host platform” being the machine on which you build and the “target platform”
+being the machine that you run the compiled program on. I guess it’s all relative, and so
+we should all agree. Maybe the answer is to just drop the phrase “host platform”, since it
+does sound a little vague.&lt;/p&gt;
+
+&lt;p&gt;GNU does specify three options&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;--build
+--target
+--host
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;where &lt;code class=&quot;highlighter-rouge&quot;&gt;--build&lt;/code&gt; is the system on which the package is built (and why can’t this be
+auto-determined?), &lt;code class=&quot;highlighter-rouge&quot;&gt;--target&lt;/code&gt; is the system that built tools will run on, and then
+&lt;code class=&quot;highlighter-rouge&quot;&gt;--host&lt;/code&gt; is the system on which final output runs. This is useful in the edge case
+where the build process creates a cross-compiler, e.g. we are on system A, the
+intermediate tools (like GCC) run on system B, and the final output is intended for
+system C. I’m sure there are real-world cases for this.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 19 May 2017 10:30:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/05/19/autools-must-die.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/05/19/autools-must-die.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Standard libraries</title>
@@ -834,91 +919,6 @@ so I can have a clean system every month.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/13/recent-links.html</guid>
         
         <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Lua cheat sheet</title>
-        <description>&lt;p&gt;Semicolons are optional. &lt;code class=&quot;highlighter-rouge&quot;&gt;~=&lt;/code&gt; is not-equals.&lt;/p&gt;
-
-&lt;p&gt;Strings are single-quote or double quote, it’s arbitrary.&lt;/p&gt;
-
-&lt;p&gt;String contatenation operator is &lt;code class=&quot;highlighter-rouge&quot;&gt;..&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;''&lt;/code&gt; are true! Only &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; are false.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; is the undefined type, also used to free vars.&lt;/p&gt;
-
-&lt;p&gt;A range is begin, end [,step], and ranges include both ends.&lt;/p&gt;
-
-&lt;p&gt;If a function has a single parameter that is a string or a table, the parens &lt;code class=&quot;highlighter-rouge&quot;&gt;()&lt;/code&gt; are optional.&lt;/p&gt;
-
-&lt;p&gt;Return, function call and assignment take lists, and lists can be mismatched in length;
-unmatched receivers are nil, unmatched senders are discarded.&lt;/p&gt;
-
-&lt;p&gt;Tables are it, used for maps and arrays. Array index starts at 1. &lt;code class=&quot;highlighter-rouge&quot;&gt;#table&lt;/code&gt; is length of table.
-String keys are the default, and you can index with table.key or table[“key”]. Non-string
-keys require aray indexing. Can index by anything except nil. Index by value for numbers and
-strings but identity for tables - e.g. two successive {} are different tables.&lt;/p&gt;
-
-&lt;p&gt;a.x is the same as a[“x”]&lt;/p&gt;
-
-&lt;p&gt;Assign nil to a table entry to delete it.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;for k,v in pairs(table)&lt;/code&gt; is generic-for table iteration. &lt;code class=&quot;highlighter-rouge&quot;&gt;pairs&lt;/code&gt; is an iterator function.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ipairs&lt;/code&gt; stops at the first non-initialized index.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_G&lt;/code&gt; is a table of all globals.&lt;/p&gt;
-
-&lt;p&gt;Can assign to a table with a list, uses int keys starting at 1.&lt;/p&gt;
-
-&lt;p&gt;Objects are tables. &lt;code class=&quot;highlighter-rouge&quot;&gt;Dog = {}&lt;/code&gt; creates a table, which can be used as an object.&lt;/p&gt;
-
-&lt;p&gt;Modules are tables.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; “operator” is a synonym to add &lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt; to declarations and uses of object and module functions.&lt;/p&gt;
-
-&lt;p&gt;Numeric for: &lt;code class=&quot;highlighter-rouge&quot;&gt;for begin, end, step&lt;/code&gt;. For loop variable is local to for loop.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;function print(...)&lt;/code&gt; - all the arguments are put into an &lt;code class=&quot;highlighter-rouge&quot;&gt;arg&lt;/code&gt; table for the function to access, and
-arg.n is the number of elements in the table. Use &lt;code class=&quot;highlighter-rouge&quot;&gt;unpack(arg)&lt;/code&gt; to unpack into list, e.g. to send to
-another function.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;f{...} lets you make a function call and simulate named arguments - this actuall gets a single
-parameter that is a table. It's really &lt;/code&gt;f({…})`.&lt;/p&gt;
-
-&lt;p&gt;Creating a new instance of a class requires some metatable magic so that the new table will forward
-its index operations to the class instance”, which has the methods&lt;/p&gt;
-
-&lt;p&gt;```
-functin Account:new(o)
-  o = o or {}
-  setmetatable(o, self)
-  self.__index = self
-  return o
-``&lt;/p&gt;
-
-&lt;p&gt;So, in other words, &lt;code class=&quot;highlighter-rouge&quot;&gt;a:deposit(100)&lt;/code&gt; is the same as &lt;code class=&quot;highlighter-rouge&quot;&gt;Account.deposit(a, 100)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;Others have tried to summarize Lua.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lua-users.org/files/wiki_insecure/users/thomasl/luarefv51single.pdf&quot;&gt;The Lua Language (v5.1)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://coffeeghost.net/2010/11/01/lua-cheat-sheet-for-programmers/&quot;&gt;Lua Cheat Sheet for Programmers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tylerneylon.com/a/learn-lua/&quot;&gt;Learn Lua in 15 Minutes&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 13 Apr 2017 10:30:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2017/04/13/lua-cheat-sheet.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/13/lua-cheat-sheet.html</guid>
-        
-        <category>lua</category>
         
         
         <category>dev</category>
