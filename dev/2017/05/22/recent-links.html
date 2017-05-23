@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some Things Are Obvious</title>
-  <meta name="description" content="Answers to some of the world's questions
-">
+  <title>Recent links</title>
+  <meta name="description" content="Sustainability of Digital Formats: Planning for Library of Congress Collections">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic">
-  <link rel="canonical" href="http://neurocline.github.io/">
+  <link rel="canonical" href="http://neurocline.github.io/dev/2017/05/22/recent-links.html">
   <link rel="alternate" type="application/rss+xml" title="Some Things Are Obvious" href="http://neurocline.github.io/feed.xml" />
 </head>
 
@@ -74,58 +73,51 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p><img src="/assets/Nebula.jpg" alt="My helpful screenshot" /></p>
-<div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Recent links</h1>
+    <p class="post-meta">May 22, 2017</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">May 22, 2017</span>
+  <article class="post-content">
+    <p><a href="https://www.loc.gov/preservation/digital/formats/fdd/browse_list.shtml">Sustainability of Digital Formats: Planning for Library of Congress Collections</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/22/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 19, 2017</span>
+<p>MBOX is the de-facto standard for archiving email.</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/19/autools-must-die.html">Autotools must die</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 18, 2017</span>
+<ul>
+  <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000383.shtml">LOC: MBOX</a></li>
+  <li><a href="https://tools.ietf.org/rfc/rfc4155.txt">RFC 4155</a></li>
+  <li><a href="http://qmail.org/qmail-manual-html/man5/mbox.html">qmail mbox description</a></li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/18/standard-libraries.html">Standard libraries</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 16, 2017</span>
+<p><a href="https://blogs.loc.gov/thesignal/2013/07/the-what-of-email-archiving/">The “What” of Email Archiving</a></p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/16/recent-links.html">Recent links</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 9, 2017</span>
+<p>Git grafts is old but still exists</p>
 
-        <h2>
-          <a class="post-link" href="/dev/2017/05/09/patterns-for-network-operation.html">Patterns for network operations</a>
-        </h2>
-      </li>
-    
-  </ul>
+<ul>
+  <li>https://git.wiki.kernel.org/index.php/GraftPoint</li>
+  <li><a href="http://ben.straubnet.net/post/939181602/git-grafting-repositories">Git: Grafting repositories</a></li>
+  <li><a href="https://developer.atlassian.com/blog/2015/08/grafting-earlier-history-with-git/">Collating repositories or grafting earlier history with Git</a></li>
+  <li><a href="https://stackoverflow.com/questions/6800692/how-do-git-grafts-and-replace-differ-are-grafts-now-deprecated">How do git grafts and replace differ? (Are grafts now deprecated?)</a></li>
+</ul>
 
-  <a class="post-link" href="/archive/">All Posts</a>
+<p><code class="highlighter-rouge">git replace</code> is the newer mechanism, and can be pushed to others (grafts are local-only)</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<ul>
+  <li>https://git-scm.com/docs/git-replace</li>
+</ul>
+
+<p><code class="highlighter-rouge">git filter-branch</code> will flatten any entries in <code class="highlighter-rouge">.git/info/grafts</code> and <code class="highlighter-rouge">refs/replace/</code>, making them permanent.
+This is a useful technique to join history together.</p>
+
+<p><a href="https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/">The power of Git subtree</a></p>
+
+<p>In particular, <code class="highlighter-rouge">git subtree</code> is distinct from subtree merges. I’m now more enlightened, although I need to experiment.</p>
+
+<p><a href="https://makingsoftware.wordpress.com/2013/02/16/using-git-subtrees-for-repository-separation/">Using Git subtrees for repository separation</a></p>
+
+  </article>
 
 </div>
 

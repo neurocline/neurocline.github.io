@@ -6,9 +6,58 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 May 2017 13:58:15 -0700</pubDate>
-    <lastBuildDate>Mon, 22 May 2017 13:58:15 -0700</lastBuildDate>
+    <pubDate>Mon, 22 May 2017 17:26:59 -0700</pubDate>
+    <lastBuildDate>Mon, 22 May 2017 17:26:59 -0700</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.loc.gov/preservation/digital/formats/fdd/browse_list.shtml&quot;&gt;Sustainability of Digital Formats: Planning for Library of Congress Collections&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MBOX is the de-facto standard for archiving email.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.loc.gov/preservation/digital/formats/fdd/fdd000383.shtml&quot;&gt;LOC: MBOX&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tools.ietf.org/rfc/rfc4155.txt&quot;&gt;RFC 4155&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://qmail.org/qmail-manual-html/man5/mbox.html&quot;&gt;qmail mbox description&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.loc.gov/thesignal/2013/07/the-what-of-email-archiving/&quot;&gt;The “What” of Email Archiving&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Git grafts is old but still exists&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://git.wiki.kernel.org/index.php/GraftPoint&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ben.straubnet.net/post/939181602/git-grafting-repositories&quot;&gt;Git: Grafting repositories&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.atlassian.com/blog/2015/08/grafting-earlier-history-with-git/&quot;&gt;Collating repositories or grafting earlier history with Git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/6800692/how-do-git-grafts-and-replace-differ-are-grafts-now-deprecated&quot;&gt;How do git grafts and replace differ? (Are grafts now deprecated?)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git replace&lt;/code&gt; is the newer mechanism, and can be pushed to others (grafts are local-only)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://git-scm.com/docs/git-replace&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git filter-branch&lt;/code&gt; will flatten any entries in &lt;code class=&quot;highlighter-rouge&quot;&gt;.git/info/grafts&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;refs/replace/&lt;/code&gt;, making them permanent.
+This is a useful technique to join history together.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/&quot;&gt;The power of Git subtree&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In particular, &lt;code class=&quot;highlighter-rouge&quot;&gt;git subtree&lt;/code&gt; is distinct from subtree merges. I’m now more enlightened, although I need to experiment.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://makingsoftware.wordpress.com/2013/02/16/using-git-subtrees-for-repository-separation/&quot;&gt;Using Git subtrees for repository separation&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 22 May 2017 14:45:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/05/22/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/05/22/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Autotools must die</title>
@@ -898,25 +947,6 @@ so I can have a clean system every month.&lt;/p&gt;
         <pubDate>Mon, 17 Apr 2017 14:45:00 -0700</pubDate>
         <link>http://neurocline.github.io/dev/2017/04/17/recent-links.html</link>
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/17/recent-links.html</guid>
-        
-        <category>text</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Recent links</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://blog.demofox.org/&quot;&gt;The blog at the bottom of the sea&lt;/a&gt; - Alan Wolfe blog.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.scratchapixel.com/&quot;&gt;Scratchapixel 2.0&lt;/a&gt; - learn computer graphics.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://omwtm.blog/2014/12/03/visual-studio-2013-version-numbers-and-updates/&quot;&gt;Visual Studio 2012, 2013, 2015, 2017 Version Numbers and Updates&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 13 Apr 2017 10:30:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2017/04/13/recent-links.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/13/recent-links.html</guid>
         
         <category>text</category>
         
