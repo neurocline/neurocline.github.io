@@ -6,9 +6,47 @@
 </description>
     <link>http://neurocline.github.io/</link>
     <atom:link href="http://neurocline.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Jun 2017 19:24:13 -0700</pubDate>
-    <lastBuildDate>Mon, 05 Jun 2017 19:24:13 -0700</lastBuildDate>
+    <pubDate>Tue, 06 Jun 2017 21:29:51 -0700</pubDate>
+    <lastBuildDate>Tue, 06 Jun 2017 21:29:51 -0700</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Recent links</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://www.di.ubi.pt/~jpf/Site/Publications_files/technicalReport.pdf&quot;&gt;Generalized LR Parsing in Haskell&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pdfs.semanticscholar.org/5cd6/257ca11cdb79a06946c987c6a68b086e745b.pdf&quot;&gt;Faster Generalized LR Parsing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pdfs.semanticscholar.org/2ff7/4ea9a0147318bc19e30c6d0f72e29a5f92c3.pdf&quot;&gt;Generalised LR parsing algorithms&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gnu.org/software/shepherd/&quot;&gt;The GNU Shepherd&lt;/a&gt; - “It was comatose (if not dead) for nearly a decade, it was revived in 2013 as part of the Guix transactional package management system, also written in Guile”.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-advantages-does-systemd-have-over-GNU-dmd&quot;&gt;What advantages does systemd have over GNU dmd?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://without-systemd.org/wiki/index.php/Init&quot;&gt;Alternatives to systemd&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://changelog.complete.org/archives/9655-count-me-as-a-systemd-convert&quot;&gt;Count me as a systemd convert&lt;/a&gt; and &lt;a href=&quot;https://www.reddit.com/r/linux/comments/4ft5im/count_me_as_a_systemd_convert/&quot;&gt;Reddit thread&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.darknedgy.net/technology/2015/09/05/0/&quot;&gt;A history of modern init systems (1992-2015)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14603&quot;&gt;DeepFix: Fixing Common C Language Errors by Deep Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spectrum.ieee.org/computing/software/what-intelligent-machines-need-to-learn-from-the-neocortex&quot;&gt;What Intelligent Machines Need to Learn From the Neocortex&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gitbook.com/book/arobenko/bare_metal_cpp/details&quot;&gt;Practical Guide to Bare Metal C++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hackernoon.com/what-really-happened-with-vista-4ca7ffb5a1a&quot;&gt;What Really Happened with Vista&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://redditblog.com/2017/06/02/the-evolution-of-code-deploys-at-reddit/&quot;&gt;The Evolution of Code Deploys at Reddit&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 03 Jun 2017 10:00:00 -0700</pubDate>
+        <link>http://neurocline.github.io/dev/2017/06/03/recent-links.html</link>
+        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/06/03/recent-links.html</guid>
+        
+        <category>text</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Recent links</title>
@@ -845,88 +883,6 @@ version. It has no arguments, and in this form, needs no parameters.&lt;/p&gt;
         <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/27/command-line-standard.html</guid>
         
         <category>command-line</category>
-        
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Bootstrapping</title>
-        <description>&lt;p&gt;Git for Windows is at 2.12.2(2). Why is it so far behind? Git 2.1 was released in August 2014. Maybe
-just stop developing on Windows, or do all source control on Unix/Mac?&lt;/p&gt;
-
-&lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;py&lt;/code&gt; and shebang lines to handle multiple versions of Python on the same computer. Install
-Python 3.6 first into path, then Python 2.7 second without modifying path.&lt;/p&gt;
-
-&lt;p&gt;Probably should install “for all users” for most programs. I installed Python 3.6&lt;/p&gt;
-
-&lt;p&gt;I just installed Ruby again just to install Jekyll which I want to switch away from.&lt;/p&gt;
-
-&lt;p&gt;This is also my chance to play with boot-from-VHD on Windows 10.&lt;/p&gt;
-
-&lt;p&gt;My Windows dev box pattern is this:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Dev&lt;/code&gt; is where dev tools go: this includes Python, Visual Studio, etc.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Dev\bin&lt;/code&gt; contains standalone binaries, so it’s in the path&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\projects&lt;/code&gt; is where I put source code
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\projects\github&lt;/code&gt; for forks from Github&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\projects\go&lt;/code&gt; for my &lt;code class=&quot;highlighter-rouge&quot;&gt;GOPATH&lt;/code&gt; (because Go wants all source in one tree)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I don’t tend to put things in &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\User\&amp;lt;user&amp;gt;&lt;/code&gt;, but maybe I should, since that’s the natural
-place on Unix? The reason I don’t is that Microsoft already fills it with a lot of crap, although
-that seems to have gone down with Windows 10.&lt;/p&gt;
-
-&lt;p&gt;There REALLY REALLY needs to be a universal package manager for Windows. I’m not sure Chocolatey
-is it. But I should try it, because it has 4000 packages now. Except it’s in the process of going
-commercial, and so (given Windows) that means companies as clients. Also, I notice that Chocolatey
-packages tend to be really old - their &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; package is over 2 years old. Still…&lt;/p&gt;
-
-&lt;p&gt;Cool, Chocolatey has a script to refresh environment variables in a running cmd window; I copied this
-and saved it as their name &lt;code class=&quot;highlighter-rouge&quot;&gt;RefreshEnv.cmd&lt;/code&gt;. Works great!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/171588/is-there-a-command-to-refresh-environment-variables-from-the-command-prompt-in-w&quot;&gt;Is there a command to refresh environment variables from the command prompt in Windows?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For Go, my &lt;code class=&quot;highlighter-rouge&quot;&gt;%GOPATH&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\projects\go&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I installed perl again, because I needed it a month ago, but I should figure out why. I’d love to
-do without Perl and Ruby, and just use C++, Python and Go - and move more to Go and less to Python.&lt;/p&gt;
-
-&lt;p&gt;Is it my imagination, or is a new computer always fast? This reinforces the desire to do boot-from-VHD
-so I can have a clean system every month.&lt;/p&gt;
-
-&lt;p&gt;Subversion… sigh. Passwords… sigh.&lt;/p&gt;
-
-&lt;p&gt;7-zip.&lt;/p&gt;
-
-&lt;p&gt;Perforce.&lt;/p&gt;
-
-&lt;p&gt;Firefox.&lt;/p&gt;
-
-&lt;p&gt;WinDirStat.&lt;/p&gt;
-
-&lt;p&gt;WinPCap.&lt;/p&gt;
-
-&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chocolatey.org/&quot;&gt;Chocolatey&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/windows/#installation&quot;&gt;Jekyll on Windows&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://labs.sverrirs.com/jekyll/&quot;&gt;Jekyll 3 on Windows&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 18 Apr 2017 11:30:00 -0700</pubDate>
-        <link>http://neurocline.github.io/dev/2017/04/18/Bootstrapping.html</link>
-        <guid isPermaLink="true">http://neurocline.github.io/dev/2017/04/18/Bootstrapping.html</guid>
-        
-        <category>text</category>
         
         
         <category>dev</category>
