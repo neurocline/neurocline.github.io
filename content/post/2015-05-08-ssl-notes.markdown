@@ -1,0 +1,126 @@
+---
+categories: dev
+date: 2015-05-08T12:33:00Z
+tags: ssl
+title: SSL/TLS Notes
+url: /2015/05/08/ssl-notes/
+---
+
+![My helpful screenshot](/assets/TLS.jpg)
+
+TLS (n&eacute;e SSL) is a big part of the modern computer landscape, but there
+are no up-to-date reference materials. The few books written 10 years
+ago are woefully out of date.
+
+Someone needs to write a new book or books. Some big areas to focus on
+are:
+
+* updated history
+* certificates
+* cryptographic algorithms
+* best practices for security
+* working at scale
+
+I think that interviewing all of the actors in the TLS world would be
+an awesome step.
+
+More importantly, should the overall name be SSL, or TLS? Probably
+SSL, since that's very widespread at this point.
+
+## TLS
+
+Wikipedia - [Transport Layer Security](http://en.wikipedia.org/wiki/Transport_Layer_Security)
+
+RFC5246 - [The Transport Layer Security (TLS) Protocol Version 1.2](http://tools.ietf.org/html/rfc5246)
+
+RFC6176 - [Prohibiting Secure Sockets Layer (SSL) Version 2.0](http://tools.ietf.org/html/rfc6176)
+
+OWASP - [Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+
+RFC5746 - [Transport Layer Security (TLS) Renegotiation Indication Extension](http://www.ietf.org/rfc/rfc5746.txt)
+
+[SHA-256 Compatibility](https://support.globalsign.com/customer/portal/articles/1499561-sha-256-compatibility)
+
+[SSL/TLS Deployment Best Practices](https://www.ssllabs.com/downloads/SSL_TLS_Deployment_Best_Practices.pdf)
+
+## Certificates
+
+[Survival guides - TLS/SSL and SSL (X.509) Certificates](http://www.zytrax.com/tech/survival/ssl.html)
+
+Microsoft - [Benefits of Multiple-Level Certification Hierarchies](https://technet.microsoft.com/en-us/library/cc962078.aspx)
+
+Stack Overflow - [How does an SSL certificate chain bundle works?](http://stackoverflow.com/questions/20409534/how-does-an-ssl-certificate-chain-bundle-works)
+
+stackoverflow - [OpenSSL Ignore Self-signed certificate error](http://stackoverflow.com/questions/2256950/openssl-ignore-self-signed-certificate-error). Notes on how to verify certifications in OpenSSL
+
+## Certificate authorities
+
+Wikipedia - [Intermediate certificate authorities](http://en.wikipedia.org/wiki/Intermediate_certificate_authorities)
+
+[What is the SSL Certificate Chain?](https://support.dnsimple.com/articles/what-is-ssl-certificate-chain/)
+
+[Signing certificate with another certificate signed by CA](http://stackoverflow.com/questions/21319841/signing-certificate-with-another-certificate-signed-by-ca)
+
+[Using Certificate Chains](https://community.openvpn.net/openvpn/wiki/Using_Certificate_Chains)
+
+github/zakjan - [Cert chain resolver](https://github.com/zakjan/cert-chain-resolver)
+
+chain.com - [How We Keep the Chain API Secure](http://blog.chain.com/post/87136249186/how-we-keep-the-chain-api-secure)
+
+* see [API v2 Documentation](https://chain.com/docs)
+
+[Becoming a X.509 Certificate Authority](http://www.davidpashley.com/articles/becoming-a-x-509-certificate-authority/)
+
+WikiHow - [How to Be Your Own Certificate Authority](http://www.wikihow.com/Be-Your-Own-Certificate-Authority)
+
+[Be your own Certificate Authority](http://www.area536.com/projects/be-your-own-certificate-authority-with-openssl/)
+
+Superuser - [How do SSL chains work?](http://superuser.com/questions/347588/how-do-ssl-chains-work)
+
+## Public Key Pinning
+
+* HPKP - Public Key Pinning Extension for HTTP
+* HSTS - Force use of HTTPS
+* TACK - Public Key Pinning Extension
+* CRL - Certificate Revocation List
+* OCSP - Online Certificate Status Protocol
+
+Mozilla - [Public Key Pinning](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning)
+
+RFC7469 - [Public Key Pinning Extension for HTTP](https://tools.ietf.org/html/rfc7469)
+
+Mozilla - [HTTP Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security)
+
+RFC6797 - [HTTP Strict Transport Security (HSTS)](https://tools.ietf.org/html/rfc6797)
+
+Wikipedia - [HTTP Strict Transport Security](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
+
+ImperialVioet - [IPublic key pinning (04 May 2011)](https://www.imperialviolet.org/2011/05/04/pinning.html) - Chrome adding public key pinning. Use public key hashes, not certificate hashes.
+
+[Public Key Pinning Extension for HTTP](https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21)
+
+OWASP - [Certificate and Public Key Pinning](https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning)
+
+Wikipedia - [Online Certificate Status Protocol](http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol)
+
+[TACK, for pinning](http://tack.io/) - Moxie Marlinspike
+
+Attack on Google detected via pinning
+
+* [Is This MITM Attack to Gmail's SSL ?](https://productforums.google.com/forum/#!topic/gmail/3J3r2JqFNTw/discussion)
+* [An update on attempted man-in-the-middle attacks](http://googleonlinesecurity.blogspot.com/2011/08/update-on-attempted-man-in-middle.html)
+
+security.stackexchange - [What is certificate pinning?](http://security.stackexchange.com/questions/29988/what-is-certificate-pinning)
+
+## Websockets and SSL
+
+[Can Javascript/Flash verify the SSL connection to prevent “SSL Inspection”?](http://security.stackexchange.com/questions/1034/can-javascript-flash-verify-the-ssl-connection-to-prevent-ssl-inspection)
+
+## TLS-SRP
+
+Wikipedia - [TLS-SRP](http://en.wikipedia.org/wiki/TLS-SRP)
+
+Wikipedia - [Secure Remote Password protocol](http://en.wikipedia.org/wiki/Secure_Remote_Password_protocol)
+
+RFC5054 - [Using the Secure Remote Password (SRP) Protocol for TLS Authentication](https://tools.ietf.org/html/rfc5054)
+

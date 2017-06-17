@@ -1,0 +1,11 @@
+---
+categories: dev
+date: 2015-09-06T16:53:00Z
+tags: git
+title: Git links
+url: /2015/09/06/git-links/
+---
+
+[A Git Horror Story: Repository Integrity With Signed Commits](http://mikegerwitz.com/papers/git-horror-story)
+
+[On Signing Git Tags on Windows](http://dllhell.net/2012/03/30/on-signing-git-tags-on-windows/)

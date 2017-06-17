@@ -1,0 +1,11 @@
+---
+categories: dev
+date: 2015-09-06T17:11:00Z
+tags: c++, scheduler
+title: C++ links
+url: /2015/09/06/c++-links/
+---
+
+[Implementing a lightweight task scheduler](http://www.enkisoftware.com/devlogpost-20150822-1-Implementing_a_lightweight_task_scheduler.html)
+
+[Internals of a lightweight task scheduler](http://www.enkisoftware.com/devlogpost-20150905-1-Internals_of_a_lightweight_task_scheduler.html)

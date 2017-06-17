@@ -1,0 +1,4 @@
+git@github.com:spf13/herring-cove.git
+git@github.com:gcushen/hugo-academic.git
+git@github.com:Zenithar/hugo-theme-bleak.git
+git@github.com:dim0627/hugo_theme_robust.git

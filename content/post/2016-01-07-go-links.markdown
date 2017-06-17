@@ -1,0 +1,31 @@
+---
+categories: dev
+date: 2016-01-07T22:27:00Z
+tags: go programming
+title: Go notes
+url: /2016/01/07/go-links/
+---
+
+[How can I get a file's ctime,atime,mtime and change them using Golang?](http://stackoverflow.com/questions/20875336/how-can-i-get-a-files-ctime-atime-mtime-and-change-them-using-golang). Go is actually fetching some of these under the hood, and you can snarf them with a little platform-dependent code. For others, you need to make OS calls.
+
+[djherbis/times](https://github.com/djherbis/times).
+
+[AllenDang/w32](https://github.com/AllenDang/w32). A wrapper of windows apis for the Go Programming Language.
+
+[Go Advent Day 23 - Multi-Platform Applications: Architecture and Cross-Compilation](https://blog.gopheracademy.com/advent-2013/day-23-multi-platform-applications/)
+
+[DEVELOPING FOR MULTIPLE PLATFORMS WITH GO](http://techblog.steelseries.com/2014/04/08/multi-platform-development-go.html)
+
+[gogoprotobuf](http://gogo.github.io/). Also see [github gogoprotobuf](https://github.com/gogo). Interesting.
+
+[ioTeeReaderPiped](http://www.gofragments.net/client/blog/fundamentals/2016/01/04/ioTeeReaderPiped/index.html)
+
+[gom](https://github.com/rakyll/gom)
+
+[govent](https://github.com/MediaMath/govent/)
+
+[reddit/golang](https://www.reddit.com/r/golang)
+
+[github/golang](https://github.com/golang)
+
+[golang-nuts](https://groups.google.com/forum/#!forum/golang-nuts)

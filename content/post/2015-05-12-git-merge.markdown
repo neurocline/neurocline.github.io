@@ -1,0 +1,13 @@
+---
+categories: dev
+date: 2015-05-12T18:24:00Z
+tags: git
+title: Git Merge 2015
+url: /2015/05/12/git-merge/
+---
+
+![My helpful screenshot](/assets/GitMerge2015.jpg)
+
+Watch these videos
+
+[Git Merge 2015](http://git-merge.com/)
