@@ -24,28 +24,28 @@ contained projects; there is no other metadata.
 
 The simplest possible .xcworkspace has an on-disk structure like this:
 
-{{< highlight bash >}}
+```
 empty.xcworkspace/
 └── contents.xcworkspacedata
-{{< / highlight >}}
+```
 
 and the `contents.xcworkspacedata` file, containing the actual workspace data, looks like this:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
     version = "1.0">
-{{< / highlight >}}
+```
 
 This workspace has nothing in it, but Xcode will open it up. Of course, once you open it up, Xcode
 will likely generate other metadata like an `xcshareddata/` directory containing source control
 information, and an `xcuserdata/` directory with user interface settings (window positions and
 so on). That metadata isn't used for building, so we'll ignore it here.
 
-A better example is from cppget, which has an Xcode workspace (albeit currently generated with
+A better example is from `cppget`, which has an Xcode workspace (albeit currently generated with
 Premake and not hand-made). The current directory structure for this package is as follows:
 
-{{< highlight bash >}}
+```
 cppget.xcworkspace/
 ├── contents.xcworkspacedata
 ├── xcshareddata/
@@ -56,11 +56,11 @@ cppget.xcworkspace/
         ├── WorkspaceSettings.xcsettings
         └── xcdebugger/
             └── Breakpoints_v2.xcbkptlist
-{{< / highlight >}}
+```
 
 This is the contents of the workspace file, `cppget.xcworkspace/contents.xcworkspacedata`:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
     version = "1.0">
@@ -86,7 +86,7 @@ This is the contents of the workspace file, `cppget.xcworkspace/contents.xcworks
         location = "group:../vendor/__pkg__/unittest++/project/unittest++.xcodeproj">
     </FileRef>
 </Workspace>
-{{< / highlight >}}
+```
 
 The document root object is `<Workspace>`. The root object has a `version` attribute
 (always observed to be 1.0, indicating that the workspace file format hasn't been changing),
@@ -99,13 +99,13 @@ Groups can contain Groups or FileRefs, but FileRefs are just leaf nodes.
 
 In the example above, the source code structure looks like this:
 
-{{< highlight bash >}}
+```
 cppget/
 ├── project/
 │   └── cppget.xcworkspace/
 └── vendor/
     └── __pkg__/
-{{< / highlight >}}
+```
 
 explaining the relative paths (getting to `vendor` from `project` requires `../vendor`).
 
@@ -140,9 +140,9 @@ in the workspace, or we add it. This means you need to take some care to have ca
 
 The node we are adding follows the form
 
-{{< highlight xml >}}
+```
 <FileRef location = "group:RELATIVEPATH"></FileRef>
-{{< / highlight >}}
+```
 
 e.g. the only data is the value for the `location` attribute, and the attribute value is prefixed
 with either `group:` or `self:`.
@@ -152,7 +152,7 @@ your code might look like this. I have parsed the workspace into a data structur
 pulled FileRefs out into a vector for easy manipulation, but then the XML itself has to be
 manipulated to add a new FileRef.
 
-{{< highlight c++ >}}
+```c++
 bool AddProjectToXcodeWorkspace(const std::string& projectPath)
 {
     XCWorkspace workspace;
@@ -180,7 +180,7 @@ bool AddProjectToXcodeWorkspace(const std::string& projectPath)
     
     return true;
 }
-{{< / highlight >}}
+```
 
 Perhaps a different XML library would have cleaner syntax. It's a tradeoff.
 
@@ -191,10 +191,10 @@ and only required file is the `project.pbxproj` file.
 
 The simplest possible project looks like this
 
-{{< highlight bash >}}
+```
 empty.xcodeproj/
 └── project.pbxproj
-{{< / highlight >}}
+```
 
 The `project.pbxproj` file is an Xcode-specific file format using the text plist format, which came
 from NeXt and is now only used by legacy programs - and Xcode. Or so the internet claims.
@@ -204,7 +204,7 @@ version, so we'll stick with that (because the XML plist format is pretty hard t
 
 For a bigger example, let's look at the .xcodeproj from cppget:
 
-{{< highlight bash >}}
+```
 cppget.xcodeproj/
 ├── project.pbxproj
 └── xcuserdata/
@@ -212,7 +212,7 @@ cppget.xcodeproj/
         └── xcschemes/
             ├── cppget.xcscheme
             └── xcschememanagement.plist
-{{< / highlight >}}
+```
 
 As with .xcworkspace directories, Xcode puts configuration data inside the project directory, which
 we will ignore, because it doesn't bear directly on workspaces and projects at the build level.
@@ -220,7 +220,7 @@ we will ignore, because it doesn't bear directly on workspaces and projects at t
 The root of an Xcode project file is a dictionary. Looking at `cppget.xcodeproj/project.pbxproj`,
 we see this:
 
-{{< highlight bash >}}
+```
 // !$*UTF8*$!
 {
     archiveVersion = 1;
@@ -232,7 +232,7 @@ we see this:
     };
     rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
 }
-{{< / highlight >}}
+```
 
 `archiveVersion` has always been 1.  And `classes` is usually empty (always?).
 
@@ -261,6 +261,8 @@ locally to the project that they are found in.
 There's an interesting competing need that Premake satisfies but the Xcode algorithm does not, and that
 is that if you regenerate a project, it would be nice to have the same GUIDs, so that diffs are minimized
 (e.g. when checking in to source control).
+
+2017-06-18 addendum: newer Premakes do not try to preserve GUIDS when regenerating a project.
 
 Premake uses a simple algorithm that is completely deterministic and relies on "paths" being unique.
 Each element that gets a GUID has a sequence of strings that creates a virtual path, and this path is
@@ -306,7 +308,7 @@ there are the following object kinds
 The root object points to an instance of PBXProject. Typically, there is just one in an .xcodeproj
 file. The one for cppget looks like this:
 
-{{< highlight bash >}}
+```
 08FB7793FE84155DC02AAC07 /* Project object */ = {
     isa = PBXProject;
     buildConfigurationList = 1DEB928908733DD80010E9CD;
@@ -322,7 +324,7 @@ file. The one for cppget looks like this:
         9864FFB2FFF6A69F568155F2 /* cppget */,
     );
 };
-{{< / highlight >}}
+```
 
 The `buildConfigurationList` key points to a XCConfigurationList object, which is an array
 of XCBuildConfiguration objects. Many projects have a Debug and Release configuration, but
@@ -353,7 +355,7 @@ A PBXGroup object is a list of zero or more:
 
 As an example:
 
-{{< highlight bash >}}
+```
 EAEC10A24F22830F77FBC6E2 /* Products */ = {
     isa = PBXGroup;
     children = (
@@ -362,7 +364,7 @@ EAEC10A24F22830F77FBC6E2 /* Products */ = {
     name = Products;
     sourceTree = "<group>";
 };
-{{< / highlight >}}
+```
 
 This group has the name Products, has its source tree as the group itself, and then has zero or more children.
 Typically groups are not empty.
@@ -381,7 +383,7 @@ believes the file has. This is a hierarchy, so all source code tags start with `
 begin with `sourcecode.cpp.`, and so on. So a C++ source file would be `sourcecode.cpp.cpp`, and a C
 header file would be `sourcecode.c.h`.
 
-{{< highlight bash >}}
+```
 0E6510F6A5C575A340791736 = {
     isa = PBXFileReference;
     lastKnownFileType = sourcecode.cpp.cpp;
@@ -389,12 +391,12 @@ header file would be `sourcecode.c.h`.
     path = ../src/main.cpp;
     sourceTree = "<group>";
 };
-{{< / highlight >}}
+```
 
 Some entries will indicate built objects, like an executable. These have an `explicitFileType` entry with a
 value such as `compiled.mach-o.executable`.
 
-{{< highlight bash >}}
+```
 5F42214CB908A5D9E0E93F8C = {
     isa = PBXFileReference;
     explicitFileType = "compiled.mach-o.executable";
@@ -403,13 +405,13 @@ value such as `compiled.mach-o.executable`.
     path = cppget;
     sourceTree = BUILT_PRODUCTS_DIR;
 };
-{{< / highlight >}}
+```
 
 Some entries will indicate external items. These have a `lastKnowFileType` of `"wrapper.pb-project"`, and a `path`
 pointing at the project itself, located relative to `sourceTree`. In this case a `sourceTree` of `SOURCE_ROOT`
 indicates a variable set in Xcode pointing to the workspace or project.
 
-{{< highlight bash >}}
+```
 2A74773383797DE0775EFD73 = {
     isa = PBXFileReference;
     lastKnownFileType = "wrapper.pb-project";
@@ -417,14 +419,14 @@ indicates a variable set in Xcode pointing to the workspace or project.
     path = ../packages/__pkg__/cjson/project/cjson.xcodeproj;
     sourceTree = SOURCE_ROOT;
 };
-{{< / highlight >}}
+```
 
 Some entries indicate Mac OS X frameworks, either installed by the system (like LDAP.framework), or custom
 to the project. In this case, `lastKnownFileType` is `wrapper.framework` and `path` points to the path for
 the framework relative to `sourceTree`. In the example below, the source tree is `SDKROOT`, which is
 predefined by Xcode to point to the system SDKs.
 
-{{< highlight bash >}}
+```
 50F336C2F6C717AFAF740D02 = {
     isa = PBXFileReference;
     lastKnownFileType = wrapper.framework;
@@ -432,14 +434,14 @@ predefined by Xcode to point to the system SDKs.
     path = System/Library/Frameworks/LDAP.framework;
     sourceTree = SDKROOT;
 };
-{{< / highlight >}}
+```
 
 ## PBXNativeTarget
 
 A PBXNativeTarget objects describes how to build a native target. This is the various build phases,
 the output name 
 
-{{< highlight bash >}}
+```
 9864FFB2FFF6A69F568155F2 /* cppget */ = {
     isa = PBXNativeTarget;
     buildConfigurationList = 571A991BE942DF281F6C975B;
@@ -457,13 +459,13 @@ the output name
     productReference = 5F42214CB908A5D9E0E93F8C /* cppget */;
     productType = "com.apple.product-type.tool";
 };
-{{< / highlight >}}
+```
 
 In this example, this is an executable binary, as indicated by `productReference` pointing
 to a PBXFileReference that is a `compiled.mach-o.executable`, but also by `productType`
 being "command line tool", `com.apple.product-type.tool`.
 
-{{< highlight bash >}}
+```
 5F42214CB908A5D9E0E93F8C = {
     isa = PBXFileReference;
     explicitFileType = "compiled.mach-o.executable";
@@ -472,7 +474,7 @@ being "command line tool", `com.apple.product-type.tool`.
     path = cppget;
     sourceTree = BUILT_PRODUCTS_DIR;
 };
-{{< / highlight >}}
+```
 
 Note that a PBXNativeTarget has its own XCConfigurationList; these are named the same
 as the project configurations, but contain target-specific information. See below for
@@ -480,7 +482,7 @@ the cascade order for config.
 
 For example, the debug configuration has this as its target config:
 
-{{< highlight bash >}}
+```
 41922E615426EFEE2E938CA1 /* Debug */ = {
     isa = XCBuildConfiguration;
     buildSettings = {
@@ -488,7 +490,7 @@ For example, the debug configuration has this as its target config:
     };
     name = Debug;
 };
-{{< / highlight >}}
+```
 
 ## PBXBuildPhase
 
@@ -508,7 +510,7 @@ Of these, the most interesting to us is PBXSourcesBuildPhase.
 
 Without a PBXSourcesBuildPhase, an Xcode project is just an expensive container.
 
-{{< highlight bash >}}
+```
 4273EAB3D49C30C00AC5E8F3 /* Sources */ = {
     isa = PBXSourcesBuildPhase;
     buildActionMask = 2147483647;
@@ -517,7 +519,7 @@ Without a PBXSourcesBuildPhase, an Xcode project is just an expensive container.
     );
     runOnlyForDeploymentPostprocessing = 0;
 };
-{{< / highlight >}}
+```
 
 This is just a list of PBXBuildFile entries, with a note as to whether this is done
 in all builds or just for deployment post-processing (e.g. a PBXCopyFilesBuildPhase
@@ -533,7 +535,7 @@ information actually needed to build it. The indirection is no doubt useful to A
 since the file entry is also used in a PBXGroup for display purposes.
 For convenience, we show the PBXBuildFile entry and its associated PBXFileReference entry.
 
-{{< highlight bash >}}
+```
 /* PBXBuildFile */
 36E0BEAEF615B5FB417FCCEE = {isa = PBXBuildFile; fileRef = 0E6510F6A5C575A340791736; };
 
@@ -545,7 +547,7 @@ For convenience, we show the PBXBuildFile entry and its associated PBXFileRefere
     path = ../src/Slurp.cpp;
     sourceTree = "<group>";
 };
-{{< / highlight >}}
+```
 
 Not everything is a source code file. We also link static libraries built from elsewhere.
 Note in this case that the reference is to a PBXReferenceProxy, indicating that this
@@ -556,7 +558,7 @@ I don't know what `remoteGlobalIDString` is, I can't find that GUID in any proje
 my hierarchy. Premake just assigns a value to it based on the hash of the path name (its
 idea of the hierarchy to this point).
 
-{{< highlight bash >}}
+```
 /* PBXBuildFile */
 FADCF8DBA93E5EC82C820F1B = {isa = PBXBuildFile; fileRef = 131E5623D4E73570AF0F6463; };
 
@@ -586,13 +588,13 @@ C48570AFF3172E7CF2D39EEF = {
     path = ../packages/__pkg__/zlib/project/zlib.xcodeproj;
     sourceTree = SOURCE_ROOT;
 };
-{{< / highlight >}}
+```
 
 Frameworks are semi-magic libraries with versioning and header files used with the
 libraries. For the build phase, this is linking a framework, so it just ends up directly
 at the PBXFileReference, no indirection needed.
 
-{{< highlight bash >}}
+```
 /* PBXBuildFile */
 F8E8DBA2B7DE2E6FF44F49E2 = {isa = PBXBuildFile; fileRef = 8D6BC6AAF7BB96D78F7B2CEA; };
 
@@ -604,13 +606,13 @@ F8E8DBA2B7DE2E6FF44F49E2 = {isa = PBXBuildFile; fileRef = 8D6BC6AAF7BB96D78F7B2C
     path = System/Library/Frameworks/Cocoa.framework;
     sourceTree = SDKROOT;
 };
-{{< / highlight >}}
+```
 
 ## XCConfigurationList
 
 An XCConfigurationList object is just a list of XCBuildConfiguration objects.
 
-{{< highlight bash >}}
+```
 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "cppget" */ = {
     isa = XCConfigurationList;
     buildConfigurations = (
@@ -620,7 +622,7 @@ An XCConfigurationList object is just a list of XCBuildConfiguration objects.
     defaultConfigurationIsVisible = 0;
     defaultConfigurationName = Debug;
 };
-{{< / highlight >}}
+```
 
 The `defaultConfigurationName` key indicates which configuration, by name, is the one to
 pick as the default when a project is opened for the first time.
@@ -633,7 +635,7 @@ information in the UI.
 An XCBuildConfiguration object contains the settings that describe the configuration. At its
 minimum, a build configuration looks like this:
 
-{{< highlight bash >}}
+```
         B3315B92708358DFD7FBE9D2 /* Debug */ = {
             isa = XCBuildConfiguration;
             buildSettings = {
@@ -641,7 +643,7 @@ minimum, a build configuration looks like this:
             };
             name = Debug;
         };
-{{< / highlight >}}
+```
 
 This is an example where a name needs to be unique, because, for example, the UI will look up
 a configuration by name and not by UUID. Although, it must be doing some disambiguation,
@@ -676,16 +678,16 @@ create a new project first, instead of creating a workspace and adding projects 
 
 The simplest possible arrangement is to have the following:
 
-{{< highlight bash >}}
+```
 one.xcodeproj/
 ├── project.pbxproj
 └── project.xcworkspace/
     └── contents.xcworkspacedata
-{{< / highlight >}}
+```
 
 where `project.xcworkspace/contents.xcworkspacedata` look like this:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
@@ -693,7 +695,7 @@ where `project.xcworkspace/contents.xcworkspacedata` look like this:
       location = "self:one.xcodeproj">
    </FileRef>
 </Workspace>
-{{< / highlight >}}
+```
 
 The `self` tag points to the top level of the `one.xcodeproj` directory. The `project.pbxproj` is
 as detailed above.

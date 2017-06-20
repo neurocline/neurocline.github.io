@@ -23,7 +23,7 @@ is 0 for the last byte and 1 for all other bytes.
 
 Reading and writing Varint-encoded numbers looks like this (warning: no checking! not production code!): 
 
-{{< highlight c++ >}}
+```c++
 void to_varint(uint64 n, unsigned char* buf)
 {
     while (n > 127)
@@ -46,7 +46,7 @@ uint64 from_varint(unsigned char* buf)
     n |= *buf << shift;
     return n;
 }
-{{< / highlight >}}
+```
 
 For signed numbers, it does what they call zig-zag encoding to interleave positive and negative numbers
 so that small negative numbers are still stored with a small number of bytes.
@@ -56,13 +56,13 @@ of the first byte. The math looks like this
 
 	zigzag = (n << 1) ^ (n >> (BIT_WIDTH - 1)
 
-where ```BIT_WIDTH``` is the number of bits in your fixed-width number (32-bit, 64-bit etc). Remember that
-arithmetic shift replicates the sign bit, so shifting right like this will create a number that is ```000...00```
-for positive numbers and ```111...11``` for negative numbers.
+where `BIT_WIDTH` is the number of bits in your fixed-width number (32-bit, 64-bit etc). Remember that
+arithmetic shift replicates the sign bit, so shifting right like this will create a number that is `000...00`
+for positive numbers and `111...11` for negative numbers.
 
 Reading and writing zig-zag encoded numbers looks like this (warning: no checking! not production code!):
 
-{{< highlight c++ >}}
+```c++
 void to_zigzag(int64 n, unsigned char* buf)
 {
     uint64 z = (n << 1) ^ (n >> (BIT_WIDTH - 1));
@@ -86,7 +86,7 @@ int64 from_zigzag(unsigned char* buf)
     z |= *buf << shift;
     return (z & 1) ? (z >> 1) ^ -1 : (z >> 1);
 }
-{{< / highlight >}}
+```
 
 A real codebase would combine both together, but it would also handle buffer over/underrun too.
 

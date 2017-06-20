@@ -8,8 +8,8 @@ url: /2015/09/29/python-threading-and-multiprocessing/
 
 The basic threading model in Python is extremely simple.
 
-{{< highlight c++ >}}
-# simmple thread example
+```c++
+# simple thread example
 
 import threading
 import time
@@ -21,7 +21,7 @@ for t in range(5):
     threading.Thread(target=myfunc, args=(t,)).start()
 
 print("I am not a thread")
-{{< / highlight >}}
+```
 
 Python threads have some advantages and disadvantages, and they spring from the same source;
 you can do threads, but only one thread can execute Python code at a time. There are still

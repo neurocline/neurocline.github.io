@@ -3,3 +3,4 @@ disablePathToLower: true
 languageCode: en-us
 title: Some Things Are Obvious
 SectionPagesMenu: main
+theme: hugo-neurocline

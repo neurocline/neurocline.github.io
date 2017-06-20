@@ -23,13 +23,13 @@ as of Vista, Mac OS X as of 10.5.
 I think that most operating system disable auto-tuning if you manually set socket
 buffer sizes. In BSD, this is done with setsockopt:
 
-{{< highlight c++ >}}
+```c++
 int bufferSize = 65536;
 int optSize = sizeof(bufferSize);
 setsockopt(sock, SOL_SOCKET, SO_SNDBUF, (char *)&bufferSize, optSize);
 bufferSize = 65536;
 setsockopt(sock, SOL_SOCKET, SO_RCVBUF, (char *)&bufferSize, optSize);
-{{< / highlight >}}
+```
 
 [Host Tuning](https://fasterdata.es.net/host-tuning/) - details for various operating systems on manual and automatic tuning.
 

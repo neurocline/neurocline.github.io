@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "A Survey of Programming Language Package Systems"
-date:   2016-02-09 12:20:00 PM
+title: "A Survey of Programming Language Package Systems"
+date: 2016-02-09T20:20:00Z
 categories: dev
 tags: package language
 short-description: A survey of the major packaging systems used in programming languages, from CTAN in 1992 to Rust in 2013; in order to support the next generations of packaging systems, we want to know what made previous ones successful.

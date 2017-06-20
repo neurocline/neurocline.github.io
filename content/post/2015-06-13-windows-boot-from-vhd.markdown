@@ -81,7 +81,7 @@ Detach VHD in Disk Management (right-click on a Disk to see this menu item).
 DiskPart can do many disk-related tasks, and more importantly, can be driven with scripts. For
 example, create this script
 
-{{< highlight bash >}}
+```
 create vdisk file=C:\VHD\Win10.vhd maximum=51200 type=fixed
 select vdisk file=C:\VHD\Win10.vhd
 attach vdisk
@@ -90,13 +90,13 @@ assign letter=v
 format quick label=vhd
 detach vdisk
 exit
-{{< / highlight >}}
+```
 
 and run it
 
-{{< highlight bash >}}
+```
 > diskpart /s makevhd.txt
-{{< / highlight >}}
+```
 
 This will create a 50 GB VHD file, and then create a single primary partition on it.
 

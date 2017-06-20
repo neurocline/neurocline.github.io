@@ -17,7 +17,7 @@ distinct types.
 
 When we restrict things to just structs and methods, there are few surprises. Let's look at a very simple example.
 
-{{< highlight go >}}
+```go
 package main
 
 import "fmt"
@@ -35,31 +35,31 @@ type Hatch struct {
 func (h *Hatch) Open() {
   fmt.Printf("opening the hatch\n")
 }
-{{< / highlight >}}
+```
 
 If you run this, you get
 
-{{< highlight bash >}}
+```
 opening the hatch
-{{< / highlight >}}
+```
 
-The function ```Open``` is a method with a pointer receiver, taking a pointer
-to a instance of type ```Hatch```. Although we create a pointer that is
-nil, the variable still has a type: (```*Hatch```). We can thus call the method
-```Open```; it gets a nil pointer, but we don't use that pointer in our code,
+The function `Open` is a method with a pointer receiver, taking a pointer
+to a instance of type `Hatch`. Although we create a pointer that is
+nil, the variable still has a type: (`*Hatch`). We can thus call the method
+`Open`; it gets a nil pointer, but we don't use that pointer in our code,
 so we don't crash.
 
 If we change the method to take a value receiver
 
-{{< highlight go >}}
+```go
 func (h Hatch) notify() {
     fmt.Printf("opening the hatch\n")
 }
-{{< / highlight >}}
+```
 
 then we will crash if we try to run this:
 
-{{< highlight bash >}}
+```
 panic: runtime error: invalid memory address or nil pointer dereference
 [signal 0xc0000005 code=0x1 addr=0x0 pc=0x401074]
 
@@ -67,7 +67,7 @@ goroutine 1 [running]:
 main.main()
         ./gotest/m.go:7 +0x34
 exit status 2
-{{< / highlight >}}
+```
 
 There's a simple reason, Go has a
 courtesy dereference so that a pointer-to-object can be used to invoke
@@ -78,7 +78,7 @@ Let's look at this further. Methods are just functions with an implicit
 first parameter that is the receiver object. These are equivalent in functionality and
 probably equivalent in code:
 
-{{< highlight go >}}
+```go
 // regular function
 func Open(h *Hatch) { ... }
 
@@ -90,7 +90,7 @@ func (h *Hatch) Open() { ... }
 
 var h *Hatch = nil
 h.Open()
-{{< / highlight >}}
+```
 
 The compiler is just matching up type signatures for receivers, not for full parameter
 lists; this is why Go claims it does not support overloading. In the context of how
@@ -118,7 +118,7 @@ Keep that in mind as we look at the four permutations:
 
 When we have a value sent to a value receiver, it's bland.
 
-{{< highlight go >}}
+```go
 // Go method
 func (h Hatch) Open() { ... }
 var h Hatch
@@ -128,13 +128,13 @@ h.Open()
 func Open(h Hatch)
 var h Hatch
 Open(h)
-{{< / highlight >}}
+```
 
 ### pointer type, pointer receiver
 
 When we have a pointer sent to a pointer receiver, it's as boring as the first case.
 
-{{< highlight go >}}
+```go
 // Go method
 func (h *Hatch) Open() { ... }
 var h *Hatch
@@ -144,7 +144,7 @@ h.Open()
 func Open(h *Hatch)
 var h *Hatch
 Open(h)
-{{< / highlight >}}
+```
 
 ### value type, pointer receiver
 
@@ -152,7 +152,7 @@ When we have a value sent to a pointer receiver, we need to manufacture a pointe
 works most of the time, but we can't always take the address of a value - for example,
 the number 42 is a constant and has no storage we can get the address of.
 
-{{< highlight go >}}
+```go
 // Go method
 func (h *Hatch) Open() { ... }
 var h Hatch
@@ -162,7 +162,7 @@ h.Open()
 func Open(h *Hatch)
 var h Hatch
 Open(&h)
-{{< / highlight >}}
+```
 
 ### pointer type, value receiver
 
@@ -170,7 +170,7 @@ When we send a pointer to a value receiver, we have to dereference the pointer.
 That makes sense, and that's why we can get a panic that would not happen with pointer
 receivers.
 
-{{< highlight go >}}
+```go
 // Go method
 func (h Hatch) Open() { ... }
 var h *Hatch = nil
@@ -180,7 +180,7 @@ h.Open()
 func Open(h Hatch)
 var h *Hatch = nil
 Open(*h)
-{{< / highlight >}}
+```
 
 Note that last line - we dereference the pointer to get the value, so that we can copy
 it when we call the function. If we have a nil pointer, we'll get an exception at this point.

@@ -16,14 +16,14 @@ The ```go``` tool finds files in relation to the ```$GOPATH``` environment varia
 and really wants to see a strucure like this at the root of ```$GOPATH``` (using one
 of my recent projects as an example)
 
-{{< highlight bash >}}
+```
 bin/
 pkg/
 src/
   github.com/
     catalog/
       ...
-{{< / highlight >}}
+```
 
 See [How to Write Go Code](https://golang.org/doc/code.html) for the official explanation.
 
@@ -58,8 +58,8 @@ files in the wrong place is easy), and relocating everything to suit Go is very 
 
 # Relative and absolute Go paths
 
-The ```go``` tool really likes absolute paths, and by absolute I mean paths that are relative
-to the ```$GOPATH``` root.
+The `go` tool really likes absolute paths, and by absolute I mean paths that are relative
+to the `$GOPATH` root.
 
 If you use absolute paths to build, then your built output goes in the ```bin/``` folder. If
 you use relative paths to build, then your built output goes next to the source. While that
@@ -74,7 +74,7 @@ built via relative paths.
 
 # Versioning and Go source
 
-```go get``` is useful, to a point. It can automatically fetch source packages for you.
+`go get` is useful, to a point. It can automatically fetch source packages for you.
 
 What you don't get is control over a version. And this is going to be important to let build
 servers automatically get and build projects, at least without a ton of pain.

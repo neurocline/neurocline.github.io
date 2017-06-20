@@ -48,17 +48,17 @@ Premake source, along with the online manual, has moved to GitHub; see [Premake 
 It's very easy to build - clone the repo, run an existing premake, and then build from the generated
 project:
 
-{{< highlight text >}}
-> git clone git@github:premake/premake-core.git
-> cd premake-core.git
-> C:\Dev\premake5\premake5.exe vs2013
+```
+$ git clone git@github:premake/premake-core.git
+$ cd premake-core.git
+$ premake5.exe vs2013
 Building configurations...
 Running action 'vs2013'...
 Generating Premake5.sln...
 Generating Premake5.vcxproj...
 Generating Premake5.vcxproj.filters...
 Done.
-{{< / highlight >}}
+```
 
 At this point, there is a Visual Studio 2013 solution in the root folder that you can open and
 build, or use msbuild from the command-line to build from it. And once you start using Premake,
@@ -70,11 +70,11 @@ If you have never built Premake from the given repo before, or you've changed th
 there's one final step to take, which is to embed the scripts in the executable. This copies
 all the Lua scripts into a script.c file that's then part of the binary.
 
-{{< highlight text >}}
->c:\dev\premake5\premake5.exe embed
+```
+$ premake5.exe embed
 Running action 'embed'...
 Writing scripts.c
-{{< / highlight >}}
+```
 
 Premake will load the loose scripts from disk if they exist, and since a lot of the Premake
 functionality is actually in the Lua scripts, this makes it easy to iterate quickly when adding
@@ -90,15 +90,15 @@ CMake).
 
 Get the libgit2 source from GitHub:
 
-{{< highlight text >}}
->git clone git@github.com:libgit2/libgit2.git
-cd libgit2.git
-{{< / highlight >}}
+```
+$ git clone git@github.com:libgit2/libgit2.git
+$ cd libgit2.git
+```
 
 Now create a file named premake5.lua in the root folder of the libgit2 project, with this as the
 contents:
 
-{{< highlight text >}}
+```lua
 solution "Libgit2"
     configurations { "Debug" }
     location ("build")
@@ -117,9 +117,9 @@ project "libgit2"
     configuration "Debug"
         targetdir "build/bin/debug"
         defines { "_DEBUG", "WIN32" }
-{{< / highlight >}}
+```
 
-Why ```premake5.lua```? This is the default name for a premake config script in Premake5. You can
+Why `premake5.lua`? This is the default name for a premake config script in Premake5. You can
 name it anything, but you'll then need to pass that name on the command-line, because Premake5
 isn't going to try to guess.
 
@@ -132,27 +132,27 @@ ok for now.
 
 Run Premake5 to generate a solution:
 
-{{< highlight text >}}
-> C:\Dev\premake5\premake5.exe vs2013
+```
+$ premake5.exe vs2013
 Building configurations...
 Running action 'vs2013'...
 Generating build/Libgit2.sln...
 Generating build/projects/libgit2.vcxproj...
 Generating build/projects/libgit2.vcxproj.filters...
 Done.
-{{< / highlight >}}
+```
 
 When you run this, you'll see that a build folder has been created, and inside that build folder
 is a Visual Studio solution and related project folder. All the source files are in that single
 project.
 
-{{< highlight text >}}
->dir build /s /b
+```
+$ dir build /s /b
 build\Libgit2.sln
 build\projects
 build\projects\libgit2.vcxproj
 build\projects\libgit2.vcxproj.filters
-{{< / highlight >}}
+```
 
 If you open the Libgit2.sln project, you'll see it's full of source and header files, arranged in
 folders that mimic the source tree layout. This is the default behavior.
@@ -160,18 +160,18 @@ folders that mimic the source tree layout. This is the default behavior.
 If you try building, it will "work" for some degree of work - that is, it will start compiling, but
 generate lots of errors because header files can't be found.
 
-Let's fix just the simplest error. The code expects a path to the include/ folder, because many of
-the includes are of the form ```#include "git2/common.h"```. Add this section right after the
-```files``` section in the premake5.lua file:
+Let's fix just the simplest error. The code expects a path to the `include/` folder, because many of
+the includes are of the form `#include "git2/common.h"`. Add this section right after the
+`files` section in the premake5.lua file:
 
-{{< highlight text >}}
+```lua
 includedirs
 {
     "../../include"
 }
-{{< / highlight >}}
+```
 
-Re-run the ```premake5.exe vs2013``` command. It will overwrite files in place, although if you're
+Re-run the `premake5.exe vs2013` command. It will overwrite files in place, although if you're
 like me, you'll just delete the whole build folder (always safe to do, since it's generated). Now
 open the project again.
 
@@ -181,9 +181,9 @@ describes files relative to itself. So, since the ```include/``` folder is at th
 as our ```premake5.lua``` file, we can just say ```"include"```. If you look in the project
 file, you'll see the actual include paths looks something like this
 
-{{< highlight text >}}
+```
 ..\..\include;%(AdditionalIncludeDirectories)
-{{< / highlight >}}
+```
 
 It's for reasons like this that using Premake even on a single platform can be a boost. If you're
 careful, your premake scripts will stay small and readable, and that can't be said for large
@@ -202,6 +202,8 @@ projects, because Xcode uses different names for things, and even has slightly d
 
 More to follow.
 
-[premake-download]: http://premake.github.io/download.html
-[premake-daily-windows]: http://sourceforge.net/projects/premake/files/Premake/nightlies/premake-dev-windows.zip/download
-[premake-github]: https://github.com/premake/premake-core
+[premake-download](http://premake.github.io/download.html)
+
+[premake-daily-windows](http://sourceforge.net/projects/premake/files/Premake/nightlies/premake-dev-windows.zip/download)
+
+[premake-github](https://github.com/premake/premake-core)

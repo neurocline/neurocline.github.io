@@ -39,20 +39,20 @@ since I've never used virtualenv before, here's my crib notes for Windows.
 
 ## Create new virtualenv environment
 
-{{< highlight bash >}}
+```
 C:\w>virtualenv sphinx
 Using base prefix 'c:\\python35'
 New python executable in C:\w\sphinx\Scripts\python.exe
 Installing setuptools, pip, wheel...done.
-{{< / highlight >}}
+```
 
 ## Activate environment
 
-{{< highlight bash >}}
+```
 C:\w>cd sphinx
 C:\w>Scripts\activate
 (sphinx) C:\w\sphinx>
-{{< / highlight >}}
+```
 
 The activate script alters your prompt to remind you that you are in the virtualenv
 environment.
@@ -62,7 +62,7 @@ environment.
 Once you've activated the environment, any new packages just go into that environment.
 That's the entire point and reason for using virtualenv.
 
-{{< highlight bash >}}
+```
 (sphinx) C:\w\sphinx>pip install sphinx
 Collecting sphinx
   Using cached Sphinx-1.4.8-py2.py3-none-any.whl
@@ -75,15 +75,15 @@ Building wheels for collected packages: MarkupSafe
 Successfully built MarkupSafe
 Installing collected packages: snowballstemmer, imagesize, alabaster, MarkupSafe, Jinja2, pytz, babel, Pygments, six, colorama, docutils, sphinx
 Successfully installed Jinja2-2.8 MarkupSafe-0.23 Pygments-2.1.3 alabaster-0.7.9 babel-2.3.4 colorama-0.3.7 docutils-0.12 imagesize-0.7.1 pytz-2016.7 six-1.10.0 snowballstemmer-1.2.1 sphinx-1.4.8
-{{< / highlight >}}
+```
 
 ## Deactivate environment
 
 You could just close the cmd shell you have open, or you could deactivate the virtualenv
 
-{{< highlight bash >}}
+```
 (sphinx) C:\w\doc>deactivate
-C:\w\doc>{{< / highlight >}}
+```
 
 ## Using Sphinx
 
@@ -116,7 +116,7 @@ I turn this into something others can read".
 The index.rst file in the root of your documentation tree is the top page and the master
 index all in one. My simple one looks like this
 
-{{< highlight bash >}}
+```
 .. Provenance documentation master file, created by
    sphinx-quickstart on Mon Nov  7 13:56:13 2016.
    You can adapt this file completely to your liking, but it should at least
@@ -141,7 +141,7 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-{{< / highlight >}}
+```
 
 This is the top-level page, so anything that's not a directive will show up in your
 output.

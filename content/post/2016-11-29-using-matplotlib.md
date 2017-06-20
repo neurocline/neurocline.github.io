@@ -14,7 +14,7 @@ a class of user that doesn't include me.
 I started with the simple declarative style via `matplotlib.pyplot`, but that quickly
 gets limited. It looks like this:
 
-{{< highlight python >}}
+```python
 import matplotlib
 import numpy
 matplotlib.use('Agg')
@@ -33,7 +33,7 @@ ax.ticklabel_format(useOffset=False)
 n = numpy.arange(len(d))
 plt.plot(d, n)
 plt.savefig(plot_name, bbox_inches='tight')
-{{< / highlight >}}
+```
 
 For example, without the ``useOffset=False`` bit, my X axis was numbered 0-5 with
 an offset written above it, rathern than 2012-2017 as I intended. I suppose this is
@@ -52,16 +52,16 @@ into the object layer anyway, in order to configure the X axis.
 One cool thing is that someone made an xkcd style for Matplotlib. Just wrap your
 code in this:
 
-{{< highlight python >}}
+```python
 with matplotlib.pyplot.xkcd():
     # your code here
-{{< / highlight >}}
+```
 
 and your graphics will have that hand-drawn xkcd style applied to them.
 
 Here is the example from the Matplotlib docs
 
-{{< highlight python >}}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -116,7 +116,7 @@ with plt.xkcd():
         ha='center')
 
 plt.show()
-{{< / highlight >}}
+```
 
 ## ggplot
 

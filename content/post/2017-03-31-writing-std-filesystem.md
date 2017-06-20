@@ -32,7 +32,7 @@ easier at the moment, since no vendor has yet promoted it out of experimental.
 This is somewhat defined for us in the standard. This goes in the namespace `std::filesystem`. We
 wrap it like this:
 
-{{< highlight c++ >}}
+```c++
 namespace std {
 namespace filesystem {
 inline namespace v1 {
@@ -40,14 +40,14 @@ inline namespace v1 {
 ... contents ...
 
 } } } // namespace std::fileystem::v1
-{{< / highlight >}}
+```
 
 Note the `inline namespace v1`. See [What are inline namespaces for?](http://stackoverflow.com/questions/11016220/what-are-inline-namespaces-for) for an explanation about using inline namespaces to help
 in API versioning.
 
 The classes in our namespace:
 
-{{< highlight c++ >}}
+```c++
 class path;
 class filesystem_error;
 class directory_entry;
@@ -60,7 +60,7 @@ enum class perms;
 enum class copy_options;
 enum class directory_options;
 typedef chrono::time_point<trivial-clock> file_time_type;
-{{< / highlight >}}
+```
 
 There are also a host of non-member functions to implement. We're going to group these by
 functionality, rather than address them all at once.
@@ -82,9 +82,9 @@ for something readable about `TrivialClock`.
 We could take the easy route. Since all the `chrono` clocks meet the `TrivialClock` requirements,
 we could just do this:
 
-{{< highlight c++ >}}
+```c++
 using file_time_type = std::chrono::time_point<std::chrono::system_clock>;
-{{< / highlight >}}
+```
 
 Let's call that the v0 implementation.
 
@@ -97,7 +97,7 @@ that I've ever heard of, a superset that is losslessly convertible.
 This one is easy, it's a mandated enum class. The values aren't mandated, but we'll put the exceptional
 case as -1 and then just number others starting with 0.
 
-{{< highlight c++ >}}
+```c++
 enum class file_type {
     not_found = -1,
     none = 0,
@@ -110,7 +110,7 @@ enum class file_type {
     socket,
     unknown,
 };
-{{< / highlight >}}
+```
 
 Note that we end our last enum item with a comma; this is a new best practice in my opinion, because
 it means that adding new items can't go awry or cause extra lines to be edited.
@@ -121,7 +121,7 @@ This one is also easy, another mandated enum class without mandated values. This
 means values will be combined together into a single field. So we just start
 with zero and roll up by powers of 2 to create distinct bitmaps.
 
-{{< highlight c++ >}}
+```c++
 enum class copy_options
 {
     none                    = 0,
@@ -143,7 +143,7 @@ enum class copy_options
     create_symlinks         = 0b010000000,       // 0x080,
     create_hardlinks        = 0b100000000,       // 0x100,
 };
-{{< / highlight >}}
+```
 
 Along with the enum class, we need some operators so that we can combine copy_options together; in the spec,
 it's stated as a requirement that the concept BitmaskType is supported: see [C++ concepts: BitmaskType](http://en.cppreference.com/w/cpp/concept/BitmaskType).
@@ -153,7 +153,7 @@ it's stated as a requirement that the concept BitmaskType is supported: see [C++
 This one is also easy, another mandated enum class but with mandated values and the operators to support
 the BitmaskType concept.
 
-{{< highlight c++ >}}
+```c++
 enum class perms
 {
     none                = 0,        // There are no permissions set for the file
@@ -184,7 +184,7 @@ enum class perms
     remove_perms        = 0x20000,  // permissions() shall bitwise-and the complement of perm argument's permissions bits to the file's current permission bits
     symlink_nofollow    = 0x40000,  // permissions() shall change the permissions of symbolic links.
 };
-{{< / highlight >}}
+```
 
 # directory_options
 
@@ -192,14 +192,14 @@ This one is also easy, another mandated enum class without mandated values. This
 means values will be combined together into a single field. So we just start with zero and roll up by powers
 of 2 to create distinct bitmaps, and add the operators as per BitmaskType.
 
-{{< highlight c++ >}}
+```c++
 enum class directory_options
 {
     none                        = 0,    // (Default) Skip directory symlinks, permission denied is an error
     follow_directory_symlink    = 0b01, // Follow rather than skip directory symlinks
     skip_permission_denied      = 0b10, // Skip directories that would otherwise result in permission denied
 };
-{{< / highlight >}}
+```
 
 # space_info
 
@@ -210,10 +210,10 @@ Specifically, `capacity` is the total size of the filesystem in bytes; `free` is
 unallocated part of the filesystem in bytes; and `available` is the number of bytes available to
 a non-super user. As such, `available` can be less than `free`.
 
-{{< highlight c++ >}}
+```c++
 struct space_info {
     uintmax_t capacity;
     uintmax_t free;
     uintmax_t available;
 };
-{{< / highlight >}}
+```

@@ -10,7 +10,7 @@ How should a package system for C++ work?
 
 Here's one ideal
 
-{{< highlight cpp >}}
+```c++
 #include "curl" // this is a package
 #include <iostream> // this is a system header
 
@@ -24,13 +24,13 @@ void main(int argc, char* argv[])
 	std::string body = CurlGet(argv[1]);
 	std::cout << body;
 }
-{{< / highlight >}}
+```
 
 This is a real program, except for one small detail.
 
-{{< highlight cpp >}}
+```c++
 #include "curl"
-{{< / highlight >}}
+```
 
 In an ideal world, this is all you would need to use Curl in your program; no
 downloading installing a Curl distribution, no adding of search path and linker
@@ -40,7 +40,7 @@ The function ```CurlGet``` isn't from the curl package, it's my code. I separate
 out just to make it clearer. Here it is, for completeness' sake. Put this together
 with the code above and a compiler that supports packages, and you get this:
 
-{{< highlight cpp >}}
+```c++
 size_t WriteStdString(void* contents, size_t size, size_t nmemb, void* userp)
 {
 	size_t bytes = size * nmemb;
@@ -74,7 +74,7 @@ std::string CurlGet(const char* url)
 	curl_global_cleanup();
 }
 
-{{< / highlight >}}
+```
 
 In our current world, if you have a computer without Curl on it, and are not
 running an operating system where Curl has been packaged up for you to grab,

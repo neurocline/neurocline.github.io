@@ -15,7 +15,7 @@ which means that templates can use it to control which template gets instantiate
 
 A modern version might look like this:
 
-{{< highlight c++ >}}
+```c++
 template<class T, T val>
 struct integral_constant
 {
@@ -31,7 +31,7 @@ template <bool B> using bool_constant = integral_constant<bool, B>;
 
 using true_type = bool_constant<true>;
 using false_type = bool_constant<false>;
-{{< / highlight >}}
+```
 
 The `bool_constant` specialization is provided as of C++17. However, except for the modern syntax
 (e.g. `using` instead of `typedef`), this template is basic C++.
@@ -44,7 +44,7 @@ specializations of `bool_constant`, itself a specialization of `integral_constan
 tag dispatching to select between two options at compile time. Let's say we have a print function and
 we want integer and floating point versions
 
-{{< highlight c++ >}}
+```c++
 template<typename T>
 void print_impl(T val, true_type)
 {
@@ -60,7 +60,7 @@ void print(T val)
 {
 	print_impl(val, is_integral<T>());
 }
-{{< / highlight >}}
+```
 
 Here, `is_integral` is a type trait that inherits from `bool_constant` and returns `true_type` if
 we have a type that is integral, e.g. `int`, `short`, etc. We could use normal overloading, but the promotion
@@ -77,21 +77,21 @@ C++17 has `void_t`:
 
 and this is simply:
 
-{{< highlight c++ >}}
+```c++
 template< class... >
 using void_t = void;
-{{< / highlight >}}
+```
 
 with the example being
 
-{{< highlight c++ >}}
+```c++
 template <typename T, typename = void>
 struct is_iterable : std::false_type {};
 template <typename T>
 struct is_iterable<T, std::void_t<decltype(std::declval<T>().begin()),
                                   decltype(std::declval<T>().end())>>
     : std::true_type {};
-{{< / highlight >}}
+```
 
 where `is_iterable` is a type trait and has a `true` value if type `T` is an iterable type, determined
 by the fact that 

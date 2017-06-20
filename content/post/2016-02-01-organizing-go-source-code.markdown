@@ -8,21 +8,21 @@ url: /2016/02/01/organizing-go-source-code/
 
 There are a handful of rules in Go that directly affect how the source code in your project is laid out.
 
-When using the ```go``` tool:
+When using the `go` tool:
 
 * all the files in a directory must be in the same package
 * all the files in a package must be in the same directory
 
-The ```go``` tool, when iterating, assumes that all files in a directory are in the same package. You'll get a compile
+The `go` tool, when iterating, assumes that all files in a directory are in the same package. You'll get a compile
 error otherwise. When told to target a specific file, this is not the case, but this is not the normal usage of
-the ```go``` tool. And from this consequence, all the files in a package need to be in the same directory.
+the `go` tool. And from this consequence, all the files in a package need to be in the same directory.
 
 One consequence of this is for executables - things you run. In Go, this is package main with func main().
 This means that the top-level source for each executable should be in its own directory even if a single file, and must
 be in its own directory if multiple files. In other words,
 if you have a suite of programs built from one source base, then you'll have something like this
 
-{{< highlight go >}}
+```go
 binaries/
   binary1/
     main.go
@@ -33,7 +33,7 @@ libs/
     subpkg1/
     subpkg2/
   package2/
-{{< / highlight >}}
+```
 
 There is no language-level mandate that all the files in a package are in the same directory - this is a tooling
 issue. On the other hand, it is the standard tooling at the moment.

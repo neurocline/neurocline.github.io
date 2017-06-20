@@ -37,7 +37,7 @@ There is the original kind of function, inherited from C, and still relevant tod
 It takes one or more parameters, and can return a value (which could be
 a reference or an efficient move of a value, and not just a copy of a value).
 
-{{< highlight c++ >}}
+```c++
 void printv(int param)
 {
     std::cout << param << std::endl;
@@ -54,7 +54,7 @@ int sum2(int augend, int addend)
 {
     return augend + addend;
 }
-{{< / highlight >}}
+```
 
 In C++, functions can be overloaded on number and type of parameter, but not on
 return type: originally, overloading worked because C++ did name mangling
@@ -64,7 +64,7 @@ of the name-mangling.
 OK, yes, it still works that way today, but there's no real need. We're smart
 people, and we could do overloading without needing name mangling.
 
-{{< highlight c++ >}}
+```c++
 void printv(int numerator, int denominator)
 {
     std::cout << numerator << "/" << denominator << std::endl;
@@ -81,14 +81,14 @@ void printv(color param)
     char* cnames[2] = { "red", "blue" };
     std::cout << cnames[param] << std::endl;
 }
-{{< / highlight >}}
+```
 
 You can overload on integral types that have promotion rules, but this
 can be tricky. You can declare the functions, and they'll get called, but
 unless you master the promotion rules, you can end up with situations
 where the wrong overload is called.
 
-{{< highlight c++ >}}
+```c++
 void printv(int param)
 {
     std::cout << param << " (int)" << std::endl;
@@ -105,7 +105,7 @@ int printone()
     printv(i);     // this prints "0 (short)"
     printv(i + 1); // this prints "1 (int)"
 }
-{{< / highlight >}}
+```
 
 ## Pointer to function
 
@@ -117,7 +117,7 @@ Just like we can have pointers to data types, we can have pointers to
 function types, assign bodies to pointers, and then invoke bodies through
 pointers.
 
-{{< highlight c++ >}}
+```c++
 void funcptr()
 {
     int(*pfact)(int) = nullptr; // a pointer to a function
@@ -127,15 +127,15 @@ void funcptr()
     pfact(10);
     (*pfact)(10); // dereference is allowed but not required
 }
-{{< / highlight >}}
+```
 
 The C++11 `decltype` keyword can come in handy when declaring function
 pointers. Since `decltype` returns the exact function type, we need to add a `*`
 to declare a pointer:
 
-{{< highlight c++ >}}
+```c++
 decltype(factorial) *pfact = nullptr; // copy function signature from factorial
-{{< / highlight >}}
+```
 
 ## Class member function
 
@@ -148,7 +148,7 @@ is applied automatically.
 
 Here we have a memoizing factorial implemented as a class:
 
-{{< highlight c++ >}}
+```c++
 class Factorial
 {
 public:
@@ -171,7 +171,7 @@ int printfact()
     Factorial f;
     printf("factorial of %d is %d\n", 9, ff.factorial(9));
 }
-{{< / highlight >}}
+```
 
 While the results are still out on object-oriented programming itself, the
 idea of structured programming is still running strong, and classes without

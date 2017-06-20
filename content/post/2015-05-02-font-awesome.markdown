@@ -23,19 +23,27 @@ yourself.
 
 I added this to my ```_includes/head.html``` template file:
 
-{{< highlight html >}}
+```html
 <link rel="stylesheet" href="{{ "/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
-{{< / highlight >}}
+```
 
 Here's a corny yet effective example:
 
 <i class="fa fa-refresh fa-4x fa-spin"></i>
 
-{{< highlight html >}}
+```html
 <i class="fa fa-refresh fa-4x fa-spin"></i>
-{{< / highlight >}}
+```
 
 I hope to have fun with this, in tasteful effective ways.
+
+#### Addendum 2017-06-18
+
+Hmm, this still works in Hugo, and I have no idea why, unless the converter somehow is adding
+my font-awesome CSS to the Hugo frontmatter? Hmm, when I look at the generated page, it has
+an include to `netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css`, not the
+one I had in my site. So it must be the theme I chose that decided to use font-awesome. And
+the answer is "yes".
 
 ## Reference
 

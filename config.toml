@@ -1,0 +1,16 @@
+title = "Some Things Are Obvious"
+baseURL = "http://neurocline.github.io"
+
+disablePathToLower = true
+languageCode = "en-us"
+# metaDataFormat = "toml"
+SectionPagesMenu = "main"
+uglyurls = true
+
+theme = "hugo-neurocline"
+# ignoreFiles = [ "\\.git" ]
+
+contentDir = "content"
+layoutDir = "layouts"
+publishDir = "public"
+themesDir = "themes"

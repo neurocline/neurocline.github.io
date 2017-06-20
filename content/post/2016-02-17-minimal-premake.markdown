@@ -10,11 +10,11 @@ This is part of a planned series of articles, discussing both usage of Premake a
 about Premake, what is bad), as well as usage and analysis of equivalent tools like CMake, SCons and Gyp.
 
 Premake is useful, and Premake 5 more so. With any tool, it's important to understand it. But it's also important
-to know how to use it properly. The apocryphal legend about ```make``` is that there is only one original
-```Makefile```, and all others are just edited copies of the ur-file. While not true in fact, it is true that
-```make``` is complex and most people who use it don't really understand what they are doing.
+to know how to use it properly. The apocryphal legend about `make` is that there is only one original
+`Makefile`, and all others are just edited copies of the ur-file. While not true in fact, it is true that
+`make` is complex and most people who use it don't really understand what they are doing.
 
-If you don't have a ```premake``` binary on your system and in your path, grab a copy from here:
+If you don't have a `premake` binary on your system and in your path, grab a copy from here:
 [https://premake.github.io/download.html](https://premake.github.io/download.html). I strongly suggest Premake 5.0, which while
 listed as alpha is still stable (Blizzard has been using it for the past 6 months). The examples here start
 with Visual Studio, and then move on to XCode and Gmake.
@@ -24,16 +24,16 @@ with Visual Studio, and then move on to XCode and Gmake.
 Let's look at Premake through the filter of "what is the simplest Premake file we can make?". We're going to
 use it to build a single-file project. Here's the layout for our working folder:
 
-{{< highlight text >}}
+```
 test/
 |-- premake-minimal.lua
 |-- src/
     |-- main.cpp
-{{< / highlight >}}
+```
 
-Our ```main.cpp``` file looks like this:
+Our `main.cpp` file looks like this:
 
-{{< highlight c++ >}}
+```c++
 #include <iostream>
 
 int main(int argc, char* argv[])
@@ -41,39 +41,39 @@ int main(int argc, char* argv[])
   std::cout << "Hello\n";
   return 0;
 }
-{{< / highlight >}}
+```
 
-This is the smallest ```premake-minimal``` file; every line in here is necessary, as far as I can tell:
+This is the smallest `premake-minimal` file; every line in here is necessary, as far as I can tell:
 
-{{< highlight lua >}}
+```lua
 solution "mysolution"
     configurations { "Debug" }
     project "myproject"
         kind "ConsoleApp"
         files { "src/main.cpp" }
-{{< / highlight >}}
+```
 
 First off, indentation in Premake scripts is arbitrary; Premake scripts are just Lua scripts with predefined
 behavior, and Lua scripts are agnostic to whitespace (think C, not Python). The indentation is chosen to
 show meaning and ownership, but to Premake, a file with none of the above indentation would mean the same thing.
-This is important to keep in mind for future features like ```filter```.
+This is important to keep in mind for future features like `filter`.
 
 All Premake scripts declare a single solution.
 
-{{< highlight lua >}}
+```lua
 solution "mysolution"
-{{< / highlight >}}
+```
 
-The word ```solution``` comes from its original Visual Studio
-focus; supposedly, newer Premake versions are now preferring ```workspace```, with ```solution``` as a synonym.
+The word `solution` comes from its original Visual Studio
+focus; supposedly, newer Premake versions are now preferring `workspace`, with `solution` as a synonym.
 The name you give your solution is, while arbitrary, also practical: this is the name given to the generated
 solution/workspace/makefile, and (where relevant), is also the name that shows up when you open your solution.
 
-Your Premake scripts must have one or more ```configurations```; Premake has no defaults.
+Your Premake scripts must have one or more `configurations`; Premake has no defaults.
 
-{{< highlight lua >}}
+```lua
 configurations { "Debug" }
-{{< / highlight >}}
+```
 
 Configurations are sets of build options that
 can cut across targets. The name configuration comes from Visual Studio; Xcode also calls them configurations,
@@ -81,38 +81,38 @@ although I think that might be recent. In makefiles, configurations are a Premak
 
 A solution contains one or more projects.
 
-{{< highlight lua >}}
+```lua
 project "myproject"
-{{< / highlight >}}
+```
 
-Likewise, the word ```project``` shows Visual Studio bias, but is a reasonable concept (for Visual Studio builds,
-each ```project``` section generates a corresponding .vcxproj file); other build systems might
+Likewise, the word `project` shows Visual Studio bias, but is a reasonable concept (for Visual Studio builds,
+each `project` section generates a corresponding .vcxproj file); other build systems might
 call this a target. Like with solution, the name you give a project is both arbitrary and practical; any generated
 project file (just for Visual Studio, as far as I know) will have this name, and when open in an editor, the project
 will present this name.
 
-A project need a ```kind```, which declares what type of thing to build:
-choices are ```StaticLib``` for
-static libraries, ```SharedLib``` for shared libraries (called DLLs on Windows), ```ConsoleApp``` for console applications,
-and ```WindowedApp``` for apps that run in a window (mostly a distinction for Windows and Mac OS X). Premake is
+A project need a `kind`, which declares what type of thing to build:
+choices are `StaticLib` for
+static libraries, `SharedLib` for shared libraries (called DLLs on Windows), `ConsoleApp` for console applications,
+and `WindowedApp` for apps that run in a window (mostly a distinction for Windows and Mac OS X). Premake is
 used for building code projects, and this shows up in the set of items for kind.
 
 Finally, a project has to reference files, or it does nothing. This is the one piece that is optional, we
 could have made a project that has no source; but there's little point to this. Note that we reference files relative to
-where the premake script is found. In this case, we just have the single file ```src/main.cpp```, but this could be
+where the premake script is found. In this case, we just have the single file `src/main.cpp`, but this could be
 an entire comma-separated list of files.
 
-Use premake to generate make system files from this script; the parameter ```--file=<PREMAKE-SCRIPT>``` is optional
-if your premake script has the default name, which for Premake 5 is ```premake5.lua```.
+Use premake to generate make system files from this script; the parameter `--file=<PREMAKE-SCRIPT>` is optional
+if your premake script has the default name, which for Premake 5 is `premake5.lua`.
 
-{{< highlight bash >}}
-C:\test> premake5.exe --file=premake-minimal.lua vs2013
-{{< / highlight >}}
+```
+$ premake5.exe --file=premake-minimal.lua vs2013
+```
 
 This will create a Visual Studio 2013 project that you can open and compile. After building, you should see
 output something like this:
 
-{{< highlight text >}}
+```
 test/
 |-- bin/
     |-- Debug/
@@ -130,7 +130,7 @@ test/
 |-- premake-minimal.lua
 |-- src/
     |-- main.cpp
-{{< / highlight >}}
+```
 
 This will look slightly different if you use a different version of Visual Studio.
 
@@ -141,13 +141,13 @@ sensible defaults while letting you override them if you want or need to.
 
 Of course, you would never make even a simple project this way. So what should we add?
 
-First, we can control where the generated project files go. The Premake directive is ```location (<PATH>)```; this
-sets the base location for all generated output. Let's place our generated project files in a ```build``` folder
+First, we can control where the generated project files go. The Premake directive is `location (<PATH>)`; this
+sets the base location for all generated output. Let's place our generated project files in a `build` folder
 (foreshadowing: unless we specify otherwise, all compiler outputs will go here too).
 
 So we update our premake script to put generated files in this location:
 
-{{< highlight lua >}}
+```lua
 solution "mysolution"
     configurations { "Debug" }
     location ("build")
@@ -155,24 +155,24 @@ solution "mysolution"
     project "myproject"
         kind "ConsoleApp"
         files { "src/main.cpp" }
-{{< / highlight >}}
+```
 
 and (after throwing away all previous artifacts so we don't confuse ourselves), re-generate:
 
-{{< highlight bash >}}
-C:\test> premake5.exe --file=premake-minimal.lua vs2013
-{{< / highlight >}}
+```
+$ premake5.exe --file=premake-minimal.lua vs2013
+```
 
-After running this, you'll see a ```build/``` directory with files in it; I won't list those files again, our
+After running this, you'll see a `build/` directory with files in it; I won't list those files again, our
 previous list suffices.
 
-{{< highlight text >}}
+```
 test/
 |-- build/
 |-- premake-minimal.lua
 |-- src/
     |-- main.cpp
-{{< / highlight >}}
+```
 
 As well as Premake-generated files, all the files that Visual Studio creates are now tucked away in this build folder.
 A big advantage to doing this is that all build artifacts
@@ -183,10 +183,10 @@ facilitate a clean build.
 
 If you try to debug with this project in Visual Studio, you'll see Visual Studio complaining that it can't find
 the debug symbols for your program. Premake by default does not create projects that generate debug symbols. Let's fix
-that. The premake directive for this is ```flags { "Symbols" }```. The ```flags``` keyword sets some Premake-specific
-values. The ```"Symbols"``` flag means "set up project to generate debug symbols".
+that. The premake directive for this is `flags { "Symbols" }`. The `flags` keyword sets some Premake-specific
+values. The `"Symbols"` flag means "set up project to generate debug symbols".
 
-{{< highlight lua >}}
+```lua
 solution "mysolution"
     configurations { "Debug" }
     location ("build")
@@ -195,15 +195,15 @@ solution "mysolution"
         kind "ConsoleApp"
         files { "src/main.cpp" }
         flags { "Symbols" }
-{{< / highlight >}}
+```
 
-Now, when we re-generate (throwing away our old ```build/``` directory is not strictly necessary) and rebuild,
+Now, when we re-generate (throwing away our old `build/` directory is not strictly necessary) and rebuild,
 we'll have debug symbols in our project.
 
 We can add a Release configuration easily enough. Let's also set it up so that the Debug configuration generates debug
 symbols, but the Release configuration does not. Also, we want the Release configuration to generated optimized code.
 
-{{< highlight lua >}}
+```lua
 solution "mysolution"
     configurations { "Debug", "Release" }
     location ("build")
@@ -219,23 +219,23 @@ solution "mysolution"
             defines { "NDEBUG" }    
             optimize "On"
         filter {}
-{{< / highlight >}}
+```
 
-This introduces a new Premake feature called ```filter```; any settings that appear after ```filter``` will only be
-applied to the subset of builds that match the keywords in the filter. Our first filter, ```configurations:Debug```,
-means that subsequent lines only apply to configuration ```Debug```. The ```defines``` directive introduces a C
-preprocessor define ```_DEBUG``` into our debug configuration, and then the ```flags { "Symbols" }``` directive turns
+This introduces a new Premake feature called `filter`; any settings that appear after `filter` will only be
+applied to the subset of builds that match the keywords in the filter. Our first filter, `configurations:Debug`,
+means that subsequent lines only apply to configuration `Debug`. The `defines` directive introduces a C
+preprocessor define `_DEBUG` into our debug configuration, and then the `flags { "Symbols" }` directive turns
 on generating of debug symbols just for our debug configuration.
 
 Filters stay in effect until removed or replaced. The way to remove a filter is to just "apply" the empty filter. At the
-end of our block, you'll see ```filter {}```. In our very short premake script, this is not needed, but it's a good
+end of our block, you'll see `filter {}`. In our very short premake script, this is not needed, but it's a good
 practice to follow, because it will be essential in large premake scripts, especially ones that include other scripts.
 The best way to visualize this is to remove all the indentation from your premake script. Now it's clear that filters
 are in effect until removed; the indentation is fooling your brain into thinking there is some sort of scope.
 
 Filters can replace other filters. That's why we don't bother resetting the filter before applying our second filter,
-```filter "configuration:Release"```. This just replaces the debug filter. And like before, our ```NDEBUG``` symbol
-is only defined for the release configuration. The directive ```optimize "On"``` is how you tell Premake to do whatever
+`filter "configuration:Release"`. This just replaces the debug filter. And like before, our `NDEBUG` symbol
+is only defined for the release configuration. The directive `optimize "On"` is how you tell Premake to do whatever
 it takes to configure for optimized builds. This is the cross-platform and generic way; more complex projects may
 wish to directly issue compiler flags, but that requires per-build-platform sections. We'll get there eventually, but
 not just yet.
@@ -247,18 +247,18 @@ symbols but has optimized code.
 ## Multiple source files
 
 The final thing we're going to cover in our minimal Premake project is on specifying source files. While it is
-possible to list every file in our ```files``` directive, we can use wildcards, including recursing through
+possible to list every file in our `files` directive, we can use wildcards, including recursing through
 multiple layers of directories:
 
-{{< highlight lua >}}
+```lua
 files { "**.cpp", "**.h", "**.c" }
-{{< / highlight >}}
+```
 
-The new files line will add any .cpp, .h, or .c files found anywhere in the ```src/``` directory. By default, Premake
+The new files line will add any .cpp, .h, or .c files found anywhere in the `src/` directory. By default, Premake
 will try to be nice and will create groupings in the generated projects to match the directory structure. As long as
 you are disciplined and don't keep stray files in your workspace, you may find you never need explicit listing of files
-in the premake script. Note that the first level isn't replicated in the project file - ```main.cpp``` shows up at the top
-level, and not inside a ```src``` group. If you add more files and directories to your ```src``` folder, you'll see
+in the premake script. Note that the first level isn't replicated in the project file - `main.cpp` shows up at the top
+level, and not inside a `src` group. If you add more files and directories to your `src` folder, you'll see
 those files put into groups named to match the directories.
 
 So, that's it. There are the basics of Premake that will serve you for small to medium projects. You'll find that it's
@@ -266,9 +266,9 @@ far easier to write a quick Premake script than to manually construct a Visual S
 also removes one small but important barrier to being cross-platform. Let's copy our source files to a Mac, and grab
 a Mac version of the premake binary.
 
-{{< highlight bash >}}
-test$ premake5 --file=premake-minimal.lua xcode4
-{{< / highlight >}}
+```
+$ premake5 --file=premake-minimal.lua xcode4
+```
 
 Success! We have a build/mine.xcodeproj that we can build and debug and run. And this is why people like using
 Premake (or CMake, or Scons, or Gyp), because there are many projects that are cross-platform.
@@ -276,11 +276,11 @@ Premake (or CMake, or Scons, or Gyp), because there are many projects that are c
 And, for fun, we can generate a makefile project that is consumed by GNU Make (gmake). We'll do this on the Mac,
 although with a little tweaking, you could turn it into a makefile that Windows NMake could consume.
 
-{{< highlight bash >}}
-test$ premake5 --file=premake-minimal.lua gmake
-{{< / highlight >}}
+```
+$ premake5 --file=premake-minimal.lua gmake
+```
 
-And, if we look in our ```build/``` directory, we'll see a makefile named ```Makefile```.
+And, if we look in our `build/` directory, we'll see a makefile named `Makefile`.
 
 ## Identifying boilerplate
 
@@ -292,26 +292,26 @@ unique to my project. This has to be balanced against the needs of syntax and se
 Looking at our minimal project, there is some boilerplate related to how we define debug and release
 builds. For example:
 
-{{< highlight lua >}}
+```lua
 defines { "NDEBUG" }    
-{{< / highlight >}}
+```
 
-Every C/C++ project I make that uses the standard C library needs to have ```NDEBUG``` defined for
+Every C/C++ project I make that uses the standard C library needs to have `NDEBUG` defined for
 non-debug builds. And Microsoft long ago introduced a parallel construction, every debug build should
-have ```_DEBUG``` defined (I suppose they didn't like ```#ifndef NDEBUG``` as a guard).
+have `_DEBUG` defined (I suppose they didn't like `#ifndef NDEBUG` as a guard).
 
 This is right on the edge of boilerplate, because Premake doesn't have any idea of predefined meaning
 for configurations, so how does Premake now that my config is debug or release? However, and also
 looking at symbols and optimization, there are common idioms. Maybe we should have been able to
-introduce all of them at once. This makes sense given that ```optimize "On"``` itself is a collection
+introduce all of them at once. This makes sense given that `optimize "On"` itself is a collection
 of predefined options for what "optimized" means.
 
 One way would have been to attach information to a configuration. Doing it in a filter is one way, but
 verbose. What if we just told it when we declared the configurations.
 
-{{< highlight lua >}}
+```lua
 configurations { ["Debug"] = "debug", ["Release"] = "release" }
-{{< / highlight >}}
+```
 
 And if the configuration name matches one of our sets (built-in or not), then we wouldn't need to
 specify this. In the above, I'm saying that the "debug" set is "#define _DEBUG, build debug symbols",
@@ -330,7 +330,7 @@ Here's a commented version of the minimal premake script, usable as a standalone
 is Lua, we can comment it, and we could even compose it as functions (which we would do for a very large
 project).
 
-{{< highlight lua >}}
+```lua
 -- A solution is the top-level entity in Premake. In Visual Studio, this
 -- maps to a Visual Studio solution file (.sln). In XCode, this maps
 -- to an XCode workspace (.xcworkspace). In make, this is a makefile.
@@ -380,7 +380,7 @@ solution "mysolution"
         -- filter as soon as we no longer need it; the way to do this is to say
         -- "filter nothing".
         filter {}
-{{< / highlight >}}
+```
 
 ## Reference
 

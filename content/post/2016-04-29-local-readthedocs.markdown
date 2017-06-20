@@ -16,9 +16,9 @@ I'm on Windows 7, behind the times a bit (Windows 10 is nicer).
 Following [Installation](http://read-the-docs.readthedocs.io/en/latest/install.html) from ReadTheDocs. Hmm,
 never used `virtualenv` before.
 
-{{< highlight bash >}}
+```
 pip install virtualenv
-{{< / highlight >}}
+```
 
 and then a little Stack Overflow
 
@@ -26,7 +26,7 @@ and then a little Stack Overflow
 
 leads me to do
 
-{{< highlight bash >}}
+```
 virtualenv rtd
 cd rtd
 Scripts\activate.bat
@@ -35,34 +35,34 @@ cd checkouts
 git clone https://github.com/rtfd/readthedocs.org.git
 cd readthedocs.org
 pip install -r requirements.txt
-{{< / highlight >}}
+```
 
 Total time to this point, less than 5 minutes. Now we do some database stuff, apparently.
 
-{{< highlight bash >}}
+```
 manage.py migrate
-{{< / highlight >}}
+```
 
 Hmm, no Windows support?
 
-{{< highlight bash >}}
+```
 (rtd) C:\projects\python\rtd\checkouts\readthedocs.org>manage.py migrate
 Traceback (most recent call last):
   File "C:\projects\python\rtd\checkouts\readthedocs.org\manage.py", line 9, in <module>
     from django.core.management import execute_from_command_line
 ImportError: No module named django.core.management
-{{< / highlight >}}
+```
 
 And, StackOverflow tells me that this actually means I don't have django installed. Hmm, I thought that
 the `pip install -r requirements.txt` line was meant to install Django.
 
 Ah, it did, but I didn't pay attention to errors in the `pip install` output
 
-{{< highlight bash >}}
+```
 HTTP error 500 while getting https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5=de307d2771370cbbdb866282a6093fc9 (from https://pypi.python.org/simple/lxml/)
 Could not install requirement lxml==3.3.5 from https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5=de307d2771370cbbdb866282a6093fc9 (from -r requirements/pip.txt (line 22)) because of error 500 Server Error: Internal Server Error for url: https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl
 Could not install requirement lxml==3.3.5 from https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5=de307d2771370cbbdb866282a6093fc9 (from -r requirements/pip.txt (line 22)) because of HTTP error 500 Server Error: Internal Server Error for url: https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl for URL https://pypi.python.org/packages/e0/88/a696ff37ef87e335f937eadec1bbbf3a014a07c3b7f2ce3ab563799503d1/lxml-3.3.5-cp27-none-win32.whl#md5=de307d2771370cbbdb866282a6093fc9 (from https://pypi.python.org/simple/lxml/)
-{{< / highlight >}}
+```
 
 This is annoying.
 
@@ -73,23 +73,23 @@ Apparently, this is because you can't just `pip install lxml` on Windows.
 Although, I'm not sure that's what it means, now that I think about it, that's silly, I think that post is
 just if you try to build from source. I was able to do this
 
-{{< highlight bash >}}
+```
 $ pip install
 Collecting lxml
   Downloading lxml-3.6.0-cp27-none-win32.whl (3.0MB)
     100% |################################| 3.1MB 261kB/s
 Installing collected packages: lxml
 Successfully installed lxml-3.6.0
-{{< / highlight >}}
+```
 
 and it got and installed the latest version. So maybe it's just that there no longer is a 3.3.5 version
 on PyPI. And that appears to be the case, the oldest version listed there is 3.4.4.
 
 So what if I edit requirements/pip.txt? Can I get a working build?
 
-{{< highlight bash >}}
+```
 pip install -r requirements.txt
-{{< / highlight >}}
+```
 
 Hmm, should I have uninstalled lxml 3.6.0? It seems to be downloading stuff. Also, it looks like there was a heck
 of a lot more to install. Holy crap. Virtualenv may be cool and all, but it's like Docker, a cool solution for
@@ -97,7 +97,7 @@ a problem that shouldn't exist in the first place.
 
 Wow, this is annoying. A nice, nasty error at maybe the end of install
 
-{{< highlight bash >}}
+```
 Exception:
 Traceback (most recent call last):
   File "c:\projects\python\rtd\lib\site-packages\pip\basecommand.py", line 209,
@@ -148,7 +148,7 @@ p\\pip-09ja6p-uninstall\\projects\\python\\rtd\\scripts\\pip.exe'
 You are using pip version 8.0.2, however version 8.1.1 is available.
 You should consider upgrading via the 'python -m pip install --upgrade pip' comm
 and.
-{{< / highlight >}}
+```
 
 It looks like it tried to uninstall a running program. And why the heck is it trying to run something from
 a temp folder? Ugly.
@@ -156,26 +156,27 @@ a temp folder? Ugly.
 I'm building up notes for a second try (because maybe I broke my virtualenv Python folder), but let's continue.
 Back to the database init.
 
-{{< highlight bash >}}
+```
 manage.py migrate
-{{< / highlight >}}
+```
 
 Hmm, same error as before.
 
+``
 (rtd) C:\projects\python\rtd\checkouts\readthedocs.org>manage.py migrate
 Traceback (most recent call last):
   File "C:\projects\python\rtd\checkouts\readthedocs.org\manage.py", line 9, in <module>
     from django.core.management import execute_from_command_line
 ImportError: No module named django.core.management
+```
 
 Interestingly, I don't see django installed in my virtualenv folder. Isn't it supposed to be?
 The progress from the `pip install -r requirements.txt` claimed that it download Django
 
-{{< highlight bash >}}
+```
 Collecting django==1.8.3 (from -r requirements/pip.txt (line 9))
   Downloading Django-1.8.3-py2.py3-none-any.whl (6.2MB)
-    100% |################################| 6.2MB 161kB/s
-{{< / highlight >}}
+```
 
 but I see no evidence of it anywhere. I see a bunch of other *.whl files
 in `checkouts\readthedocs.org\deploy\wheels`. I don't know enough about Python, but it seems
@@ -185,7 +186,7 @@ things, I don't see many of the .whl files in there.
 Maybe they went somewhere else on the hard disk? Temp folder? There are Django wheels in there, but
 not for Django itself.
 
-{{< highlight bash >}}
+```
 c:\Users\bfitz\AppData\Local\pip>dir *django* /s /b
 c:\Users\bfitz\AppData\Local\pip\cache\wheels\21\79\c5\7e4204d7cc5dbb1c9941de3e9
 c18106417f30dd9179c892ab2\django_haystack-2.1.0-cp27-none-any.whl
@@ -209,12 +210,12 @@ c:\Users\bfitz\AppData\Local\pip\cache\wheels\f0\bc\87\8927de315c2f138f1811d3e6a
 ccf5f40326d718f641972f713\django_cors_headers-0.13-cp27-none-any.whl
 c:\Users\bfitz\AppData\Local\pip\cache\wheels\f6\04\64\ef5dc0eea5c486d22ffebb1c6
 1fac5653d406a6713a5077d39\django_annoying-0.8.4-cp27-none-any.whl
-{{< / highlight >}}
+```
 
 Maybe I should go install it on a Mac instead? Or in a Linux VM? Or even just on a Linux box?
 
 I'm done for now. Temporarily defeated.
 
-{{< highlight bash >}}
+```
 (rtd) C:\projects\python\rtd>Scripts\deactivate.bat
-{{< / highlight >}}
+```

@@ -23,16 +23,16 @@ a workspace, it's just embedded inside your project file. Here's the project vis
 
 On disk, the project looks like this (ignoring irrelevant files):
 
-{{< highlight bash >}}
+```
 xplore.xcodeproj/
 ├── project.pbxproj
 └── project.xcworkspace
     └── contents.xcworkspacedata
-{{< / highlight >}}
+```
 
 `contents.xcworkspacedata` looks like this:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
@@ -40,7 +40,7 @@ xplore.xcodeproj/
       location = "self:xplore.xcodeproj">
    </FileRef>
 </Workspace>
-{{< / highlight >}}
+```
 
 Note that the project location is `self:xplore.xcodeproj`. I'm guessing that `self` in this context
 means the directory containing the opened project file. In this case, we're literally
@@ -67,14 +67,14 @@ has 'A' characters.
 
 On disk, we now have a named workspace visible in the Finder:
 
-{{< highlight bash >}}
+```
 xplore.xcworkspace/
 └── contents.xcworkspacedata
-{{< / highlight >}}
+```
 
 `contents.xcworkspacedata` looks like this:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
@@ -82,7 +82,7 @@ xplore.xcworkspace/
       location = "group:xplore.xcodeproj">
    </FileRef>
 </Workspace>
-{{< / highlight >}}
+```
 
 Note that the location is now `group:xplore.xcodeproj`. This time, our base is the directory containing
 the opened workspace file.
@@ -94,16 +94,16 @@ workspace or hosting its own embedded workspace. Let's walk through it a bit.
 
 This is the on-disk layout, ignoring non-important files:
 
-{{< highlight bash >}}
+```
 xplore.xcodeproj
 └── project.pbxproj
-{{< / highlight >}}
+```
 
 The project file itself is the `project.pbxproj` file inside the xplore.xcodeproj package.
 
 This is the top-level view of a project file, ignoring the contents of the `objects` key:
 
-{{< highlight bash >}}
+```
 // !$*UTF8*$!
 {
     archiveVersion = 1;
@@ -115,7 +115,7 @@ This is the top-level view of a project file, ignoring the contents of the `obje
     };
     rootObject = 999A68361CC86ECD0001FC48 /* Project object */;
 }
-{{< / highlight >}}
+```
 
 This is using the text version of NeXt/Mac OS X plist files; this format is now obsolete except
 for Xcode, and I think Xcode 7 is now switching to XML, which is a pity, because the text version
@@ -144,7 +144,7 @@ be forgiving, as long as the uuids don't collide.
 `rootObject` points to a `PBXProject` object that is the root for this project. There's only one
 `PBXProject` object in our project file, and this is typical.
 
-{{< highlight bash >}}
+```
 /* Begin PBXProject section */
         999A68361CC86ECD0001FC48 /* Project object */ = {
             isa = PBXProject;
@@ -173,12 +173,12 @@ be forgiving, as long as the uuids don't collide.
             );
         };
 /* End PBXProject section */
-{{< / highlight >}}
+```
 
 `mainGroup` is the `PBXGroup` that is the root of the displayed items. Don't confuse this with build
 instructions; this is purely for visual looks.
 
-{{< highlight bash >}}
+```
 /* Begin PBXGroup section */
         999A68351CC86ECD0001FC48 = {
             isa = PBXGroup;
@@ -189,11 +189,11 @@ instructions; this is purely for visual looks.
             sourceTree = "<group>";
         };
 ...
-{{< / highlight >}}
+```
 
 Groups can contain files and more groups. The main group contains two more groups:
 
-{{< highlight bash >}}
+```
 ...
         999A683F1CC86ECD0001FC48 /* Products */ = {
             isa = PBXGroup;
@@ -212,12 +212,12 @@ Groups can contain files and more groups. The main group contains two more group
             sourceTree = "<group>";
         };
 /* End PBXGroup section */
-{{< / highlight >}}
+```
 
 Each of these groups contain files - or rather, `PBXFileReference` objects, which actually hold the
 information about files:
 
-{{< highlight bash >}}
+```
 /* Begin PBXFileReference section */
         999A683E1CC86ECD0001FC48 /* xplore */ = {
             isa = PBXFileReference;
@@ -233,7 +233,7 @@ information about files:
             sourceTree = "<group>";
         };
 /* End PBXFileReference section */
-{{< / highlight >}}
+```
 
 For some reason, this is the one dictionary that Xcode puts into a single-line flattened form,
 so for readability, I've shown the `PBXFileReference` items in indented form, instead of what's in the
@@ -247,9 +247,9 @@ If you were to rearrange the order of the items in `mainGroup`, then the GUI out
 
 Going back to the `PBXProject` object, note that there is one other group that gets top billing, Products:
 
-{{< highlight bash >}}
+```
             productRefGroup = 999A683F1CC86ECD0001FC48 /* Products */;
-{{< / highlight >}}
+```
 
 In Xcode parlance, products are the things that are built. Products are built by targets, and configurations
 are orthogonal groups of build settings that can be applied to any number of targets or projects.
@@ -262,7 +262,7 @@ project configurations available, and `targets`, which is the list of build targ
 
 In this simple project, we have one build target
 
-{{< highlight bash >}}
+```
 /* Begin PBXProject section */
         999A68361CC86ECD0001FC48 /* Project object */ = {
 ...
@@ -271,11 +271,11 @@ In this simple project, we have one build target
             );
         };
 /* End PBXProject section */
-{{< / highlight >}}
+```
 
 This points to a `PBXNativeTarget` object, which describes how to build a native Mac OS X binary:
 
-{{< highlight bash >}}
+```
 /* Begin PBXNativeTarget section */
         999A683D1CC86ECD0001FC48 /* xplore */ = {
             isa = PBXNativeTarget;
@@ -295,7 +295,7 @@ This points to a `PBXNativeTarget` object, which describes how to build a native
             productType = "com.apple.product-type.tool";
         };
 /* End PBXNativeTarget section */
-{{< / highlight >}}
+```
 
 Once again, we have a reference `productReference` to the Products group, presumably because that's
 how Xcode finds where to put the built target.
@@ -309,7 +309,7 @@ for a bit.
 
 The project configurations are in a `XCConfigurationList`:
 
-{{< highlight bash >}}
+```
 /* Begin XCConfigurationList section */
         999A68391CC86ECD0001FC48 /* Build configuration list for PBXProject "xplore" */ = {
             isa = XCConfigurationList;
@@ -321,7 +321,7 @@ The project configurations are in a `XCConfigurationList`:
             defaultConfigurationName = Release;
         };
 ...
-{{< / highlight >}}
+```
 
 Xcode defaults to having a Debug configuration and a Release configuration. While these are pretty
 common, there is no standard configuration. Do not count on all projects having Debug and Release
@@ -332,7 +332,7 @@ And in point of fact, you'll find out that a lot of these settings can be omitte
 defaults are pretty reasonable. This is a matter of style. Note that defining everything possible
 is many hundreds of settings; you might get tired after a bit.
 
-{{< highlight bash >}}
+```
 /* Begin XCBuildConfiguration section */
         999A68431CC86ECD0001FC48 /* Debug */ = {
             isa = XCBuildConfiguration;
@@ -375,12 +375,12 @@ is many hundreds of settings; you might get tired after a bit.
             name = Debug;
         };
 ...
-{{< / highlight >}}
+```
 
 By comparison, target configurations are much leaner, and are usually just about settings
 related to the target itself. This is the `XCConfigurationList` for target settings
 
-{{< highlight bash >}}
+```
 ...
         999A68451CC86ECD0001FC48 /* Build configuration list for PBXNativeTarget "xplore" */ = {
             isa = XCConfigurationList;
@@ -391,11 +391,11 @@ related to the target itself. This is the `XCConfigurationList` for target setti
             defaultConfigurationIsVisible = 0;
         };
 /* End XCConfigurationList section */
-{{< / highlight >}}
+```
 
 And here is the Debug target configuration:
 
-{{< highlight bash >}}
+```
         999A68461CC86ECD0001FC48 /* Debug */ = {
             isa = XCBuildConfiguration;
             buildSettings = {
@@ -403,7 +403,7 @@ And here is the Debug target configuration:
             };
             name = Debug;
         };
-{{< / highlight >}}
+```
 
 The variable `$(TARGET_NAME)` contains the value from the `name` key in `PBXNativeTarget`, and this
 in turn is creating an environment variable that is passed to the compiler when it runs. In the GUI
@@ -419,7 +419,7 @@ the underlying names instead of "human-readable" ones:
 Returning to the `PBXNativeTarget` object, the most important part from the point of actually
 doing stuff is the `buildPhases` key, which is a list of build phases.
 
-{{< highlight bash >}}
+```
 /* Begin PBXNativeTarget section */
         999A683D1CC86ECD0001FC48 /* xplore */ = {
 ...
@@ -431,7 +431,7 @@ doing stuff is the `buildPhases` key, which is a list of build phases.
 ...
         };
 /* End PBXNativeTarget section */
-{{< / highlight >}}
+```
 
 These are all magic singleton objects. There are a number of possible phases, not all projects
 have all phases. Here are the possible phases I know about
@@ -459,7 +459,7 @@ no frameworks or libraries to link against yet, Link Binary With Libraries also 
 
 Since this is a small project, our Sources Build phase is short
 
-{{< highlight bash >}}
+```
 /* Begin PBXSourcesBuildPhase section */
         999A683A1CC86ECD0001FC48 /* Sources */ = {
             isa = PBXSourcesBuildPhase;
@@ -470,16 +470,16 @@ Since this is a small project, our Sources Build phase is short
             runOnlyForDeploymentPostprocessing = 0;
         };
 /* End PBXSourcesBuildPhase section */
-{{< / highlight >}}
+```
 
 We have one file to build, indicated with a `PBXBuildFile` object in the `files` list in the
 `PBXSourcesBuildPhase` object.
 
-{{< highlight bash >}}
+```
 /* Begin PBXBuildFile section */
         999A68421CC86ECD0001FC48 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 999A68411CC86ECD0001FC48 /* main.cpp */; };
 /* End PBXBuildFile section */
-{{< / highlight >}}
+```
 
 This in turn points to a `PBXFileReference` object. Xcode's indirection is a little annoying,
 but keeps duplication and duplication-related error to a minimum. In this specific case, I'm not sure
@@ -488,7 +488,7 @@ of objects have some build-specific annotation that goes here.
 
 The Xcode wizard added a Build Frameworks phase for us as a courtesy, but there's nothing in it:
 
-{{< highlight bash >}}
+```
 /* Begin PBXFrameworksBuildPhase section */
         999A683B1CC86ECD0001FC48 /* Frameworks */ = {
             isa = PBXFrameworksBuildPhase;
@@ -498,7 +498,7 @@ The Xcode wizard added a Build Frameworks phase for us as a courtesy, but there'
             runOnlyForDeploymentPostprocessing = 0;
         };
 /* End PBXFrameworksBuildPhase section */
-{{< / highlight >}}
+```
 
 And, that's the entire wizard-generated project file.
 
@@ -516,7 +516,7 @@ We will name it xlib, add it to our workspace, and put it in the top group.
 Now, let's look at the workspace. We see a new project added (it's in a folder because Xcode likes
 to do things that way, but we could move it around and edit the workspace to match):
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
@@ -527,7 +527,7 @@ to do things that way, but we could move it around and edit the workspace to mat
       location = "group:xlib/xlib.xcodeproj">
    </FileRef>
 </Workspace>
-{{< / highlight >}}
+```
 
 At this point, we have a new xlib.xcodeproj that will build a library (assuming we add sources
 to it), but there are no changes to the xplore.xcodeproj/project.pbxproj file. And if we put code

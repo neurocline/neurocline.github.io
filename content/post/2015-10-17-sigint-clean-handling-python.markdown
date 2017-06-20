@@ -17,7 +17,7 @@ I/O operations return. This is pretty annoying. This happens even on time.sleep(
 The way around this to catch ctrl-c is to install a handler, and put try blocks around
 IO operations. Real code won't ignore IOError like this, this is just a sample.
 
-{{< highlight python >}}
+```python
 # sigint-clean.py
 
 # A SIGINT will cause an I/O operation to raise exceptions on return. This happens
@@ -58,7 +58,7 @@ def process():
 
 if __name__ == "__main__":
     main()
-{{< / highlight >}}
+```
 
 And the other other answer is to write your serious programs in C++ (or maybe Go)? I still
 like Python, but the effort to get to silky smooth reliability is erasing all the gains from

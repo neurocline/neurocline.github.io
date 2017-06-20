@@ -13,7 +13,7 @@ This is what I do in Python programs that print to the screen. Currently I try t
 Python code work in both Python 2 and Python 3 - I look forward to being able to ditch
 Python 2, but not yet.
 
-{{< highlight python >}}
+```python
 from __future__ import print_function, unicode_literals
 import sys
 PY2 = sys.version_info < (3,)
@@ -29,7 +29,7 @@ if PY2:
     if sys.platform == "win32":
         import codecs
         codecs.register(lambda name: codecs.lookup('utf-8') if name == 'cp65001' else None)
-{{< / highlight >}}
+```
 
 This way, my programs don't croak when they encounter Unicode codepoints.
 

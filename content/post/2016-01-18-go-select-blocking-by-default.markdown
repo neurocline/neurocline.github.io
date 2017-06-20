@@ -16,12 +16,12 @@ arbitrary code as its cases.
 So I was building up a program that wanted to handle terminating and aborting cleanly. I have a scanner
 that should terminate if some other part of the code says to. So I had this in my program
 
-{{< highlight go >}}
+```go
 select {
 case <- done:
     return // aborting early
 }
-{{< / highlight >}}
+```
 
 And, nothing worked. Since my program had a goroutine for status monitoring, it ran, but it said that
 nothing was happening. Hmm. A few diagnostic prints zeroed in on the above code. I had to page through
@@ -32,14 +32,14 @@ what I thought I was doing, having it check for early abort.
 Adding a default case that does nothing did the trick; case statements are evaluated in order, so unless
 my done channel has a value on it, the default is reached and the select exits.
 
-{{< highlight go >}}
+```go
 select {
 case <- done:
     return // aborting early
 default:
     // do nothing (a subtlety that needs to be reinforced)
 }
-{{< / highlight >}}
+```
 
 I've used select a few dozen times by now, but I guess I always lucked out. Or didn't luck out.
 

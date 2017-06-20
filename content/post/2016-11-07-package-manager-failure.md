@@ -26,7 +26,7 @@ still stand, but not precisely pointed at Python and pip, just in general.
 
 Things should work, dammit.
 
-{{< highlight bash >}}
+```
 C:\w>pip install sphinx
 Collecting sphinx
   Downloading Sphinx-1.4.8-py2.py3-none-any.whl (1.6MB)
@@ -89,4 +89,4 @@ Traceback (most recent call last):
 pip._vendor.distlib.DistlibException: Unable to locate finder for 'pip._vendor.distlib'
 You are using pip version 8.1.2, however version 9.0.1 is available.
 You should consider upgrading via the 'python -m pip install --upgrade pip' command.
-{{< / highlight >}}
+```

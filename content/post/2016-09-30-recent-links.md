@@ -12,11 +12,11 @@ url: /2016/09/30/recent-links/
 
 [Suppress InsecureRequestWarning: Unverified HTTPS request](http://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho). Requests has one issue in that if you disable cert validation (a bad idea but sometimes you have to, then you get a big fat warning to stderr. This post details a way to suppress that warning:
 
-{{< highlight python >}}
+```python
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-{{< / highlight >}}
+```
 
 [Using APIs with Python Requests Module](http://engineering.hackerearth.com/2014/08/21/python-requests-module/). Tidbits on using requests.
 

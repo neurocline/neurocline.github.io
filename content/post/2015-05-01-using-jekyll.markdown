@@ -5,7 +5,8 @@ tags:
 - jekyll
 - blog
 title: Using Jekyll for a blog
-url: /2015/05/01/using-jekyll/
+aliases:
+- /2015/05/01/using-jekyll.html
 ---
 
 *Updated 2015-05-22*
@@ -56,10 +57,10 @@ Once you've unpacked it, you need to install it - I think all this does is write
 into your Ruby folder. The default action should find your Ruby folder, but you can double-check
 by looking at config.yml after you run dk.rb init.
 
-{{< highlight bash >}}
-> ruby dk.rb init
-> ruby dk.rb install
-{{< / highlight >}}
+```bash
+$ ruby dk.rb init
+$ ruby dk.rb install
+```
 
 Note that on one machine, DevKit didn't install cleanly for some reason - e.g. gem install...
 failed with a "install DevKit, please". I rebooted and that didn't fix it, but then I reinstalled
@@ -76,18 +77,18 @@ it out, I went back to my original plan of "have a static site".
 
 First, I installed Jekyll.
 
-{{< highlight bash >}}
-> gem install jekyll
-{{< / highlight >}}
+```bash
+$ gem install jekyll
+```
 
 Then, I created a new Git repository and initialized it as a Jekyll-generated site.
 
-{{< highlight bash >}}
-> mkdir neurocline.github.io
-> cd neurocline.github.io
-> git init
-> jekyll new .
-{{< / highlight >}}
+```bash
+$ mkdir neurocline.github.io
+$ cd neurocline.github.io
+$ git init
+$ jekyll new .
+```
 
 ## Install Pygments or Rouge
 
@@ -99,17 +100,17 @@ The gorilla is Pygments, which is Python-based, and has a Ruby wrapper already b
 Jekyll. Since I am a Python user, this didn't turn me off, so I just installed Pygments. This was
 especially easy since I'm using a Python that has pip as part of the core system
 
-{{< highlight bash >}}
-> python -m pip install pygments
-{{< / highlight >}}
+```bash
+$ python -m pip install pygments
+```
 
 I also had to add a line to my _config.yml file:
 
-{{< highlight text >}}
+```yaml
 # Build settings
 markdown: kramdown
 highlighter: pygments
-{{< / highlight >}}
+```
 
 And frustratingly, even though the Pygments page said 'shell' was a style, there is no such
 thing and I had to use 'bash'.
@@ -120,8 +121,8 @@ The standard workflow is to run a Jekyll server locally, then start editing cont
 time you save, the file-watcher will pick up the changes and update the site. By default, your
 site is viewed on localhost:4000.
 
-{{< highlight text >}}
-> jekyll serve
+```bash
+$ jekyll serve
 Configuration file: C:/projects/github/neurocline.github.io/_config.yml
             Source: C:/projects/github/neurocline.github.io
        Destination: C:/projects/github/neurocline.github.io/_site
@@ -135,7 +136,7 @@ Configuration file: C:/projects/github/neurocline.github.io/_config.yml
   Server running... press ctrl-c to stop.
       Regenerating: 1 file(s) changed at 2015-05-01 19:59:33
 ...
-{{< / highlight >}}
+```
 
 ## Bake a site
 
@@ -144,34 +145,34 @@ push to GitHub. And that means a little trickery. Here's one approach.
 
 First, I baked the site:
 
-{{< highlight bash >}}
-> jekyll build
-{{< / highlight >}}
+```bash
+$ jekyll build
+```
 
 Then, I pushed the sources for the site to a sources branch. GitHub wants to see the site itself in
 a master branch, I want my sources in source control, so I "hide" it in a branch GitHub is not
 looking at.
 
-{{< highlight bash >}}
-> git remote add origin git@ghosthub:neurocline/neurocline.git.io
-> git checkout -b sources
-> git add -A
-> git commit -m "First commit of source"
-> git push origin sources
-{{< / highlight >}}
+```bash
+$ git remote add origin git@ghosthub:neurocline/neurocline.git.io
+$ git checkout -b sources
+$ git add -A
+$ git commit -m "First commit of source"
+$ git push origin sources
+```
 
 Finally, I pushed the baked site itself to a master branch.
 
-{{< highlight bash >}}
-> cd _site
-> echo > .nojekyll
-> git init
-> git remote add origin git@ghosthub:neurocline/neurocline.git.io
-> git add -A
-> git commit -m "jekyll first build"
-> git push origin master
-> cd ..
-{{< / highlight >}}
+```bash
+$ cd _site
+$ echo > .nojekyll
+$ git init
+$ git remote add origin git@ghosthub:neurocline/neurocline.git.io
+$ git add -A
+$ git commit -m "jekyll first build"
+$ git push origin master
+$ cd ..
+```
 
 At this point, my site is live on GitHub.
 
@@ -190,13 +191,13 @@ Ruby and Python are in system directories, at least if you use the Apple-placed
 versions. Then, Python 2.7.5 doesn't have pip, so that needs to be installed.
 Other than that, it's exactly as detailed above.
 
-{{< highlight bash >}}
+```bash
 sudo gem install jekyll
 sudo easy_install pip
 sudo python -m pip install pygments
-{{< / highlight >}}
+```
 
-At this point, it's ```jekyll serve``` and etc.
+At this point, it's `jekyll serve` and etc.
 
 ## Results
 
@@ -215,7 +216,10 @@ to tweak or change the overall blog style, but that will happen.
 
 [How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole/)
 
-[ruby-installer]: http://rubyinstaller.org/downloads/
-[rubyinstaller-2.1.6]: http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.6.exe
-[ruby-devkit-2.1.0]: http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe
-[ruby-devkit-instr]: http://github.com/oneclick/rubyinstaller/wiki/Development-Kit
+[ruby-installer](http://rubyinstaller.org/downloads/)
+
+[rubyinstaller-2.1.6](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.6.exe)
+
+[ruby-devkit-2.1.0](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe)
+
+[ruby-devkit-instr](http://github.com/oneclick/rubyinstaller/wiki/Development-Kit)

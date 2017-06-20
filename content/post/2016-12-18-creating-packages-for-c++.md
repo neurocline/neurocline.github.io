@@ -34,9 +34,9 @@ I started on this; just barely. Here are some notes towards the system I think i
 
 Something like this:
 
-{{< highlight bash >}}
+```
 $ make-package curl
-{{< / highlight >}}
+```
 
 and out pops a package for curl. This implies several things.
 

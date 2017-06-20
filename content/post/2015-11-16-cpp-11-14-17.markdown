@@ -36,9 +36,9 @@ Not much was added to the core language with C++14, true, but on the other hand,
 
 I just wish that the digits separator wasn't so unusual, but I'll get used to it.
 
-{{< highlight c++ >}}
+```c++
 auto a = 0b100'0001;  // ASCII 'A'
-{{< / highlight >}}
+```
 
 * [Binary Literals in the C++ Core Language](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)
 * [Single-Quotation-Mark as a Digit Separator](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3781.pdf)
@@ -47,10 +47,10 @@ auto a = 0b100'0001;  // ASCII 'A'
 
 Not to be confused with variadic templates - this allows you to have templates that wrap variables. Now you can have a template that is a templated variable, and really largely to write parameterized constants with constexpr in a more straightforward fashion.
 
-{{< highlight c++ >}}
+```c++
 // math constant with precision dictated by actual type
 template<typename T> constexpr T pi = T(3.14159265358979323846);
-{{< / highlight >}}
+```
 
 * [Variable Templates](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf)
 
@@ -58,7 +58,7 @@ template<typename T> constexpr T pi = T(3.14159265358979323846);
 
 This is huge, because it extends what you can do with constexpr functions. You can write loops as opposed to resorting to recursion. Specifically, your constexpr functions can have local variables, and use if, switch, for, while, or do...while (just not goto).
 
-{{< highlight c++ >}}
+```c++
 constexpr int fact(int n)
 {
     int sum = n;
@@ -69,7 +69,7 @@ constexpr int fact(int n)
     }
     return sum;
 }
-{{< / highlight >}}
+```
 
 * [Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)
 
@@ -85,11 +85,11 @@ My favorite small things:
 
 * UTF-8 character literals: u8"string"
 * default message for static_assert
-* std::auto_ptr is gone
+* `std::auto_ptr` is gone
 
 Something that's baking but has hope
 
-* std::variant<T> (similar to [Variant v5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0088r0.pdf) but it throws on invalid move).
+* `std::variant<T>` (similar to [Variant v5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0088r0.pdf) but it throws on invalid move).
 
 Some medium things
 

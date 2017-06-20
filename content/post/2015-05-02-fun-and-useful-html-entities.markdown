@@ -88,12 +88,12 @@ and many English-speakers still refer to these by the incorrect name.
 
 These come in handy to draw the occasional text graphic, like a directory hierarchy.
 
-{{< highlight bash >}}
+```bash
 ~/projects/build/
 ├── bin
 │   ├── client
 │   └── server
-{{< / highlight >}}
+```
 
 In the above text graphic, three characters are used:
 

@@ -23,7 +23,7 @@ one, you couldn't create a new file if paths could only point to existing files.
 
 Since `path` has a lot of functionality, let's start with the bare minimum:
 
-{{< highlight c++ >}}
+```c++
 class path
 {
 public:
@@ -37,7 +37,7 @@ public:
 private:
 	string_type pathstring;
 };
-{{< / highlight >}}
+```
 
 This `path` isn't quite useful, because there's no way to modify a path. But we could create
 an empty one. Let's talk about what we have.
@@ -55,7 +55,7 @@ Note that `path` is not a template parameterized on these values, like say how `
 works, but instead these are platform-specific values. So one could imagine our code looking
 like this:
 
-{{< highlight c++ >}}
+```c++
 class path
 {
 public:
@@ -77,20 +77,20 @@ public:
 private:
 	string_type pathstring;
 };
-{{< / highlight >}}
+```
 
 ## constructors
 
-{{< highlight c++ >}}
+```c++
 template <class InputIterator>
 path(InputIterator first, InputIterator last) {}
-{{< / highlight >}}
+```
 
 But if we want to use SFINAE so we don't get template expansion started when it's not an iterator,
 we can use `enable_if`.
 
-{{< highlight c++ >}}
+```c++
 template <class InputIterator,
 	class = typename enable_if<>
 path(InputIterator first, InputIterator last) {}
-{{< / highlight >}}
+```

@@ -62,24 +62,24 @@ For the following, I have two versions of Python installed in these global direc
 
 The simple version is this - create a new virtual environment into the directory `matplotlib`.
 
-{{< highlight console >}}
+```
 $ virtualenv matplotlib
 Using base prefix 'C:/python35'
 New python executable in C:/w/matplotlib/Scripts/python.exe
 Installing setuptools, pip, wheel...done.
 $
-{{< / highlight >}}
+```
 
 If you want, you can specify a specific version. For running Jekyll, I need Python 2.7
 (because I'm using Pygments).
 
-{{< highlight console >}}
+```
 $ virtualenv -p C:/Python27/python.exe py-jekyll
 Using base prefix 'c:/python35'
 New python executable in C:/w/py-jekyll/Scripts/python.exe
 Installing setuptools, pip, wheel...done.
 $
-{{< / highlight >}}
+```
 
 By default, the packages you already had installed in your base Python version are not carried
 over into your new version. This is a good thing, but it means you'll have to install packages.
@@ -88,11 +88,11 @@ over into your new version. This is a good thing, but it means you'll have to in
 
 From whatever command prompt you're going to issue further Python commands from:
 
-{{< highlight console >}}
+```
 $ cd matplotlib
 $ Scripts/activate
 (matplotlib) $
-{{< / highlight >}}
+```
 
 Note that the prompt changes to remind you which virtual environment you have active.
 
@@ -104,7 +104,7 @@ the environment variables to put your `virtualenv` Python version first.
 Since this is Windows, you could just close the command window. Or you can deactivate the
 environment to get back to whatever you had set globally:
 
-{{< highlight console >}}
+```
 (matplotlib) $ deactivate
 $
-{{< / highlight >}}
+```

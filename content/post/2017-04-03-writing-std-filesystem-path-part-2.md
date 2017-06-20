@@ -22,7 +22,7 @@ platform filesystem character set. It also has a `preferred_separator` that is t
 separator; this seems to have been concocted mainly for Windows support. It also has
 a `string_type`, but this is just `basic_string<value_type`. So we have
 
-{{< highlight c++ >}}
+```c++
     #if defined(_WIN32) && defined(UNICODE)
     // Windows Unicode build is UCS16LE
     using value_type = wchar_t;
@@ -38,7 +38,7 @@ a `string_type`, but this is just `basic_string<value_type`. So we have
     #endif
 
     using string_type = basic_string<value_type>;
-{{< / highlight >}}
+```
 
 This is part of what is called native format; fileystems accept and return path strings in native
 format. Windows Unicode builds use UTF16LE as the filesystem character set and separate path components
@@ -88,19 +88,19 @@ The default constructor and destructor are easy, because we don't need any state
 copy constructor and move constructor can rely on the copy and move constructor for our underlying
 data type.
 
-{{< highlight c++ >}}
+```c++
     path() {}
     path(const path& p) : pathstring(p.pathstring) {}
     path(path&& p) : pathstring(move(p.pathstring)) {}
-{{< / highlight >}}
+```
 
 - `path(string_type&& source)`: construct from string of underlying type
 
 Another easy constructor is the one that moves from a matching `string_type`.
 
-{{< highlight c++ >}}
+```c++
     path(string_type&& source) : pathstring(move(source)) {}
-{{< / highlight >}}
+```
 
 There is a "construct from Source" template where Source can be a number of things
 
@@ -112,7 +112,7 @@ or array that decays to pointer to NCTCS; NCTCS is just a fancy way of saying
 an iterator can step through. Since decay-to-pointer ends up with a pointer of
 a certain type, we could consider this as three overloads.
 
-{{< highlight c++ >}}
+```c++
 template<class EcharT, class traits, class Allocator>
     path(const basic_string<EcharT, traits, Allocator>& source);
 template<class EcharT, class traits>
@@ -120,7 +120,7 @@ template<class EcharT, class traits>
 template<class InputIterator,
          class = typename enable_if<is_iterator<InputIterator>::value, void>::type>
     path(InputIterator source)
-{{< / highlight >}}
+```
 
 We have a constructor that is passed two input iterators - this needs a type trait
 in order to prevent it from matching non-iterator two-parameter constructors, just
@@ -129,18 +129,18 @@ other single-parameter constructors.
 
 - `template<class InputIterator> path(InputIterator first, InputIterator last)`
 
-{{< highlight c++ >}}
+```c++
 template<class InputIterator,
          class = typename enable_if<is_iterator<InputIterator>::value, void>::type>
     path(InputIterator first, InputIterator last);
-{{< / highlight >}}
+```
 
 And then there are some +locale versions of constructors.
 
 - `template<class Source> path(const Source& source, const locale& loc)`
 - `template<class InputIterator> path(InputIterator first, InputIterator last, const locale& loc)`
 
-{{< highlight c++ >}}
+```c++
 template<class EcharT, class traits, class Allocator>
 	path(const basic_string<EcharT, traits, Allocator>& source, const locale& loc);
 template<class EcharT, class traits>
@@ -151,7 +151,7 @@ template<class InputIterator,
 template<class InputIterator,
          class = typename enable_if<is_iterator<InputIterator>::value, void>::type>
 	path(InputIterator first, InputIterator last, const locale& loc);
-{{< / highlight >}}
+```
 
 
 ## 27.10.8.4.2 path assignments
@@ -162,7 +162,7 @@ stuff from code here
 
 This is the definition of `std::filesystem::path` from the C++ standard section 27.10.8.
 
-{{< highlight c++ >}}
+```c++
 namespace std::filesystem {
 class path {
 public:
@@ -298,4 +298,4 @@ private:
 	string_type pathstring; // exposition only
 };
 }
-{{< / highlight >}}
+```

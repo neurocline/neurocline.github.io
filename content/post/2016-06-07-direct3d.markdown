@@ -73,7 +73,7 @@ This is the interface used to create DXGI objects like swap chains.
 
 If you have a device, you can get the factory from it, so that you can create a compatible swap chain
 
-{{< highlight c++ >}}
+```c++
 IDXGIDevice * pDXGIDevice = nullptr;
 hr = g_pd3dDevice->QueryInterface(__uuidof(IDXGIDevice), (void **)&pDXGIDevice);
 
@@ -82,9 +82,9 @@ hr = pDXGIDevice->GetAdapter( &pDXGIAdapter );
 
 IDXGIFactory * pIDXGIFactory = nullptr;
 pDXGIAdapter->GetParent(__uuidof(IDXGIFactory), (void **)&pIDXGIFactory);
-{{< / highlight >}}
+```
 
-[IDXGIAdapter]()
+[IDXGIAdapter](https://msdn.microsoft.com/en-us/library/windows/desktop/bb174523(v=vs.85).aspx)
 
 This is basically a video card, which can be one or more GPUs, DACs and video memory.
 
@@ -95,7 +95,7 @@ This is basically a video card, which can be one or more GPUs, DACs and video me
 
 One way to get an adapter is to call [IDXGIFactory::EnumAdapters](https://msdn.microsoft.com/en-us/library/windows/desktop/ff471336(v=vs.85).aspx). Note that if adapters are added or removed (e.g. a laptop), you need to destroy and recreate the factory before you enumerate again.
 
-EnumAdapters(0, &adapter) returns the adapter that holds the output that is considered the primary monitor.
+`EnumAdapters(0, &adapter)` returns the adapter that holds the output that is considered the primary monitor.
 
 [DXGIOutput](https://msdn.microsoft.com/en-us/library/windows/desktop/bb174546(v=vs.85).aspx)
 
@@ -116,7 +116,7 @@ a WM_DISPLAYCHANGE message, and at that point applications should check to make 
 "A physical display has the same HMONITOR as long as it is part of the desktop". Or maybe use
 [GetMonitorInfo](https://msdn.microsoft.com/en-us/library/windows/desktop/dd144901(v=vs.85).aspx) to see if the HMONITOR is valid?
 
-EnumOutputs(0, &output) returns the output that is considered the primary monitor.
+`EnumOutputs(0, &output)` returns the output that is considered the primary monitor.
 
 [Introduction to Multithreading in Direct3D 11](https://msdn.microsoft.com/en-us/library/windows/desktop/ff476891(v=vs.85).aspx)
 
