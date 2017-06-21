@@ -1,0 +1,15 @@
+# theme.toml template for neurocline.github.io
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Hugo Neurocline"
+license = "MIT"
+licenselink = "https://github.com/neurocline.github.io/hugo-neurocline/blob/master/LICENSE.md"
+description = "Theme for the Some Things Are Obvious blog"
+homepage = "http://neurocline.github.io/"
+tags = []
+features = []
+min_version = "0.23"
+
+[author]
+  name = "Brian Fitzgerald"
+  homepage = "http://neurocline.github.io/"

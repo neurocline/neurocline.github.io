@@ -1,0 +1,21 @@
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.25em;
+}
+
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  line-height: 0.9em;
+  padding: 1em;
+  overflow-x: auto;
+}
+code { background: #ffecff; }
+pre code { background: none; }
+
+code {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 75%;
+}

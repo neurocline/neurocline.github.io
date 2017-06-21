@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
+  </head>
+  <body>
+    <h1>Pages</h1>
+    {{ range .Data.Pages }}
+      <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+    {{ end }}
+  </body>
+</html>

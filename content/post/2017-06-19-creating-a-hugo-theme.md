@@ -260,7 +260,7 @@ who cares?
 
 To have URLS resolve to files, do two things.
 
-First, tell Hugo to generate "ugly URLS" by adding an item to the site-wide`config.toml`.
+First, tell Hugo to generate "ugly URLS" by adding an item to the site-wide `config.toml`.
 
 ```toml
 uglyurls = true
@@ -303,7 +303,47 @@ aliases = [ "/2015/05/01/using-jekyll.html" ]
 
 Aliases ignore the `uglyurls` setting, so must be the complete path the alias.
 
-# Refefence
+## Styling pages with CSS
+
+Simple CSS can be added via a stylesheet that is included in all pages.
+
+Create a basic stylesheet in `static/css/style.css`. This will set a max width for
+output text (to facitate readability), and put a box around code segments.
+
+```css
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.25em;
+}
+
+pre {
+  border: 1px solid #dddddd;
+  box-shadow: 5px 5px 5px #eeeeee;
+  line-height: 0.9em;
+  padding: 1em;
+  overflow-x: auto;
+}
+code { background: #ffecff; }
+pre code { background: none; }
+
+code {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 75%;
+}
+```
+
+## Using a header and footer
+
+Hugo uses the concept of partials to let you compose HTML from multiple files, instead of putting
+all the code in single files. For example, you may wish to have a common header for a set of pages,
+and by putting the common code in a partial, you can avoid copy-paste duplication. The usual reason
+for this is to have a navigation menu that's used site-wide.
+
+For now, we're just going to move the HTML boilerplate into two partials.
+
+# Reference
 
 [gohugoio/hugoThemes](https://github.com/gohugoio/hugoThemes). Themes created by the Hugo community.
 
